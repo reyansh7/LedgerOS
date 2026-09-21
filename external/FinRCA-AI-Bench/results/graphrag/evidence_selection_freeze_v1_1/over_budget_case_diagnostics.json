@@ -1,0 +1,437 @@
+{
+  "all_anchors_survived": true,
+  "all_selected_counts_at_or_below_40": true,
+  "artifact_type": "graph_v1_1_over_budget_case_diagnostics",
+  "artifact_version": "1.1",
+  "case_count": 9,
+  "cases": [
+    {
+      "all_anchors_survived": true,
+      "budget_rejected_path_count": 1,
+      "budget_rejected_path_count_by_tier": {
+        "5": 1
+      },
+      "candidate_path_count": 74,
+      "candidate_record_count": 41,
+      "case_id": "RCA_000747",
+      "complete_backbone_paths_dropped_due_to_budget": 0,
+      "dropped_path_count": 15,
+      "dropped_record_count": 1,
+      "dropped_record_count_by_node_type": {
+        "AUDIT_EVENT": 1
+      },
+      "dropped_record_count_by_tier": {
+        "5": 1
+      },
+      "partial_atomic_path_admission_count": 0,
+      "redundant_prefix_path_count": 14,
+      "selected_path_count": 59,
+      "selected_path_count_by_tier": {
+        "2": 11,
+        "3": 8,
+        "4": 23,
+        "5": 17
+      },
+      "selected_record_count": 40,
+      "selected_record_count_by_node_type": {
+        "APPROVAL_EVENT": 3,
+        "AUDIT_EVENT": 7,
+        "GL_ENTRY": 11,
+        "INVOICE": 2,
+        "INVOICE_LINE": 6,
+        "PAYMENT": 1,
+        "PAYMENT_ALLOCATION": 2,
+        "PO_LINE": 6,
+        "PURCHASE_ORDER": 2
+      },
+      "selected_record_count_by_tier": {
+        "0": 1,
+        "2": 15,
+        "3": 8,
+        "4": 6,
+        "5": 10
+      }
+    },
+    {
+      "all_anchors_survived": true,
+      "budget_rejected_path_count": 11,
+      "budget_rejected_path_count_by_tier": {
+        "5": 11
+      },
+      "candidate_path_count": 87,
+      "candidate_record_count": 47,
+      "case_id": "RCA_000873",
+      "complete_backbone_paths_dropped_due_to_budget": 0,
+      "dropped_path_count": 26,
+      "dropped_record_count": 7,
+      "dropped_record_count_by_node_type": {
+        "AUDIT_EVENT": 7
+      },
+      "dropped_record_count_by_tier": {
+        "5": 7
+      },
+      "partial_atomic_path_admission_count": 0,
+      "redundant_prefix_path_count": 15,
+      "selected_path_count": 61,
+      "selected_path_count_by_tier": {
+        "2": 14,
+        "3": 9,
+        "4": 28,
+        "5": 10
+      },
+      "selected_record_count": 40,
+      "selected_record_count_by_node_type": {
+        "APPROVAL_EVENT": 5,
+        "GL_ENTRY": 14,
+        "INVOICE": 2,
+        "INVOICE_LINE": 7,
+        "PAYMENT": 1,
+        "PAYMENT_ALLOCATION": 2,
+        "PO_LINE": 7,
+        "PURCHASE_ORDER": 2
+      },
+      "selected_record_count_by_tier": {
+        "0": 1,
+        "2": 18,
+        "3": 9,
+        "4": 7,
+        "5": 5
+      }
+    },
+    {
+      "all_anchors_survived": true,
+      "budget_rejected_path_count": 2,
+      "budget_rejected_path_count_by_tier": {
+        "5": 2
+      },
+      "candidate_path_count": 76,
+      "candidate_record_count": 42,
+      "case_id": "RCA_001322",
+      "complete_backbone_paths_dropped_due_to_budget": 0,
+      "dropped_path_count": 15,
+      "dropped_record_count": 2,
+      "dropped_record_count_by_node_type": {
+        "AUDIT_EVENT": 2
+      },
+      "dropped_record_count_by_tier": {
+        "5": 2
+      },
+      "partial_atomic_path_admission_count": 0,
+      "redundant_prefix_path_count": 13,
+      "selected_path_count": 61,
+      "selected_path_count_by_tier": {
+        "2": 12,
+        "3": 7,
+        "4": 22,
+        "5": 20
+      },
+      "selected_record_count": 40,
+      "selected_record_count_by_node_type": {
+        "APPROVAL_EVENT": 5,
+        "AUDIT_EVENT": 6,
+        "GL_ENTRY": 12,
+        "INVOICE": 2,
+        "INVOICE_LINE": 5,
+        "PAYMENT": 1,
+        "PAYMENT_ALLOCATION": 2,
+        "PO_LINE": 5,
+        "PURCHASE_ORDER": 2
+      },
+      "selected_record_count_by_tier": {
+        "0": 1,
+        "2": 16,
+        "3": 7,
+        "4": 5,
+        "5": 11
+      }
+    },
+    {
+      "all_anchors_survived": true,
+      "budget_rejected_path_count": 3,
+      "budget_rejected_path_count_by_tier": {
+        "5": 3
+      },
+      "candidate_path_count": 78,
+      "candidate_record_count": 43,
+      "case_id": "RCA_001346",
+      "complete_backbone_paths_dropped_due_to_budget": 0,
+      "dropped_path_count": 16,
+      "dropped_record_count": 3,
+      "dropped_record_count_by_node_type": {
+        "AUDIT_EVENT": 3
+      },
+      "dropped_record_count_by_tier": {
+        "5": 3
+      },
+      "partial_atomic_path_admission_count": 0,
+      "redundant_prefix_path_count": 13,
+      "selected_path_count": 62,
+      "selected_path_count_by_tier": {
+        "2": 13,
+        "3": 7,
+        "4": 23,
+        "5": 19
+      },
+      "selected_record_count": 40,
+      "selected_record_count_by_node_type": {
+        "APPROVAL_EVENT": 5,
+        "AUDIT_EVENT": 5,
+        "GL_ENTRY": 13,
+        "INVOICE": 2,
+        "INVOICE_LINE": 5,
+        "PAYMENT": 1,
+        "PAYMENT_ALLOCATION": 2,
+        "PO_LINE": 5,
+        "PURCHASE_ORDER": 2
+      },
+      "selected_record_count_by_tier": {
+        "0": 1,
+        "2": 17,
+        "3": 7,
+        "4": 5,
+        "5": 10
+      }
+    },
+    {
+      "all_anchors_survived": true,
+      "budget_rejected_path_count": 7,
+      "budget_rejected_path_count_by_tier": {
+        "5": 7
+      },
+      "candidate_path_count": 83,
+      "candidate_record_count": 45,
+      "case_id": "RCA_001451",
+      "complete_backbone_paths_dropped_due_to_budget": 0,
+      "dropped_path_count": 22,
+      "dropped_record_count": 5,
+      "dropped_record_count_by_node_type": {
+        "AUDIT_EVENT": 5
+      },
+      "dropped_record_count_by_tier": {
+        "5": 5
+      },
+      "partial_atomic_path_admission_count": 0,
+      "redundant_prefix_path_count": 15,
+      "selected_path_count": 61,
+      "selected_path_count_by_tier": {
+        "2": 13,
+        "3": 9,
+        "4": 27,
+        "5": 12
+      },
+      "selected_record_count": 40,
+      "selected_record_count_by_node_type": {
+        "APPROVAL_EVENT": 4,
+        "AUDIT_EVENT": 2,
+        "GL_ENTRY": 13,
+        "INVOICE": 2,
+        "INVOICE_LINE": 7,
+        "PAYMENT": 1,
+        "PAYMENT_ALLOCATION": 2,
+        "PO_LINE": 7,
+        "PURCHASE_ORDER": 2
+      },
+      "selected_record_count_by_tier": {
+        "0": 1,
+        "2": 17,
+        "3": 9,
+        "4": 7,
+        "5": 6
+      }
+    },
+    {
+      "all_anchors_survived": true,
+      "budget_rejected_path_count": 1,
+      "budget_rejected_path_count_by_tier": {
+        "5": 1
+      },
+      "candidate_path_count": 75,
+      "candidate_record_count": 41,
+      "case_id": "RCA_001902",
+      "complete_backbone_paths_dropped_due_to_budget": 0,
+      "dropped_path_count": 15,
+      "dropped_record_count": 1,
+      "dropped_record_count_by_node_type": {
+        "AUDIT_EVENT": 1
+      },
+      "dropped_record_count_by_tier": {
+        "5": 1
+      },
+      "partial_atomic_path_admission_count": 0,
+      "redundant_prefix_path_count": 14,
+      "selected_path_count": 60,
+      "selected_path_count_by_tier": {
+        "2": 11,
+        "3": 8,
+        "4": 23,
+        "5": 18
+      },
+      "selected_record_count": 40,
+      "selected_record_count_by_node_type": {
+        "APPROVAL_EVENT": 4,
+        "AUDIT_EVENT": 6,
+        "GL_ENTRY": 11,
+        "INVOICE": 2,
+        "INVOICE_LINE": 6,
+        "PAYMENT": 1,
+        "PAYMENT_ALLOCATION": 2,
+        "PO_LINE": 6,
+        "PURCHASE_ORDER": 2
+      },
+      "selected_record_count_by_tier": {
+        "0": 1,
+        "2": 15,
+        "3": 8,
+        "4": 6,
+        "5": 10
+      }
+    },
+    {
+      "all_anchors_survived": true,
+      "budget_rejected_path_count": 3,
+      "budget_rejected_path_count_by_tier": {
+        "5": 3
+      },
+      "candidate_path_count": 79,
+      "candidate_record_count": 43,
+      "case_id": "RCA_002014",
+      "complete_backbone_paths_dropped_due_to_budget": 0,
+      "dropped_path_count": 17,
+      "dropped_record_count": 3,
+      "dropped_record_count_by_node_type": {
+        "AUDIT_EVENT": 3
+      },
+      "dropped_record_count_by_tier": {
+        "5": 3
+      },
+      "partial_atomic_path_admission_count": 0,
+      "redundant_prefix_path_count": 14,
+      "selected_path_count": 62,
+      "selected_path_count_by_tier": {
+        "2": 13,
+        "3": 8,
+        "4": 25,
+        "5": 16
+      },
+      "selected_record_count": 40,
+      "selected_record_count_by_node_type": {
+        "APPROVAL_EVENT": 4,
+        "AUDIT_EVENT": 4,
+        "GL_ENTRY": 13,
+        "INVOICE": 2,
+        "INVOICE_LINE": 6,
+        "PAYMENT": 1,
+        "PAYMENT_ALLOCATION": 2,
+        "PO_LINE": 6,
+        "PURCHASE_ORDER": 2
+      },
+      "selected_record_count_by_tier": {
+        "0": 1,
+        "2": 17,
+        "3": 8,
+        "4": 6,
+        "5": 8
+      }
+    },
+    {
+      "all_anchors_survived": true,
+      "budget_rejected_path_count": 1,
+      "budget_rejected_path_count_by_tier": {
+        "5": 1
+      },
+      "candidate_path_count": 73,
+      "candidate_record_count": 41,
+      "case_id": "RCA_002121",
+      "complete_backbone_paths_dropped_due_to_budget": 0,
+      "dropped_path_count": 14,
+      "dropped_record_count": 1,
+      "dropped_record_count_by_node_type": {
+        "AUDIT_EVENT": 1
+      },
+      "dropped_record_count_by_tier": {
+        "5": 1
+      },
+      "partial_atomic_path_admission_count": 0,
+      "redundant_prefix_path_count": 13,
+      "selected_path_count": 59,
+      "selected_path_count_by_tier": {
+        "2": 13,
+        "3": 7,
+        "4": 21,
+        "5": 18
+      },
+      "selected_record_count": 40,
+      "selected_record_count_by_node_type": {
+        "APPROVAL_EVENT": 4,
+        "AUDIT_EVENT": 6,
+        "GL_ENTRY": 13,
+        "INVOICE": 2,
+        "INVOICE_LINE": 5,
+        "PAYMENT": 1,
+        "PAYMENT_ALLOCATION": 2,
+        "PO_LINE": 5,
+        "PURCHASE_ORDER": 2
+      },
+      "selected_record_count_by_tier": {
+        "0": 1,
+        "2": 17,
+        "3": 7,
+        "4": 5,
+        "5": 10
+      }
+    },
+    {
+      "all_anchors_survived": true,
+      "budget_rejected_path_count": 17,
+      "budget_rejected_path_count_by_tier": {
+        "5": 17
+      },
+      "candidate_path_count": 91,
+      "candidate_record_count": 50,
+      "case_id": "RCA_002233",
+      "complete_backbone_paths_dropped_due_to_budget": 0,
+      "dropped_path_count": 33,
+      "dropped_record_count": 10,
+      "dropped_record_count_by_node_type": {
+        "APPROVAL_EVENT": 3,
+        "AUDIT_EVENT": 7
+      },
+      "dropped_record_count_by_tier": {
+        "5": 10
+      },
+      "partial_atomic_path_admission_count": 0,
+      "redundant_prefix_path_count": 16,
+      "selected_path_count": 58,
+      "selected_path_count_by_tier": {
+        "2": 16,
+        "3": 10,
+        "4": 30,
+        "5": 2
+      },
+      "selected_record_count": 40,
+      "selected_record_count_by_node_type": {
+        "APPROVAL_EVENT": 1,
+        "GL_ENTRY": 16,
+        "INVOICE": 2,
+        "INVOICE_LINE": 8,
+        "PAYMENT": 1,
+        "PAYMENT_ALLOCATION": 2,
+        "PO_LINE": 8,
+        "PURCHASE_ORDER": 2
+      },
+      "selected_record_count_by_tier": {
+        "0": 1,
+        "2": 20,
+        "3": 10,
+        "4": 8,
+        "5": 1
+      }
+    }
+  ],
+  "complete_backbone_paths_dropped_due_to_budget": 0,
+  "created_at_utc": "2026-08-15T23:38:00Z",
+  "partial_atomic_path_admission_count": 0,
+  "scope": "STRUCTURAL_ONLY_NO_GOLD",
+  "status": "PASS",
+  "validation_gold_opened": false
+}

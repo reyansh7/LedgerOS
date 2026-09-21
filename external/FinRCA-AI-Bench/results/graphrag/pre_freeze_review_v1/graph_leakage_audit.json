@@ -1,0 +1,41 @@
+{
+  "audit_version": "graph_leakage_audit_v1",
+  "decision_cutoff": "2026-06-30",
+  "prohibited_content_hit_count": 0,
+  "prohibited_content_hits": [],
+  "prohibited_key_or_header_hit_count": 0,
+  "prohibited_key_or_header_hits": [],
+  "registry_sources": {
+    "frozen_spec": "docs/frozen_rag_baseline_spec_v1.0.md",
+    "frozen_spec_actual_sha256": "390a23c63989a1b7593d336bd96b51f171180729f1e66284688032a01243d715",
+    "frozen_spec_expected_sha256": "390a23c63989a1b7593d336bd96b51f171180729f1e66284688032a01243d715",
+    "runtime_registry": "src/rag/config.py::FORBIDDEN_KEYS/FORBIDDEN_ARTIFACT_NAMES"
+  },
+  "scan": {
+    "distinct_serialized_field_headers": 101,
+    "documents_scanned": 155391,
+    "json_lines_scanned": 310782,
+    "semantic_marker_scan": [
+      "anomaly_label",
+      "case_entity_oracle_mapping",
+      "causal_or_mutation_label",
+      "difficulty_hop_or_tier_label",
+      "expected_rca_or_answer",
+      "failure_target",
+      "oracle_or_evidence_contract",
+      "prior_model_or_baseline_output",
+      "root_cause",
+      "supervised_benchmark_feature"
+    ],
+    "serialized_field_header_scan": true,
+    "source_artifact_name_scan": true,
+    "structured_key_path_scan": true
+  },
+  "scope": [
+    "results/rag/phase5_rag_index_v1_0_20260810T000000Z/corpus/documents.jsonl",
+    "results/rag/phase5_rag_index_v1_0_20260810T000000Z/corpus/metadata.jsonl",
+    "results/rag/phase5_rag_index_v1_0_20260810T000000Z/corpus/record_ids.txt"
+  ],
+  "statement": "No held-out ground-truth, oracle, evidence-contract, mutation, causal-edge, prior-prediction, or model-output artifact was opened for this audit.",
+  "status": "PASS"
+}

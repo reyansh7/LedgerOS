@@ -1,0 +1,55 @@
+{
+  "categorical_feature_count": 27,
+  "constant_train_features": [
+    "approval_missing_employee_actor_count",
+    "vendor_name_token_count",
+    "invoice_po_tax_abs_diff",
+    "invoice_po_shipping_abs_diff",
+    "gl_balance_abs_diff",
+    "missing_po",
+    "missing_employee",
+    "missing_reference",
+    "missing_currency",
+    "missing_amount",
+    "missing_invoice_lines",
+    "missing_po_lines"
+  ],
+  "forbidden_name_hits": [],
+  "forbidden_registry_entries": 23,
+  "frozen_feature_registry_sha256": "b515b9f81e8284281dc7bddfcc2b32e9655d09fce71d8aed998b8687f7840d3d",
+  "frozen_spec_sha256": "0d220564335a85e6fe3a193e212d68aec2abbf7744a23f267ba4390b428d6897",
+  "high_cardinality_categoricals_over_100": [],
+  "material_failures": [],
+  "near_constant_train_features": [
+    "approval_missing_employee_actor_count",
+    "gl_balance_abs_diff",
+    "missing_po",
+    "missing_employee",
+    "missing_reference",
+    "missing_currency",
+    "missing_amount",
+    "missing_invoice_lines",
+    "missing_po_lines"
+  ],
+  "numeric_feature_count": 120,
+  "preprocessor_fit_scope": "train_only",
+  "registry_feature_count": 147,
+  "snapshot_source_access_status": "PASS",
+  "status": "PASS",
+  "suspicious_numeric_target_correlations_over_0_95": [
+    "duplicate_exact_reference_count",
+    "payment_allocated_rel_diff",
+    "missing_vendor"
+  ],
+  "suspicious_correlation_investigation": {
+    "duplicate_exact_reference_count": "PASS — operational same-vendor reference count computed without labels or Rules/SQL output",
+    "missing_vendor": "PASS — registered operational entity missingness, not annotation-package absence",
+    "payment_allocated_rel_diff": "PASS — operational payment/allocation arithmetic computed without labels or Rules/SQL output"
+  },
+  "train_registry_exact": true,
+  "train_rows": 1192,
+  "transformed_feature_count": 265,
+  "validation_registry_exact": true,
+  "validation_rows": 416,
+  "validation_transform_policy": "transform_only_no_refit"
+}

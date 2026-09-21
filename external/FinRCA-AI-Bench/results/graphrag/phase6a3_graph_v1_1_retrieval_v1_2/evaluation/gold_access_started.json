@@ -1,0 +1,13 @@
+{
+  "artifact_type": "phase6a3_graph_v1_1_gold_access_sentinel",
+  "artifact_version": "1.0",
+  "created_at_utc": "2026-08-21T05:54:41Z",
+  "evaluator_freeze_manifest_sha256": "533f3f9198f4ee159308c1740f759491156f3d04776525b1f653001e96d198f7",
+  "heldout_gold_opened": false,
+  "metric_spec_sha256": "2862be9a1242178af029f0582a1777749ef476b80a7ccd8b114e58aafd6340c3",
+  "pre_gold_manifest_sha256": "0c4ec3125a9af91a1ec2e9ee1b7b71bf6105e712a49c1e1413a137a40421fa6f",
+  "preregistration_sha256": "74b07ce84050ee9ac55c6f7397c81cfa0b08d507cd6f7d65a0604c11e7772991",
+  "run_id": "phase6a3_graph_v1_1_retrieval_v1_2_20260816T034800Z",
+  "same_run_rerun_permitted": false,
+  "status": "GOLD_ACCESS_STARTED_FAIL_CLOSED"
+}

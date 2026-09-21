@@ -1,0 +1,89 @@
+{
+  "artifact_type": "phase6a3_resume_artifact_hash_inventory",
+  "artifact_version": "1.1",
+  "artifacts": {
+    "PHASE6A3_GRAPH_V1_1_ONE_SHOT_VALIDATION_REVIEW.md": {
+      "bytes": 5968,
+      "sha256": "6eed9ec8628c5d48d253a21fa7fd180d4b368f3ec5a5e9c8883ae315e4a21e3b"
+    },
+    "evaluation/evaluation_not_run.json": {
+      "bytes": 696,
+      "sha256": "19c75ac9fe8a4378fb468f8b1d476e7bb9d8b735c26e8e4dda81ab216692c4cd"
+    },
+    "evaluation/gold_access_integrity_incident.json": {
+      "bytes": 2551,
+      "sha256": "f72fca1caabdae5d5bae99b8b0dfa5b907b3caa32e49120abdaa8311d29e2b70"
+    },
+    "finalize_integrity_block.py": {
+      "bytes": 18339,
+      "sha256": "56215311709921e76b15e27c13d886696989f6a3180a4a936e8a9762aa038326"
+    },
+    "freeze_pre_gold_retrieval.py": {
+      "bytes": 21144,
+      "sha256": "998f78cf34af4bc5fbf6a43be5a7aa990f9c5a879807cffa328b9a3391f16574"
+    },
+    "phase6a3_resume_run_manifest.json": {
+      "bytes": 2361,
+      "sha256": "37951cc86d09d297a17e32db046e42f2e78ffdf31922a322cbd7951c1528db49"
+    },
+    "retrieval/anchor_resolutions.jsonl": {
+      "bytes": 110880,
+      "sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2"
+    },
+    "retrieval/candidate_artifact_references.json": {
+      "bytes": 998,
+      "sha256": "1ce5da69dc9440f07f2e63829b40a55f6490f81a9b2e98766e62424586dee4c0"
+    },
+    "retrieval/candidate_paths.jsonl": {
+      "bytes": 24257308,
+      "sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03"
+    },
+    "retrieval/candidate_records.jsonl": {
+      "bytes": 4336748,
+      "sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c"
+    },
+    "retrieval/drop_ledger.jsonl": {
+      "bytes": 1534349,
+      "sha256": "c367f2436a8b52b59ef394e84845b2b26408f16ef72e78b30cf8cd57d1aad3e9"
+    },
+    "retrieval/final_pre_gold_hashes.json": {
+      "bytes": 3513,
+      "sha256": "18994f6b4f4785b0b7532a78d2d95b010e0b483140f57455e2e4175580ec2df7"
+    },
+    "retrieval/final_pre_gold_manifest.json": {
+      "bytes": 2507,
+      "sha256": "e0139ab40956cd9fa548b6218087be990a70dda414e8f5300a52e26ce88b2661"
+    },
+    "retrieval/pre_gold_freeze_validation.json": {
+      "bytes": 42589,
+      "sha256": "3bcbfd08f893f6a6285337901751a152e16559098d1ef57aae4d9cb80cb3660e"
+    },
+    "retrieval/retrieval_results.jsonl": {
+      "bytes": 1074429,
+      "sha256": "e9ed35885fc76f55d2b431039cf94b97bbff7740bd3fdcbac125244ca5a6c5e7"
+    },
+    "retrieval/selected_paths.jsonl": {
+      "bytes": 19458898,
+      "sha256": "7c50a3569920124286ad1866af28155d6ba25d7e77d6480aaf0627f7c8cd0561"
+    },
+    "retrieval/selected_records.jsonl": {
+      "bytes": 41745675,
+      "sha256": "e8335a880b0cf57820f58c233f4558b9f4df111f6739f8c13ca7bc04eb994cbd"
+    },
+    "scientific_integrity_phase6a3_resume.json": {
+      "bytes": 1979,
+      "sha256": "1ab66cdc68e952972aa634688e81028afbdbcccd0111b0685f838eed3d05bf41"
+    }
+  },
+  "created_at_utc": "2026-08-16T01:19:00Z",
+  "hash_algorithm": "SHA-256",
+  "hash_scope": "RAW_FILE_BYTES",
+  "heldout_gold_opened": false,
+  "pre_gold_hash_inventory_sha256": "18994f6b4f4785b0b7532a78d2d95b010e0b483140f57455e2e4175580ec2df7",
+  "pre_gold_manifest_sha256": "e0139ab40956cd9fa548b6218087be990a70dda414e8f5300a52e26ce88b2661",
+  "retrieval_metrics_computed": false,
+  "scientific_integrity_status": "FAIL",
+  "self_hash_omission_reason": "A raw-byte self-hash is circular; report externally.",
+  "self_hash_omitted": true,
+  "status": "BLOCKED_SCIENTIFIC_INTEGRITY_FAILURE"
+}

@@ -1,0 +1,2230 @@
+{
+  "anchor_rag": {
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_pair_count": 325,
+        "maximum_case_frequency": 26,
+        "maximum_case_frequency_rate": 1.0,
+        "maximum_non_anchor_record_frequency": 26,
+        "maximum_non_anchor_record_frequency_rate": 1.0,
+        "mean_pairwise_jaccard": 0.8101633869590908,
+        "top_20_records": [
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0425101"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0422561"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0423614"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0420784"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0421312"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0422702"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0423176"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0421109"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0424273"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0420868"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0426052"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0425084"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0422115"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0424129"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0422987"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0420269"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0421864"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0423329"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0422240"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0423044"
+          }
+        ],
+        "top_20_slot_share": 0.5
+      },
+      "gl_journal": {
+        "case_pair_count": 91,
+        "maximum_case_frequency": 14,
+        "maximum_case_frequency_rate": 1.0,
+        "maximum_non_anchor_record_frequency": 14,
+        "maximum_non_anchor_record_frequency_rate": 1.0,
+        "mean_pairwise_jaccard": 0.8807799804477535,
+        "top_20_records": [
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466508"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466750"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466310"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466460"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466701"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466483"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466608"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466209"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466726"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466559"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466560"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466321"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466619"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466632"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466427"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466494"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466247"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466715"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466571"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466546"
+          }
+        ],
+        "top_20_slot_share": 0.5
+      },
+      "invoice": {
+        "case_pair_count": 18915,
+        "maximum_case_frequency": 185,
+        "maximum_case_frequency_rate": 0.9487179487179487,
+        "maximum_non_anchor_record_frequency": 185,
+        "maximum_non_anchor_record_frequency_rate": 0.9487179487179487,
+        "mean_pairwise_jaccard": 0.560949346568222,
+        "top_20_records": [
+          {
+            "case_count": 185,
+            "case_percentage": 94.87179487179488,
+            "record_id": "invoices:INV_0421322"
+          },
+          {
+            "case_count": 185,
+            "case_percentage": 94.87179487179488,
+            "record_id": "invoices:INV_0422566"
+          },
+          {
+            "case_count": 185,
+            "case_percentage": 94.87179487179488,
+            "record_id": "invoices:INV_0421142"
+          },
+          {
+            "case_count": 184,
+            "case_percentage": 94.35897435897436,
+            "record_id": "invoices:INV_0421994"
+          },
+          {
+            "case_count": 184,
+            "case_percentage": 94.35897435897436,
+            "record_id": "invoices:INV_0422051"
+          },
+          {
+            "case_count": 184,
+            "case_percentage": 94.35897435897436,
+            "record_id": "invoices:INV_0420350"
+          },
+          {
+            "case_count": 184,
+            "case_percentage": 94.35897435897436,
+            "record_id": "invoices:INV_0423707"
+          },
+          {
+            "case_count": 183,
+            "case_percentage": 93.84615384615384,
+            "record_id": "invoices:INV_0420398"
+          },
+          {
+            "case_count": 183,
+            "case_percentage": 93.84615384615384,
+            "record_id": "invoices:INV_0420661"
+          },
+          {
+            "case_count": 183,
+            "case_percentage": 93.84615384615384,
+            "record_id": "invoices:INV_0420508"
+          },
+          {
+            "case_count": 182,
+            "case_percentage": 93.33333333333333,
+            "record_id": "invoices:INV_0422269"
+          },
+          {
+            "case_count": 182,
+            "case_percentage": 93.33333333333333,
+            "record_id": "invoices:INV_0420774"
+          },
+          {
+            "case_count": 182,
+            "case_percentage": 93.33333333333333,
+            "record_id": "invoices:INV_0421168"
+          },
+          {
+            "case_count": 181,
+            "case_percentage": 92.82051282051282,
+            "record_id": "invoices:INV_0421669"
+          },
+          {
+            "case_count": 180,
+            "case_percentage": 92.3076923076923,
+            "record_id": "invoices:INV_0422989"
+          },
+          {
+            "case_count": 180,
+            "case_percentage": 92.3076923076923,
+            "record_id": "invoices:INV_0424369"
+          },
+          {
+            "case_count": 178,
+            "case_percentage": 91.28205128205128,
+            "record_id": "invoices:INV_0421800"
+          },
+          {
+            "case_count": 177,
+            "case_percentage": 90.76923076923077,
+            "record_id": "invoices:INV_0421447"
+          },
+          {
+            "case_count": 176,
+            "case_percentage": 90.25641025641026,
+            "record_id": "invoices:INV_0421761"
+          },
+          {
+            "case_count": 176,
+            "case_percentage": 90.25641025641026,
+            "record_id": "invoices:INV_0423058"
+          }
+        ],
+        "top_20_slot_share": 0.4658974358974359
+      },
+      "payment": {
+        "case_pair_count": 16290,
+        "maximum_case_frequency": 174,
+        "maximum_case_frequency_rate": 0.9613259668508287,
+        "maximum_non_anchor_record_frequency": 174,
+        "maximum_non_anchor_record_frequency_rate": 0.9613259668508287,
+        "mean_pairwise_jaccard": 0.525594097264429,
+        "top_20_records": [
+          {
+            "case_count": 174,
+            "case_percentage": 96.13259668508287,
+            "record_id": "audit_log:EVT_0447936"
+          },
+          {
+            "case_count": 173,
+            "case_percentage": 95.58011049723757,
+            "record_id": "audit_log:EVT_0447927"
+          },
+          {
+            "case_count": 173,
+            "case_percentage": 95.58011049723757,
+            "record_id": "audit_log:EVT_0447916"
+          },
+          {
+            "case_count": 170,
+            "case_percentage": 93.92265193370166,
+            "record_id": "audit_log:EVT_0447920"
+          },
+          {
+            "case_count": 169,
+            "case_percentage": 93.37016574585635,
+            "record_id": "payments:PAY_0422968"
+          },
+          {
+            "case_count": 168,
+            "case_percentage": 92.81767955801105,
+            "record_id": "audit_log:EVT_0447935"
+          },
+          {
+            "case_count": 166,
+            "case_percentage": 91.71270718232044,
+            "record_id": "audit_log:EVT_0447917"
+          },
+          {
+            "case_count": 163,
+            "case_percentage": 90.05524861878453,
+            "record_id": "audit_log:EVT_0447931"
+          },
+          {
+            "case_count": 163,
+            "case_percentage": 90.05524861878453,
+            "record_id": "audit_log:EVT_0447856"
+          },
+          {
+            "case_count": 162,
+            "case_percentage": 89.50276243093923,
+            "record_id": "audit_log:EVT_0447863"
+          },
+          {
+            "case_count": 161,
+            "case_percentage": 88.95027624309392,
+            "record_id": "audit_log:EVT_0447929"
+          },
+          {
+            "case_count": 158,
+            "case_percentage": 87.29281767955801,
+            "record_id": "payments:PAY_0421978"
+          },
+          {
+            "case_count": 157,
+            "case_percentage": 86.74033149171271,
+            "record_id": "audit_log:EVT_0447939"
+          },
+          {
+            "case_count": 157,
+            "case_percentage": 86.74033149171271,
+            "record_id": "audit_log:EVT_0447928"
+          },
+          {
+            "case_count": 155,
+            "case_percentage": 85.6353591160221,
+            "record_id": "payments:PAY_0424960"
+          },
+          {
+            "case_count": 155,
+            "case_percentage": 85.6353591160221,
+            "record_id": "payments:PAY_0423047"
+          },
+          {
+            "case_count": 154,
+            "case_percentage": 85.0828729281768,
+            "record_id": "payments:PAY_0423677"
+          },
+          {
+            "case_count": 150,
+            "case_percentage": 82.87292817679558,
+            "record_id": "audit_log:EVT_0447869"
+          },
+          {
+            "case_count": 142,
+            "case_percentage": 78.45303867403315,
+            "record_id": "audit_log:EVT_0447915"
+          },
+          {
+            "case_count": 141,
+            "case_percentage": 77.90055248618785,
+            "record_id": "payments:PAY_0425186"
+          }
+        ],
+        "top_20_slot_share": 0.44350828729281766
+      }
+    },
+    "case_pair_count": 86320,
+    "maximum_case_frequency": 185,
+    "maximum_case_frequency_rate": 0.44471153846153844,
+    "maximum_non_anchor_record_frequency": 185,
+    "maximum_non_anchor_record_frequency_rate": 0.44471153846153844,
+    "mean_pairwise_jaccard": 0.22608594547911853,
+    "top_20_records": [
+      {
+        "case_count": 185,
+        "case_percentage": 44.47115384615385,
+        "record_id": "invoices:INV_0421322"
+      },
+      {
+        "case_count": 185,
+        "case_percentage": 44.47115384615385,
+        "record_id": "invoices:INV_0422566"
+      },
+      {
+        "case_count": 185,
+        "case_percentage": 44.47115384615385,
+        "record_id": "invoices:INV_0421142"
+      },
+      {
+        "case_count": 184,
+        "case_percentage": 44.23076923076923,
+        "record_id": "invoices:INV_0421994"
+      },
+      {
+        "case_count": 184,
+        "case_percentage": 44.23076923076923,
+        "record_id": "invoices:INV_0422051"
+      },
+      {
+        "case_count": 184,
+        "case_percentage": 44.23076923076923,
+        "record_id": "invoices:INV_0420350"
+      },
+      {
+        "case_count": 184,
+        "case_percentage": 44.23076923076923,
+        "record_id": "invoices:INV_0423707"
+      },
+      {
+        "case_count": 183,
+        "case_percentage": 43.99038461538461,
+        "record_id": "invoices:INV_0420398"
+      },
+      {
+        "case_count": 183,
+        "case_percentage": 43.99038461538461,
+        "record_id": "invoices:INV_0420661"
+      },
+      {
+        "case_count": 183,
+        "case_percentage": 43.99038461538461,
+        "record_id": "invoices:INV_0420508"
+      },
+      {
+        "case_count": 182,
+        "case_percentage": 43.75,
+        "record_id": "invoices:INV_0422269"
+      },
+      {
+        "case_count": 182,
+        "case_percentage": 43.75,
+        "record_id": "invoices:INV_0420774"
+      },
+      {
+        "case_count": 182,
+        "case_percentage": 43.75,
+        "record_id": "invoices:INV_0421168"
+      },
+      {
+        "case_count": 181,
+        "case_percentage": 43.50961538461539,
+        "record_id": "invoices:INV_0421669"
+      },
+      {
+        "case_count": 180,
+        "case_percentage": 43.26923076923077,
+        "record_id": "invoices:INV_0422989"
+      },
+      {
+        "case_count": 180,
+        "case_percentage": 43.26923076923077,
+        "record_id": "invoices:INV_0424369"
+      },
+      {
+        "case_count": 178,
+        "case_percentage": 42.78846153846154,
+        "record_id": "invoices:INV_0421800"
+      },
+      {
+        "case_count": 177,
+        "case_percentage": 42.54807692307692,
+        "record_id": "invoices:INV_0421447"
+      },
+      {
+        "case_count": 176,
+        "case_percentage": 42.30769230769231,
+        "record_id": "invoices:INV_0421761"
+      },
+      {
+        "case_count": 176,
+        "case_percentage": 42.30769230769231,
+        "record_id": "invoices:INV_0423058"
+      }
+    ],
+    "top_20_slot_share": 0.21838942307692308
+  },
+  "graph_retrieval_v1_0": {
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_pair_count": 325,
+        "maximum_case_frequency": 1,
+        "maximum_case_frequency_rate": 0.038461538461538464,
+        "maximum_non_anchor_record_frequency": 0,
+        "maximum_non_anchor_record_frequency_rate": 0.0,
+        "mean_pairwise_jaccard": 0.0,
+        "top_20_records": [
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426267"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426276"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426278"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426279"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426287"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426289"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426291"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426295"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426298"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426299"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426301"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426303"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426307"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426324"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426326"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426337"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426340"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426342"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426351"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426354"
+          }
+        ],
+        "top_20_slot_share": 0.7692307692307693
+      },
+      "gl_journal": {
+        "case_pair_count": 91,
+        "maximum_case_frequency": 1,
+        "maximum_case_frequency_rate": 0.07142857142857142,
+        "maximum_non_anchor_record_frequency": 1,
+        "maximum_non_anchor_record_frequency_rate": 0.07142857142857142,
+        "mean_pairwise_jaccard": 0.0,
+        "top_20_records": [
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0458367"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0458368"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0422347"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0420282"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0454238"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0454237"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0464247"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0425287"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0464248"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0421693"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0457059"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0457060"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0422109"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0457892"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0457891"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0455154"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0420740"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0455153"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0421696"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0457066"
+          }
+        ],
+        "top_20_slot_share": 0.47619047619047616
+      },
+      "invoice": {
+        "case_pair_count": 18915,
+        "maximum_case_frequency": 2,
+        "maximum_case_frequency_rate": 0.010256410256410256,
+        "maximum_non_anchor_record_frequency": 2,
+        "maximum_non_anchor_record_frequency_rate": 0.010256410256410256,
+        "mean_pairwise_jaccard": 4.066776469631347e-06,
+        "top_20_records": [
+          {
+            "case_count": 2,
+            "case_percentage": 1.0256410256410255,
+            "record_id": "payments:PAY_0425347"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428002"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428003"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428004"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428014"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428017"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428019"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428020"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428027"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428030"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428035"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428039"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428040"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428052"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428053"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428055"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428066"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428068"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428072"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428073"
+          }
+        ],
+        "top_20_slot_share": 0.021739130434782608
+      },
+      "payment": {
+        "case_pair_count": 16290,
+        "maximum_case_frequency": 1,
+        "maximum_case_frequency_rate": 0.0055248618784530384,
+        "maximum_non_anchor_record_frequency": 1,
+        "maximum_non_anchor_record_frequency_rate": 0.0055248618784530384,
+        "mean_pairwise_jaccard": 0.0,
+        "top_20_records": [
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426002"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465804"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465803"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465829"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426015"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465830"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465832"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426016"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465831"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465834"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465833"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426017"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426018"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465836"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465835"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465839"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465840"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426020"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426022"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465844"
+          }
+        ],
+        "top_20_slot_share": 0.035650623885918005
+      }
+    },
+    "case_pair_count": 86320,
+    "maximum_case_frequency": 2,
+    "maximum_case_frequency_rate": 0.004807692307692308,
+    "maximum_non_anchor_record_frequency": 2,
+    "maximum_non_anchor_record_frequency_rate": 0.004807692307692308,
+    "mean_pairwise_jaccard": 6.9731589078206315e-06,
+    "top_20_records": [
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0421840"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0423769"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0425347"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0424634"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0423690"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0421973"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428002"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428003"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428004"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428014"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428017"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428019"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428020"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428027"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428030"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428035"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428039"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428040"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428052"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428053"
+      }
+    ],
+    "top_20_slot_share": 0.016300940438871474
+  },
+  "relational_rag": {
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_pair_count": 325,
+        "maximum_case_frequency": 1,
+        "maximum_case_frequency_rate": 0.038461538461538464,
+        "maximum_non_anchor_record_frequency": 1,
+        "maximum_non_anchor_record_frequency_rate": 0.038461538461538464,
+        "mean_pairwise_jaccard": 0.0,
+        "top_20_records": [
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426267"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "audit_log:EVT_0447644"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "audit_log:EVT_0447653"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426276"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426278"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "audit_log:EVT_0447655"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426279"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "audit_log:EVT_0447656"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "audit_log:EVT_0447664"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426287"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426289"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "audit_log:EVT_0447666"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "audit_log:EVT_0447668"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426291"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "audit_log:EVT_0447672"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426295"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "audit_log:EVT_0447675"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426298"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "audit_log:EVT_0447676"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 3.8461538461538463,
+            "record_id": "bank_transactions:BT_0426299"
+          }
+        ],
+        "top_20_slot_share": 0.35714285714285715
+      },
+      "gl_journal": {
+        "case_pair_count": 91,
+        "maximum_case_frequency": 1,
+        "maximum_case_frequency_rate": 0.07142857142857142,
+        "maximum_non_anchor_record_frequency": 1,
+        "maximum_non_anchor_record_frequency_rate": 0.07142857142857142,
+        "mean_pairwise_jaccard": 0.0,
+        "top_20_records": [
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0458367"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0458368"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0422347"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0420282"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0454238"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0454237"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0464247"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0425287"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0464248"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0421693"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0457059"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0457060"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0422109"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0457892"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0457891"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0455154"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0420740"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0455153"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "payments:PAY_0421696"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 7.142857142857143,
+            "record_id": "gl_entries:JEL_0457066"
+          }
+        ],
+        "top_20_slot_share": 0.47619047619047616
+      },
+      "invoice": {
+        "case_pair_count": 18915,
+        "maximum_case_frequency": 2,
+        "maximum_case_frequency_rate": 0.010256410256410256,
+        "maximum_non_anchor_record_frequency": 2,
+        "maximum_non_anchor_record_frequency_rate": 0.010256410256410256,
+        "mean_pairwise_jaccard": 1.762269803506917e-06,
+        "top_20_records": [
+          {
+            "case_count": 2,
+            "case_percentage": 1.0256410256410255,
+            "record_id": "payments:PAY_0425347"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428002"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "purchase_orders:PO_0422087"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0437980"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0437979"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0437982"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0437981"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0437983"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428003"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0437985"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0437986"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428004"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0437984"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoices:INV_0428014"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0438006"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0438007"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0438008"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "purchase_orders:PO_0422239"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0438014"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5128205128205128,
+            "record_id": "invoice_lines:INVL_0438012"
+          }
+        ],
+        "top_20_slot_share": 0.008760951188986232
+      },
+      "payment": {
+        "case_pair_count": 16290,
+        "maximum_case_frequency": 2,
+        "maximum_case_frequency_rate": 0.011049723756906077,
+        "maximum_non_anchor_record_frequency": 2,
+        "maximum_non_anchor_record_frequency_rate": 0.011049723756906077,
+        "mean_pairwise_jaccard": 1.030277273371196e-05,
+        "top_20_records": [
+          {
+            "case_count": 2,
+            "case_percentage": 1.1049723756906078,
+            "record_id": "invoices:INV_0422728"
+          },
+          {
+            "case_count": 2,
+            "case_percentage": 1.1049723756906078,
+            "record_id": "invoices:INV_0422108"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426002"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465804"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465803"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "audit_log:EVT_0447142"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465829"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426015"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465830"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "audit_log:EVT_0447155"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465832"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "audit_log:EVT_0447156"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426016"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465831"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "audit_log:EVT_0447157"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465834"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465833"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426017"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "payments:PAY_0426018"
+          },
+          {
+            "case_count": 1,
+            "case_percentage": 0.5524861878453039,
+            "record_id": "gl_entries:JEL_0465836"
+          }
+        ],
+        "top_20_slot_share": 0.017557861133280128
+      }
+    },
+    "case_pair_count": 86320,
+    "maximum_case_frequency": 2,
+    "maximum_case_frequency_rate": 0.004807692307692308,
+    "maximum_non_anchor_record_frequency": 2,
+    "maximum_non_anchor_record_frequency_rate": 0.004807692307692308,
+    "mean_pairwise_jaccard": 9.827918817114467e-06,
+    "top_20_records": [
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payment_allocations:PAY_0421840|INV_0427509|2025-06-14"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "invoices:INV_0427509"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0421840"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0423769"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0425347"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "invoices:INV_0426722"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0424634"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payment_allocations:PAY_0424634|INV_0426722|2025-09-12"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "invoices:INV_0422417"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payment_allocations:PAY_0423690|INV_0422417|2025-11-28"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0423690"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "invoices:INV_0422728"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "invoices:INV_0424719"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payment_allocations:PAY_0421973|INV_0424719|2025-09-03"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "payments:PAY_0421973"
+      },
+      {
+        "case_count": 2,
+        "case_percentage": 0.4807692307692308,
+        "record_id": "invoices:INV_0422108"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoices:INV_0428002"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "purchase_orders:PO_0422087"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoice_lines:INVL_0437980"
+      },
+      {
+        "case_count": 1,
+        "case_percentage": 0.2403846153846154,
+        "record_id": "invoice_lines:INVL_0437979"
+      }
+    ],
+    "top_20_slot_share": 0.0096051227321238
+  },
+  "standard_dense_rag": {
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_pair_count": 325,
+        "maximum_case_frequency": 26,
+        "maximum_case_frequency_rate": 1.0,
+        "maximum_non_anchor_record_frequency": 26,
+        "maximum_non_anchor_record_frequency_rate": 1.0,
+        "mean_pairwise_jaccard": 0.8591782757737769,
+        "top_20_records": [
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0425101"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0422561"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0423614"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0420784"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0421312"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0422702"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0423176"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0421109"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0424273"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0420868"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0426052"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0425084"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0422115"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0424129"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0422987"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0420269"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0421864"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0423329"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0422240"
+          },
+          {
+            "case_count": 26,
+            "case_percentage": 100.0,
+            "record_id": "bank_transactions:BT_0423464"
+          }
+        ],
+        "top_20_slot_share": 0.5
+      },
+      "gl_journal": {
+        "case_pair_count": 91,
+        "maximum_case_frequency": 14,
+        "maximum_case_frequency_rate": 1.0,
+        "maximum_non_anchor_record_frequency": 14,
+        "maximum_non_anchor_record_frequency_rate": 1.0,
+        "mean_pairwise_jaccard": 0.9488316561487302,
+        "top_20_records": [
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466508"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466750"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466310"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466460"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466701"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466483"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466608"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466209"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466726"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466559"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466560"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466321"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466619"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466632"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466427"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466494"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466656"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466247"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466715"
+          },
+          {
+            "case_count": 14,
+            "case_percentage": 100.0,
+            "record_id": "gl_entries:JEL_0466571"
+          }
+        ],
+        "top_20_slot_share": 0.5
+      },
+      "invoice": {
+        "case_pair_count": 18915,
+        "maximum_case_frequency": 185,
+        "maximum_case_frequency_rate": 0.9487179487179487,
+        "maximum_non_anchor_record_frequency": 185,
+        "maximum_non_anchor_record_frequency_rate": 0.9487179487179487,
+        "mean_pairwise_jaccard": 0.5842115142727617,
+        "top_20_records": [
+          {
+            "case_count": 185,
+            "case_percentage": 94.87179487179488,
+            "record_id": "invoices:INV_0421322"
+          },
+          {
+            "case_count": 185,
+            "case_percentage": 94.87179487179488,
+            "record_id": "invoices:INV_0422566"
+          },
+          {
+            "case_count": 185,
+            "case_percentage": 94.87179487179488,
+            "record_id": "invoices:INV_0421142"
+          },
+          {
+            "case_count": 184,
+            "case_percentage": 94.35897435897436,
+            "record_id": "invoices:INV_0421994"
+          },
+          {
+            "case_count": 184,
+            "case_percentage": 94.35897435897436,
+            "record_id": "invoices:INV_0422051"
+          },
+          {
+            "case_count": 184,
+            "case_percentage": 94.35897435897436,
+            "record_id": "invoices:INV_0420350"
+          },
+          {
+            "case_count": 184,
+            "case_percentage": 94.35897435897436,
+            "record_id": "invoices:INV_0423707"
+          },
+          {
+            "case_count": 183,
+            "case_percentage": 93.84615384615384,
+            "record_id": "invoices:INV_0422269"
+          },
+          {
+            "case_count": 183,
+            "case_percentage": 93.84615384615384,
+            "record_id": "invoices:INV_0420398"
+          },
+          {
+            "case_count": 183,
+            "case_percentage": 93.84615384615384,
+            "record_id": "invoices:INV_0420661"
+          },
+          {
+            "case_count": 183,
+            "case_percentage": 93.84615384615384,
+            "record_id": "invoices:INV_0420508"
+          },
+          {
+            "case_count": 182,
+            "case_percentage": 93.33333333333333,
+            "record_id": "invoices:INV_0420774"
+          },
+          {
+            "case_count": 182,
+            "case_percentage": 93.33333333333333,
+            "record_id": "invoices:INV_0421168"
+          },
+          {
+            "case_count": 181,
+            "case_percentage": 92.82051282051282,
+            "record_id": "invoices:INV_0421669"
+          },
+          {
+            "case_count": 181,
+            "case_percentage": 92.82051282051282,
+            "record_id": "invoices:INV_0424369"
+          },
+          {
+            "case_count": 180,
+            "case_percentage": 92.3076923076923,
+            "record_id": "invoices:INV_0422989"
+          },
+          {
+            "case_count": 178,
+            "case_percentage": 91.28205128205128,
+            "record_id": "invoices:INV_0421800"
+          },
+          {
+            "case_count": 178,
+            "case_percentage": 91.28205128205128,
+            "record_id": "invoices:INV_0421761"
+          },
+          {
+            "case_count": 177,
+            "case_percentage": 90.76923076923077,
+            "record_id": "invoices:INV_0421447"
+          },
+          {
+            "case_count": 176,
+            "case_percentage": 90.25641025641026,
+            "record_id": "invoices:INV_0423058"
+          }
+        ],
+        "top_20_slot_share": 0.4664102564102564
+      },
+      "payment": {
+        "case_pair_count": 16290,
+        "maximum_case_frequency": 174,
+        "maximum_case_frequency_rate": 0.9613259668508287,
+        "maximum_non_anchor_record_frequency": 174,
+        "maximum_non_anchor_record_frequency_rate": 0.9613259668508287,
+        "mean_pairwise_jaccard": 0.5514048205499126,
+        "top_20_records": [
+          {
+            "case_count": 174,
+            "case_percentage": 96.13259668508287,
+            "record_id": "audit_log:EVT_0447936"
+          },
+          {
+            "case_count": 173,
+            "case_percentage": 95.58011049723757,
+            "record_id": "audit_log:EVT_0447927"
+          },
+          {
+            "case_count": 173,
+            "case_percentage": 95.58011049723757,
+            "record_id": "audit_log:EVT_0447916"
+          },
+          {
+            "case_count": 170,
+            "case_percentage": 93.92265193370166,
+            "record_id": "audit_log:EVT_0447920"
+          },
+          {
+            "case_count": 170,
+            "case_percentage": 93.92265193370166,
+            "record_id": "audit_log:EVT_0447935"
+          },
+          {
+            "case_count": 169,
+            "case_percentage": 93.37016574585635,
+            "record_id": "payments:PAY_0422968"
+          },
+          {
+            "case_count": 166,
+            "case_percentage": 91.71270718232044,
+            "record_id": "audit_log:EVT_0447917"
+          },
+          {
+            "case_count": 163,
+            "case_percentage": 90.05524861878453,
+            "record_id": "audit_log:EVT_0447931"
+          },
+          {
+            "case_count": 163,
+            "case_percentage": 90.05524861878453,
+            "record_id": "audit_log:EVT_0447856"
+          },
+          {
+            "case_count": 162,
+            "case_percentage": 89.50276243093923,
+            "record_id": "audit_log:EVT_0447929"
+          },
+          {
+            "case_count": 162,
+            "case_percentage": 89.50276243093923,
+            "record_id": "audit_log:EVT_0447863"
+          },
+          {
+            "case_count": 159,
+            "case_percentage": 87.84530386740332,
+            "record_id": "audit_log:EVT_0447939"
+          },
+          {
+            "case_count": 159,
+            "case_percentage": 87.84530386740332,
+            "record_id": "audit_log:EVT_0447928"
+          },
+          {
+            "case_count": 158,
+            "case_percentage": 87.29281767955801,
+            "record_id": "payments:PAY_0421978"
+          },
+          {
+            "case_count": 156,
+            "case_percentage": 86.1878453038674,
+            "record_id": "payments:PAY_0424960"
+          },
+          {
+            "case_count": 156,
+            "case_percentage": 86.1878453038674,
+            "record_id": "payments:PAY_0423047"
+          },
+          {
+            "case_count": 156,
+            "case_percentage": 86.1878453038674,
+            "record_id": "audit_log:EVT_0447869"
+          },
+          {
+            "case_count": 154,
+            "case_percentage": 85.0828729281768,
+            "record_id": "payments:PAY_0423677"
+          },
+          {
+            "case_count": 148,
+            "case_percentage": 81.76795580110497,
+            "record_id": "audit_log:EVT_0447915"
+          },
+          {
+            "case_count": 146,
+            "case_percentage": 80.66298342541437,
+            "record_id": "audit_log:EVT_0447859"
+          }
+        ],
+        "top_20_slot_share": 0.44709944751381214
+      }
+    },
+    "case_pair_count": 86320,
+    "maximum_case_frequency": 185,
+    "maximum_case_frequency_rate": 0.44471153846153844,
+    "maximum_non_anchor_record_frequency": 185,
+    "maximum_non_anchor_record_frequency_rate": 0.44471153846153844,
+    "mean_pairwise_jaccard": 0.2363104951293129,
+    "top_20_records": [
+      {
+        "case_count": 185,
+        "case_percentage": 44.47115384615385,
+        "record_id": "invoices:INV_0421322"
+      },
+      {
+        "case_count": 185,
+        "case_percentage": 44.47115384615385,
+        "record_id": "invoices:INV_0422566"
+      },
+      {
+        "case_count": 185,
+        "case_percentage": 44.47115384615385,
+        "record_id": "invoices:INV_0421142"
+      },
+      {
+        "case_count": 184,
+        "case_percentage": 44.23076923076923,
+        "record_id": "invoices:INV_0421994"
+      },
+      {
+        "case_count": 184,
+        "case_percentage": 44.23076923076923,
+        "record_id": "invoices:INV_0422051"
+      },
+      {
+        "case_count": 184,
+        "case_percentage": 44.23076923076923,
+        "record_id": "invoices:INV_0420350"
+      },
+      {
+        "case_count": 184,
+        "case_percentage": 44.23076923076923,
+        "record_id": "invoices:INV_0423707"
+      },
+      {
+        "case_count": 183,
+        "case_percentage": 43.99038461538461,
+        "record_id": "invoices:INV_0422269"
+      },
+      {
+        "case_count": 183,
+        "case_percentage": 43.99038461538461,
+        "record_id": "invoices:INV_0420398"
+      },
+      {
+        "case_count": 183,
+        "case_percentage": 43.99038461538461,
+        "record_id": "invoices:INV_0420661"
+      },
+      {
+        "case_count": 183,
+        "case_percentage": 43.99038461538461,
+        "record_id": "invoices:INV_0420508"
+      },
+      {
+        "case_count": 182,
+        "case_percentage": 43.75,
+        "record_id": "invoices:INV_0420774"
+      },
+      {
+        "case_count": 182,
+        "case_percentage": 43.75,
+        "record_id": "invoices:INV_0421168"
+      },
+      {
+        "case_count": 181,
+        "case_percentage": 43.50961538461539,
+        "record_id": "invoices:INV_0421669"
+      },
+      {
+        "case_count": 181,
+        "case_percentage": 43.50961538461539,
+        "record_id": "invoices:INV_0424369"
+      },
+      {
+        "case_count": 180,
+        "case_percentage": 43.26923076923077,
+        "record_id": "invoices:INV_0422989"
+      },
+      {
+        "case_count": 178,
+        "case_percentage": 42.78846153846154,
+        "record_id": "invoices:INV_0421800"
+      },
+      {
+        "case_count": 178,
+        "case_percentage": 42.78846153846154,
+        "record_id": "invoices:INV_0421761"
+      },
+      {
+        "case_count": 177,
+        "case_percentage": 42.54807692307692,
+        "record_id": "invoices:INV_0421447"
+      },
+      {
+        "case_count": 176,
+        "case_percentage": 42.30769230769231,
+        "record_id": "invoices:INV_0423058"
+      }
+    ],
+    "top_20_slot_share": 0.2186298076923077
+  }
+}

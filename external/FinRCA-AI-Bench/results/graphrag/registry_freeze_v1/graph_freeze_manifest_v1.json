@@ -1,0 +1,174 @@
+{
+  "api_calls_made": false,
+  "artifact_type": "graphrag_registry_freeze_manifest",
+  "artifact_version": "1.0",
+  "conditional_employee_edges_enabled": false,
+  "created_at_utc": "2026-08-14T06:14:27Z",
+  "decision_cutoff": "2026-06-30",
+  "deviation_from_parent_audit": false,
+  "embedding_dimensions": 1536,
+  "employee_traversal_policy": "RESTRICTED",
+  "exact_token_budget_status": "NOT_YET_FROZEN",
+  "excluded_conditional_relation_count": 2,
+  "excluded_path_motif_count": 2,
+  "excluded_unresolved_relation_count": 1,
+  "freeze_status": "FROZEN_DETERMINISTIC_CORE",
+  "frozen_artifact_hashes": {
+    "node_registry_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+    "path_motifs_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+    "ranking_policy_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+    "relation_registry_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3"
+  },
+  "frozen_path_motif_count": 8,
+  "frozen_relation_count": 22,
+  "gl_journal_synthetic_node_enabled": false,
+  "graph_database_created": false,
+  "graph_index_created": false,
+  "heldout_labels_opened": false,
+  "implementation_authorized": false,
+  "inference_code_created": false,
+  "max_raw_source_records": 40,
+  "node_registry_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+  "node_type_count": 14,
+  "oracle_sources_opened": false,
+  "parent_gate": {
+    "named_parent_artifact_hashes": {
+      "GRAPH_RAG_PRE_FREEZE_REVIEW.md": "5b56ecf5c616c7a7f888da0769b7c0b79555156187f98cb672993839f4ceb7c2",
+      "generated_artifact_hashes.json": "257cf0e7e959a8ae4d4a9b5e1e204ee643377d4c1b2e5b3fdacf564fbc1b46db",
+      "graph_node_registry_v1_draft.json": "bcff755ca31c7b3012c4e49ccecfd562bd7bb60affc5ba02e6b464a8a3b5ffdf",
+      "graph_path_motifs_v1_draft.json": "1b7c35b2e7c8a1e24c9ffa61cad4f5c66a3c579e9fb872e32560040f9c8c4c54",
+      "graph_ranking_policy_v1_draft.json": "d1c641acb2e7860feb8ebed10d04d83bc2d72e38d801102d13a261fc75321dce",
+      "graph_relation_registry_v1_draft.json": "70fa548ae0bfd16b0dd3f1e276e84dd9e38aca825654f6647781b03f43b40d14"
+    },
+    "parent_inventory_entry_count": 15,
+    "parent_inventory_recomputation": "PASS",
+    "status": "PASS"
+  },
+  "parent_generated_artifact_hashes_sha256": "257cf0e7e959a8ae4d4a9b5e1e204ee643377d4c1b2e5b3fdacf564fbc1b46db",
+  "parent_node_registry_draft_sha256": "bcff755ca31c7b3012c4e49ccecfd562bd7bb60affc5ba02e6b464a8a3b5ffdf",
+  "parent_path_motifs_draft_sha256": "1b7c35b2e7c8a1e24c9ffa61cad4f5c66a3c579e9fb872e32560040f9c8c4c54",
+  "parent_pre_freeze_report_sha256": "5b56ecf5c616c7a7f888da0769b7c0b79555156187f98cb672993839f4ceb7c2",
+  "parent_ranking_policy_draft_sha256": "d1c641acb2e7860feb8ebed10d04d83bc2d72e38d801102d13a261fc75321dce",
+  "parent_relation_registry_draft_sha256": "70fa548ae0bfd16b0dd3f1e276e84dd9e38aca825654f6647781b03f43b40d14",
+  "path_motifs_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+  "payment_bank_traversal_enabled": false,
+  "phase5_corpus_document_count": 155391,
+  "phase5_corpus_text_manifest_sha256": "8842865bd6e688f824a0b16450301fb547c62c4ba495099d605753ebaf2ff00d",
+  "phase5_index_manifest_sha256": "527b5980f1544dda5eab4581f8cb9c498e2a8e7633e4c061dd232b8cff05e3a6",
+  "phase5_lineage_gate": {
+    "checks": {
+      "dimensions": true,
+      "index_manifest_sha256": true,
+      "text_manifest_sha256": true,
+      "three_corpus_counts": true,
+      "vector_count": true
+    },
+    "corpus_line_counts": {
+      "documents.jsonl": 155391,
+      "metadata.jsonl": 155391,
+      "record_ids.txt": 155391
+    },
+    "status": "PASS"
+  },
+  "phase5_vector_count": 155391,
+  "ranking_policy_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+  "ranking_priority_disposition": {
+    "approved_event_audit_context": "ENABLED_PRIORITY_5",
+    "new_executable_ranking_rule_introduced": false,
+    "semantic_fallback": "DISABLED_FUTURE_PRIORITY_7",
+    "tier_b_candidate_evidence": "DISABLED_FUTURE_PRIORITY_6"
+  },
+  "relation_registry_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+  "scientific_integrity_guarantee": {
+    "benchmark_answer_encoded": false,
+    "graph_represents_operational_relationships_only": true,
+    "label_derived_edges_created": false,
+    "prohibited_sources_not_used": [
+      "held-out failure labels",
+      "expected failure type",
+      "expected RCA answer",
+      "F01-F15 labels",
+      "oracle evidence IDs",
+      "evidence contracts",
+      "hop labels",
+      "benchmark difficulty",
+      "causal benchmark annotations",
+      "mutation logs",
+      "oracle case-entity mappings",
+      "Standard RAG predictions",
+      "Direct-LLM predictions",
+      "other baseline outputs"
+    ]
+  },
+  "semantic_fallback_enabled": false,
+  "serialization_convention": {
+    "format": "UTF-8 JSON",
+    "hash_algorithm": "SHA-256",
+    "hash_scope": "raw serialized file bytes",
+    "json_options": {
+      "ensure_ascii": false,
+      "indent": 2,
+      "sort_keys": true,
+      "trailing_newline": true
+    }
+  },
+  "static_validation": {
+    "failed_checks": [],
+    "groups": {
+      "leakage_checks": {
+        "no_label_derived_motif_id": true,
+        "no_label_derived_node_type": true,
+        "no_label_derived_relation_type": true,
+        "no_prohibited_benchmark_field_promoted_to_graph_use": true,
+        "ranking_remains_label_independent": true,
+        "scientific_integrity_declarations_are_non_executable_metadata": true
+      },
+      "motif_checks": {
+        "all_frozen_motif_relations_exist": true,
+        "all_frozen_motif_relations_require_provenance": true,
+        "all_frozen_motifs_originated_ready": true,
+        "exactly_8_frozen_motifs": true,
+        "no_payment_bank_motif_enabled": true,
+        "no_unrestricted_bfs": true,
+        "two_unresolved_motifs_excluded": true
+      },
+      "node_and_policy_checks": {
+        "canonical_primary_keys_defined": true,
+        "conditional_employee_edges_disabled": true,
+        "context_dimensions_not_promoted_to_nodes": true,
+        "employee_traversal_restricted": true,
+        "exact_approved_node_type_set": true,
+        "no_context_dimension_promoted_to_graph_use_as_node": true,
+        "no_synthetic_gl_journal": true,
+        "payment_bank_disabled": true,
+        "raw_record_limit_40": true,
+        "semantic_fallback_disabled": true,
+        "token_cap_not_yet_frozen": true,
+        "vendor_traversal_restricted": true
+      },
+      "relation_checks": {
+        "all_frozen_relations_originated_ready": true,
+        "every_frozen_relation_has_ambiguity_policy": true,
+        "every_frozen_relation_has_provenance": true,
+        "every_frozen_relation_has_temporal_policy": true,
+        "every_frozen_relation_is_label_independent": true,
+        "exactly_22_frozen_relations": true,
+        "one_unresolved_relation_excluded": true,
+        "two_conditional_relations_excluded": true,
+        "zero_conditional_in_frozen_relations": true,
+        "zero_unresolved_in_frozen_relations": true
+      }
+    },
+    "status": "PASS"
+  },
+  "unresolved_future_features": [
+    "payment-bank identifier-domain/collision/temporal policy",
+    "gl_journal canonical entity/traversal policy",
+    "conditional system/shared-role actor identity policy",
+    "exact GraphRAG token-budget cap",
+    "Tier B retrieval",
+    "targeted semantic fallback"
+  ],
+  "unrestricted_bfs_enabled": false,
+  "vendor_traversal_policy": "RESTRICTED"
+}

@@ -1,0 +1,42 @@
+{
+  "candidate_id": "hist_gradient_boosting_06",
+  "model_family": "hist_gradient_boosting",
+  "objective_tie_count_at_macro_f1": 1,
+  "parameters": {
+    "class_weight": "balanced",
+    "early_stopping": false,
+    "l2_regularization": 1.0,
+    "learning_rate": 0.1,
+    "max_iter": 200,
+    "max_leaf_nodes": 15,
+    "random_state": 314159
+  },
+  "parameters_json": "{\"class_weight\":\"balanced\",\"early_stopping\":false,\"l2_regularization\":1.0,\"learning_rate\":0.1,\"max_iter\":200,\"max_leaf_nodes\":15,\"random_state\":314159}",
+  "refit_after_selection": false,
+  "selection_data": "validation_only",
+  "tie_break_order": [
+    "higher macro F1",
+    "higher weighted F1",
+    "lower FPR",
+    "lower mean latency",
+    "simpler family logistic<random_forest<hist_gradient_boosting",
+    "canonical parameter JSON"
+  ],
+  "validation_mean_inference_latency_ns": 191546.77403846153,
+  "validation_metrics": {
+    "binary_accuracy": 0.96875,
+    "binary_f1": 0.9766606822262118,
+    "binary_precision": 0.9714285714285714,
+    "binary_recall": 0.9819494584837545,
+    "exact_accuracy": 0.96875,
+    "false_negative_rate": 0.018050541516245487,
+    "false_positive_rate": 0.05755395683453238,
+    "fn": 5,
+    "fp": 8,
+    "macro_f1": 0.9726611976400377,
+    "micro_f1": 0.96875,
+    "tn": 131,
+    "tp": 272,
+    "weighted_f1": 0.968776557695276
+  }
+}

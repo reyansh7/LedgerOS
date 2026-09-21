@@ -1,0 +1,97 @@
+{
+  "by_failure_type": {
+    "F01_DUPLICATE_INVOICE": {
+      "ANOMALY": 21
+    },
+    "F02_PO_INVOICE_AMOUNT_MISMATCH": {
+      "ANOMALY": 20
+    },
+    "F03_QUANTITY_MISMATCH": {
+      "ANOMALY": 18
+    },
+    "F04_INCORRECT_VENDOR_ASSOCIATION": {
+      "ANOMALY": 17
+    },
+    "F05_PAYMENT_WITHOUT_VALID_INVOICE": {
+      "ANOMALY": 22
+    },
+    "F06_INVOICE_PAID_TWICE": {
+      "ANOMALY": 12
+    },
+    "F07_PARTIAL_PAYMENT_RESIDUAL_BALANCE": {
+      "ANOMALY": 18
+    },
+    "F08_APPROVAL_WORKFLOW_FAILURE": {
+      "ANOMALY": 22
+    },
+    "F09_GL_POSTING_MISMATCH": {
+      "ANOMALY": 17
+    },
+    "F10_WRONG_ACCOUNTING_PERIOD": {
+      "ANOMALY": 20
+    },
+    "F11_VENDOR_MASTER_CHANGE_CONFLICT": {
+      "ANOMALY": 23
+    },
+    "F12_ERP_PAYMENT_MISSING_FROM_BANK": {
+      "ANOMALY": 21
+    },
+    "F13_BANK_TRANSACTION_MISSING_FROM_ERP": {
+      "ANOMALY": 28
+    },
+    "F14_BANK_ERP_AMOUNT_MISMATCH": {
+      "ANOMALY": 16
+    },
+    "F15_INCORRECT_PAYMENT_BANK_MATCH": {
+      "ANOMALY": 20
+    },
+    "NO_FAILURE": {
+      "ANOMALY": 12,
+      "INSUFFICIENT_EVIDENCE": 50,
+      "MATCH": 82
+    }
+  },
+  "by_hop_count": {
+    "0": {
+      "ANOMALY": 21
+    },
+    "1": {
+      "ANOMALY": 103
+    },
+    "2": {
+      "ANOMALY": 129
+    },
+    "3": {
+      "ANOMALY": 20
+    },
+    "4": {
+      "ANOMALY": 22
+    },
+    "NO_FAILURE": {
+      "ANOMALY": 12,
+      "INSUFFICIENT_EVIDENCE": 50,
+      "MATCH": 82
+    }
+  },
+  "by_tier": {
+    "NO_FAILURE": {
+      "ANOMALY": 12,
+      "INSUFFICIENT_EVIDENCE": 50,
+      "MATCH": 82
+    },
+    "Tier 1": {
+      "ANOMALY": 21
+    },
+    "Tier 2": {
+      "ANOMALY": 103
+    },
+    "Tier 3": {
+      "ANOMALY": 171
+    }
+  },
+  "overall": {
+    "ANOMALY": 307,
+    "INSUFFICIENT_EVIDENCE": 50,
+    "MATCH": 82
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "API_calls_made": false,
+  "LLM_used": false,
+  "additional_validation_gold_access_after_incident": false,
+  "artifact_type": "phase6a3_resume_evaluation_not_run",
+  "artifact_version": "1.0",
+  "baseline_metrics_opened": false,
+  "bootstrap_computed": false,
+  "created_at_utc": "2026-08-16T01:19:00Z",
+  "heldout_gold_opened": false,
+  "mcnemar_computed": false,
+  "paired_comparisons_computed": false,
+  "reason": "Validation artifact bytes were accessed before the final pre-gold freeze, violating the mandatory gate chronology.",
+  "retrieval_metrics_computed": false,
+  "run_id": "phase6a3_graph_v1_1_retrieval_v1_1_20260816T011400Z",
+  "status": "NOT_RUN_SCIENTIFIC_INTEGRITY_BLOCK"
+}

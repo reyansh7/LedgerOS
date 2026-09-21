@@ -1,0 +1,85 @@
+{
+  "artifact_type": "phase6a3_resume_final_pre_gold_hash_inventory",
+  "artifact_version": "1.1",
+  "artifacts": {
+    "retrieval/anchor_resolutions.jsonl": {
+      "bytes": 110880,
+      "sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2"
+    },
+    "retrieval/candidate_artifact_references.json": {
+      "bytes": 998,
+      "sha256": "1ce5da69dc9440f07f2e63829b40a55f6490f81a9b2e98766e62424586dee4c0"
+    },
+    "retrieval/candidate_paths.jsonl": {
+      "bytes": 24257308,
+      "sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03"
+    },
+    "retrieval/candidate_records.jsonl": {
+      "bytes": 4336748,
+      "sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c"
+    },
+    "retrieval/drop_ledger.jsonl": {
+      "bytes": 1534349,
+      "sha256": "c367f2436a8b52b59ef394e84845b2b26408f16ef72e78b30cf8cd57d1aad3e9"
+    },
+    "retrieval/final_pre_gold_manifest.json": {
+      "bytes": 2507,
+      "sha256": "e0139ab40956cd9fa548b6218087be990a70dda414e8f5300a52e26ce88b2661"
+    },
+    "retrieval/pre_gold_freeze_validation.json": {
+      "bytes": 42589,
+      "sha256": "3bcbfd08f893f6a6285337901751a152e16559098d1ef57aae4d9cb80cb3660e"
+    },
+    "retrieval/retrieval_results.jsonl": {
+      "bytes": 1074429,
+      "sha256": "e9ed35885fc76f55d2b431039cf94b97bbff7740bd3fdcbac125244ca5a6c5e7"
+    },
+    "retrieval/selected_paths.jsonl": {
+      "bytes": 19458898,
+      "sha256": "7c50a3569920124286ad1866af28155d6ba25d7e77d6480aaf0627f7c8cd0561"
+    },
+    "retrieval/selected_records.jsonl": {
+      "bytes": 41745675,
+      "sha256": "e8335a880b0cf57820f58c233f4558b9f4df111f6739f8c13ca7bc04eb994cbd"
+    }
+  },
+  "candidate_parent_references": {
+    "artifact_type": "phase6a3_resume_candidate_parent_references",
+    "artifact_version": "1.1",
+    "candidate_paths": {
+      "bytes": 24257308,
+      "copied_path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_1/retrieval/candidate_paths.jsonl",
+      "parent_path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_paths.jsonl",
+      "sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03"
+    },
+    "candidate_records": {
+      "bytes": 4336748,
+      "copied_path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_1/retrieval/candidate_records.jsonl",
+      "parent_path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_records.jsonl",
+      "sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c"
+    },
+    "created_at_utc": "2026-08-16T01:14:00Z",
+    "literal_raw_byte_copies_created": true,
+    "parent_candidate_run": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0",
+    "status": "FROZEN_PARENT_REFERENCE"
+  },
+  "created_at_utc": "2026-08-16T01:14:00Z",
+  "freeze_script": {
+    "bytes": 21144,
+    "path": "freeze_pre_gold_retrieval.py",
+    "sha256": "998f78cf34af4bc5fbf6a43be5a7aa990f9c5a879807cffa328b9a3391f16574"
+  },
+  "hash_algorithm": "SHA-256",
+  "hash_scope": "RAW_FILE_BYTES",
+  "heldout_gold_opened": false,
+  "pre_gold_retrieval_frozen": true,
+  "self_hash_omission_reason": "Raw self-hash is circular; it is externally recorded before first gold access.",
+  "self_hash_omitted": true,
+  "serialization": {
+    "encoding": "UTF-8",
+    "json": "sort_keys=true, indent=2, ensure_ascii=false, one trailing LF",
+    "jsonl": "copied as immutable raw bytes from frozen parent outputs"
+  },
+  "status": "PASS",
+  "validation_gold_opened": false
+}

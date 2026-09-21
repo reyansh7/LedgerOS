@@ -1,0 +1,2556 @@
+{
+  "definition": "A sequence is direction-aware and typed: starting node type + ordered relation:direction steps + resulting node types.",
+  "views": {
+    "SAFE_BIDIRECTIONAL_DIAGNOSTIC": [
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.317948717948718,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 195,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "INVOICE",
+          "INVOICE_LINE"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 452,
+        "relation_sequence": [
+          "LINE_OF_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_cb472a64075bfd95ed22",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "LINE_OF_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 2.0994475138121547,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 181,
+        "executed_by_graph_v1_0": true,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "PAYMENT",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 380,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT"
+        ],
+        "represented_by_frozen_motif": true,
+        "representing_frozen_motif_ids": [
+          "PAYMENT_GL_ENTRIES"
+        ],
+        "sequence_id": "SEQ_9d73a2a7585cb71386ed",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.3480662983425415,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 181,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 244,
+        "relation_sequence": [
+          "AUDIT_EVENT_FOR_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_c2448bb4494508e6b43b",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "AUDIT_EVENT_FOR_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 4.476190476190476,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 168,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 8,
+        "node_type_sequence": [
+          "INVOICE",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 752,
+        "relation_sequence": [
+          "GL_SOURCE_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_1c2f525a4083b8406800",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 3.233128834355828,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 8,
+        "node_type_sequence": [
+          "PAYMENT",
+          "PAYMENT_ALLOCATION",
+          "INVOICE",
+          "INVOICE_LINE"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 527,
+        "relation_sequence": [
+          "ALLOCATION_OF_PAYMENT",
+          "ALLOCATION_TO_INVOICE",
+          "LINE_OF_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_0a788e1aa7da7bd05c5c",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_OF_PAYMENT:reverse",
+          "ALLOCATION_TO_INVOICE:forward",
+          "LINE_OF_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 5.895705521472393,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 12,
+        "node_type_sequence": [
+          "PAYMENT",
+          "PAYMENT_ALLOCATION",
+          "INVOICE",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 961,
+        "relation_sequence": [
+          "ALLOCATION_OF_PAYMENT",
+          "ALLOCATION_TO_INVOICE",
+          "GL_SOURCE_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_1c46635c746e4f2843aa",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_OF_PAYMENT:reverse",
+          "ALLOCATION_TO_INVOICE:forward",
+          "GL_SOURCE_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 2.7484662576687118,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 448,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "AUDIT_EVENT_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_28c0a0c5df6f5ede4f73",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "AUDIT_EVENT_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 2.914110429447853,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 5,
+        "node_type_sequence": [
+          "PAYMENT",
+          "PAYMENT_ALLOCATION",
+          "INVOICE",
+          "APPROVAL_EVENT"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 475,
+        "relation_sequence": [
+          "ALLOCATION_OF_PAYMENT",
+          "ALLOCATION_TO_INVOICE",
+          "APPROVAL_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_55225681bfc8f57c12e7",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_OF_PAYMENT:reverse",
+          "ALLOCATION_TO_INVOICE:forward",
+          "APPROVAL_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 5.895705521472393,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 12,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 961,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "GL_SOURCE_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_6dfe67a22ac995ebdfda",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "GL_SOURCE_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 2.7484662576687118,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "PAYMENT",
+          "PAYMENT_ALLOCATION",
+          "INVOICE",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 448,
+        "relation_sequence": [
+          "ALLOCATION_OF_PAYMENT",
+          "ALLOCATION_TO_INVOICE",
+          "AUDIT_EVENT_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_81fb9b24af8e21f125ba",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_OF_PAYMENT:reverse",
+          "ALLOCATION_TO_INVOICE:forward",
+          "AUDIT_EVENT_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.3742331288343559,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "PAYMENT_ALLOCATION",
+          "INVOICE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 224,
+        "relation_sequence": [
+          "ALLOCATION_OF_PAYMENT",
+          "ALLOCATION_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_835ec7063ab88a1302b1",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_OF_PAYMENT:reverse",
+          "ALLOCATION_TO_INVOICE:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.3742331288343559,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "PAYMENT_ALLOCATION"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 224,
+        "relation_sequence": [
+          "ALLOCATION_OF_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_85cda035f574b22619cb",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_OF_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.6257668711656441,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 3,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "PAYMENT_ALLOCATION"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 265,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "ALLOCATION_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_9423f7feea25619da387",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "ALLOCATION_TO_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 2.914110429447853,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 5,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "APPROVAL_EVENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 475,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "APPROVAL_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_9ce4194941e369e3e756",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "APPROVAL_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.3742331288343559,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 224,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_e66c41be9997e5516c15",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 3.233128834355828,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 8,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "INVOICE_LINE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 527,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "LINE_OF_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_eab1c54117c54df6fc43",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "LINE_OF_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.263157894736842,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 152,
+        "executed_by_graph_v1_0": true,
+        "maximum_multiplicity": 3,
+        "node_type_sequence": [
+          "INVOICE",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 344,
+        "relation_sequence": [
+          "AUDIT_EVENT_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": true,
+        "representing_frozen_motif_ids": [
+          "INVOICE_AUDIT_EVENTS"
+        ],
+        "sequence_id": "SEQ_973f3a173e41d411396d",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "AUDIT_EVENT_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.2302631578947367,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 152,
+        "executed_by_graph_v1_0": true,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "INVOICE",
+          "APPROVAL_EVENT"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 339,
+        "relation_sequence": [
+          "APPROVAL_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": true,
+        "representing_frozen_motif_ids": [
+          "INVOICE_APPROVALS"
+        ],
+        "sequence_id": "SEQ_b431e7f2513bdac5a4af",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "APPROVAL_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 139,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "INVOICE",
+          "PURCHASE_ORDER"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 139,
+        "relation_sequence": [
+          "INVOICE_REFERENCES_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_44eff684611842d14d39",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "INVOICE_REFERENCES_PO:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.366906474820144,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 139,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "INVOICE",
+          "PURCHASE_ORDER",
+          "PO_LINE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 329,
+        "relation_sequence": [
+          "INVOICE_REFERENCES_PO",
+          "LINE_OF_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_6b3c30faeee6e9900138",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "INVOICE_REFERENCES_PO:forward",
+          "LINE_OF_PO:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.676258992805755,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 139,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 8,
+        "node_type_sequence": [
+          "INVOICE",
+          "PURCHASE_ORDER",
+          "PO_LINE",
+          "INVOICE_LINE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 372,
+        "relation_sequence": [
+          "INVOICE_REFERENCES_PO",
+          "LINE_OF_PO",
+          "INVOICE_LINE_REFERENCES_PO_LINE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_6cbe447b0a346f6d2213",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "INVOICE_REFERENCES_PO:forward",
+          "LINE_OF_PO:reverse",
+          "INVOICE_LINE_REFERENCES_PO_LINE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 139,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "INVOICE",
+          "PURCHASE_ORDER",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 139,
+        "relation_sequence": [
+          "INVOICE_REFERENCES_PO",
+          "AUDIT_EVENT_FOR_PURCHASE_ORDER"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_7ec72c221da8d703ea8a",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "INVOICE_REFERENCES_PO:forward",
+          "AUDIT_EVENT_FOR_PURCHASE_ORDER:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.366906474820144,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 139,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "INVOICE",
+          "INVOICE_LINE",
+          "PO_LINE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 329,
+        "relation_sequence": [
+          "LINE_OF_INVOICE",
+          "INVOICE_LINE_REFERENCES_PO_LINE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_832243608201dc96cbc2",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "LINE_OF_INVOICE:reverse",
+          "INVOICE_LINE_REFERENCES_PO_LINE:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.366906474820144,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 139,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "INVOICE",
+          "INVOICE_LINE",
+          "PO_LINE",
+          "PURCHASE_ORDER"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 329,
+        "relation_sequence": [
+          "LINE_OF_INVOICE",
+          "INVOICE_LINE_REFERENCES_PO_LINE",
+          "LINE_OF_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_bea30531d9d0690f5549",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "LINE_OF_INVOICE:reverse",
+          "INVOICE_LINE_REFERENCES_PO_LINE:forward",
+          "LINE_OF_PO:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.208695652173913,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 115,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "PURCHASE_ORDER",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 139,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "INVOICE_REFERENCES_PO",
+          "AUDIT_EVENT_FOR_PURCHASE_ORDER"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_004a45ada0eb1338315a",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "INVOICE_REFERENCES_PO:forward",
+          "AUDIT_EVENT_FOR_PURCHASE_ORDER:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.208695652173913,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 115,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "PURCHASE_ORDER"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 2,
+        "path_instance_count": 139,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "INVOICE_REFERENCES_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_b0725c7e5b13cc73dd3c",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "INVOICE_REFERENCES_PO:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 2.9130434782608696,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 115,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 8,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "INVOICE_LINE",
+          "PO_LINE"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 335,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "LINE_OF_INVOICE",
+          "INVOICE_LINE_REFERENCES_PO_LINE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_ed381a66158f46750121",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "LINE_OF_INVOICE:reverse",
+          "INVOICE_LINE_REFERENCES_PO_LINE:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.208695652173913,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 115,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "PAYMENT_ALLOCATION",
+          "INVOICE",
+          "PURCHASE_ORDER"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 139,
+        "relation_sequence": [
+          "ALLOCATION_OF_PAYMENT",
+          "ALLOCATION_TO_INVOICE",
+          "INVOICE_REFERENCES_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_f518c449d765324ba7b6",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_OF_PAYMENT:reverse",
+          "ALLOCATION_TO_INVOICE:forward",
+          "INVOICE_REFERENCES_PO:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 2.9130434782608696,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 115,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 8,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "PURCHASE_ORDER",
+          "PO_LINE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 335,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "INVOICE_REFERENCES_PO",
+          "LINE_OF_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_f89fe57a08ac950b014c",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "INVOICE_REFERENCES_PO:forward",
+          "LINE_OF_PO:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.5714285714285714,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 56,
+        "executed_by_graph_v1_0": true,
+        "maximum_multiplicity": 3,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 88,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": true,
+        "representing_frozen_motif_ids": [
+          "INVOICE_PAYMENTS"
+        ],
+        "sequence_id": "SEQ_0c8a5a81684e332b3434",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.5714285714285714,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 56,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 3,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT_ALLOCATION",
+          "PAYMENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 88,
+        "relation_sequence": [
+          "ALLOCATION_TO_INVOICE",
+          "ALLOCATION_OF_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_136afbe631c8196773ba",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_TO_INVOICE:reverse",
+          "ALLOCATION_OF_PAYMENT:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.5714285714285714,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 56,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 3,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT_ALLOCATION"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 88,
+        "relation_sequence": [
+          "ALLOCATION_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_682be9aa75b9ef96471d",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_TO_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.2678571428571428,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 56,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 3,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT_ALLOCATION",
+          "PAYMENT",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 71,
+        "relation_sequence": [
+          "ALLOCATION_TO_INVOICE",
+          "ALLOCATION_OF_PAYMENT",
+          "AUDIT_EVENT_FOR_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_90af920f3dd029e60918",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_TO_INVOICE:reverse",
+          "ALLOCATION_OF_PAYMENT:forward",
+          "AUDIT_EVENT_FOR_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.2678571428571428,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 56,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 3,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 2,
+        "path_instance_count": 71,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "AUDIT_EVENT_FOR_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_9cc88761866df86237e0",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "AUDIT_EVENT_FOR_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 3.142857142857143,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 56,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 6,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT_ALLOCATION",
+          "PAYMENT",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 176,
+        "relation_sequence": [
+          "ALLOCATION_TO_INVOICE",
+          "ALLOCATION_OF_PAYMENT",
+          "GL_SOURCE_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_ae873acbadce9fb5036c",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_TO_INVOICE:reverse",
+          "ALLOCATION_OF_PAYMENT:forward",
+          "GL_SOURCE_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.8571428571428572,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 56,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 3,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "PAYMENT_ALLOCATION"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 2,
+        "path_instance_count": 104,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "ALLOCATION_OF_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_bcc8b79b609e2280a364",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "ALLOCATION_OF_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 3.142857142857143,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 56,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 6,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 2,
+        "path_instance_count": 176,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "GL_SOURCE_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_e6d1ba35d1e62653d72e",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "GL_SOURCE_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.025,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 40,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "PAYMENT_ALLOCATION",
+          "INVOICE",
+          "PAYMENT"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 41,
+        "relation_sequence": [
+          "ALLOCATION_OF_PAYMENT",
+          "ALLOCATION_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_05b8ee5a9c5d143ef21a",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_OF_PAYMENT:reverse",
+          "ALLOCATION_TO_INVOICE:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 2.1,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 40,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "PAYMENT",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 84,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "GL_SOURCE_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_72d33e04959fd87ae92d",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "GL_SOURCE_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.025,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 40,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "PAYMENT",
+          "PAYMENT_ALLOCATION"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 41,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "ALLOCATION_OF_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_8195973b1f73c28c0f98",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "ALLOCATION_OF_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.025,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 40,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "PAYMENT_ALLOCATION",
+          "PAYMENT"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 41,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "ALLOCATION_TO_INVOICE",
+          "ALLOCATION_OF_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_a31338c20e7864562e09",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "ALLOCATION_TO_INVOICE:reverse",
+          "ALLOCATION_OF_PAYMENT:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.025,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 40,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "PAYMENT_ALLOCATION",
+          "INVOICE",
+          "PAYMENT_ALLOCATION"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 41,
+        "relation_sequence": [
+          "ALLOCATION_OF_PAYMENT",
+          "ALLOCATION_TO_INVOICE",
+          "ALLOCATION_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_bea4f98cd9ec960add55",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_OF_PAYMENT:reverse",
+          "ALLOCATION_TO_INVOICE:forward",
+          "ALLOCATION_TO_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 40,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "PAYMENT",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 40,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "AUDIT_EVENT_FOR_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_daad8306c1675a34e165",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "AUDIT_EVENT_FOR_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.025,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 40,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "PAYMENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 41,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_fc8d6892f59cb37a8257",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "bank_transaction"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 22,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "BANK_TRANSACTION",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 22,
+        "relation_sequence": [
+          "AUDIT_EVENT_FOR_BANK_TRANSACTION"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_f8598faa47149c7e25bc",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "AUDIT_EVENT_FOR_BANK_TRANSACTION:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 17,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "INVOICE",
+          "PURCHASE_ORDER",
+          "INVOICE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 17,
+        "relation_sequence": [
+          "INVOICE_REFERENCES_PO",
+          "INVOICE_REFERENCES_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_3a94768cb7365d7f92d8",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "INVOICE_REFERENCES_PO:forward",
+          "INVOICE_REFERENCES_PO:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 4.705882352941177,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 17,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 7,
+        "node_type_sequence": [
+          "INVOICE",
+          "PURCHASE_ORDER",
+          "INVOICE",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 80,
+        "relation_sequence": [
+          "INVOICE_REFERENCES_PO",
+          "INVOICE_REFERENCES_PO",
+          "GL_SOURCE_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_4481e5499e72c24a0762",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "INVOICE_REFERENCES_PO:forward",
+          "INVOICE_REFERENCES_PO:reverse",
+          "GL_SOURCE_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.235294117647059,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 17,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 3,
+        "node_type_sequence": [
+          "INVOICE",
+          "PURCHASE_ORDER",
+          "INVOICE",
+          "APPROVAL_EVENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 38,
+        "relation_sequence": [
+          "INVOICE_REFERENCES_PO",
+          "INVOICE_REFERENCES_PO",
+          "APPROVAL_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_5a885ed9931325f041dc",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "INVOICE_REFERENCES_PO:forward",
+          "INVOICE_REFERENCES_PO:reverse",
+          "APPROVAL_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.0,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 17,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "INVOICE",
+          "PURCHASE_ORDER",
+          "INVOICE",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 34,
+        "relation_sequence": [
+          "INVOICE_REFERENCES_PO",
+          "INVOICE_REFERENCES_PO",
+          "AUDIT_EVENT_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_7fd42673e4c9c0629566",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "INVOICE_REFERENCES_PO:forward",
+          "INVOICE_REFERENCES_PO:reverse",
+          "AUDIT_EVENT_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.5294117647058822,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 17,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "INVOICE",
+          "PURCHASE_ORDER",
+          "INVOICE",
+          "INVOICE_LINE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 43,
+        "relation_sequence": [
+          "INVOICE_REFERENCES_PO",
+          "INVOICE_REFERENCES_PO",
+          "LINE_OF_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_ceb745eef44c962805b4",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "INVOICE_REFERENCES_PO:forward",
+          "INVOICE_REFERENCES_PO:reverse",
+          "LINE_OF_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.5294117647058822,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 17,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "INVOICE",
+          "INVOICE_LINE",
+          "PO_LINE",
+          "INVOICE_LINE"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 43,
+        "relation_sequence": [
+          "LINE_OF_INVOICE",
+          "INVOICE_LINE_REFERENCES_PO_LINE",
+          "INVOICE_LINE_REFERENCES_PO_LINE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_d9853295dc7c8025201c",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "LINE_OF_INVOICE:reverse",
+          "INVOICE_LINE_REFERENCES_PO_LINE:forward",
+          "INVOICE_LINE_REFERENCES_PO_LINE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.0,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 16,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "INVOICE",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 32,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "AUDIT_EVENT_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_1c141a170342768e81ca",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "AUDIT_EVENT_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 16,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "PAYMENT_ALLOCATION",
+          "INVOICE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 16,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "ALLOCATION_OF_PAYMENT",
+          "ALLOCATION_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_6ae2aba99dc5272c067c",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "ALLOCATION_OF_PAYMENT:reverse",
+          "ALLOCATION_TO_INVOICE:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.9375,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 16,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 3,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "INVOICE",
+          "INVOICE_LINE"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 31,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "LINE_OF_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_70013028cb4d57897ac0",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "LINE_OF_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 16,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT_ALLOCATION",
+          "PAYMENT",
+          "INVOICE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 16,
+        "relation_sequence": [
+          "ALLOCATION_TO_INVOICE",
+          "ALLOCATION_OF_PAYMENT",
+          "PAYMENT_ALLOCATED_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_7bc4b9208841784dc33a",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_TO_INVOICE:reverse",
+          "ALLOCATION_OF_PAYMENT:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 16,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT_ALLOCATION",
+          "PAYMENT",
+          "PAYMENT_ALLOCATION"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 16,
+        "relation_sequence": [
+          "ALLOCATION_TO_INVOICE",
+          "ALLOCATION_OF_PAYMENT",
+          "ALLOCATION_OF_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_944a31d830fd54e61705",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "ALLOCATION_TO_INVOICE:reverse",
+          "ALLOCATION_OF_PAYMENT:forward",
+          "ALLOCATION_OF_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 2.1875,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 16,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 3,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "INVOICE",
+          "APPROVAL_EVENT"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 35,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "APPROVAL_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_9a870849b4828bcb5b14",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "APPROVAL_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 3.75,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 16,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 6,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "INVOICE",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 60,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "GL_SOURCE_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_aafbf85127d83327ce37",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "GL_SOURCE_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.0625,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 16,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "INVOICE",
+          "PAYMENT_ALLOCATION"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 17,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "ALLOCATION_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_b2edf7c0d1c101e28daa",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "ALLOCATION_TO_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 16,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "INVOICE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 16,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_b88cfa730769a1f33042",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 10.714285714285714,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 22,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "INVOICE",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 150,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "GL_SOURCE_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_12254039fd7554d0268b",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "GL_SOURCE_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 5.714285714285714,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 10,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "INVOICE",
+          "APPROVAL_EVENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 80,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "APPROVAL_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_1a980e88bb39eb197c54",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "APPROVAL_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 2.0,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 28,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "GL_SOURCE_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_2c97d8fb38abdc534788",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "GL_SOURCE_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 2.5714285714285716,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "INVOICE"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 2,
+        "path_instance_count": 36,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "PAYMENT_ALLOCATED_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_8f10782bd3a6dad9d2d5",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 5.142857142857143,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 8,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "INVOICE",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 72,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "AUDIT_EVENT_FOR_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_91b88b682609e49afae0",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "AUDIT_EVENT_FOR_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 2.5714285714285716,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "PAYMENT_ALLOCATION",
+          "INVOICE"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 36,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "ALLOCATION_OF_PAYMENT",
+          "ALLOCATION_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_a7eab351853a3d06c9d9",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "ALLOCATION_OF_PAYMENT:reverse",
+          "ALLOCATION_TO_INVOICE:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 3.142857142857143,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 6,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "INVOICE",
+          "PAYMENT_ALLOCATION"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 44,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "ALLOCATION_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_c43c2c12c61aa84425f5",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "ALLOCATION_TO_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 2.0,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "AUDIT_EVENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 28,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "AUDIT_EVENT_FOR_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_d217f19e4df77f03d0ec",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "AUDIT_EVENT_FOR_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 2.5714285714285716,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "PAYMENT_ALLOCATION"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 2,
+        "path_instance_count": 36,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "ALLOCATION_OF_PAYMENT"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_dc1aa28d46f24f7c98ae",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "ALLOCATION_OF_PAYMENT:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 2.0,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": true,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 28,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT"
+        ],
+        "represented_by_frozen_motif": true,
+        "representing_frozen_motif_ids": [
+          "GL_ENTRY_SOURCE_TRANSACTION"
+        ],
+        "sequence_id": "SEQ_e35dcdc3ff2384c1f1b1",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 6.0,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 14,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "INVOICE",
+          "INVOICE_LINE"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 84,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "LINE_OF_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_e9da5f7a67f8cadc6f4a",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "LINE_OF_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 11,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "INVOICE",
+          "PURCHASE_ORDER"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 11,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "INVOICE_REFERENCES_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_12ad0632ddae2488b841",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "INVOICE_REFERENCES_PO:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 2.2222222222222223,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 9,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "INVOICE",
+          "PURCHASE_ORDER"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 3,
+        "path_instance_count": 20,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "INVOICE_REFERENCES_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_6788c62cb1f427fb3c40",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "INVOICE_REFERENCES_PO:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "bank_transaction"
+        ],
+        "average_multiplicity": 2.0,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 4,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "BANK_TRANSACTION",
+          "GL_ENTRY"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 8,
+        "relation_sequence": [
+          "GL_SOURCE_BANK_TRANSACTION"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_fe899a8ff52c3c7b17ff",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_BANK_TRANSACTION:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 2.6666666666666665,
+        "direction_changes_required": 1,
+        "distinct_anchor_count": 3,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "INVOICE",
+          "PAYMENT"
+        ],
+        "orientation_switch_count": 1,
+        "path_depth": 3,
+        "path_instance_count": 8,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_755aaa69ae0d618fe7db",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 2,
+        "distinct_anchor_count": 1,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "INVOICE",
+          "PAYMENT",
+          "INVOICE",
+          "PAYMENT"
+        ],
+        "orientation_switch_count": 2,
+        "path_depth": 3,
+        "path_instance_count": 1,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "PAYMENT_ALLOCATED_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_70153f39b62430b77840",
+        "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+        ]
+      }
+    ],
+    "STORED_DIRECTION_ONLY": [
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.3742331288343559,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 163,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 224,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_e66c41be9997e5516c15",
+        "topology_view": "STORED_DIRECTION_ONLY",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "invoice"
+        ],
+        "average_multiplicity": 1.0,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 139,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 1,
+        "node_type_sequence": [
+          "INVOICE",
+          "PURCHASE_ORDER"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 139,
+        "relation_sequence": [
+          "INVOICE_REFERENCES_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_44eff684611842d14d39",
+        "topology_view": "STORED_DIRECTION_ONLY",
+        "traversal_sequence": [
+          "INVOICE_REFERENCES_PO:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "payment"
+        ],
+        "average_multiplicity": 1.208695652173913,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 115,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "PAYMENT",
+          "INVOICE",
+          "PURCHASE_ORDER"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 2,
+        "path_instance_count": 139,
+        "relation_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "INVOICE_REFERENCES_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_b0725c7e5b13cc73dd3c",
+        "topology_view": "STORED_DIRECTION_ONLY",
+        "traversal_sequence": [
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "INVOICE_REFERENCES_PO:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 2.5714285714285716,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "INVOICE"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 2,
+        "path_instance_count": 36,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "PAYMENT_ALLOCATED_TO_INVOICE"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_8f10782bd3a6dad9d2d5",
+        "topology_view": "STORED_DIRECTION_ONLY",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 2.0,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 14,
+        "executed_by_graph_v1_0": true,
+        "maximum_multiplicity": 2,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 1,
+        "path_instance_count": 28,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT"
+        ],
+        "represented_by_frozen_motif": true,
+        "representing_frozen_motif_ids": [
+          "GL_ENTRY_SOURCE_TRANSACTION"
+        ],
+        "sequence_id": "SEQ_e35dcdc3ff2384c1f1b1",
+        "topology_view": "STORED_DIRECTION_ONLY",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward"
+        ]
+      },
+      {
+        "anchor_types": [
+          "gl_journal"
+        ],
+        "average_multiplicity": 2.2222222222222223,
+        "direction_changes_required": 0,
+        "distinct_anchor_count": 9,
+        "executed_by_graph_v1_0": false,
+        "maximum_multiplicity": 4,
+        "node_type_sequence": [
+          "GL_ENTRY",
+          "PAYMENT",
+          "INVOICE",
+          "PURCHASE_ORDER"
+        ],
+        "orientation_switch_count": 0,
+        "path_depth": 3,
+        "path_instance_count": 20,
+        "relation_sequence": [
+          "GL_SOURCE_PAYMENT",
+          "PAYMENT_ALLOCATED_TO_INVOICE",
+          "INVOICE_REFERENCES_PO"
+        ],
+        "represented_by_frozen_motif": false,
+        "representing_frozen_motif_ids": [],
+        "sequence_id": "SEQ_6788c62cb1f427fb3c40",
+        "topology_view": "STORED_DIRECTION_ONLY",
+        "traversal_sequence": [
+          "GL_SOURCE_PAYMENT:forward",
+          "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+          "INVOICE_REFERENCES_PO:forward"
+        ]
+      }
+    ]
+  }
+}

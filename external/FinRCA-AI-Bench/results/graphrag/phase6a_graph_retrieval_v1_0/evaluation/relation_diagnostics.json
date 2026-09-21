@@ -1,0 +1,156 @@
+{
+  "ALLOCATION_OF_PAYMENT": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 7180,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "ALLOCATION_TO_INVOICE": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 7180,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "APPROVAL_FOR_INVOICE": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 17429,
+    "selected_path_count": 339,
+    "selected_path_record_attributions": 678
+  },
+  "AUDIT_EVENT_FOR_BANK_TRANSACTION": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 247,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "AUDIT_EVENT_FOR_INVOICE": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 16147,
+    "selected_path_count": 344,
+    "selected_path_record_attributions": 688
+  },
+  "AUDIT_EVENT_FOR_PAYMENT": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 6500,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "AUDIT_EVENT_FOR_PURCHASE_ORDER": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 5000,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "AUDIT_EVENT_FOR_VENDOR": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 40,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "GL_SOURCE_BANK_TRANSACTION": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 314,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "GL_SOURCE_INVOICE": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 33957,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "GL_SOURCE_PAYMENT": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 21,
+    "materialized_edge_count": 12484,
+    "selected_path_count": 408,
+    "selected_path_record_attributions": 816
+  },
+  "INVOICE_FOR_VENDOR": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 8147,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "INVOICE_LINE_REFERENCES_PO_LINE": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 11292,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "INVOICE_REFERENCES_PO": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 5024,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "LINE_OF_INVOICE": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 18299,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "LINE_OF_PO": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 11231,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "PAYMENT_ALLOCATED_TO_INVOICE": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 7180,
+    "selected_path_count": 88,
+    "selected_path_record_attributions": 176
+  },
+  "PAYMENT_FOR_VENDOR": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 6200,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "PO_FOR_VENDOR": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 5000,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "PURCHASE_ORDER_CREATED_BY_EMPLOYEE": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 5000,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "VENDOR_CHANGE_CHANGED_BY_EMPLOYEE": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 186,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  },
+  "VENDOR_CHANGE_FOR_VENDOR": {
+    "causal_importance_claimed": false,
+    "full_evidence_success_case_count_containing_relation": 0,
+    "materialized_edge_count": 186,
+    "selected_path_count": 0,
+    "selected_path_record_attributions": 0
+  }
+}

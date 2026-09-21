@@ -1,0 +1,10 @@
+[
+  {
+    "affected_rule": "RSQL_F02_V1",
+    "implementation": "Read invoices.invoice_total only to apply the explicitly frozen nonpositive exclusion.",
+    "issue": "F02 required-fields bullet omits invoices.invoice_total while the explicit deterministic rule requires excluding nonpositive invoices.",
+    "issue_id": "IMPL-001",
+    "semantic_change": false,
+    "severity": "NON_BLOCKING"
+  }
+]

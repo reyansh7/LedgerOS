@@ -1,0 +1,77 @@
+{
+  "api_calls_made": false,
+  "artifact_type": "phase6a3_run_manifest",
+  "artifact_version": "1.0",
+  "bank_statement_membership_enabled": false,
+  "blocking_decision": "BLOCKED — GRAPH v1.1 EVIDENCE-SELECTION POLICY REQUIRES SEPARATE FREEZE",
+  "candidate_path_count": 13371,
+  "candidate_unique_record_distribution": {
+    "count": 416,
+    "maximum": 50,
+    "mean": 20.11778846153846,
+    "median": 20.0,
+    "p50_nearest_rank": 20,
+    "p75_nearest_rank": 26,
+    "p90_nearest_rank": 35,
+    "p95_nearest_rank": 38,
+    "p99_nearest_rank": 43,
+    "total": 8369
+  },
+  "created_at_utc": "2026-08-15T21:52:42Z",
+  "determinism_result": "PASS_100_PERCENT_SEMANTIC_CONTENT_EQUIVALENCE",
+  "embeddings_created": false,
+  "environment": {
+    "network_required": false,
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "python": "3.11.3"
+  },
+  "gl_journal_enabled": false,
+  "grammar_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+  "graph_edges_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+  "graph_nodes_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+  "graph_v1_1_freeze_hash_inventory_sha256": "9c5e57374928e2f3f0c6bb503f85aaf8c4cd4db7654eae70787a0e7a6351d29c",
+  "heldout_gold_opened": false,
+  "implementation_commit": "NOT_AVAILABLE_NO_GIT_REPOSITORY",
+  "implementation_source_hashes": {
+    "src/graphrag/v1_1/__init__.py": {
+      "bytes": 502,
+      "sha256": "a635f172f5b4bf68d1cc7ef012d338ee4e6b73b0e996640cfe3814dcad2e228f"
+    },
+    "src/graphrag/v1_1/candidate_traversal.py": {
+      "bytes": 29101,
+      "sha256": "f023a9db1ea03546af1f5e9e3afaa33cc437c6a20238356bb2be41af716daedc"
+    },
+    "src/graphrag/v1_1/preflight.py": {
+      "bytes": 5233,
+      "sha256": "5cda3afe1778873ccd045c8cb9820720489ffafc0bd1000f567926b276620d4e"
+    },
+    "src/graphrag/v1_1/runner.py": {
+      "bytes": 33082,
+      "sha256": "314c8b92522846662e83856ea537a3d6d814106f549ff441e7066ef10c8c3202"
+    },
+    "src/graphrag/v1_1/typed_grammar_loader.py": {
+      "bytes": 6690,
+      "sha256": "52cadf9c2290f901cf880505f94cb28510a00e43d1d98109ed2b8a0d8d4f9925"
+    },
+    "tests/graphrag/test_phase6a3_graph_v1_1.py": {
+      "bytes": 8467,
+      "sha256": "83ea6649b4e803b74c96bf75a1b56bd08b89b0fb4b6173f12b76586f7f179417"
+    }
+  },
+  "llm_enabled": false,
+  "max_path_depth": 3,
+  "max_raw_selected_records": 40,
+  "payment_bank_enabled": false,
+  "pre_gold_output_freeze_completed": true,
+  "pre_gold_output_manifest_hash": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d",
+  "ranking_policy_hash": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+  "run_id": "PHASE6A3_GRAPH_V1_1_CANDIDATE_FREEZE_POLICY_BLOCKED",
+  "selection_policy_hash": null,
+  "selection_policy_status": "BLOCKED_AMBIGUOUS",
+  "semantic_fallback_enabled": false,
+  "status": "BLOCKED_EVIDENCE_SELECTION_POLICY",
+  "tier_b_enabled": false,
+  "validation_case_count": 416,
+  "validation_gold_opened_after_freeze": false,
+  "validation_split_identifier": "PHASE5_AUTHORIZED_VALIDATION_ROUTING_SET_416"
+}

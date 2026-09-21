@@ -1,0 +1,98 @@
+{
+  "artifact_type": "graph_v1_1_evidence_selection_pressure_diagnostics",
+  "artifact_version": "1.1",
+  "budget_rejected_paths_by_tier": {
+    "5": 46
+  },
+  "candidate_record_distribution": {
+    "count": 416,
+    "maximum": 50,
+    "mean": 20.11778846153846,
+    "minimum": 2,
+    "p50": 20,
+    "p75": 26,
+    "p90": 35,
+    "p95": 38,
+    "p99": 43,
+    "sum": 8369
+  },
+  "canonical_selected_paths_by_tier": {
+    "2": 2385,
+    "3": 1669,
+    "4": 2976,
+    "5": 3528
+  },
+  "case_count": 416,
+  "cases_requiring_selection": 416,
+  "cases_requiring_truncation": 9,
+  "cases_selected_at_exactly_40": 13,
+  "cases_with_no_budget_pressure": 407,
+  "created_at_utc": "2026-08-15T23:38:00Z",
+  "dropped_record_distribution": {
+    "count": 416,
+    "maximum": 10,
+    "mean": 0.07932692307692307,
+    "minimum": 0,
+    "p50": 0,
+    "p75": 0,
+    "p90": 0,
+    "p95": 0,
+    "p99": 3,
+    "sum": 33
+  },
+  "dropped_records_by_best_semantic_tier": {
+    "5": 33
+  },
+  "dropped_records_by_endpoint_introduction_class": {
+    "TERMINAL_CONTEXT": 33
+  },
+  "dropped_records_by_minimum_path_depth": {
+    "1": 11,
+    "2": 13,
+    "3": 9
+  },
+  "dropped_records_by_node_type": {
+    "APPROVAL_EVENT": 3,
+    "AUDIT_EVENT": 30
+  },
+  "dropped_records_by_transition_class_presence": {
+    "BACKBONE": 22,
+    "SUPPORTING": 22,
+    "TERMINAL_CONTEXT": 33
+  },
+  "metric_scope": "LABEL_BLIND_STRUCTURAL_ONLY",
+  "path_completeness": {
+    "candidate_complete_backbone_paths": 2385,
+    "candidate_terminal_context_paths": 3574,
+    "complete_backbone_paths_dropped_due_to_budget": 0,
+    "definition": "Canonical Tier-2 frozen GL-terminal backbone paths and canonical Tier-5 local terminal-context paths; no gold semantics.",
+    "selected_complete_backbone_paths": 2385,
+    "selected_terminal_context_paths": 3528,
+    "terminal_context_paths_dropped_due_to_budget": 46
+  },
+  "redundant_prefix_paths_by_semantic_family": {
+    "BACKBONE_FAMILY": 1831,
+    "SUPPORTING_FAMILY": 936
+  },
+  "retrieval_metrics_computed": false,
+  "selected_record_distribution": {
+    "count": 416,
+    "maximum": 40,
+    "mean": 20.03846153846154,
+    "minimum": 2,
+    "p50": 20,
+    "p75": 26,
+    "p90": 35,
+    "p95": 38,
+    "p99": 40,
+    "sum": 8336
+  },
+  "selected_records_by_first_introduction_tier": {
+    "0": 430,
+    "2": 3029,
+    "3": 1705,
+    "4": 715,
+    "5": 2457
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,180 @@
+{
+  "artifact_type": "graphrag_grammar_risk_register",
+  "artifact_version": "1.1-draft",
+  "residual_high_risk_count": 0,
+  "risk_count": 15,
+  "risk_scale": [
+    "LOW",
+    "MEDIUM",
+    "HIGH"
+  ],
+  "risks": [
+    {
+      "failure_mode": "Transition composition could multiply candidate paths.",
+      "freeze_review_question": "Is the observed path distribution acceptably bounded under independent drift tests?",
+      "inherent_rating": "MEDIUM",
+      "mitigation": "Explicit whitelist, depth 3, record-ID-simple paths, hub bans, full fanout enumeration, and a topology regression gate; an unexplained material increase is NEEDS_REVIEW, not a reason for metric-tuned pruning.",
+      "residual_rating": "LOW",
+      "risk": "Graph explosion",
+      "risk_id": "R01",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "Vendor, Employee, or context nodes could join unrelated transactions.",
+      "freeze_review_question": "Do tests prove all 14 excluded hub directions and actor/approver routes remain blocked?",
+      "inherent_rating": "HIGH",
+      "mitigation": "No Vendor/Employee transition is executable; context nodes are terminal when reached and default-deny is enforced.",
+      "residual_rating": "LOW",
+      "risk": "Hub leakage",
+      "risk_id": "R02",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "Bidirectional exact relations can oscillate or form longer loops.",
+      "freeze_review_question": "Does the implementation reproduce the simple-path prohibition before expansion?",
+      "inherent_rating": "HIGH",
+      "mitigation": "Reject a neighbor before enqueue when its record_id already appears in the path; depth remains three.",
+      "residual_rating": "LOW",
+      "risk": "Cycles",
+      "risk_id": "R03",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "A path could disclose an endpoint or provenance record after the decision cutoff.",
+      "freeze_review_question": "Are all participant availability fields checked at each hop?",
+      "inherent_rating": "MEDIUM",
+      "mitigation": "Require source, target, persisted edge, and provenance-effective availability eligibility on every hop.",
+      "residual_rating": "LOW",
+      "risk": "Temporal leakage",
+      "risk_id": "R04",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "Rules could encode RCA/failure concepts or semantic-neighbor expansion.",
+      "freeze_review_question": "Can every rule be justified without outcome language?",
+      "inherent_rating": "LOW",
+      "mitigation": "Every transition is justified only by frozen operational fields and topology; semantic fallback is explicitly prohibited.",
+      "residual_rating": "LOW",
+      "risk": "Semantic leakage",
+      "risk_id": "R05",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "Transitions could be selected because of gold retrieval gains.",
+      "freeze_review_question": "Can lineage demonstrate no validation gold or recall was accessed for design?",
+      "inherent_rating": "HIGH",
+      "mitigation": "Transition selection used registry semantics and label-independent topology only; structural coverage is reported after selection and never used as gold optimization.",
+      "residual_rating": "LOW",
+      "risk": "Validation overfitting",
+      "risk_id": "R06",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "M:N or N:1 relations could be silently treated as 1:1.",
+      "freeze_review_question": "Are multiplicity cases preserved without first-match selection?",
+      "inherent_rating": "MEDIUM",
+      "mitigation": "Enumerate all exact neighbors in deterministic order and retain every provenance record; do not use a cap as semantic cardinality.",
+      "residual_rating": "LOW",
+      "risk": "Ambiguity collapse",
+      "risk_id": "R07",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "A reached record could lose the operational explanation for its path.",
+      "freeze_review_question": "Does every candidate record retain all supporting path IDs after deduplication?",
+      "inherent_rating": "MEDIUM",
+      "mitigation": "Persist transition, edge, relation/direction, provenance record/fields, cutoff outcome, node sequence, and path class for every hop.",
+      "residual_rating": "LOW",
+      "risk": "Provenance loss",
+      "risk_id": "R08",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "Investigators could be unable to explain why a record was reached.",
+      "freeze_review_question": "Can an investigator reconstruct each path from immutable operational fields?",
+      "inherent_rating": "MEDIUM",
+      "mitigation": "Human-readable transition justifications plus one deduped evidence record and all supporting path ledgers.",
+      "residual_rating": "LOW",
+      "risk": "Production interpretability",
+      "risk_id": "R09",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "Approval or audit events could route into unrelated subjects or actors.",
+      "freeze_review_question": "Are reached-event continuation attempts rejected regardless of remaining depth?",
+      "inherent_rating": "HIGH",
+      "mitigation": "Terminal-on-entry state; exact event anchors get one owner exit only; actor/Employee and Vendor exits are absent.",
+      "residual_rating": "LOW",
+      "risk": "Context bridge leakage",
+      "risk_id": "R10",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "A GL source ID could resolve against the wrong operational node type.",
+      "freeze_review_question": "Are mismatched or unknown transaction types rejected?",
+      "inherent_rating": "MEDIUM",
+      "mitigation": "Require exact source_transaction_id plus the frozen transaction_type mapping and matching typed transition.",
+      "residual_rating": "LOW",
+      "risk": "GL source-type confusion",
+      "risk_id": "R11",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "Future Invoice-to-GL degree could exceed the observed p99 7/max 8.",
+      "freeze_review_question": "Should an independently justified deterministic cap be frozen after out-of-sample drift review?",
+      "inherent_rating": "MEDIUM",
+      "mitigation": "Classify as BOUNDED_FANOUT, mark CAP_NOT_YET_FROZEN, apply no arbitrary truncation, and require freeze-time distribution regression.",
+      "residual_rating": "MEDIUM",
+      "risk": "Fanout/data drift",
+      "risk_id": "R12",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "Direct projection and allocation-node paths could look like duplicate facts.",
+      "freeze_review_question": "Should the already-frozen direct projection remain SUPPORTING executable or be removed in a later freeze decision?",
+      "inherent_rating": "MEDIUM",
+      "mitigation": "Retain allocation provenance and multiple path IDs, globally deduplicate records, and label the explicit allocation bridge as the fuller lifecycle route.",
+      "residual_rating": "LOW",
+      "risk": "Parallel payment representation",
+      "risk_id": "R13",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "Bank anchors remain shallow because deterministic payment linkage is absent.",
+      "freeze_review_question": "Is a separate, independently audited Tier-B experiment warranted?",
+      "inherent_rating": "MEDIUM",
+      "mitigation": "Record RELATION_GAP and do not compensate with amount/date/account/currency heuristics; study Tier B separately.",
+      "residual_rating": "MEDIUM",
+      "risk": "Bank settlement limitation",
+      "risk_id": "R14",
+      "status": "PROPOSAL_ONLY"
+    },
+    {
+      "failure_mode": "A changed parent artifact could silently alter semantics or topology.",
+      "freeze_review_question": "Does every freeze-review run pass the parent hash gate?",
+      "inherent_rating": "LOW",
+      "mitigation": "Pin and verify raw-byte SHA-256 for all authoritative parents before any design run.",
+      "residual_rating": "LOW",
+      "risk": "Registry drift",
+      "risk_id": "R15",
+      "status": "PROPOSAL_ONLY"
+    }
+  ],
+  "status": "PROPOSAL_ONLY",
+  "topology_reference": {
+    "candidate_path_count": 13371,
+    "candidate_paths_per_anchor": {
+      "count": 416,
+      "maximum": 91,
+      "mean": 32.14182692307692,
+      "median": 31.0,
+      "p50_nearest_rank": 31,
+      "p75_nearest_rank": 44,
+      "p90_nearest_rank": 62,
+      "p95_nearest_rank": 68,
+      "p99_nearest_rank": 78,
+      "total": 13371
+    },
+    "cycles_prevented": 4018
+  }
+}

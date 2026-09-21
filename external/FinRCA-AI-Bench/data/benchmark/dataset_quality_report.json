@@ -1,0 +1,431 @@
+{
+  "bank_statement_results": {
+    "invalid_statements": 0,
+    "passed": true
+  },
+  "benchmark_version": "1.0.0",
+  "cases_by_difficulty": {
+    "easy": 17,
+    "hard": 12,
+    "medium": 21
+  },
+  "clean_table_row_counts": {
+    "approval_events": 515,
+    "audit_log": 823,
+    "bank_statements": 54,
+    "bank_transactions": 180,
+    "employees": 24,
+    "gl_entries": 1374,
+    "invoice_lines": 533,
+    "invoices": 240,
+    "payment_allocations": 212,
+    "payments": 180,
+    "po_lines": 353,
+    "purchase_orders": 160,
+    "vendor_change_log": 3,
+    "vendors": 40
+  },
+  "clean_validation": {
+    "issue_count": 0,
+    "issues": [],
+    "issues_by_rule": {},
+    "passed": true
+  },
+  "dataset_hash": "8fe3e45510d0f410ce98620412d7cfde00403a434346335ee7684e8fb5b677fd",
+  "date_range": {
+    "bank_posted_max": "2026-06-26",
+    "bank_posted_min": "2025-01-29",
+    "invoice_max": "2026-06-10",
+    "invoice_min": "2025-01-16"
+  },
+  "duplicate_ids": {
+    "approval_events": 0,
+    "audit_log": 0,
+    "bank_statements": 0,
+    "bank_transactions": 0,
+    "employees": 0,
+    "gl_entries": 0,
+    "invoice_lines": 0,
+    "invoices": 0,
+    "payment_allocations": 0,
+    "payments": 0,
+    "po_lines": 0,
+    "purchase_orders": 0,
+    "vendor_change_log": 0,
+    "vendors": 0
+  },
+  "failure_cases": 30,
+  "failure_signature_validation": {
+    "checked": 30,
+    "failed_case_ids": [],
+    "passed": true
+  },
+  "failures_per_category": {
+    "F01_DUPLICATE_INVOICE": 2,
+    "F02_PO_INVOICE_AMOUNT_MISMATCH": 2,
+    "F03_QUANTITY_MISMATCH": 2,
+    "F04_INCORRECT_VENDOR_ASSOCIATION": 2,
+    "F05_PAYMENT_WITHOUT_VALID_INVOICE": 2,
+    "F06_INVOICE_PAID_TWICE": 2,
+    "F07_PARTIAL_PAYMENT_RESIDUAL_BALANCE": 2,
+    "F08_APPROVAL_WORKFLOW_FAILURE": 2,
+    "F09_GL_POSTING_MISMATCH": 2,
+    "F10_WRONG_ACCOUNTING_PERIOD": 2,
+    "F11_VENDOR_MASTER_CHANGE_CONFLICT": 2,
+    "F12_ERP_PAYMENT_MISSING_FROM_BANK": 2,
+    "F13_BANK_TRANSACTION_MISSING_FROM_ERP": 2,
+    "F14_BANK_ERP_AMOUNT_MISMATCH": 2,
+    "F15_INCORRECT_PAYMENT_BANK_MATCH": 2
+  },
+  "gl_balancing_results": {
+    "passed": true,
+    "unbalanced_journals": 0
+  },
+  "ground_truth_validation": {
+    "issue_count": 0,
+    "issues": [],
+    "passed": true
+  },
+  "monetary_distributions": {
+    "bank_transaction_amount": {
+      "count": "184",
+      "max": "51206.40",
+      "median": "3660.16",
+      "min": "202.92",
+      "p95": "19188.00",
+      "sum": "1133922.44"
+    },
+    "invoice_total": {
+      "count": "243",
+      "max": "50299.12",
+      "median": "4321.74",
+      "min": "-3230.77",
+      "p95": "17848.27",
+      "sum": "1482176.26"
+    },
+    "payment_amount": {
+      "count": "184",
+      "max": "51206.40",
+      "median": "3665.95",
+      "min": "202.92",
+      "p95": "19010.08",
+      "sum": "1111997.77"
+    }
+  },
+  "non_failure_cases": 20,
+  "null_statistics": {
+    "approval_events": {
+      "action": 0,
+      "approval_event_id": 0,
+      "approval_level": 0,
+      "approver_id": 0,
+      "approver_role": 0,
+      "comments": 0,
+      "event_timestamp": 0,
+      "invoice_id": 0,
+      "new_status": 0,
+      "previous_status": 0,
+      "source_system": 0
+    },
+    "audit_log": {
+      "actor_id": 0,
+      "entity_id": 0,
+      "entity_type": 0,
+      "event_id": 0,
+      "event_type": 0,
+      "field": 580,
+      "new_value": 582,
+      "old_value": 587,
+      "source_system": 0,
+      "timestamp": 0
+    },
+    "bank_statements": {
+      "bank_account_id": 0,
+      "bank_statement_id": 0,
+      "closing_balance": 0,
+      "opening_balance": 0,
+      "source_system": 0,
+      "statement_date": 0,
+      "total_credits": 0,
+      "total_debits": 0
+    },
+    "bank_transactions": {
+      "amount": 0,
+      "bank_account_id": 0,
+      "bank_reference": 0,
+      "bank_transaction_id": 0,
+      "counterparty_token": 0,
+      "currency": 0,
+      "direction": 0,
+      "payment_reference": 0,
+      "posted_date": 0,
+      "source_system": 0,
+      "status": 0,
+      "transaction_date": 0,
+      "transaction_type": 0
+    },
+    "employees": {
+      "active_status": 0,
+      "approval_limit": 0,
+      "department": 0,
+      "employee_id": 0,
+      "role": 0,
+      "source_system": 0
+    },
+    "gl_entries": {
+      "accounting_period": 0,
+      "cost_center": 0,
+      "credit": 0,
+      "currency": 0,
+      "debit": 0,
+      "department": 0,
+      "gl_account": 0,
+      "journal_id": 0,
+      "journal_line_id": 0,
+      "memo": 0,
+      "posting_date": 0,
+      "source_system": 0,
+      "source_transaction_id": 0,
+      "transaction_type": 0
+    },
+    "invoice_lines": {
+      "cost_center": 0,
+      "department": 0,
+      "gl_account": 0,
+      "invoice_id": 0,
+      "invoice_line_id": 0,
+      "item_id": 0,
+      "line_amount": 0,
+      "po_line_id": 210,
+      "quantity": 0,
+      "source_system": 0,
+      "unit_price": 0
+    },
+    "invoices": {
+      "created_at": 0,
+      "currency": 0,
+      "due_date": 0,
+      "duplicate_reference": 242,
+      "invoice_date": 0,
+      "invoice_id": 0,
+      "invoice_number": 0,
+      "invoice_total": 0,
+      "payment_terms": 0,
+      "po_id": 93,
+      "received_date": 0,
+      "shipping": 0,
+      "source_system": 0,
+      "status": 0,
+      "subtotal": 0,
+      "tax": 0,
+      "vendor_id": 0
+    },
+    "payment_allocations": {
+      "allocated_amount": 0,
+      "allocation_date": 0,
+      "invoice_id": 0,
+      "payment_id": 0,
+      "source_system": 0
+    },
+    "payments": {
+      "bank_account_id": 0,
+      "created_at": 0,
+      "payment_amount": 0,
+      "payment_currency": 0,
+      "payment_date": 0,
+      "payment_id": 0,
+      "payment_method": 0,
+      "payment_status": 0,
+      "reference_number": 0,
+      "settlement_status": 0,
+      "source_system": 0,
+      "vendor_id": 0
+    },
+    "po_lines": {
+      "cost_center": 0,
+      "department": 0,
+      "description": 0,
+      "gl_account": 0,
+      "item_id": 0,
+      "line_amount": 0,
+      "po_id": 0,
+      "po_line_id": 0,
+      "quantity": 0,
+      "source_system": 0,
+      "unit_price": 0
+    },
+    "purchase_orders": {
+      "cost_center": 0,
+      "created_by": 0,
+      "currency": 0,
+      "department": 0,
+      "expected_delivery_date": 0,
+      "gl_account": 0,
+      "po_date": 0,
+      "po_id": 0,
+      "po_total": 0,
+      "shipping": 0,
+      "source_system": 0,
+      "status": 0,
+      "subtotal": 0,
+      "tax": 0,
+      "vendor_id": 0
+    },
+    "vendor_change_log": {
+      "change_id": 0,
+      "change_reason": 0,
+      "changed_at": 0,
+      "changed_by": 0,
+      "field_changed": 0,
+      "new_value": 0,
+      "old_value": 0,
+      "source_system": 0,
+      "vendor_id": 0
+    },
+    "vendors": {
+      "bank_account_token": 0,
+      "bank_routing_token": 0,
+      "country": 0,
+      "created_at": 0,
+      "currency": 0,
+      "default_payment_method": 0,
+      "payment_terms": 0,
+      "source_system": 0,
+      "tax_id_hash": 0,
+      "updated_at": 0,
+      "vendor_id": 0,
+      "vendor_name": 0,
+      "vendor_status": 0,
+      "vendor_type": 0
+    }
+  },
+  "number_of_cases": 50,
+  "payment_method_distribution": {
+    "ACH": 152,
+    "check": 16,
+    "wire": 16
+  },
+  "post_injection_invariant_validation": {
+    "issue_count": 13,
+    "issues": [
+      {
+        "entity_id": "PAY_0420181",
+        "rule": "PAYMENT_ALLOCATION_TOTAL"
+      },
+      {
+        "entity_id": "PAY_0420182",
+        "rule": "PAYMENT_ALLOCATION_TOTAL"
+      },
+      {
+        "entity_id": "INV_0420031",
+        "rule": "PAID_INVOICE_BALANCE"
+      },
+      {
+        "entity_id": "INV_0420073",
+        "rule": "PAID_INVOICE_BALANCE"
+      },
+      {
+        "entity_id": "INV_0420192",
+        "rule": "PAID_INVOICE_BALANCE"
+      },
+      {
+        "entity_id": "INV_0420192",
+        "rule": "INVOICE_OVERPAYMENT"
+      },
+      {
+        "entity_id": "INV_0420208",
+        "rule": "PAID_INVOICE_BALANCE"
+      },
+      {
+        "entity_id": "INV_0420208",
+        "rule": "INVOICE_OVERPAYMENT"
+      },
+      {
+        "entity_id": "INV_0420243",
+        "rule": "INVOICE_OVERPAYMENT"
+      },
+      {
+        "entity_id": "PAY_0420006",
+        "rule": "APPROVAL_PAYMENT_ORDER"
+      },
+      {
+        "entity_id": "PAY_0420007",
+        "rule": "APPROVAL_PAYMENT_ORDER"
+      },
+      {
+        "entity_id": "BT_0420027",
+        "rule": "PAYMENT_BANK_ORDER"
+      },
+      {
+        "entity_id": "BT_0420059",
+        "rule": "PAYMENT_BANK_ORDER"
+      }
+    ],
+    "issues_by_rule": {
+      "APPROVAL_PAYMENT_ORDER": 2,
+      "INVOICE_OVERPAYMENT": 3,
+      "PAID_INVOICE_BALANCE": 4,
+      "PAYMENT_ALLOCATION_TOTAL": 2,
+      "PAYMENT_BANK_ORDER": 2
+    },
+    "passed": false
+  },
+  "quality_gate_passed": true,
+  "reconciliation_validation_results": {
+    "erp_bank_issue_count": 10,
+    "note": "Post-injection reconciliation findings include intended benchmark cases.",
+    "operational_gl_issue_count": 5
+  },
+  "synthetic_data_only": true,
+  "table_row_counts": {
+    "approval_events": 513,
+    "audit_log": 843,
+    "bank_statements": 54,
+    "bank_transactions": 184,
+    "employees": 24,
+    "gl_entries": 1394,
+    "invoice_lines": 539,
+    "invoices": 243,
+    "payment_allocations": 214,
+    "payments": 184,
+    "po_lines": 353,
+    "purchase_orders": 160,
+    "vendor_change_log": 6,
+    "vendors": 40
+  },
+  "train_test_leakage_checks": {
+    "case_counts": {
+      "challenge_test": 4,
+      "test": 5,
+      "train": 26,
+      "validation": 15
+    },
+    "case_id_overlaps": {
+      "test__challenge_test": 0,
+      "train__challenge_test": 0,
+      "train__test": 0,
+      "train__validation": 0,
+      "validation__challenge_test": 0,
+      "validation__test": 0
+    },
+    "passed": true,
+    "primary_vendor_group_overlaps": {
+      "test__challenge_test": 0,
+      "train__challenge_test": 0,
+      "train__test": 0,
+      "train__validation": 0,
+      "validation__challenge_test": 0,
+      "validation__test": 0
+    },
+    "vendor_group_counts": {
+      "challenge_test": 2,
+      "test": 5,
+      "train": 13,
+      "validation": 7
+    }
+  },
+  "vendor_concentration": {
+    "top_10_vendor_spend_share": "0.566420",
+    "vendors_with_invoices": 38
+  }
+}

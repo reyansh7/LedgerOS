@@ -1,0 +1,8 @@
+{
+  "command": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3 -m pytest tests/classical_ml -q",
+  "exit_code": 0,
+  "passed": true,
+  "runtime_seconds": 2.114943083986873,
+  "stderr": "",
+  "stdout": "...............                                                          [100%]\n15 passed in 1.84s\n"
+}

@@ -1,0 +1,18 @@
+{
+  "case_count": 439,
+  "case_latency_sum_seconds": 4.314061995,
+  "external_services": "none",
+  "llm_or_api_cost": 0,
+  "logical_cpu_count": 8,
+  "machine": "arm64",
+  "mean_latency_ms": 9.827020489749431,
+  "median_latency_ms": 9.171125,
+  "p95_latency_ms": 18.920417,
+  "p99_latency_ms": 27.137458,
+  "peak_process_rss_bytes_approximate": 609435648,
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "processor": "arm",
+  "runtime_technology": "CPython 3.11.3 standard-library in-memory relational indexes",
+  "throughput_cases_per_second": 98.31832641391281,
+  "total_evaluation_runtime_seconds": 4.465088209006353
+}

@@ -1,0 +1,3071 @@
+{
+  "case_count": 437,
+  "cases": [
+    {
+      "case_id": "RCA_000001",
+      "estimated_input_tokens": 6930,
+      "fits": true,
+      "input_characters": 20790,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000006",
+      "estimated_input_tokens": 12053,
+      "fits": true,
+      "input_characters": 36159,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000007",
+      "estimated_input_tokens": 8611,
+      "fits": true,
+      "input_characters": 25833,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000012",
+      "estimated_input_tokens": 3007,
+      "fits": true,
+      "input_characters": 9020,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000013",
+      "estimated_input_tokens": 6561,
+      "fits": true,
+      "input_characters": 19683,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000018",
+      "estimated_input_tokens": 6212,
+      "fits": true,
+      "input_characters": 18635,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000024",
+      "estimated_input_tokens": 6560,
+      "fits": true,
+      "input_characters": 19680,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000036",
+      "estimated_input_tokens": 8630,
+      "fits": true,
+      "input_characters": 25889,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000042",
+      "estimated_input_tokens": 2498,
+      "fits": true,
+      "input_characters": 7493,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000048",
+      "estimated_input_tokens": 8292,
+      "fits": true,
+      "input_characters": 24876,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000058",
+      "estimated_input_tokens": 3006,
+      "fits": true,
+      "input_characters": 9017,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000062",
+      "estimated_input_tokens": 2760,
+      "fits": true,
+      "input_characters": 8278,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000063",
+      "estimated_input_tokens": 11670,
+      "fits": true,
+      "input_characters": 35010,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000067",
+      "estimated_input_tokens": 2756,
+      "fits": true,
+      "input_characters": 8266,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000069",
+      "estimated_input_tokens": 9995,
+      "fits": true,
+      "input_characters": 29983,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000070",
+      "estimated_input_tokens": 6550,
+      "fits": true,
+      "input_characters": 19649,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000074",
+      "estimated_input_tokens": 9658,
+      "fits": true,
+      "input_characters": 28973,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000075",
+      "estimated_input_tokens": 10038,
+      "fits": true,
+      "input_characters": 30114,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000080",
+      "estimated_input_tokens": 6919,
+      "fits": true,
+      "input_characters": 20756,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000085",
+      "estimated_input_tokens": 10356,
+      "fits": true,
+      "input_characters": 31068,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000090",
+      "estimated_input_tokens": 2757,
+      "fits": true,
+      "input_characters": 8271,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000105",
+      "estimated_input_tokens": 6466,
+      "fits": true,
+      "input_characters": 19398,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000107",
+      "estimated_input_tokens": 6481,
+      "fits": true,
+      "input_characters": 19441,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000113",
+      "estimated_input_tokens": 6197,
+      "fits": true,
+      "input_characters": 18590,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000128",
+      "estimated_input_tokens": 4965,
+      "fits": true,
+      "input_characters": 14895,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000132",
+      "estimated_input_tokens": 5812,
+      "fits": true,
+      "input_characters": 17436,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000137",
+      "estimated_input_tokens": 7132,
+      "fits": true,
+      "input_characters": 21396,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000140",
+      "estimated_input_tokens": 4935,
+      "fits": true,
+      "input_characters": 14805,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000141",
+      "estimated_input_tokens": 7356,
+      "fits": true,
+      "input_characters": 22067,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000146",
+      "estimated_input_tokens": 7436,
+      "fits": true,
+      "input_characters": 22307,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000153",
+      "estimated_input_tokens": 7390,
+      "fits": true,
+      "input_characters": 22168,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000156",
+      "estimated_input_tokens": 7131,
+      "fits": true,
+      "input_characters": 21393,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000161",
+      "estimated_input_tokens": 7077,
+      "fits": true,
+      "input_characters": 21230,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000165",
+      "estimated_input_tokens": 5237,
+      "fits": true,
+      "input_characters": 15709,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000168",
+      "estimated_input_tokens": 8084,
+      "fits": true,
+      "input_characters": 24252,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000169",
+      "estimated_input_tokens": 5907,
+      "fits": true,
+      "input_characters": 17719,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000170",
+      "estimated_input_tokens": 6103,
+      "fits": true,
+      "input_characters": 18308,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000174",
+      "estimated_input_tokens": 5243,
+      "fits": true,
+      "input_characters": 15729,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000175",
+      "estimated_input_tokens": 6457,
+      "fits": true,
+      "input_characters": 19369,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000182",
+      "estimated_input_tokens": 8319,
+      "fits": true,
+      "input_characters": 24955,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000189",
+      "estimated_input_tokens": 5812,
+      "fits": true,
+      "input_characters": 17436,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000209",
+      "estimated_input_tokens": 6808,
+      "fits": true,
+      "input_characters": 20423,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000212",
+      "estimated_input_tokens": 6166,
+      "fits": true,
+      "input_characters": 18498,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000214",
+      "estimated_input_tokens": 5878,
+      "fits": true,
+      "input_characters": 17632,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000215",
+      "estimated_input_tokens": 7710,
+      "fits": true,
+      "input_characters": 23129,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000217",
+      "estimated_input_tokens": 5521,
+      "fits": true,
+      "input_characters": 16561,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000225",
+      "estimated_input_tokens": 7787,
+      "fits": true,
+      "input_characters": 23361,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000234",
+      "estimated_input_tokens": 7132,
+      "fits": true,
+      "input_characters": 21394,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000238",
+      "estimated_input_tokens": 7359,
+      "fits": true,
+      "input_characters": 22076,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000239",
+      "estimated_input_tokens": 5254,
+      "fits": true,
+      "input_characters": 15762,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000244",
+      "estimated_input_tokens": 6151,
+      "fits": true,
+      "input_characters": 18451,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000250",
+      "estimated_input_tokens": 6467,
+      "fits": true,
+      "input_characters": 19401,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000255",
+      "estimated_input_tokens": 7131,
+      "fits": true,
+      "input_characters": 21393,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000261",
+      "estimated_input_tokens": 7387,
+      "fits": true,
+      "input_characters": 22159,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000268",
+      "estimated_input_tokens": 7071,
+      "fits": true,
+      "input_characters": 21213,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000274",
+      "estimated_input_tokens": 8091,
+      "fits": true,
+      "input_characters": 24272,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000279",
+      "estimated_input_tokens": 8095,
+      "fits": true,
+      "input_characters": 24284,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000284",
+      "estimated_input_tokens": 7147,
+      "fits": true,
+      "input_characters": 21439,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000293",
+      "estimated_input_tokens": 7113,
+      "fits": true,
+      "input_characters": 21337,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000301",
+      "estimated_input_tokens": 6419,
+      "fits": true,
+      "input_characters": 19255,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000306",
+      "estimated_input_tokens": 6416,
+      "fits": true,
+      "input_characters": 19247,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000311",
+      "estimated_input_tokens": 5785,
+      "fits": true,
+      "input_characters": 17353,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000313",
+      "estimated_input_tokens": 8299,
+      "fits": true,
+      "input_characters": 24895,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000315",
+      "estimated_input_tokens": 5491,
+      "fits": true,
+      "input_characters": 16473,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000323",
+      "estimated_input_tokens": 6395,
+      "fits": true,
+      "input_characters": 19183,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000331",
+      "estimated_input_tokens": 5787,
+      "fits": true,
+      "input_characters": 17360,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000333",
+      "estimated_input_tokens": 6416,
+      "fits": true,
+      "input_characters": 19247,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000349",
+      "estimated_input_tokens": 5787,
+      "fits": true,
+      "input_characters": 17359,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000351",
+      "estimated_input_tokens": 6437,
+      "fits": true,
+      "input_characters": 19311,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000357",
+      "estimated_input_tokens": 7397,
+      "fits": true,
+      "input_characters": 22190,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000361",
+      "estimated_input_tokens": 7105,
+      "fits": true,
+      "input_characters": 21313,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000362",
+      "estimated_input_tokens": 6419,
+      "fits": true,
+      "input_characters": 19255,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000364",
+      "estimated_input_tokens": 6448,
+      "fits": true,
+      "input_characters": 19342,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000365",
+      "estimated_input_tokens": 7355,
+      "fits": true,
+      "input_characters": 22064,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000369",
+      "estimated_input_tokens": 7395,
+      "fits": true,
+      "input_characters": 22185,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000372",
+      "estimated_input_tokens": 6125,
+      "fits": true,
+      "input_characters": 18373,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000409",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9145,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000421",
+      "estimated_input_tokens": 3044,
+      "fits": true,
+      "input_characters": 9131,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000430",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9145,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000432",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9146,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000433",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9147,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000436",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9145,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000444",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9147,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000447",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9145,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000453",
+      "estimated_input_tokens": 3050,
+      "fits": true,
+      "input_characters": 9150,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000457",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9145,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000462",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9146,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000465",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9147,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000469",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9145,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000473",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9147,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000478",
+      "estimated_input_tokens": 3048,
+      "fits": true,
+      "input_characters": 9142,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000479",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9145,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000481",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9145,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000482",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9145,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000484",
+      "estimated_input_tokens": 3044,
+      "fits": true,
+      "input_characters": 9131,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000486",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9147,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000494",
+      "estimated_input_tokens": 3049,
+      "fits": true,
+      "input_characters": 9145,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000495",
+      "estimated_input_tokens": 3050,
+      "fits": true,
+      "input_characters": 9150,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000518",
+      "estimated_input_tokens": 8321,
+      "fits": true,
+      "input_characters": 24961,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000523",
+      "estimated_input_tokens": 9806,
+      "fits": true,
+      "input_characters": 29418,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000538",
+      "estimated_input_tokens": 10943,
+      "fits": true,
+      "input_characters": 32829,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000539",
+      "estimated_input_tokens": 12883,
+      "fits": true,
+      "input_characters": 38648,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000544",
+      "estimated_input_tokens": 9542,
+      "fits": true,
+      "input_characters": 28625,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000558",
+      "estimated_input_tokens": 14666,
+      "fits": true,
+      "input_characters": 43997,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000563",
+      "estimated_input_tokens": 14329,
+      "fits": true,
+      "input_characters": 42987,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000571",
+      "estimated_input_tokens": 16067,
+      "fits": true,
+      "input_characters": 48201,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000581",
+      "estimated_input_tokens": 15608,
+      "fits": true,
+      "input_characters": 46823,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000584",
+      "estimated_input_tokens": 13915,
+      "fits": true,
+      "input_characters": 41743,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000586",
+      "estimated_input_tokens": 8336,
+      "fits": true,
+      "input_characters": 25007,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000594",
+      "estimated_input_tokens": 9996,
+      "fits": true,
+      "input_characters": 29986,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000603",
+      "estimated_input_tokens": 8579,
+      "fits": true,
+      "input_characters": 25735,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000604",
+      "estimated_input_tokens": 8570,
+      "fits": true,
+      "input_characters": 25708,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000610",
+      "estimated_input_tokens": 7316,
+      "fits": true,
+      "input_characters": 21948,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000615",
+      "estimated_input_tokens": 7064,
+      "fits": true,
+      "input_characters": 21192,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000629",
+      "estimated_input_tokens": 7339,
+      "fits": true,
+      "input_characters": 22016,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000630",
+      "estimated_input_tokens": 9505,
+      "fits": true,
+      "input_characters": 28513,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000635",
+      "estimated_input_tokens": 10166,
+      "fits": true,
+      "input_characters": 30498,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000639",
+      "estimated_input_tokens": 9178,
+      "fits": true,
+      "input_characters": 27533,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000666",
+      "estimated_input_tokens": 8539,
+      "fits": true,
+      "input_characters": 25616,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000669",
+      "estimated_input_tokens": 7593,
+      "fits": true,
+      "input_characters": 22779,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000674",
+      "estimated_input_tokens": 9444,
+      "fits": true,
+      "input_characters": 28331,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000676",
+      "estimated_input_tokens": 8263,
+      "fits": true,
+      "input_characters": 24787,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000682",
+      "estimated_input_tokens": 6507,
+      "fits": true,
+      "input_characters": 19521,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000685",
+      "estimated_input_tokens": 7332,
+      "fits": true,
+      "input_characters": 21996,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000688",
+      "estimated_input_tokens": 8521,
+      "fits": true,
+      "input_characters": 25561,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000689",
+      "estimated_input_tokens": 7633,
+      "fits": true,
+      "input_characters": 22899,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000692",
+      "estimated_input_tokens": 8573,
+      "fits": true,
+      "input_characters": 25718,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000695",
+      "estimated_input_tokens": 7905,
+      "fits": true,
+      "input_characters": 23713,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000709",
+      "estimated_input_tokens": 19869,
+      "fits": true,
+      "input_characters": 59607,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000721",
+      "estimated_input_tokens": 14428,
+      "fits": true,
+      "input_characters": 43282,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000728",
+      "estimated_input_tokens": 10649,
+      "fits": true,
+      "input_characters": 31945,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000733",
+      "estimated_input_tokens": 9218,
+      "fits": true,
+      "input_characters": 27653,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000735",
+      "estimated_input_tokens": 10120,
+      "fits": true,
+      "input_characters": 30360,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000736",
+      "estimated_input_tokens": 10652,
+      "fits": true,
+      "input_characters": 31956,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000738",
+      "estimated_input_tokens": 7570,
+      "fits": true,
+      "input_characters": 22710,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000741",
+      "estimated_input_tokens": 10946,
+      "fits": true,
+      "input_characters": 32837,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000752",
+      "estimated_input_tokens": 18650,
+      "fits": true,
+      "input_characters": 55948,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000758",
+      "estimated_input_tokens": 9782,
+      "fits": true,
+      "input_characters": 29346,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000760",
+      "estimated_input_tokens": 11481,
+      "fits": true,
+      "input_characters": 34442,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000762",
+      "estimated_input_tokens": 8643,
+      "fits": true,
+      "input_characters": 25927,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000766",
+      "estimated_input_tokens": 14010,
+      "fits": true,
+      "input_characters": 42030,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000767",
+      "estimated_input_tokens": 8143,
+      "fits": true,
+      "input_characters": 24429,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000772",
+      "estimated_input_tokens": 12039,
+      "fits": true,
+      "input_characters": 36117,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000774",
+      "estimated_input_tokens": 8668,
+      "fits": true,
+      "input_characters": 26003,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000776",
+      "estimated_input_tokens": 10113,
+      "fits": true,
+      "input_characters": 30337,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000780",
+      "estimated_input_tokens": 18882,
+      "fits": true,
+      "input_characters": 56644,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000783",
+      "estimated_input_tokens": 17421,
+      "fits": true,
+      "input_characters": 52261,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000784",
+      "estimated_input_tokens": 20079,
+      "fits": true,
+      "input_characters": 60235,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000788",
+      "estimated_input_tokens": 16230,
+      "fits": true,
+      "input_characters": 48689,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000794",
+      "estimated_input_tokens": 10967,
+      "fits": true,
+      "input_characters": 32899,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000812",
+      "estimated_input_tokens": 8981,
+      "fits": true,
+      "input_characters": 26942,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000813",
+      "estimated_input_tokens": 9506,
+      "fits": true,
+      "input_characters": 28518,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000830",
+      "estimated_input_tokens": 14662,
+      "fits": true,
+      "input_characters": 43984,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000831",
+      "estimated_input_tokens": 11264,
+      "fits": true,
+      "input_characters": 33791,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000834",
+      "estimated_input_tokens": 12402,
+      "fits": true,
+      "input_characters": 37204,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000835",
+      "estimated_input_tokens": 20334,
+      "fits": true,
+      "input_characters": 61000,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000839",
+      "estimated_input_tokens": 14138,
+      "fits": true,
+      "input_characters": 42413,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000840",
+      "estimated_input_tokens": 13770,
+      "fits": true,
+      "input_characters": 41309,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000851",
+      "estimated_input_tokens": 10742,
+      "fits": true,
+      "input_characters": 32224,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000852",
+      "estimated_input_tokens": 13245,
+      "fits": true,
+      "input_characters": 39735,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000865",
+      "estimated_input_tokens": 10947,
+      "fits": true,
+      "input_characters": 32840,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000866",
+      "estimated_input_tokens": 10055,
+      "fits": true,
+      "input_characters": 30164,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000867",
+      "estimated_input_tokens": 11803,
+      "fits": true,
+      "input_characters": 35409,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000868",
+      "estimated_input_tokens": 14694,
+      "fits": true,
+      "input_characters": 44082,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000880",
+      "estimated_input_tokens": 11791,
+      "fits": true,
+      "input_characters": 35373,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000882",
+      "estimated_input_tokens": 12058,
+      "fits": true,
+      "input_characters": 36172,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000883",
+      "estimated_input_tokens": 11849,
+      "fits": true,
+      "input_characters": 35545,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000910",
+      "estimated_input_tokens": 13353,
+      "fits": true,
+      "input_characters": 40057,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000915",
+      "estimated_input_tokens": 9427,
+      "fits": true,
+      "input_characters": 28279,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000925",
+      "estimated_input_tokens": 11119,
+      "fits": true,
+      "input_characters": 33356,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000926",
+      "estimated_input_tokens": 10531,
+      "fits": true,
+      "input_characters": 31592,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000928",
+      "estimated_input_tokens": 8879,
+      "fits": true,
+      "input_characters": 26637,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000931",
+      "estimated_input_tokens": 20581,
+      "fits": true,
+      "input_characters": 61741,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000941",
+      "estimated_input_tokens": 11079,
+      "fits": true,
+      "input_characters": 33237,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000945",
+      "estimated_input_tokens": 19969,
+      "fits": true,
+      "input_characters": 59906,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000946",
+      "estimated_input_tokens": 8880,
+      "fits": true,
+      "input_characters": 26639,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000948",
+      "estimated_input_tokens": 11060,
+      "fits": true,
+      "input_characters": 33178,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000964",
+      "estimated_input_tokens": 9437,
+      "fits": true,
+      "input_characters": 28311,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000965",
+      "estimated_input_tokens": 11666,
+      "fits": true,
+      "input_characters": 34996,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000975",
+      "estimated_input_tokens": 10535,
+      "fits": true,
+      "input_characters": 31605,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000980",
+      "estimated_input_tokens": 11607,
+      "fits": true,
+      "input_characters": 34820,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000984",
+      "estimated_input_tokens": 11665,
+      "fits": true,
+      "input_characters": 34993,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000986",
+      "estimated_input_tokens": 8873,
+      "fits": true,
+      "input_characters": 26617,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000989",
+      "estimated_input_tokens": 18923,
+      "fits": true,
+      "input_characters": 56768,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_000994",
+      "estimated_input_tokens": 18317,
+      "fits": true,
+      "input_characters": 54950,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001006",
+      "estimated_input_tokens": 19466,
+      "fits": true,
+      "input_characters": 58396,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001010",
+      "estimated_input_tokens": 13672,
+      "fits": true,
+      "input_characters": 41014,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001013",
+      "estimated_input_tokens": 12696,
+      "fits": true,
+      "input_characters": 38086,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001020",
+      "estimated_input_tokens": 11506,
+      "fits": true,
+      "input_characters": 34517,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001024",
+      "estimated_input_tokens": 10951,
+      "fits": true,
+      "input_characters": 32853,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001030",
+      "estimated_input_tokens": 18554,
+      "fits": true,
+      "input_characters": 55660,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001036",
+      "estimated_input_tokens": 11223,
+      "fits": true,
+      "input_characters": 33667,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001038",
+      "estimated_input_tokens": 15689,
+      "fits": true,
+      "input_characters": 47066,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001040",
+      "estimated_input_tokens": 10300,
+      "fits": true,
+      "input_characters": 30900,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001042",
+      "estimated_input_tokens": 9765,
+      "fits": true,
+      "input_characters": 29294,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001044",
+      "estimated_input_tokens": 9225,
+      "fits": true,
+      "input_characters": 27675,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001045",
+      "estimated_input_tokens": 11223,
+      "fits": true,
+      "input_characters": 33667,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001047",
+      "estimated_input_tokens": 19654,
+      "fits": true,
+      "input_characters": 58962,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001049",
+      "estimated_input_tokens": 12071,
+      "fits": true,
+      "input_characters": 36213,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001057",
+      "estimated_input_tokens": 10351,
+      "fits": true,
+      "input_characters": 31051,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001059",
+      "estimated_input_tokens": 16445,
+      "fits": true,
+      "input_characters": 49333,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001069",
+      "estimated_input_tokens": 12058,
+      "fits": true,
+      "input_characters": 36172,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001073",
+      "estimated_input_tokens": 11517,
+      "fits": true,
+      "input_characters": 34551,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001077",
+      "estimated_input_tokens": 9198,
+      "fits": true,
+      "input_characters": 27592,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001078",
+      "estimated_input_tokens": 12378,
+      "fits": true,
+      "input_characters": 37134,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001086",
+      "estimated_input_tokens": 10685,
+      "fits": true,
+      "input_characters": 32055,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001094",
+      "estimated_input_tokens": 17823,
+      "fits": true,
+      "input_characters": 53469,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001096",
+      "estimated_input_tokens": 9769,
+      "fits": true,
+      "input_characters": 29307,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001101",
+      "estimated_input_tokens": 13727,
+      "fits": true,
+      "input_characters": 41181,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001102",
+      "estimated_input_tokens": 12938,
+      "fits": true,
+      "input_characters": 38813,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001107",
+      "estimated_input_tokens": 12662,
+      "fits": true,
+      "input_characters": 37985,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001111",
+      "estimated_input_tokens": 13501,
+      "fits": true,
+      "input_characters": 40503,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001114",
+      "estimated_input_tokens": 14948,
+      "fits": true,
+      "input_characters": 44843,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001115",
+      "estimated_input_tokens": 12700,
+      "fits": true,
+      "input_characters": 38100,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001117",
+      "estimated_input_tokens": 12053,
+      "fits": true,
+      "input_characters": 36157,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001128",
+      "estimated_input_tokens": 17444,
+      "fits": true,
+      "input_characters": 52332,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001132",
+      "estimated_input_tokens": 14966,
+      "fits": true,
+      "input_characters": 44897,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001133",
+      "estimated_input_tokens": 11249,
+      "fits": true,
+      "input_characters": 33746,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001140",
+      "estimated_input_tokens": 12099,
+      "fits": true,
+      "input_characters": 36295,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001141",
+      "estimated_input_tokens": 8659,
+      "fits": true,
+      "input_characters": 25975,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001146",
+      "estimated_input_tokens": 17138,
+      "fits": true,
+      "input_characters": 51414,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001147",
+      "estimated_input_tokens": 11542,
+      "fits": true,
+      "input_characters": 34624,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001151",
+      "estimated_input_tokens": 11484,
+      "fits": true,
+      "input_characters": 34452,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001154",
+      "estimated_input_tokens": 11524,
+      "fits": true,
+      "input_characters": 34572,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001158",
+      "estimated_input_tokens": 11428,
+      "fits": true,
+      "input_characters": 34282,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001159",
+      "estimated_input_tokens": 10209,
+      "fits": true,
+      "input_characters": 30625,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001170",
+      "estimated_input_tokens": 17992,
+      "fits": true,
+      "input_characters": 53974,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001171",
+      "estimated_input_tokens": 10209,
+      "fits": true,
+      "input_characters": 30625,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001194",
+      "estimated_input_tokens": 10676,
+      "fits": true,
+      "input_characters": 32028,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001206",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7550,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001211",
+      "estimated_input_tokens": 2516,
+      "fits": true,
+      "input_characters": 7546,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001217",
+      "estimated_input_tokens": 2516,
+      "fits": true,
+      "input_characters": 7547,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001218",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7550,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001230",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7551,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001239",
+      "estimated_input_tokens": 2513,
+      "fits": true,
+      "input_characters": 7539,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001241",
+      "estimated_input_tokens": 2513,
+      "fits": true,
+      "input_characters": 7539,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001242",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7551,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001243",
+      "estimated_input_tokens": 2513,
+      "fits": true,
+      "input_characters": 7539,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001245",
+      "estimated_input_tokens": 2516,
+      "fits": true,
+      "input_characters": 7546,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001247",
+      "estimated_input_tokens": 2516,
+      "fits": true,
+      "input_characters": 7547,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001251",
+      "estimated_input_tokens": 2516,
+      "fits": true,
+      "input_characters": 7546,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001252",
+      "estimated_input_tokens": 2513,
+      "fits": true,
+      "input_characters": 7539,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001262",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7551,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001264",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7550,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001267",
+      "estimated_input_tokens": 2516,
+      "fits": true,
+      "input_characters": 7546,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001270",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7550,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001271",
+      "estimated_input_tokens": 2513,
+      "fits": true,
+      "input_characters": 7539,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001272",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7551,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001278",
+      "estimated_input_tokens": 2513,
+      "fits": true,
+      "input_characters": 7539,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001280",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7550,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001285",
+      "estimated_input_tokens": 2516,
+      "fits": true,
+      "input_characters": 7547,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001290",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7550,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001293",
+      "estimated_input_tokens": 2516,
+      "fits": true,
+      "input_characters": 7547,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001294",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7550,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001297",
+      "estimated_input_tokens": 2516,
+      "fits": true,
+      "input_characters": 7547,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001299",
+      "estimated_input_tokens": 2516,
+      "fits": true,
+      "input_characters": 7546,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001300",
+      "estimated_input_tokens": 2517,
+      "fits": true,
+      "input_characters": 7550,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001303",
+      "estimated_input_tokens": 10965,
+      "fits": true,
+      "input_characters": 32894,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001305",
+      "estimated_input_tokens": 16757,
+      "fits": true,
+      "input_characters": 50271,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001310",
+      "estimated_input_tokens": 11512,
+      "fits": true,
+      "input_characters": 34536,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001315",
+      "estimated_input_tokens": 9219,
+      "fits": true,
+      "input_characters": 27655,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001317",
+      "estimated_input_tokens": 12063,
+      "fits": true,
+      "input_characters": 36187,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001320",
+      "estimated_input_tokens": 15710,
+      "fits": true,
+      "input_characters": 47128,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001323",
+      "estimated_input_tokens": 16740,
+      "fits": true,
+      "input_characters": 50219,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001330",
+      "estimated_input_tokens": 11199,
+      "fits": true,
+      "input_characters": 33596,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001332",
+      "estimated_input_tokens": 11220,
+      "fits": true,
+      "input_characters": 33659,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001356",
+      "estimated_input_tokens": 12147,
+      "fits": true,
+      "input_characters": 36440,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001358",
+      "estimated_input_tokens": 13546,
+      "fits": true,
+      "input_characters": 40637,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001365",
+      "estimated_input_tokens": 10649,
+      "fits": true,
+      "input_characters": 31947,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001371",
+      "estimated_input_tokens": 11003,
+      "fits": true,
+      "input_characters": 33008,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001378",
+      "estimated_input_tokens": 8636,
+      "fits": true,
+      "input_characters": 25908,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001380",
+      "estimated_input_tokens": 14950,
+      "fits": true,
+      "input_characters": 44849,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001388",
+      "estimated_input_tokens": 16465,
+      "fits": true,
+      "input_characters": 49395,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001408",
+      "estimated_input_tokens": 17974,
+      "fits": true,
+      "input_characters": 53920,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001416",
+      "estimated_input_tokens": 12139,
+      "fits": true,
+      "input_characters": 36415,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001419",
+      "estimated_input_tokens": 20009,
+      "fits": true,
+      "input_characters": 60026,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001427",
+      "estimated_input_tokens": 16511,
+      "fits": true,
+      "input_characters": 49532,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001429",
+      "estimated_input_tokens": 8404,
+      "fits": true,
+      "input_characters": 25211,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001431",
+      "estimated_input_tokens": 14856,
+      "fits": true,
+      "input_characters": 44568,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001432",
+      "estimated_input_tokens": 11775,
+      "fits": true,
+      "input_characters": 35324,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001443",
+      "estimated_input_tokens": 9805,
+      "fits": true,
+      "input_characters": 29415,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001455",
+      "estimated_input_tokens": 12335,
+      "fits": true,
+      "input_characters": 37003,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001457",
+      "estimated_input_tokens": 18873,
+      "fits": true,
+      "input_characters": 56617,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001459",
+      "estimated_input_tokens": 16889,
+      "fits": true,
+      "input_characters": 50666,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001462",
+      "estimated_input_tokens": 10679,
+      "fits": true,
+      "input_characters": 32037,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001469",
+      "estimated_input_tokens": 9513,
+      "fits": true,
+      "input_characters": 28539,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001472",
+      "estimated_input_tokens": 20368,
+      "fits": true,
+      "input_characters": 61104,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001481",
+      "estimated_input_tokens": 16476,
+      "fits": true,
+      "input_characters": 49428,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001484",
+      "estimated_input_tokens": 10979,
+      "fits": true,
+      "input_characters": 32935,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001486",
+      "estimated_input_tokens": 14157,
+      "fits": true,
+      "input_characters": 42470,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001494",
+      "estimated_input_tokens": 19177,
+      "fits": true,
+      "input_characters": 57529,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001497",
+      "estimated_input_tokens": 12662,
+      "fits": true,
+      "input_characters": 37985,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001498",
+      "estimated_input_tokens": 18095,
+      "fits": true,
+      "input_characters": 54283,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001504",
+      "estimated_input_tokens": 12124,
+      "fits": true,
+      "input_characters": 36370,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001509",
+      "estimated_input_tokens": 13587,
+      "fits": true,
+      "input_characters": 40761,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001510",
+      "estimated_input_tokens": 11775,
+      "fits": true,
+      "input_characters": 35325,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001512",
+      "estimated_input_tokens": 5832,
+      "fits": true,
+      "input_characters": 17496,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001521",
+      "estimated_input_tokens": 6456,
+      "fits": true,
+      "input_characters": 19367,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001543",
+      "estimated_input_tokens": 3375,
+      "fits": true,
+      "input_characters": 10125,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001550",
+      "estimated_input_tokens": 19415,
+      "fits": true,
+      "input_characters": 58245,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001557",
+      "estimated_input_tokens": 9514,
+      "fits": true,
+      "input_characters": 28542,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001573",
+      "estimated_input_tokens": 11870,
+      "fits": true,
+      "input_characters": 35610,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001584",
+      "estimated_input_tokens": 11037,
+      "fits": true,
+      "input_characters": 33111,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001585",
+      "estimated_input_tokens": 8318,
+      "fits": true,
+      "input_characters": 24952,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001586",
+      "estimated_input_tokens": 8390,
+      "fits": true,
+      "input_characters": 25168,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001587",
+      "estimated_input_tokens": 2834,
+      "fits": true,
+      "input_characters": 8500,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001588",
+      "estimated_input_tokens": 8231,
+      "fits": true,
+      "input_characters": 24691,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001594",
+      "estimated_input_tokens": 17454,
+      "fits": true,
+      "input_characters": 52362,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001611",
+      "estimated_input_tokens": 13193,
+      "fits": true,
+      "input_characters": 39579,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001612",
+      "estimated_input_tokens": 7049,
+      "fits": true,
+      "input_characters": 21145,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001613",
+      "estimated_input_tokens": 10361,
+      "fits": true,
+      "input_characters": 31082,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001623",
+      "estimated_input_tokens": 3389,
+      "fits": true,
+      "input_characters": 10166,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001624",
+      "estimated_input_tokens": 6394,
+      "fits": true,
+      "input_characters": 19181,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001625",
+      "estimated_input_tokens": 7900,
+      "fits": true,
+      "input_characters": 23700,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001629",
+      "estimated_input_tokens": 9670,
+      "fits": true,
+      "input_characters": 29009,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001633",
+      "estimated_input_tokens": 5258,
+      "fits": true,
+      "input_characters": 15773,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001636",
+      "estimated_input_tokens": 9155,
+      "fits": true,
+      "input_characters": 27465,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001640",
+      "estimated_input_tokens": 7328,
+      "fits": true,
+      "input_characters": 21983,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001644",
+      "estimated_input_tokens": 11312,
+      "fits": true,
+      "input_characters": 33935,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001650",
+      "estimated_input_tokens": 9500,
+      "fits": true,
+      "input_characters": 28499,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001651",
+      "estimated_input_tokens": 2832,
+      "fits": true,
+      "input_characters": 8496,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001656",
+      "estimated_input_tokens": 5274,
+      "fits": true,
+      "input_characters": 15821,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001657",
+      "estimated_input_tokens": 18002,
+      "fits": true,
+      "input_characters": 54004,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001658",
+      "estimated_input_tokens": 18277,
+      "fits": true,
+      "input_characters": 54829,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001661",
+      "estimated_input_tokens": 9428,
+      "fits": true,
+      "input_characters": 28283,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001667",
+      "estimated_input_tokens": 2834,
+      "fits": true,
+      "input_characters": 8500,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001668",
+      "estimated_input_tokens": 8842,
+      "fits": true,
+      "input_characters": 26526,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001675",
+      "estimated_input_tokens": 8545,
+      "fits": true,
+      "input_characters": 25635,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001677",
+      "estimated_input_tokens": 12268,
+      "fits": true,
+      "input_characters": 36803,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001685",
+      "estimated_input_tokens": 11765,
+      "fits": true,
+      "input_characters": 35293,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001687",
+      "estimated_input_tokens": 4736,
+      "fits": true,
+      "input_characters": 14208,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001689",
+      "estimated_input_tokens": 11849,
+      "fits": true,
+      "input_characters": 35546,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001695",
+      "estimated_input_tokens": 9135,
+      "fits": true,
+      "input_characters": 27403,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001699",
+      "estimated_input_tokens": 2830,
+      "fits": true,
+      "input_characters": 8489,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001707",
+      "estimated_input_tokens": 12151,
+      "fits": true,
+      "input_characters": 36451,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001709",
+      "estimated_input_tokens": 14484,
+      "fits": true,
+      "input_characters": 43452,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001720",
+      "estimated_input_tokens": 6757,
+      "fits": true,
+      "input_characters": 20269,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001729",
+      "estimated_input_tokens": 6202,
+      "fits": true,
+      "input_characters": 18606,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001730",
+      "estimated_input_tokens": 9522,
+      "fits": true,
+      "input_characters": 28565,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001748",
+      "estimated_input_tokens": 10759,
+      "fits": true,
+      "input_characters": 32275,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001754",
+      "estimated_input_tokens": 13916,
+      "fits": true,
+      "input_characters": 41746,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001757",
+      "estimated_input_tokens": 5251,
+      "fits": true,
+      "input_characters": 15751,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001761",
+      "estimated_input_tokens": 6437,
+      "fits": true,
+      "input_characters": 19310,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001762",
+      "estimated_input_tokens": 10986,
+      "fits": true,
+      "input_characters": 32957,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001765",
+      "estimated_input_tokens": 11053,
+      "fits": true,
+      "input_characters": 33157,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001770",
+      "estimated_input_tokens": 13265,
+      "fits": true,
+      "input_characters": 39795,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001783",
+      "estimated_input_tokens": 3921,
+      "fits": true,
+      "input_characters": 11761,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001785",
+      "estimated_input_tokens": 10202,
+      "fits": true,
+      "input_characters": 30604,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001798",
+      "estimated_input_tokens": 11243,
+      "fits": true,
+      "input_characters": 33727,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001803",
+      "estimated_input_tokens": 8258,
+      "fits": true,
+      "input_characters": 24772,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001806",
+      "estimated_input_tokens": 14860,
+      "fits": true,
+      "input_characters": 44579,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001811",
+      "estimated_input_tokens": 2832,
+      "fits": true,
+      "input_characters": 8496,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001814",
+      "estimated_input_tokens": 12411,
+      "fits": true,
+      "input_characters": 37233,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001816",
+      "estimated_input_tokens": 5815,
+      "fits": true,
+      "input_characters": 17443,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001822",
+      "estimated_input_tokens": 19408,
+      "fits": true,
+      "input_characters": 58224,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001823",
+      "estimated_input_tokens": 8314,
+      "fits": true,
+      "input_characters": 24940,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001827",
+      "estimated_input_tokens": 2832,
+      "fits": true,
+      "input_characters": 8496,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001829",
+      "estimated_input_tokens": 8943,
+      "fits": true,
+      "input_characters": 26829,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001832",
+      "estimated_input_tokens": 5808,
+      "fits": true,
+      "input_characters": 17423,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001838",
+      "estimated_input_tokens": 15757,
+      "fits": true,
+      "input_characters": 47271,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001839",
+      "estimated_input_tokens": 11599,
+      "fits": true,
+      "input_characters": 34795,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001840",
+      "estimated_input_tokens": 11773,
+      "fits": true,
+      "input_characters": 35317,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001846",
+      "estimated_input_tokens": 14134,
+      "fits": true,
+      "input_characters": 42401,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001848",
+      "estimated_input_tokens": 5271,
+      "fits": true,
+      "input_characters": 15811,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001850",
+      "estimated_input_tokens": 10393,
+      "fits": true,
+      "input_characters": 31177,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001856",
+      "estimated_input_tokens": 19752,
+      "fits": true,
+      "input_characters": 59254,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001862",
+      "estimated_input_tokens": 8434,
+      "fits": true,
+      "input_characters": 25302,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001865",
+      "estimated_input_tokens": 13294,
+      "fits": true,
+      "input_characters": 39880,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001868",
+      "estimated_input_tokens": 7311,
+      "fits": true,
+      "input_characters": 21931,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001881",
+      "estimated_input_tokens": 10059,
+      "fits": true,
+      "input_characters": 30175,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001894",
+      "estimated_input_tokens": 15791,
+      "fits": true,
+      "input_characters": 47373,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001897",
+      "estimated_input_tokens": 12929,
+      "fits": true,
+      "input_characters": 38787,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001910",
+      "estimated_input_tokens": 10977,
+      "fits": true,
+      "input_characters": 32930,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001913",
+      "estimated_input_tokens": 19923,
+      "fits": true,
+      "input_characters": 59768,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001914",
+      "estimated_input_tokens": 11791,
+      "fits": true,
+      "input_characters": 35371,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001916",
+      "estimated_input_tokens": 9160,
+      "fits": true,
+      "input_characters": 27480,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001917",
+      "estimated_input_tokens": 8248,
+      "fits": true,
+      "input_characters": 24743,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001918",
+      "estimated_input_tokens": 20337,
+      "fits": true,
+      "input_characters": 61010,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001924",
+      "estimated_input_tokens": 10662,
+      "fits": true,
+      "input_characters": 31984,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001931",
+      "estimated_input_tokens": 9684,
+      "fits": true,
+      "input_characters": 29052,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001934",
+      "estimated_input_tokens": 17429,
+      "fits": true,
+      "input_characters": 52287,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001938",
+      "estimated_input_tokens": 11831,
+      "fits": true,
+      "input_characters": 35492,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001942",
+      "estimated_input_tokens": 11227,
+      "fits": true,
+      "input_characters": 33679,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001950",
+      "estimated_input_tokens": 18621,
+      "fits": true,
+      "input_characters": 55862,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001956",
+      "estimated_input_tokens": 15873,
+      "fits": true,
+      "input_characters": 47617,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001965",
+      "estimated_input_tokens": 14744,
+      "fits": true,
+      "input_characters": 44232,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001970",
+      "estimated_input_tokens": 13566,
+      "fits": true,
+      "input_characters": 40696,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001972",
+      "estimated_input_tokens": 13170,
+      "fits": true,
+      "input_characters": 39509,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001974",
+      "estimated_input_tokens": 11269,
+      "fits": true,
+      "input_characters": 33806,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001979",
+      "estimated_input_tokens": 10660,
+      "fits": true,
+      "input_characters": 31980,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001986",
+      "estimated_input_tokens": 11854,
+      "fits": true,
+      "input_characters": 35560,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001995",
+      "estimated_input_tokens": 9410,
+      "fits": true,
+      "input_characters": 28230,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_001998",
+      "estimated_input_tokens": 16504,
+      "fits": true,
+      "input_characters": 49511,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002002",
+      "estimated_input_tokens": 10952,
+      "fits": true,
+      "input_characters": 32856,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002003",
+      "estimated_input_tokens": 2832,
+      "fits": true,
+      "input_characters": 8496,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002005",
+      "estimated_input_tokens": 13988,
+      "fits": true,
+      "input_characters": 41962,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002007",
+      "estimated_input_tokens": 3676,
+      "fits": true,
+      "input_characters": 11028,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002008",
+      "estimated_input_tokens": 6072,
+      "fits": true,
+      "input_characters": 18215,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002012",
+      "estimated_input_tokens": 10345,
+      "fits": true,
+      "input_characters": 31034,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002018",
+      "estimated_input_tokens": 10574,
+      "fits": true,
+      "input_characters": 31721,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002023",
+      "estimated_input_tokens": 3920,
+      "fits": true,
+      "input_characters": 11758,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002030",
+      "estimated_input_tokens": 14329,
+      "fits": true,
+      "input_characters": 42986,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002033",
+      "estimated_input_tokens": 6200,
+      "fits": true,
+      "input_characters": 18599,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002036",
+      "estimated_input_tokens": 14303,
+      "fits": true,
+      "input_characters": 42909,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002039",
+      "estimated_input_tokens": 4487,
+      "fits": true,
+      "input_characters": 13459,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002040",
+      "estimated_input_tokens": 7339,
+      "fits": true,
+      "input_characters": 22016,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002051",
+      "estimated_input_tokens": 2834,
+      "fits": true,
+      "input_characters": 8500,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002065",
+      "estimated_input_tokens": 7682,
+      "fits": true,
+      "input_characters": 23044,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002066",
+      "estimated_input_tokens": 7882,
+      "fits": true,
+      "input_characters": 23644,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002074",
+      "estimated_input_tokens": 10339,
+      "fits": true,
+      "input_characters": 31015,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002075",
+      "estimated_input_tokens": 8117,
+      "fits": true,
+      "input_characters": 24351,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002078",
+      "estimated_input_tokens": 17423,
+      "fits": true,
+      "input_characters": 52269,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002086",
+      "estimated_input_tokens": 11255,
+      "fits": true,
+      "input_characters": 33765,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002093",
+      "estimated_input_tokens": 12641,
+      "fits": true,
+      "input_characters": 37923,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002097",
+      "estimated_input_tokens": 6168,
+      "fits": true,
+      "input_characters": 18503,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002113",
+      "estimated_input_tokens": 7422,
+      "fits": true,
+      "input_characters": 22264,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002117",
+      "estimated_input_tokens": 11237,
+      "fits": true,
+      "input_characters": 33709,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002134",
+      "estimated_input_tokens": 13236,
+      "fits": true,
+      "input_characters": 39708,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002138",
+      "estimated_input_tokens": 11592,
+      "fits": true,
+      "input_characters": 34775,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002144",
+      "estimated_input_tokens": 10984,
+      "fits": true,
+      "input_characters": 32952,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002145",
+      "estimated_input_tokens": 5532,
+      "fits": true,
+      "input_characters": 16595,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002146",
+      "estimated_input_tokens": 8398,
+      "fits": true,
+      "input_characters": 25193,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002148",
+      "estimated_input_tokens": 9874,
+      "fits": true,
+      "input_characters": 29620,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002159",
+      "estimated_input_tokens": 9958,
+      "fits": true,
+      "input_characters": 29874,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002161",
+      "estimated_input_tokens": 5886,
+      "fits": true,
+      "input_characters": 17658,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002163",
+      "estimated_input_tokens": 9449,
+      "fits": true,
+      "input_characters": 28347,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002169",
+      "estimated_input_tokens": 15467,
+      "fits": true,
+      "input_characters": 46401,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002170",
+      "estimated_input_tokens": 10410,
+      "fits": true,
+      "input_characters": 31229,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002184",
+      "estimated_input_tokens": 7042,
+      "fits": true,
+      "input_characters": 21126,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002192",
+      "estimated_input_tokens": 8951,
+      "fits": true,
+      "input_characters": 26851,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002196",
+      "estimated_input_tokens": 7335,
+      "fits": true,
+      "input_characters": 22003,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002201",
+      "estimated_input_tokens": 16586,
+      "fits": true,
+      "input_characters": 49756,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002203",
+      "estimated_input_tokens": 9474,
+      "fits": true,
+      "input_characters": 28421,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002208",
+      "estimated_input_tokens": 11799,
+      "fits": true,
+      "input_characters": 35397,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002225",
+      "estimated_input_tokens": 6815,
+      "fits": true,
+      "input_characters": 20444,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002239",
+      "estimated_input_tokens": 9429,
+      "fits": true,
+      "input_characters": 28285,
+      "reserved_output_tokens": 1000
+    },
+    {
+      "case_id": "RCA_002245",
+      "estimated_input_tokens": 12338,
+      "fits": true,
+      "input_characters": 37013,
+      "reserved_output_tokens": 1000
+    }
+  ],
+  "context_window_tokens": 1050000,
+  "estimator": "ceil(Unicode characters / 3)",
+  "failing_cases": [],
+  "maximum_estimated_input_tokens": 20581,
+  "reserved_output_tokens": 1000,
+  "status": "PASS",
+  "total_estimated_input_tokens": 4176556
+}

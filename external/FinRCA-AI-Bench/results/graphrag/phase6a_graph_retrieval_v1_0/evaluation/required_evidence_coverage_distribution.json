@@ -1,0 +1,50 @@
+{
+  "anchor_rag": {
+    "buckets": {
+      "0_percent": 24,
+      "100_percent": 0,
+      "at_least_50_less_than_100_percent": 19,
+      "greater_than_0_less_than_50_percent": 373
+    },
+    "mean": 0.18629131285381284,
+    "median": 0.16666666666666666,
+    "p25": 0.1111111111111111,
+    "p75": 0.20555555555555555
+  },
+  "graph_retrieval_v1_0": {
+    "buckets": {
+      "0_percent": 24,
+      "100_percent": 21,
+      "at_least_50_less_than_100_percent": 140,
+      "greater_than_0_less_than_50_percent": 231
+    },
+    "mean": 0.36072659978909977,
+    "median": 0.3333333333333333,
+    "p25": 0.16666666666666666,
+    "p75": 0.5
+  },
+  "relational_rag": {
+    "buckets": {
+      "0_percent": 0,
+      "100_percent": 63,
+      "at_least_50_less_than_100_percent": 330,
+      "greater_than_0_less_than_50_percent": 23
+    },
+    "mean": 0.6888200341325341,
+    "median": 0.6666666666666666,
+    "p25": 0.5,
+    "p75": 0.8333333333333334
+  },
+  "standard_dense_rag": {
+    "buckets": {
+      "0_percent": 379,
+      "100_percent": 0,
+      "at_least_50_less_than_100_percent": 2,
+      "greater_than_0_less_than_50_percent": 35
+    },
+    "mean": 0.012592528998778997,
+    "median": 0.0,
+    "p25": 0.0,
+    "p75": 0.0
+  }
+}

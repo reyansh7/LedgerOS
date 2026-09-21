@@ -1,0 +1,136 @@
+{
+  "artifact_type": "phase6a3_artifact_hash_inventory",
+  "artifact_version": "1.0",
+  "created_at_utc": "2026-08-15T21:52:42Z",
+  "hash_algorithm": "SHA-256",
+  "hash_scope": "raw serialized bytes",
+  "heldout_gold_opened": false,
+  "implementation_source_artifacts": {
+    "src/graphrag/v1_1/__init__.py": {
+      "bytes": 502,
+      "sha256": "a635f172f5b4bf68d1cc7ef012d338ee4e6b73b0e996640cfe3814dcad2e228f"
+    },
+    "src/graphrag/v1_1/candidate_traversal.py": {
+      "bytes": 29101,
+      "sha256": "f023a9db1ea03546af1f5e9e3afaa33cc437c6a20238356bb2be41af716daedc"
+    },
+    "src/graphrag/v1_1/preflight.py": {
+      "bytes": 5233,
+      "sha256": "5cda3afe1778873ccd045c8cb9820720489ffafc0bd1000f567926b276620d4e"
+    },
+    "src/graphrag/v1_1/runner.py": {
+      "bytes": 33082,
+      "sha256": "314c8b92522846662e83856ea537a3d6d814106f549ff441e7066ef10c8c3202"
+    },
+    "src/graphrag/v1_1/typed_grammar_loader.py": {
+      "bytes": 6690,
+      "sha256": "52cadf9c2290f901cf880505f94cb28510a00e43d1d98109ed2b8a0d8d4f9925"
+    },
+    "tests/graphrag/test_phase6a3_graph_v1_1.py": {
+      "bytes": 8467,
+      "sha256": "83ea6649b4e803b74c96bf75a1b56bd08b89b0fb4b6173f12b76586f7f179417"
+    }
+  },
+  "independent_verification_required": true,
+  "output_artifacts": {
+    "PHASE6A3_GRAPH_V1_1_RETRIEVAL_REVIEW.md": {
+      "bytes": 6517,
+      "sha256": "26c7ca00c45aec5da0207a7ddbf1e2709b050f2908fae25b3310ecb410ddbf3f"
+    },
+    "RANKING_POLICY_COMPATIBILITY_REVIEW.md": {
+      "bytes": 3995,
+      "sha256": "06f3b7da1a3717387258a81f0cf0bddeb61783b0a78f9654a92bdd5fe529a110"
+    },
+    "implementation/preflight_validation.json": {
+      "bytes": 36251,
+      "sha256": "42c0020e3170b78e2bdb81330ebd968205791de3b819f3ad9905aa7c1e0939eb"
+    },
+    "implementation/test_results.json": {
+      "bytes": 162,
+      "sha256": "423b1e406f14d75e891b557354a55019e70659493b0f0d3aec0469e635361555"
+    },
+    "phase6a3_run_manifest.json": {
+      "bytes": 3116,
+      "sha256": "1471c237d9fc21e1c0828bd620008c65fb3e6c9615a8ec949ce69f0c4da18502"
+    },
+    "retrieval/anchor_resolutions.jsonl": {
+      "bytes": 110880,
+      "sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2"
+    },
+    "retrieval/candidate_paths.jsonl": {
+      "bytes": 24257308,
+      "sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03"
+    },
+    "retrieval/candidate_records.jsonl": {
+      "bytes": 4336748,
+      "sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c"
+    },
+    "retrieval/candidate_statistics.json": {
+      "bytes": 4550,
+      "sha256": "fc70b3fb22ab74ab77ae2bf417ed42ccbb2bf409f5a3fcb43926fe8872be0756"
+    },
+    "retrieval/drop_ledger.jsonl": {
+      "bytes": 61152,
+      "sha256": "726d4d7cf1c038ba1bf2de2cadbbfdb3703b4505bf35255f0f86f4dc7ad1e2c1"
+    },
+    "retrieval/graph_v1_1_retrieval_results.jsonl": {
+      "bytes": 163259,
+      "sha256": "7d6a0e63d14a7951720ccf5ac2fe72a221087f861a4faa9ba15fade7db043331"
+    },
+    "retrieval/retrieval_latency_pre_gold.json": {
+      "bytes": 640,
+      "sha256": "2b81d106d7d45f5cf4abdb3f88dcbba904949ade8afca1998f028f4c4eca4f24"
+    },
+    "retrieval/retrieval_pre_gold_hashes.json": {
+      "bytes": 2505,
+      "sha256": "8240ecd58c771a95c5aa6e53376e67ca5626c6553dcd43957cb54698533a54f6"
+    },
+    "retrieval/retrieval_pre_gold_manifest.json": {
+      "bytes": 2613,
+      "sha256": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d"
+    },
+    "retrieval/selected_paths.jsonl": {
+      "bytes": 60736,
+      "sha256": "bb90a50a04aa21b7dffbc68c42f81a49f65aa5618f1bad9ebf1da0e14dd90d39"
+    },
+    "retrieval/selected_records.jsonl": {
+      "bytes": 61568,
+      "sha256": "553b97de310aeb5dce33621fcba972cb9256abbe533bd9a57262853e400bd5bf"
+    },
+    "retrieval/traversal_rejections.jsonl": {
+      "bytes": 3091171,
+      "sha256": "81346faa9b9621c3ae4f720ab6a7ae96add004d1b92ba20f04accb9f882e0357"
+    },
+    "scientific_integrity.json": {
+      "bytes": 1262,
+      "sha256": "433c15ae3541797408fec8eecf52229488131a65c9276dfa9e32d189be02b9d3"
+    },
+    "scientific_integrity_pre_gold.json": {
+      "bytes": 966,
+      "sha256": "28017f389ac03240beb8a44259f8d3528c5639d8353e805be413fce26ea37de1"
+    }
+  },
+  "pre_gold_and_post_gold_distinction": {
+    "post_gold_evaluation_artifacts": [],
+    "post_gold_evaluation_status": "NOT_CREATED_POLICY_BLOCKED_BEFORE_GOLD",
+    "pre_gold_candidate_artifacts": [
+      "implementation/preflight_validation.json",
+      "retrieval/anchor_resolutions.jsonl",
+      "retrieval/candidate_paths.jsonl",
+      "retrieval/candidate_records.jsonl",
+      "retrieval/candidate_statistics.json",
+      "retrieval/drop_ledger.jsonl",
+      "retrieval/graph_v1_1_retrieval_results.jsonl",
+      "retrieval/retrieval_latency_pre_gold.json",
+      "retrieval/retrieval_pre_gold_manifest.json",
+      "retrieval/selected_paths.jsonl",
+      "retrieval/selected_records.jsonl",
+      "retrieval/traversal_rejections.jsonl",
+      "scientific_integrity_pre_gold.json"
+    ]
+  },
+  "self_hash_omission_reason": "A file cannot contain its own raw-byte SHA-256 without circularity.",
+  "self_hash_omitted": true,
+  "status": "BLOCKED_EVIDENCE_SELECTION_POLICY",
+  "validation_gold_opened": false
+}

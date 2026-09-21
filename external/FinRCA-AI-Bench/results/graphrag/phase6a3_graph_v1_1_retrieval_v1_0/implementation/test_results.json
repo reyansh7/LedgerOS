@@ -1,0 +1,5 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m pytest tests/graphrag/test_phase6a3_graph_v1_1.py -q",
+  "scope": "PHASE_6A3_TARGETED",
+  "status": "PASS"
+}

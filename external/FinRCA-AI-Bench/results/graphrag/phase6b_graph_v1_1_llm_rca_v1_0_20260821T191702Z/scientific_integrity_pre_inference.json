@@ -1,0 +1,14 @@
+{
+  "benchmark_questions_opened": false,
+  "case_entity_records_opened": false,
+  "created_at_utc": "2026-08-21T19:27:09.013362+00:00",
+  "failure_manifest_opened": false,
+  "graph_retrieval_rerun_reason": "No stored Graph v1.1 output existed for the canonical 439-case held-out split; the frozen route-independent graph, grammar, and selector were applied unchanged.",
+  "heldout_ground_truth_opened": false,
+  "heldout_labels_used_for_context_serialization": false,
+  "heldout_labels_used_for_retrieval": false,
+  "heldout_labels_used_for_selection": false,
+  "paid_api_calls_made": false,
+  "retrieval_or_selection_tuned_on_heldout_outcomes": false,
+  "status": "PASS"
+}

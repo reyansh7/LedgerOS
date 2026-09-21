@@ -1,0 +1,290 @@
+{
+  "cases": [
+    {
+      "case_id": "RCA_001655",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": false,
+      "mean_pairwise_evidence_jaccard": 0.6
+    },
+    {
+      "case_id": "RCA_001110",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000923",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_000489",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_000347",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_002048",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": false,
+      "mean_pairwise_evidence_jaccard": 0.9047619047619048
+    },
+    {
+      "case_id": "RCA_001109",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000987",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": false,
+      "mean_pairwise_evidence_jaccard": 0.7777777777777777
+    },
+    {
+      "case_id": "RCA_000909",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": false,
+      "mean_pairwise_evidence_jaccard": 0.6666666666666666
+    },
+    {
+      "case_id": "RCA_000881",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_002077",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_000260",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_001381",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000262",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001135",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_000661",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": false,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_001123",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000511",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001236",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_000898",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_000747",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_001905",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001728",
+      "class_disagreement": true,
+      "complete": true,
+      "confidence_mean": 0.9833333333333334,
+      "confidence_range": 0.020000000000000018,
+      "confidence_std_population": 0.009428090415820642,
+      "exact_class_agreement": false,
+      "exact_evidence_list_agreement": false,
+      "mean_pairwise_evidence_jaccard": 0.42857142857142855
+    },
+    {
+      "case_id": "RCA_000251",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_000162",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000911",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000188",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": false,
+      "mean_pairwise_evidence_jaccard": 0.6666666666666666
+    },
+    {
+      "case_id": "RCA_000354",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001618",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_001926",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": false,
+      "mean_pairwise_evidence_jaccard": 0.6666666666666666
+    },
+    {
+      "case_id": "RCA_001106",
+      "class_disagreement": false,
+      "complete": true,
+      "confidence_mean": 0.9899999999999999,
+      "confidence_range": 0.0,
+      "confidence_std_population": 1.1102230246251565e-16,
+      "exact_class_agreement": true,
+      "exact_evidence_list_agreement": true,
+      "mean_pairwise_evidence_jaccard": 1.0
+    },
+    {
+      "case_id": "RCA_000934",
+      "complete": false
+    }
+  ],
+  "class_disagreement_rate": 0.047619047619047616,
+  "complete": false,
+  "exact_class_agreement_rate": 0.9523809523809523,
+  "exact_evidence_list_agreement_rate": 0.6190476190476191,
+  "expected_calls": 96,
+  "mean_confidence_std": 0.00044895668646775534,
+  "mean_evidence_jaccard": 0.891005291005291,
+  "protocol_version": "direct_llm_validation_stability_v1.0",
+  "repetitions": 3,
+  "subset_case_count": 32,
+  "successful_parsed_calls": 63
+}

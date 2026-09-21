@@ -1,0 +1,60 @@
+{
+  "anchor_technical_failure_case_ids": [
+    "RCA_000902",
+    "RCA_000955"
+  ],
+  "artifact_type": "graph_v1_1_llm_inference_config",
+  "artifact_version": "1.0",
+  "chain_of_thought_requested": false,
+  "checkpoint_every_case": true,
+  "endpoint": "Responses API",
+  "generation_configuration": {
+    "backoff_seconds": [
+      1.0,
+      2.0,
+      4.0
+    ],
+    "cached_input_usd_per_million_tokens": 0.5,
+    "concurrency": 1,
+    "context_window_tokens": 1050000,
+    "endpoint": "Responses API",
+    "input_usd_per_million_tokens": 5.0,
+    "max_attempts": 4,
+    "max_output_tokens": 1000,
+    "model_id": "gpt-5.6-sol",
+    "output_usd_per_million_tokens": 30.0,
+    "pricing_reference_date": "2026-08-09",
+    "provider": "OpenAI",
+    "reasoning_effort": "medium",
+    "request_timeout_seconds": 120.0,
+    "reserved_output_tokens": 1000,
+    "service_tier": "default",
+    "store": false,
+    "truncation": "disabled",
+    "verbosity": "low"
+  },
+  "graph_path_metadata_enabled": true,
+  "model_eligible_case_count": 437,
+  "model_id": "gpt-5.6-sol",
+  "output_schema_exactly_reused_from_standard_rag": true,
+  "output_schema_sha256": "c65fdd04f23d7f30b429aa00699afea93e6b2c9678b06dd928ca4fe25964a0ca",
+  "output_schema_version": "standard_rag_output_schema_v1.0",
+  "paired_bootstrap_resamples": 10000,
+  "paired_bootstrap_seed": 20260809,
+  "primary_prediction_count": 439,
+  "prompt_exactly_reused_from_standard_rag": true,
+  "prompt_sha256": "bca6d6d8366c6f95b07f83fc068ead359fc329793987b946a7f491f0ffd4d302",
+  "prompt_source": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/frozen_reasoning_prompt.txt",
+  "provider": "OpenAI",
+  "raw_response_persistence": true,
+  "resume_skips_immutable_successes": true,
+  "retry_policy": "TECHNICAL_TRANSIENT_ERRORS_ONLY_UP_TO_4_ATTEMPTS; NO_CONTENT_RETRIES",
+  "serializer_version": "graph_v1_1_reasoning_context_v1.0",
+  "standard_rag_comparator": {
+    "inventory_sha256": "abc9c0deab8ff20a5df0b3186557f54dde85ac0ee58068f08056fb22f6748f58",
+    "predictions_sha256": "b2f3dfa8d9093bab5877f77aed05a706900ef32d2bb34740ac63488253f655a7",
+    "run": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z",
+    "run_manifest_sha256": "2647f3803cdf85d066948ece27b39df2e3d2bf98313ab878fdaeb5a4154ecdac"
+  },
+  "status": "FROZEN_BEFORE_HELDOUT_LLM_INFERENCE"
+}

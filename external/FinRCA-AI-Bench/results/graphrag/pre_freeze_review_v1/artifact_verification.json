@@ -1,0 +1,87 @@
+{
+  "alignment_mismatch_count": 0,
+  "authoritative_directory": "results/rag/phase5_rag_index_v1_0_20260810T000000Z",
+  "corpus_count": {
+    "actual": 155391,
+    "expected": 155391
+  },
+  "corpus_file_sha256": {
+    "documents.jsonl": {
+      "actual": "43fe8841d3cbfc64c403349c2336c631c9f6ca9dc35f3e86af1c4ae993441b8c",
+      "expected": "43fe8841d3cbfc64c403349c2336c631c9f6ca9dc35f3e86af1c4ae993441b8c"
+    },
+    "metadata.jsonl": {
+      "actual": "e30183ea1e17af182ad24a3177e776a869ed55718872ba6cc1a169506b4f96fb",
+      "expected": "e30183ea1e17af182ad24a3177e776a869ed55718872ba6cc1a169506b4f96fb"
+    },
+    "record_ids.txt": {
+      "actual": "1850249832dbb9c75ddddfa8e82615dd1db138cdd83cb2dc455029035e1b0058",
+      "expected": "1850249832dbb9c75ddddfa8e82615dd1db138cdd83cb2dc455029035e1b0058"
+    }
+  },
+  "corpus_line_counts": {
+    "documents.jsonl": 155391,
+    "metadata.jsonl": 155391,
+    "record_ids.txt": 155391
+  },
+  "details": {
+    "alignment_mismatches": [],
+    "document_hash_mismatches": [],
+    "metadata_document_mismatches": [],
+    "metadata_relational_mismatches": [],
+    "ordinal_mismatches": [],
+    "schema_mismatches": []
+  },
+  "dimensions": {
+    "expected": 1536,
+    "manifest": 1536,
+    "matrix": 1536
+  },
+  "embedding_ledger_sha256": {
+    "actual": "83d9d5bc16029d61c16716ff6e4562c3b157411eaeb4dbb2736e35019bfca237",
+    "expected": "83d9d5bc16029d61c16716ff6e4562c3b157411eaeb4dbb2736e35019bfca237"
+  },
+  "embedding_matrix_sha256": {
+    "actual": "128e3cd5c4215e9e1f6cdc664b838c1c3aef72b8eb0bc1191d19bf7bf763043a",
+    "expected": "128e3cd5c4215e9e1f6cdc664b838c1c3aef72b8eb0bc1191d19bf7bf763043a"
+  },
+  "gate_errors": [],
+  "index_manifest_sha256": {
+    "actual": "527b5980f1544dda5eab4581f8cb9c498e2a8e7633e4c061dd232b8cff05e3a6",
+    "expected": "527b5980f1544dda5eab4581f8cb9c498e2a8e7633e4c061dd232b8cff05e3a6"
+  },
+  "logical_text_manifest_sha256": {
+    "actual": "8842865bd6e688f824a0b16450301fb547c62c4ba495099d605753ebaf2ff00d",
+    "expected": "8842865bd6e688f824a0b16450301fb547c62c4ba495099d605753ebaf2ff00d"
+  },
+  "matrix_c_contiguous": true,
+  "matrix_dtype": "float32",
+  "metadata_document_mismatch_count": 0,
+  "metadata_relational_mismatch_count": 0,
+  "ordinal_mismatch_count": 0,
+  "per_document_text_sha256_mismatch_count": 0,
+  "recommended_freeze_blockers": [],
+  "record_type_distribution": {
+    "APPROVAL_EVENT": 17429,
+    "AUDIT_EVENT": 28029,
+    "BANK_STATEMENT": 54,
+    "BANK_TRANSACTION": 6261,
+    "EMPLOYEE": 120,
+    "GL_ENTRY": 46755,
+    "INVOICE": 8147,
+    "INVOICE_LINE": 18299,
+    "PAYMENT": 6200,
+    "PAYMENT_ALLOCATION": 7180,
+    "PO_LINE": 11231,
+    "PURCHASE_ORDER": 5000,
+    "VENDOR": 500,
+    "VENDOR_CHANGE": 186
+  },
+  "schema_mismatch_count": 0,
+  "status": "PASS",
+  "vector_count": {
+    "expected": 155391,
+    "manifest": 155391,
+    "matrix": 155391
+  }
+}

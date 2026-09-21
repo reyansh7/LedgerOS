@@ -1,0 +1,864 @@
+{
+  "adapter_validation_equivalence": {
+    "components": {
+      "anchor_resolutions": {
+        "adapted_count": 416,
+        "adapted_semantic_sha256": "b31be8a4d6a0c68bd5999058dc7b0adc2f142260fe6fc497099fb1d939007413",
+        "exact_semantic_match": true,
+        "frozen_count": 416,
+        "frozen_semantic_sha256": "b31be8a4d6a0c68bd5999058dc7b0adc2f142260fe6fc497099fb1d939007413"
+      },
+      "candidate_paths": {
+        "adapted_count": 13371,
+        "adapted_semantic_sha256": "76f245bbdafe900966a4b5aa52409f41e1c412ebc2c005f5ac174f598db34dd3",
+        "exact_semantic_match": true,
+        "frozen_count": 13371,
+        "frozen_semantic_sha256": "76f245bbdafe900966a4b5aa52409f41e1c412ebc2c005f5ac174f598db34dd3"
+      },
+      "candidate_records": {
+        "adapted_count": 8369,
+        "adapted_semantic_sha256": "2fc6517972f96c701c40b9dc81dbfc508b7958db6a42ef3ff1d894d2f68edc11",
+        "exact_semantic_match": true,
+        "frozen_count": 8369,
+        "frozen_semantic_sha256": "2fc6517972f96c701c40b9dc81dbfc508b7958db6a42ef3ff1d894d2f68edc11"
+      },
+      "rejections": {
+        "adapted_count": 5712,
+        "adapted_semantic_sha256": "31aa297b670ab077b21aeb2a692c73836260f6f807a06997677ac84862bf31df",
+        "exact_semantic_match": true,
+        "frozen_count": 5712,
+        "frozen_semantic_sha256": "31aa297b670ab077b21aeb2a692c73836260f6f807a06997677ac84862bf31df"
+      }
+    },
+    "path_set_sha256": "89d7f799f60149a8e6665bf59a484131f450ec2ab435e9a891e1eec3efbb2944",
+    "status": "PASS",
+    "structural_case_results_exact_match": true,
+    "validation_case_count": 416
+  },
+  "anchor_technical_failure_case_count": 2,
+  "anchor_technical_failure_case_ids": [
+    "RCA_000902",
+    "RCA_000955"
+  ],
+  "artifact_type": "graph_v1_1_llm_heldout_pre_inference_manifest",
+  "artifact_version": "1.0",
+  "candidate_path_count": 13761,
+  "candidate_record_count": 8578,
+  "context_size_audit": {
+    "case_count": 437,
+    "context_window_tokens": 1050000,
+    "maximum_estimated_input_tokens": 20581,
+    "status": "PASS"
+  },
+  "created_at_utc": "2026-08-21T19:31:27.092721+00:00",
+  "exact_anchor_case_count": 437,
+  "go_no_go": "GO",
+  "graph_freeze_lineage": {
+    "check_count": 73,
+    "checks": [
+      {
+        "expected_bytes": null,
+        "expected_sha256": "9c5e57374928e2f3f0c6bb503f85aaf8c4cd4db7654eae70787a0e7a6351d29c",
+        "observed_bytes": 33305,
+        "observed_sha256": "9c5e57374928e2f3f0c6bb503f85aaf8c4cd4db7654eae70787a0e7a6351d29c",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_v1_1_freeze_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 32611,
+        "expected_sha256": "012d75ab2ba71f9745a9e5668a015925435a8dddfc26ea9e02fea9a1d7545232",
+        "observed_bytes": 32611,
+        "observed_sha256": "012d75ab2ba71f9745a9e5668a015925435a8dddfc26ea9e02fea9a1d7545232",
+        "path": "results/graphrag/registry_freeze_v1_1/GRAPH_V1_1_TYPED_GRAMMAR_FREEZE_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 5729,
+        "expected_sha256": "b1e36adc5fb0386ed7456be583f82ec3a64b972f0183de98da1bbd681904fa89",
+        "observed_bytes": 5729,
+        "observed_sha256": "b1e36adc5fb0386ed7456be583f82ec3a64b972f0183de98da1bbd681904fa89",
+        "path": "results/graphrag/registry_freeze_v1_1/determinism_validation_v1_1_freeze.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 7662,
+        "expected_sha256": "496c62bd81f5a8cbddef8ad1ccb9e19af615277c7ec503f430827e8336c83332",
+        "observed_bytes": 7662,
+        "observed_sha256": "496c62bd81f5a8cbddef8ad1ccb9e19af615277c7ec503f430827e8336c83332",
+        "path": "results/graphrag/registry_freeze_v1_1/draft_to_final_semantic_diff_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 29549,
+        "expected_sha256": "25901986a4e4a227ecc8020c8598bb28db36fc5b281bf84ec6ce6903270f506f",
+        "observed_bytes": 29549,
+        "observed_sha256": "25901986a4e4a227ecc8020c8598bb28db36fc5b281bf84ec6ce6903270f506f",
+        "path": "results/graphrag/registry_freeze_v1_1/forbidden_traversals_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 42268,
+        "expected_sha256": "ea97fb07816aaa6018414d067f5cef9e427cc752ea39e5948f3fa4901c34ba9e",
+        "observed_bytes": 42268,
+        "observed_sha256": "ea97fb07816aaa6018414d067f5cef9e427cc752ea39e5948f3fa4901c34ba9e",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_fanout_analysis_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 9846,
+        "expected_sha256": "e6751465b612afcd2cdf5c01172f8ba2a09062437b8698ef94b6deb10ea5f56d",
+        "observed_bytes": 9846,
+        "observed_sha256": "e6751465b612afcd2cdf5c01172f8ba2a09062437b8698ef94b6deb10ea5f56d",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_risk_register_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 80393,
+        "expected_sha256": "19852d1ff2bda9099d6fd2a15d64a820685c2a2a3df52e2a4aeccacfa8bff3de",
+        "observed_bytes": 80393,
+        "observed_sha256": "19852d1ff2bda9099d6fd2a15d64a820685c2a2a3df52e2a4aeccacfa8bff3de",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_structural_coverage_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 303172,
+        "expected_sha256": "8644fc8614ed4e048aecd672cb6dcea357b8117b9ca801c3c921083f63cf7008",
+        "observed_bytes": 303172,
+        "observed_sha256": "8644fc8614ed4e048aecd672cb6dcea357b8117b9ca801c3c921083f63cf7008",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_topology_simulation_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 74907,
+        "expected_sha256": "5ae798d5cbe4560993de9d82b3cf0ff42bf51ac23eacc2f27eb58fa0f05e3f0b",
+        "observed_bytes": 74907,
+        "observed_sha256": "5ae798d5cbe4560993de9d82b3cf0ff42bf51ac23eacc2f27eb58fa0f05e3f0b",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_transition_justifications_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 153580,
+        "expected_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "observed_bytes": 153580,
+        "observed_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_traversal_grammar_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 30309,
+        "expected_sha256": "35e521266a7e11e6b0850e2e256e869dee6d7269b9cdf1d407c7a0459616f36f",
+        "observed_bytes": 30309,
+        "observed_sha256": "35e521266a7e11e6b0850e2e256e869dee6d7269b9cdf1d407c7a0459616f36f",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_v1_1_freeze_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 15875,
+        "expected_sha256": "160a21d9107a9e65335c79e4efcbae6e80635387b83525455d75d5ec0da09ecd",
+        "observed_bytes": 15875,
+        "observed_sha256": "160a21d9107a9e65335c79e4efcbae6e80635387b83525455d75d5ec0da09ecd",
+        "path": "results/graphrag/registry_freeze_v1_1/node_type_traversal_matrix_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 2036,
+        "expected_sha256": "111d876300a07b2ae90e5a65c6837d94c665ed0ea140856b1316ddaccf1231f1",
+        "observed_bytes": 2036,
+        "observed_sha256": "111d876300a07b2ae90e5a65c6837d94c665ed0ea140856b1316ddaccf1231f1",
+        "path": "results/graphrag/registry_freeze_v1_1/scientific_integrity_v1_1_freeze.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 1801,
+        "expected_sha256": "8151107387e08c6ead1f6e1da917154116335ceea273cdb930598e775c36a032",
+        "observed_bytes": 1801,
+        "observed_sha256": "8151107387e08c6ead1f6e1da917154116335ceea273cdb930598e775c36a032",
+        "path": "results/graphrag/registry_freeze_v1_1/topology_equivalence_validation_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 74162,
+        "expected_sha256": "947f979a85e117f4e93c5d69d3da71ef81883daa0875cdb4835911e96284f699",
+        "observed_bytes": 74162,
+        "observed_sha256": "947f979a85e117f4e93c5d69d3da71ef81883daa0875cdb4835911e96284f699",
+        "path": "results/graphrag/registry_freeze_v1_1/transition_freeze_validation_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 25055,
+        "expected_sha256": "82f66dad011f63b7e61188587e90a9fe0bbb3bfbcb5323766a12bd7ed0f7864e",
+        "observed_bytes": 25055,
+        "observed_sha256": "82f66dad011f63b7e61188587e90a9fe0bbb3bfbcb5323766a12bd7ed0f7864e",
+        "path": "results/graphrag/registry_freeze_v1_1/typed_transition_matrix_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 10350,
+        "expected_sha256": "4014d965801de4ae8c0993c2835ffa17e2f837f931dfb025f768f4f18e423ab5",
+        "observed_bytes": 10350,
+        "observed_sha256": "4014d965801de4ae8c0993c2835ffa17e2f837f931dfb025f768f4f18e423ab5",
+        "path": "results/graphrag/registry_freeze_v1_1/v1_motif_to_v1_1_grammar_mapping.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 89925,
+        "expected_sha256": "e176bc92b75533db2a7171fcc02dca598960f85121da329e1a0a1e62ea5ab095",
+        "observed_bytes": 89925,
+        "observed_sha256": "e176bc92b75533db2a7171fcc02dca598960f85121da329e1a0a1e62ea5ab095",
+        "path": "results/graphrag/registry_freeze_v1_1/run_graph_v1_1_registry_freeze.py",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "observed_bytes": 10082,
+        "observed_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "d2c70d76e72fbe16a9210f191facbf8eeaecdd97bbd39c009b036cc4d332d7b5",
+        "observed_bytes": 6166,
+        "observed_sha256": "d2c70d76e72fbe16a9210f191facbf8eeaecdd97bbd39c009b036cc4d332d7b5",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/phase6a1_artifact_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "observed_bytes": 41890,
+        "observed_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/PHASE6A2_TYPED_GRAMMAR_DESIGN_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "observed_bytes": 28574,
+        "observed_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/forbidden_traversals_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "observed_bytes": 41386,
+        "observed_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_fanout_analysis.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "observed_bytes": 8544,
+        "observed_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_risk_register.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "observed_bytes": 79299,
+        "observed_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_structural_coverage.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "observed_bytes": 301961,
+        "observed_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_topology_simulation.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "observed_bytes": 69548,
+        "observed_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_transition_justifications.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "observed_bytes": 130424,
+        "observed_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/graph_traversal_grammar_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "observed_bytes": 14988,
+        "observed_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/node_type_traversal_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "db5cdc9f153617a97e1bab845e7e2609fc249514e80e528ecd6ba1c46b93aa39",
+        "observed_bytes": 12295,
+        "observed_sha256": "db5cdc9f153617a97e1bab845e7e2609fc249514e80e528ecd6ba1c46b93aa39",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/phase6a2_artifact_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "observed_bytes": 1366,
+        "observed_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "observed_bytes": 19705,
+        "observed_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/typed_transition_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "observed_bytes": 9347,
+        "observed_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/v1_motif_to_v1_1_grammar_mapping.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "observed_bytes": 108122888,
+        "observed_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/edges.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "observed_bytes": 84218811,
+        "observed_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/nodes.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76",
+        "observed_bytes": 7578,
+        "observed_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76",
+        "path": "results/graphrag/registry_freeze_v1/graph_freeze_manifest_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+        "observed_bytes": 21048,
+        "observed_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+        "path": "results/graphrag/registry_freeze_v1/graph_node_registry_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+        "observed_bytes": 16834,
+        "observed_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+        "path": "results/graphrag/registry_freeze_v1/graph_path_motifs_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "observed_bytes": 4157,
+        "observed_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "path": "results/graphrag/registry_freeze_v1/graph_ranking_policy_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "observed_bytes": 50303,
+        "observed_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "path": "results/graphrag/registry_freeze_v1/graph_relation_registry_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 41890,
+        "expected_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "observed_bytes": 41890,
+        "observed_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/PHASE6A2_TYPED_GRAMMAR_DESIGN_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 2502,
+        "expected_sha256": "dd58574bf266f95f22d085e406a72025af033fc79dc728998ff0e0848b80ab11",
+        "observed_bytes": 2502,
+        "observed_sha256": "dd58574bf266f95f22d085e406a72025af033fc79dc728998ff0e0848b80ab11",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/determinism_validation.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 28574,
+        "expected_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "observed_bytes": 28574,
+        "observed_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/forbidden_traversals_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 41386,
+        "expected_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "observed_bytes": 41386,
+        "observed_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_fanout_analysis.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 8544,
+        "expected_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "observed_bytes": 8544,
+        "observed_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_risk_register.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 79299,
+        "expected_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "observed_bytes": 79299,
+        "observed_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_structural_coverage.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 301961,
+        "expected_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "observed_bytes": 301961,
+        "observed_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_topology_simulation.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 69548,
+        "expected_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "observed_bytes": 69548,
+        "observed_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_transition_justifications.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 130424,
+        "expected_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "observed_bytes": 130424,
+        "observed_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/graph_traversal_grammar_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 14988,
+        "expected_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "observed_bytes": 14988,
+        "observed_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/node_type_traversal_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 1366,
+        "expected_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "observed_bytes": 1366,
+        "observed_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 19705,
+        "expected_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "observed_bytes": 19705,
+        "observed_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/typed_transition_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 9347,
+        "expected_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "observed_bytes": 9347,
+        "observed_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/v1_motif_to_v1_1_grammar_mapping.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 134087,
+        "expected_sha256": "dd0cc48c34e5336103131839fef4cb2498a19268f4690749ce5dc61a36733447",
+        "observed_bytes": 134087,
+        "observed_sha256": "dd0cc48c34e5336103131839fef4cb2498a19268f4690749ce5dc61a36733447",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/run_phase6a2_design.py",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 10082,
+        "expected_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "observed_bytes": 10082,
+        "observed_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 22404,
+        "expected_sha256": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f",
+        "observed_bytes": 22404,
+        "observed_sha256": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/anchor_type_reachability.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 467781,
+        "expected_sha256": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7",
+        "observed_bytes": 467781,
+        "observed_sha256": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/case_reachability_comparison.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 1706,
+        "expected_sha256": "db15267bf5b03f4d774140eacf57c8845150644e60b27d192fcbb13425d7107b",
+        "observed_bytes": 1706,
+        "observed_sha256": "db15267bf5b03f4d774140eacf57c8845150644e60b27d192fcbb13425d7107b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/determinism_validation.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 2102,
+        "expected_sha256": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f",
+        "observed_bytes": 2102,
+        "observed_sha256": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/hop_survival_funnel.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 7663,
+        "expected_sha256": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4",
+        "observed_bytes": 7663,
+        "observed_sha256": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/motif_gap_taxonomy.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 1915866,
+        "expected_sha256": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee",
+        "observed_bytes": 1915866,
+        "observed_sha256": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/motif_reachability.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 79396,
+        "expected_sha256": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b",
+        "observed_bytes": 79396,
+        "observed_sha256": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/path_sequence_inventory.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 9993795,
+        "expected_sha256": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320",
+        "observed_bytes": 9993795,
+        "observed_sha256": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/raw_reachability_safe_reverse_diagnostic.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 575167,
+        "expected_sha256": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e",
+        "observed_bytes": 575167,
+        "observed_sha256": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/raw_reachability_stored_direction.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 1527,
+        "expected_sha256": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e",
+        "observed_bytes": 1527,
+        "observed_sha256": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/reachability_explosion_and_cycles.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 21403,
+        "expected_sha256": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62",
+        "observed_bytes": 21403,
+        "observed_sha256": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/relation_directionality_audit.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 743,
+        "expected_sha256": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a",
+        "observed_bytes": 743,
+        "observed_sha256": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 2716,
+        "expected_sha256": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652",
+        "observed_bytes": 2716,
+        "observed_sha256": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/typed_traversal_grammar_analysis.md",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 82662,
+        "expected_sha256": "a65e63f104915decdf6c961ffc9844b6b019ea756d93e4b2592a0bcc0f35665b",
+        "observed_bytes": 82662,
+        "observed_sha256": "a65e63f104915decdf6c961ffc9844b6b019ea756d93e4b2592a0bcc0f35665b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/run_phase6a1_diagnostic.py",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "observed_bytes": 153580,
+        "observed_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_traversal_grammar_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "observed_bytes": 84218811,
+        "observed_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/nodes.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": null,
+        "expected_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "observed_bytes": 108122888,
+        "observed_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/edges.jsonl",
+        "status": "PASS"
+      }
+    ],
+    "distinct_path_count": 57,
+    "grammar_invariants": {
+      "default_deny": true,
+      "forbidden_direction_count": true,
+      "freeze_status": true,
+      "generic_bfs_disabled": true,
+      "grammar_status": true,
+      "max_path_depth": true,
+      "payment_bank_disabled": true,
+      "relation_type_count": true,
+      "semantic_fallback_disabled": true,
+      "semantic_transition_diff": true,
+      "simple_path_only": true,
+      "synthetic_gl_journal_disabled": true,
+      "tier_b_disabled": true,
+      "topology_digest": true,
+      "transition_class_counts": true,
+      "transition_count": true,
+      "unique_transition_ids": true
+    },
+    "status": "PASS"
+  },
+  "graph_load_ms_descriptive": 3058.430458,
+  "heldout_ground_truth_opened": false,
+  "implementation_source_hashes": {
+    "run_phase6b_graph_llm_experiment.py": {
+      "bytes": 40085,
+      "sha256": "c368d4017097a17a5eb4f5f62a8b281c049ca878320d4e8ca48fa0fe6924035e"
+    },
+    "src/graphrag/v1_1/graph_reasoning.py": {
+      "bytes": 8419,
+      "sha256": "05165523936ee68ae4683745a032e7a47769e744f05630d08ec5c23249885ae1"
+    },
+    "src/graphrag/v1_1/llm_evaluation.py": {
+      "bytes": 23192,
+      "sha256": "334a0d0387e0b1c97bbf06f99e665bd2b5303dd5d3510939a399a743fe4aab1e"
+    },
+    "src/graphrag/v1_1/split_neutral_traversal.py": {
+      "bytes": 17922,
+      "sha256": "38b663aa2c392b17d3d1e1769b4faefc1eb747ae729cd85629b50a6d544ad971"
+    },
+    "tests/graphrag/test_phase6b_graph_llm_experiment.py": {
+      "bytes": 7426,
+      "sha256": "f9cc6aff86d23a0cb3a995cd7f65eb916579dc2734c18c333f392317289db24b"
+    }
+  },
+  "inference_object_count": 437,
+  "maximum_selected_records": 40,
+  "paid_api_calls_made": false,
+  "preflight": {
+    "case_count": 16,
+    "case_ids": [
+      "RCA_000080",
+      "RCA_000867",
+      "RCA_002023",
+      "RCA_001651",
+      "RCA_001612",
+      "RCA_000279",
+      "RCA_001803",
+      "RCA_000457",
+      "RCA_001170",
+      "RCA_000090",
+      "RCA_001754",
+      "RCA_001656",
+      "RCA_001625",
+      "RCA_001748",
+      "RCA_002007",
+      "RCA_001757"
+    ],
+    "evidence_citation_validity": "PASS",
+    "mock_only_no_paid_api_calls": true,
+    "model_and_config_identity": "PASS",
+    "output_persistence": "PASS",
+    "parser_behavior": "PASS",
+    "payload_assembly": "PASS",
+    "record_ordering": "PASS",
+    "resume_skip_behavior": "PASS",
+    "skipped_on_second_pass": 16,
+    "status": "PASS",
+    "successful_first_pass": 16
+  },
+  "resolved_root_count": 455,
+  "run_id": "phase6b_graph_v1_1_llm_rca_v1_0_20260821T193104Z_auditfix2",
+  "selected_path_count": 10911,
+  "selected_record_count": 8549,
+  "selection_policy_sha256": "cad5f2298d9dad62599cfe592304c08cf8808441586fb865d1f4824b3054ea1b",
+  "standard_rag_comparator": {
+    "case_count": 439,
+    "checks": [
+      {
+        "expected_bytes": 75624,
+        "expected_sha256": "237249d70aba45fa397441e1eb2574f117b29efa8a25af56f30cdf6203d8ce86",
+        "observed_bytes": 75624,
+        "observed_sha256": "237249d70aba45fa397441e1eb2574f117b29efa8a25af56f30cdf6203d8ce86",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/context_size_audit.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 4521,
+        "expected_sha256": "bca6d6d8366c6f95b07f83fc068ead359fc329793987b946a7f491f0ffd4d302",
+        "observed_bytes": 4521,
+        "observed_sha256": "bca6d6d8366c6f95b07f83fc068ead359fc329793987b946a7f491f0ffd4d302",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/frozen_reasoning_prompt.txt",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 777451,
+        "expected_sha256": "b2f3dfa8d9093bab5877f77aed05a706900ef32d2bb34740ac63488253f655a7",
+        "observed_bytes": 777451,
+        "observed_sha256": "b2f3dfa8d9093bab5877f77aed05a706900ef32d2bb34740ac63488253f655a7",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/generation/predictions.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 5456361,
+        "expected_sha256": "4cef7d3a00568e1fce119b9fb4df19de8d2357527e6beb7756a86ba6bbe61ea8",
+        "observed_bytes": 5456361,
+        "observed_sha256": "4cef7d3a00568e1fce119b9fb4df19de8d2357527e6beb7756a86ba6bbe61ea8",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/generation/raw_responses.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 10700269,
+        "expected_sha256": "abf12f1bf4b36a3a2db49832422489a9c2d53695b06a1be87cabcb5534e641a8",
+        "observed_bytes": 10700269,
+        "observed_sha256": "abf12f1bf4b36a3a2db49832422489a9c2d53695b06a1be87cabcb5534e641a8",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/generation/reasoning_requests.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 187375,
+        "expected_sha256": "3743d78894ac713ced439acd1c464ad873f7b86201d6489fa8872703d48bba88",
+        "observed_bytes": 187375,
+        "observed_sha256": "3743d78894ac713ced439acd1c464ad873f7b86201d6489fa8872703d48bba88",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/generation/request_ledger.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 335,
+        "expected_sha256": "97584296717444f538ddd536318b36278b6f1926fab6a63183e69ecaa8ff4412",
+        "observed_bytes": 335,
+        "observed_sha256": "97584296717444f538ddd536318b36278b6f1926fab6a63183e69ecaa8ff4412",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/generation_costs.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 1207,
+        "expected_sha256": "e9ace021b822ea493bc837b749f54cefc61939c5cb644878c175b22901979124",
+        "observed_bytes": 1207,
+        "observed_sha256": "e9ace021b822ea493bc837b749f54cefc61939c5cb644878c175b22901979124",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/pre_live_audit.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 823,
+        "expected_sha256": "4133663975f712fb821f65fa9edebd2f2a193eb846c3fda5213440bae365bb19",
+        "observed_bytes": 823,
+        "observed_sha256": "4133663975f712fb821f65fa9edebd2f2a193eb846c3fda5213440bae365bb19",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/pre_live_stage_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 29,
+        "expected_sha256": "ae4fd5cfab716ca8ff812df69b11db2ea2a49766de6463646ce5d523d6e06641",
+        "observed_bytes": 29,
+        "observed_sha256": "ae4fd5cfab716ca8ff812df69b11db2ea2a49766de6463646ce5d523d6e06641",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/protocol_deviations.md",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 1250,
+        "expected_sha256": "6bd2399445029b8f0d91334193ecfed7857b868ee142a8bd3f08e8b825925ca8",
+        "observed_bytes": 1250,
+        "observed_sha256": "6bd2399445029b8f0d91334193ecfed7857b868ee142a8bd3f08e8b825925ca8",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/rag_pre_live_run_audit_v1.0.md",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 511117,
+        "expected_sha256": "6801d3e19775b2413ede2d7b011ff8f456db15d1d60a6032da8b83811aa76754",
+        "observed_bytes": 511117,
+        "observed_sha256": "6801d3e19775b2413ede2d7b011ff8f456db15d1d60a6032da8b83811aa76754",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/retrieval/queries.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 586407,
+        "expected_sha256": "7999624758785a5efe6c0f6b803861612fbe6352b4460b77632deb68924f7bbc",
+        "observed_bytes": 586407,
+        "observed_sha256": "7999624758785a5efe6c0f6b803861612fbe6352b4460b77632deb68924f7bbc",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/retrieval/retrieval_ledger.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 2684426,
+        "expected_sha256": "0647ceaad0db4c7eacd1ce11f343ed0d994ac2033903626e0bcffe32a412a127",
+        "observed_bytes": 2684426,
+        "observed_sha256": "0647ceaad0db4c7eacd1ce11f343ed0d994ac2033903626e0bcffe32a412a127",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/retrieval/retrieval_results.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_bytes": 1469,
+        "expected_sha256": "2647f3803cdf85d066948ece27b39df2e3d2bf98313ab878fdaeb5a4154ecdac",
+        "observed_bytes": 1469,
+        "observed_sha256": "2647f3803cdf85d066948ece27b39df2e3d2bf98313ab878fdaeb5a4154ecdac",
+        "path": "results/rag/phase5_rag_prelive_v1_0_20260812T043901Z/run_manifest.json",
+        "status": "PASS"
+      }
+    ],
+    "inventory_sha256": "abc9c0deab8ff20a5df0b3186557f54dde85ac0ee58068f08056fb22f6748f58",
+    "model_id": "gpt-5.6-sol",
+    "predictions_sha256": "b2f3dfa8d9093bab5877f77aed05a706900ef32d2bb34740ac63488253f655a7",
+    "prompt_sha256": "bca6d6d8366c6f95b07f83fc068ead359fc329793987b946a7f491f0ffd4d302",
+    "run_manifest_sha256": "2647f3803cdf85d066948ece27b39df2e3d2bf98313ab878fdaeb5a4154ecdac",
+    "status": "PASS"
+  },
+  "status": "READY_FOR_HELDOUT_LLM_INFERENCE",
+  "test_case_count": 439,
+  "test_routes_sha256": "efccfa96f231d72fe153f77bcb0a7b8df73cf765706d78589cf12ba8ed307ca7"
+}

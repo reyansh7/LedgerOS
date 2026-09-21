@@ -1,0 +1,18 @@
+{
+  "binary_correctness_partition": {
+    "both_correct": 365,
+    "both_wrong": 8,
+    "ml_only_correct": 54,
+    "rules_only_correct": 12
+  },
+  "exact_correctness_partition": {
+    "both_correct": 361,
+    "both_wrong": 8,
+    "ml_only_correct": 58,
+    "rules_only_correct": 12
+  },
+  "interpretation": "Recovery is classification-only; the ML evidence contract remains empty.",
+  "rules_insufficient_cases": 50,
+  "rules_insufficient_ml_binary_recovered": 45,
+  "rules_insufficient_ml_exact_recovered": 45
+}

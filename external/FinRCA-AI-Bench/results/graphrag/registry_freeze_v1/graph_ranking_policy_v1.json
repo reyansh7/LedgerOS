@@ -1,0 +1,127 @@
+{
+  "artifact_type": "graphrag_ranking_policy",
+  "artifact_version": "1.0",
+  "conceptual_priority_order": [
+    {
+      "class": "exact anchor",
+      "enabled": true,
+      "priority": 1
+    },
+    {
+      "class": "direct Tier A graph evidence",
+      "enabled": true,
+      "priority": 2
+    },
+    {
+      "class": "complete deterministic Tier A multi-hop paths",
+      "enabled": true,
+      "priority": 3
+    },
+    {
+      "class": "deterministic relational evidence",
+      "enabled": true,
+      "priority": 4
+    },
+    {
+      "class": "approved event/audit context",
+      "enabled": true,
+      "priority": 5
+    },
+    {
+      "class": "future Tier B candidate evidence",
+      "enabled": false,
+      "priority": 6,
+      "reason": "separate authorization required; payment-bank is unresolved"
+    },
+    {
+      "class": "future targeted semantic fallback",
+      "enabled": false,
+      "priority": 7,
+      "reason": "separate authorization required"
+    }
+  ],
+  "context_budget": {
+    "constraint": "must remain comparable with Standard RAG and must not be selected using held-out accuracy",
+    "exact_token_budget_status": "NOT_YET_FROZEN",
+    "maximum_raw_source_records": 40,
+    "truncation_policy": "no silent record truncation or record-content rewriting"
+  },
+  "decision_cutoff": "2026-06-30",
+  "deterministic_executable_tie_breaking": [
+    "lower enabled priority number",
+    "fewer graph hops",
+    "frozen relation registry order",
+    "ascending canonical record_id"
+  ],
+  "disabled_future_rule_retained_from_draft": "for semantic fallback only: descending exact float32 score then ascending record_id",
+  "feature_flags": {
+    "semantic_fallback_enabled": false,
+    "tier_b_payment_bank_retrieval_enabled": false,
+    "unrestricted_bfs_enabled": false
+  },
+  "freeze_status": "FROZEN_DETERMINISTIC_CORE",
+  "held_out_optimization": false,
+  "hub_policy": "Vendor/Employee reverse expansion is restricted; attribute bridges are prohibited.",
+  "label_independent": true,
+  "parent_draft_path": "results/graphrag/pre_freeze_review_v1/graph_ranking_policy_v1_draft.json",
+  "parent_draft_priority_disposition": {
+    "freeze_action": "Tier B candidate evidence and semantic fallback are retained only as disabled future classes; approved event/audit context becomes executable priority 5 as expressly required by the freeze authorization.",
+    "new_executable_ranking_rule_introduced": false,
+    "parent_priority_order": [
+      {
+        "class": "exact anchor",
+        "priority": 1
+      },
+      {
+        "class": "direct Tier A relationships",
+        "priority": 2
+      },
+      {
+        "class": "complete Tier A multi-hop paths",
+        "priority": 3
+      },
+      {
+        "class": "deterministic relational joins",
+        "priority": 4
+      },
+      {
+        "class": "Tier B corroborated candidates",
+        "condition": "only after the candidate predicate is separately frozen",
+        "priority": 5
+      },
+      {
+        "class": "audit/event context",
+        "priority": 6
+      },
+      {
+        "class": "targeted semantic fallback",
+        "condition": "unresolved gaps only; never creates graph edges",
+        "priority": 7
+      }
+    ]
+  },
+  "parent_draft_sha256": "d1c641acb2e7860feb8ebed10d04d83bc2d72e38d801102d13a261fc75321dce",
+  "phase5_corpus_text_manifest_sha256": "8842865bd6e688f824a0b16450301fb547c62c4ba495099d605753ebaf2ff00d",
+  "phase5_index_manifest_sha256": "527b5980f1544dda5eab4581f8cb9c498e2a8e7633e4c061dd232b8cff05e3a6",
+  "policy_id": "graph_ranking_policy_v1",
+  "scientific_integrity": {
+    "benchmark_answers_encoded_in_graph": false,
+    "detailed_guarantee_in_freeze_manifest": true,
+    "label_independent": true,
+    "operational_relationships_only": true,
+    "prohibited_benchmark_sources_used": false
+  },
+  "scoring_weights": null,
+  "serialization_convention": {
+    "format": "UTF-8 JSON",
+    "hash_algorithm": "SHA-256",
+    "hash_scope": "raw serialized file bytes",
+    "json_options": {
+      "ensure_ascii": false,
+      "indent": 2,
+      "sort_keys": true,
+      "trailing_newline": true
+    }
+  },
+  "trained_reranker": false
+}

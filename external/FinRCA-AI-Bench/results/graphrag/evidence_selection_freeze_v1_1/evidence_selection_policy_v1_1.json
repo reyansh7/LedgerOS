@@ -1,0 +1,319 @@
+{
+  "GL_terminal_policy": {
+    "accounting_consequence_is_structurally_meaningful": true,
+    "classification": "A canonical effective all-BACKBONE path ending with REACHED_GL_ACCOUNTING_CONSEQUENCE is COMPLETE_BACKBONE_ACCOUNTING_PATH.",
+    "generic_GL_bridge_allowed": false,
+    "gold_frequency_used": false
+  },
+  "artifact_type": "graphrag_evidence_selection_policy",
+  "artifact_version": "1.1",
+  "atomic_path_admission": {
+    "admission_condition": "PATH_NEW_RECORD_COST <= REMAINING_BUDGET",
+    "admit_zero_cost_paths": true,
+    "continue_after_nonfitting_path": true,
+    "failure_if_mandatory_anchor_owner_bridge_does_not_fit": "MANDATORY_SET_EXCEEDS_BUDGET",
+    "failure_if_mandatory_anchors_exceed_budget": "MANDATORY_SET_EXCEEDS_BUDGET",
+    "mandatory_set_preflight": "Before optional admission, compute the distinct union of exact roots and required ANCHOR_OWNER_BRIDGE owner records. If that union exceeds 40, fail before emitting a partial selection.",
+    "membership_reconsideration": "A rejected path is never reconsidered for membership even if later admissions reduce its recomputed cost to zero. All of its provenance remains available through record-level all-supporting-path aggregation.",
+    "partial_admission_allowed": false,
+    "policy": "Admit a canonical path only as a whole. Add every currently unselected record in path order, or add none. A nonfitting path is skipped deterministically; later paths remain eligible in frozen order.",
+    "zero_cost_behavior": "Admit the path as provenance-supporting without consuming a record slot."
+  },
+  "canonical_filename": "evidence_selection_policy_v1_1.json",
+  "context_policy": {
+    "anchor_context_owner_exit": "A depth-1 CONTEXT path from an APPROVAL_EVENT or AUDIT_EVENT root to its exact operational owner is ANCHOR_OWNER_BRIDGE and mandatory before ordinary paths.",
+    "context_ordering_signals": [
+      "canonical transition_id sequence",
+      "canonical record_id sequence",
+      "path_id"
+    ],
+    "locality": "Only context records already present on frozen candidate paths are eligible.",
+    "terminal_context_priority": "LOCAL_TERMINAL_CONTEXT_PATH is considered after all backbone and supporting tiers.",
+    "text_actor_status_or_failure_relevance_used": false
+  },
+  "created_at_utc": "2026-08-15T22:32:46Z",
+  "drop_reason_registry": [
+    "REDUNDANT_PREFIX",
+    "ATOMIC_PATH_DOES_NOT_FIT_REMAINING_BUDGET",
+    "LOWER_SEMANTIC_TIER_BUDGET_EXHAUSTED",
+    "CONTEXT_AFTER_BACKBONE_BUDGET_EXHAUSTED",
+    "LOWER_TIE_BREAK_ORDER"
+  ],
+  "exact_multi_policy": {
+    "all_roots_mandatory": true,
+    "collapse_roots": false,
+    "global_budget": 40,
+    "merge_policy": "Select all roots first in ascending canonical record_id order. Merge all root paths into one global semantic ordering; never exhaust one root as a separate phase.",
+    "root_tie_break_position": "after semantic, terminal/completeness, transition-class, depth, and transition-sequence keys; before edge/path final fallbacks"
+  },
+  "forbidden_selection_signals": [
+    "validation or held-out gold membership",
+    "RCA label, failure class, expected answer, or case-specific rule",
+    "record text, actor name, status interpretation, or suspiciousness",
+    "embedding similarity or semantic similarity",
+    "LLM or model score",
+    "learned score or numeric relevance weight",
+    "validation frequency or observed retrieval contribution",
+    "token length or prompt budget",
+    "filesystem order, insertion order, randomness, or concurrency order",
+    "Vendor or Employee bridge preference",
+    "Payment-Bank heuristic, BankStatement membership, GL_JOURNAL, Tier B, or semantic fallback"
+  ],
+  "freeze_candidate_input_contract": {
+    "allowed_selector_projection": [
+      "case_id and path_id",
+      "record IDs and node types",
+      "root association and root index",
+      "transition IDs, relation IDs, directions, and frozen transition classes",
+      "depth, terminal status, and frozen stop reason",
+      "edge and provenance record IDs",
+      "candidate minimum reachable depth and supporting path IDs"
+    ],
+    "candidate_paths_are_immutable": true,
+    "candidate_records_are_immutable": true,
+    "forbidden_fields_are_not_projected_into_selector": [
+      "record text",
+      "gold or required-evidence IDs",
+      "RCA/failure labels or expected answers",
+      "token counts or source length",
+      "embedding, semantic, model, or LLM scores"
+    ],
+    "graph_retraversal_permitted": false,
+    "required_candidate_path_fields": [
+      "case_id",
+      "anchor_record_id",
+      "root_index",
+      "path_id",
+      "depth",
+      "node_type_sequence",
+      "record_id_sequence",
+      "transition_id_sequence",
+      "relation_id_sequence",
+      "direction_sequence",
+      "transition_class_sequence",
+      "edge_id_sequence",
+      "provenance",
+      "terminal_status",
+      "stop_reason"
+    ]
+  },
+  "freeze_created_at_utc": "2026-08-15T23:38:00Z",
+  "freeze_validation": {
+    "cases_structurally_simulated": 416,
+    "frozen_relation_registry_ordinal_source": {
+      "array": "frozen_relations",
+      "grammar_relation_reuse_array_is_ordinal_source": false,
+      "id_field": "relation_type",
+      "index_base": 0,
+      "path": "results/graphrag/registry_freeze_v1/graph_relation_registry_v1.json",
+      "sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3"
+    },
+    "selector_applied_twice_identically": true,
+    "semantic_policy_diff_count": 0,
+    "status": "PASS",
+    "tests_passed": 23
+  },
+  "gold_access_policy": {
+    "gold_evaluated": false,
+    "heldout_gold_permitted": false,
+    "policy_design_gold_permitted": false,
+    "retrieval_metrics_permitted": false,
+    "validation_gold_permitted": false
+  },
+  "gold_evaluated": false,
+  "llm_evaluated": false,
+  "mandatory_anchor_policy": {
+    "exact_multi": "Select every canonical resolved root.",
+    "exact_single": "Select the exact resolved root.",
+    "order": "ascending canonical record_id",
+    "selection_reason": "MANDATORY_EXACT_ANCHOR",
+    "selection_tier": 0
+  },
+  "max_selected_records": 40,
+  "multi_root_path_policy": {
+    "fairness_basis": "global semantic ordering before root/path fallback",
+    "per_root_quota": null,
+    "round_robin": false,
+    "single_root_exhaustion_phase": false
+  },
+  "parent_policy_draft": {
+    "path": "results/graphrag/evidence_selection_freeze_v1_1/evidence_selection_policy_v1_1_draft.json",
+    "sha256": "db509ca1442b832b0c8b4bc401b8902cfec8f4fbd337a00f4ec12a62bf8cfcf8"
+  },
+  "parent_ranking_lineage_disposition": {
+    "graph_v1_1_refinement": "This preregistration expressly supersedes v1's generic direct-before-multihop and fewer-hops-first ordering for Graph v1.1 selection.",
+    "reason": "Typed v1.1 semantics distinguish complete/maximal backbone lifecycles, supporting projections, and terminal context; depth is subordinate to those frozen semantic roles.",
+    "unchanged_controls": "Exact anchors remain first, audit/event context remains below core deterministic lifecycle evidence, the 40-record maximum remains, and learned/weighted ranking remains prohibited."
+  },
+  "path_canonicalization_policy": {
+    "anchor_owner_bridge_exempt_from_prefix_elimination": true,
+    "independently_meaningful_stop_reasons": [
+      "TERMINAL_CONTEXT_REACHED",
+      "REACHED_GL_ACCOUNTING_CONSEQUENCE",
+      "MAX_DEPTH_REACHED"
+    ],
+    "preselection_semantic_families": {
+      "BACKBONE_FAMILY": "After removing one leading ANCHOR_OWNER_BRIDGE for classification only, every transition class is BACKBONE.",
+      "SUPPORTING_FAMILY": "After removing one leading ANCHOR_OWNER_BRIDGE for classification only, classes are BACKBONE/SUPPORTING and at least one is SUPPORTING.",
+      "TERMINAL_CONTEXT_FAMILY": "The final transition class is TERMINAL_CONTEXT and the path stops as TERMINAL_CONTEXT_REACHED."
+    },
+    "preserve_eliminated_path_provenance": true,
+    "strict_prefix_definition": "Within the same case and exact root, P is a strict prefix of Q only when P's record, transition, relation-direction, and edge sequences are all proper prefixes of Q's corresponding sequences.",
+    "suppressed_prefix_resurrection": "Never resurrect a REDUNDANT_PREFIX when its maximal same-family extension later fails atomic admission; provenance remains retained but membership order is not rerun.",
+    "suppression_rule": "Suppress P from budget competition as REDUNDANT_PREFIX only when P is a strict prefix of at least one longer candidate path Q in the same preselection semantic family, P is not terminal for an independently meaningful frozen reason, and P is not ANCHOR_OWNER_BRIDGE. A backbone or supporting prefix is never suppressed solely because it extends to a lower-priority terminal-context family.",
+    "tie_for_multiple_extensions": "Record every canonical extending path_id in the redundant-prefix ledger; extension choice does not affect suppression."
+  },
+  "path_classification_algorithm": [
+    "Classify an exact depth-1 CONTEXT owner exit from an APPROVAL_EVENT or AUDIT_EVENT root as TIER_1 ANCHOR_OWNER_BRIDGE.",
+    "For a longer path beginning with that bridge, remove only the leading CONTEXT class for classification; retain the complete path and provenance for admission.",
+    "If the final class is TERMINAL_CONTEXT and stop reason is TERMINAL_CONTEXT_REACHED, classify TIER_5 LOCAL_TERMINAL_CONTEXT_PATH before considering the normalized suffix classes.",
+    "Else if normalized classes are all BACKBONE and the final frozen transition rule is STOP_AFTER_ACCOUNTING_CONSEQUENCE with GL_ENTRY endpoint, classify TIER_2 COMPLETE_BACKBONE_ACCOUNTING_PATH.",
+    "Else if normalized classes are all BACKBONE and the path is canonical-maximal within BACKBONE_FAMILY, classify TIER_3 MAXIMAL_BACKBONE_LIFECYCLE_PATH.",
+    "Else if normalized classes are only BACKBONE/SUPPORTING and contain SUPPORTING, classify TIER_4 BACKBONE_PLUS_SUPPORTING_PATH, including SUPPORTING-only direct projections.",
+    "Otherwise fail structural validation as UNHANDLED_FROZEN_PATH_CLASS_COMBINATION; no implicit context bucket is created."
+  ],
+  "path_new_record_cost_definition": "Count distinct record_ids on the candidate path that are not already globally selected for the case. Mandatory anchors and all shared selected records cost zero.",
+  "path_priority_tiers": [
+    {
+      "machine_name": "MANDATORY_ANCHOR",
+      "selection_tier": 0,
+      "semantics": "Every exact resolved root; records are selected before paths."
+    },
+    {
+      "machine_name": "ANCHOR_OWNER_BRIDGE",
+      "selection_tier": 1,
+      "semantics": "The exact depth-1 CONTEXT owner exit when an APPROVAL_EVENT or AUDIT_EVENT is itself the root."
+    },
+    {
+      "machine_name": "COMPLETE_BACKBONE_ACCOUNTING_PATH",
+      "selection_tier": 2,
+      "semantics": "After removing one leading ANCHOR_OWNER_BRIDGE class for classification only, every transition is BACKBONE and the path ends at frozen REACHED_GL_ACCOUNTING_CONSEQUENCE."
+    },
+    {
+      "machine_name": "MAXIMAL_BACKBONE_LIFECYCLE_PATH",
+      "selection_tier": 3,
+      "semantics": "After removing one leading ANCHOR_OWNER_BRIDGE class for classification only, every transition is BACKBONE and the canonical path is maximal within BACKBONE_FAMILY under prefix canonicalization."
+    },
+    {
+      "machine_name": "BACKBONE_PLUS_SUPPORTING_PATH",
+      "selection_tier": 4,
+      "semantics": "After removing one leading ANCHOR_OWNER_BRIDGE class for classification only, transition classes are a nonempty subset of BACKBONE/SUPPORTING containing SUPPORTING."
+    },
+    {
+      "machine_name": "LOCAL_TERMINAL_CONTEXT_PATH",
+      "selection_tier": 5,
+      "semantics": "A frozen candidate path whose final transition class is TERMINAL_CONTEXT and stop reason is TERMINAL_CONTEXT_REACHED."
+    }
+  ],
+  "policy_id": "graph_v1_1_evidence_selection_policy",
+  "policy_preregistered_before_case_level_simulation": true,
+  "record_deduplication_policy": {
+    "all_path_classes_retained": true,
+    "all_supporting_path_ids_retained": true,
+    "all_transition_paths_retained": true,
+    "minimum_reachable_depth_retained": true,
+    "record_key": "case_id + record_id",
+    "slot_cost_per_record": 1
+  },
+  "selected_record_order_policy": {
+    "anchor_order": "all mandatory roots first by ascending canonical record_id",
+    "existing_record_rank_is_stable": true,
+    "new_record_order_within_admitted_path": "record_id_sequence order, excluding already-selected records",
+    "path_introduction_order": "frozen selector path order",
+    "selected_record_rank_is_frozen": true
+  },
+  "selection_failure_policy": {
+    "fail_closed_conditions": [
+      "mandatory anchors exceed 40",
+      "mandatory anchor-owner bridges cannot fit",
+      "unknown transition or semantic class",
+      "impossible deterministic tie",
+      "selected record absent from candidate pool",
+      "partial atomic admission",
+      "selected set exceeds 40",
+      "candidate or parent hash mismatch"
+    ],
+    "no_same_run_policy_patch": true
+  },
+  "status": "FROZEN_GRAPH_V1_1_EVIDENCE_SELECTION_POLICY",
+  "terminal_state_policy": {
+    "MAX_DEPTH_REACHED": "independently meaningful frozen stop and not prefix-suppressed",
+    "REACHED_GL_ACCOUNTING_CONSEQUENCE": "independently meaningful accounting terminal",
+    "TERMINAL_CONTEXT_REACHED": "independently meaningful local context terminal",
+    "unknown_terminal_state": "STRUCTURAL_VALIDATION_FAILURE"
+  },
+  "tie_break_policy": {
+    "path_order_keys": [
+      {
+        "direction": "ascending",
+        "key": "selection_tier"
+      },
+      {
+        "direction": "ascending",
+        "key": "terminal_completeness_rank"
+      },
+      {
+        "direction": "lexicographic ascending",
+        "key": "transition_class_rank_sequence"
+      },
+      {
+        "direction": "descending",
+        "key": "path_depth_within_semantic_tier"
+      },
+      {
+        "direction": "lexicographic ascending",
+        "key": "frozen_relation_registry_ordinal_sequence"
+      },
+      {
+        "direction": "lexicographic ascending",
+        "key": "direction_then_transition_id_sequence"
+      },
+      {
+        "direction": "lexicographic ascending",
+        "key": "record_id_sequence"
+      },
+      {
+        "direction": "ascending",
+        "key": "anchor_record_id"
+      },
+      {
+        "direction": "ascending",
+        "key": "root_index"
+      },
+      {
+        "direction": "lexicographic ascending",
+        "key": "edge_id_sequence"
+      },
+      {
+        "direction": "ascending",
+        "key": "path_id"
+      }
+    ],
+    "python_insertion_order_used": false,
+    "record_fallback": "record_id ascending",
+    "terminal_completeness_rank": {
+      "ANCHOR_OWNER_BRIDGE": 0,
+      "MAXIMAL_NO_LONGER_SAME_FAMILY_EXTENSION": 3,
+      "MAX_DEPTH_REACHED": 1,
+      "REACHED_GL_ACCOUNTING_CONSEQUENCE": 0,
+      "TERMINAL_CONTEXT_REACHED": 2
+    },
+    "transition_class_rank": {
+      "BACKBONE": 0,
+      "CONTEXT": 3,
+      "SUPPORTING": 1,
+      "TERMINAL_CONTEXT": 2
+    }
+  },
+  "token_budget_policy": {
+    "exact_token_budget_status": "NOT_YET_FROZEN",
+    "token_aware_selection": false,
+    "token_counts_descriptive_only": true
+  },
+  "transition_class_priority": [
+    "BACKBONE",
+    "SUPPORTING",
+    "TERMINAL_CONTEXT"
+  ],
+  "version": "1.1"
+}

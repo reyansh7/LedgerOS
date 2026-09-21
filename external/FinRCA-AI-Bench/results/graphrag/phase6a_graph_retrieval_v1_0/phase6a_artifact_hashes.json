@@ -1,0 +1,163 @@
+{
+  "algorithm": "SHA-256",
+  "file_count": 31,
+  "files": [
+    {
+      "bytes": 10758,
+      "path": "PHASE6A_GRAPH_RETRIEVAL_REVIEW.md",
+      "sha256": "e82e6777a6cb71b053045553a5aa1d5b3210eafa07fc08553b904af65e0d8787"
+    },
+    {
+      "bytes": 476259,
+      "path": "ablations/anchor_rag_results.jsonl",
+      "sha256": "395cb7b366ff1549a2d8e5e99cfb01056ac2e4567d6e86795c603db2073230e8"
+    },
+    {
+      "bytes": 463723,
+      "path": "ablations/relational_rag_results.jsonl",
+      "sha256": "3921c2bbc17373b3dc237dafb8f6f17327e655842acf0ecbbcbc6c23966c58f5"
+    },
+    {
+      "bytes": 473900,
+      "path": "ablations/standard_dense_rag_results.jsonl",
+      "sha256": "204607136f403dd6175ec4ddf9b57657d14e66cc657287fcd207217912402a44"
+    },
+    {
+      "bytes": 2108,
+      "path": "determinism_validation.json",
+      "sha256": "60cce4d78b4e8e840398ae4d41f12629b1d28c248d3f8555722dc331382305be"
+    },
+    {
+      "bytes": 9418,
+      "path": "evaluation/context_size_diagnostics.json",
+      "sha256": "51923b792fcb25bfae0d0abeb63737a01a6c1ba86b4baa53ae00b461801967af"
+    },
+    {
+      "bytes": 67895,
+      "path": "evaluation/hubness_diagnostics.json",
+      "sha256": "f8aa37cb6b7e1b1c9b976d57d542aad5f64307fed81b5a37371226ab657e7425"
+    },
+    {
+      "bytes": 2034,
+      "path": "evaluation/latency_diagnostics.json",
+      "sha256": "cf26045050f30f2d86410fff3dae720c971da2345cbbc9a5a05978e104583e75"
+    },
+    {
+      "bytes": 1940,
+      "path": "evaluation/motif_diagnostics.json",
+      "sha256": "af27f7d8487c1ce2e024c25acf84d4d7f288e73fe9015ada33febe5cbdf3a722"
+    },
+    {
+      "bytes": 206,
+      "path": "evaluation/paired_case_summary.json",
+      "sha256": "85615f5cbd04884408d839bc29ec1f33d6dc57b0f256012f85d62d089b50e051"
+    },
+    {
+      "bytes": 5489,
+      "path": "evaluation/relation_diagnostics.json",
+      "sha256": "3372d1b6aa62d09555f39da3d47d9b3fb024a47421fe055dac8390fe4037110c"
+    },
+    {
+      "bytes": 1226,
+      "path": "evaluation/required_evidence_coverage_distribution.json",
+      "sha256": "219e99f58871eb62ffbb23e0a0fc39b916e9c503d814d30d8c79f10999a47647"
+    },
+    {
+      "bytes": 242739,
+      "path": "evaluation/retrieval_case_comparison.jsonl",
+      "sha256": "08e81f6a049b86a0f720b1d1e9fc1716fa2ad9a3742751e3a8ba94ecee398738"
+    },
+    {
+      "bytes": 6217,
+      "path": "evaluation/retrieval_composition.json",
+      "sha256": "afb5fa01296a864c0026c251e9330ccbe4b7706a241bea1191698cbc2e82dc4d"
+    },
+    {
+      "bytes": 223404,
+      "path": "evaluation/retrieval_failure_attribution.json",
+      "sha256": "1102b47e92334fa14174f4bf06177c9167bc046207056529659414d2c20765ae"
+    },
+    {
+      "bytes": 10745,
+      "path": "evaluation/retrieval_metrics.json",
+      "sha256": "53eb3f017185ba3009d46cc87f8f453fcd8302f259b63c9ec80de46d294be76c"
+    },
+    {
+      "bytes": 36479,
+      "path": "evaluation/retrieval_metrics_by_anchor_type.json",
+      "sha256": "6840cb4fd5f2af0ab23fd720d3039f43d701715fdb60050a30b414b2bfe0ccae"
+    },
+    {
+      "bytes": 481,
+      "path": "evaluation/retrieval_status_diagnostics.json",
+      "sha256": "caf004a84aef79a9234e057e125176c856eb0ef62442843cf858673659800014"
+    },
+    {
+      "bytes": 108122888,
+      "path": "graph/edges.jsonl",
+      "sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed"
+    },
+    {
+      "bytes": 83,
+      "path": "graph/graph_build_latency.json",
+      "sha256": "a50372eeabea7040d8ce8dacbb428f88b625375a457be9b2b6b7e89a8c23121b"
+    },
+    {
+      "bytes": 3667,
+      "path": "graph/graph_build_manifest.json",
+      "sha256": "50d1a4d56358d0690783da4784d6c441e9ebe9c96e559e69e346a6cb275dd605"
+    },
+    {
+      "bytes": 18445,
+      "path": "graph/graph_integrity.json",
+      "sha256": "c9a17c80c83fffffc8958af39c922eb742818993a90e349098666ae2fa668764"
+    },
+    {
+      "bytes": 84218811,
+      "path": "graph/nodes.jsonl",
+      "sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167"
+    },
+    {
+      "bytes": 3801,
+      "path": "phase6a_run_manifest.json",
+      "sha256": "4604d172b06bd352541b0decd19f59799cee986fef087c90905ebfd7503613a7"
+    },
+    {
+      "bytes": 110880,
+      "path": "retrieval/anchor_resolutions.jsonl",
+      "sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2"
+    },
+    {
+      "bytes": 1251703,
+      "path": "retrieval/evidence_packets.jsonl",
+      "sha256": "24f2566d639dffe8648abe74abecafba9b5a71043b6d3d2252d008b206d40b1b"
+    },
+    {
+      "bytes": 1546811,
+      "path": "retrieval/graph_path_ledger.jsonl",
+      "sha256": "600a02cee10691e3d2942081f14186e9e47ccb270e02a15117814b8d69806b9e"
+    },
+    {
+      "bytes": 424858,
+      "path": "retrieval/graph_retrieval_results.jsonl",
+      "sha256": "7a984285d0c78cd01ec0f50ae06674257c39b8f64b790ef08595df8b82897081"
+    },
+    {
+      "bytes": 253529,
+      "path": "retrieval/latency_raw.jsonl",
+      "sha256": "ed40260f4a4de20179fb321f3f6afb149c5063a9d77d2193b36af030eb4fb107"
+    },
+    {
+      "bytes": 1754,
+      "path": "retrieval/retrieval_content_manifest.json",
+      "sha256": "5b4bc2c8636ae701619c569079b403ea4bed8e3edbcaec286b7ff854fcaaaa73"
+    },
+    {
+      "bytes": 4963,
+      "path": "scientific_integrity.json",
+      "sha256": "045dcade4486143cecc8dd178c074807bb3c219badac542c1e9f74dce0976957"
+    }
+  ],
+  "inventory_self_hash_policy": "The inventory cannot self-contain its own raw-byte hash; its independently recomputed hash is reported externally.",
+  "status": "PASS"
+}

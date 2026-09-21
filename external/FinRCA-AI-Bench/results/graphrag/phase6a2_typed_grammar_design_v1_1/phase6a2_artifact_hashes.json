@@ -1,0 +1,256 @@
+{
+  "analysis_script": {
+    "bytes": 134087,
+    "path": "run_phase6a2_design.py",
+    "sha256": "dd0cc48c34e5336103131839fef4cb2498a19268f4690749ce5dc61a36733447"
+  },
+  "artifact_type": "graphrag_phase6a2_artifact_hash_inventory",
+  "artifact_version": "1.1-draft",
+  "artifacts": {
+    "PHASE6A2_TYPED_GRAMMAR_DESIGN_REVIEW.md": {
+      "bytes": 41890,
+      "sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61"
+    },
+    "determinism_validation.json": {
+      "bytes": 2502,
+      "sha256": "dd58574bf266f95f22d085e406a72025af033fc79dc728998ff0e0848b80ab11"
+    },
+    "forbidden_traversals_v1_1_draft.json": {
+      "bytes": 28574,
+      "sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74"
+    },
+    "grammar_fanout_analysis.json": {
+      "bytes": 41386,
+      "sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25"
+    },
+    "grammar_risk_register.json": {
+      "bytes": 8544,
+      "sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09"
+    },
+    "grammar_structural_coverage.json": {
+      "bytes": 79299,
+      "sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63"
+    },
+    "grammar_topology_simulation.json": {
+      "bytes": 301961,
+      "sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696"
+    },
+    "grammar_transition_justifications.json": {
+      "bytes": 69548,
+      "sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508"
+    },
+    "graph_traversal_grammar_v1_1_draft.json": {
+      "bytes": 130424,
+      "sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8"
+    },
+    "node_type_traversal_matrix_v1_1_draft.json": {
+      "bytes": 14988,
+      "sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12"
+    },
+    "scientific_integrity.json": {
+      "bytes": 1366,
+      "sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea"
+    },
+    "typed_transition_matrix_v1_1_draft.json": {
+      "bytes": 19705,
+      "sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c"
+    },
+    "v1_motif_to_v1_1_grammar_mapping.json": {
+      "bytes": 9347,
+      "sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102"
+    }
+  },
+  "determinism_status": "PASS",
+  "extra_hashed_artifact_names": [
+    "determinism_validation.json"
+  ],
+  "hash_algorithm": "SHA-256",
+  "hash_scope": "raw serialized file bytes",
+  "hashed_artifact_count": 13,
+  "input_verification": {
+    "checks": [
+      {
+        "expected_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "observed_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "d2c70d76e72fbe16a9210f191facbf8eeaecdd97bbd39c009b036cc4d332d7b5",
+        "observed_sha256": "d2c70d76e72fbe16a9210f191facbf8eeaecdd97bbd39c009b036cc4d332d7b5",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/phase6a1_artifact_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "observed_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/edges.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "observed_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/nodes.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+        "observed_sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/retrieval/anchor_resolutions.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76",
+        "observed_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76",
+        "path": "results/graphrag/registry_freeze_v1/graph_freeze_manifest_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+        "observed_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+        "path": "results/graphrag/registry_freeze_v1/graph_node_registry_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+        "observed_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+        "path": "results/graphrag/registry_freeze_v1/graph_path_motifs_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "observed_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "path": "results/graphrag/registry_freeze_v1/graph_ranking_policy_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "observed_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "path": "results/graphrag/registry_freeze_v1/graph_relation_registry_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "08ceeaf3a7c569ca94a87b0c0830d0fb90784daac66dd959de3fee1561b94b44",
+        "observed_sha256": "08ceeaf3a7c569ca94a87b0c0830d0fb90784daac66dd959de3fee1561b94b44",
+        "path": "results/rag/phase5_rag_validation_routes_v1_0_20260812T040938Z/validation_routes.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "a65e63f104915decdf6c961ffc9844b6b019ea756d93e4b2592a0bcc0f35665b",
+        "observed_sha256": "a65e63f104915decdf6c961ffc9844b6b019ea756d93e4b2592a0bcc0f35665b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/run_phase6a1_diagnostic.py",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "observed_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f",
+        "observed_sha256": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/anchor_type_reachability.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7",
+        "observed_sha256": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/case_reachability_comparison.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "db15267bf5b03f4d774140eacf57c8845150644e60b27d192fcbb13425d7107b",
+        "observed_sha256": "db15267bf5b03f4d774140eacf57c8845150644e60b27d192fcbb13425d7107b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/determinism_validation.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f",
+        "observed_sha256": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/hop_survival_funnel.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4",
+        "observed_sha256": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/motif_gap_taxonomy.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee",
+        "observed_sha256": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/motif_reachability.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b",
+        "observed_sha256": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/path_sequence_inventory.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320",
+        "observed_sha256": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/raw_reachability_safe_reverse_diagnostic.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e",
+        "observed_sha256": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/raw_reachability_stored_direction.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e",
+        "observed_sha256": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/reachability_explosion_and_cycles.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62",
+        "observed_sha256": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/relation_directionality_audit.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a",
+        "observed_sha256": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652",
+        "observed_sha256": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/typed_traversal_grammar_analysis.md",
+        "status": "PASS"
+      }
+    ],
+    "duplicate_check_reason": "The authoritative Phase 6A.1 main report is checked both against the prompt-pinned digest and through the Phase 6A.1 inventory.",
+    "proposal_status": "PROPOSAL_ONLY",
+    "status": "PASS",
+    "verified_check_count": 26,
+    "verified_distinct_path_count": 25
+  },
+  "mandatory_artifact_count": 13,
+  "mandatory_artifact_names": [
+    "graph_traversal_grammar_v1_1_draft.json",
+    "typed_transition_matrix_v1_1_draft.json",
+    "node_type_traversal_matrix_v1_1_draft.json",
+    "forbidden_traversals_v1_1_draft.json",
+    "v1_motif_to_v1_1_grammar_mapping.json",
+    "grammar_transition_justifications.json",
+    "grammar_fanout_analysis.json",
+    "grammar_structural_coverage.json",
+    "grammar_topology_simulation.json",
+    "grammar_risk_register.json",
+    "scientific_integrity.json",
+    "phase6a2_artifact_hashes.json",
+    "PHASE6A2_TYPED_GRAMMAR_DESIGN_REVIEW.md"
+  ],
+  "mandatory_nonself_artifact_hash_count": 12,
+  "required_artifacts_present_including_this_inventory": true,
+  "self_hash_omission_reason": "A hash inventory cannot contain its own stable raw-byte digest; compute the inventory digest externally after serialization.",
+  "self_hash_omitted": true,
+  "status": "PROPOSAL_ONLY"
+}

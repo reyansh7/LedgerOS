@@ -1,0 +1,14 @@
+{
+  "decision": "Selected similarity 1.00 and window 7 by the frozen objective/tie-break ordering.",
+  "objective": "maximize macro-F1 over all 16 output classes",
+  "objective_tie_count": 12,
+  "selected_duplicate_date_window_days": 7,
+  "selected_duplicate_reference_similarity": "1.00",
+  "selected_validation_macro_f1": 0.9680525166545818,
+  "tested_configurations": 12,
+  "tie_break_order": [
+    "higher similarity",
+    "shorter date window",
+    "initial value if still tied"
+  ]
+}

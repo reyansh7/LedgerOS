@@ -1,0 +1,45 @@
+{
+  "cycle_diagnostics": {
+    "SAFE_BIDIRECTIONAL_DIAGNOSTIC": {
+      "cycle_candidates_removed_by_simple_path_rule": {
+        "depth_2": 3332,
+        "depth_3": 5101
+      },
+      "cycle_candidates_removed_total": 8433,
+      "simple_path_rule": "No repeated record_id within one path",
+      "topology_view": "SAFE_BIDIRECTIONAL_DIAGNOSTIC"
+    },
+    "STORED_DIRECTION_ONLY": {
+      "cycle_candidates_removed_by_simple_path_rule": {},
+      "cycle_candidates_removed_total": 0,
+      "simple_path_rule": "No repeated record_id within one path",
+      "topology_view": "STORED_DIRECTION_ONLY"
+    }
+  },
+  "explosion": {
+    "qualification": "Bounded only under depth<=3, simple paths, and frozen Vendor/Employee/attribute-hub exclusions.",
+    "safe_reverse_candidate_paths_per_anchor": {
+      "anchor_count": 416,
+      "anchors_with_at_least_one_path": 416,
+      "maximum_paths": 91,
+      "mean_paths": 32.14182692307692,
+      "median_paths": 31.0,
+      "p90_paths_nearest_rank": 62,
+      "p95_paths_nearest_rank": 68,
+      "p99_paths_nearest_rank": 78,
+      "total_paths": 13371
+    },
+    "stored_direction_candidate_paths_per_anchor": {
+      "anchor_count": 416,
+      "anchors_with_at_least_one_path": 316,
+      "maximum_paths": 10,
+      "mean_paths": 1.4086538461538463,
+      "median_paths": 1.0,
+      "p90_paths_nearest_rank": 3,
+      "p95_paths_nearest_rank": 4,
+      "p99_paths_nearest_rank": 6,
+      "total_paths": 586
+    },
+    "unacceptable_combinatorial_explosion_observed": false
+  }
+}

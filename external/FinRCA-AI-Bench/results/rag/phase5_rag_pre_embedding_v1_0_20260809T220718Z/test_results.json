@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "phase5": {
+    "command": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3 -m pytest tests/rag -q",
+    "passed": true,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": ".....................................................                    [100%]\n53 passed in 11.17s\n"
+  },
+  "repository": {
+    "command": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3 -m pytest -q",
+    "passed": true,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "........................................................................ [ 44%]\n........................................................................ [ 88%]\n..................                                                       [100%]\n162 passed in 24.24s\n"
+  }
+}

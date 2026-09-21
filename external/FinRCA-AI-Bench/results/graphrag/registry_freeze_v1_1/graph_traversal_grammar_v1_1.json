@@ -1,0 +1,3786 @@
+{
+  "artifact_name": "graph_traversal_grammar_v1_1.json",
+  "artifact_type": "graphrag_typed_financial_traversal_grammar",
+  "artifact_version": "1.1",
+  "bank_statement_membership_enabled": false,
+  "candidate_path_priority_framework_for_future_review": {
+    "gold_derived": false,
+    "implemented": false,
+    "learned_weights": false,
+    "note": "This is proposal metadata only; independent freeze review must decide ranking semantics without gold tuning.",
+    "ordered_structural_groups": [
+      "EXACT_ANCHOR",
+      "SEMANTICALLY_COMPLETE_MULTI_HOP_BACKBONE_LIFECYCLE",
+      "DIRECT_DETERMINISTIC_BACKBONE",
+      "BACKBONE_WITH_EXACT_SUPPORTING_PROJECTION",
+      "LOCAL_APPROVAL_OR_AUDIT_CONTEXT",
+      "OTHER_EXPLICIT_BOUNDED_CONTEXT"
+    ],
+    "shorter_path_automatically_preferred": false
+  },
+  "candidate_record_deduplication": {
+    "direct_payment_projection_and_allocation_bridge_both_preserved": true,
+    "output_semantics": "one candidate evidence record plus sorted unique supporting path IDs",
+    "path_multiplicity_preserved": true,
+    "record_key": "case_id + record_id"
+  },
+  "created_at_utc": "2026-08-15T17:54:51Z",
+  "decision_cutoff": "2026-06-30",
+  "default_deny": true,
+  "design_scope": "Typed deterministic bounded navigation over persisted frozen operational graph edges",
+  "directional_transition_count": 30,
+  "evidence_sufficiency_llm_stop_allowed": false,
+  "excluded_frozen_directional_transition_count": 14,
+  "excluded_frozen_relation_type_count": 7,
+  "freeze_review_readiness_gates": [
+    {
+      "evidence": "26 parent raw-byte checks over 25 distinct paths passed; every mandated scientific-integrity flag is false.",
+      "gate_id": "GATE_1_LINEAGE_AND_INTEGRITY",
+      "passed": true,
+      "result": "GO",
+      "status": "FROZEN"
+    },
+    {
+      "evidence": "Exactly the 14 frozen node types and 15 of 22 frozen relations are used; no unsupported transition, graph edge, relation type, or node type is introduced.",
+      "gate_id": "GATE_2_UNIVERSE_AND_RELATION_REUSE",
+      "passed": true,
+      "result": "GO",
+      "status": "FROZEN"
+    },
+    {
+      "evidence": "Thirty unique typed rows are frozen-permitted and Phase 6A.1-safe; all 14 Vendor/Employee directions remain excluded, including AUDIT_EVENT_FOR_VENDOR.",
+      "gate_id": "GATE_3_TYPED_DIRECTION_SAFETY",
+      "passed": true,
+      "result": "GO",
+      "status": "FROZEN"
+    },
+    {
+      "evidence": "Default deny, depth 3, simple paths, terminal event/GL states, explicit hub/payment-bank/GL_JOURNAL prohibitions, and four empty hub/gap node sets are machine-checked; no Vendor/Employee node is entered.",
+      "gate_id": "GATE_4_STATE_AND_HUB_SAFETY",
+      "passed": true,
+      "result": "GO",
+      "status": "FROZEN"
+    },
+    {
+      "evidence": "Every row requires an exact typed edge, explicit stored/current/next field provenance, cutoff eligibility, and deterministic full-neighbor enumeration; the persisted simulation has zero provenance/type/temporal violations.",
+      "gate_id": "GATE_5_PROVENANCE_TEMPORAL_CARDINALITY",
+      "passed": true,
+      "result": "GO",
+      "status": "FROZEN"
+    },
+    {
+      "evidence": "Two canonical simulations agree on every fingerprint; totals and depth counts exactly match Phase 6A.1, p50/p95/p99/max remain 31/68/78/91, and cycle controls reconcile to 8,433.",
+      "gate_id": "GATE_6_BOUNDEDNESS_AND_DETERMINISM",
+      "passed": true,
+      "result": "GO",
+      "status": "FROZEN"
+    },
+    {
+      "evidence": "Structural sequence coverage is exactly 76/76 overall, complete at every depth and anchor type, with zero exclusions and no gold evidence or retrieval metric.",
+      "gate_id": "GATE_7_EXPRESSIVENESS_AND_INDEPENDENCE",
+      "passed": true,
+      "result": "GO",
+      "status": "FROZEN"
+    },
+    {
+      "evidence": "Transition, 14-node, forbidden, 8+2 motif, 30-justification, and risk design objects are complete, and no HIGH residual risk remains.",
+      "gate_id": "GATE_8_PACKAGE_AND_RESIDUAL_RISK",
+      "passed": true,
+      "result": "GO",
+      "status": "FROZEN"
+    }
+  ],
+  "freeze_status": "FROZEN_GRAPH_V1_1_TYPED_GRAMMAR",
+  "frozen_relation_types_used": [
+    "ALLOCATION_OF_PAYMENT",
+    "ALLOCATION_TO_INVOICE",
+    "APPROVAL_FOR_INVOICE",
+    "AUDIT_EVENT_FOR_BANK_TRANSACTION",
+    "AUDIT_EVENT_FOR_INVOICE",
+    "AUDIT_EVENT_FOR_PAYMENT",
+    "AUDIT_EVENT_FOR_PURCHASE_ORDER",
+    "GL_SOURCE_BANK_TRANSACTION",
+    "GL_SOURCE_INVOICE",
+    "GL_SOURCE_PAYMENT",
+    "INVOICE_LINE_REFERENCES_PO_LINE",
+    "INVOICE_REFERENCES_PO",
+    "LINE_OF_INVOICE",
+    "LINE_OF_PO",
+    "PAYMENT_ALLOCATED_TO_INVOICE"
+  ],
+  "frozen_relation_types_used_count": 15,
+  "frozen_relation_universe_count": 22,
+  "generic_bfs_enabled": false,
+  "grammar_id": "GRAPH_TRAVERSAL_GRAMMAR_V1_1",
+  "graph_v1_1_implemented": false,
+  "graph_v1_1_retrieval_evaluated": false,
+  "max_path_depth": 3,
+  "multiplicity_and_budget_policy": {
+    "bounded_transition_observed_maximum": 8,
+    "bounded_transition_pending_cap_review": "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY",
+    "cap_status": "CAP_NOT_YET_FROZEN",
+    "enumeration": "Enumerate every exact edge in deterministic target/provenance/edge order unless a separately frozen cap applies.",
+    "max_raw_source_records_future_retrieval_budget_reference": 40,
+    "source_record_selection_implemented_here": false,
+    "transition_local_caps": []
+  },
+  "new_graph_edges_created": false,
+  "new_node_types_created": false,
+  "new_relation_types_created": false,
+  "node_type_count": 14,
+  "node_universe": [
+    "APPROVAL_EVENT",
+    "AUDIT_EVENT",
+    "BANK_STATEMENT",
+    "BANK_TRANSACTION",
+    "EMPLOYEE",
+    "GL_ENTRY",
+    "INVOICE",
+    "INVOICE_LINE",
+    "PAYMENT",
+    "PAYMENT_ALLOCATION",
+    "PO_LINE",
+    "PURCHASE_ORDER",
+    "VENDOR",
+    "VENDOR_CHANGE"
+  ],
+  "not_frozen": false,
+  "not_implemented": true,
+  "parent_hash_verification": {
+    "checks": [
+      {
+        "expected_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "observed_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "d2c70d76e72fbe16a9210f191facbf8eeaecdd97bbd39c009b036cc4d332d7b5",
+        "observed_sha256": "d2c70d76e72fbe16a9210f191facbf8eeaecdd97bbd39c009b036cc4d332d7b5",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/phase6a1_artifact_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "observed_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/edges.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "observed_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/nodes.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+        "observed_sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/retrieval/anchor_resolutions.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76",
+        "observed_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76",
+        "path": "results/graphrag/registry_freeze_v1/graph_freeze_manifest_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+        "observed_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+        "path": "results/graphrag/registry_freeze_v1/graph_node_registry_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+        "observed_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+        "path": "results/graphrag/registry_freeze_v1/graph_path_motifs_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "observed_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "path": "results/graphrag/registry_freeze_v1/graph_ranking_policy_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "observed_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "path": "results/graphrag/registry_freeze_v1/graph_relation_registry_v1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "08ceeaf3a7c569ca94a87b0c0830d0fb90784daac66dd959de3fee1561b94b44",
+        "observed_sha256": "08ceeaf3a7c569ca94a87b0c0830d0fb90784daac66dd959de3fee1561b94b44",
+        "path": "results/rag/phase5_rag_validation_routes_v1_0_20260812T040938Z/validation_routes.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "a65e63f104915decdf6c961ffc9844b6b019ea756d93e4b2592a0bcc0f35665b",
+        "observed_sha256": "a65e63f104915decdf6c961ffc9844b6b019ea756d93e4b2592a0bcc0f35665b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/run_phase6a1_diagnostic.py",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "observed_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f",
+        "observed_sha256": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/anchor_type_reachability.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7",
+        "observed_sha256": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/case_reachability_comparison.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "db15267bf5b03f4d774140eacf57c8845150644e60b27d192fcbb13425d7107b",
+        "observed_sha256": "db15267bf5b03f4d774140eacf57c8845150644e60b27d192fcbb13425d7107b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/determinism_validation.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f",
+        "observed_sha256": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/hop_survival_funnel.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4",
+        "observed_sha256": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/motif_gap_taxonomy.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee",
+        "observed_sha256": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/motif_reachability.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b",
+        "observed_sha256": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/path_sequence_inventory.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320",
+        "observed_sha256": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/raw_reachability_safe_reverse_diagnostic.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e",
+        "observed_sha256": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/raw_reachability_stored_direction.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e",
+        "observed_sha256": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/reachability_explosion_and_cycles.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62",
+        "observed_sha256": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/relation_directionality_audit.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a",
+        "observed_sha256": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652",
+        "observed_sha256": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/typed_traversal_grammar_analysis.md",
+        "status": "PASS"
+      }
+    ],
+    "duplicate_check_reason": "The authoritative Phase 6A.1 main report is checked both against the prompt-pinned digest and through the Phase 6A.1 inventory.",
+    "proposal_status": "FROZEN",
+    "status": "PASS",
+    "verified_check_count": 26,
+    "verified_distinct_path_count": 25
+  },
+  "parent_phase6a2_artifact_path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/graph_traversal_grammar_v1_1_draft.json",
+  "parent_phase6a2_artifact_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+  "path_state_model": {
+    "context_anchor_exception": "APPROVAL_EVENT or AUDIT_EVENT at depth 0 may take exactly one stored-direction owner transition at hop 1, then enter normal lifecycle state.",
+    "empty_outgoing_node_types": [
+      "BANK_STATEMENT",
+      "EMPLOYEE",
+      "VENDOR",
+      "VENDOR_CHANGE"
+    ],
+    "gl_anchor_exception": "GL_ENTRY at depth 0 may take exactly one typed stored-direction source transition at hop 1, then enter normal lifecycle state.",
+    "initial_state": "EXACT_ANCHOR_AT_DEPTH_0",
+    "maximum_path_depth": 3,
+    "normal_state": "LIFECYCLE_COMPOSITION_ALLOWED",
+    "path_identity": "case_id + exact resolved root + ordered transition IDs + edge IDs + record IDs",
+    "reached_gl_rule": "GL_ENTRY reached from a transaction is a terminal accounting consequence.",
+    "simple_path_invariant": "record_id may appear at most once in one path",
+    "terminal_context_state": "STOP_IMMEDIATELY"
+  },
+  "payment_bank_enabled": false,
+  "readiness_gate_result": "8/8 GO",
+  "relation_reuse": [
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "ALLOCATION_OF_PAYMENT",
+      "source_node_type": "PAYMENT_ALLOCATION",
+      "status": "FROZEN",
+      "target_node_type": "PAYMENT"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "ALLOCATION_TO_INVOICE",
+      "source_node_type": "PAYMENT_ALLOCATION",
+      "status": "FROZEN",
+      "target_node_type": "INVOICE"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "APPROVAL_FOR_INVOICE",
+      "source_node_type": "APPROVAL_EVENT",
+      "status": "FROZEN",
+      "target_node_type": "INVOICE"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "AUDIT_EVENT_FOR_BANK_TRANSACTION",
+      "source_node_type": "AUDIT_EVENT",
+      "status": "FROZEN",
+      "target_node_type": "BANK_TRANSACTION"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "AUDIT_EVENT_FOR_INVOICE",
+      "source_node_type": "AUDIT_EVENT",
+      "status": "FROZEN",
+      "target_node_type": "INVOICE"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "AUDIT_EVENT_FOR_PAYMENT",
+      "source_node_type": "AUDIT_EVENT",
+      "status": "FROZEN",
+      "target_node_type": "PAYMENT"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "AUDIT_EVENT_FOR_PURCHASE_ORDER",
+      "source_node_type": "AUDIT_EVENT",
+      "status": "FROZEN",
+      "target_node_type": "PURCHASE_ORDER"
+    },
+    {
+      "grammar_disposition": "EXCLUDED_BY_HUB_POLICY",
+      "parent_reverse_traversal": false,
+      "parent_traversable": false,
+      "proposed_directional_transition_count": 0,
+      "relation_id": "AUDIT_EVENT_FOR_VENDOR",
+      "source_node_type": "AUDIT_EVENT",
+      "status": "FROZEN",
+      "target_node_type": "VENDOR"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "GL_SOURCE_BANK_TRANSACTION",
+      "source_node_type": "GL_ENTRY",
+      "status": "FROZEN",
+      "target_node_type": "BANK_TRANSACTION"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "GL_SOURCE_INVOICE",
+      "source_node_type": "GL_ENTRY",
+      "status": "FROZEN",
+      "target_node_type": "INVOICE"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "GL_SOURCE_PAYMENT",
+      "source_node_type": "GL_ENTRY",
+      "status": "FROZEN",
+      "target_node_type": "PAYMENT"
+    },
+    {
+      "grammar_disposition": "EXCLUDED_BY_HUB_POLICY",
+      "parent_reverse_traversal": false,
+      "parent_traversable": false,
+      "proposed_directional_transition_count": 0,
+      "relation_id": "INVOICE_FOR_VENDOR",
+      "source_node_type": "INVOICE",
+      "status": "FROZEN",
+      "target_node_type": "VENDOR"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "INVOICE_LINE_REFERENCES_PO_LINE",
+      "source_node_type": "INVOICE_LINE",
+      "status": "FROZEN",
+      "target_node_type": "PO_LINE"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "INVOICE_REFERENCES_PO",
+      "source_node_type": "INVOICE",
+      "status": "FROZEN",
+      "target_node_type": "PURCHASE_ORDER"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "LINE_OF_INVOICE",
+      "source_node_type": "INVOICE_LINE",
+      "status": "FROZEN",
+      "target_node_type": "INVOICE"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "LINE_OF_PO",
+      "source_node_type": "PO_LINE",
+      "status": "FROZEN",
+      "target_node_type": "PURCHASE_ORDER"
+    },
+    {
+      "grammar_disposition": "USED_BY_EXPLICIT_TYPED_TRANSITIONS",
+      "parent_reverse_traversal": true,
+      "parent_traversable": true,
+      "proposed_directional_transition_count": 2,
+      "relation_id": "PAYMENT_ALLOCATED_TO_INVOICE",
+      "source_node_type": "PAYMENT",
+      "status": "FROZEN",
+      "target_node_type": "INVOICE"
+    },
+    {
+      "grammar_disposition": "EXCLUDED_BY_HUB_POLICY",
+      "parent_reverse_traversal": false,
+      "parent_traversable": false,
+      "proposed_directional_transition_count": 0,
+      "relation_id": "PAYMENT_FOR_VENDOR",
+      "source_node_type": "PAYMENT",
+      "status": "FROZEN",
+      "target_node_type": "VENDOR"
+    },
+    {
+      "grammar_disposition": "EXCLUDED_BY_HUB_POLICY",
+      "parent_reverse_traversal": false,
+      "parent_traversable": false,
+      "proposed_directional_transition_count": 0,
+      "relation_id": "PO_FOR_VENDOR",
+      "source_node_type": "PURCHASE_ORDER",
+      "status": "FROZEN",
+      "target_node_type": "VENDOR"
+    },
+    {
+      "grammar_disposition": "EXCLUDED_BY_HUB_POLICY",
+      "parent_reverse_traversal": false,
+      "parent_traversable": false,
+      "proposed_directional_transition_count": 0,
+      "relation_id": "PURCHASE_ORDER_CREATED_BY_EMPLOYEE",
+      "source_node_type": "PURCHASE_ORDER",
+      "status": "FROZEN",
+      "target_node_type": "EMPLOYEE"
+    },
+    {
+      "grammar_disposition": "EXCLUDED_BY_HUB_POLICY",
+      "parent_reverse_traversal": false,
+      "parent_traversable": false,
+      "proposed_directional_transition_count": 0,
+      "relation_id": "VENDOR_CHANGE_CHANGED_BY_EMPLOYEE",
+      "source_node_type": "VENDOR_CHANGE",
+      "status": "FROZEN",
+      "target_node_type": "EMPLOYEE"
+    },
+    {
+      "grammar_disposition": "EXCLUDED_BY_HUB_POLICY",
+      "parent_reverse_traversal": false,
+      "parent_traversable": false,
+      "proposed_directional_transition_count": 0,
+      "relation_id": "VENDOR_CHANGE_FOR_VENDOR",
+      "source_node_type": "VENDOR_CHANGE",
+      "status": "FROZEN",
+      "target_node_type": "VENDOR"
+    }
+  ],
+  "relation_type_count": 15,
+  "required_path_provenance": [
+    "anchor_id",
+    "node_sequence",
+    "relation_sequence",
+    "relation_direction_sequence",
+    "edge_id_sequence",
+    "provenance_record_id_and_fields_per_hop",
+    "transition_id_sequence",
+    "temporal_eligibility_per_hop",
+    "path_depth",
+    "path_class_sequence"
+  ],
+  "semantic_fallback_enabled": false,
+  "serialization_convention": {
+    "concurrency_timing_dependency": false,
+    "encoding": "UTF-8",
+    "filesystem_order_dependency": false,
+    "hash_map_order_dependency": false,
+    "json_indentation_spaces": 2,
+    "json_key_order": "lexicographic via sort_keys=true",
+    "json_separators": "comma plus newline/indent; colon plus one space",
+    "newline": "LF with exactly one trailing newline",
+    "other_array_order": "explicit semantic parent order or explicitly documented stable key order",
+    "transition_array_order": "ascending transition_id",
+    "unicode": "ensure_ascii=false"
+  },
+  "simple_path_only": true,
+  "status": "FROZEN",
+  "stop_conditions": [
+    "MAX_DEPTH_REACHED",
+    "NO_ALLOWED_OUTGOING_TYPED_TRANSITION",
+    "TERMINAL_CONTEXT_REACHED",
+    "REACHED_GL_ACCOUNTING_CONSEQUENCE",
+    "HUB_PROHIBITED_TRANSITION",
+    "SIMPLE_PATH_VIOLATION",
+    "TEMPORAL_INELIGIBILITY",
+    "PROVENANCE_MISSING",
+    "MULTIPLICITY_POLICY_REVIEW_STOP"
+  ],
+  "synthetic_gl_journal_enabled": false,
+  "tier_b_enabled": false,
+  "transition_class_counts": {
+    "BACKBONE": 18,
+    "CONTEXT": 5,
+    "SUPPORTING": 2,
+    "TERMINAL_CONTEXT": 5
+  },
+  "transition_class_definitions": {
+    "BACKBONE": "Exact transaction, component, allocation, purchase-lifecycle, or accounting-source connectivity. Continuation is allowed except when a reached GL consequence is terminal.",
+    "CONTEXT": "Exact local event-to-owner anchor exit allowed only as hop 1; after reaching the owner, normal lifecycle transitions may compose.",
+    "RESTRICTED": "A frozen edge direction recorded for audit but absent from the executable proposal because of hub or safety policy.",
+    "SUPPORTING": "Exact operational projection with explicit provenance that complements a more provenance-complete backbone route.",
+    "TERMINAL_CONTEXT": "Exact owner-to-event local evidence that terminates immediately."
+  },
+  "transition_count": 30,
+  "transition_count_by_class": {
+    "BACKBONE": 18,
+    "CONTEXT": 5,
+    "SUPPORTING": 2,
+    "TERMINAL_CONTEXT": 5
+  },
+  "transition_inclusion_rule": [
+    "Underlying relation is one of the 22 frozen executable graph relations.",
+    "Source and target types exactly agree with the frozen relation registry.",
+    "Direction is frozen allowed and Phase 6A.1 classifies the exact relation as safely reversible where reverse is used.",
+    "Traversal creates no new fact and retains operational provenance.",
+    "Source, target, edge, and provenance-effective temporal eligibility remain enforceable.",
+    "Vendor and Employee hub controls are not violated.",
+    "No benchmark label, gold evidence, retrieval metric, failure class, or RCA concept justifies the transition.",
+    "The transition has ordinary operational financial semantics."
+  ],
+  "transitions": [
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": false,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "APPROVAL_EVENT",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "LOCAL_APPROVAL_CONTEXT",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 0,
+        "fanout_evidence": {
+          "current_node_count": 17429,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 17429,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 1.0,
+          "median_out_degree": 1,
+          "nonzero_current_node_count": 17429,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 17429,
+          "nonzero_current_node_count": 17429
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 1,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "INVOICE",
+      "observed_fanout": {
+        "current_node_count": 17429,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 17429,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 17429,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "APPROVAL_EVENT",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "CONTEXT",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": true,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "APPROVAL_FOR_INVOICE",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "An approval event records local approval context for exactly one invoice through invoice_id.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTEXT_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1",
+      "tier_family": "A",
+      "transition_class": "CONTEXT",
+      "transition_id": "TR_APPROVAL_EVENT__APPROVAL_FOR_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": false,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "AUDIT_EVENT",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 0,
+        "fanout_evidence": {
+          "current_node_count": 28029,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 247,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 0.008812301544828571,
+          "median_out_degree": 0,
+          "nonzero_current_node_count": 247,
+          "p95_out_degree": 0,
+          "p99_out_degree": 0
+        },
+        "global_graph_support": {
+          "edge_count": 247,
+          "nonzero_current_node_count": 247
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 1,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "BANK_TRANSACTION",
+      "observed_fanout": {
+        "current_node_count": 28029,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 247,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.008812301544828571,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 247,
+        "p95_out_degree": 0,
+        "p99_out_degree": 0
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_entity_types": [
+            "bank_transaction"
+          ]
+        },
+        "current_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "bank_transaction_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "bank_transaction_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "CONTEXT",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": true,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "AUDIT_EVENT_FOR_BANK_TRANSACTION",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "A typed audit event's entity_id exactly identifies one bank transaction.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTEXT_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1",
+      "tier_family": "A",
+      "transition_class": "CONTEXT",
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": false,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "AUDIT_EVENT",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 0,
+        "fanout_evidence": {
+          "current_node_count": 28029,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 16147,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 0.5760819151592993,
+          "median_out_degree": 1,
+          "nonzero_current_node_count": 16147,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 16147,
+          "nonzero_current_node_count": 16147
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 1,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "INVOICE",
+      "observed_fanout": {
+        "current_node_count": 28029,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 16147,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.5760819151592993,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 16147,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_entity_types": [
+            "invoice"
+          ]
+        },
+        "current_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "CONTEXT",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": true,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "AUDIT_EVENT_FOR_INVOICE",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "A typed audit event's entity_id exactly identifies one invoice.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTEXT_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1",
+      "tier_family": "A",
+      "transition_class": "CONTEXT",
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": false,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "AUDIT_EVENT",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 0,
+        "fanout_evidence": {
+          "current_node_count": 28029,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 6500,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 0.2319026722323308,
+          "median_out_degree": 0,
+          "nonzero_current_node_count": 6500,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 6500,
+          "nonzero_current_node_count": 6500
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 1,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "PAYMENT",
+      "observed_fanout": {
+        "current_node_count": 28029,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 6500,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.2319026722323308,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 6500,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_entity_types": [
+            "payment"
+          ]
+        },
+        "current_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "payment_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "CONTEXT",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": true,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "AUDIT_EVENT_FOR_PAYMENT",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "A typed audit event's entity_id exactly identifies one payment.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTEXT_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1",
+      "tier_family": "A",
+      "transition_class": "CONTEXT",
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PAYMENT__FORWARD__PAYMENT",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": false,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "AUDIT_EVENT",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 0,
+        "fanout_evidence": {
+          "current_node_count": 28029,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 5000,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 0.17838667094794677,
+          "median_out_degree": 0,
+          "nonzero_current_node_count": 5000,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 5000,
+          "nonzero_current_node_count": 5000
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 1,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "PURCHASE_ORDER",
+      "observed_fanout": {
+        "current_node_count": 28029,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5000,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.17838667094794677,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 5000,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_entity_types": [
+            "purchase_order"
+          ]
+        },
+        "current_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "CONTEXT",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": true,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "AUDIT_EVENT_FOR_PURCHASE_ORDER",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "A typed audit event's entity_id exactly identifies one purchase order.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTEXT_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1",
+      "tier_family": "A",
+      "transition_class": "CONTEXT",
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PURCHASE_ORDER__FORWARD__PURCHASE_ORDER",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "BANK_TRANSACTION",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 22,
+        "fanout_evidence": {
+          "current_node_count": 6261,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 247,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 0.039450567002076345,
+          "median_out_degree": 0,
+          "nonzero_current_node_count": 247,
+          "p95_out_degree": 0,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 247,
+          "nonzero_current_node_count": 247
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": false,
+      "multiplicity_class": "TERMINAL_CONTEXT_ONLY",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "AUDIT_EVENT",
+      "observed_fanout": {
+        "current_node_count": 6261,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 247,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.039450567002076345,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 247,
+        "p95_out_degree": 0,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_entity_types": [
+            "bank_transaction"
+          ]
+        },
+        "current_node_operational_fields": [
+          "bank_transaction_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "bank_transaction_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "TERMINAL_CONTEXT",
+        "sets_terminal_context_reached": true
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "AUDIT_EVENT_FOR_BANK_TRANSACTION",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "A typed audit event's entity_id exactly identifies one bank transaction.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "STOP_AFTER_LOCAL_CONTEXT_NODE",
+      "tier_family": "A",
+      "transition_class": "TERMINAL_CONTEXT",
+      "transition_id": "TR_BANK_TRANSACTION__AUDIT_EVENT_FOR_BANK_TRANSACTION__REVERSE__AUDIT_EVENT",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "BANK_TRANSACTION",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 8,
+        "fanout_evidence": {
+          "current_node_count": 6261,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 314,
+          "maximum_out_degree": 2,
+          "mean_out_degree": 0.050151732950007986,
+          "median_out_degree": 0,
+          "nonzero_current_node_count": 157,
+          "p95_out_degree": 0,
+          "p99_out_degree": 2
+        },
+        "global_graph_support": {
+          "edge_count": 314,
+          "nonzero_current_node_count": 157
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": false,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "GL_ENTRY",
+      "observed_fanout": {
+        "current_node_count": 6261,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 314,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 0.050151732950007986,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 157,
+        "p95_out_degree": 0,
+        "p99_out_degree": 2
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "bank_fee",
+            "fx_settlement"
+          ]
+        },
+        "current_node_operational_fields": [
+          "bank_transaction_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "bank_transaction_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "GL_SOURCE_BANK_TRANSACTION",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "A GL entry's typed source_transaction_id exactly identifies a bank transaction for approved transaction types.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "STOP_AFTER_ACCOUNTING_CONSEQUENCE",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_BANK_TRANSACTION__GL_SOURCE_BANK_TRANSACTION__REVERSE__GL_ENTRY",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": false,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "GL_ENTRY",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 0,
+        "fanout_evidence": {
+          "current_node_count": 46755,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 314,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 0.0067158592663886215,
+          "median_out_degree": 0,
+          "nonzero_current_node_count": 314,
+          "p95_out_degree": 0,
+          "p99_out_degree": 0
+        },
+        "global_graph_support": {
+          "edge_count": 314,
+          "nonzero_current_node_count": 314
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 1,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "BANK_TRANSACTION",
+      "observed_fanout": {
+        "current_node_count": 46755,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 314,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.0067158592663886215,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 314,
+        "p95_out_degree": 0,
+        "p99_out_degree": 0
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "bank_fee",
+            "fx_settlement"
+          ]
+        },
+        "current_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "bank_transaction_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "bank_transaction_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": true,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "GL_SOURCE_BANK_TRANSACTION",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "A GL entry's typed source_transaction_id exactly identifies a bank transaction for approved transaction types.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "GL_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_GL_ENTRY__GL_SOURCE_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": false,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "GL_ENTRY",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 0,
+        "fanout_evidence": {
+          "current_node_count": 46755,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 33957,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 0.7262752646775746,
+          "median_out_degree": 1,
+          "nonzero_current_node_count": 33957,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 33957,
+          "nonzero_current_node_count": 33957
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 1,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "INVOICE",
+      "observed_fanout": {
+        "current_node_count": 46755,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 33957,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.7262752646775746,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 33957,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "credit_memo",
+            "invoice",
+            "invoice_cancellation"
+          ]
+        },
+        "current_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": true,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "GL_SOURCE_INVOICE",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "A GL entry's typed source_transaction_id exactly identifies an invoice for approved transaction types.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "GL_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_GL_ENTRY__GL_SOURCE_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": false,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "GL_ENTRY",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 650,
+        "fanout_evidence": {
+          "current_node_count": 46755,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 12484,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 0.2670088760560368,
+          "median_out_degree": 0,
+          "nonzero_current_node_count": 12484,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 12484,
+          "nonzero_current_node_count": 12484
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 1,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "PAYMENT",
+      "observed_fanout": {
+        "current_node_count": 46755,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 12484,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.2670088760560368,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 12484,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "payment",
+            "payment_reversal"
+          ]
+        },
+        "current_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "payment_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": true,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "GL_SOURCE_PAYMENT",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "A GL entry's typed source_transaction_id exactly identifies a payment for approved transaction types.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "GL_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "INVOICE_LINE",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 1036,
+        "fanout_evidence": {
+          "current_node_count": 18299,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 11292,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 0.6170829007049565,
+          "median_out_degree": 1,
+          "nonzero_current_node_count": 11292,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 11292,
+          "nonzero_current_node_count": 11292
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "PO_LINE",
+      "observed_fanout": {
+        "current_node_count": 18299,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 11292,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.6170829007049565,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 11292,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_line_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_line_id"
+        ],
+        "provenance_record_type": "INVOICE_LINE",
+        "stored_relation_source_fields": [
+          "po_line_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_line_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "INVOICE_LINE_REFERENCES_PO_LINE",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "An invoice line's po_line_id exactly identifies the corresponding purchase-order line.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_INVOICE_LINE__INVOICE_LINE_REFERENCES_PO_LINE__FORWARD__PO_LINE",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "INVOICE_LINE",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 0,
+        "fanout_evidence": {
+          "current_node_count": 18299,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 18299,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 1.0,
+          "median_out_degree": 1,
+          "nonzero_current_node_count": 18299,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 18299,
+          "nonzero_current_node_count": 18299
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "INVOICE",
+      "observed_fanout": {
+        "current_node_count": 18299,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 18299,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 18299,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "INVOICE_LINE",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "LINE_OF_INVOICE",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "An invoice line is an exact component of its invoice through invoice_id.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_INVOICE_LINE__LINE_OF_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "INVOICE",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 863,
+        "fanout_evidence": {
+          "current_node_count": 8147,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 7180,
+          "maximum_out_degree": 3,
+          "mean_out_degree": 0.8813060022094023,
+          "median_out_degree": 1,
+          "nonzero_current_node_count": 6000,
+          "p95_out_degree": 2,
+          "p99_out_degree": 2
+        },
+        "global_graph_support": {
+          "edge_count": 7180,
+          "nonzero_current_node_count": 6000
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "PAYMENT_ALLOCATION",
+      "observed_fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 3,
+        "mean_out_degree": 0.8813060022094023,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 6000,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "ALLOCATION_TO_INVOICE",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "A payment allocation identifies its exact invoice through invoice_id.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "INVOICE",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "LOCAL_APPROVAL_CONTEXT",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 1442,
+        "fanout_evidence": {
+          "current_node_count": 8147,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 17429,
+          "maximum_out_degree": 4,
+          "mean_out_degree": 2.139315085307475,
+          "median_out_degree": 2,
+          "nonzero_current_node_count": 8000,
+          "p95_out_degree": 3,
+          "p99_out_degree": 3
+        },
+        "global_graph_support": {
+          "edge_count": 17429,
+          "nonzero_current_node_count": 8000
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": false,
+      "multiplicity_class": "TERMINAL_CONTEXT_ONLY",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "APPROVAL_EVENT",
+      "observed_fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 17429,
+        "maximum_out_degree": 4,
+        "mean_out_degree": 2.139315085307475,
+        "median_out_degree": 2,
+        "nonzero_current_node_count": 8000,
+        "p95_out_degree": 3,
+        "p99_out_degree": 3
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "APPROVAL_EVENT",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "TERMINAL_CONTEXT",
+        "sets_terminal_context_reached": true
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "APPROVAL_FOR_INVOICE",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "An approval event records local approval context for exactly one invoice through invoice_id.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "STOP_AFTER_LOCAL_CONTEXT_NODE",
+      "tier_family": "A",
+      "transition_class": "TERMINAL_CONTEXT",
+      "transition_id": "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "INVOICE",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 1378,
+        "fanout_evidence": {
+          "current_node_count": 8147,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 16147,
+          "maximum_out_degree": 3,
+          "mean_out_degree": 1.9819565484227324,
+          "median_out_degree": 2,
+          "nonzero_current_node_count": 8000,
+          "p95_out_degree": 2,
+          "p99_out_degree": 3
+        },
+        "global_graph_support": {
+          "edge_count": 16147,
+          "nonzero_current_node_count": 8000
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": false,
+      "multiplicity_class": "TERMINAL_CONTEXT_ONLY",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "AUDIT_EVENT",
+      "observed_fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 16147,
+        "maximum_out_degree": 3,
+        "mean_out_degree": 1.9819565484227324,
+        "median_out_degree": 2,
+        "nonzero_current_node_count": 8000,
+        "p95_out_degree": 2,
+        "p99_out_degree": 3
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_entity_types": [
+            "invoice"
+          ]
+        },
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "TERMINAL_CONTEXT",
+        "sets_terminal_context_reached": true
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "AUDIT_EVENT_FOR_INVOICE",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "A typed audit event's entity_id exactly identifies one invoice.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "STOP_AFTER_LOCAL_CONTEXT_NODE",
+      "tier_family": "A",
+      "transition_class": "TERMINAL_CONTEXT",
+      "transition_id": "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "INVOICE",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 2964,
+        "fanout_evidence": {
+          "current_node_count": 8147,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 33957,
+          "maximum_out_degree": 8,
+          "mean_out_degree": 4.16803731434884,
+          "median_out_degree": 4,
+          "nonzero_current_node_count": 8047,
+          "p95_out_degree": 6,
+          "p99_out_degree": 7
+        },
+        "global_graph_support": {
+          "edge_count": 33957,
+          "nonzero_current_node_count": 8047
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": false,
+      "multiplicity_class": "BOUNDED_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "CAP_NOT_YET_FROZEN",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "The observed maximum is bounded at eight, but any transition-local cap requires independent freeze review; this draft does not truncate.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "GL_ENTRY",
+      "observed_fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 33957,
+        "maximum_out_degree": 8,
+        "mean_out_degree": 4.16803731434884,
+        "median_out_degree": 4,
+        "nonzero_current_node_count": 8047,
+        "p95_out_degree": 6,
+        "p99_out_degree": 7
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "credit_memo",
+            "invoice",
+            "invoice_cancellation"
+          ]
+        },
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "GL_SOURCE_INVOICE",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "A GL entry's typed source_transaction_id exactly identifies an invoice for approved transaction types.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "STOP_AFTER_ACCOUNTING_CONSEQUENCE",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "INVOICE",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 1974,
+        "fanout_evidence": {
+          "current_node_count": 8147,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 5024,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 0.6166687124094758,
+          "median_out_degree": 1,
+          "nonzero_current_node_count": 5024,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 5024,
+          "nonzero_current_node_count": 5024
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "PURCHASE_ORDER",
+      "observed_fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5024,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.6166687124094758,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 5024,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_id"
+        ],
+        "provenance_record_type": "INVOICE",
+        "stored_relation_source_fields": [
+          "po_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "INVOICE_REFERENCES_PO",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "An invoice's populated po_id is an exact reference to its purchase order and supports purchase-lifecycle navigation.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "INVOICE",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 2700,
+        "fanout_evidence": {
+          "current_node_count": 8147,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 18299,
+          "maximum_out_degree": 4,
+          "mean_out_degree": 2.246102859948447,
+          "median_out_degree": 2,
+          "nonzero_current_node_count": 8147,
+          "p95_out_degree": 4,
+          "p99_out_degree": 4
+        },
+        "global_graph_support": {
+          "edge_count": 18299,
+          "nonzero_current_node_count": 8147
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "INVOICE_LINE",
+      "observed_fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 18299,
+        "maximum_out_degree": 4,
+        "mean_out_degree": 2.246102859948447,
+        "median_out_degree": 2,
+        "nonzero_current_node_count": 8147,
+        "p95_out_degree": 4,
+        "p99_out_degree": 4
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "INVOICE_LINE",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "LINE_OF_INVOICE",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "An invoice line is an exact component of its invoice through invoice_id.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "INVOICE",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 913,
+        "fanout_evidence": {
+          "current_node_count": 8147,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 7180,
+          "maximum_out_degree": 3,
+          "mean_out_degree": 0.8813060022094023,
+          "median_out_degree": 1,
+          "nonzero_current_node_count": 6000,
+          "p95_out_degree": 2,
+          "p99_out_degree": 2
+        },
+        "global_graph_support": {
+          "edge_count": 7180,
+          "nonzero_current_node_count": 6000
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "PAYMENT",
+      "observed_fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 3,
+        "mean_out_degree": 0.8813060022094023,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 6000,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "payment_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "payment_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "SUPPORTING",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "PAYMENT_ALLOCATED_TO_INVOICE",
+      "relation_tier": "TIER_A_EXPLICIT_PROVENANCE",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "The frozen direct payment-invoice association is backed by the PAYMENT_ALLOCATION provenance record; it is not inferred.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_WITH_EXPLICIT_PROVENANCE",
+      "tier_family": "A",
+      "transition_class": "SUPPORTING",
+      "transition_id": "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "PAYMENT_ALLOCATION",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 408,
+        "fanout_evidence": {
+          "current_node_count": 7180,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 7180,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 1.0,
+          "median_out_degree": 1.0,
+          "nonzero_current_node_count": 7180,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 7180,
+          "nonzero_current_node_count": 7180
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "PAYMENT",
+      "observed_fanout": {
+        "current_node_count": 7180,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 7180,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "payment_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "payment_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "payment_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "ALLOCATION_OF_PAYMENT",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "A payment allocation identifies its exact payment through payment_id.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "PAYMENT_ALLOCATION",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 2908,
+        "fanout_evidence": {
+          "current_node_count": 7180,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 7180,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 1.0,
+          "median_out_degree": 1.0,
+          "nonzero_current_node_count": 7180,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 7180,
+          "nonzero_current_node_count": 7180
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "INVOICE",
+      "observed_fanout": {
+        "current_node_count": 7180,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 7180,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "ALLOCATION_TO_INVOICE",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "A payment allocation identifies its exact invoice through invoice_id.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "PAYMENT",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 3329,
+        "fanout_evidence": {
+          "current_node_count": 6200,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 7180,
+          "maximum_out_degree": 2,
+          "mean_out_degree": 1.1580645161290322,
+          "median_out_degree": 1.0,
+          "nonzero_current_node_count": 6100,
+          "p95_out_degree": 2,
+          "p99_out_degree": 2
+        },
+        "global_graph_support": {
+          "edge_count": 7180,
+          "nonzero_current_node_count": 6100
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "PAYMENT_ALLOCATION",
+      "observed_fanout": {
+        "current_node_count": 6200,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 1.1580645161290322,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 6100,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "payment_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "payment_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "payment_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "ALLOCATION_OF_PAYMENT",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "A payment allocation identifies its exact payment through payment_id.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "PAYMENT",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 454,
+        "fanout_evidence": {
+          "current_node_count": 6200,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 6500,
+          "maximum_out_degree": 2,
+          "mean_out_degree": 1.0483870967741935,
+          "median_out_degree": 1.0,
+          "nonzero_current_node_count": 6100,
+          "p95_out_degree": 2,
+          "p99_out_degree": 2
+        },
+        "global_graph_support": {
+          "edge_count": 6500,
+          "nonzero_current_node_count": 6100
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": false,
+      "multiplicity_class": "TERMINAL_CONTEXT_ONLY",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "AUDIT_EVENT",
+      "observed_fanout": {
+        "current_node_count": 6200,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 6500,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 1.0483870967741935,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 6100,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_entity_types": [
+            "payment"
+          ]
+        },
+        "current_node_operational_fields": [
+          "payment_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "TERMINAL_CONTEXT",
+        "sets_terminal_context_reached": true
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "AUDIT_EVENT_FOR_PAYMENT",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "A typed audit event's entity_id exactly identifies one payment.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "STOP_AFTER_LOCAL_CONTEXT_NODE",
+      "tier_family": "A",
+      "transition_class": "TERMINAL_CONTEXT",
+      "transition_id": "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "PAYMENT",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 844,
+        "fanout_evidence": {
+          "current_node_count": 6200,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 12484,
+          "maximum_out_degree": 4,
+          "mean_out_degree": 2.0135483870967743,
+          "median_out_degree": 2.0,
+          "nonzero_current_node_count": 6195,
+          "p95_out_degree": 2,
+          "p99_out_degree": 2
+        },
+        "global_graph_support": {
+          "edge_count": 12484,
+          "nonzero_current_node_count": 6195
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": false,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "GL_ENTRY",
+      "observed_fanout": {
+        "current_node_count": 6200,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 12484,
+        "maximum_out_degree": 4,
+        "mean_out_degree": 2.0135483870967743,
+        "median_out_degree": 2.0,
+        "nonzero_current_node_count": 6195,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "payment",
+            "payment_reversal"
+          ]
+        },
+        "current_node_operational_fields": [
+          "payment_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "GL_SOURCE_PAYMENT",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "A GL entry's typed source_transaction_id exactly identifies a payment for approved transaction types.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "STOP_AFTER_ACCOUNTING_CONSEQUENCE",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "PAYMENT",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 4808,
+        "fanout_evidence": {
+          "current_node_count": 6200,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 7180,
+          "maximum_out_degree": 2,
+          "mean_out_degree": 1.1580645161290322,
+          "median_out_degree": 1.0,
+          "nonzero_current_node_count": 6100,
+          "p95_out_degree": 2,
+          "p99_out_degree": 2
+        },
+        "global_graph_support": {
+          "edge_count": 7180,
+          "nonzero_current_node_count": 6100
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "INVOICE",
+      "observed_fanout": {
+        "current_node_count": 6200,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 1.1580645161290322,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 6100,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "payment_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "payment_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "SUPPORTING",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "PAYMENT_ALLOCATED_TO_INVOICE",
+      "relation_tier": "TIER_A_EXPLICIT_PROVENANCE",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "The frozen direct payment-invoice association is backed by the PAYMENT_ALLOCATION provenance record; it is not inferred.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_WITH_EXPLICIT_PROVENANCE",
+      "tier_family": "A",
+      "transition_class": "SUPPORTING",
+      "transition_id": "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "PO_LINE",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 415,
+        "fanout_evidence": {
+          "current_node_count": 11231,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 11292,
+          "maximum_out_degree": 2,
+          "mean_out_degree": 1.0054313952453031,
+          "median_out_degree": 1,
+          "nonzero_current_node_count": 11136,
+          "p95_out_degree": 1,
+          "p99_out_degree": 2
+        },
+        "global_graph_support": {
+          "edge_count": 11292,
+          "nonzero_current_node_count": 11136
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "INVOICE_LINE",
+      "observed_fanout": {
+        "current_node_count": 11231,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 11292,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 1.0054313952453031,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 11136,
+        "p95_out_degree": 1,
+        "p99_out_degree": 2
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_line_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_line_id"
+        ],
+        "provenance_record_type": "INVOICE_LINE",
+        "stored_relation_source_fields": [
+          "po_line_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_line_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "INVOICE_LINE_REFERENCES_PO_LINE",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "An invoice line's po_line_id exactly identifies the corresponding purchase-order line.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_PO_LINE__INVOICE_LINE_REFERENCES_PO_LINE__REVERSE__INVOICE_LINE",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "PO_LINE",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 329,
+        "fanout_evidence": {
+          "current_node_count": 11231,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 11231,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 1.0,
+          "median_out_degree": 1,
+          "nonzero_current_node_count": 11231,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 11231,
+          "nonzero_current_node_count": 11231
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "PURCHASE_ORDER",
+      "observed_fanout": {
+        "current_node_count": 11231,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 11231,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 11231,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_id"
+        ],
+        "provenance_record_type": "PO_LINE",
+        "stored_relation_source_fields": [
+          "po_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "LINE_OF_PO",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "NOT_APPLICABLE_STORED_DIRECTION",
+      "semantic_justification": "A purchase-order line is an exact component of its purchase-order header through po_id.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_PO_LINE__LINE_OF_PO__FORWARD__PURCHASE_ORDER",
+      "traversal_direction": "FORWARD",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "PURCHASE_ORDER",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 278,
+        "fanout_evidence": {
+          "current_node_count": 5000,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 5000,
+          "maximum_out_degree": 1,
+          "mean_out_degree": 1.0,
+          "median_out_degree": 1.0,
+          "nonzero_current_node_count": 5000,
+          "p95_out_degree": 1,
+          "p99_out_degree": 1
+        },
+        "global_graph_support": {
+          "edge_count": 5000,
+          "nonzero_current_node_count": 5000
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": false,
+      "multiplicity_class": "TERMINAL_CONTEXT_ONLY",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "AUDIT_EVENT",
+      "observed_fanout": {
+        "current_node_count": 5000,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5000,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 5000,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "operational_field_provenance": {
+        "constraints": {
+          "permitted_entity_types": [
+            "purchase_order"
+          ]
+        },
+        "current_node_operational_fields": [
+          "po_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "TERMINAL_CONTEXT",
+        "sets_terminal_context_reached": true
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "AUDIT_EVENT_FOR_PURCHASE_ORDER",
+      "relation_tier": "TIER_A_TYPED_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "A typed audit event's entity_id exactly identifies one purchase order.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "STOP_AFTER_LOCAL_CONTEXT_NODE",
+      "tier_family": "A",
+      "transition_class": "TERMINAL_CONTEXT",
+      "transition_id": "TR_PURCHASE_ORDER__AUDIT_EVENT_FOR_PURCHASE_ORDER__REVERSE__AUDIT_EVENT",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "PURCHASE_ORDER",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 212,
+        "fanout_evidence": {
+          "current_node_count": 5000,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 5024,
+          "maximum_out_degree": 2,
+          "mean_out_degree": 1.0048,
+          "median_out_degree": 1.0,
+          "nonzero_current_node_count": 4960,
+          "p95_out_degree": 1,
+          "p99_out_degree": 2
+        },
+        "global_graph_support": {
+          "edge_count": 5024,
+          "nonzero_current_node_count": 4960
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "INVOICE",
+      "observed_fanout": {
+        "current_node_count": 5000,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5024,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 1.0048,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 4960,
+        "p95_out_degree": 1,
+        "p99_out_degree": 2
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_id"
+        ],
+        "provenance_record_type": "INVOICE",
+        "stored_relation_source_fields": [
+          "po_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "INVOICE_REFERENCES_PO",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "An invoice's populated po_id is an exact reference to its purchase order and supports purchase-lifecycle navigation.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    },
+    {
+      "allow_as_first_hop": true,
+      "allow_as_intermediate_hop": true,
+      "allow_as_terminal_hop": true,
+      "current_node_type": "PURCHASE_ORDER",
+      "cycle_policy": "SIMPLE_PATH_ONLY",
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "freeze_validation": {
+        "STRUCTURALLY_JUSTIFIED": true,
+        "VALIDATION_ROUTE_USAGE": 1036,
+        "fanout_evidence": {
+          "current_node_count": 5000,
+          "degree_domain": "all current-node-type records including zero-degree records",
+          "edge_count": 11231,
+          "maximum_out_degree": 4,
+          "mean_out_degree": 2.2462,
+          "median_out_degree": 2.0,
+          "nonzero_current_node_count": 5000,
+          "p95_out_degree": 4,
+          "p99_out_degree": 4
+        },
+        "global_graph_support": {
+          "edge_count": 11231,
+          "nonzero_current_node_count": 5000
+        },
+        "gold_evidence_used": false,
+        "validation_status": "PASS"
+      },
+      "hub_policy": "NONE",
+      "justification_evidence_sources": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "max_transition_depth": 3,
+      "may_continue_after_transition": true,
+      "multiplicity_class": "LOW_FANOUT",
+      "multiplicity_policy": {
+        "cap_status": "NO_TRANSITION_LOCAL_CAP_PROPOSED",
+        "ordering": "target record_id, provenance record_id, edge_id",
+        "policy": "ENUMERATE_ALL_EXACT_EDGES_DETERMINISTICALLY",
+        "reason": "Observed proposed-transition fan-out is low; no gold-derived or arbitrary truncation is introduced.",
+        "transition_local_cap": null
+      },
+      "next_node_type": "PO_LINE",
+      "observed_fanout": {
+        "current_node_count": 5000,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 11231,
+        "maximum_out_degree": 4,
+        "mean_out_degree": 2.2462,
+        "median_out_degree": 2.0,
+        "nonzero_current_node_count": 5000,
+        "p95_out_degree": 4,
+        "p99_out_degree": 4
+      },
+      "operational_field_provenance": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_id"
+        ],
+        "provenance_record_type": "PO_LINE",
+        "stored_relation_source_fields": [
+          "po_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "parent_relation_reverse_traversal": true,
+      "parent_relation_status": "READY_FOR_FREEZE",
+      "parent_relation_traversable": true,
+      "path_state_effects": {
+        "path_class_component": "BACKBONE",
+        "sets_terminal_context_reached": false
+      },
+      "path_state_requirements": {
+        "hop_1_only": false,
+        "terminal_context_already_reached": false
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "relation_id": "LINE_OF_PO",
+      "relation_tier": "TIER_A_EXACT",
+      "requires_cutoff_eligibility": true,
+      "requires_exact_edge": true,
+      "requires_provenance": true,
+      "reverse_safety_basis": "Exact edge identity, provenance, and cutoff validity are unchanged when traversed from target to source.",
+      "semantic_justification": "A purchase-order line is an exact component of its purchase-order header through po_id.",
+      "status": "FROZEN",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "terminal_rule": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP",
+      "tier_family": "A",
+      "transition_class": "BACKBONE",
+      "transition_id": "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE",
+      "traversal_direction": "REVERSE",
+      "validation_gold_used": false
+    }
+  ],
+  "unsupported_executable_transition_count": 0,
+  "validation_frequency_used_as_correctness_criterion": false,
+  "validation_unused_but_retained_transition_count": 8
+}

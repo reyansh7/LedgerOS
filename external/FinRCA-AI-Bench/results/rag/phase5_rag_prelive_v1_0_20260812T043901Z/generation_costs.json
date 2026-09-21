@@ -1,0 +1,11 @@
+{
+  "cached_input_tokens": 538024,
+  "input_tokens": 3718262,
+  "mean_estimated_generation_cost_usd": 0.05069294305239182,
+  "model_id": "gpt-5.6-sol",
+  "output_tokens": 202800,
+  "pricing_reference_date": "2026-08-09",
+  "reasoning_tokens": 1541,
+  "request_count": 439,
+  "total_estimated_generation_cost_usd": 22.254202000000006
+}

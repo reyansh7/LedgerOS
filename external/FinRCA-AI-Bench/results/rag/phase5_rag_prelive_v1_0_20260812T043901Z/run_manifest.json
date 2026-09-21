@@ -1,0 +1,37 @@
+{
+  "created_at_utc": "2026-08-12T05:46:59.887246+00:00",
+  "frozen_spec_sha256": "390a23c63989a1b7593d336bd96b51f171180729f1e66284688032a01243d715",
+  "generation_began_after_ready_pre_live_gate": true,
+  "graph_retrieval_used": false,
+  "index_manifest_sha256": "527b5980f1544dda5eab4581f8cb9c498e2a8e7633e4c061dd232b8cff05e3a6",
+  "mode": "PRIMARY_STANDARD_RAG_API",
+  "oracle_retrieval_used": false,
+  "output_schema_sha256": "c65fdd04f23d7f30b429aa00699afea93e6b2c9678b06dd928ca4fe25964a0ca",
+  "paid_api_calls_made": true,
+  "pre_live_stage_manifest_sha256": "4133663975f712fb821f65fa9edebd2f2a193eb846c3fda5213440bae365bb19",
+  "primary_ground_truth_sources_opened": [],
+  "prompt_sha256": "bca6d6d8366c6f95b07f83fc068ead359fc329793987b946a7f491f0ffd4d302",
+  "reasoning_summary": {
+    "retry_events": 0,
+    "skipped_immutable_cases": 0,
+    "successful_cases": 437,
+    "total_cases": 437,
+    "unresolved_cases": 0
+  },
+  "retrieval_summary": {
+    "anchor_technical_failures": 2,
+    "failed_cases": 2,
+    "retry_events": 0,
+    "skipped_successes": 437,
+    "successful_cases": 437,
+    "total_cases": 439
+  },
+  "routes_sha256": "efccfa96f231d72fe153f77bcb0a7b8df73cf765706d78589cf12ba8ed307ca7",
+  "run_id": "phase5_rag_prelive_v1_0_20260812T043901Z",
+  "selected_k": 40,
+  "selection_sha256": "07365557a3d4bf04cbfcb4e1e834fad637ad04ab17585aba8cda156ece79c670",
+  "terminal_anchor_technical_failure_case_ids": [
+    "RCA_000902",
+    "RCA_000955"
+  ]
+}

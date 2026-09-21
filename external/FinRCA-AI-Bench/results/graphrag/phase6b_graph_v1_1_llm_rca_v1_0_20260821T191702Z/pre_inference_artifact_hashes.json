@@ -1,0 +1,128 @@
+{
+  "algorithm": "SHA-256",
+  "file_count": 24,
+  "files": [
+    {
+      "bytes": 1275,
+      "path": "PRE_INFERENCE_READINESS_REPORT.md",
+      "sha256": "375a0473cd77c9186d09389de73dbc078908ff5c10ecf4ecb8908a4f20a32f08"
+    },
+    {
+      "bytes": 1513,
+      "path": "adapter_validation_equivalence.json",
+      "sha256": "80e9c404ab99a753a36bb537670ca410eef23959c1cdcf7d4d44f1a3d1f151d2"
+    },
+    {
+      "bytes": 2322,
+      "path": "frozen_inference_config.json",
+      "sha256": "09a5b608b66f8d1efaee45072d6fd2c0c575875a042a9402e498a84a957d79dd"
+    },
+    {
+      "bytes": 4521,
+      "path": "frozen_reasoning_prompt.txt",
+      "sha256": "bca6d6d8366c6f95b07f83fc068ead359fc329793987b946a7f491f0ffd4d302"
+    },
+    {
+      "bytes": 1004,
+      "path": "inference/anchor_technical_failures.jsonl",
+      "sha256": "3a896c76a12d0121387f2c82ffa2d3b288b4e3df56154fdf19f6d1e90b66a51d"
+    },
+    {
+      "bytes": 12481202,
+      "path": "inference/inference_objects.jsonl",
+      "sha256": "ab6d408d95d97dcdd04c745bdb68738ab126dbbea8a2de5fc2e4060c27ab7707"
+    },
+    {
+      "bytes": 11754595,
+      "path": "inference/reasoning_cases.jsonl",
+      "sha256": "b271adafe59a8514600fbca65dea28e29bdac0d6d8408fa8fad9c93c93465d5d"
+    },
+    {
+      "bytes": 2322,
+      "path": "inference_config_preflight.json",
+      "sha256": "09a5b608b66f8d1efaee45072d6fd2c0c575875a042a9402e498a84a957d79dd"
+    },
+    {
+      "bytes": 39468,
+      "path": "pre_inference_manifest.json",
+      "sha256": "5a6ec8515ca8ae27f073fdae7d76d06d7d53f8344a0690d3c40efc0fad3cb34a"
+    },
+    {
+      "bytes": 17282,
+      "path": "preflight/generation/predictions.jsonl",
+      "sha256": "f9ebd28ad7b43f50d7bed13d21ea7f0ba391706bf812ed390fc4260a300f6c13"
+    },
+    {
+      "bytes": 7670,
+      "path": "preflight/generation/raw_responses.jsonl",
+      "sha256": "648138e57a914a5c8172dc32441e62482fcf67d4b8c5cffccdada328ade7a40e"
+    },
+    {
+      "bytes": 316660,
+      "path": "preflight/generation/reasoning_requests.jsonl",
+      "sha256": "324b9cd321a6aaaa4eaacc7d5eb17aa7ea312e84446f5575bade9147637423a1"
+    },
+    {
+      "bytes": 6822,
+      "path": "preflight/generation/request_ledger.jsonl",
+      "sha256": "3775488a212e0344abe13d0117dd55c5eeece1d3ae8c78aec92d0d9dd01f04b7"
+    },
+    {
+      "bytes": 686,
+      "path": "preflight/preflight_results.json",
+      "sha256": "530915a2eeaccc819690bfff736fe1f17f4678c81761f265c940e899dc112b7d"
+    },
+    {
+      "bytes": 117256,
+      "path": "retrieval/anchor_resolutions.jsonl",
+      "sha256": "1556765568e0870c075d7cdb2da2cf6e1e9530c4fd3feff4dc8db7201ccb4507"
+    },
+    {
+      "bytes": 25108225,
+      "path": "retrieval/candidate_paths.jsonl",
+      "sha256": "226fb9c462dde65eb42160c857c89dbaee8a4b199c29a79fe6cbd689f9cf1810"
+    },
+    {
+      "bytes": 4461016,
+      "path": "retrieval/candidate_records.jsonl",
+      "sha256": "2c6b0ab02874b315f7ca22e946472e87afaa87ef83f39c0b64c34ec777dbf78f"
+    },
+    {
+      "bytes": 1553266,
+      "path": "retrieval/drop_ledger.jsonl",
+      "sha256": "5a74c1067e2c2c61d98334d60ffae27d3fb3981d7ab80aacb207e6819efa0c86"
+    },
+    {
+      "bytes": 889420,
+      "path": "retrieval/retrieval_results.jsonl",
+      "sha256": "d6834ce395d1bed1b013571ee4f2b853dc7da3859effcf27c16fc877e35f8b72"
+    },
+    {
+      "bytes": 20220338,
+      "path": "retrieval/selected_paths.jsonl",
+      "sha256": "94f121cd9220092c449794417563242e0349210f018c4ddc0a2c5664d9f424d5"
+    },
+    {
+      "bytes": 43265628,
+      "path": "retrieval/selected_records.jsonl",
+      "sha256": "305bcf6fe2ed8c8524c5415ef998c7d91bfa357eda623ea5a84188454d8df289"
+    },
+    {
+      "bytes": 3186262,
+      "path": "retrieval/traversal_rejections.jsonl",
+      "sha256": "9ed625c41ddb38d133ed6c70c1a1bd9238a6423923578ccfe174ecf3d3e36705"
+    },
+    {
+      "bytes": 47243,
+      "path": "retrieval/traversal_telemetry.json",
+      "sha256": "3c5e70b098ad9a970e0778477ddeae17b4de98ec61a19ccfb3bf13def674ca29"
+    },
+    {
+      "bytes": 674,
+      "path": "scientific_integrity_pre_inference.json",
+      "sha256": "188564fb1dc634a487a407fd80d962e9d2bc5d94277c31b4b15c3035b21c2a6e"
+    }
+  ],
+  "hash_scope": "raw bytes",
+  "self_hash_omitted": true
+}

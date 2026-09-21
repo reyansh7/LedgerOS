@@ -1,0 +1,110 @@
+{
+  "all_parent_inputs_verified": true,
+  "all_required_artifacts_present": true,
+  "analysis_script": {
+    "bytes": 51766,
+    "path": "run_evidence_selection_freeze.py",
+    "sha256": "a4e11f5ef19859113b3b7607d9491f9f5abb01041f57d65c708d72a197ee3aee"
+  },
+  "artifact_type": "graph_v1_1_evidence_selection_freeze_hash_inventory",
+  "artifact_version": "1.1",
+  "artifacts": {
+    "EVIDENCE_SELECTION_POLICY_DESIGN_RATIONALE.md": {
+      "bytes": 9475,
+      "sha256": "8123b92e49f59824fd36438e9599290242657aef8523c19168c75f743c5e2868"
+    },
+    "GRAPH_V1_1_EVIDENCE_SELECTION_FREEZE_REVIEW.md": {
+      "bytes": 11152,
+      "sha256": "42317046968bb010ab35d153597125d91545694c3113620f88181c775d2a2a99"
+    },
+    "evidence_selection_freeze_manifest_v1_1.json": {
+      "bytes": 5147,
+      "sha256": "9f89654a5b7e80b7df1eabc4e506ef188dfe8b9b2a75471195a634bcb17b24f7"
+    },
+    "evidence_selection_policy_v1_1.json": {
+      "bytes": 15374,
+      "sha256": "cad5f2298d9dad62599cfe592304c08cf8808441586fb865d1f4824b3054ea1b"
+    },
+    "evidence_selection_policy_v1_1_draft.json": {
+      "bytes": 15772,
+      "sha256": "db509ca1442b832b0c8b4bc401b8902cfec8f4fbd337a00f4ec12a62bf8cfcf8"
+    },
+    "over_budget_case_diagnostics.json": {
+      "bytes": 11349,
+      "sha256": "eaa8fdb02a8484cf525ee17ba29418ddd20f91a669f2ebd0003082a40e1cb872"
+    },
+    "policy_preregistration_manifest.json": {
+      "bytes": 2479,
+      "sha256": "8271c15c39c6d2a85f25aacb306a3d31e14898fee368615b402ee01ffa3bdb61"
+    },
+    "scientific_integrity_selection_freeze.json": {
+      "bytes": 1586,
+      "sha256": "ea1164338d0464d236ec0993777f8b997844618f529cb7f7b76faf0421e858d8"
+    },
+    "selection/drop_ledger_pre_gold.jsonl": {
+      "bytes": 1534349,
+      "sha256": "c367f2436a8b52b59ef394e84845b2b26408f16ef72e78b30cf8cd57d1aad3e9"
+    },
+    "selection/selected_paths_pre_gold.jsonl": {
+      "bytes": 19458898,
+      "sha256": "7c50a3569920124286ad1866af28155d6ba25d7e77d6480aaf0627f7c8cd0561"
+    },
+    "selection/selected_records_pre_gold.jsonl": {
+      "bytes": 41745675,
+      "sha256": "e8335a880b0cf57820f58c233f4558b9f4df111f6739f8c13ca7bc04eb994cbd"
+    },
+    "selection/selection_results_pre_gold.jsonl": {
+      "bytes": 1074429,
+      "sha256": "e9ed35885fc76f55d2b431039cf94b97bbff7740bd3fdcbac125244ca5a6c5e7"
+    },
+    "selection_determinism_validation.json": {
+      "bytes": 2044,
+      "sha256": "d454152f0c91060777f43bbb6b0f4230c7b7d25a17046f5fa189d02eb82823dd"
+    },
+    "selection_policy_semantic_diff.json": {
+      "bytes": 807,
+      "sha256": "4a3526fc49f9518ae8c718943addb86ecef50f1ecd52e8b1cf181b2e3ac715bb"
+    },
+    "selection_pressure_diagnostics.json": {
+      "bytes": 2390,
+      "sha256": "cec9840641af0e8b256171ee5481fdcaf7ea2dabd14bf15bc0177f333bf4973f"
+    },
+    "selection_structural_validation.json": {
+      "bytes": 70436,
+      "sha256": "bc24a068b1a2c73a7a25baa88c9cd36ace8ec599fb9b872ae2055962fe5ef918"
+    },
+    "selector_test_results.json": {
+      "bytes": 841,
+      "sha256": "c125e4a7081522c3f1d0126540716915352363865ea183b90143c5657ff7e2a3"
+    }
+  },
+  "created_at_utc": "2026-08-15T23:38:00Z",
+  "final_output_file_count_including_self": 19,
+  "freeze_status": "FROZEN_GRAPH_V1_1_EVIDENCE_SELECTION_POLICY",
+  "hash_algorithm": "SHA-256",
+  "hash_scope": "RAW_FILE_BYTES",
+  "hashed_nonself_output_artifact_count": 18,
+  "implementation_sources": {
+    "src/graphrag/v1_1/evidence_selection.py": {
+      "bytes": 38874,
+      "sha256": "4df1daa856c325652cc0e91e049b0c66033bfa9f57684b3a84ce5436cc7939aa"
+    },
+    "tests/graphrag/test_evidence_selection_v1_1.py": {
+      "bytes": 21159,
+      "sha256": "8bcb18ce46ff1d671e2ab3ea85d1c4222b737c93b097dd1ff26aa28cdab32524"
+    }
+  },
+  "independent_recomputation_required": true,
+  "self_hash_omission_reason": "A file cannot contain its own raw-byte SHA-256 without circularity; the external handoff reports it.",
+  "self_hash_omitted": true,
+  "serialization_convention": {
+    "concurrency_order_dependency": false,
+    "encoding": "UTF-8",
+    "filesystem_order_dependency": false,
+    "insertion_order_dependency": false,
+    "json": "sort_keys=true, indent=2, ensure_ascii=false, one trailing LF",
+    "jsonl": "one compact sort_keys=true JSON object per LF-terminated line"
+  },
+  "status": "PASS",
+  "validation_gold_opened": false
+}

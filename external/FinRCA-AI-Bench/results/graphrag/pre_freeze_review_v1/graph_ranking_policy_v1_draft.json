@@ -1,0 +1,52 @@
+{
+  "context_budget": {
+    "constraint": "must remain comparable with Standard RAG and must not be selected using held-out accuracy",
+    "maximum_raw_source_records": 40,
+    "token_budget_cap": "UNRESOLVED — REQUIRES POLICY FREEZE",
+    "truncation_policy": "no silent record truncation or record-content rewriting"
+  },
+  "deterministic_tie_breaking": [
+    "lower priority number",
+    "fewer graph hops",
+    "relation registry order",
+    "ascending canonical record_id",
+    "for semantic fallback only: descending exact float32 score then ascending record_id"
+  ],
+  "held_out_optimization": false,
+  "hub_policy": "Vendor/Employee reverse expansion is restricted; attribute bridges are prohibited.",
+  "label_independent": true,
+  "policy_version": "graph_ranking_policy_v1_draft",
+  "priority_order": [
+    {
+      "class": "exact anchor",
+      "priority": 1
+    },
+    {
+      "class": "direct Tier A relationships",
+      "priority": 2
+    },
+    {
+      "class": "complete Tier A multi-hop paths",
+      "priority": 3
+    },
+    {
+      "class": "deterministic relational joins",
+      "priority": 4
+    },
+    {
+      "class": "Tier B corroborated candidates",
+      "condition": "only after the candidate predicate is separately frozen",
+      "priority": 5
+    },
+    {
+      "class": "audit/event context",
+      "priority": 6
+    },
+    {
+      "class": "targeted semantic fallback",
+      "condition": "unresolved gaps only; never creates graph edges",
+      "priority": 7
+    }
+  ],
+  "trained_reranker": false
+}

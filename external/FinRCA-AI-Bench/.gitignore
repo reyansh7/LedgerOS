@@ -1,0 +1,48 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+results/graphrag/phase6a_graph_retrieval_v1_0/graph/
+results/rag/phase5_rag_index_v1_0_20260810T000000Z/corpus/
+results/direct_llm/phase4_direct_llm_preflight_v1_0_20260809T062454Z/test_packets.jsonl
+results/rag/phase5_rag_pre_embedding_v1_0_20260809T220550Z/corpus/
+results/direct_llm/phase4_direct_llm_preflight_v1_0_20260809T063242Z/test_packets.jsonl
+results/rag/phase5_rag_pre_embedding_*/corpus/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs / temporary files
+*.log
+*.tmp
+.cache/
+
+# Large/generated experiment outputs
+outputs/
+logs/
+
+# Private/local data
+data/raw/
+data/private/
+paper_handoff.zip
+# Credentials
+credentials.json
+secrets.json
+
+paper_handoff/
+
+results/**/logs/
+results/**/cache/
+results/**/*.tmp
+results/**/*.bin
+results/**/*.npy
+SSRN/**/*

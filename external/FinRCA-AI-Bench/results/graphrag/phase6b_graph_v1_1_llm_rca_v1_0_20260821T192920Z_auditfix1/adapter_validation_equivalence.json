@@ -1,0 +1,36 @@
+{
+  "components": {
+    "anchor_resolutions": {
+      "adapted_count": 416,
+      "adapted_semantic_sha256": "b31be8a4d6a0c68bd5999058dc7b0adc2f142260fe6fc497099fb1d939007413",
+      "exact_semantic_match": true,
+      "frozen_count": 416,
+      "frozen_semantic_sha256": "b31be8a4d6a0c68bd5999058dc7b0adc2f142260fe6fc497099fb1d939007413"
+    },
+    "candidate_paths": {
+      "adapted_count": 13371,
+      "adapted_semantic_sha256": "76f245bbdafe900966a4b5aa52409f41e1c412ebc2c005f5ac174f598db34dd3",
+      "exact_semantic_match": true,
+      "frozen_count": 13371,
+      "frozen_semantic_sha256": "76f245bbdafe900966a4b5aa52409f41e1c412ebc2c005f5ac174f598db34dd3"
+    },
+    "candidate_records": {
+      "adapted_count": 8369,
+      "adapted_semantic_sha256": "2fc6517972f96c701c40b9dc81dbfc508b7958db6a42ef3ff1d894d2f68edc11",
+      "exact_semantic_match": true,
+      "frozen_count": 8369,
+      "frozen_semantic_sha256": "2fc6517972f96c701c40b9dc81dbfc508b7958db6a42ef3ff1d894d2f68edc11"
+    },
+    "rejections": {
+      "adapted_count": 5712,
+      "adapted_semantic_sha256": "31aa297b670ab077b21aeb2a692c73836260f6f807a06997677ac84862bf31df",
+      "exact_semantic_match": true,
+      "frozen_count": 5712,
+      "frozen_semantic_sha256": "31aa297b670ab077b21aeb2a692c73836260f6f807a06997677ac84862bf31df"
+    }
+  },
+  "path_set_sha256": "89d7f799f60149a8e6665bf59a484131f450ec2ab435e9a891e1eec3efbb2944",
+  "status": "PASS",
+  "structural_case_results_exact_match": true,
+  "validation_case_count": 416
+}

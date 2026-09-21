@@ -1,0 +1,189 @@
+{
+  "case_primary_category_counts": {
+    "EDGE_NOT_PRESENT": 26,
+    "HUB_RESTRICTION": 0,
+    "IMPLEMENTATION_EXECUTION_GAP": 0,
+    "MOTIF_DIRECTION_MISMATCH": 24,
+    "MOTIF_SEQUENCE_MISSING": 319,
+    "MOTIF_TOO_SHORT": 21,
+    "NO_MOTIF_FOR_ANCHOR_TYPE": 26,
+    "OTHER / NOT SAFELY ATTRIBUTABLE": 0,
+    "RELATION_DIRECTION_MISMATCH": 0,
+    "TEMPORAL_RESTRICTION": 0
+  },
+  "classification_unit_note": "Observed unrepresented sequences are classified once; failed motif attempts and blocked hub incidents are reported separately and may overlap a case.",
+  "comparison_flag_case_counts": {
+    "hub_restriction_blocks_path": 376,
+    "motif_path_physically_impossible": 390,
+    "raw_2_hop_exists_no_frozen_motif": 340,
+    "raw_3_hop_exists_no_frozen_motif": 340,
+    "stored_edge_orientation_requires_reverse": 416
+  },
+  "distinct_unrepresented_sequence_counts": {
+    "EDGE_NOT_PRESENT": 0,
+    "HUB_RESTRICTION": 0,
+    "IMPLEMENTATION_EXECUTION_GAP": 0,
+    "MOTIF_DIRECTION_MISMATCH": 2,
+    "MOTIF_SEQUENCE_MISSING": 43,
+    "MOTIF_TOO_SHORT": 24,
+    "NO_MOTIF_FOR_ANCHOR_TYPE": 2,
+    "OTHER / NOT SAFELY ATTRIBUTABLE": 0,
+    "RELATION_DIRECTION_MISMATCH": 0,
+    "TEMPORAL_RESTRICTION": 0
+  },
+  "implementation_execution_gap_count": 0,
+  "motif_coverage_ratio": {
+    "case_definition": "Per case, the same ratio is computed over distinct reachable signatures; case support is also reported separately.",
+    "formula": "distinct direction-aware typed sequences represented by at least one frozen motif / distinct reachable direction-aware typed sequences",
+    "primary_diagnostic_denominator": "SAFE_BIDIRECTIONAL_DIAGNOSTIC within depth<=3, frozen hub exclusions, and simple-path constraints",
+    "views": {
+      "SAFE_BIDIRECTIONAL_DIAGNOSTIC": {
+        "by_anchor_type": {
+          "bank_transaction": {
+            "case_count": 26,
+            "cases_with_any_represented_sequence": 0,
+            "cases_with_raw_sequences": 26,
+            "distinct_reachable_sequence_count": 2,
+            "distinct_represented_sequence_count": 0,
+            "mean_case_level_ratio": 0.0,
+            "sequence_level_ratio": 0.0
+          },
+          "gl_journal": {
+            "case_count": 14,
+            "cases_with_any_represented_sequence": 14,
+            "cases_with_raw_sequences": 14,
+            "distinct_reachable_sequence_count": 13,
+            "distinct_represented_sequence_count": 1,
+            "mean_case_level_ratio": 0.08458208458208458,
+            "sequence_level_ratio": 0.07692307692307693
+          },
+          "invoice": {
+            "case_count": 195,
+            "cases_with_any_represented_sequence": 152,
+            "cases_with_raw_sequences": 195,
+            "distinct_reachable_sequence_count": 35,
+            "distinct_represented_sequence_count": 3,
+            "mean_case_level_ratio": 0.1590941625424384,
+            "sequence_level_ratio": 0.08571428571428572
+          },
+          "payment": {
+            "case_count": 181,
+            "cases_with_any_represented_sequence": 181,
+            "cases_with_raw_sequences": 181,
+            "distinct_reachable_sequence_count": 26,
+            "distinct_represented_sequence_count": 1,
+            "mean_case_level_ratio": 0.09817574109519442,
+            "sequence_level_ratio": 0.038461538461538464
+          }
+        },
+        "case_support_ratio": 0.8341346153846154,
+        "cases_with_any_represented_sequence": 347,
+        "cases_with_raw_sequences": 416,
+        "distinct_reachable_sequence_count": 76,
+        "distinct_represented_sequence_count": 5,
+        "mean_case_level_ratio": 0.12013778850517996,
+        "sequence_level_ratio": 0.06578947368421052
+      },
+      "STORED_DIRECTION_ONLY": {
+        "by_anchor_type": {
+          "bank_transaction": {
+            "case_count": 26,
+            "cases_with_any_represented_sequence": 0,
+            "cases_with_raw_sequences": 0,
+            "distinct_reachable_sequence_count": 0,
+            "distinct_represented_sequence_count": 0,
+            "mean_case_level_ratio": null,
+            "sequence_level_ratio": null
+          },
+          "gl_journal": {
+            "case_count": 14,
+            "cases_with_any_represented_sequence": 14,
+            "cases_with_raw_sequences": 14,
+            "distinct_reachable_sequence_count": 3,
+            "distinct_represented_sequence_count": 1,
+            "mean_case_level_ratio": 0.39285714285714285,
+            "sequence_level_ratio": 0.3333333333333333
+          },
+          "invoice": {
+            "case_count": 195,
+            "cases_with_any_represented_sequence": 0,
+            "cases_with_raw_sequences": 139,
+            "distinct_reachable_sequence_count": 1,
+            "distinct_represented_sequence_count": 0,
+            "mean_case_level_ratio": 0.0,
+            "sequence_level_ratio": 0.0
+          },
+          "payment": {
+            "case_count": 181,
+            "cases_with_any_represented_sequence": 0,
+            "cases_with_raw_sequences": 163,
+            "distinct_reachable_sequence_count": 2,
+            "distinct_represented_sequence_count": 0,
+            "mean_case_level_ratio": 0.0,
+            "sequence_level_ratio": 0.0
+          }
+        },
+        "case_support_ratio": 0.04430379746835443,
+        "cases_with_any_represented_sequence": 14,
+        "cases_with_raw_sequences": 316,
+        "distinct_reachable_sequence_count": 6,
+        "distinct_represented_sequence_count": 1,
+        "mean_case_level_ratio": 0.01740506329113924,
+        "sequence_level_ratio": 0.16666666666666666
+      }
+    }
+  },
+  "taxonomy": [
+    "NO_MOTIF_FOR_ANCHOR_TYPE",
+    "MOTIF_DIRECTION_MISMATCH",
+    "RELATION_DIRECTION_MISMATCH",
+    "MOTIF_TOO_SHORT",
+    "MOTIF_SEQUENCE_MISSING",
+    "HUB_RESTRICTION",
+    "TEMPORAL_RESTRICTION",
+    "EDGE_NOT_PRESENT",
+    "IMPLEMENTATION_EXECUTION_GAP",
+    "OTHER / NOT SAFELY ATTRIBUTABLE"
+  ],
+  "unrepresented_sequence_gap_counts": {
+    "EDGE_NOT_PRESENT": 0,
+    "HUB_RESTRICTION": 0,
+    "IMPLEMENTATION_EXECUTION_GAP": 0,
+    "MOTIF_DIRECTION_MISMATCH": 302,
+    "MOTIF_SEQUENCE_MISSING": 4245,
+    "MOTIF_TOO_SHORT": 444,
+    "NO_MOTIF_FOR_ANCHOR_TYPE": 26,
+    "OTHER / NOT SAFELY ATTRIBUTABLE": 0,
+    "RELATION_DIRECTION_MISMATCH": 0,
+    "TEMPORAL_RESTRICTION": 0
+  },
+  "zero_multihop_explanation": {
+    "conclusion": "The sole multi-hop motif starts with INVOICE_REFERENCES_PO:reverse. In the authorized routes it is attempted only from INVOICE anchors, but reverse traversal of that stored relation starts at PURCHASE_ORDER. Every eligible attempt therefore dies before hop 1; the other seven motifs terminate after one edge.",
+    "eligible_multihop_motif_attempt_count": 195,
+    "frozen_motif_count": 8,
+    "frozen_multihop_motif_count": 1,
+    "frozen_one_hop_motif_count": 7,
+    "frozen_three_hop_motif_count": 0,
+    "multihop_attempt_zero_path_reason_counts": {
+      "MOTIF_DIRECTION_MISMATCH": 195
+    },
+    "multihop_attempts_with_first_hop_success": 0,
+    "multihop_attempts_with_second_hop_success": 0,
+    "multihop_motif_ids": [
+      "PO_INVOICE_LINES"
+    ],
+    "percentage_attributable_to_absent_edges": 0.0,
+    "percentage_attributable_to_hub_rules": 0.0,
+    "percentage_attributable_to_implementation_behavior": 0.0,
+    "percentage_attributable_to_motif_direction_anchor_mismatch": 100.0,
+    "percentage_attributable_to_temporal_rules": 0.0,
+    "percentage_of_multihop_attempts_blocked_at_first_hop": 100.0,
+    "selected_multihop_path_count": 0,
+    "validation_route_anchor_type_counts": {
+      "bank_transaction": 26,
+      "gl_journal": 14,
+      "invoice": 195,
+      "payment": 181
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "corpus_hashes": {
+    "documents_sha256": "43fe8841d3cbfc64c403349c2336c631c9f6ca9dc35f3e86af1c4ae993441b8c",
+    "metadata_sha256": "e30183ea1e17af182ad24a3177e776a869ed55718872ba6cc1a169506b4f96fb",
+    "record_ids_sha256": "1850249832dbb9c75ddddfa8e82615dd1db138cdd83cb2dc455029035e1b0058",
+    "text_manifest_sha256": "8842865bd6e688f824a0b16450301fb547c62c4ba495099d605753ebaf2ff00d"
+  },
+  "created_at_utc": "2026-08-09T22:19:17.819830+00:00",
+  "decision": "PHASE 5B READY FOR CORPUS EMBEDDING RUN",
+  "frozen_spec_sha256": "390a23c63989a1b7593d336bd96b51f171180729f1e66284688032a01243d715",
+  "implementation_sha256": "193ea0087244be55317fd154e0ddceac6e2dc439708d4395e106d9eee6bf1139",
+  "mode": "PRE_EMBEDDING_NO_API",
+  "paid_api_calls_made": false,
+  "protocol_deviations": "NONE",
+  "run_id": "phase5_rag_pre_embedding_v1_0_20260809T221821Z",
+  "test_route_count": 439,
+  "test_route_sha256": "efccfa96f231d72fe153f77bcb0a7b8df73cf765706d78589cf12ba8ed307ca7",
+  "validation_route_count": 416,
+  "validation_route_sha256": "08ceeaf3a7c569ca94a87b0c0830d0fb90784daac66dd959de3fee1561b94b44"
+}

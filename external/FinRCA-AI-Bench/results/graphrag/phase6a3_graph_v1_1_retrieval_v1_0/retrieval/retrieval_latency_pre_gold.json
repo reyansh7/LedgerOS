@@ -1,0 +1,20 @@
+{
+  "candidate_generation_per_case_ms": {
+    "count": 416,
+    "maximum": 291.32325,
+    "mean": 0.9616044639423076,
+    "median": 0.2488125,
+    "p50_nearest_rank": 0.248125,
+    "p75_nearest_rank": 0.360125,
+    "p90_nearest_rank": 0.489792,
+    "p95_nearest_rank": 0.563875,
+    "p99_nearest_rank": 0.832042,
+    "total": 400.0274570000003
+  },
+  "candidate_generation_total_ms": 452.687417,
+  "end_to_end_selected_retrieval_latency": "NOT_COMPUTABLE_SELECTION_BLOCKED",
+  "graph_load_ms": 3163.31025,
+  "offline_gold_scoring_included": false,
+  "selection_latency": "NOT_COMPUTABLE_SELECTION_BLOCKED",
+  "status": "DESCRIPTIVE_ONLY"
+}

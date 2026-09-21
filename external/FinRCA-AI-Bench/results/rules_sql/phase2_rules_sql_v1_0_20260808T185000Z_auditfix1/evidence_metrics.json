@@ -1,0 +1,11 @@
+{
+  "anomaly_decisions": 307,
+  "correct_anomaly_predictions": 291,
+  "evidence_contract_accuracy": 1.0,
+  "evidence_id_metric_note": "IDs compare returned record primary-key tokens with benchmark evidence IDs; classification and internal frozen evidence-contract checks are reported separately.",
+  "evidence_id_micro_precision_if_definable": 0.5797491039426523,
+  "evidence_id_micro_recall_if_definable": 0.6029822926374651,
+  "percentage_all_incorrect_predictions_caused_by_unavailable_evidence": 0.7575757575757576,
+  "percentage_correct_anomaly_predictions_with_correct_complete_evidence": 0.13058419243986255,
+  "percentage_correct_anomaly_predictions_with_incomplete_evidence": 0.8694158075601375
+}

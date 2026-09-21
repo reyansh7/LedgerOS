@@ -1,0 +1,17 @@
+{
+  "forbidden_serialized_field_count": 0,
+  "forbidden_target_or_evaluation_key_count": 0,
+  "ground_truth_paths_opened_by_prepare_runner": [],
+  "inference_object_count": 437,
+  "inputs": [
+    "results/rag/phase5_rag_pre_embedding_v1_0_20260809T221821Z/test_routes.jsonl",
+    "results/graphrag/phase6a_graph_retrieval_v1_0/graph/nodes.jsonl",
+    "results/graphrag/phase6a_graph_retrieval_v1_0/graph/edges.jsonl",
+    "results/graphrag/registry_freeze_v1_1/graph_traversal_grammar_v1_1.json",
+    "results/graphrag/evidence_selection_freeze_v1_1/evidence_selection_policy_v1_1.json",
+    "results/rag/phase5_rag_index_v1_0_20260810T000000Z/corpus/documents.jsonl"
+  ],
+  "reasoning_payload_count": 437,
+  "selected_record_corpus_graph_hash_mismatch_count": 0,
+  "status": "PASS"
+}

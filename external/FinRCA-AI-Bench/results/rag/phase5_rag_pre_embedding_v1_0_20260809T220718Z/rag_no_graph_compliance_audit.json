@@ -1,0 +1,33 @@
+{
+  "decision": "PASS — STANDARD RAG CONTAINS NO GRAPH RETRIEVAL",
+  "files_inspected": [
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/config.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/corpus.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/serialization.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/tokens.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/routes.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/query.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/embeddings.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/index.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/retriever.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/retrieval_runner.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/prompt.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/schemas.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/reasoner.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/runner.py",
+    "/Users/pratik/Desktop/O1/finrecon/src/rag/cli.py"
+  ],
+  "findings": [],
+  "foreign_key_traversal": false,
+  "graph_library": false,
+  "graph_query": false,
+  "hybrid_search": false,
+  "manual_boundary_note": "Primary retrieval is one query embedding and one exhaustive global NumPy cosine search; relational IDs remain inert text/metadata.",
+  "mmr": false,
+  "neighborhood_expansion": false,
+  "record_type_quota": false,
+  "relation_specific_index": false,
+  "relationship_expansion": false,
+  "reranking": false,
+  "status": "PASS"
+}

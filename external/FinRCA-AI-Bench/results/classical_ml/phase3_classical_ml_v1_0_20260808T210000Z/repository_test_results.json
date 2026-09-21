@@ -1,0 +1,8 @@
+{
+  "command": "python3 -m pytest -q",
+  "exit_code": 0,
+  "passed": true,
+  "feature_pipeline_result": "19 passed",
+  "result": "76 passed",
+  "runtime_seconds": 8.37
+}

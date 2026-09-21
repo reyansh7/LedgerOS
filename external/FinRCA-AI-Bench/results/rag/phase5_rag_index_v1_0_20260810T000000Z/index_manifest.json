@@ -1,0 +1,92 @@
+{
+  "approximate_search": false,
+  "corpus": {
+    "documents_sha256": "43fe8841d3cbfc64c403349c2336c631c9f6ca9dc35f3e86af1c4ae993441b8c",
+    "metadata_sha256": "e30183ea1e17af182ad24a3177e776a869ed55718872ba6cc1a169506b4f96fb",
+    "record_ids_sha256": "1850249832dbb9c75ddddfa8e82615dd1db138cdd83cb2dc455029035e1b0058",
+    "text_manifest_sha256": "8842865bd6e688f824a0b16450301fb547c62c4ba495099d605753ebaf2ff00d"
+  },
+  "dimensions": 1536,
+  "dtype": "<f4",
+  "embedding_configuration": {
+    "backoff_seconds": [
+      1.0,
+      2.0,
+      4.0
+    ],
+    "corpus_batch_size": 128,
+    "dimensions": 1536,
+    "encoding_format": "float",
+    "endpoint": "v1/embeddings",
+    "max_attempts": 4,
+    "model_id": "text-embedding-3-small",
+    "pricing_reference_date": "2026-08-09",
+    "provider": "OpenAI",
+    "query_batch_size": 1,
+    "request_timeout_seconds": 120.0,
+    "usd_per_million_input_tokens": 0.02
+  },
+  "embedding_ledger_sha256": "83d9d5bc16029d61c16716ff6e4562c3b157411eaeb4dbb2736e35019bfca237",
+  "embedding_matrix_sha256": "128e3cd5c4215e9e1f6cdc664b838c1c3aef72b8eb0bc1191d19bf7bf763043a",
+  "embedding_summary": {
+    "c_contiguous": true,
+    "corpus_embedding_cost_usd": 0.41458292,
+    "dimensions": 1536,
+    "dtype": "<f4",
+    "embedding_api_latency_ms": 1768395.509769034,
+    "embedding_configuration": {
+      "backoff_seconds": [
+        1.0,
+        2.0,
+        4.0
+      ],
+      "corpus_batch_size": 128,
+      "dimensions": 1536,
+      "encoding_format": "float",
+      "endpoint": "v1/embeddings",
+      "max_attempts": 4,
+      "model_id": "text-embedding-3-small",
+      "pricing_reference_date": "2026-08-09",
+      "provider": "OpenAI",
+      "query_batch_size": 1,
+      "request_timeout_seconds": 120.0,
+      "usd_per_million_input_tokens": 0.02
+    },
+    "embedding_ledger_sha256": "83d9d5bc16029d61c16716ff6e4562c3b157411eaeb4dbb2736e35019bfca237",
+    "embedding_matrix_sha256": "128e3cd5c4215e9e1f6cdc664b838c1c3aef72b8eb0bc1191d19bf7bf763043a",
+    "embedding_model": "text-embedding-3-small",
+    "embedding_request_count": 1214,
+    "embedding_retry_count": 0,
+    "expected_batches": 1214,
+    "organization_ids_where_available": [],
+    "project_ids_where_available": [],
+    "returned_model_ids": [
+      "text-embedding-3-small"
+    ],
+    "total_embedding_tokens": 20729146,
+    "vector_count": 155391
+  },
+  "environment": {
+    "blas_configuration": "{'Compilers': {'c': {'name': 'clang', 'linker': 'ld64', 'version': '14.0.0', 'commands': 'cc'}, 'cython': {'name': 'cython', 'linker': 'cython', 'version': '3.0.2', 'commands': 'cython'}, 'c++': {'name': 'clang', 'linker': 'ld64', 'version': '14.0.0', 'commands': 'c++'}}, 'Machine Information': {'host': {'cpu': 'aarch64', 'family': 'aarch64', 'endian': 'little', 'system': 'darwin'}, 'build': {'cpu': 'aarch64', 'family': 'aarch64', 'endian': 'little', 'system': 'darwin'}}, 'Build Dependencies': {'blas': {'name': 'openblas64', 'found': True, 'version': '0.3.23.dev', 'detection method': 'pkgconfig', 'include directory': '/opt/arm64-builds/include', 'lib directory': '/opt/arm64-builds/lib', 'openblas configuration': 'USE_64BITINT=1 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS= NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= SANDYBRIDGE MAX_THREADS=3', 'pc file directory': '/usr/local/lib/pkgconfig'}, 'lapack': {'name': 'openblas64', 'found': True, 'version': '0.3.23.dev', 'detection method': 'pkgconfig', 'include directory': '/opt/arm64-builds/include', 'lib directory': '/opt/arm64-builds/lib', 'openblas configuration': 'USE_64BITINT=1 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS= NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= SANDYBRIDGE MAX_THREADS=3', 'pc file directory': '/usr/local/lib/pkgconfig'}}, 'Python Information': {'path': '/private/var/folders/76/zy5ktkns50v6gt5g8r0sf6sc0000gn/T/cibw-run-4sgjw1qw/cp311-macosx_arm64/build/venv/bin/python', 'version': '3.11'}, 'SIMD Extensions': {'baseline': ['NEON', 'NEON_FP16', 'NEON_VFPV4', 'ASIMD'], 'found': ['ASIMDHP'], 'not found': ['ASIMDFHM']}}",
+    "machine": "arm64",
+    "numpy": "1.26.0",
+    "openai_sdk": "2.45.0",
+    "os": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.11.3 (v3.11.3:f3909b8bc8, Apr  4 2023, 20:12:10) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "frozen_spec_sha256": "390a23c63989a1b7593d336bd96b51f171180729f1e66284688032a01243d715",
+  "graph_retrieval": false,
+  "index_size_bytes": 954722432,
+  "index_version": "ExactFlatCosineNumpyV1",
+  "record_ids_sha256": "1850249832dbb9c75ddddfa8e82615dd1db138cdd83cb2dc455029035e1b0058",
+  "search": "exhaustive exact flat",
+  "similarity": "cosine via normalized float32 inner product",
+  "tie_break": "ascending record_id for exact float32 score ties",
+  "vector_count": 155391
+}

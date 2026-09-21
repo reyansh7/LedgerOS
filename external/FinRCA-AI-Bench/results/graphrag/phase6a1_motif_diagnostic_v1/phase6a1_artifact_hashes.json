@@ -1,0 +1,125 @@
+{
+  "analysis_script": {
+    "bytes": 82662,
+    "path": "run_phase6a1_diagnostic.py",
+    "sha256": "a65e63f104915decdf6c961ffc9844b6b019ea756d93e4b2592a0bcc0f35665b"
+  },
+  "artifacts": {
+    "PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md": {
+      "bytes": 10082,
+      "sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6"
+    },
+    "anchor_type_reachability.json": {
+      "bytes": 22404,
+      "sha256": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f"
+    },
+    "case_reachability_comparison.jsonl": {
+      "bytes": 467781,
+      "sha256": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7"
+    },
+    "determinism_validation.json": {
+      "bytes": 1706,
+      "sha256": "db15267bf5b03f4d774140eacf57c8845150644e60b27d192fcbb13425d7107b"
+    },
+    "hop_survival_funnel.json": {
+      "bytes": 2102,
+      "sha256": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f"
+    },
+    "motif_gap_taxonomy.json": {
+      "bytes": 7663,
+      "sha256": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4"
+    },
+    "motif_reachability.jsonl": {
+      "bytes": 1915866,
+      "sha256": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee"
+    },
+    "path_sequence_inventory.json": {
+      "bytes": 79396,
+      "sha256": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b"
+    },
+    "raw_reachability_safe_reverse_diagnostic.jsonl": {
+      "bytes": 9993795,
+      "sha256": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320"
+    },
+    "raw_reachability_stored_direction.jsonl": {
+      "bytes": 575167,
+      "sha256": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e"
+    },
+    "reachability_explosion_and_cycles.json": {
+      "bytes": 1527,
+      "sha256": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e"
+    },
+    "relation_directionality_audit.json": {
+      "bytes": 21403,
+      "sha256": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62"
+    },
+    "scientific_integrity.json": {
+      "bytes": 743,
+      "sha256": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a"
+    },
+    "typed_traversal_grammar_analysis.md": {
+      "bytes": 2716,
+      "sha256": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652"
+    }
+  },
+  "hash_algorithm": "SHA-256",
+  "hash_scope": "raw serialized file bytes",
+  "input_verification": {
+    "artifacts": {
+      "results/graphrag/phase6a_graph_retrieval_v1_0/PHASE6A_GRAPH_RETRIEVAL_REVIEW.md": {
+        "expected_sha256": "e82e6777a6cb71b053045553a5aa1d5b3210eafa07fc08553b904af65e0d8787",
+        "observed_sha256": "e82e6777a6cb71b053045553a5aa1d5b3210eafa07fc08553b904af65e0d8787"
+      },
+      "results/graphrag/phase6a_graph_retrieval_v1_0/evaluation/retrieval_metrics.json": {
+        "expected_sha256": "53eb3f017185ba3009d46cc87f8f453fcd8302f259b63c9ec80de46d294be76c",
+        "observed_sha256": "53eb3f017185ba3009d46cc87f8f453fcd8302f259b63c9ec80de46d294be76c"
+      },
+      "results/graphrag/phase6a_graph_retrieval_v1_0/graph/edges.jsonl": {
+        "expected_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "observed_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed"
+      },
+      "results/graphrag/phase6a_graph_retrieval_v1_0/graph/nodes.jsonl": {
+        "expected_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "observed_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167"
+      },
+      "results/graphrag/phase6a_graph_retrieval_v1_0/phase6a_artifact_hashes.json": {
+        "expected_sha256": "5a2241d8082120f4c7d37efae82c18f61e94b97c1d8962b250928b855cbb5b0f",
+        "observed_sha256": "5a2241d8082120f4c7d37efae82c18f61e94b97c1d8962b250928b855cbb5b0f"
+      },
+      "results/graphrag/phase6a_graph_retrieval_v1_0/retrieval/evidence_packets.jsonl": {
+        "expected_sha256": "24f2566d639dffe8648abe74abecafba9b5a71043b6d3d2252d008b206d40b1b",
+        "observed_sha256": "24f2566d639dffe8648abe74abecafba9b5a71043b6d3d2252d008b206d40b1b"
+      },
+      "results/graphrag/phase6a_graph_retrieval_v1_0/retrieval/graph_path_ledger.jsonl": {
+        "expected_sha256": "600a02cee10691e3d2942081f14186e9e47ccb270e02a15117814b8d69806b9e",
+        "observed_sha256": "600a02cee10691e3d2942081f14186e9e47ccb270e02a15117814b8d69806b9e"
+      },
+      "results/graphrag/phase6a_graph_retrieval_v1_0/retrieval/graph_retrieval_results.jsonl": {
+        "expected_sha256": "7a984285d0c78cd01ec0f50ae06674257c39b8f64b790ef08595df8b82897081",
+        "observed_sha256": "7a984285d0c78cd01ec0f50ae06674257c39b8f64b790ef08595df8b82897081"
+      },
+      "results/graphrag/registry_freeze_v1/graph_freeze_manifest_v1.json": {
+        "expected_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76",
+        "observed_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76"
+      },
+      "results/graphrag/registry_freeze_v1/graph_node_registry_v1.json": {
+        "expected_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+        "observed_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10"
+      },
+      "results/graphrag/registry_freeze_v1/graph_path_motifs_v1.json": {
+        "expected_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+        "observed_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef"
+      },
+      "results/graphrag/registry_freeze_v1/graph_ranking_policy_v1.json": {
+        "expected_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "observed_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0"
+      },
+      "results/graphrag/registry_freeze_v1/graph_relation_registry_v1.json": {
+        "expected_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "observed_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3"
+      }
+    },
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,18 @@
+{
+  "benchmark_question_or_expected_answer_values_displayed_to_engineer": false,
+  "benchmark_question_or_expected_answer_values_entered_retrieval_selection_or_context": false,
+  "benchmark_question_or_expected_answer_values_used_in_method_design": false,
+  "case_entity_records_opened": false,
+  "created_at_utc": "2026-08-21T19:29:45.010595+00:00",
+  "experiment_runner_opened_benchmark_questions": false,
+  "failure_manifest_opened": false,
+  "graph_retrieval_rerun_reason": "No stored Graph v1.1 output existed for the canonical 439-case held-out split; the frozen route-independent graph, grammar, and selector were applied unchanged.",
+  "heldout_ground_truth_opened": false,
+  "heldout_labels_used_for_context_serialization": false,
+  "heldout_labels_used_for_retrieval": false,
+  "heldout_labels_used_for_selection": false,
+  "interactive_task_discovery_parsed_benchmark_questions_for_row_count_and_key_names": true,
+  "paid_api_calls_made": false,
+  "retrieval_or_selection_tuned_on_heldout_outcomes": false,
+  "status": "PASS_WITH_DISCLOSED_NON_INPUT_DISCOVERY_ACCESS"
+}

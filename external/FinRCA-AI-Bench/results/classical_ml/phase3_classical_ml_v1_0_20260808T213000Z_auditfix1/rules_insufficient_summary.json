@@ -1,0 +1,16 @@
+{
+  "cases": 50,
+  "confidence": {
+    "mean": 0.9414455892179714,
+    "median": 0.9870251363718229,
+    "p05": 0.669228075803206,
+    "p95": 0.9989741183725628
+  },
+  "failure_type_distribution": {
+    "NO_FAILURE": 50
+  },
+  "ml_binary_recovered": 45,
+  "ml_exact_recovered": 45,
+  "ml_exact_wrong": 5,
+  "wording_constraint": "Correct outcomes are classification recovered, not evidence resolved."
+}

@@ -1,0 +1,17 @@
+{
+  "context_audit_status": "PASS",
+  "decision": "PHASE 4 NOT READY FOR LIVE RUN",
+  "frozen_artifacts_status": "PASS",
+  "packet_builder_sha256": "8a66846187a3bdd52a36e30dfddc64291ba0a61f0aab5bf2acd158767fb4b57a",
+  "packet_leakage_status": "PASS",
+  "prompt_sha256": "e4fb908829f412eb0a3015a4d05f29c0603b12cac84ade166aff92b76c78278c",
+  "secret_audit_status": "PASS",
+  "specification_sha256": "fb71556291a92d96913b3a3d8b86b636a88b28569002751bcc6627ed2f487212",
+  "stability_status": "NOT RUN",
+  "test_case_count": 439,
+  "test_label_isolation_status": "PASS",
+  "tests_status": "PASS",
+  "unresolved_protocol_issues": [
+    "validation-only stability analysis has not been executed"
+  ]
+}

@@ -1,0 +1,5 @@
+scenario,cases,exact_accuracy,prediction_agreement_with_primary,changed_predictions
+optional_tax_shipping_missing,439,0.9544419134396356,0.9931662870159453,3
+vendor_category_unseen,439,0.9567198177676538,0.9931662870159453,3
+optional_vendor_categories_missing,439,0.9521640091116174,0.9886104783599089,5
+native_amount_plus_0_01,439,0.9544419134396356,1.0,0

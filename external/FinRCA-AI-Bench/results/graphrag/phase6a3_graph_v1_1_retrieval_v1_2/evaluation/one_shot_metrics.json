@@ -1,0 +1,6015 @@
+{
+  "artifact_type": "phase6a3_graph_v1_1_one_shot_evaluation",
+  "artifact_version": "1.0",
+  "bank_transaction_subset": {
+    "candidate_pool_macro_recall": 0.6217948717948717,
+    "case_count": 26,
+    "causal_relation_gap_claimed": false,
+    "graph_full_evidence_coverage": 0.0,
+    "graph_selected_macro_recall": 0.6217948717948717,
+    "relational_full_evidence_coverage": 0.0,
+    "relational_macro_recall": 0.6217948717948717,
+    "required_records_absent_from_graph_candidate_pool": {
+      "record_incidence_count": 37,
+      "records": [
+        {
+          "case_id": "RCA_001204",
+          "record_id": "vendors:VND_042085"
+        },
+        {
+          "case_id": "RCA_001213",
+          "record_id": "audit_log:EVT_0420020"
+        },
+        {
+          "case_id": "RCA_001213",
+          "record_id": "vendors:VND_042240"
+        },
+        {
+          "case_id": "RCA_001215",
+          "record_id": "vendors:VND_042121"
+        },
+        {
+          "case_id": "RCA_001216",
+          "record_id": "vendors:VND_042499"
+        },
+        {
+          "case_id": "RCA_001224",
+          "record_id": "vendors:VND_042055"
+        },
+        {
+          "case_id": "RCA_001226",
+          "record_id": "vendors:VND_042389"
+        },
+        {
+          "case_id": "RCA_001228",
+          "record_id": "vendors:VND_042050"
+        },
+        {
+          "case_id": "RCA_001232",
+          "record_id": "vendors:VND_042307"
+        },
+        {
+          "case_id": "RCA_001235",
+          "record_id": "vendors:VND_042302"
+        },
+        {
+          "case_id": "RCA_001236",
+          "record_id": "vendors:VND_042173"
+        },
+        {
+          "case_id": "RCA_001238",
+          "record_id": "vendors:VND_042039"
+        },
+        {
+          "case_id": "RCA_001240",
+          "record_id": "vendors:VND_042096"
+        },
+        {
+          "case_id": "RCA_001244",
+          "record_id": "vendors:VND_042455"
+        },
+        {
+          "case_id": "RCA_001261",
+          "record_id": "vendors:VND_042031"
+        },
+        {
+          "case_id": "RCA_001263",
+          "record_id": "vendors:VND_042231"
+        },
+        {
+          "case_id": "RCA_001274",
+          "record_id": "vendors:VND_042196"
+        },
+        {
+          "case_id": "RCA_001277",
+          "record_id": "vendors:VND_042050"
+        },
+        {
+          "case_id": "RCA_001279",
+          "record_id": "vendors:VND_042060"
+        },
+        {
+          "case_id": "RCA_001288",
+          "record_id": "audit_log:EVT_0420026"
+        },
+        {
+          "case_id": "RCA_001288",
+          "record_id": "vendors:VND_042429"
+        },
+        {
+          "case_id": "RCA_001291",
+          "record_id": "vendors:VND_042060"
+        },
+        {
+          "case_id": "RCA_001295",
+          "record_id": "audit_log:EVT_0420018"
+        },
+        {
+          "case_id": "RCA_001295",
+          "record_id": "vendors:VND_042326"
+        },
+        {
+          "case_id": "RCA_001296",
+          "record_id": "vendors:VND_042072"
+        },
+        {
+          "case_id": "RCA_001635",
+          "record_id": "gl_entries:JEL_0461057"
+        },
+        {
+          "case_id": "RCA_001635",
+          "record_id": "gl_entries:JEL_0461058"
+        },
+        {
+          "case_id": "RCA_001635",
+          "record_id": "payments:PAY_0423692"
+        },
+        {
+          "case_id": "RCA_001795",
+          "record_id": "gl_entries:JEL_0461971"
+        },
+        {
+          "case_id": "RCA_001795",
+          "record_id": "gl_entries:JEL_0461972"
+        },
+        {
+          "case_id": "RCA_001795",
+          "record_id": "payments:PAY_0424149"
+        },
+        {
+          "case_id": "RCA_002067",
+          "record_id": "gl_entries:JEL_0464685"
+        },
+        {
+          "case_id": "RCA_002067",
+          "record_id": "gl_entries:JEL_0464686"
+        },
+        {
+          "case_id": "RCA_002067",
+          "record_id": "payments:PAY_0425506"
+        },
+        {
+          "case_id": "RCA_002099",
+          "record_id": "gl_entries:JEL_0458513"
+        },
+        {
+          "case_id": "RCA_002099",
+          "record_id": "gl_entries:JEL_0458514"
+        },
+        {
+          "case_id": "RCA_002099",
+          "record_id": "payments:PAY_0422420"
+        }
+      ],
+      "unique_case_count": 26
+    },
+    "required_records_present_in_candidate_pool_but_absent_after_top40": {
+      "record_incidence_count": 0,
+      "records": [],
+      "unique_case_count": 0
+    }
+  },
+  "candidate_to_selection": {
+    "case_count": 416,
+    "cases_with_positive_loss": 4,
+    "cases_with_zero_loss": 412,
+    "harmed_cases": [
+      {
+        "candidate_document_recall": 1.0,
+        "case_id": "RCA_000747",
+        "recall_loss": 0.11111111111111116,
+        "required_record_ids_lost_by_selection": [
+          "audit_log:EVT_0447287"
+        ],
+        "selected_document_recall": 0.8888888888888888
+      },
+      {
+        "candidate_document_recall": 0.8333333333333334,
+        "case_id": "RCA_001322",
+        "recall_loss": 0.33333333333333337,
+        "required_record_ids_lost_by_selection": [
+          "audit_log:EVT_0446313",
+          "audit_log:EVT_0447762"
+        ],
+        "selected_document_recall": 0.5
+      },
+      {
+        "candidate_document_recall": 0.8333333333333334,
+        "case_id": "RCA_001346",
+        "recall_loss": 0.33333333333333337,
+        "required_record_ids_lost_by_selection": [
+          "audit_log:EVT_0446277",
+          "audit_log:EVT_0447786"
+        ],
+        "selected_document_recall": 0.5
+      },
+      {
+        "candidate_document_recall": 0.36363636363636365,
+        "case_id": "RCA_001451",
+        "recall_loss": 0.09090909090909094,
+        "required_record_ids_lost_by_selection": [
+          "audit_log:EVT_0446206"
+        ],
+        "selected_document_recall": 0.2727272727272727
+      }
+    ],
+    "maximum_loss": 0.33333333333333337,
+    "mean_candidate_to_selection_recall_loss": 0.0020881895881895885
+  },
+  "case_count": 416,
+  "depth_and_multi_hop_diagnostics": {
+    "depth_2_only_required_evidence": {
+      "records": [
+        {
+          "case_id": "RCA_000002",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0423544",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000014",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421488",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000017",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421345",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000019",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0422375",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000020",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0424960",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000030",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0420218",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000035",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0422849",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000040",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421453",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000053",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0423524",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000066",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0423780",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000068",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0422562",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000072",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0424547",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000086",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421638",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000089",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0422803",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000095",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421615",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000099",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0422893",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000100",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421668",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000104",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424038",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000104",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424039",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000108",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428137",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000110",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423353",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000110",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423354",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000133",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428832",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000133",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428833",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000133",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428834",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000133",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428835",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000147",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423513",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000147",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423514",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000150",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427712",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000159",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0425672",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000159",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0425673",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000162",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422252",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000172",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421216",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000172",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421217",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000177",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422657",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000177",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422658",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000177",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422659",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000177",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422660",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000186",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423266",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000186",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423267",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000188",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422716",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000204",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422107",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000210",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420087",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000211",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423697",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000221",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0431179",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000228",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0426057",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000231",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429897",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000232",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427306",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000236",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430603",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000242",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429980",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000247",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428065",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000249",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428512",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000251",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420889",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000254",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430854",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000258",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424902",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000260",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420616",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000262",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423273",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000263",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430954",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000269",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424097",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000272",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422617",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000276",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420552",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000278",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420866",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000283",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420231",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000295",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428935",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000296",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422288",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000304",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420898",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000309",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423023",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000312",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423832",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000314",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0421130",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000317",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420992",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000324",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0422033",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000325",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420116",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000326",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420379",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000334",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0422495",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000335",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420871",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000338",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423923",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000342",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0422925",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000345",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420102",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000346",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0424748",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000347",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420219",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000348",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0422242",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000354",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0424769",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000355",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423124",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000360",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0424954",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000363",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420455",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000366",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0421446",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000367",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423181",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000370",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420714",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000374",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0421823",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000376",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423139",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000377",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0422438",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000378",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0424133",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000379",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0421525",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000380",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0424426",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000394",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0421934",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000508",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425282|INV_0422689|2026-05-14",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000511",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425157|INV_0423840|2026-05-26",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000531",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0424978|INV_0426405|2026-03-11",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000535",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425509|INV_0421059|2026-06-03",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000559",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425173|INV_0421836|2026-01-22",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000565",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425161|INV_0425000|2025-05-05",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000567",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425327|INV_0427086|2026-06-15",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000579",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425649|INV_0423504|2026-03-09",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000580",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425347|INV_0421601|2026-04-27",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000593",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425503|INV_0420913|2025-04-11",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000599",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425549|INV_0423724|2026-02-15",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000605",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0458477",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000605",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0458478",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000611",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0457771",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000611",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0457772",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000614",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0454581",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000614",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0454582",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000619",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0459997",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000619",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0459998",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000621",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0458093",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000621",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0458094",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000623",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0461933",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000623",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0461934",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000634",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0453949",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000634",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0453950",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000643",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0457519",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000643",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0457520",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000661",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0463409",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000661",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0463410",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000671",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0460289",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000671",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0460290",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000690",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0456113",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000690",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0456114",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000691",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0460347",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000691",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0460348",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000701",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0431250",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000701",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0431251",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000701",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0430175",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000701",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0438175",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000702",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0428764",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000702",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0429044",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000702",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0437044",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000718",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0421244",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000718",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0425608",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000718",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0433608",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000720",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0421229",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000720",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0425601",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000720",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0433601",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000724",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0437425",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000724",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0432991",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000724",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0440991",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000725",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0424497",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000725",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0424498",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000725",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0427102",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000725",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0435102",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000731",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0433762",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000731",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0431323",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000731",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0439323",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000742",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0433583",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000742",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0431241",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000742",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0439241",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000746",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0422430",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000746",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0426155",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000746",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0434155",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000747",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0425997",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000747",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0427785",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000747",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0435785",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000751",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0425993",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000751",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0427783",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000751",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0435783",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000757",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0428754",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000757",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0429039",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000757",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0437039",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000769",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0424179",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000769",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0426955",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000769",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0434955",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000771",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0434464",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000771",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0431643",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000771",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0439643",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000771",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0422313|INV_0426603|2025-09-19",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000775",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0427439",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000775",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0428439",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000775",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0436439",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000778",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0436892",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000778",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0432749",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000778",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0440749",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000787",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0432775",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000787",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0430872",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000787",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0438872",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000903",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0443387",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000909",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0441322",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000911",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0446327",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000912",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0442733",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000923",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0443149",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000924",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0441780",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000927",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0442736",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000934",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0446180",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000953",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0446189",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000967",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0446311",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000974",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0442982",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000977",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0443703",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000978",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0444809",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000987",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0443843",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001569",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428554",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001601",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429964",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001601",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429965",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001601",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429966",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001601",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429967",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001665",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429283",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001697",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428046",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001697",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428047",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001697",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428048",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001713",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421192",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001713",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421193",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001741",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424831",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001741",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424832",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001741",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424833",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001745",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427396",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001745",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427397",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001841",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427727",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001841",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427728",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001841",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427729",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001873",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429557",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001891",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429929",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001905",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0431220",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001905",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0431221",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001905",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0431222",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001969",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423972",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001969",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423973",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002001",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430947",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002001",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430948",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002001",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430949",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002049",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430595",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002049",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430596",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002049",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430597",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002061",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421917",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002061",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421918",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002077",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428951",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002077",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428952",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002081",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0426916",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002177",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427201",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002189",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422078",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002189",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422079",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002189",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422080",
+          "selected_by_graph": true
+        }
+      ],
+      "required_record_incidence_count": 239,
+      "selected_incidence_count": 239,
+      "unique_case_count": 156
+    },
+    "depth_3_only_required_evidence": {
+      "records": [
+        {
+          "case_id": "RCA_000002",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428002",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000002",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428003",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000002",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428004",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000002",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428005",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000014",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423339",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000014",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423340",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000014",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423341",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000017",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423010",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000017",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423011",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000017",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423012",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000019",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425356",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000019",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425357",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000020",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0431134",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000020",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0431135",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000020",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0431136",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000030",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0420480",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000030",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0420481",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000035",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426450",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000035",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426451",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000035",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426452",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000035",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426453",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000040",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423257",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000040",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423258",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000040",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423259",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000040",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423260",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000053",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0427955",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000066",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428525",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000066",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428526",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000068",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425772",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000068",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425773",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000068",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425774",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000068",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425775",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000072",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0430250",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000072",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0430251",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000072",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0430252",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000086",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423681",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000089",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426339",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000089",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426340",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000095",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423634",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000099",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426548",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000099",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426549",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000100",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423749",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000100",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423750",
+          "selected_by_graph": true
+        }
+      ],
+      "required_record_incidence_count": 43,
+      "selected_incidence_count": 43,
+      "unique_case_count": 17
+    },
+    "graph_only_depth_ge_2_required_evidence": {
+      "depth_2_count": 239,
+      "depth_3_count": 43,
+      "records": [
+        {
+          "case_id": "RCA_000002",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428002",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000002",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428003",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000002",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428004",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000002",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428005",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000002",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0423544",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000014",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423339",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000014",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423340",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000014",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423341",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000014",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421488",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000017",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423010",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000017",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423011",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000017",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423012",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000017",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421345",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000019",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425356",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000019",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425357",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000019",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0422375",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000020",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0431134",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000020",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0431135",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000020",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0431136",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000020",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0424960",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000030",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0420480",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000030",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0420481",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000030",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0420218",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000035",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426450",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000035",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426451",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000035",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426452",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000035",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426453",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000035",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0422849",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000040",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423257",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000040",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423258",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000040",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423259",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000040",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423260",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000040",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421453",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000053",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0427955",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000053",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0423524",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000066",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428525",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000066",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0428526",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000066",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0423780",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000068",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425772",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000068",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425773",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000068",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425774",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000068",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0425775",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000068",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0422562",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000072",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0430250",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000072",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0430251",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000072",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0430252",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000072",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0424547",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000086",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423681",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000086",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421638",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000089",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426339",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000089",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426340",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000089",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0422803",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000095",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423634",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000095",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421615",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000099",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426548",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000099",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0426549",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000099",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0422893",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000100",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423749",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000100",
+          "minimum_reachable_depth": 3,
+          "record_id": "invoice_lines:INVL_0423750",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000100",
+          "minimum_reachable_depth": 2,
+          "record_id": "invoices:INV_0421668",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000104",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424038",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000104",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424039",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000108",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428137",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000110",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423353",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000110",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423354",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000133",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428832",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000133",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428833",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000133",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428834",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000133",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428835",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000147",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423513",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000147",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423514",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000150",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427712",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000159",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0425672",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000159",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0425673",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000162",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422252",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000172",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421216",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000172",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421217",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000177",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422657",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000177",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422658",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000177",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422659",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000177",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422660",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000186",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423266",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000186",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423267",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000188",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422716",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000204",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422107",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000210",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420087",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000211",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423697",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000221",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0431179",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000228",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0426057",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000231",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429897",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000232",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427306",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000236",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430603",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000242",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429980",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000247",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428065",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000249",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428512",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000251",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420889",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000254",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430854",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000258",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424902",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000260",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420616",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000262",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423273",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000263",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430954",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000269",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424097",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000272",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422617",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000276",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420552",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000278",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420866",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000283",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0420231",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000295",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428935",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000296",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422288",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000304",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420898",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000309",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423023",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000312",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423832",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000314",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0421130",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000317",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420992",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000324",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0422033",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000325",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420116",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000326",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420379",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000334",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0422495",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000335",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420871",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000338",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423923",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000342",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0422925",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000345",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420102",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000346",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0424748",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000347",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420219",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000348",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0422242",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000354",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0424769",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000355",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423124",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000360",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0424954",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000363",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420455",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000366",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0421446",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000367",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423181",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000370",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0420714",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000374",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0421823",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000376",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0423139",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000377",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0422438",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000378",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0424133",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000379",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0421525",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000380",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0424426",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000394",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0421934",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000508",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425282|INV_0422689|2026-05-14",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000511",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425157|INV_0423840|2026-05-26",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000531",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0424978|INV_0426405|2026-03-11",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000535",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425509|INV_0421059|2026-06-03",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000559",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425173|INV_0421836|2026-01-22",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000565",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425161|INV_0425000|2025-05-05",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000567",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425327|INV_0427086|2026-06-15",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000579",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425649|INV_0423504|2026-03-09",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000580",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425347|INV_0421601|2026-04-27",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000593",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425503|INV_0420913|2025-04-11",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000599",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0425549|INV_0423724|2026-02-15",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000605",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0458477",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000605",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0458478",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000611",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0457771",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000611",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0457772",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000614",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0454581",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000614",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0454582",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000619",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0459997",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000619",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0459998",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000621",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0458093",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000621",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0458094",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000623",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0461933",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000623",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0461934",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000634",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0453949",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000634",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0453950",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000643",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0457519",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000643",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0457520",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000661",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0463409",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000661",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0463410",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000671",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0460289",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000671",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0460290",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000690",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0456113",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000690",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0456114",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000691",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0460347",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000691",
+          "minimum_reachable_depth": 2,
+          "record_id": "gl_entries:JEL_0460348",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000701",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0431250",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000701",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0431251",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000701",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0430175",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000701",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0438175",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000702",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0428764",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000702",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0429044",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000702",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0437044",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000718",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0421244",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000718",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0425608",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000718",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0433608",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000720",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0421229",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000720",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0425601",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000720",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0433601",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000724",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0437425",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000724",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0432991",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000724",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0440991",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000725",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0424497",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000725",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0424498",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000725",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0427102",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000725",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0435102",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000731",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0433762",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000731",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0431323",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000731",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0439323",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000742",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0433583",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000742",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0431241",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000742",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0439241",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000746",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0422430",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000746",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0426155",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000746",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0434155",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000747",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0425997",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000747",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0427785",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000747",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0435785",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000751",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0425993",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000751",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0427783",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000751",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0435783",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000757",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0428754",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000757",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0429039",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000757",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0437039",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000769",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0424179",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000769",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0426955",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000769",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0434955",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000771",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0434464",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000771",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0431643",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000771",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0439643",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000771",
+          "minimum_reachable_depth": 2,
+          "record_id": "payment_allocations:PAY_0422313|INV_0426603|2025-09-19",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000775",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0427439",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000775",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0428439",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000775",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0436439",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000778",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0436892",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000778",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0432749",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000778",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0440749",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000787",
+          "minimum_reachable_depth": 2,
+          "record_id": "approval_events:APR_0432775",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000787",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0430872",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000787",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0438872",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000903",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0443387",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000909",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0441322",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000911",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0446327",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000912",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0442733",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000923",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0443149",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000924",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0441780",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000927",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0442736",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000934",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0446180",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000953",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0446189",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000967",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0446311",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000974",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0442982",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000977",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0443703",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000978",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0444809",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_000987",
+          "minimum_reachable_depth": 2,
+          "record_id": "audit_log:EVT_0443843",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001569",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428554",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001601",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429964",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001601",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429965",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001601",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429966",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001601",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429967",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001665",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429283",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001697",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428046",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001697",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428047",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001697",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428048",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001713",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421192",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001713",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421193",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001741",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424831",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001741",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424832",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001741",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0424833",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001745",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427396",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001745",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427397",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001841",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427727",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001841",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427728",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001841",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427729",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001873",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429557",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001891",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0429929",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001905",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0431220",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001905",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0431221",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001905",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0431222",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001969",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423972",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_001969",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0423973",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002001",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430947",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002001",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430948",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002001",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430949",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002049",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430595",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002049",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430596",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002049",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0430597",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002061",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421917",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002061",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0421918",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002077",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428951",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002077",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0428952",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002081",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0426916",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002177",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0427201",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002189",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422078",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002189",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422079",
+          "selected_by_graph": true
+        },
+        {
+          "case_id": "RCA_002189",
+          "minimum_reachable_depth": 2,
+          "record_id": "po_lines:POL_0422080",
+          "selected_by_graph": true
+        }
+      ],
+      "required_record_incidence_count": 282,
+      "unique_case_count": 156
+    },
+    "made_complete_by_multi_hop": {
+      "case_count": 88,
+      "cases": [
+        {
+          "case_id": "RCA_000002",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0423544"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0428002",
+            "invoice_lines:INVL_0428003",
+            "invoice_lines:INVL_0428004",
+            "invoice_lines:INVL_0428005"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0428002",
+            "invoice_lines:INVL_0428003",
+            "invoice_lines:INVL_0428004",
+            "invoice_lines:INVL_0428005",
+            "invoices:INV_0423544"
+          ]
+        },
+        {
+          "case_id": "RCA_000014",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0421488"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0423339",
+            "invoice_lines:INVL_0423340",
+            "invoice_lines:INVL_0423341"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423339",
+            "invoice_lines:INVL_0423340",
+            "invoice_lines:INVL_0423341",
+            "invoices:INV_0421488"
+          ]
+        },
+        {
+          "case_id": "RCA_000017",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0421345"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0423010",
+            "invoice_lines:INVL_0423011",
+            "invoice_lines:INVL_0423012"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423010",
+            "invoice_lines:INVL_0423011",
+            "invoice_lines:INVL_0423012",
+            "invoices:INV_0421345"
+          ]
+        },
+        {
+          "case_id": "RCA_000019",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0422375"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0425356",
+            "invoice_lines:INVL_0425357"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0425356",
+            "invoice_lines:INVL_0425357",
+            "invoices:INV_0422375"
+          ]
+        },
+        {
+          "case_id": "RCA_000020",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0424960"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0431134",
+            "invoice_lines:INVL_0431135",
+            "invoice_lines:INVL_0431136"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0431134",
+            "invoice_lines:INVL_0431135",
+            "invoice_lines:INVL_0431136",
+            "invoices:INV_0424960"
+          ]
+        },
+        {
+          "case_id": "RCA_000030",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0420218"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0420480",
+            "invoice_lines:INVL_0420481"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0420480",
+            "invoice_lines:INVL_0420481",
+            "invoices:INV_0420218"
+          ]
+        },
+        {
+          "case_id": "RCA_000035",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0422849"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0426450",
+            "invoice_lines:INVL_0426451",
+            "invoice_lines:INVL_0426452",
+            "invoice_lines:INVL_0426453"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0426450",
+            "invoice_lines:INVL_0426451",
+            "invoice_lines:INVL_0426452",
+            "invoice_lines:INVL_0426453",
+            "invoices:INV_0422849"
+          ]
+        },
+        {
+          "case_id": "RCA_000040",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0421453"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0423257",
+            "invoice_lines:INVL_0423258",
+            "invoice_lines:INVL_0423259",
+            "invoice_lines:INVL_0423260"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423257",
+            "invoice_lines:INVL_0423258",
+            "invoice_lines:INVL_0423259",
+            "invoice_lines:INVL_0423260",
+            "invoices:INV_0421453"
+          ]
+        },
+        {
+          "case_id": "RCA_000053",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0423524"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0427955"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0427955",
+            "invoices:INV_0423524"
+          ]
+        },
+        {
+          "case_id": "RCA_000066",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0423780"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0428525",
+            "invoice_lines:INVL_0428526"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0428525",
+            "invoice_lines:INVL_0428526",
+            "invoices:INV_0423780"
+          ]
+        },
+        {
+          "case_id": "RCA_000068",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0422562"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0425772",
+            "invoice_lines:INVL_0425773",
+            "invoice_lines:INVL_0425774",
+            "invoice_lines:INVL_0425775"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0425772",
+            "invoice_lines:INVL_0425773",
+            "invoice_lines:INVL_0425774",
+            "invoice_lines:INVL_0425775",
+            "invoices:INV_0422562"
+          ]
+        },
+        {
+          "case_id": "RCA_000072",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0424547"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0430250",
+            "invoice_lines:INVL_0430251",
+            "invoice_lines:INVL_0430252"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0430250",
+            "invoice_lines:INVL_0430251",
+            "invoice_lines:INVL_0430252",
+            "invoices:INV_0424547"
+          ]
+        },
+        {
+          "case_id": "RCA_000086",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0421638"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0423681"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423681",
+            "invoices:INV_0421638"
+          ]
+        },
+        {
+          "case_id": "RCA_000089",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0422803"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0426339",
+            "invoice_lines:INVL_0426340"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0426339",
+            "invoice_lines:INVL_0426340",
+            "invoices:INV_0422803"
+          ]
+        },
+        {
+          "case_id": "RCA_000095",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0421615"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0423634"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423634",
+            "invoices:INV_0421615"
+          ]
+        },
+        {
+          "case_id": "RCA_000099",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0422893"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0426548",
+            "invoice_lines:INVL_0426549"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0426548",
+            "invoice_lines:INVL_0426549",
+            "invoices:INV_0422893"
+          ]
+        },
+        {
+          "case_id": "RCA_000100",
+          "required_depth_2_record_ids": [
+            "invoices:INV_0421668"
+          ],
+          "required_depth_3_record_ids": [
+            "invoice_lines:INVL_0423749",
+            "invoice_lines:INVL_0423750"
+          ],
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423749",
+            "invoice_lines:INVL_0423750",
+            "invoices:INV_0421668"
+          ]
+        },
+        {
+          "case_id": "RCA_000104",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0424038",
+            "po_lines:POL_0424039"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0424038",
+            "po_lines:POL_0424039"
+          ]
+        },
+        {
+          "case_id": "RCA_000108",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0428137"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428137"
+          ]
+        },
+        {
+          "case_id": "RCA_000110",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0423353",
+            "po_lines:POL_0423354"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423353",
+            "po_lines:POL_0423354"
+          ]
+        },
+        {
+          "case_id": "RCA_000133",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0428832",
+            "po_lines:POL_0428833",
+            "po_lines:POL_0428834",
+            "po_lines:POL_0428835"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428832",
+            "po_lines:POL_0428833",
+            "po_lines:POL_0428834",
+            "po_lines:POL_0428835"
+          ]
+        },
+        {
+          "case_id": "RCA_000147",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0423513",
+            "po_lines:POL_0423514"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423513",
+            "po_lines:POL_0423514"
+          ]
+        },
+        {
+          "case_id": "RCA_000150",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0427712"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0427712"
+          ]
+        },
+        {
+          "case_id": "RCA_000159",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0425672",
+            "po_lines:POL_0425673"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0425672",
+            "po_lines:POL_0425673"
+          ]
+        },
+        {
+          "case_id": "RCA_000162",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0422252"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422252"
+          ]
+        },
+        {
+          "case_id": "RCA_000172",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0421216",
+            "po_lines:POL_0421217"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0421216",
+            "po_lines:POL_0421217"
+          ]
+        },
+        {
+          "case_id": "RCA_000177",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0422657",
+            "po_lines:POL_0422658",
+            "po_lines:POL_0422659",
+            "po_lines:POL_0422660"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422657",
+            "po_lines:POL_0422658",
+            "po_lines:POL_0422659",
+            "po_lines:POL_0422660"
+          ]
+        },
+        {
+          "case_id": "RCA_000186",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0423266",
+            "po_lines:POL_0423267"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423266",
+            "po_lines:POL_0423267"
+          ]
+        },
+        {
+          "case_id": "RCA_000188",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0422716"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422716"
+          ]
+        },
+        {
+          "case_id": "RCA_000204",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0422107"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422107"
+          ]
+        },
+        {
+          "case_id": "RCA_000210",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0420087"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420087"
+          ]
+        },
+        {
+          "case_id": "RCA_000211",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0423697"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423697"
+          ]
+        },
+        {
+          "case_id": "RCA_000221",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0431179"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0431179"
+          ]
+        },
+        {
+          "case_id": "RCA_000228",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0426057"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0426057"
+          ]
+        },
+        {
+          "case_id": "RCA_000231",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0429897"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429897"
+          ]
+        },
+        {
+          "case_id": "RCA_000232",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0427306"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0427306"
+          ]
+        },
+        {
+          "case_id": "RCA_000236",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0430603"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0430603"
+          ]
+        },
+        {
+          "case_id": "RCA_000242",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0429980"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429980"
+          ]
+        },
+        {
+          "case_id": "RCA_000247",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0428065"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428065"
+          ]
+        },
+        {
+          "case_id": "RCA_000249",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0428512"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428512"
+          ]
+        },
+        {
+          "case_id": "RCA_000251",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0420889"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420889"
+          ]
+        },
+        {
+          "case_id": "RCA_000254",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0430854"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0430854"
+          ]
+        },
+        {
+          "case_id": "RCA_000258",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0424902"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0424902"
+          ]
+        },
+        {
+          "case_id": "RCA_000260",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0420616"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420616"
+          ]
+        },
+        {
+          "case_id": "RCA_000262",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0423273"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423273"
+          ]
+        },
+        {
+          "case_id": "RCA_000263",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0430954"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0430954"
+          ]
+        },
+        {
+          "case_id": "RCA_000269",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0424097"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0424097"
+          ]
+        },
+        {
+          "case_id": "RCA_000272",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0422617"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422617"
+          ]
+        },
+        {
+          "case_id": "RCA_000276",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0420552"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420552"
+          ]
+        },
+        {
+          "case_id": "RCA_000278",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0420866"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420866"
+          ]
+        },
+        {
+          "case_id": "RCA_000283",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0420231"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420231"
+          ]
+        },
+        {
+          "case_id": "RCA_000295",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0428935"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428935"
+          ]
+        },
+        {
+          "case_id": "RCA_000296",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0422288"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422288"
+          ]
+        },
+        {
+          "case_id": "RCA_000701",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0431250",
+            "approval_events:APR_0431251",
+            "audit_log:EVT_0430175",
+            "audit_log:EVT_0438175"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0431250",
+            "approval_events:APR_0431251",
+            "audit_log:EVT_0430175",
+            "audit_log:EVT_0438175"
+          ]
+        },
+        {
+          "case_id": "RCA_000702",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0428764",
+            "audit_log:EVT_0429044",
+            "audit_log:EVT_0437044"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0428764",
+            "audit_log:EVT_0429044",
+            "audit_log:EVT_0437044"
+          ]
+        },
+        {
+          "case_id": "RCA_000718",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0421244",
+            "audit_log:EVT_0425608",
+            "audit_log:EVT_0433608"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0421244",
+            "audit_log:EVT_0425608",
+            "audit_log:EVT_0433608"
+          ]
+        },
+        {
+          "case_id": "RCA_000720",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0421229",
+            "audit_log:EVT_0425601",
+            "audit_log:EVT_0433601"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0421229",
+            "audit_log:EVT_0425601",
+            "audit_log:EVT_0433601"
+          ]
+        },
+        {
+          "case_id": "RCA_000724",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0437425",
+            "audit_log:EVT_0432991",
+            "audit_log:EVT_0440991"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0437425",
+            "audit_log:EVT_0432991",
+            "audit_log:EVT_0440991"
+          ]
+        },
+        {
+          "case_id": "RCA_000725",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0424497",
+            "approval_events:APR_0424498",
+            "audit_log:EVT_0427102",
+            "audit_log:EVT_0435102"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0424497",
+            "approval_events:APR_0424498",
+            "audit_log:EVT_0427102",
+            "audit_log:EVT_0435102"
+          ]
+        },
+        {
+          "case_id": "RCA_000731",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0433762",
+            "audit_log:EVT_0431323",
+            "audit_log:EVT_0439323"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0433762",
+            "audit_log:EVT_0431323",
+            "audit_log:EVT_0439323"
+          ]
+        },
+        {
+          "case_id": "RCA_000742",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0433583",
+            "audit_log:EVT_0431241",
+            "audit_log:EVT_0439241"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0433583",
+            "audit_log:EVT_0431241",
+            "audit_log:EVT_0439241"
+          ]
+        },
+        {
+          "case_id": "RCA_000746",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0422430",
+            "audit_log:EVT_0426155",
+            "audit_log:EVT_0434155"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0422430",
+            "audit_log:EVT_0426155",
+            "audit_log:EVT_0434155"
+          ]
+        },
+        {
+          "case_id": "RCA_000751",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0425993",
+            "audit_log:EVT_0427783",
+            "audit_log:EVT_0435783"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0425993",
+            "audit_log:EVT_0427783",
+            "audit_log:EVT_0435783"
+          ]
+        },
+        {
+          "case_id": "RCA_000757",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0428754",
+            "audit_log:EVT_0429039",
+            "audit_log:EVT_0437039"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0428754",
+            "audit_log:EVT_0429039",
+            "audit_log:EVT_0437039"
+          ]
+        },
+        {
+          "case_id": "RCA_000769",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0424179",
+            "audit_log:EVT_0426955",
+            "audit_log:EVT_0434955"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0424179",
+            "audit_log:EVT_0426955",
+            "audit_log:EVT_0434955"
+          ]
+        },
+        {
+          "case_id": "RCA_000771",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0434464",
+            "audit_log:EVT_0431643",
+            "audit_log:EVT_0439643",
+            "payment_allocations:PAY_0422313|INV_0426603|2025-09-19"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0434464",
+            "audit_log:EVT_0431643",
+            "audit_log:EVT_0439643",
+            "payment_allocations:PAY_0422313|INV_0426603|2025-09-19"
+          ]
+        },
+        {
+          "case_id": "RCA_000775",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0427439",
+            "audit_log:EVT_0428439",
+            "audit_log:EVT_0436439"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0427439",
+            "audit_log:EVT_0428439",
+            "audit_log:EVT_0436439"
+          ]
+        },
+        {
+          "case_id": "RCA_000778",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0436892",
+            "audit_log:EVT_0432749",
+            "audit_log:EVT_0440749"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0436892",
+            "audit_log:EVT_0432749",
+            "audit_log:EVT_0440749"
+          ]
+        },
+        {
+          "case_id": "RCA_000787",
+          "required_depth_2_record_ids": [
+            "approval_events:APR_0432775",
+            "audit_log:EVT_0430872",
+            "audit_log:EVT_0438872"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "approval_events:APR_0432775",
+            "audit_log:EVT_0430872",
+            "audit_log:EVT_0438872"
+          ]
+        },
+        {
+          "case_id": "RCA_001569",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0428554"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428554"
+          ]
+        },
+        {
+          "case_id": "RCA_001601",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0429964",
+            "po_lines:POL_0429965",
+            "po_lines:POL_0429966",
+            "po_lines:POL_0429967"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429964",
+            "po_lines:POL_0429965",
+            "po_lines:POL_0429966",
+            "po_lines:POL_0429967"
+          ]
+        },
+        {
+          "case_id": "RCA_001665",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0429283"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429283"
+          ]
+        },
+        {
+          "case_id": "RCA_001697",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0428046",
+            "po_lines:POL_0428047",
+            "po_lines:POL_0428048"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428046",
+            "po_lines:POL_0428047",
+            "po_lines:POL_0428048"
+          ]
+        },
+        {
+          "case_id": "RCA_001713",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0421192",
+            "po_lines:POL_0421193"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0421192",
+            "po_lines:POL_0421193"
+          ]
+        },
+        {
+          "case_id": "RCA_001741",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0424831",
+            "po_lines:POL_0424832",
+            "po_lines:POL_0424833"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0424831",
+            "po_lines:POL_0424832",
+            "po_lines:POL_0424833"
+          ]
+        },
+        {
+          "case_id": "RCA_001745",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0427396",
+            "po_lines:POL_0427397"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0427396",
+            "po_lines:POL_0427397"
+          ]
+        },
+        {
+          "case_id": "RCA_001841",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0427727",
+            "po_lines:POL_0427728",
+            "po_lines:POL_0427729"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0427727",
+            "po_lines:POL_0427728",
+            "po_lines:POL_0427729"
+          ]
+        },
+        {
+          "case_id": "RCA_001873",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0429557"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429557"
+          ]
+        },
+        {
+          "case_id": "RCA_001891",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0429929"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429929"
+          ]
+        },
+        {
+          "case_id": "RCA_001905",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0431220",
+            "po_lines:POL_0431221",
+            "po_lines:POL_0431222"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0431220",
+            "po_lines:POL_0431221",
+            "po_lines:POL_0431222"
+          ]
+        },
+        {
+          "case_id": "RCA_001969",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0423972",
+            "po_lines:POL_0423973"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423972",
+            "po_lines:POL_0423973"
+          ]
+        },
+        {
+          "case_id": "RCA_002001",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0430947",
+            "po_lines:POL_0430948",
+            "po_lines:POL_0430949"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0430947",
+            "po_lines:POL_0430948",
+            "po_lines:POL_0430949"
+          ]
+        },
+        {
+          "case_id": "RCA_002049",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0430595",
+            "po_lines:POL_0430596",
+            "po_lines:POL_0430597"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0430595",
+            "po_lines:POL_0430596",
+            "po_lines:POL_0430597"
+          ]
+        },
+        {
+          "case_id": "RCA_002061",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0421917",
+            "po_lines:POL_0421918"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0421917",
+            "po_lines:POL_0421918"
+          ]
+        },
+        {
+          "case_id": "RCA_002077",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0428951",
+            "po_lines:POL_0428952"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428951",
+            "po_lines:POL_0428952"
+          ]
+        },
+        {
+          "case_id": "RCA_002081",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0426916"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0426916"
+          ]
+        },
+        {
+          "case_id": "RCA_002177",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0427201"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0427201"
+          ]
+        },
+        {
+          "case_id": "RCA_002189",
+          "required_depth_2_record_ids": [
+            "po_lines:POL_0422078",
+            "po_lines:POL_0422079",
+            "po_lines:POL_0422080"
+          ],
+          "required_depth_3_record_ids": [],
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422078",
+            "po_lines:POL_0422079",
+            "po_lines:POL_0422080"
+          ]
+        }
+      ]
+    },
+    "multi_hop_benefit": {
+      "case_count": 156,
+      "cases": [
+        {
+          "case_id": "RCA_000002",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0428002",
+            "invoice_lines:INVL_0428003",
+            "invoice_lines:INVL_0428004",
+            "invoice_lines:INVL_0428005",
+            "invoices:INV_0423544"
+          ]
+        },
+        {
+          "case_id": "RCA_000014",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423339",
+            "invoice_lines:INVL_0423340",
+            "invoice_lines:INVL_0423341",
+            "invoices:INV_0421488"
+          ]
+        },
+        {
+          "case_id": "RCA_000017",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423010",
+            "invoice_lines:INVL_0423011",
+            "invoice_lines:INVL_0423012",
+            "invoices:INV_0421345"
+          ]
+        },
+        {
+          "case_id": "RCA_000019",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0425356",
+            "invoice_lines:INVL_0425357",
+            "invoices:INV_0422375"
+          ]
+        },
+        {
+          "case_id": "RCA_000020",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0431134",
+            "invoice_lines:INVL_0431135",
+            "invoice_lines:INVL_0431136",
+            "invoices:INV_0424960"
+          ]
+        },
+        {
+          "case_id": "RCA_000030",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0420480",
+            "invoice_lines:INVL_0420481",
+            "invoices:INV_0420218"
+          ]
+        },
+        {
+          "case_id": "RCA_000035",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0426450",
+            "invoice_lines:INVL_0426451",
+            "invoice_lines:INVL_0426452",
+            "invoice_lines:INVL_0426453",
+            "invoices:INV_0422849"
+          ]
+        },
+        {
+          "case_id": "RCA_000040",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423257",
+            "invoice_lines:INVL_0423258",
+            "invoice_lines:INVL_0423259",
+            "invoice_lines:INVL_0423260",
+            "invoices:INV_0421453"
+          ]
+        },
+        {
+          "case_id": "RCA_000053",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0427955",
+            "invoices:INV_0423524"
+          ]
+        },
+        {
+          "case_id": "RCA_000066",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0428525",
+            "invoice_lines:INVL_0428526",
+            "invoices:INV_0423780"
+          ]
+        },
+        {
+          "case_id": "RCA_000068",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0425772",
+            "invoice_lines:INVL_0425773",
+            "invoice_lines:INVL_0425774",
+            "invoice_lines:INVL_0425775",
+            "invoices:INV_0422562"
+          ]
+        },
+        {
+          "case_id": "RCA_000072",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0430250",
+            "invoice_lines:INVL_0430251",
+            "invoice_lines:INVL_0430252",
+            "invoices:INV_0424547"
+          ]
+        },
+        {
+          "case_id": "RCA_000086",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423681",
+            "invoices:INV_0421638"
+          ]
+        },
+        {
+          "case_id": "RCA_000089",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0426339",
+            "invoice_lines:INVL_0426340",
+            "invoices:INV_0422803"
+          ]
+        },
+        {
+          "case_id": "RCA_000095",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423634",
+            "invoices:INV_0421615"
+          ]
+        },
+        {
+          "case_id": "RCA_000099",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0426548",
+            "invoice_lines:INVL_0426549",
+            "invoices:INV_0422893"
+          ]
+        },
+        {
+          "case_id": "RCA_000100",
+          "required_multihop_record_ids": [
+            "invoice_lines:INVL_0423749",
+            "invoice_lines:INVL_0423750",
+            "invoices:INV_0421668"
+          ]
+        },
+        {
+          "case_id": "RCA_000104",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0424038",
+            "po_lines:POL_0424039"
+          ]
+        },
+        {
+          "case_id": "RCA_000108",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428137"
+          ]
+        },
+        {
+          "case_id": "RCA_000110",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423353",
+            "po_lines:POL_0423354"
+          ]
+        },
+        {
+          "case_id": "RCA_000133",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428832",
+            "po_lines:POL_0428833",
+            "po_lines:POL_0428834",
+            "po_lines:POL_0428835"
+          ]
+        },
+        {
+          "case_id": "RCA_000147",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423513",
+            "po_lines:POL_0423514"
+          ]
+        },
+        {
+          "case_id": "RCA_000150",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0427712"
+          ]
+        },
+        {
+          "case_id": "RCA_000159",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0425672",
+            "po_lines:POL_0425673"
+          ]
+        },
+        {
+          "case_id": "RCA_000162",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422252"
+          ]
+        },
+        {
+          "case_id": "RCA_000172",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0421216",
+            "po_lines:POL_0421217"
+          ]
+        },
+        {
+          "case_id": "RCA_000177",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422657",
+            "po_lines:POL_0422658",
+            "po_lines:POL_0422659",
+            "po_lines:POL_0422660"
+          ]
+        },
+        {
+          "case_id": "RCA_000186",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423266",
+            "po_lines:POL_0423267"
+          ]
+        },
+        {
+          "case_id": "RCA_000188",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422716"
+          ]
+        },
+        {
+          "case_id": "RCA_000204",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422107"
+          ]
+        },
+        {
+          "case_id": "RCA_000210",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420087"
+          ]
+        },
+        {
+          "case_id": "RCA_000211",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423697"
+          ]
+        },
+        {
+          "case_id": "RCA_000221",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0431179"
+          ]
+        },
+        {
+          "case_id": "RCA_000228",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0426057"
+          ]
+        },
+        {
+          "case_id": "RCA_000231",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429897"
+          ]
+        },
+        {
+          "case_id": "RCA_000232",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0427306"
+          ]
+        },
+        {
+          "case_id": "RCA_000236",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0430603"
+          ]
+        },
+        {
+          "case_id": "RCA_000242",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429980"
+          ]
+        },
+        {
+          "case_id": "RCA_000247",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428065"
+          ]
+        },
+        {
+          "case_id": "RCA_000249",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428512"
+          ]
+        },
+        {
+          "case_id": "RCA_000251",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420889"
+          ]
+        },
+        {
+          "case_id": "RCA_000254",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0430854"
+          ]
+        },
+        {
+          "case_id": "RCA_000258",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0424902"
+          ]
+        },
+        {
+          "case_id": "RCA_000260",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420616"
+          ]
+        },
+        {
+          "case_id": "RCA_000262",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423273"
+          ]
+        },
+        {
+          "case_id": "RCA_000263",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0430954"
+          ]
+        },
+        {
+          "case_id": "RCA_000269",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0424097"
+          ]
+        },
+        {
+          "case_id": "RCA_000272",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422617"
+          ]
+        },
+        {
+          "case_id": "RCA_000276",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420552"
+          ]
+        },
+        {
+          "case_id": "RCA_000278",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420866"
+          ]
+        },
+        {
+          "case_id": "RCA_000283",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0420231"
+          ]
+        },
+        {
+          "case_id": "RCA_000295",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428935"
+          ]
+        },
+        {
+          "case_id": "RCA_000296",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422288"
+          ]
+        },
+        {
+          "case_id": "RCA_000304",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0420898"
+          ]
+        },
+        {
+          "case_id": "RCA_000309",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0423023"
+          ]
+        },
+        {
+          "case_id": "RCA_000312",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0423832"
+          ]
+        },
+        {
+          "case_id": "RCA_000314",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0421130"
+          ]
+        },
+        {
+          "case_id": "RCA_000317",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0420992"
+          ]
+        },
+        {
+          "case_id": "RCA_000324",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0422033"
+          ]
+        },
+        {
+          "case_id": "RCA_000325",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0420116"
+          ]
+        },
+        {
+          "case_id": "RCA_000326",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0420379"
+          ]
+        },
+        {
+          "case_id": "RCA_000334",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0422495"
+          ]
+        },
+        {
+          "case_id": "RCA_000335",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0420871"
+          ]
+        },
+        {
+          "case_id": "RCA_000338",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0423923"
+          ]
+        },
+        {
+          "case_id": "RCA_000342",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0422925"
+          ]
+        },
+        {
+          "case_id": "RCA_000345",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0420102"
+          ]
+        },
+        {
+          "case_id": "RCA_000346",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0424748"
+          ]
+        },
+        {
+          "case_id": "RCA_000347",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0420219"
+          ]
+        },
+        {
+          "case_id": "RCA_000348",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0422242"
+          ]
+        },
+        {
+          "case_id": "RCA_000354",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0424769"
+          ]
+        },
+        {
+          "case_id": "RCA_000355",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0423124"
+          ]
+        },
+        {
+          "case_id": "RCA_000360",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0424954"
+          ]
+        },
+        {
+          "case_id": "RCA_000363",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0420455"
+          ]
+        },
+        {
+          "case_id": "RCA_000366",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0421446"
+          ]
+        },
+        {
+          "case_id": "RCA_000367",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0423181"
+          ]
+        },
+        {
+          "case_id": "RCA_000370",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0420714"
+          ]
+        },
+        {
+          "case_id": "RCA_000374",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0421823"
+          ]
+        },
+        {
+          "case_id": "RCA_000376",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0423139"
+          ]
+        },
+        {
+          "case_id": "RCA_000377",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0422438"
+          ]
+        },
+        {
+          "case_id": "RCA_000378",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0424133"
+          ]
+        },
+        {
+          "case_id": "RCA_000379",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0421525"
+          ]
+        },
+        {
+          "case_id": "RCA_000380",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0424426"
+          ]
+        },
+        {
+          "case_id": "RCA_000394",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0421934"
+          ]
+        },
+        {
+          "case_id": "RCA_000508",
+          "required_multihop_record_ids": [
+            "payment_allocations:PAY_0425282|INV_0422689|2026-05-14"
+          ]
+        },
+        {
+          "case_id": "RCA_000511",
+          "required_multihop_record_ids": [
+            "payment_allocations:PAY_0425157|INV_0423840|2026-05-26"
+          ]
+        },
+        {
+          "case_id": "RCA_000531",
+          "required_multihop_record_ids": [
+            "payment_allocations:PAY_0424978|INV_0426405|2026-03-11"
+          ]
+        },
+        {
+          "case_id": "RCA_000535",
+          "required_multihop_record_ids": [
+            "payment_allocations:PAY_0425509|INV_0421059|2026-06-03"
+          ]
+        },
+        {
+          "case_id": "RCA_000559",
+          "required_multihop_record_ids": [
+            "payment_allocations:PAY_0425173|INV_0421836|2026-01-22"
+          ]
+        },
+        {
+          "case_id": "RCA_000565",
+          "required_multihop_record_ids": [
+            "payment_allocations:PAY_0425161|INV_0425000|2025-05-05"
+          ]
+        },
+        {
+          "case_id": "RCA_000567",
+          "required_multihop_record_ids": [
+            "payment_allocations:PAY_0425327|INV_0427086|2026-06-15"
+          ]
+        },
+        {
+          "case_id": "RCA_000579",
+          "required_multihop_record_ids": [
+            "payment_allocations:PAY_0425649|INV_0423504|2026-03-09"
+          ]
+        },
+        {
+          "case_id": "RCA_000580",
+          "required_multihop_record_ids": [
+            "payment_allocations:PAY_0425347|INV_0421601|2026-04-27"
+          ]
+        },
+        {
+          "case_id": "RCA_000593",
+          "required_multihop_record_ids": [
+            "payment_allocations:PAY_0425503|INV_0420913|2025-04-11"
+          ]
+        },
+        {
+          "case_id": "RCA_000599",
+          "required_multihop_record_ids": [
+            "payment_allocations:PAY_0425549|INV_0423724|2026-02-15"
+          ]
+        },
+        {
+          "case_id": "RCA_000605",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0458477",
+            "gl_entries:JEL_0458478"
+          ]
+        },
+        {
+          "case_id": "RCA_000611",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0457771",
+            "gl_entries:JEL_0457772"
+          ]
+        },
+        {
+          "case_id": "RCA_000614",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0454581",
+            "gl_entries:JEL_0454582"
+          ]
+        },
+        {
+          "case_id": "RCA_000619",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0459997",
+            "gl_entries:JEL_0459998"
+          ]
+        },
+        {
+          "case_id": "RCA_000621",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0458093",
+            "gl_entries:JEL_0458094"
+          ]
+        },
+        {
+          "case_id": "RCA_000623",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0461933",
+            "gl_entries:JEL_0461934"
+          ]
+        },
+        {
+          "case_id": "RCA_000634",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0453949",
+            "gl_entries:JEL_0453950"
+          ]
+        },
+        {
+          "case_id": "RCA_000643",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0457519",
+            "gl_entries:JEL_0457520"
+          ]
+        },
+        {
+          "case_id": "RCA_000661",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0463409",
+            "gl_entries:JEL_0463410"
+          ]
+        },
+        {
+          "case_id": "RCA_000671",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0460289",
+            "gl_entries:JEL_0460290"
+          ]
+        },
+        {
+          "case_id": "RCA_000690",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0456113",
+            "gl_entries:JEL_0456114"
+          ]
+        },
+        {
+          "case_id": "RCA_000691",
+          "required_multihop_record_ids": [
+            "gl_entries:JEL_0460347",
+            "gl_entries:JEL_0460348"
+          ]
+        },
+        {
+          "case_id": "RCA_000701",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0431250",
+            "approval_events:APR_0431251",
+            "audit_log:EVT_0430175",
+            "audit_log:EVT_0438175"
+          ]
+        },
+        {
+          "case_id": "RCA_000702",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0428764",
+            "audit_log:EVT_0429044",
+            "audit_log:EVT_0437044"
+          ]
+        },
+        {
+          "case_id": "RCA_000718",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0421244",
+            "audit_log:EVT_0425608",
+            "audit_log:EVT_0433608"
+          ]
+        },
+        {
+          "case_id": "RCA_000720",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0421229",
+            "audit_log:EVT_0425601",
+            "audit_log:EVT_0433601"
+          ]
+        },
+        {
+          "case_id": "RCA_000724",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0437425",
+            "audit_log:EVT_0432991",
+            "audit_log:EVT_0440991"
+          ]
+        },
+        {
+          "case_id": "RCA_000725",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0424497",
+            "approval_events:APR_0424498",
+            "audit_log:EVT_0427102",
+            "audit_log:EVT_0435102"
+          ]
+        },
+        {
+          "case_id": "RCA_000731",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0433762",
+            "audit_log:EVT_0431323",
+            "audit_log:EVT_0439323"
+          ]
+        },
+        {
+          "case_id": "RCA_000742",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0433583",
+            "audit_log:EVT_0431241",
+            "audit_log:EVT_0439241"
+          ]
+        },
+        {
+          "case_id": "RCA_000746",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0422430",
+            "audit_log:EVT_0426155",
+            "audit_log:EVT_0434155"
+          ]
+        },
+        {
+          "case_id": "RCA_000747",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0425997",
+            "audit_log:EVT_0427785",
+            "audit_log:EVT_0435785"
+          ]
+        },
+        {
+          "case_id": "RCA_000751",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0425993",
+            "audit_log:EVT_0427783",
+            "audit_log:EVT_0435783"
+          ]
+        },
+        {
+          "case_id": "RCA_000757",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0428754",
+            "audit_log:EVT_0429039",
+            "audit_log:EVT_0437039"
+          ]
+        },
+        {
+          "case_id": "RCA_000769",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0424179",
+            "audit_log:EVT_0426955",
+            "audit_log:EVT_0434955"
+          ]
+        },
+        {
+          "case_id": "RCA_000771",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0434464",
+            "audit_log:EVT_0431643",
+            "audit_log:EVT_0439643",
+            "payment_allocations:PAY_0422313|INV_0426603|2025-09-19"
+          ]
+        },
+        {
+          "case_id": "RCA_000775",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0427439",
+            "audit_log:EVT_0428439",
+            "audit_log:EVT_0436439"
+          ]
+        },
+        {
+          "case_id": "RCA_000778",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0436892",
+            "audit_log:EVT_0432749",
+            "audit_log:EVT_0440749"
+          ]
+        },
+        {
+          "case_id": "RCA_000787",
+          "required_multihop_record_ids": [
+            "approval_events:APR_0432775",
+            "audit_log:EVT_0430872",
+            "audit_log:EVT_0438872"
+          ]
+        },
+        {
+          "case_id": "RCA_000903",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0443387"
+          ]
+        },
+        {
+          "case_id": "RCA_000909",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0441322"
+          ]
+        },
+        {
+          "case_id": "RCA_000911",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0446327"
+          ]
+        },
+        {
+          "case_id": "RCA_000912",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0442733"
+          ]
+        },
+        {
+          "case_id": "RCA_000923",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0443149"
+          ]
+        },
+        {
+          "case_id": "RCA_000924",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0441780"
+          ]
+        },
+        {
+          "case_id": "RCA_000927",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0442736"
+          ]
+        },
+        {
+          "case_id": "RCA_000934",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0446180"
+          ]
+        },
+        {
+          "case_id": "RCA_000953",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0446189"
+          ]
+        },
+        {
+          "case_id": "RCA_000967",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0446311"
+          ]
+        },
+        {
+          "case_id": "RCA_000974",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0442982"
+          ]
+        },
+        {
+          "case_id": "RCA_000977",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0443703"
+          ]
+        },
+        {
+          "case_id": "RCA_000978",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0444809"
+          ]
+        },
+        {
+          "case_id": "RCA_000987",
+          "required_multihop_record_ids": [
+            "audit_log:EVT_0443843"
+          ]
+        },
+        {
+          "case_id": "RCA_001569",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428554"
+          ]
+        },
+        {
+          "case_id": "RCA_001601",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429964",
+            "po_lines:POL_0429965",
+            "po_lines:POL_0429966",
+            "po_lines:POL_0429967"
+          ]
+        },
+        {
+          "case_id": "RCA_001665",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429283"
+          ]
+        },
+        {
+          "case_id": "RCA_001697",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428046",
+            "po_lines:POL_0428047",
+            "po_lines:POL_0428048"
+          ]
+        },
+        {
+          "case_id": "RCA_001713",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0421192",
+            "po_lines:POL_0421193"
+          ]
+        },
+        {
+          "case_id": "RCA_001741",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0424831",
+            "po_lines:POL_0424832",
+            "po_lines:POL_0424833"
+          ]
+        },
+        {
+          "case_id": "RCA_001745",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0427396",
+            "po_lines:POL_0427397"
+          ]
+        },
+        {
+          "case_id": "RCA_001841",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0427727",
+            "po_lines:POL_0427728",
+            "po_lines:POL_0427729"
+          ]
+        },
+        {
+          "case_id": "RCA_001873",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429557"
+          ]
+        },
+        {
+          "case_id": "RCA_001891",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0429929"
+          ]
+        },
+        {
+          "case_id": "RCA_001905",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0431220",
+            "po_lines:POL_0431221",
+            "po_lines:POL_0431222"
+          ]
+        },
+        {
+          "case_id": "RCA_001969",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0423972",
+            "po_lines:POL_0423973"
+          ]
+        },
+        {
+          "case_id": "RCA_002001",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0430947",
+            "po_lines:POL_0430948",
+            "po_lines:POL_0430949"
+          ]
+        },
+        {
+          "case_id": "RCA_002049",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0430595",
+            "po_lines:POL_0430596",
+            "po_lines:POL_0430597"
+          ]
+        },
+        {
+          "case_id": "RCA_002061",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0421917",
+            "po_lines:POL_0421918"
+          ]
+        },
+        {
+          "case_id": "RCA_002077",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0428951",
+            "po_lines:POL_0428952"
+          ]
+        },
+        {
+          "case_id": "RCA_002081",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0426916"
+          ]
+        },
+        {
+          "case_id": "RCA_002177",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0427201"
+          ]
+        },
+        {
+          "case_id": "RCA_002189",
+          "required_multihop_record_ids": [
+            "po_lines:POL_0422078",
+            "po_lines:POL_0422079",
+            "po_lines:POL_0422080"
+          ]
+        }
+      ]
+    }
+  },
+  "graph_candidate_pool": {
+    "full_evidence_coverage": 0.36538461538461536,
+    "macro_document_recall": 0.7890742937617937,
+    "strict_full_contract_coverage": 0.1971153846153846
+  },
+  "graph_selected_top40": {
+    "full_evidence_coverage": 0.3629807692307692,
+    "macro_document_recall": 0.7869861041736042,
+    "maximum_records_per_case": 40,
+    "strict_full_contract_coverage": 0.1971153846153846
+  },
+  "graph_vs_relational": {
+    "better_equal_worse": {
+      "EQUAL": 257,
+      "GRAPH_BETTER": 156,
+      "GRAPH_WORSE": 3
+    },
+    "full_evidence": {
+      "BOTH_FULL": 63,
+      "GRAPH_ONLY_FULL": 88,
+      "NEITHER_FULL": 265,
+      "RELATIONAL_ONLY_FULL": 0,
+      "discordant_pair_count": 88,
+      "full_evidence_rate_difference_graph_minus_relational": 0.21153846153846154,
+      "graph_full_evidence_rate": 0.3629807692307692,
+      "mcnemar_exact_two_sided_p_value": 6.462348535570529e-27,
+      "relational_full_evidence_rate": 0.15144230769230768
+    },
+    "paired_macro_recall_difference_ci": {
+      "lower_95": 0.08361983502608503,
+      "resamples": 10000,
+      "seed": 20260809,
+      "upper_95": 0.11303708444333445
+    },
+    "paired_macro_recall_difference_graph_minus_relational": 0.09816607004107004
+  },
+  "latency": "NOT_COMPUTED_IN_CLEAN_ONE_SHOT_EVALUATION",
+  "per_anchor_metrics": {
+    "bank_transaction": {
+      "better_equal_worse": {
+        "EQUAL": 26,
+        "GRAPH_BETTER": 0,
+        "GRAPH_WORSE": 0
+      },
+      "case_count": 26,
+      "graph_full_evidence_coverage": 0.0,
+      "graph_selected_macro_recall": 0.6217948717948717,
+      "paired_recall_difference_graph_minus_relational": 0.0,
+      "relational_full_evidence_coverage": 0.0,
+      "relational_macro_recall": 0.6217948717948717
+    },
+    "gl_journal": {
+      "better_equal_worse": {
+        "EQUAL": 0,
+        "GRAPH_BETTER": 14,
+        "GRAPH_WORSE": 0
+      },
+      "case_count": 14,
+      "graph_full_evidence_coverage": 0.0,
+      "graph_selected_macro_recall": 0.8,
+      "paired_recall_difference_graph_minus_relational": 0.20000000000000004,
+      "relational_full_evidence_coverage": 0.0,
+      "relational_macro_recall": 0.6
+    },
+    "invoice": {
+      "better_equal_worse": {
+        "EQUAL": 70,
+        "GRAPH_BETTER": 125,
+        "GRAPH_WORSE": 0
+      },
+      "case_count": 195,
+      "graph_full_evidence_coverage": 0.4717948717948718,
+      "graph_selected_macro_recall": 0.8427690827690828,
+      "paired_recall_difference_graph_minus_relational": 0.1679070929070929,
+      "relational_full_evidence_coverage": 0.10256410256410256,
+      "relational_macro_recall": 0.6748619898619899
+    },
+    "payment": {
+      "better_equal_worse": {
+        "EQUAL": 161,
+        "GRAPH_BETTER": 17,
+        "GRAPH_WORSE": 3
+      },
+      "case_count": 181,
+      "graph_full_evidence_coverage": 0.3259668508287293,
+      "graph_selected_macro_recall": 0.749610947677246,
+      "paired_recall_difference_graph_minus_relational": 0.02925525978012166,
+      "relational_full_evidence_coverage": 0.23756906077348067,
+      "relational_macro_recall": 0.7203556878971243
+    }
+  },
+  "relational_rag": {
+    "full_evidence_coverage": 0.15144230769230768,
+    "macro_document_recall": 0.6888200341325341,
+    "maximum_budget_contract": 40,
+    "padding_applied": false
+  },
+  "required_records_among_structural_drops": {
+    "records": [
+      {
+        "case_id": "RCA_000747",
+        "minimum_reachable_depth": 1,
+        "node_type": "AUDIT_EVENT",
+        "primary_drop_reason": "CONTEXT_AFTER_BACKBONE_BUDGET_EXHAUSTED",
+        "record_id": "audit_log:EVT_0447287",
+        "selection_tier": 5,
+        "selection_tier_name": "LOCAL_TERMINAL_CONTEXT_PATH"
+      },
+      {
+        "case_id": "RCA_001322",
+        "minimum_reachable_depth": 1,
+        "node_type": "AUDIT_EVENT",
+        "primary_drop_reason": "CONTEXT_AFTER_BACKBONE_BUDGET_EXHAUSTED",
+        "record_id": "audit_log:EVT_0446313",
+        "selection_tier": 5,
+        "selection_tier_name": "LOCAL_TERMINAL_CONTEXT_PATH"
+      },
+      {
+        "case_id": "RCA_001322",
+        "minimum_reachable_depth": 1,
+        "node_type": "AUDIT_EVENT",
+        "primary_drop_reason": "CONTEXT_AFTER_BACKBONE_BUDGET_EXHAUSTED",
+        "record_id": "audit_log:EVT_0447762",
+        "selection_tier": 5,
+        "selection_tier_name": "LOCAL_TERMINAL_CONTEXT_PATH"
+      },
+      {
+        "case_id": "RCA_001346",
+        "minimum_reachable_depth": 1,
+        "node_type": "AUDIT_EVENT",
+        "primary_drop_reason": "CONTEXT_AFTER_BACKBONE_BUDGET_EXHAUSTED",
+        "record_id": "audit_log:EVT_0446277",
+        "selection_tier": 5,
+        "selection_tier_name": "LOCAL_TERMINAL_CONTEXT_PATH"
+      },
+      {
+        "case_id": "RCA_001346",
+        "minimum_reachable_depth": 1,
+        "node_type": "AUDIT_EVENT",
+        "primary_drop_reason": "CONTEXT_AFTER_BACKBONE_BUDGET_EXHAUSTED",
+        "record_id": "audit_log:EVT_0447786",
+        "selection_tier": 5,
+        "selection_tier_name": "LOCAL_TERMINAL_CONTEXT_PATH"
+      },
+      {
+        "case_id": "RCA_001451",
+        "minimum_reachable_depth": 1,
+        "node_type": "AUDIT_EVENT",
+        "primary_drop_reason": "CONTEXT_AFTER_BACKBONE_BUDGET_EXHAUSTED",
+        "record_id": "audit_log:EVT_0446206",
+        "selection_tier": 5,
+        "selection_tier_name": "LOCAL_TERMINAL_CONTEXT_PATH"
+      }
+    ],
+    "required_dropped_by_minimum_reachable_depth": {
+      "1": 6
+    },
+    "required_dropped_by_node_type": {
+      "AUDIT_EVENT": 6
+    },
+    "required_dropped_by_selection_tier": {
+      "5": 6
+    },
+    "required_dropped_record_count": 6,
+    "total_structurally_dropped_records": 33,
+    "unique_cases_with_required_drop": 4
+  },
+  "run_id": "phase6a3_graph_v1_1_retrieval_v1_2_20260816T034800Z",
+  "scientific_interpretation": {
+    "RCA_accuracy_computed": false,
+    "causal_relation_importance_claimed": false,
+    "graph_redesign_performed": false,
+    "retrieval_comparison_only": true
+  },
+  "source_token_distribution": {
+    "graph_selected": {
+      "maximum": 5019.0,
+      "mean": 2431.560096153846,
+      "median": 2397.0,
+      "p75": 3162.25,
+      "p90": 4239.0,
+      "p95": 4496.5,
+      "p99": 4903.800000000001
+    },
+    "relational_rag": {
+      "maximum": 2570.0,
+      "mean": 1109.6274038461538,
+      "median": 950.0,
+      "p75": 1633.25,
+      "p90": 1942.5,
+      "p95": 2115.0,
+      "p99": 2386.800000000002
+    }
+  }
+}

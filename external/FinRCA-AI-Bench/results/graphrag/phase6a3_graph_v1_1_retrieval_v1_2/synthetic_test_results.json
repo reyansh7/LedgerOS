@@ -1,0 +1,23 @@
+{
+  "artifact_type": "phase6a3_one_shot_evaluator_pre_gold_test_results",
+  "artifact_version": "1.0",
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+    "-m",
+    "pytest",
+    "-q",
+    "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/test_one_shot_evaluator.py",
+    "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/test_one_shot_runner.py"
+  ],
+  "core_test_sha256": "352de3a9d7852178506ee5b77a8ae8346cb65a05d0199426de58e70d15dda8d5",
+  "created_at_utc": "2026-08-21T04:45:33Z",
+  "expected_test_count": 19,
+  "heldout_gold_opened": false,
+  "retrieval_metrics_computed": false,
+  "return_code": 0,
+  "runner_test_sha256": "cfa5dad1eefb07e1cfc17e72fc5b05268f35a2edba1bc0a6b3c9f56825e02e0d",
+  "status": "PASS",
+  "stderr": "",
+  "stdout": "...................                                                      [100%]\n19 passed in 0.80s\n",
+  "validation_gold_opened": false
+}

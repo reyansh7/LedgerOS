@@ -1,0 +1,11 @@
+{
+  "full_evidence_standard_vs_graph": {
+    "both_fail": 395,
+    "standard_fail_graph_success": 21
+  },
+  "graph_document_recall_vs_standard": {
+    "equal": 46,
+    "improves": 367,
+    "worse": 3
+  }
+}

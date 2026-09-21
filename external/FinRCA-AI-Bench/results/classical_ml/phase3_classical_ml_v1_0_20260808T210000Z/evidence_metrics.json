@@ -1,0 +1,9 @@
+{
+  "cases_with_returned_evidence": 0,
+  "classification_evidence_separated": true,
+  "evidence_contract_accuracy": null,
+  "evidence_precision": null,
+  "evidence_recall": null,
+  "limitation": "The frozen classical ML output contract returns empty evidence and null reasons for every case.",
+  "returned_evidence_records": 0
+}

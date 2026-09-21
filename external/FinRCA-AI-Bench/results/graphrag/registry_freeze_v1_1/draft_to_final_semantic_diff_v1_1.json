@@ -1,0 +1,227 @@
+{
+  "allowed_difference_classes": [
+    "artifact version",
+    "status/freeze status",
+    "approved freeze metadata",
+    "canonical final filename",
+    "deterministic serialization metadata",
+    "validation-route usage and freeze-validation attestations"
+  ],
+  "artifact_type": "graph_v1_1_draft_to_final_semantic_diff",
+  "artifact_version": "1.1",
+  "created_at_utc": "2026-08-15T17:54:51Z",
+  "draft_path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/graph_traversal_grammar_v1_1_draft.json",
+  "draft_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+  "final_path": "results/graphrag/registry_freeze_v1_1/graph_traversal_grammar_v1_1.json",
+  "freeze_status": "FROZEN_GRAPH_V1_1_TYPED_GRAMMAR",
+  "global_changed_semantic_fields": [],
+  "global_semantic_diff_count": 0,
+  "result": "PASS",
+  "semantic_transition_diff_count": 0,
+  "serialization_convention": {
+    "concurrency_timing_dependency": false,
+    "encoding": "UTF-8",
+    "filesystem_order_dependency": false,
+    "hash_map_order_dependency": false,
+    "json_indentation_spaces": 2,
+    "json_key_order": "lexicographic via sort_keys=true",
+    "json_separators": "comma plus newline/indent; colon plus one space",
+    "newline": "LF with exactly one trailing newline",
+    "other_array_order": "explicit semantic parent order or explicitly documented stable key order",
+    "transition_array_order": "ascending transition_id",
+    "unicode": "ensure_ascii=false"
+  },
+  "status": "FROZEN",
+  "supplemental_semantic_checks": {
+    "excluded_direction_ids_unchanged": true,
+    "forbidden_patterns_unchanged": true,
+    "global_grammar_semantics_unchanged": true,
+    "node_type_policies_unchanged": true,
+    "relation_reuse_dispositions_unchanged": true,
+    "transition_id_set_unchanged": true,
+    "transition_semantics_unchanged": true,
+    "typed_transition_matrix_rows_unchanged": true
+  },
+  "transition_results": [
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_APPROVAL_EVENT__APPROVAL_FOR_INVOICE__FORWARD__INVOICE"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_INVOICE__FORWARD__INVOICE"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PAYMENT__FORWARD__PAYMENT"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PURCHASE_ORDER__FORWARD__PURCHASE_ORDER"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_BANK_TRANSACTION__AUDIT_EVENT_FOR_BANK_TRANSACTION__REVERSE__AUDIT_EVENT"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_BANK_TRANSACTION__GL_SOURCE_BANK_TRANSACTION__REVERSE__GL_ENTRY"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_GL_ENTRY__GL_SOURCE_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_GL_ENTRY__GL_SOURCE_INVOICE__FORWARD__INVOICE"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_INVOICE_LINE__INVOICE_LINE_REFERENCES_PO_LINE__FORWARD__PO_LINE"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_INVOICE_LINE__LINE_OF_INVOICE__FORWARD__INVOICE"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_PO_LINE__INVOICE_LINE_REFERENCES_PO_LINE__REVERSE__INVOICE_LINE"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_PO_LINE__LINE_OF_PO__FORWARD__PURCHASE_ORDER"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_PURCHASE_ORDER__AUDIT_EVENT_FOR_PURCHASE_ORDER__REVERSE__AUDIT_EVENT"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE"
+    },
+    {
+      "changed_semantic_fields": [],
+      "result": "PASS",
+      "semantic_diff_count": 0,
+      "transition_id": "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE"
+    }
+  ]
+}

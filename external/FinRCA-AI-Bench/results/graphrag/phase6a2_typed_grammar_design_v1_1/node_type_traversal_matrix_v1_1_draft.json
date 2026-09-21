@@ -1,0 +1,344 @@
+{
+  "artifact_type": "graphrag_node_type_traversal_matrix",
+  "artifact_version": "1.1-draft",
+  "node_type_count": 14,
+  "node_types": [
+    {
+      "allowed_outgoing_transition_count": 1,
+      "allowed_outgoing_transition_ids": [
+        "TR_APPROVAL_EVENT__APPROVAL_FOR_INVOICE__FORWARD__INVOICE"
+      ],
+      "anchor_exit_only_transition_ids": [
+        "TR_APPROVAL_EVENT__APPROVAL_FOR_INVOICE__FORWARD__INVOICE"
+      ],
+      "explicit_empty_transition_set": false,
+      "maximum_reachable_depth_from_exact_anchor": 3,
+      "node_type": "APPROVAL_EVENT",
+      "noncontinuing_transition_ids": [],
+      "prohibited_pattern_ids": [
+        "FT_CONTEXT_BRIDGE",
+        "FT_EMPLOYEE_BRIDGE"
+      ],
+      "reached_node_state_override": "TERMINAL_IF_REACHED_AFTER_HOP_0",
+      "reasoning": "An exact approval anchor may exit to its owning Invoice; approval events reached from an Invoice are local evidence and cannot route onward.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [],
+      "terminal_context_transition_ids": []
+    },
+    {
+      "allowed_outgoing_transition_count": 4,
+      "allowed_outgoing_transition_ids": [
+        "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+        "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_INVOICE__FORWARD__INVOICE",
+        "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PAYMENT__FORWARD__PAYMENT",
+        "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PURCHASE_ORDER__FORWARD__PURCHASE_ORDER"
+      ],
+      "anchor_exit_only_transition_ids": [
+        "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+        "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_INVOICE__FORWARD__INVOICE",
+        "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PAYMENT__FORWARD__PAYMENT",
+        "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PURCHASE_ORDER__FORWARD__PURCHASE_ORDER"
+      ],
+      "explicit_empty_transition_set": false,
+      "maximum_reachable_depth_from_exact_anchor": 3,
+      "node_type": "AUDIT_EVENT",
+      "noncontinuing_transition_ids": [],
+      "prohibited_pattern_ids": [
+        "FT_CONTEXT_BRIDGE",
+        "FT_EMPLOYEE_BRIDGE",
+        "FT_VENDOR_BRIDGE",
+        "FT_SYNTHETIC_GL_JOURNAL"
+      ],
+      "reached_node_state_override": "TERMINAL_IF_REACHED_AFTER_HOP_0",
+      "reasoning": "An exact audit anchor may exit to its typed owning entity; audit events reached from an entity are local evidence and actor/Vendor routing stays prohibited.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [],
+      "terminal_context_transition_ids": []
+    },
+    {
+      "allowed_outgoing_transition_count": 0,
+      "allowed_outgoing_transition_ids": [],
+      "anchor_exit_only_transition_ids": [],
+      "explicit_empty_transition_set": true,
+      "maximum_reachable_depth_from_exact_anchor": 0,
+      "node_type": "BANK_STATEMENT",
+      "noncontinuing_transition_ids": [],
+      "prohibited_pattern_ids": [
+        "FT_DEFAULT_DENY_BFS",
+        "FT_PAYMENT_BANK",
+        "FT_SAME_ACCOUNT",
+        "FT_SAME_DATE"
+      ],
+      "reached_node_state_override": "NONE",
+      "reasoning": "No frozen statement-membership relation exists, so the grammar declares an empty transition set instead of synthesizing account/date links.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [],
+      "terminal_context_transition_ids": []
+    },
+    {
+      "allowed_outgoing_transition_count": 2,
+      "allowed_outgoing_transition_ids": [
+        "TR_BANK_TRANSACTION__AUDIT_EVENT_FOR_BANK_TRANSACTION__REVERSE__AUDIT_EVENT",
+        "TR_BANK_TRANSACTION__GL_SOURCE_BANK_TRANSACTION__REVERSE__GL_ENTRY"
+      ],
+      "anchor_exit_only_transition_ids": [],
+      "explicit_empty_transition_set": false,
+      "maximum_reachable_depth_from_exact_anchor": 1,
+      "node_type": "BANK_TRANSACTION",
+      "noncontinuing_transition_ids": [
+        "TR_BANK_TRANSACTION__AUDIT_EVENT_FOR_BANK_TRANSACTION__REVERSE__AUDIT_EVENT",
+        "TR_BANK_TRANSACTION__GL_SOURCE_BANK_TRANSACTION__REVERSE__GL_ENTRY"
+      ],
+      "prohibited_pattern_ids": [
+        "FT_PAYMENT_BANK",
+        "FT_SAME_AMOUNT",
+        "FT_SAME_ACCOUNT"
+      ],
+      "reached_node_state_override": "NONE",
+      "reasoning": "Only exact typed GL consequences and local audit context are available; payment settlement linkage remains a relation gap.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [
+        "TR_BANK_TRANSACTION__GL_SOURCE_BANK_TRANSACTION__REVERSE__GL_ENTRY"
+      ],
+      "terminal_context_transition_ids": [
+        "TR_BANK_TRANSACTION__AUDIT_EVENT_FOR_BANK_TRANSACTION__REVERSE__AUDIT_EVENT"
+      ]
+    },
+    {
+      "allowed_outgoing_transition_count": 0,
+      "allowed_outgoing_transition_ids": [],
+      "anchor_exit_only_transition_ids": [],
+      "explicit_empty_transition_set": true,
+      "maximum_reachable_depth_from_exact_anchor": 0,
+      "node_type": "EMPLOYEE",
+      "noncontinuing_transition_ids": [],
+      "prohibited_pattern_ids": [
+        "FT_EMPLOYEE_BRIDGE",
+        "FT_DEFAULT_DENY_BFS"
+      ],
+      "reached_node_state_override": "NONE",
+      "reasoning": "Employee is identity context and a prohibited shared hub, with no outgoing grammar transition.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [],
+      "terminal_context_transition_ids": []
+    },
+    {
+      "allowed_outgoing_transition_count": 3,
+      "allowed_outgoing_transition_ids": [
+        "TR_GL_ENTRY__GL_SOURCE_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+        "TR_GL_ENTRY__GL_SOURCE_INVOICE__FORWARD__INVOICE",
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT"
+      ],
+      "anchor_exit_only_transition_ids": [
+        "TR_GL_ENTRY__GL_SOURCE_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+        "TR_GL_ENTRY__GL_SOURCE_INVOICE__FORWARD__INVOICE",
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT"
+      ],
+      "explicit_empty_transition_set": false,
+      "maximum_reachable_depth_from_exact_anchor": 3,
+      "node_type": "GL_ENTRY",
+      "noncontinuing_transition_ids": [],
+      "prohibited_pattern_ids": [
+        "FT_SYNTHETIC_GL_JOURNAL",
+        "FT_GL_TYPE_MISMATCH",
+        "FT_REACHED_GL_CONTINUATION"
+      ],
+      "reached_node_state_override": "TERMINAL_IF_REACHED_AFTER_HOP_0",
+      "reasoning": "An exact GL anchor may exit through one typed source relation; a GL entry reached from its source transaction is a terminal accounting consequence.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [],
+      "terminal_context_transition_ids": []
+    },
+    {
+      "allowed_outgoing_transition_count": 7,
+      "allowed_outgoing_transition_ids": [
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION",
+        "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT",
+        "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT",
+        "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY",
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE",
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT"
+      ],
+      "anchor_exit_only_transition_ids": [],
+      "explicit_empty_transition_set": false,
+      "maximum_reachable_depth_from_exact_anchor": 3,
+      "node_type": "INVOICE",
+      "noncontinuing_transition_ids": [
+        "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT",
+        "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT",
+        "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY"
+      ],
+      "prohibited_pattern_ids": [
+        "FT_VENDOR_BRIDGE",
+        "FT_PAYMENT_BANK",
+        "FT_ALLOCATION_BYPASS"
+      ],
+      "reached_node_state_override": "NONE",
+      "reasoning": "Invoice is a lifecycle hub only through exact PO, line, allocation, payment-projection, GL, approval, and audit relations.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [
+        "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY"
+      ],
+      "terminal_context_transition_ids": [
+        "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT",
+        "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT"
+      ]
+    },
+    {
+      "allowed_outgoing_transition_count": 2,
+      "allowed_outgoing_transition_ids": [
+        "TR_INVOICE_LINE__INVOICE_LINE_REFERENCES_PO_LINE__FORWARD__PO_LINE",
+        "TR_INVOICE_LINE__LINE_OF_INVOICE__FORWARD__INVOICE"
+      ],
+      "anchor_exit_only_transition_ids": [],
+      "explicit_empty_transition_set": false,
+      "maximum_reachable_depth_from_exact_anchor": 3,
+      "node_type": "INVOICE_LINE",
+      "noncontinuing_transition_ids": [],
+      "prohibited_pattern_ids": [
+        "FT_DEFAULT_DENY_BFS"
+      ],
+      "reached_node_state_override": "NONE",
+      "reasoning": "Invoice lines compose only through their exact owning Invoice and referenced PO line.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [],
+      "terminal_context_transition_ids": []
+    },
+    {
+      "allowed_outgoing_transition_count": 4,
+      "allowed_outgoing_transition_ids": [
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT",
+        "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE"
+      ],
+      "anchor_exit_only_transition_ids": [],
+      "explicit_empty_transition_set": false,
+      "maximum_reachable_depth_from_exact_anchor": 3,
+      "node_type": "PAYMENT",
+      "noncontinuing_transition_ids": [
+        "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT",
+        "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY"
+      ],
+      "prohibited_pattern_ids": [
+        "FT_PAYMENT_BANK",
+        "FT_VENDOR_BRIDGE",
+        "FT_ALLOCATION_BYPASS"
+      ],
+      "reached_node_state_override": "NONE",
+      "reasoning": "Payment composes through exact allocation/projection relations and may expose typed GL consequences or local audit context; bank matching is disabled.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [
+        "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY"
+      ],
+      "terminal_context_transition_ids": [
+        "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT"
+      ]
+    },
+    {
+      "allowed_outgoing_transition_count": 2,
+      "allowed_outgoing_transition_ids": [
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE"
+      ],
+      "anchor_exit_only_transition_ids": [],
+      "explicit_empty_transition_set": false,
+      "maximum_reachable_depth_from_exact_anchor": 3,
+      "node_type": "PAYMENT_ALLOCATION",
+      "noncontinuing_transition_ids": [],
+      "prohibited_pattern_ids": [
+        "FT_MULTIPLICITY_COLLAPSE"
+      ],
+      "reached_node_state_override": "NONE",
+      "reasoning": "The allocation record is the provenance-complete bridge between an exact Invoice and Payment and remains composable.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [],
+      "terminal_context_transition_ids": []
+    },
+    {
+      "allowed_outgoing_transition_count": 2,
+      "allowed_outgoing_transition_ids": [
+        "TR_PO_LINE__INVOICE_LINE_REFERENCES_PO_LINE__REVERSE__INVOICE_LINE",
+        "TR_PO_LINE__LINE_OF_PO__FORWARD__PURCHASE_ORDER"
+      ],
+      "anchor_exit_only_transition_ids": [],
+      "explicit_empty_transition_set": false,
+      "maximum_reachable_depth_from_exact_anchor": 3,
+      "node_type": "PO_LINE",
+      "noncontinuing_transition_ids": [],
+      "prohibited_pattern_ids": [
+        "FT_DEFAULT_DENY_BFS"
+      ],
+      "reached_node_state_override": "NONE",
+      "reasoning": "PO lines compose through their exact PO header and exact referencing invoice lines.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [],
+      "terminal_context_transition_ids": []
+    },
+    {
+      "allowed_outgoing_transition_count": 3,
+      "allowed_outgoing_transition_ids": [
+        "TR_PURCHASE_ORDER__AUDIT_EVENT_FOR_PURCHASE_ORDER__REVERSE__AUDIT_EVENT",
+        "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE",
+        "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE"
+      ],
+      "anchor_exit_only_transition_ids": [],
+      "explicit_empty_transition_set": false,
+      "maximum_reachable_depth_from_exact_anchor": 3,
+      "node_type": "PURCHASE_ORDER",
+      "noncontinuing_transition_ids": [
+        "TR_PURCHASE_ORDER__AUDIT_EVENT_FOR_PURCHASE_ORDER__REVERSE__AUDIT_EVENT"
+      ],
+      "prohibited_pattern_ids": [
+        "FT_VENDOR_BRIDGE",
+        "FT_EMPLOYEE_BRIDGE"
+      ],
+      "reached_node_state_override": "NONE",
+      "reasoning": "Purchase orders compose to exact lines and referencing invoices and may expose local audit context; Vendor/Employee bridges are disabled.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [],
+      "terminal_context_transition_ids": [
+        "TR_PURCHASE_ORDER__AUDIT_EVENT_FOR_PURCHASE_ORDER__REVERSE__AUDIT_EVENT"
+      ]
+    },
+    {
+      "allowed_outgoing_transition_count": 0,
+      "allowed_outgoing_transition_ids": [],
+      "anchor_exit_only_transition_ids": [],
+      "explicit_empty_transition_set": true,
+      "maximum_reachable_depth_from_exact_anchor": 0,
+      "node_type": "VENDOR",
+      "noncontinuing_transition_ids": [],
+      "prohibited_pattern_ids": [
+        "FT_VENDOR_BRIDGE",
+        "FT_DEFAULT_DENY_BFS"
+      ],
+      "reached_node_state_override": "NONE",
+      "reasoning": "Vendor is restricted identity/filter context and cannot be a cross-transaction bridge, including through audit events.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [],
+      "terminal_context_transition_ids": []
+    },
+    {
+      "allowed_outgoing_transition_count": 0,
+      "allowed_outgoing_transition_ids": [],
+      "anchor_exit_only_transition_ids": [],
+      "explicit_empty_transition_set": true,
+      "maximum_reachable_depth_from_exact_anchor": 0,
+      "node_type": "VENDOR_CHANGE",
+      "noncontinuing_transition_ids": [],
+      "prohibited_pattern_ids": [
+        "FT_VENDOR_BRIDGE",
+        "FT_EMPLOYEE_BRIDGE",
+        "FT_DEFAULT_DENY_BFS"
+      ],
+      "reached_node_state_override": "NONE",
+      "reasoning": "Vendor changes remain standalone context because their Vendor and Employee relations are frozen traversal-disabled.",
+      "status": "PROPOSAL_ONLY",
+      "terminal_accounting_consequence_transition_ids": [],
+      "terminal_context_transition_ids": []
+    }
+  ],
+  "status": "PROPOSAL_ONLY"
+}

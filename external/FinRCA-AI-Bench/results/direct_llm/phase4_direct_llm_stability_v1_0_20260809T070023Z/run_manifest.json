@@ -1,0 +1,40 @@
+{
+  "analysis_complete": false,
+  "created_at_utc": "2026-08-09T07:01:03.517207+00:00",
+  "held_out_run": false,
+  "mode": "VALIDATION_STABILITY_API",
+  "model_configuration": {
+    "backoff_seconds": [
+      1.0,
+      2.0,
+      4.0
+    ],
+    "cached_input_usd_per_million_tokens": 0.5,
+    "concurrency": 1,
+    "context_window_tokens": 1050000,
+    "endpoint": "Responses API",
+    "input_usd_per_million_tokens": 5.0,
+    "max_attempts": 4,
+    "max_output_tokens": 1000,
+    "model_id": "gpt-5.6-sol",
+    "output_usd_per_million_tokens": 30.0,
+    "pricing_reference_date": "2026-08-08",
+    "provider": "OpenAI",
+    "reasoning_effort": "medium",
+    "request_timeout_seconds": 120.0,
+    "reserved_output_tokens": 1000,
+    "service_tier": "default",
+    "stability_repetitions": 3,
+    "stability_subset_salt": "phase4-direct-llm-stability-v1.0",
+    "stability_subset_size": 32,
+    "store": false,
+    "structured_output_mode": "Pydantic/JSON Schema strict",
+    "temperature": null,
+    "token_estimator": "ceil(Unicode characters / 3); conservative non-billing estimate",
+    "top_p": null,
+    "truncation": "disabled",
+    "verbosity": "low"
+  },
+  "preflight_run_id": "phase4_direct_llm_preflight_v1_0_20260809T063242Z",
+  "run_id": "phase4_direct_llm_stability_v1_0_20260809T070023Z"
+}

@@ -1,0 +1,41 @@
+{
+  "K": 40,
+  "case_count": 437,
+  "macro": {
+    "document_precision": 0.0016590389016018308,
+    "document_precision_ci": {
+      "lower_95": 0.0010869565217391304,
+      "upper_95": 0.002288329519450801
+    },
+    "document_recall": 0.00827191496527881,
+    "document_recall_ci": {
+      "lower_95": 0.005348565749023415,
+      "upper_95": 0.011542073645906595
+    },
+    "evidence_id_recall": 0.02028985507246377,
+    "full_evidence_coverage": 0.0,
+    "full_evidence_coverage_ci": {
+      "lower_95": 0.0,
+      "upper_95": 0.0
+    },
+    "hit": 0.06407322654462243,
+    "irrelevant_record_count": 39.933638443935926,
+    "mrr": 0.015438757127621949,
+    "observable_contract_satisfied": 0.0,
+    "observable_table_coverage": 0.016666666666666666,
+    "retrieval_set_size": 40.0,
+    "retrieved_context_tokens": 5530.695652173913,
+    "strict_full_contract_coverage": 0.0,
+    "strict_full_contract_coverage_ci": {
+      "lower_95": 0.0,
+      "upper_95": 0.0
+    }
+  },
+  "micro": {
+    "document_precision": 0.0016590389016018306,
+    "document_recall": 0.010716925351071693,
+    "relevant_documents": 29,
+    "required_documents": 2706,
+    "retrieved_documents": 17480
+  }
+}

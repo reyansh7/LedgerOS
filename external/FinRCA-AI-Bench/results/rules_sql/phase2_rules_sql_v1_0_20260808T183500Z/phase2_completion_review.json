@@ -1,0 +1,34 @@
+{
+  "experiment_results": {
+    "binary_anomaly_accuracy_with_abstentions_incorrect": 0.8587699316628702,
+    "binary_counts": {
+      "fn": 0,
+      "fp": 12,
+      "tn": 82,
+      "tp": 295
+    },
+    "binary_f1": 0.9800664451827242,
+    "binary_precision": 0.9609120521172638,
+    "binary_recall": 1.0,
+    "exact_failure_type_accuracy": 0.8496583143507973,
+    "false_negative_rate_including_insufficient_as_missed": 0.0,
+    "false_positive_rate": 0.08333333333333333,
+    "insufficient_evidence": 50,
+    "macro_f1_16_classes": 0.9517731696856624,
+    "micro_f1_16_classes": 0.9009661835748793,
+    "total_cases": 439,
+    "weighted_f1_16_classes": 0.8886825239830451
+  },
+  "final_decision": "PHASE 2 COMPLETE \u2014 RULES/SQL BASELINE LOCKED",
+  "implementation_status": {
+    "held_out_evaluation_completed": true,
+    "leakage_audit": "PASS",
+    "number_implemented": 15,
+    "number_of_frozen_rules": 15,
+    "number_passing_integration_tests": 15,
+    "number_passing_unit_tests": 15,
+    "protocol_deviations": "NONE",
+    "reproducibility_command_verified": true
+  },
+  "outstanding_material_issues": []
+}

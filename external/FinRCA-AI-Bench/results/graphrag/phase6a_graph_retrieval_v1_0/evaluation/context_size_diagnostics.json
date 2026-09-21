@@ -1,0 +1,356 @@
+{
+  "anchor_rag": {
+    "average_distinct_node_types": 1.4182692307692308,
+    "average_record_count": 40.0,
+    "average_source_tokens": 5583.810096153846,
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_count": 26,
+        "cross_type_record_fraction_mean": 0.0,
+        "distinct_record_types_mean": 1.0,
+        "distinct_record_types_median": 1.0,
+        "distinct_record_types_p95": 1.0,
+        "source_tokens": {
+          "max": 6053.0,
+          "median": 6050.0,
+          "p75": 6051.0,
+          "p90": 6052.5,
+          "p95": 6053.0,
+          "p99": 6053.0
+        }
+      },
+      "gl_journal": {
+        "case_count": 14,
+        "cross_type_record_fraction_mean": 0.0,
+        "distinct_record_types_mean": 1.0,
+        "distinct_record_types_median": 1.0,
+        "distinct_record_types_p95": 1.0,
+        "source_tokens": {
+          "max": 5644.0,
+          "median": 5643.0,
+          "p75": 5643.75,
+          "p90": 5644.0,
+          "p95": 5644.0,
+          "p99": 5644.0
+        }
+      },
+      "invoice": {
+        "case_count": 195,
+        "cross_type_record_fraction_mean": 0.0,
+        "distinct_record_types_mean": 1.0,
+        "distinct_record_types_median": 1,
+        "distinct_record_types_p95": 1.0,
+        "source_tokens": {
+          "max": 6055.0,
+          "median": 6010.0,
+          "p75": 6014.0,
+          "p90": 6020.6,
+          "p95": 6048.9,
+          "p99": 6053.06
+        }
+      },
+      "payment": {
+        "case_count": 181,
+        "cross_type_record_fraction_mean": 0.4708563535911602,
+        "distinct_record_types_mean": 1.9613259668508287,
+        "distinct_record_types_median": 2,
+        "distinct_record_types_p95": 2.0,
+        "source_tokens": {
+          "max": 5231.0,
+          "median": 5060.0,
+          "p75": 5098.0,
+          "p90": 5163.0,
+          "p95": 5194.0,
+          "p99": 5231.0
+        }
+      }
+    },
+    "distinct_node_type_distribution": {
+      "1": 242,
+      "2": 174
+    },
+    "record_count": {
+      "max": 40.0,
+      "median": 40.0,
+      "p75": 40.0,
+      "p90": 40.0,
+      "p95": 40.0,
+      "p99": 40.0
+    },
+    "source_tokens": {
+      "max": 6055.0,
+      "median": 6002.0,
+      "p75": 6012.0,
+      "p90": 6025.0,
+      "p95": 6050.25,
+      "p99": 6053.0
+    }
+  },
+  "graph_retrieval_v1_0": {
+    "average_distinct_node_types": 2.3341346153846154,
+    "average_record_count": 3.8341346153846154,
+    "average_source_tokens": 492.15384615384613,
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_count": 26,
+        "cross_type_record_fraction_mean": 0.0,
+        "distinct_record_types_mean": 1.0,
+        "distinct_record_types_median": 1.0,
+        "distinct_record_types_p95": 1.0,
+        "source_tokens": {
+          "max": 150.0,
+          "median": 149.0,
+          "p75": 150.0,
+          "p90": 150.0,
+          "p95": 150.0,
+          "p99": 150.0
+        }
+      },
+      "gl_journal": {
+        "case_count": 14,
+        "cross_type_record_fraction_mean": 0.3333333333333333,
+        "distinct_record_types_mean": 2.0,
+        "distinct_record_types_median": 2.0,
+        "distinct_record_types_p95": 2.0,
+        "source_tokens": {
+          "max": 408.0,
+          "median": 407.0,
+          "p75": 408.0,
+          "p90": 408.0,
+          "p95": 408.0,
+          "p99": 408.0
+        }
+      },
+      "invoice": {
+        "case_count": 195,
+        "cross_type_record_fraction_mean": 0.6484188034188034,
+        "distinct_record_types_mean": 2.8461538461538463,
+        "distinct_record_types_median": 3,
+        "distinct_record_types_p95": 4.0,
+        "source_tokens": {
+          "max": 1003.0,
+          "median": 708.0,
+          "p75": 741.0,
+          "p90": 868.0,
+          "p95": 996.1999999999999,
+          "p99": 1001.06
+        }
+      },
+      "payment": {
+        "case_count": 181,
+        "cross_type_record_fraction_mean": 0.6732965009208103,
+        "distinct_record_types_mean": 2.0,
+        "distinct_record_types_median": 2,
+        "distinct_record_types_p95": 2.0,
+        "source_tokens": {
+          "max": 694.0,
+          "median": 407.0,
+          "p75": 408.0,
+          "p90": 409.0,
+          "p95": 411.0,
+          "p99": 692.4
+        }
+      }
+    },
+    "distinct_node_type_distribution": {
+      "1": 69,
+      "2": 195,
+      "3": 96,
+      "4": 56
+    },
+    "record_count": {
+      "max": 8.0,
+      "median": 3.0,
+      "p75": 6.0,
+      "p90": 6.0,
+      "p95": 7.0,
+      "p99": 8.0
+    },
+    "source_tokens": {
+      "max": 1003.0,
+      "median": 408.0,
+      "p75": 708.0,
+      "p90": 741.5,
+      "p95": 867.25,
+      "p99": 1000.85
+    }
+  },
+  "relational_rag": {
+    "average_distinct_node_types": 4.956730769230769,
+    "average_record_count": 9.009615384615385,
+    "average_source_tokens": 1109.6274038461538,
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_count": 26,
+        "cross_type_record_fraction_mean": 0.5256410256410257,
+        "distinct_record_types_mean": 2.0,
+        "distinct_record_types_median": 2.0,
+        "distinct_record_types_p95": 2.0,
+        "source_tokens": {
+          "max": 415.0,
+          "median": 260.0,
+          "p75": 260.0,
+          "p90": 413.5,
+          "p95": 415.0,
+          "p99": 415.0
+        }
+      },
+      "gl_journal": {
+        "case_count": 14,
+        "cross_type_record_fraction_mean": 0.3333333333333333,
+        "distinct_record_types_mean": 2.0,
+        "distinct_record_types_median": 2.0,
+        "distinct_record_types_p95": 2.0,
+        "source_tokens": {
+          "max": 408.0,
+          "median": 407.0,
+          "p75": 408.0,
+          "p90": 408.0,
+          "p95": 408.0,
+          "p99": 408.0
+        }
+      },
+      "invoice": {
+        "case_count": 195,
+        "cross_type_record_fraction_mean": 0.8894911494792418,
+        "distinct_record_types_mean": 5.707692307692308,
+        "distinct_record_types_median": 6,
+        "distinct_record_types_p95": 8.0,
+        "source_tokens": {
+          "max": 2570.0,
+          "median": 1668.0,
+          "p75": 1910.5,
+          "p90": 2137.7999999999997,
+          "p95": 2237.7999999999993,
+          "p99": 2545.18
+        }
+      },
+      "payment": {
+        "case_count": 181,
+        "cross_type_record_fraction_mean": 0.8480750679645708,
+        "distinct_record_types_mean": 4.801104972375691,
+        "distinct_record_types_median": 5,
+        "distinct_record_types_p95": 5.0,
+        "source_tokens": {
+          "max": 1240.0,
+          "median": 840.0,
+          "p75": 951.0,
+          "p90": 1058.0,
+          "p95": 1062.0,
+          "p99": 1240.0
+        }
+      }
+    },
+    "distinct_node_type_distribution": {
+      "2": 50,
+      "3": 51,
+      "5": 169,
+      "6": 90,
+      "7": 24,
+      "8": 32
+    },
+    "record_count": {
+      "max": 21.0,
+      "median": 8.0,
+      "p75": 13.0,
+      "p90": 16.0,
+      "p95": 17.0,
+      "p99": 19.0
+    },
+    "source_tokens": {
+      "max": 2570.0,
+      "median": 950.0,
+      "p75": 1633.25,
+      "p90": 1942.5,
+      "p95": 2115.0,
+      "p99": 2386.800000000002
+    }
+  },
+  "standard_dense_rag": {
+    "average_distinct_node_types": 1.4182692307692308,
+    "average_record_count": 40.0,
+    "average_source_tokens": 5582.055288461538,
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_count": 26,
+        "cross_type_record_fraction_mean": 0.0,
+        "distinct_record_types_mean": 1.0,
+        "distinct_record_types_median": 1.0,
+        "distinct_record_types_p95": 1.0,
+        "source_tokens": {
+          "max": 6058.0,
+          "median": 6051.0,
+          "p75": 6052.0,
+          "p90": 6055.5,
+          "p95": 6057.75,
+          "p99": 6058.0
+        }
+      },
+      "gl_journal": {
+        "case_count": 14,
+        "cross_type_record_fraction_mean": 0.0,
+        "distinct_record_types_mean": 1.0,
+        "distinct_record_types_median": 1.0,
+        "distinct_record_types_p95": 1.0,
+        "source_tokens": {
+          "max": 5655.0,
+          "median": 5655.0,
+          "p75": 5655.0,
+          "p90": 5655.0,
+          "p95": 5655.0,
+          "p99": 5655.0
+        }
+      },
+      "invoice": {
+        "case_count": 195,
+        "cross_type_record_fraction_mean": 0.0,
+        "distinct_record_types_mean": 1.0,
+        "distinct_record_types_median": 1,
+        "distinct_record_types_p95": 1.0,
+        "source_tokens": {
+          "max": 6053.0,
+          "median": 6010.0,
+          "p75": 6017.0,
+          "p90": 6023.2,
+          "p95": 6048.0,
+          "p99": 6052.0
+        }
+      },
+      "payment": {
+        "case_count": 181,
+        "cross_type_record_fraction_mean": 0.4878453038674033,
+        "distinct_record_types_mean": 1.9613259668508287,
+        "distinct_record_types_median": 2,
+        "distinct_record_types_p95": 2.0,
+        "source_tokens": {
+          "max": 5231.0,
+          "median": 5056.0,
+          "p75": 5088.0,
+          "p90": 5165.0,
+          "p95": 5193.0,
+          "p99": 5231.0
+        }
+      }
+    },
+    "distinct_node_type_distribution": {
+      "1": 242,
+      "2": 174
+    },
+    "record_count": {
+      "max": 40.0,
+      "median": 40.0,
+      "p75": 40.0,
+      "p90": 40.0,
+      "p95": 40.0,
+      "p99": 40.0
+    },
+    "source_tokens": {
+      "max": 6058.0,
+      "median": 6003.0,
+      "p75": 6014.0,
+      "p90": 6026.5,
+      "p95": 6051.0,
+      "p99": 6053.85
+    }
+  }
+}

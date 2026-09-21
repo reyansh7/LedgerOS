@@ -1,0 +1,16 @@
+{
+  "annotated_id_completeness": 0.2128146453089245,
+  "case_count": 437,
+  "citation_support_rate": null,
+  "citation_validity": 1.0,
+  "correct_class_incorrect_or_incomplete_evidence_rate": 0.7116704805491991,
+  "explanation_unsupported_assertion_rate": null,
+  "fully_grounded_reconciliation_rate": null,
+  "hallucinated_evidence_rate": 0.0,
+  "manual_review_status": "PENDING",
+  "observable_evidence_contract_accuracy": 0.11441647597254005,
+  "observable_grounded_reconciliation_rate": null,
+  "resolved_document_completeness": 0.07322654462242563,
+  "strict_evidence_contract_accuracy": 0.057208237986270026,
+  "two_reviewer_adjudicated_cases": 0
+}

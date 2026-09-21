@@ -1,0 +1,24 @@
+{
+  "analysis_run_count": 2,
+  "case_classifications_identical": true,
+  "deterministic_output_hashes": {
+    "PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+    "anchor_type_reachability.json": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f",
+    "case_reachability_comparison.jsonl": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7",
+    "hop_survival_funnel.json": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f",
+    "motif_gap_taxonomy.json": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4",
+    "motif_reachability.jsonl": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee",
+    "path_sequence_inventory.json": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b",
+    "raw_reachability_safe_reverse_diagnostic.jsonl": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320",
+    "raw_reachability_stored_direction.jsonl": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e",
+    "reachability_explosion_and_cycles.json": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e",
+    "relation_directionality_audit.json": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62",
+    "scientific_integrity.json": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a",
+    "typed_traversal_grammar_analysis.md": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652"
+  },
+  "directionality_classifications_identical": true,
+  "motif_gap_counts_identical": true,
+  "reachable_path_sets_identical": true,
+  "sequence_inventories_identical": true,
+  "status": "PASS"
+}

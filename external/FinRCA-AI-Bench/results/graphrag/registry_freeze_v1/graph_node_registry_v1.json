@@ -1,0 +1,767 @@
+{
+  "artifact_type": "graphrag_node_registry",
+  "artifact_version": "1.0",
+  "canonical_integrity": {
+    "duplicate_canonical_id_count": 0,
+    "duplicate_canonical_ids": [],
+    "duplicate_record_id_count": 0,
+    "duplicate_record_ids": [],
+    "malformed_record_id_count": 0,
+    "malformed_record_ids": [],
+    "missing_primary_key_count": 0,
+    "missing_primary_keys": [],
+    "orphaned_composite_key_component_count": 0,
+    "orphaned_composite_key_components": []
+  },
+  "decision_cutoff": "2026-06-30",
+  "freeze_status": "FROZEN_DETERMINISTIC_CORE",
+  "gl_journal_policy": {
+    "journal_id_role": "GL_ENTRY grouping/context attribute only",
+    "node_enabled": false,
+    "reason": "No journal-header operational source record exists."
+  },
+  "hub_restrictions": {
+    "EMPLOYEE": {
+      "maximum_observed_combined_degree": 607,
+      "permitted_uses": [
+        "identity context",
+        "explicitly permitted path-local evidence"
+      ],
+      "traversal_policy": "RESTRICTED",
+      "unrestricted_reverse_neighborhood_expansion": false
+    },
+    "VENDOR": {
+      "maximum_observed_combined_degree": 1172,
+      "permitted_uses": [
+        "identity context",
+        "filtering",
+        "explicitly permitted path-local evidence"
+      ],
+      "traversal_policy": "RESTRICTED",
+      "unrestricted_reverse_neighborhood_expansion": false
+    }
+  },
+  "node_type_count": 14,
+  "node_types": [
+    {
+      "candidate_or_conditional_graph_use_fields": [],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "vendor_id"
+      ],
+      "canonical_record_id_format": "vendors:{vendor_id}",
+      "context_only_fields": [
+        "bank_account_token",
+        "bank_routing_token",
+        "country",
+        "created_at",
+        "currency",
+        "default_payment_method",
+        "payment_terms",
+        "source_system",
+        "tax_id_hash",
+        "updated_at",
+        "vendor_name",
+        "vendor_status",
+        "vendor_type"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "bank_account_token",
+        "bank_routing_token",
+        "country",
+        "created_at",
+        "currency",
+        "default_payment_method",
+        "payment_terms",
+        "source_system",
+        "tax_id_hash",
+        "updated_at",
+        "vendor_name",
+        "vendor_status",
+        "vendor_type"
+      ],
+      "important_identifier_fields": [
+        "vendor_id",
+        "tax_id_hash",
+        "bank_account_token",
+        "bank_routing_token"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "VENDOR",
+      "permitted_graph_use_fields": [
+        "vendor_id"
+      ],
+      "record_count": 500,
+      "source_table": "vendors",
+      "source_type": "VENDOR",
+      "temporal_eligibility_field": "created_at"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "change_id"
+      ],
+      "canonical_record_id_format": "vendor_change_log:{change_id}",
+      "context_only_fields": [
+        "change_reason",
+        "changed_at",
+        "field_changed",
+        "new_value",
+        "old_value",
+        "source_system"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "change_reason",
+        "changed_at",
+        "field_changed",
+        "new_value",
+        "old_value",
+        "source_system"
+      ],
+      "important_identifier_fields": [
+        "change_id",
+        "vendor_id",
+        "changed_by"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "VENDOR_CHANGE",
+      "permitted_graph_use_fields": [
+        "change_id",
+        "vendor_id",
+        "changed_by"
+      ],
+      "record_count": 186,
+      "source_table": "vendor_change_log",
+      "source_type": "VENDOR_CHANGE",
+      "temporal_eligibility_field": "changed_at"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "po_id"
+      ],
+      "canonical_record_id_format": "purchase_orders:{po_id}",
+      "context_only_fields": [
+        "cost_center",
+        "currency",
+        "department",
+        "expected_delivery_date",
+        "gl_account",
+        "po_date",
+        "po_total",
+        "shipping",
+        "source_system",
+        "status",
+        "subtotal",
+        "tax"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "cost_center",
+        "currency",
+        "department",
+        "expected_delivery_date",
+        "gl_account",
+        "po_date",
+        "po_total",
+        "shipping",
+        "source_system",
+        "status",
+        "subtotal",
+        "tax"
+      ],
+      "important_identifier_fields": [
+        "po_id",
+        "vendor_id",
+        "created_by"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "PURCHASE_ORDER",
+      "permitted_graph_use_fields": [
+        "po_id",
+        "vendor_id",
+        "created_by"
+      ],
+      "record_count": 5000,
+      "source_table": "purchase_orders",
+      "source_type": "PURCHASE_ORDER",
+      "temporal_eligibility_field": "po_date"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "po_line_id"
+      ],
+      "canonical_record_id_format": "po_lines:{po_line_id}",
+      "context_only_fields": [
+        "cost_center",
+        "department",
+        "description",
+        "gl_account",
+        "item_id",
+        "line_amount",
+        "quantity",
+        "source_system",
+        "unit_price"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "cost_center",
+        "department",
+        "description",
+        "gl_account",
+        "item_id",
+        "line_amount",
+        "quantity",
+        "source_system",
+        "unit_price"
+      ],
+      "important_identifier_fields": [
+        "po_line_id",
+        "po_id",
+        "item_id"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "PO_LINE",
+      "permitted_graph_use_fields": [
+        "po_line_id",
+        "po_id"
+      ],
+      "record_count": 11231,
+      "source_table": "po_lines",
+      "source_type": "PO_LINE",
+      "temporal_eligibility_field": "inherits PURCHASE_ORDER.po_date via exact po_id"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "invoice_id"
+      ],
+      "canonical_record_id_format": "invoices:{invoice_id}",
+      "context_only_fields": [
+        "created_at",
+        "currency",
+        "due_date",
+        "duplicate_reference",
+        "invoice_date",
+        "invoice_number",
+        "invoice_total",
+        "payment_terms",
+        "received_date",
+        "shipping",
+        "source_system",
+        "status",
+        "subtotal",
+        "tax"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "created_at",
+        "currency",
+        "due_date",
+        "duplicate_reference",
+        "invoice_date",
+        "invoice_number",
+        "invoice_total",
+        "payment_terms",
+        "received_date",
+        "shipping",
+        "source_system",
+        "status",
+        "subtotal",
+        "tax"
+      ],
+      "important_identifier_fields": [
+        "invoice_id",
+        "po_id",
+        "vendor_id",
+        "invoice_number",
+        "duplicate_reference"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "INVOICE",
+      "permitted_graph_use_fields": [
+        "invoice_id",
+        "po_id",
+        "vendor_id"
+      ],
+      "record_count": 8147,
+      "source_table": "invoices",
+      "source_type": "INVOICE",
+      "temporal_eligibility_field": "created_at"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "invoice_line_id"
+      ],
+      "canonical_record_id_format": "invoice_lines:{invoice_line_id}",
+      "context_only_fields": [
+        "cost_center",
+        "department",
+        "gl_account",
+        "item_id",
+        "line_amount",
+        "quantity",
+        "source_system",
+        "unit_price"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "cost_center",
+        "department",
+        "gl_account",
+        "item_id",
+        "line_amount",
+        "quantity",
+        "source_system",
+        "unit_price"
+      ],
+      "important_identifier_fields": [
+        "invoice_line_id",
+        "invoice_id",
+        "po_line_id",
+        "item_id"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "INVOICE_LINE",
+      "permitted_graph_use_fields": [
+        "invoice_line_id",
+        "invoice_id",
+        "po_line_id"
+      ],
+      "record_count": 18299,
+      "source_table": "invoice_lines",
+      "source_type": "INVOICE_LINE",
+      "temporal_eligibility_field": "inherits INVOICE.created_at via exact invoice_id"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [
+        "approver_id"
+      ],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "approval_event_id"
+      ],
+      "canonical_record_id_format": "approval_events:{approval_event_id}",
+      "context_only_fields": [
+        "action",
+        "approval_level",
+        "approver_id",
+        "approver_role",
+        "comments",
+        "event_timestamp",
+        "new_status",
+        "previous_status",
+        "source_system"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "action",
+        "approval_level",
+        "approver_id",
+        "approver_role",
+        "comments",
+        "event_timestamp",
+        "new_status",
+        "previous_status",
+        "source_system"
+      ],
+      "important_identifier_fields": [
+        "approval_event_id",
+        "invoice_id",
+        "approver_id"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "APPROVAL_EVENT",
+      "permitted_graph_use_fields": [
+        "approval_event_id",
+        "invoice_id"
+      ],
+      "record_count": 17429,
+      "source_table": "approval_events",
+      "source_type": "APPROVAL_EVENT",
+      "temporal_eligibility_field": "event_timestamp"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [
+        "reference_number"
+      ],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "payment_id"
+      ],
+      "canonical_record_id_format": "payments:{payment_id}",
+      "context_only_fields": [
+        "bank_account_id",
+        "created_at",
+        "payment_amount",
+        "payment_currency",
+        "payment_date",
+        "payment_method",
+        "payment_status",
+        "reference_number",
+        "settlement_status",
+        "source_system"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "bank_account_id",
+        "created_at",
+        "payment_amount",
+        "payment_currency",
+        "payment_date",
+        "payment_method",
+        "payment_status",
+        "reference_number",
+        "settlement_status",
+        "source_system"
+      ],
+      "important_identifier_fields": [
+        "payment_id",
+        "vendor_id",
+        "reference_number",
+        "bank_account_id"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "PAYMENT",
+      "permitted_graph_use_fields": [
+        "payment_id",
+        "vendor_id"
+      ],
+      "record_count": 6200,
+      "source_table": "payments",
+      "source_type": "PAYMENT",
+      "temporal_eligibility_field": "created_at"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "payment_id",
+        "invoice_id",
+        "allocation_date"
+      ],
+      "canonical_record_id_format": "payment_allocations:{payment_id}|{invoice_id}|{allocation_date}",
+      "context_only_fields": [
+        "allocated_amount",
+        "allocation_date",
+        "source_system"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "allocated_amount",
+        "allocation_date",
+        "source_system"
+      ],
+      "important_identifier_fields": [
+        "payment_id",
+        "invoice_id",
+        "allocation_date"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "PAYMENT_ALLOCATION",
+      "permitted_graph_use_fields": [
+        "payment_id",
+        "invoice_id"
+      ],
+      "record_count": 7180,
+      "source_table": "payment_allocations",
+      "source_type": "PAYMENT_ALLOCATION",
+      "temporal_eligibility_field": "allocation_date"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "journal_line_id"
+      ],
+      "canonical_record_id_format": "gl_entries:{journal_line_id}",
+      "context_only_fields": [
+        "accounting_period",
+        "cost_center",
+        "credit",
+        "currency",
+        "debit",
+        "department",
+        "gl_account",
+        "journal_id",
+        "memo",
+        "posting_date",
+        "source_system"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "accounting_period",
+        "cost_center",
+        "credit",
+        "currency",
+        "debit",
+        "department",
+        "gl_account",
+        "journal_id",
+        "memo",
+        "posting_date",
+        "source_system"
+      ],
+      "important_identifier_fields": [
+        "journal_line_id",
+        "journal_id",
+        "transaction_type",
+        "source_transaction_id"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "GL_ENTRY",
+      "permitted_graph_use_fields": [
+        "journal_line_id",
+        "transaction_type",
+        "source_transaction_id"
+      ],
+      "record_count": 46755,
+      "source_table": "gl_entries",
+      "source_type": "GL_ENTRY",
+      "temporal_eligibility_field": "posting_date"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [
+        "payment_reference"
+      ],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "bank_transaction_id"
+      ],
+      "canonical_record_id_format": "bank_transactions:{bank_transaction_id}",
+      "context_only_fields": [
+        "amount",
+        "bank_account_id",
+        "bank_reference",
+        "counterparty_token",
+        "currency",
+        "direction",
+        "payment_reference",
+        "posted_date",
+        "source_system",
+        "status",
+        "transaction_date",
+        "transaction_type"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "amount",
+        "bank_account_id",
+        "bank_reference",
+        "counterparty_token",
+        "currency",
+        "direction",
+        "payment_reference",
+        "posted_date",
+        "source_system",
+        "status",
+        "transaction_date",
+        "transaction_type"
+      ],
+      "important_identifier_fields": [
+        "bank_transaction_id",
+        "payment_reference",
+        "bank_reference",
+        "bank_account_id",
+        "counterparty_token"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "BANK_TRANSACTION",
+      "permitted_graph_use_fields": [
+        "bank_transaction_id"
+      ],
+      "record_count": 6261,
+      "source_table": "bank_transactions",
+      "source_type": "BANK_TRANSACTION",
+      "temporal_eligibility_field": "posted_date"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "bank_statement_id"
+      ],
+      "canonical_record_id_format": "bank_statements:{bank_statement_id}",
+      "context_only_fields": [
+        "bank_account_id",
+        "closing_balance",
+        "opening_balance",
+        "source_system",
+        "statement_date",
+        "total_credits",
+        "total_debits"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "bank_account_id",
+        "closing_balance",
+        "opening_balance",
+        "source_system",
+        "statement_date",
+        "total_credits",
+        "total_debits"
+      ],
+      "important_identifier_fields": [
+        "bank_statement_id",
+        "bank_account_id"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "BANK_STATEMENT",
+      "permitted_graph_use_fields": [
+        "bank_statement_id"
+      ],
+      "record_count": 54,
+      "source_table": "bank_statements",
+      "source_type": "BANK_STATEMENT",
+      "temporal_eligibility_field": "statement_date"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "employee_id"
+      ],
+      "canonical_record_id_format": "employees:{employee_id}",
+      "context_only_fields": [
+        "active_status",
+        "approval_limit",
+        "department",
+        "role",
+        "source_system"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "active_status",
+        "approval_limit",
+        "department",
+        "role",
+        "source_system"
+      ],
+      "important_identifier_fields": [
+        "employee_id"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "EMPLOYEE",
+      "permitted_graph_use_fields": [
+        "employee_id"
+      ],
+      "record_count": 120,
+      "source_table": "employees",
+      "source_type": "EMPLOYEE",
+      "temporal_eligibility_field": "delivered cutoff snapshot; no row timestamp"
+    },
+    {
+      "candidate_or_conditional_graph_use_fields": [
+        "actor_id"
+      ],
+      "canonical_id_unique": true,
+      "canonical_primary_key": [
+        "event_id"
+      ],
+      "canonical_record_id_format": "audit_log:{event_id}",
+      "context_only_fields": [
+        "actor_id",
+        "event_type",
+        "field",
+        "new_value",
+        "old_value",
+        "source_system",
+        "timestamp"
+      ],
+      "duplicate_canonical_id_count": 0,
+      "fields_prohibited_from_graph_traversal": [
+        "actor_id",
+        "event_type",
+        "field",
+        "new_value",
+        "old_value",
+        "source_system",
+        "timestamp"
+      ],
+      "important_identifier_fields": [
+        "event_id",
+        "entity_type",
+        "entity_id",
+        "actor_id"
+      ],
+      "malformed_record_id_count": 0,
+      "missing_primary_key_count": 0,
+      "node_type": "AUDIT_EVENT",
+      "permitted_graph_use_fields": [
+        "event_id",
+        "entity_type",
+        "entity_id"
+      ],
+      "record_count": 28029,
+      "source_table": "audit_log",
+      "source_type": "AUDIT_EVENT",
+      "temporal_eligibility_field": "timestamp"
+    }
+  ],
+  "non_node_context_dimensions": {
+    "may_become_bridge_nodes": false,
+    "permitted_uses": [
+      "attributes",
+      "filters",
+      "comparison fields",
+      "context"
+    ],
+    "values": [
+      "bank_account_id",
+      "gl_account",
+      "department",
+      "cost_center",
+      "currency",
+      "source_system",
+      "dates",
+      "status values"
+    ]
+  },
+  "parent_draft_path": "results/graphrag/pre_freeze_review_v1/graph_node_registry_v1_draft.json",
+  "parent_draft_sha256": "bcff755ca31c7b3012c4e49ccecfd562bd7bb60affc5ba02e6b464a8a3b5ffdf",
+  "phase5_corpus_text_manifest_sha256": "8842865bd6e688f824a0b16450301fb547c62c4ba495099d605753ebaf2ff00d",
+  "phase5_index_manifest_sha256": "527b5980f1544dda5eab4581f8cb9c498e2a8e7633e4c061dd232b8cff05e3a6",
+  "registry_id": "graph_node_registry_v1",
+  "scientific_integrity": {
+    "benchmark_answers_encoded_in_graph": false,
+    "detailed_guarantee_in_freeze_manifest": true,
+    "label_independent": true,
+    "operational_relationships_only": true,
+    "prohibited_benchmark_sources_used": false
+  },
+  "serialization_convention": {
+    "format": "UTF-8 JSON",
+    "hash_algorithm": "SHA-256",
+    "hash_scope": "raw serialized file bytes",
+    "json_options": {
+      "ensure_ascii": false,
+      "indent": 2,
+      "sort_keys": true,
+      "trailing_newline": true
+    }
+  },
+  "synthetic_node_types": [],
+  "total_record_count": 155391
+}

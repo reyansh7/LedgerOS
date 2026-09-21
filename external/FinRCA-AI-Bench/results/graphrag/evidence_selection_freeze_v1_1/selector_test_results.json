@@ -1,0 +1,24 @@
+{
+  "artifact_type": "graph_v1_1_evidence_selection_test_result",
+  "artifact_version": "1.1",
+  "command": "python3 -m pytest -q tests/graphrag/test_evidence_selection_v1_1.py",
+  "coverage": [
+    "anchor only and all-fit below 40",
+    "40/41/50/121 record boundaries",
+    "EXACT_MULTI and mandatory overflow",
+    "same-family prefix canonicalization",
+    "GL/backbone before supporting/context",
+    "overlap and atomic nonfit",
+    "context-anchor owner bridge",
+    "forbidden-signal projection isolation",
+    "forbidden transitions/nodes/out-of-pool records",
+    "shuffled-input determinism"
+  ],
+  "created_at_utc": "2026-08-15T23:38:00Z",
+  "fixture_scope": "SYNTHETIC_POLICY_VALID_METADATA_ONLY",
+  "graph_retraversed": false,
+  "status": "PASS",
+  "tests_failed": 0,
+  "tests_passed": 23,
+  "validation_gold_opened": false
+}

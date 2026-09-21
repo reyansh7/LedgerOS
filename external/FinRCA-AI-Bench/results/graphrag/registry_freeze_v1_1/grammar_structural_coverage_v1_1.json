@@ -1,0 +1,2672 @@
+{
+  "artifact_name": "grammar_structural_coverage_v1_1.json",
+  "artifact_type": "graphrag_typed_grammar_structural_coverage",
+  "artifact_version": "1.1",
+  "by_anchor_type": {
+    "bank_transaction": {
+      "by_depth": {
+        "1": {
+          "represented_sequence_count": 2,
+          "safe_sequence_count": 2,
+          "structural_sequence_coverage": 1.0
+        },
+        "2": {
+          "represented_sequence_count": 0,
+          "safe_sequence_count": 0,
+          "structural_sequence_coverage": null
+        },
+        "3": {
+          "represented_sequence_count": 0,
+          "safe_sequence_count": 0,
+          "structural_sequence_coverage": null
+        }
+      },
+      "overall": {
+        "represented_sequence_count": 2,
+        "safe_sequence_count": 2,
+        "structural_sequence_coverage": 1.0
+      }
+    },
+    "gl_journal": {
+      "by_depth": {
+        "1": {
+          "represented_sequence_count": 1,
+          "safe_sequence_count": 1,
+          "structural_sequence_coverage": 1.0
+        },
+        "2": {
+          "represented_sequence_count": 4,
+          "safe_sequence_count": 4,
+          "structural_sequence_coverage": 1.0
+        },
+        "3": {
+          "represented_sequence_count": 8,
+          "safe_sequence_count": 8,
+          "structural_sequence_coverage": 1.0
+        }
+      },
+      "overall": {
+        "represented_sequence_count": 13,
+        "safe_sequence_count": 13,
+        "structural_sequence_coverage": 1.0
+      }
+    },
+    "invoice": {
+      "by_depth": {
+        "1": {
+          "represented_sequence_count": 7,
+          "safe_sequence_count": 7,
+          "structural_sequence_coverage": 1.0
+        },
+        "2": {
+          "represented_sequence_count": 9,
+          "safe_sequence_count": 9,
+          "structural_sequence_coverage": 1.0
+        },
+        "3": {
+          "represented_sequence_count": 19,
+          "safe_sequence_count": 19,
+          "structural_sequence_coverage": 1.0
+        }
+      },
+      "overall": {
+        "represented_sequence_count": 35,
+        "safe_sequence_count": 35,
+        "structural_sequence_coverage": 1.0
+      }
+    },
+    "payment": {
+      "by_depth": {
+        "1": {
+          "represented_sequence_count": 4,
+          "safe_sequence_count": 4,
+          "structural_sequence_coverage": 1.0
+        },
+        "2": {
+          "represented_sequence_count": 8,
+          "safe_sequence_count": 8,
+          "structural_sequence_coverage": 1.0
+        },
+        "3": {
+          "represented_sequence_count": 14,
+          "safe_sequence_count": 14,
+          "structural_sequence_coverage": 1.0
+        }
+      },
+      "overall": {
+        "represented_sequence_count": 26,
+        "safe_sequence_count": 26,
+        "structural_sequence_coverage": 1.0
+      }
+    }
+  },
+  "by_depth": {
+    "1": {
+      "represented_sequence_count": 14,
+      "safe_sequence_count": 14,
+      "structural_sequence_coverage": 1.0
+    },
+    "2": {
+      "represented_sequence_count": 21,
+      "safe_sequence_count": 21,
+      "structural_sequence_coverage": 1.0
+    },
+    "3": {
+      "represented_sequence_count": 41,
+      "safe_sequence_count": 41,
+      "structural_sequence_coverage": 1.0
+    }
+  },
+  "created_at_utc": "2026-08-15T17:54:51Z",
+  "definition": "Distinct Phase 6A.1 safe direction-aware typed sequences both accepted by explicit draft transition/state rules and emitted at least once by the 416-route topology simulator / all distinct Phase 6A.1 safe sequences.",
+  "excluded_sequence_count": 0,
+  "excluded_sequences": [],
+  "freeze_recheck_result": "PASS",
+  "freeze_status": "FROZEN_GRAPH_V1_1_TYPED_GRAMMAR",
+  "frozen_v1_motif_sequence_coverage_context": {
+    "ratio": 0.06578947368421052,
+    "represented": 5,
+    "safe_sequences": 76
+  },
+  "gold_evidence_used": false,
+  "metric_is_retrieval_performance": false,
+  "metric_name": "STRUCTURAL_SEQUENCE_COVERAGE",
+  "not_required_document_recall": true,
+  "overall": {
+    "represented_sequence_count": 76,
+    "safe_sequence_count": 76,
+    "structural_sequence_coverage": 1.0
+  },
+  "parent_phase6a2_artifact_path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_structural_coverage.json",
+  "parent_phase6a2_artifact_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+  "sequence_results": [
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 195,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "INVOICE_LINE"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 452,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_cb472a64075bfd95ed22",
+      "simulated_path_instance_count": 452,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 452
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE"
+      ],
+      "traversal_sequence": [
+        "LINE_OF_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 181,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "GL_ENTRY"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 380,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_9d73a2a7585cb71386ed",
+      "simulated_path_instance_count": 380,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 380
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 181,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 244,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_c2448bb4494508e6b43b",
+      "simulated_path_instance_count": 244,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 244
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "AUDIT_EVENT_FOR_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 168,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "GL_ENTRY"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 752,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_1c2f525a4083b8406800",
+      "simulated_path_instance_count": 752,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 752
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "PAYMENT_ALLOCATION",
+        "INVOICE",
+        "INVOICE_LINE"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 527,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_0a788e1aa7da7bd05c5c",
+      "simulated_path_instance_count": 527,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 527
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_OF_PAYMENT:reverse",
+        "ALLOCATION_TO_INVOICE:forward",
+        "LINE_OF_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "PAYMENT_ALLOCATION",
+        "INVOICE",
+        "GL_ENTRY"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 961,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_1c46635c746e4f2843aa",
+      "simulated_path_instance_count": 961,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 961
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_OF_PAYMENT:reverse",
+        "ALLOCATION_TO_INVOICE:forward",
+        "GL_SOURCE_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 448,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_28c0a0c5df6f5ede4f73",
+      "simulated_path_instance_count": 448,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 448
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "AUDIT_EVENT_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "PAYMENT_ALLOCATION",
+        "INVOICE",
+        "APPROVAL_EVENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 475,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_55225681bfc8f57c12e7",
+      "simulated_path_instance_count": 475,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 475
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_OF_PAYMENT:reverse",
+        "ALLOCATION_TO_INVOICE:forward",
+        "APPROVAL_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "GL_ENTRY"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 961,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_6dfe67a22ac995ebdfda",
+      "simulated_path_instance_count": 961,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 961
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "GL_SOURCE_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "PAYMENT_ALLOCATION",
+        "INVOICE",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 448,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_81fb9b24af8e21f125ba",
+      "simulated_path_instance_count": 448,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 448
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_OF_PAYMENT:reverse",
+        "ALLOCATION_TO_INVOICE:forward",
+        "AUDIT_EVENT_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "PAYMENT_ALLOCATION",
+        "INVOICE"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 224,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_835ec7063ab88a1302b1",
+      "simulated_path_instance_count": 224,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 224
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_OF_PAYMENT:reverse",
+        "ALLOCATION_TO_INVOICE:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "PAYMENT_ALLOCATION"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 224,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_85cda035f574b22619cb",
+      "simulated_path_instance_count": 224,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 224
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_OF_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "PAYMENT_ALLOCATION"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 265,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_9423f7feea25619da387",
+      "simulated_path_instance_count": 265,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 265
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "ALLOCATION_TO_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "APPROVAL_EVENT"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 475,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_9ce4194941e369e3e756",
+      "simulated_path_instance_count": 475,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 475
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "APPROVAL_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 224,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_e66c41be9997e5516c15",
+      "simulated_path_instance_count": 224,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 224
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 163,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "INVOICE_LINE"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 527,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_eab1c54117c54df6fc43",
+      "simulated_path_instance_count": 527,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 527
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "LINE_OF_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 152,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 344,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_973f3a173e41d411396d",
+      "simulated_path_instance_count": 344,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 344
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "AUDIT_EVENT_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 152,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "APPROVAL_EVENT"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 339,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_b431e7f2513bdac5a4af",
+      "simulated_path_instance_count": 339,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 339
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT"
+      ],
+      "traversal_sequence": [
+        "APPROVAL_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 139,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PURCHASE_ORDER"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 139,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_44eff684611842d14d39",
+      "simulated_path_instance_count": 139,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 139
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER"
+      ],
+      "traversal_sequence": [
+        "INVOICE_REFERENCES_PO:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 139,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PURCHASE_ORDER",
+        "PO_LINE"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 329,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_6b3c30faeee6e9900138",
+      "simulated_path_instance_count": 329,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 329
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+        "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE"
+      ],
+      "traversal_sequence": [
+        "INVOICE_REFERENCES_PO:forward",
+        "LINE_OF_PO:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 139,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PURCHASE_ORDER",
+        "PO_LINE",
+        "INVOICE_LINE"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 372,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_6cbe447b0a346f6d2213",
+      "simulated_path_instance_count": 372,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 372
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+        "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE",
+        "TR_PO_LINE__INVOICE_LINE_REFERENCES_PO_LINE__REVERSE__INVOICE_LINE"
+      ],
+      "traversal_sequence": [
+        "INVOICE_REFERENCES_PO:forward",
+        "LINE_OF_PO:reverse",
+        "INVOICE_LINE_REFERENCES_PO_LINE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 139,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PURCHASE_ORDER",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 139,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_7ec72c221da8d703ea8a",
+      "simulated_path_instance_count": 139,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 139
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+        "TR_PURCHASE_ORDER__AUDIT_EVENT_FOR_PURCHASE_ORDER__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "INVOICE_REFERENCES_PO:forward",
+        "AUDIT_EVENT_FOR_PURCHASE_ORDER:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 139,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "INVOICE_LINE",
+        "PO_LINE"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 329,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_832243608201dc96cbc2",
+      "simulated_path_instance_count": 329,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 329
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE",
+        "TR_INVOICE_LINE__INVOICE_LINE_REFERENCES_PO_LINE__FORWARD__PO_LINE"
+      ],
+      "traversal_sequence": [
+        "LINE_OF_INVOICE:reverse",
+        "INVOICE_LINE_REFERENCES_PO_LINE:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 139,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "INVOICE_LINE",
+        "PO_LINE",
+        "PURCHASE_ORDER"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 329,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_bea30531d9d0690f5549",
+      "simulated_path_instance_count": 329,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 329
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE",
+        "TR_INVOICE_LINE__INVOICE_LINE_REFERENCES_PO_LINE__FORWARD__PO_LINE",
+        "TR_PO_LINE__LINE_OF_PO__FORWARD__PURCHASE_ORDER"
+      ],
+      "traversal_sequence": [
+        "LINE_OF_INVOICE:reverse",
+        "INVOICE_LINE_REFERENCES_PO_LINE:forward",
+        "LINE_OF_PO:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 115,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "PURCHASE_ORDER",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 139,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_004a45ada0eb1338315a",
+      "simulated_path_instance_count": 139,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 139
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+        "TR_PURCHASE_ORDER__AUDIT_EVENT_FOR_PURCHASE_ORDER__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "INVOICE_REFERENCES_PO:forward",
+        "AUDIT_EVENT_FOR_PURCHASE_ORDER:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 115,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "PURCHASE_ORDER"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 139,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_b0725c7e5b13cc73dd3c",
+      "simulated_path_instance_count": 139,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 139
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "INVOICE_REFERENCES_PO:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 115,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "INVOICE_LINE",
+        "PO_LINE"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 335,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_ed381a66158f46750121",
+      "simulated_path_instance_count": 335,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 335
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE",
+        "TR_INVOICE_LINE__INVOICE_LINE_REFERENCES_PO_LINE__FORWARD__PO_LINE"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "LINE_OF_INVOICE:reverse",
+        "INVOICE_LINE_REFERENCES_PO_LINE:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 115,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "PAYMENT_ALLOCATION",
+        "INVOICE",
+        "PURCHASE_ORDER"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 139,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_f518c449d765324ba7b6",
+      "simulated_path_instance_count": 139,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 139
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_OF_PAYMENT:reverse",
+        "ALLOCATION_TO_INVOICE:forward",
+        "INVOICE_REFERENCES_PO:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 115,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "PURCHASE_ORDER",
+        "PO_LINE"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 335,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_f89fe57a08ac950b014c",
+      "simulated_path_instance_count": 335,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 335
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+        "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "INVOICE_REFERENCES_PO:forward",
+        "LINE_OF_PO:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 56,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 88,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_0c8a5a81684e332b3434",
+      "simulated_path_instance_count": 88,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 88
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 56,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT_ALLOCATION",
+        "PAYMENT"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 88,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_136afbe631c8196773ba",
+      "simulated_path_instance_count": 88,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 88
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_TO_INVOICE:reverse",
+        "ALLOCATION_OF_PAYMENT:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 56,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT_ALLOCATION"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 88,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_682be9aa75b9ef96471d",
+      "simulated_path_instance_count": 88,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 88
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_TO_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 56,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT_ALLOCATION",
+        "PAYMENT",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 71,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_90af920f3dd029e60918",
+      "simulated_path_instance_count": 71,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 71
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_TO_INVOICE:reverse",
+        "ALLOCATION_OF_PAYMENT:forward",
+        "AUDIT_EVENT_FOR_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 56,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 71,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_9cc88761866df86237e0",
+      "simulated_path_instance_count": 71,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 71
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "AUDIT_EVENT_FOR_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 56,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT_ALLOCATION",
+        "PAYMENT",
+        "GL_ENTRY"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 176,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_ae873acbadce9fb5036c",
+      "simulated_path_instance_count": 176,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 176
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_TO_INVOICE:reverse",
+        "ALLOCATION_OF_PAYMENT:forward",
+        "GL_SOURCE_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 56,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "PAYMENT_ALLOCATION"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 104,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_bcc8b79b609e2280a364",
+      "simulated_path_instance_count": 104,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 104
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "ALLOCATION_OF_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 56,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "GL_ENTRY"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 176,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_e6d1ba35d1e62653d72e",
+      "simulated_path_instance_count": 176,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 176
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "GL_SOURCE_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 40,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "PAYMENT_ALLOCATION",
+        "INVOICE",
+        "PAYMENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 41,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_05b8ee5a9c5d143ef21a",
+      "simulated_path_instance_count": 41,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 41
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_OF_PAYMENT:reverse",
+        "ALLOCATION_TO_INVOICE:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 40,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "PAYMENT",
+        "GL_ENTRY"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 84,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_72d33e04959fd87ae92d",
+      "simulated_path_instance_count": 84,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 84
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "GL_SOURCE_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 40,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "PAYMENT",
+        "PAYMENT_ALLOCATION"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 41,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_8195973b1f73c28c0f98",
+      "simulated_path_instance_count": 41,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 41
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "ALLOCATION_OF_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 40,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "PAYMENT_ALLOCATION",
+        "PAYMENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 41,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_a31338c20e7864562e09",
+      "simulated_path_instance_count": 41,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 41
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "ALLOCATION_TO_INVOICE:reverse",
+        "ALLOCATION_OF_PAYMENT:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 40,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "PAYMENT_ALLOCATION",
+        "INVOICE",
+        "PAYMENT_ALLOCATION"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 41,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_bea4f98cd9ec960add55",
+      "simulated_path_instance_count": 41,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 41
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_OF_PAYMENT:reverse",
+        "ALLOCATION_TO_INVOICE:forward",
+        "ALLOCATION_TO_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 40,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "PAYMENT",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 40,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_daad8306c1675a34e165",
+      "simulated_path_instance_count": 40,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 40
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "AUDIT_EVENT_FOR_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "payment"
+      ],
+      "distinct_anchor_count": 40,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "PAYMENT",
+        "INVOICE",
+        "PAYMENT"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 41,
+      "represented_by_anchor_type": {
+        "payment": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_fc8d6892f59cb37a8257",
+      "simulated_path_instance_count": 41,
+      "simulated_path_instance_count_by_anchor_type": {
+        "payment": 41
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "bank_transaction"
+      ],
+      "distinct_anchor_count": 22,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "BANK_TRANSACTION",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 22,
+      "represented_by_anchor_type": {
+        "bank_transaction": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_f8598faa47149c7e25bc",
+      "simulated_path_instance_count": 22,
+      "simulated_path_instance_count_by_anchor_type": {
+        "bank_transaction": 22
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_BANK_TRANSACTION__AUDIT_EVENT_FOR_BANK_TRANSACTION__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "AUDIT_EVENT_FOR_BANK_TRANSACTION:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 17,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PURCHASE_ORDER",
+        "INVOICE"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 17,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_3a94768cb7365d7f92d8",
+      "simulated_path_instance_count": 17,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 17
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+        "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE"
+      ],
+      "traversal_sequence": [
+        "INVOICE_REFERENCES_PO:forward",
+        "INVOICE_REFERENCES_PO:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 17,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PURCHASE_ORDER",
+        "INVOICE",
+        "GL_ENTRY"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 80,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_4481e5499e72c24a0762",
+      "simulated_path_instance_count": 80,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 80
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+        "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE",
+        "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "INVOICE_REFERENCES_PO:forward",
+        "INVOICE_REFERENCES_PO:reverse",
+        "GL_SOURCE_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 17,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PURCHASE_ORDER",
+        "INVOICE",
+        "APPROVAL_EVENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 38,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_5a885ed9931325f041dc",
+      "simulated_path_instance_count": 38,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 38
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+        "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE",
+        "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT"
+      ],
+      "traversal_sequence": [
+        "INVOICE_REFERENCES_PO:forward",
+        "INVOICE_REFERENCES_PO:reverse",
+        "APPROVAL_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 17,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PURCHASE_ORDER",
+        "INVOICE",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 34,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_7fd42673e4c9c0629566",
+      "simulated_path_instance_count": 34,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 34
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+        "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE",
+        "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "INVOICE_REFERENCES_PO:forward",
+        "INVOICE_REFERENCES_PO:reverse",
+        "AUDIT_EVENT_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 17,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PURCHASE_ORDER",
+        "INVOICE",
+        "INVOICE_LINE"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 43,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_ceb745eef44c962805b4",
+      "simulated_path_instance_count": 43,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 43
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+        "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE",
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE"
+      ],
+      "traversal_sequence": [
+        "INVOICE_REFERENCES_PO:forward",
+        "INVOICE_REFERENCES_PO:reverse",
+        "LINE_OF_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 17,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "INVOICE_LINE",
+        "PO_LINE",
+        "INVOICE_LINE"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 43,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_d9853295dc7c8025201c",
+      "simulated_path_instance_count": 43,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 43
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE",
+        "TR_INVOICE_LINE__INVOICE_LINE_REFERENCES_PO_LINE__FORWARD__PO_LINE",
+        "TR_PO_LINE__INVOICE_LINE_REFERENCES_PO_LINE__REVERSE__INVOICE_LINE"
+      ],
+      "traversal_sequence": [
+        "LINE_OF_INVOICE:reverse",
+        "INVOICE_LINE_REFERENCES_PO_LINE:forward",
+        "INVOICE_LINE_REFERENCES_PO_LINE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 16,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "INVOICE",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 32,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_1c141a170342768e81ca",
+      "simulated_path_instance_count": 32,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 32
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "AUDIT_EVENT_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 16,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "PAYMENT_ALLOCATION",
+        "INVOICE"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 16,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_6ae2aba99dc5272c067c",
+      "simulated_path_instance_count": 16,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 16
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "ALLOCATION_OF_PAYMENT:reverse",
+        "ALLOCATION_TO_INVOICE:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 16,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "INVOICE",
+        "INVOICE_LINE"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 31,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_70013028cb4d57897ac0",
+      "simulated_path_instance_count": 31,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 31
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "LINE_OF_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 16,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT_ALLOCATION",
+        "PAYMENT",
+        "INVOICE"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 16,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_7bc4b9208841784dc33a",
+      "simulated_path_instance_count": 16,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 16
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_TO_INVOICE:reverse",
+        "ALLOCATION_OF_PAYMENT:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 16,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT_ALLOCATION",
+        "PAYMENT",
+        "PAYMENT_ALLOCATION"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 16,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_944a31d830fd54e61705",
+      "simulated_path_instance_count": 16,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 16
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION"
+      ],
+      "traversal_sequence": [
+        "ALLOCATION_TO_INVOICE:reverse",
+        "ALLOCATION_OF_PAYMENT:forward",
+        "ALLOCATION_OF_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 16,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "INVOICE",
+        "APPROVAL_EVENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 35,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_9a870849b4828bcb5b14",
+      "simulated_path_instance_count": 35,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 35
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "APPROVAL_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 16,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "INVOICE",
+        "GL_ENTRY"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 60,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_aafbf85127d83327ce37",
+      "simulated_path_instance_count": 60,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 60
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "GL_SOURCE_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 16,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "INVOICE",
+        "PAYMENT_ALLOCATION"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 17,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_b2edf7c0d1c101e28daa",
+      "simulated_path_instance_count": 17,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 17
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "ALLOCATION_TO_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 16,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "INVOICE"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 16,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_b88cfa730769a1f33042",
+      "simulated_path_instance_count": 16,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 16
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 14,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "INVOICE",
+        "GL_ENTRY"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 150,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_12254039fd7554d0268b",
+      "simulated_path_instance_count": 150,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 150
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "GL_SOURCE_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 14,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "INVOICE",
+        "APPROVAL_EVENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 80,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_1a980e88bb39eb197c54",
+      "simulated_path_instance_count": 80,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 80
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "APPROVAL_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 14,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "GL_ENTRY"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 28,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_2c97d8fb38abdc534788",
+      "simulated_path_instance_count": 28,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 28
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "GL_SOURCE_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 14,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "INVOICE"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 36,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_8f10782bd3a6dad9d2d5",
+      "simulated_path_instance_count": 36,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 36
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 14,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "INVOICE",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 72,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_91b88b682609e49afae0",
+      "simulated_path_instance_count": 72,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 72
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "AUDIT_EVENT_FOR_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 14,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "PAYMENT_ALLOCATION",
+        "INVOICE"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 36,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_a7eab351853a3d06c9d9",
+      "simulated_path_instance_count": 36,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 36
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+        "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "ALLOCATION_OF_PAYMENT:reverse",
+        "ALLOCATION_TO_INVOICE:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 14,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "INVOICE",
+        "PAYMENT_ALLOCATION"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 44,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_c43c2c12c61aa84425f5",
+      "simulated_path_instance_count": 44,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 44
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "ALLOCATION_TO_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 14,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "AUDIT_EVENT"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 28,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_d217f19e4df77f03d0ec",
+      "simulated_path_instance_count": 28,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 28
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "AUDIT_EVENT_FOR_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 14,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "PAYMENT_ALLOCATION"
+      ],
+      "path_depth": 2,
+      "path_instance_count": 36,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_dc1aa28d46f24f7c98ae",
+      "simulated_path_instance_count": 36,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 36
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "ALLOCATION_OF_PAYMENT:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 14,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 28,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_e35dcdc3ff2384c1f1b1",
+      "simulated_path_instance_count": 28,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 28
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 14,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "INVOICE",
+        "INVOICE_LINE"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 84,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_e9da5f7a67f8cadc6f4a",
+      "simulated_path_instance_count": 84,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 84
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "LINE_OF_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 11,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "INVOICE",
+        "PURCHASE_ORDER"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 11,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_12ad0632ddae2488b841",
+      "simulated_path_instance_count": 11,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 11
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "INVOICE_REFERENCES_PO:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 9,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "INVOICE",
+        "PURCHASE_ORDER"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 20,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_6788c62cb1f427fb3c40",
+      "simulated_path_instance_count": 20,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 20
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "INVOICE_REFERENCES_PO:forward"
+      ]
+    },
+    {
+      "anchor_types": [
+        "bank_transaction"
+      ],
+      "distinct_anchor_count": 4,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "BANK_TRANSACTION",
+        "GL_ENTRY"
+      ],
+      "path_depth": 1,
+      "path_instance_count": 8,
+      "represented_by_anchor_type": {
+        "bank_transaction": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_fe899a8ff52c3c7b17ff",
+      "simulated_path_instance_count": 8,
+      "simulated_path_instance_count_by_anchor_type": {
+        "bank_transaction": 8
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_BANK_TRANSACTION__GL_SOURCE_BANK_TRANSACTION__REVERSE__GL_ENTRY"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_BANK_TRANSACTION:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "gl_journal"
+      ],
+      "distinct_anchor_count": 3,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "INVOICE",
+        "PAYMENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 8,
+      "represented_by_anchor_type": {
+        "gl_journal": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_755aaa69ae0d618fe7db",
+      "simulated_path_instance_count": 8,
+      "simulated_path_instance_count_by_anchor_type": {
+        "gl_journal": 8
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT"
+      ],
+      "traversal_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+      ]
+    },
+    {
+      "anchor_types": [
+        "invoice"
+      ],
+      "distinct_anchor_count": 1,
+      "exclusion_reason": null,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "INVOICE",
+        "PAYMENT"
+      ],
+      "path_depth": 3,
+      "path_instance_count": 1,
+      "represented_by_anchor_type": {
+        "invoice": true
+      },
+      "represented_by_draft_grammar": true,
+      "sequence_id": "SEQ_70153f39b62430b77840",
+      "simulated_path_instance_count": 1,
+      "simulated_path_instance_count_by_anchor_type": {
+        "invoice": 1
+      },
+      "syntactically_accepted_by_draft_grammar": true,
+      "transition_id_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+        "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT"
+      ],
+      "traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "PAYMENT_ALLOCATED_TO_INVOICE:forward",
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+      ]
+    }
+  ],
+  "serialization_convention": {
+    "concurrency_timing_dependency": false,
+    "encoding": "UTF-8",
+    "filesystem_order_dependency": false,
+    "hash_map_order_dependency": false,
+    "json_indentation_spaces": 2,
+    "json_key_order": "lexicographic via sort_keys=true",
+    "json_separators": "comma plus newline/indent; colon plus one space",
+    "newline": "LF with exactly one trailing newline",
+    "other_array_order": "explicit semantic parent order or explicitly documented stable key order",
+    "transition_array_order": "ascending transition_id",
+    "unicode": "ensure_ascii=false"
+  },
+  "status": "FROZEN",
+  "structural_sequence_coverage": 1.0
+}

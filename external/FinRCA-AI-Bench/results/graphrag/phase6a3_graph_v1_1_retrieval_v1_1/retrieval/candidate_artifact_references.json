@@ -1,0 +1,20 @@
+{
+  "artifact_type": "phase6a3_resume_candidate_parent_references",
+  "artifact_version": "1.1",
+  "candidate_paths": {
+    "bytes": 24257308,
+    "copied_path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_1/retrieval/candidate_paths.jsonl",
+    "parent_path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_paths.jsonl",
+    "sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03"
+  },
+  "candidate_records": {
+    "bytes": 4336748,
+    "copied_path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_1/retrieval/candidate_records.jsonl",
+    "parent_path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_records.jsonl",
+    "sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c"
+  },
+  "created_at_utc": "2026-08-16T01:14:00Z",
+  "literal_raw_byte_copies_created": true,
+  "parent_candidate_run": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0",
+  "status": "FROZEN_PARENT_REFERENCE"
+}

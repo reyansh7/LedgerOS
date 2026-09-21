@@ -1,0 +1,35 @@
+{
+  "approximate_peak_rss_mb": 495.34375,
+  "batch_preprocess_and_model_seconds": 0.06401250002090819,
+  "cases": 439,
+  "end_to_end_sum_case_seconds": 30.648512096,
+  "environment": {
+    "cpu_count": 8,
+    "dependencies": {
+      "PyYAML": "6.0.1",
+      "joblib": "1.3.2",
+      "numpy": "1.26.0",
+      "pandas": "2.1.1",
+      "pytest": "8.4.2",
+      "scikit-learn": "1.4.1.post1"
+    },
+    "machine": "arm64",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.11.3 (v3.11.3:f3909b8bc8, Apr  4 2023, 20:12:10) [Clang 13.0.0 (clang-1300.0.29.30)]"
+  },
+  "estimator_size_bytes": 718824,
+  "external_service_cost": 0,
+  "feature_extraction_total_seconds": 3.940349292010069,
+  "mean_latency_ms": 69.81437835079727,
+  "median_latency_ms": 67.919958,
+  "p95_latency_ms": 91.93315869999992,
+  "p99_latency_ms": 136.43182362000005,
+  "preprocessor_size_bytes": 8032,
+  "ru_maxrss_raw": 519405568,
+  "runtime_technology": "Python/pandas/scikit-learn; no LLM, API, database, or external service",
+  "selected_fit_seconds": 4.848906333,
+  "serialized_total_bytes": 726856,
+  "throughput_cases_per_second": 14.323696975074192,
+  "total_search_seconds": 58.02869991699117
+}

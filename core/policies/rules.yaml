@@ -1,0 +1,36 @@
+# LedgerOS Financial Policy and Stopping Rules Engine Configuration
+
+version: "2.0"
+
+thresholds:
+  refund:
+    max_auto_amount: 5000.00
+    requires_approval_above: 5000.00
+    max_daily_exposure: 100000.00
+    disallowed_states:
+      - "disputed"
+      - "refunded"
+
+  void_invoice:
+    max_auto_amount: 25000.00
+    requires_approval_above: 25000.00
+    require_duplicate_evidence: true
+
+  credit_note:
+    max_auto_amount: 10000.00
+    requires_approval_above: 10000.00
+
+  high_risk_actions:
+    require_human_approval: true
+    actions:
+      - "WRITE_OFF"
+      - "REVERT_PAYMENT"
+      - "FILE_DISPUTE"
+      - "OVERRIDE_GL"
+
+escalation_rules:
+  stale_case_hours: 48
+  critical_amount_threshold: 50000.00
+  notification_channels:
+    - "finance_controller"
+    - "risk_ops"

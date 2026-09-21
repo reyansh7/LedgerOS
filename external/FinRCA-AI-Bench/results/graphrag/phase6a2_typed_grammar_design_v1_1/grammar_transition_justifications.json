@@ -1,0 +1,1690 @@
+{
+  "artifact_type": "graphrag_grammar_transition_justifications",
+  "artifact_version": "1.1-draft",
+  "justifications": [
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTEXT_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "An approval event records local approval context for exactly one invoice through invoice_id. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 17429,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 17429,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 17429,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "LOCAL_APPROVAL_CONTEXT",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "APPROVAL_EVENT",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "APPROVAL_EVENT",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "INVOICE",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_APPROVAL_EVENT__APPROVAL_FOR_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "APPROVAL_FOR_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTEXT_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A typed audit event's entity_id exactly identifies one bank transaction. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 28029,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 247,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.008812301544828571,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 247,
+        "p95_out_degree": 0,
+        "p99_out_degree": 0
+      },
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {
+          "permitted_entity_types": [
+            "bank_transaction"
+          ]
+        },
+        "current_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "bank_transaction_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "bank_transaction_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "AUDIT_EVENT",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "BANK_TRANSACTION",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "AUDIT_EVENT_FOR_BANK_TRANSACTION",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTEXT_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A typed audit event's entity_id exactly identifies one invoice. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 28029,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 16147,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.5760819151592993,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 16147,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {
+          "permitted_entity_types": [
+            "invoice"
+          ]
+        },
+        "current_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "AUDIT_EVENT",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "INVOICE",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "AUDIT_EVENT_FOR_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTEXT_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A typed audit event's entity_id exactly identifies one payment. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 28029,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 6500,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.2319026722323308,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 6500,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {
+          "permitted_entity_types": [
+            "payment"
+          ]
+        },
+        "current_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "payment_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "AUDIT_EVENT",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "PAYMENT",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PAYMENT__FORWARD__PAYMENT",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "AUDIT_EVENT_FOR_PAYMENT",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTEXT_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A typed audit event's entity_id exactly identifies one purchase order. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 28029,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5000,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.17838667094794677,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 5000,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {
+          "permitted_entity_types": [
+            "purchase_order"
+          ]
+        },
+        "current_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "AUDIT_EVENT",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "PURCHASE_ORDER",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PURCHASE_ORDER__FORWARD__PURCHASE_ORDER",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "AUDIT_EVENT_FOR_PURCHASE_ORDER",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": false,
+        "reason": "STOP_AFTER_LOCAL_CONTEXT_NODE"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A typed audit event's entity_id exactly identifies one bank transaction. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 6261,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 247,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.039450567002076345,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 247,
+        "p95_out_degree": 0,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "hub_risk": "NONE",
+      "multiplicity_class": "TERMINAL_CONTEXT_ONLY",
+      "operational_fields": {
+        "constraints": {
+          "permitted_entity_types": [
+            "bank_transaction"
+          ]
+        },
+        "current_node_operational_fields": [
+          "bank_transaction_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "bank_transaction_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "BANK_TRANSACTION",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "AUDIT_EVENT",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_BANK_TRANSACTION__AUDIT_EVENT_FOR_BANK_TRANSACTION__REVERSE__AUDIT_EVENT",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "AUDIT_EVENT_FOR_BANK_TRANSACTION",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": false,
+        "reason": "STOP_AFTER_ACCOUNTING_CONSEQUENCE"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A GL entry's typed source_transaction_id exactly identifies a bank transaction for approved transaction types. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 6261,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 314,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 0.050151732950007986,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 157,
+        "p95_out_degree": 0,
+        "p99_out_degree": 2
+      },
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "bank_fee",
+            "fx_settlement"
+          ]
+        },
+        "current_node_operational_fields": [
+          "bank_transaction_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "bank_transaction_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "BANK_TRANSACTION",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "GL_ENTRY",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_BANK_TRANSACTION__GL_SOURCE_BANK_TRANSACTION__REVERSE__GL_ENTRY",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "GL_SOURCE_BANK_TRANSACTION",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "GL_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A GL entry's typed source_transaction_id exactly identifies a bank transaction for approved transaction types. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 46755,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 314,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.0067158592663886215,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 314,
+        "p95_out_degree": 0,
+        "p99_out_degree": 0
+      },
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "bank_fee",
+            "fx_settlement"
+          ]
+        },
+        "current_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "bank_transaction_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "bank_transaction_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "GL_ENTRY",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "BANK_TRANSACTION",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_GL_ENTRY__GL_SOURCE_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "GL_SOURCE_BANK_TRANSACTION",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "GL_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A GL entry's typed source_transaction_id exactly identifies an invoice for approved transaction types. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 46755,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 33957,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.7262752646775746,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 33957,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "credit_memo",
+            "invoice",
+            "invoice_cancellation"
+          ]
+        },
+        "current_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "GL_ENTRY",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "INVOICE",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_GL_ENTRY__GL_SOURCE_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "GL_SOURCE_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "GL_ANCHOR_EXIT_ALLOWED_ONLY_AS_HOP_1"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A GL entry's typed source_transaction_id exactly identifies a payment for approved transaction types. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 46755,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 12484,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.2670088760560368,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 12484,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "payment",
+            "payment_reversal"
+          ]
+        },
+        "current_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "payment_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "GL_ENTRY",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "PAYMENT",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "GL_SOURCE_PAYMENT",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "An invoice line's po_line_id exactly identifies the corresponding purchase-order line. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 18299,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 11292,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.6170829007049565,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 11292,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_line_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_line_id"
+        ],
+        "provenance_record_type": "INVOICE_LINE",
+        "stored_relation_source_fields": [
+          "po_line_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_line_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "INVOICE_LINE",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "PO_LINE",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_INVOICE_LINE__INVOICE_LINE_REFERENCES_PO_LINE__FORWARD__PO_LINE",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "INVOICE_LINE_REFERENCES_PO_LINE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "An invoice line is an exact component of its invoice through invoice_id. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 18299,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 18299,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 18299,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "INVOICE_LINE",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "INVOICE_LINE",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "INVOICE",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_INVOICE_LINE__LINE_OF_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "LINE_OF_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A payment allocation identifies its exact invoice through invoice_id. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 3,
+        "mean_out_degree": 0.8813060022094023,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 6000,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "INVOICE",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "PAYMENT_ALLOCATION",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "ALLOCATION_TO_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": false,
+        "reason": "STOP_AFTER_LOCAL_CONTEXT_NODE"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "An approval event records local approval context for exactly one invoice through invoice_id. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 17429,
+        "maximum_out_degree": 4,
+        "mean_out_degree": 2.139315085307475,
+        "median_out_degree": 2,
+        "nonzero_current_node_count": 8000,
+        "p95_out_degree": 3,
+        "p99_out_degree": 3
+      },
+      "financial_lifecycle_role": "LOCAL_APPROVAL_CONTEXT",
+      "hub_risk": "NONE",
+      "multiplicity_class": "TERMINAL_CONTEXT_ONLY",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "APPROVAL_EVENT",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "INVOICE",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "APPROVAL_EVENT",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "APPROVAL_FOR_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": false,
+        "reason": "STOP_AFTER_LOCAL_CONTEXT_NODE"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A typed audit event's entity_id exactly identifies one invoice. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 16147,
+        "maximum_out_degree": 3,
+        "mean_out_degree": 1.9819565484227324,
+        "median_out_degree": 2,
+        "nonzero_current_node_count": 8000,
+        "p95_out_degree": 2,
+        "p99_out_degree": 3
+      },
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "hub_risk": "NONE",
+      "multiplicity_class": "TERMINAL_CONTEXT_ONLY",
+      "operational_fields": {
+        "constraints": {
+          "permitted_entity_types": [
+            "invoice"
+          ]
+        },
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "INVOICE",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "AUDIT_EVENT",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "AUDIT_EVENT_FOR_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": false,
+        "reason": "STOP_AFTER_ACCOUNTING_CONSEQUENCE"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A GL entry's typed source_transaction_id exactly identifies an invoice for approved transaction types. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 33957,
+        "maximum_out_degree": 8,
+        "mean_out_degree": 4.16803731434884,
+        "median_out_degree": 4,
+        "nonzero_current_node_count": 8047,
+        "p95_out_degree": 6,
+        "p99_out_degree": 7
+      },
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "BOUNDED_FANOUT",
+      "operational_fields": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "credit_memo",
+            "invoice",
+            "invoice_cancellation"
+          ]
+        },
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "INVOICE",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "GL_ENTRY",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "GL_SOURCE_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "An invoice's populated po_id is an exact reference to its purchase order and supports purchase-lifecycle navigation. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5024,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.6166687124094758,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 5024,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_id"
+        ],
+        "provenance_record_type": "INVOICE",
+        "stored_relation_source_fields": [
+          "po_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "INVOICE",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "PURCHASE_ORDER",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "INVOICE_REFERENCES_PO",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "An invoice line is an exact component of its invoice through invoice_id. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 18299,
+        "maximum_out_degree": 4,
+        "mean_out_degree": 2.246102859948447,
+        "median_out_degree": 2,
+        "nonzero_current_node_count": 8147,
+        "p95_out_degree": 4,
+        "p99_out_degree": 4
+      },
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "INVOICE_LINE",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "INVOICE",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "INVOICE_LINE",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "LINE_OF_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_WITH_EXPLICIT_PROVENANCE"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "The frozen direct payment-invoice association is backed by the PAYMENT_ALLOCATION provenance record; it is not inferred. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 3,
+        "mean_out_degree": 0.8813060022094023,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 6000,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "payment_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "payment_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "INVOICE",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "PAYMENT",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "PAYMENT_ALLOCATED_TO_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A payment allocation identifies its exact payment through payment_id. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 7180,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 7180,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "payment_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "payment_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "payment_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "PAYMENT_ALLOCATION",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "PAYMENT",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "ALLOCATION_OF_PAYMENT",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A payment allocation identifies its exact invoice through invoice_id. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 7180,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 7180,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "invoice_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "invoice_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "PAYMENT_ALLOCATION",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "INVOICE",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "ALLOCATION_TO_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A payment allocation identifies its exact payment through payment_id. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 6200,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 1.1580645161290322,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 6100,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "payment_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "payment_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "payment_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "PAYMENT",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "PAYMENT_ALLOCATION",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "ALLOCATION_OF_PAYMENT",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": false,
+        "reason": "STOP_AFTER_LOCAL_CONTEXT_NODE"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A typed audit event's entity_id exactly identifies one payment. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 6200,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 6500,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 1.0483870967741935,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 6100,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "hub_risk": "NONE",
+      "multiplicity_class": "TERMINAL_CONTEXT_ONLY",
+      "operational_fields": {
+        "constraints": {
+          "permitted_entity_types": [
+            "payment"
+          ]
+        },
+        "current_node_operational_fields": [
+          "payment_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "PAYMENT",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "AUDIT_EVENT",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "AUDIT_EVENT_FOR_PAYMENT",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": false,
+        "reason": "STOP_AFTER_ACCOUNTING_CONSEQUENCE"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A GL entry's typed source_transaction_id exactly identifies a payment for approved transaction types. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 6200,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 12484,
+        "maximum_out_degree": 4,
+        "mean_out_degree": 2.0135483870967743,
+        "median_out_degree": 2.0,
+        "nonzero_current_node_count": 6195,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "financial_lifecycle_role": "ACCOUNTING_CONSEQUENCE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {
+          "permitted_transaction_types": [
+            "payment",
+            "payment_reversal"
+          ]
+        },
+        "current_node_operational_fields": [
+          "payment_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "provenance_record_type": "GL_ENTRY",
+        "stored_relation_source_fields": [
+          "transaction_type",
+          "source_transaction_id"
+        ],
+        "stored_relation_target_fields": [
+          "payment_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "PAYMENT",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "GL_ENTRY",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "GL_SOURCE_PAYMENT",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_WITH_EXPLICIT_PROVENANCE"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "The frozen direct payment-invoice association is backed by the PAYMENT_ALLOCATION provenance record; it is not inferred. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 6200,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 7180,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 1.1580645161290322,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 6100,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "financial_lifecycle_role": "INVOICE_PAYMENT_SETTLEMENT_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "payment_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "invoice_id"
+        ],
+        "provenance_record_type": "PAYMENT_ALLOCATION",
+        "stored_relation_source_fields": [
+          "payment_id"
+        ],
+        "stored_relation_target_fields": [
+          "invoice_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "PAYMENT",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "INVOICE",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "PAYMENT_ALLOCATED_TO_INVOICE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "An invoice line's po_line_id exactly identifies the corresponding purchase-order line. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 11231,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 11292,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 1.0054313952453031,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 11136,
+        "p95_out_degree": 1,
+        "p99_out_degree": 2
+      },
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_line_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_line_id"
+        ],
+        "provenance_record_type": "INVOICE_LINE",
+        "stored_relation_source_fields": [
+          "po_line_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_line_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "PO_LINE",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "INVOICE_LINE",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_PO_LINE__INVOICE_LINE_REFERENCES_PO_LINE__REVERSE__INVOICE_LINE",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "INVOICE_LINE_REFERENCES_PO_LINE",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A purchase-order line is an exact component of its purchase-order header through po_id. Forward traversal follows the persisted stored edge and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 11231,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 11231,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 11231,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_id"
+        ],
+        "provenance_record_type": "PO_LINE",
+        "stored_relation_source_fields": [
+          "po_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "PO_LINE",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "PURCHASE_ORDER",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_PO_LINE__LINE_OF_PO__FORWARD__PURCHASE_ORDER",
+      "traversal_direction": "FORWARD",
+      "underlying_frozen_relation": "LINE_OF_PO",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": false,
+        "reason": "STOP_AFTER_LOCAL_CONTEXT_NODE"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A typed audit event's entity_id exactly identifies one purchase order. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 5000,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5000,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 5000,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "financial_lifecycle_role": "LOCAL_AUDIT_CONTEXT",
+      "hub_risk": "NONE",
+      "multiplicity_class": "TERMINAL_CONTEXT_ONLY",
+      "operational_fields": {
+        "constraints": {
+          "permitted_entity_types": [
+            "purchase_order"
+          ]
+        },
+        "current_node_operational_fields": [
+          "po_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "provenance_record_type": "AUDIT_EVENT",
+        "stored_relation_source_fields": [
+          "entity_type",
+          "entity_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "PURCHASE_ORDER",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "AUDIT_EVENT",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_PURCHASE_ORDER__AUDIT_EVENT_FOR_PURCHASE_ORDER__REVERSE__AUDIT_EVENT",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "AUDIT_EVENT_FOR_PURCHASE_ORDER",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "An invoice's populated po_id is an exact reference to its purchase order and supports purchase-lifecycle navigation. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 5000,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5024,
+        "maximum_out_degree": 2,
+        "mean_out_degree": 1.0048,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 4960,
+        "p95_out_degree": 1,
+        "p99_out_degree": 2
+      },
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_id"
+        ],
+        "provenance_record_type": "INVOICE",
+        "stored_relation_source_fields": [
+          "po_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "PURCHASE_ORDER",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "INVOICE",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "INVOICE_REFERENCES_PO",
+      "validation_gold_success_cited": false
+    },
+    {
+      "continuation_decision": {
+        "may_continue": true,
+        "reason": "CONTINUE_UNTIL_DEPTH_OR_OTHER_STOP"
+      },
+      "evidence_sources_used_for_justification": [
+        "graph_relation_registry_v1.json",
+        "relation_directionality_audit.json",
+        "persisted Phase 6A graph degree statistics"
+      ],
+      "factual_semantics_preservation": "A purchase-order line is an exact component of its purchase-order header through po_id. Reverse traversal changes navigation orientation only and creates no new operational fact.",
+      "fanout": {
+        "current_node_count": 5000,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 11231,
+        "maximum_out_degree": 4,
+        "mean_out_degree": 2.2462,
+        "median_out_degree": 2.0,
+        "nonzero_current_node_count": 5000,
+        "p95_out_degree": 4,
+        "p99_out_degree": 4
+      },
+      "financial_lifecycle_role": "PURCHASE_TO_INVOICE_LIFECYCLE",
+      "hub_risk": "NONE",
+      "multiplicity_class": "LOW_FANOUT",
+      "operational_fields": {
+        "constraints": {},
+        "current_node_operational_fields": [
+          "po_id"
+        ],
+        "field_orientation": "FROZEN_STORED_EDGE",
+        "next_node_operational_fields": [
+          "po_id"
+        ],
+        "provenance_record_type": "PO_LINE",
+        "stored_relation_source_fields": [
+          "po_id"
+        ],
+        "stored_relation_target_fields": [
+          "po_id"
+        ]
+      },
+      "provenance_behavior": "Retain edge_id, provenance_record_id, provenance_record_type, and provenance_fields on every path step.",
+      "reverse_safety_classification": "SAFE_REVERSIBLE_CANDIDATE",
+      "source_type": "PURCHASE_ORDER",
+      "status": "PROPOSAL_ONLY",
+      "target_type": "PO_LINE",
+      "temporal_behavior": "Require both endpoint nodes, edge, and provenance-derived effective availability to be cutoff eligible.",
+      "transition_id": "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE",
+      "traversal_direction": "REVERSE",
+      "underlying_frozen_relation": "LINE_OF_PO",
+      "validation_gold_success_cited": false
+    }
+  ],
+  "status": "PROPOSAL_ONLY",
+  "transition_count": 30
+}

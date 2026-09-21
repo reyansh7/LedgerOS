@@ -1,0 +1,35 @@
+{
+  "artifact_type": "graph_v1_1_evidence_selection_determinism_validation",
+  "artifact_version": "1.1",
+  "created_at_utc": "2026-08-15T23:38:00Z",
+  "drop_ledgers_identical": true,
+  "reversed_input_component_sha256": {
+    "case_results": "53e1bf5b37e9a6b6505615e88480c6e19ba068c38e1f2f26f8b9795b6c0164b2",
+    "path_drop_ledger": "014c534d21da6605f1e2b11414287361b7bf3be0ddee13ea1bb05238d154621c",
+    "record_drop_ledger": "8e2a70a6a41153b84387177e1431165765f5356c96b43103566d2ce90bb114d4",
+    "selected_paths": "d40b973ae3ec9819c8e8e4046fd875614467b89702ca91dfcadcfc55e0066c1c",
+    "selected_records": "36aeb6cc672226a6179f6c7597f9a6f387bf3e56e0a2e70226af1b12d71fb657"
+  },
+  "reversed_input_order_semantically_identical": true,
+  "run_1_component_sha256": {
+    "case_results": "53e1bf5b37e9a6b6505615e88480c6e19ba068c38e1f2f26f8b9795b6c0164b2",
+    "path_drop_ledger": "014c534d21da6605f1e2b11414287361b7bf3be0ddee13ea1bb05238d154621c",
+    "record_drop_ledger": "8e2a70a6a41153b84387177e1431165765f5356c96b43103566d2ce90bb114d4",
+    "selected_paths": "d40b973ae3ec9819c8e8e4046fd875614467b89702ca91dfcadcfc55e0066c1c",
+    "selected_records": "36aeb6cc672226a6179f6c7597f9a6f387bf3e56e0a2e70226af1b12d71fb657"
+  },
+  "run_2_component_sha256": {
+    "case_results": "53e1bf5b37e9a6b6505615e88480c6e19ba068c38e1f2f26f8b9795b6c0164b2",
+    "path_drop_ledger": "014c534d21da6605f1e2b11414287361b7bf3be0ddee13ea1bb05238d154621c",
+    "record_drop_ledger": "8e2a70a6a41153b84387177e1431165765f5356c96b43103566d2ce90bb114d4",
+    "selected_paths": "d40b973ae3ec9819c8e8e4046fd875614467b89702ca91dfcadcfc55e0066c1c",
+    "selected_records": "36aeb6cc672226a6179f6c7597f9a6f387bf3e56e0a2e70226af1b12d71fb657"
+  },
+  "same_input_double_run_identical": true,
+  "selected_path_ids_identical": true,
+  "selected_record_ids_and_order_identical": true,
+  "selection_tiers_reasons_and_provenance_identical": true,
+  "serial_parallel_equivalence": "NOT_APPLICABLE_SERIAL_ONLY",
+  "status": "PASS",
+  "timestamp_fields_in_selector_outputs": false
+}

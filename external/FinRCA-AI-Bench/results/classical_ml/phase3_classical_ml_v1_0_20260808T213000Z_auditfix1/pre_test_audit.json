@@ -1,0 +1,66 @@
+{
+  "dataset_hash": "c73ad3e98575cb4093b1b3898f759d69c57a97840b4d39661b983e91692761d8",
+  "dataset_version": "1.0.0",
+  "feature_pipeline_audit": "PASS",
+  "feature_registry_sha256": "b515b9f81e8284281dc7bddfcc2b32e9655d09fce71d8aed998b8687f7840d3d",
+  "frozen_ml_spec_sha256": "0d220564335a85e6fe3a193e212d68aec2abbf7744a23f267ba4390b428d6897",
+  "generated_before_test_feature_extraction_and_inference": true,
+  "git_commit": "UNAVAILABLE_NOT_A_GIT_WORKTREE",
+  "leakage_audit": "PASS",
+  "locked_model_hashes": {
+    "estimator_sha256": "74efefb97ec9dddef726f909c6e55128811ad63bfe178f7411afee3ca437e869",
+    "preprocessor_sha256": "39d4e41d090b698ba74e8eb77f482663cbd111fd204b099d2d326d00797e96fc"
+  },
+  "locked_rules_spec_sha256": "0ee3192dd760dd2521791ef46543c9c7337cc6d8eff0f3cd4a7cba9e5d645675",
+  "selected_model": {
+    "candidate_id": "hist_gradient_boosting_06",
+    "model_family": "hist_gradient_boosting",
+    "objective_tie_count_at_macro_f1": 1,
+    "parameters": {
+      "class_weight": "balanced",
+      "early_stopping": false,
+      "l2_regularization": 1.0,
+      "learning_rate": 0.1,
+      "max_iter": 200,
+      "max_leaf_nodes": 15,
+      "random_state": 314159
+    },
+    "parameters_json": "{\"class_weight\":\"balanced\",\"early_stopping\":false,\"l2_regularization\":1.0,\"learning_rate\":0.1,\"max_iter\":200,\"max_leaf_nodes\":15,\"random_state\":314159}",
+    "refit_after_selection": false,
+    "selection_data": "validation_only",
+    "tie_break_order": [
+      "higher macro F1",
+      "higher weighted F1",
+      "lower FPR",
+      "lower mean latency",
+      "simpler family logistic<random_forest<hist_gradient_boosting",
+      "canonical parameter JSON"
+    ],
+    "validation_mean_inference_latency_ns": 191546.77403846153,
+    "validation_metrics": {
+      "binary_accuracy": 0.96875,
+      "binary_f1": 0.9766606822262118,
+      "binary_precision": 0.9714285714285714,
+      "binary_recall": 0.9819494584837545,
+      "exact_accuracy": 0.96875,
+      "false_negative_rate": 0.018050541516245487,
+      "false_positive_rate": 0.05755395683453238,
+      "fn": 5,
+      "fp": 8,
+      "macro_f1": 0.9726611976400377,
+      "micro_f1": 0.96875,
+      "tn": 131,
+      "tp": 272,
+      "weighted_f1": 0.968776557695276
+    }
+  },
+  "split_identifiers_sha256": {
+    "test": "6bb26ae102ba5d957e6d70a0e58fda6fa94bd82f68a9dbaeca3561b8f3df1584",
+    "train": "f0e45a78d34b96cb1b66ef329db77a64f61f8cb86229880393510ec44c647aa9",
+    "validation": "fcfab5e4f0e980194eb27c490f18972df4fb39a85407db00e5af5bb4d1dbd769"
+  },
+  "status": "PASS",
+  "test_labels_opened_by_phase3_runner": false,
+  "unit_and_integration_tests": "PASS",
+  "unresolved_material_issues": []
+}

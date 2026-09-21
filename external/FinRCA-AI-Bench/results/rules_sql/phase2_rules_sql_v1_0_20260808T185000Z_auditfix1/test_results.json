@@ -1,0 +1,7 @@
+{
+  "command": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3 -m pytest tests/rules_sql -q",
+  "passed": true,
+  "return_code": 0,
+  "stderr": "",
+  "stdout": "........................................                                 [100%]\n40 passed in 4.81s\n"
+}

@@ -1,0 +1,82 @@
+{
+  "algorithm": "SHA-256",
+  "artifacts": [
+    {
+      "bytes": 15986,
+      "path": "results/graphrag/pre_freeze_review_v1/GRAPH_RAG_PRE_FREEZE_REVIEW.md",
+      "sha256": "5b56ecf5c616c7a7f888da0769b7c0b79555156187f98cb672993839f4ceb7c2"
+    },
+    {
+      "bytes": 2874,
+      "path": "results/graphrag/pre_freeze_review_v1/artifact_verification.json",
+      "sha256": "4cbe4e881df1c7ebf556b106a2f7ae6bd5876b2464c262c3779e1baf1acfcd0c"
+    },
+    {
+      "bytes": 10748,
+      "path": "results/graphrag/pre_freeze_review_v1/audit_event_entity_type_audit.json",
+      "sha256": "f02aab45d0bc772c01a2150f736860ea0e6c789ec97c50bc99bd6d4c1ac793a0"
+    },
+    {
+      "bytes": 7326,
+      "path": "results/graphrag/pre_freeze_review_v1/employee_reference_audit.json",
+      "sha256": "4b29a9fd061419b2dad7e76be788e62c90fb5c56767237a59f3b77fef0b69425"
+    },
+    {
+      "bytes": 9040,
+      "path": "results/graphrag/pre_freeze_review_v1/gl_transaction_type_audit.json",
+      "sha256": "f95fc1a99b1b7907ae93ccaad55504c41b09c8ecce74f3db13b4a787de56c381"
+    },
+    {
+      "bytes": 41797,
+      "path": "results/graphrag/pre_freeze_review_v1/graph_hub_risk_audit.json",
+      "sha256": "050b2aaf714291ba85b7dc2fa26846c40f41a4c0a23d4b57fb7ce1cb51dd9a57"
+    },
+    {
+      "bytes": 1661,
+      "path": "results/graphrag/pre_freeze_review_v1/graph_leakage_audit.json",
+      "sha256": "3be5a1fa75f02b09faf3267597408e122e4f4b77fe9a298c52675b3c6867b2c9"
+    },
+    {
+      "bytes": 19019,
+      "path": "results/graphrag/pre_freeze_review_v1/graph_node_registry_v1_draft.json",
+      "sha256": "bcff755ca31c7b3012c4e49ccecfd562bd7bb60affc5ba02e6b464a8a3b5ffdf"
+    },
+    {
+      "bytes": 11531,
+      "path": "results/graphrag/pre_freeze_review_v1/graph_path_motifs_v1_draft.json",
+      "sha256": "1b7c35b2e7c8a1e24c9ffa61cad4f5c66a3c579e9fb872e32560040f9c8c4c54"
+    },
+    {
+      "bytes": 1537,
+      "path": "results/graphrag/pre_freeze_review_v1/graph_ranking_policy_v1_draft.json",
+      "sha256": "d1c641acb2e7860feb8ebed10d04d83bc2d72e38d801102d13a261fc75321dce"
+    },
+    {
+      "bytes": 43344,
+      "path": "results/graphrag/pre_freeze_review_v1/graph_relation_registry_v1_draft.json",
+      "sha256": "70fa548ae0bfd16b0dd3f1e276e84dd9e38aca825654f6647781b03f43b40d14"
+    },
+    {
+      "bytes": 31982,
+      "path": "results/graphrag/pre_freeze_review_v1/graph_temporal_integrity_audit.json",
+      "sha256": "9a4c1e345144079de50b9c5d9fc9c7c27fd5919a77c7890fc477635955021794"
+    },
+    {
+      "bytes": 14773,
+      "path": "results/graphrag/pre_freeze_review_v1/payment_bank_relation_audit.json",
+      "sha256": "c72dc7354920f44ed5efb57eb17618d4fcc2e51fb2314f208d1f19b497d1bd51"
+    },
+    {
+      "bytes": 110793,
+      "path": "results/graphrag/pre_freeze_review_v1/run_pre_freeze_audit.py",
+      "sha256": "5a356535a0c40d685dba6fade85eb9ea048929d29ebebdb9d63980b00932abe1"
+    },
+    {
+      "bytes": 16436,
+      "path": "results/graphrag/pre_freeze_review_v1/tier_a_relation_audit.json",
+      "sha256": "9e350ba2b47c09fec8bc4bf8ab72a4dd0fdac44af431f10fab5dddfab845ab35"
+    }
+  ],
+  "inventory_version": "generated_artifact_hashes_v1",
+  "self_hash_excluded_to_avoid_circularity": true
+}

@@ -1,0 +1,13 @@
+{
+  "document_count": 155391,
+  "embedding_input_limit": 8192,
+  "maximum_tokens": 193,
+  "median_tokens": 128,
+  "minimum_tokens": 63,
+  "oversized_count": 0,
+  "oversized_record_ids": [],
+  "p95_tokens": 182.0,
+  "status": "PASS",
+  "tokenizer": "cl100k_base",
+  "total_tokens": 20729146
+}

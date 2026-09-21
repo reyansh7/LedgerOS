@@ -1,0 +1,54 @@
+{
+  "API_calls_made": false,
+  "LLM_used": false,
+  "artifact_type": "phase6a3_graph_v1_1_evaluation_preregistration",
+  "artifact_version": "1.0",
+  "clean_pre_gold_retrieval": {
+    "candidate_paths_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+    "candidate_records_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+    "hash_inventory_sha256": "fdba4cab1ca00d83ca42bb2b3e3962aebc31b185a89e952b0fc9a6ea17b415d8",
+    "manifest_sha256": "0c4ec3125a9af91a1ec2e9ee1b7b71bf6105e712a49c1e1413a137a40421fa6f",
+    "selected_paths_sha256": "7c50a3569920124286ad1866af28155d6ba25d7e77d6480aaf0627f7c8cd0561",
+    "selected_records_sha256": "e8335a880b0cf57820f58c233f4558b9f4df111f6739f8c13ca7bc04eb994cbd"
+  },
+  "created_at_utc": "2026-08-21T04:04:59Z",
+  "evaluator_implemented": false,
+  "frozen_corpus_and_routes": {
+    "documents_sha256": "43fe8841d3cbfc64c403349c2336c631c9f6ca9dc35f3e86af1c4ae993441b8c",
+    "validation_routes_sha256": "08ceeaf3a7c569ca94a87b0c0830d0fb90784daac66dd959de3fee1561b94b44"
+  },
+  "frozen_method": {
+    "evidence_selection_policy_sha256": "cad5f2298d9dad62599cfe592304c08cf8808441586fb865d1f4824b3054ea1b",
+    "graph_grammar_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+    "max_selected_records": 40
+  },
+  "frozen_relational_rag": {
+    "case_count": 416,
+    "path": "results/graphrag/phase6a_graph_retrieval_v1_0/ablations/relational_rag_results.jsonl",
+    "rerun_permitted": false,
+    "sha256": "3921c2bbc17373b3dc237dafb8f6f17327e655842acf0ecbbcbc6c23966c58f5"
+  },
+  "heldout_gold_opened": false,
+  "metric_spec": {
+    "path": "EVALUATION_METRIC_SPEC.md",
+    "sha256": "2862be9a1242178af029f0582a1777749ef476b80a7ccd8b114e58aafd6340c3"
+  },
+  "retrieval_metrics_computed": false,
+  "run_id": "phase6a3_graph_v1_1_retrieval_v1_2_20260816T034800Z",
+  "statistics": {
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20260809,
+    "full_evidence_test": "EXACT_TWO_SIDED_MCNEMAR_BINOMIAL"
+  },
+  "status": "PREREGISTERED_BEFORE_EVALUATOR_IMPLEMENTATION",
+  "validation_gold": {
+    "authorized_path": "data/benchmark/validation/rca_ground_truth.jsonl",
+    "authorized_projection": [
+      "case_id",
+      "evidence_ids",
+      "evidence_required"
+    ],
+    "opened_during_this_step": false,
+    "semantic_content_used_during_this_step": false
+  }
+}

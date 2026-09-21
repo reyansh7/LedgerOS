@@ -1,0 +1,28 @@
+{
+  "API_calls_made": false,
+  "LLM_used": false,
+  "RCA_accuracy_computed": false,
+  "artifact_type": "phase6a3_graph_v1_1_scientific_integrity",
+  "artifact_version": "1.0",
+  "embeddings_created": false,
+  "evaluator_freeze_manifest_sha256": "533f3f9198f4ee159308c1740f759491156f3d04776525b1f653001e96d198f7",
+  "gold_access_started_at_utc": "2026-08-21T05:54:41Z",
+  "graph_retraversed_after_gold": false,
+  "heldout_gold_opened": false,
+  "metric_spec_sha256": "2862be9a1242178af029f0582a1777749ef476b80a7ccd8b114e58aafd6340c3",
+  "pre_gold_manifest_sha256": "0c4ec3125a9af91a1ec2e9ee1b7b71bf6105e712a49c1e1413a137a40421fa6f",
+  "preregistration_sha256": "74b07ce84050ee9ac55c6f7397c81cfa0b08d507cd6f7d65a0604c11e7772991",
+  "relational_rag_rerun": false,
+  "retrieval_modified_after_gold": false,
+  "run_id": "phase6a3_graph_v1_1_retrieval_v1_2_20260816T034800Z",
+  "same_run_rerun_permitted": false,
+  "selection_modified_after_gold": false,
+  "status": "PASS",
+  "validation_gold_opened_at_utc": "2026-08-21T05:54:41Z",
+  "validation_gold_projection": [
+    "case_id",
+    "evidence_ids",
+    "evidence_required"
+  ],
+  "validation_gold_visible_to_retriever": false
+}

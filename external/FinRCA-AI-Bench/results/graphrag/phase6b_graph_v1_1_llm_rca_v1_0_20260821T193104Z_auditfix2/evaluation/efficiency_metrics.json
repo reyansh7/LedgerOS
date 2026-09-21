@@ -1,0 +1,49 @@
+{
+  "graph_local_traversal": {
+    "case_count": 437,
+    "total_candidate_generation_latency_ms": 509.694667
+  },
+  "graph_model_latency_ms": {
+    "mean_over_437_model_calls": 7178.618641049405,
+    "mean_over_439_cases": 7145.914228106128,
+    "total": 3137056.34613859
+  },
+  "graph_model_usage_and_cost": {
+    "cached_input_tokens": 526918,
+    "input_tokens": 3584507,
+    "mean_estimated_generation_cost_usd": 0.05070745785876988,
+    "model_id": "gpt-5.6-sol",
+    "output_tokens": 223639,
+    "pricing_reference_date": "2026-08-09",
+    "reasoning_tokens": 68876,
+    "request_count": 439,
+    "total_estimated_generation_cost_usd": 22.260573999999977
+  },
+  "qualification": "Graph traversal and Standard RAG embedding/search latency have different execution components; model token/cost comparison uses the identical provider pricing configuration.",
+  "serialized_context_characters": {
+    "graph_case_count": 437,
+    "graph_total": 9913350,
+    "standard_rag_case_count": 437,
+    "standard_rag_total": 8098353
+  },
+  "standard_rag_model_latency_ms": {
+    "mean_over_437_model_calls": 6080.956031923319,
+    "mean_over_439_cases": 6053.252359796105,
+    "total": 2657377.7859504903
+  },
+  "standard_rag_model_usage_and_cost": {
+    "cached_input_tokens": 538024,
+    "input_tokens": 3718262,
+    "mean_estimated_generation_cost_usd": 0.05069294305239182,
+    "model_id": "gpt-5.6-sol",
+    "output_tokens": 202800,
+    "pricing_reference_date": "2026-08-09",
+    "reasoning_tokens": 1541,
+    "request_count": 439,
+    "total_estimated_generation_cost_usd": 22.254202000000006
+  },
+  "standard_rag_retrieval": {
+    "case_count": 439,
+    "total_retrieval_latency_ms": 196690.0876015886
+  }
+}

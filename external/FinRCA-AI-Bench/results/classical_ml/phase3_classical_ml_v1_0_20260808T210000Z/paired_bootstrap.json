@@ -1,0 +1,26 @@
+{
+  "binary_f1": {
+    "ci95_percentile": [
+      -0.029815415197021276,
+      0.0028921448912747555
+    ],
+    "point_difference": -0.01373647885275786
+  },
+  "difference_direction": "classical_ml_minus_rules_sql",
+  "exact_accuracy": {
+    "ci95_percentile": [
+      0.06833712984054674,
+      0.14123006833712992
+    ],
+    "point_difference": 0.10478359908883828
+  },
+  "macro_f1": {
+    "ci95_percentile": [
+      -0.012426567095782695,
+      0.03636716181336308
+    ],
+    "point_difference": 0.010619560012408158
+  },
+  "resamples": 2000,
+  "seed": 314159
+}

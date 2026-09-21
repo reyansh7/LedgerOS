@@ -1,0 +1,10 @@
+{
+  "artifact_type": "phase6a3_one_shot_evaluation_determinism",
+  "artifact_version": "1.0",
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 20260809,
+  "byte_identical": true,
+  "method": "DOUBLE_COMPUTE_FROM_SAME_IN_MEMORY_GOLD_PROJECTION",
+  "run_id": "phase6a3_graph_v1_1_retrieval_v1_2_20260816T034800Z",
+  "status": "PASS"
+}

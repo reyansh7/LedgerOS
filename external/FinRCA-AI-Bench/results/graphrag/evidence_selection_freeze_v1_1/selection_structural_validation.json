@@ -1,0 +1,1487 @@
+{
+  "artifact_type": "graph_v1_1_evidence_selection_structural_validation",
+  "artifact_version": "1.1",
+  "budget_rejected_path_count": 46,
+  "candidate_case_count": 416,
+  "candidate_path_count": 13371,
+  "candidate_record_count": 8369,
+  "canonical_path_count": 10604,
+  "check_count": 17,
+  "checks": [
+    {
+      "check_id": "CASE_COUNT",
+      "evidence": 416,
+      "status": "PASS"
+    },
+    {
+      "check_id": "SELECTED_RECORD_CAP",
+      "evidence": 40,
+      "status": "PASS"
+    },
+    {
+      "check_id": "MANDATORY_ANCHORS",
+      "evidence": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "EXACT_MULTI_ROOTS",
+      "evidence": 430,
+      "status": "PASS"
+    },
+    {
+      "check_id": "UNIQUE_RECORDS_PER_CASE",
+      "evidence": 8336,
+      "status": "PASS"
+    },
+    {
+      "check_id": "SELECTED_RECORDS_FROM_POOL",
+      "evidence": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "NONANCHORS_HAVE_PATH",
+      "evidence": true,
+      "status": "PASS"
+    },
+    {
+      "check_id": "SELECTED_PATHS_FROM_FROZEN_POOL",
+      "evidence": 10558,
+      "status": "PASS"
+    },
+    {
+      "check_id": "TRANSITIONS_FROZEN",
+      "evidence": 22,
+      "status": "PASS"
+    },
+    {
+      "check_id": "NO_PARTIAL_ATOMIC_ADMISSION",
+      "evidence": 0,
+      "status": "PASS"
+    },
+    {
+      "check_id": "SUPPORTING_PATH_IDS_RETAINED",
+      "evidence": 8336,
+      "status": "PASS"
+    },
+    {
+      "check_id": "VENDOR_EMPLOYEE_BRIDGES_ABSENT",
+      "evidence": [],
+      "status": "PASS"
+    },
+    {
+      "check_id": "PAYMENT_BANK_ABSENT",
+      "evidence": false,
+      "status": "PASS"
+    },
+    {
+      "check_id": "BANK_STATEMENT_LINKAGE_ABSENT",
+      "evidence": false,
+      "status": "PASS"
+    },
+    {
+      "check_id": "GL_JOURNAL_ABSENT",
+      "evidence": false,
+      "status": "PASS"
+    },
+    {
+      "check_id": "CONTEXT_TERMINAL_RULE",
+      "evidence": true,
+      "status": "PASS"
+    },
+    {
+      "check_id": "GL_TERMINAL_RULE",
+      "evidence": true,
+      "status": "PASS"
+    }
+  ],
+  "created_at_utc": "2026-08-15T23:38:00Z",
+  "dropped_record_count": 33,
+  "exact_multi_case_count": 14,
+  "exact_single_case_count": 402,
+  "failed_check_count": 0,
+  "freeze_eligible": true,
+  "input_verification": {
+    "all_checks_passed": true,
+    "checks": [
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "06f3b7da1a3717387258a81f0cf0bddeb61783b0a78f9654a92bdd5fe529a110",
+        "observed_bytes": 3995,
+        "observed_sha256": "06f3b7da1a3717387258a81f0cf0bddeb61783b0a78f9654a92bdd5fe529a110",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/RANKING_POLICY_COMPATIBILITY_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "631398728da8eb5b3d1fdb959282affb1e61fa428c50be8054f867f93329ce46",
+        "observed_bytes": 5272,
+        "observed_sha256": "631398728da8eb5b3d1fdb959282affb1e61fa428c50be8054f867f93329ce46",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/phase6a3_artifact_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+        "observed_bytes": 24257308,
+        "observed_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_paths.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+        "observed_bytes": 4336748,
+        "observed_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_records.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d",
+        "observed_bytes": 2613,
+        "observed_sha256": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/retrieval_pre_gold_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "433c15ae3541797408fec8eecf52229488131a65c9276dfa9e32d189be02b9d3",
+        "observed_bytes": 1262,
+        "observed_sha256": "433c15ae3541797408fec8eecf52229488131a65c9276dfa9e32d189be02b9d3",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "012d75ab2ba71f9745a9e5668a015925435a8dddfc26ea9e02fea9a1d7545232",
+        "observed_bytes": 32611,
+        "observed_sha256": "012d75ab2ba71f9745a9e5668a015925435a8dddfc26ea9e02fea9a1d7545232",
+        "path": "results/graphrag/registry_freeze_v1_1/GRAPH_V1_1_TYPED_GRAMMAR_FREEZE_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "observed_bytes": 153580,
+        "observed_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_traversal_grammar_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "9c5e57374928e2f3f0c6bb503f85aaf8c4cd4db7654eae70787a0e7a6351d29c",
+        "observed_bytes": 33305,
+        "observed_sha256": "9c5e57374928e2f3f0c6bb503f85aaf8c4cd4db7654eae70787a0e7a6351d29c",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_v1_1_freeze_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 502,
+        "expected_sha256": "a635f172f5b4bf68d1cc7ef012d338ee4e6b73b0e996640cfe3814dcad2e228f",
+        "observed_bytes": 502,
+        "observed_sha256": "a635f172f5b4bf68d1cc7ef012d338ee4e6b73b0e996640cfe3814dcad2e228f",
+        "path": "src/graphrag/v1_1/__init__.py",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 29101,
+        "expected_sha256": "f023a9db1ea03546af1f5e9e3afaa33cc437c6a20238356bb2be41af716daedc",
+        "observed_bytes": 29101,
+        "observed_sha256": "f023a9db1ea03546af1f5e9e3afaa33cc437c6a20238356bb2be41af716daedc",
+        "path": "src/graphrag/v1_1/candidate_traversal.py",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 5233,
+        "expected_sha256": "5cda3afe1778873ccd045c8cb9820720489ffafc0bd1000f567926b276620d4e",
+        "observed_bytes": 5233,
+        "observed_sha256": "5cda3afe1778873ccd045c8cb9820720489ffafc0bd1000f567926b276620d4e",
+        "path": "src/graphrag/v1_1/preflight.py",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 33082,
+        "expected_sha256": "314c8b92522846662e83856ea537a3d6d814106f549ff441e7066ef10c8c3202",
+        "observed_bytes": 33082,
+        "observed_sha256": "314c8b92522846662e83856ea537a3d6d814106f549ff441e7066ef10c8c3202",
+        "path": "src/graphrag/v1_1/runner.py",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 6690,
+        "expected_sha256": "52cadf9c2290f901cf880505f94cb28510a00e43d1d98109ed2b8a0d8d4f9925",
+        "observed_bytes": 6690,
+        "observed_sha256": "52cadf9c2290f901cf880505f94cb28510a00e43d1d98109ed2b8a0d8d4f9925",
+        "path": "src/graphrag/v1_1/typed_grammar_loader.py",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 8467,
+        "expected_sha256": "83ea6649b4e803b74c96bf75a1b56bd08b89b0fb4b6173f12b76586f7f179417",
+        "observed_bytes": 8467,
+        "observed_sha256": "83ea6649b4e803b74c96bf75a1b56bd08b89b0fb4b6173f12b76586f7f179417",
+        "path": "tests/graphrag/test_phase6a3_graph_v1_1.py",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 6517,
+        "expected_sha256": "26c7ca00c45aec5da0207a7ddbf1e2709b050f2908fae25b3310ecb410ddbf3f",
+        "observed_bytes": 6517,
+        "observed_sha256": "26c7ca00c45aec5da0207a7ddbf1e2709b050f2908fae25b3310ecb410ddbf3f",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/PHASE6A3_GRAPH_V1_1_RETRIEVAL_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 3995,
+        "expected_sha256": "06f3b7da1a3717387258a81f0cf0bddeb61783b0a78f9654a92bdd5fe529a110",
+        "observed_bytes": 3995,
+        "observed_sha256": "06f3b7da1a3717387258a81f0cf0bddeb61783b0a78f9654a92bdd5fe529a110",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/RANKING_POLICY_COMPATIBILITY_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 36251,
+        "expected_sha256": "42c0020e3170b78e2bdb81330ebd968205791de3b819f3ad9905aa7c1e0939eb",
+        "observed_bytes": 36251,
+        "observed_sha256": "42c0020e3170b78e2bdb81330ebd968205791de3b819f3ad9905aa7c1e0939eb",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/implementation/preflight_validation.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 162,
+        "expected_sha256": "423b1e406f14d75e891b557354a55019e70659493b0f0d3aec0469e635361555",
+        "observed_bytes": 162,
+        "observed_sha256": "423b1e406f14d75e891b557354a55019e70659493b0f0d3aec0469e635361555",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/implementation/test_results.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 3116,
+        "expected_sha256": "1471c237d9fc21e1c0828bd620008c65fb3e6c9615a8ec949ce69f0c4da18502",
+        "observed_bytes": 3116,
+        "observed_sha256": "1471c237d9fc21e1c0828bd620008c65fb3e6c9615a8ec949ce69f0c4da18502",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/phase6a3_run_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 110880,
+        "expected_sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+        "observed_bytes": 110880,
+        "observed_sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/anchor_resolutions.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 24257308,
+        "expected_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+        "observed_bytes": 24257308,
+        "observed_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_paths.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 4336748,
+        "expected_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+        "observed_bytes": 4336748,
+        "observed_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_records.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 4550,
+        "expected_sha256": "fc70b3fb22ab74ab77ae2bf417ed42ccbb2bf409f5a3fcb43926fe8872be0756",
+        "observed_bytes": 4550,
+        "observed_sha256": "fc70b3fb22ab74ab77ae2bf417ed42ccbb2bf409f5a3fcb43926fe8872be0756",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_statistics.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 61152,
+        "expected_sha256": "726d4d7cf1c038ba1bf2de2cadbbfdb3703b4505bf35255f0f86f4dc7ad1e2c1",
+        "observed_bytes": 61152,
+        "observed_sha256": "726d4d7cf1c038ba1bf2de2cadbbfdb3703b4505bf35255f0f86f4dc7ad1e2c1",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/drop_ledger.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 163259,
+        "expected_sha256": "7d6a0e63d14a7951720ccf5ac2fe72a221087f861a4faa9ba15fade7db043331",
+        "observed_bytes": 163259,
+        "observed_sha256": "7d6a0e63d14a7951720ccf5ac2fe72a221087f861a4faa9ba15fade7db043331",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/graph_v1_1_retrieval_results.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 640,
+        "expected_sha256": "2b81d106d7d45f5cf4abdb3f88dcbba904949ade8afca1998f028f4c4eca4f24",
+        "observed_bytes": 640,
+        "observed_sha256": "2b81d106d7d45f5cf4abdb3f88dcbba904949ade8afca1998f028f4c4eca4f24",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/retrieval_latency_pre_gold.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 2505,
+        "expected_sha256": "8240ecd58c771a95c5aa6e53376e67ca5626c6553dcd43957cb54698533a54f6",
+        "observed_bytes": 2505,
+        "observed_sha256": "8240ecd58c771a95c5aa6e53376e67ca5626c6553dcd43957cb54698533a54f6",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/retrieval_pre_gold_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 2613,
+        "expected_sha256": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d",
+        "observed_bytes": 2613,
+        "observed_sha256": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/retrieval_pre_gold_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 60736,
+        "expected_sha256": "bb90a50a04aa21b7dffbc68c42f81a49f65aa5618f1bad9ebf1da0e14dd90d39",
+        "observed_bytes": 60736,
+        "observed_sha256": "bb90a50a04aa21b7dffbc68c42f81a49f65aa5618f1bad9ebf1da0e14dd90d39",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/selected_paths.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 61568,
+        "expected_sha256": "553b97de310aeb5dce33621fcba972cb9256abbe533bd9a57262853e400bd5bf",
+        "observed_bytes": 61568,
+        "observed_sha256": "553b97de310aeb5dce33621fcba972cb9256abbe533bd9a57262853e400bd5bf",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/selected_records.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 3091171,
+        "expected_sha256": "81346faa9b9621c3ae4f720ab6a7ae96add004d1b92ba20f04accb9f882e0357",
+        "observed_bytes": 3091171,
+        "observed_sha256": "81346faa9b9621c3ae4f720ab6a7ae96add004d1b92ba20f04accb9f882e0357",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/traversal_rejections.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 1262,
+        "expected_sha256": "433c15ae3541797408fec8eecf52229488131a65c9276dfa9e32d189be02b9d3",
+        "observed_bytes": 1262,
+        "observed_sha256": "433c15ae3541797408fec8eecf52229488131a65c9276dfa9e32d189be02b9d3",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_ROOT_INVENTORY",
+        "expected_bytes": 966,
+        "expected_sha256": "28017f389ac03240beb8a44259f8d3528c5639d8353e805be413fce26ea37de1",
+        "observed_bytes": 966,
+        "observed_sha256": "28017f389ac03240beb8a44259f8d3528c5639d8353e805be413fce26ea37de1",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/scientific_integrity_pre_gold.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 36251,
+        "expected_sha256": "42c0020e3170b78e2bdb81330ebd968205791de3b819f3ad9905aa7c1e0939eb",
+        "observed_bytes": 36251,
+        "observed_sha256": "42c0020e3170b78e2bdb81330ebd968205791de3b819f3ad9905aa7c1e0939eb",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/implementation/preflight_validation.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 110880,
+        "expected_sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+        "observed_bytes": 110880,
+        "observed_sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/anchor_resolutions.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 24257308,
+        "expected_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+        "observed_bytes": 24257308,
+        "observed_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_paths.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 4336748,
+        "expected_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+        "observed_bytes": 4336748,
+        "observed_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_records.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 4550,
+        "expected_sha256": "fc70b3fb22ab74ab77ae2bf417ed42ccbb2bf409f5a3fcb43926fe8872be0756",
+        "observed_bytes": 4550,
+        "observed_sha256": "fc70b3fb22ab74ab77ae2bf417ed42ccbb2bf409f5a3fcb43926fe8872be0756",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_statistics.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 61152,
+        "expected_sha256": "726d4d7cf1c038ba1bf2de2cadbbfdb3703b4505bf35255f0f86f4dc7ad1e2c1",
+        "observed_bytes": 61152,
+        "observed_sha256": "726d4d7cf1c038ba1bf2de2cadbbfdb3703b4505bf35255f0f86f4dc7ad1e2c1",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/drop_ledger.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 163259,
+        "expected_sha256": "7d6a0e63d14a7951720ccf5ac2fe72a221087f861a4faa9ba15fade7db043331",
+        "observed_bytes": 163259,
+        "observed_sha256": "7d6a0e63d14a7951720ccf5ac2fe72a221087f861a4faa9ba15fade7db043331",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/graph_v1_1_retrieval_results.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 640,
+        "expected_sha256": "2b81d106d7d45f5cf4abdb3f88dcbba904949ade8afca1998f028f4c4eca4f24",
+        "observed_bytes": 640,
+        "observed_sha256": "2b81d106d7d45f5cf4abdb3f88dcbba904949ade8afca1998f028f4c4eca4f24",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/retrieval_latency_pre_gold.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 2613,
+        "expected_sha256": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d",
+        "observed_bytes": 2613,
+        "observed_sha256": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/retrieval_pre_gold_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 60736,
+        "expected_sha256": "bb90a50a04aa21b7dffbc68c42f81a49f65aa5618f1bad9ebf1da0e14dd90d39",
+        "observed_bytes": 60736,
+        "observed_sha256": "bb90a50a04aa21b7dffbc68c42f81a49f65aa5618f1bad9ebf1da0e14dd90d39",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/selected_paths.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 61568,
+        "expected_sha256": "553b97de310aeb5dce33621fcba972cb9256abbe533bd9a57262853e400bd5bf",
+        "observed_bytes": 61568,
+        "observed_sha256": "553b97de310aeb5dce33621fcba972cb9256abbe533bd9a57262853e400bd5bf",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/selected_records.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 3091171,
+        "expected_sha256": "81346faa9b9621c3ae4f720ab6a7ae96add004d1b92ba20f04accb9f882e0357",
+        "observed_bytes": 3091171,
+        "observed_sha256": "81346faa9b9621c3ae4f720ab6a7ae96add004d1b92ba20f04accb9f882e0357",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/traversal_rejections.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_INVENTORY",
+        "expected_bytes": 966,
+        "expected_sha256": "28017f389ac03240beb8a44259f8d3528c5639d8353e805be413fce26ea37de1",
+        "observed_bytes": 966,
+        "observed_sha256": "28017f389ac03240beb8a44259f8d3528c5639d8353e805be413fce26ea37de1",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/scientific_integrity_pre_gold.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_MANIFEST",
+        "expected_bytes": 110880,
+        "expected_sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+        "observed_bytes": 110880,
+        "observed_sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/anchor_resolutions.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_MANIFEST",
+        "expected_bytes": 24257308,
+        "expected_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+        "observed_bytes": 24257308,
+        "observed_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_paths.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_MANIFEST",
+        "expected_bytes": 4336748,
+        "expected_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+        "observed_bytes": 4336748,
+        "observed_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_records.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_MANIFEST",
+        "expected_bytes": 4550,
+        "expected_sha256": "fc70b3fb22ab74ab77ae2bf417ed42ccbb2bf409f5a3fcb43926fe8872be0756",
+        "observed_bytes": 4550,
+        "observed_sha256": "fc70b3fb22ab74ab77ae2bf417ed42ccbb2bf409f5a3fcb43926fe8872be0756",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/candidate_statistics.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_MANIFEST",
+        "expected_bytes": 61152,
+        "expected_sha256": "726d4d7cf1c038ba1bf2de2cadbbfdb3703b4505bf35255f0f86f4dc7ad1e2c1",
+        "observed_bytes": 61152,
+        "observed_sha256": "726d4d7cf1c038ba1bf2de2cadbbfdb3703b4505bf35255f0f86f4dc7ad1e2c1",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/drop_ledger.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_MANIFEST",
+        "expected_bytes": 163259,
+        "expected_sha256": "7d6a0e63d14a7951720ccf5ac2fe72a221087f861a4faa9ba15fade7db043331",
+        "observed_bytes": 163259,
+        "observed_sha256": "7d6a0e63d14a7951720ccf5ac2fe72a221087f861a4faa9ba15fade7db043331",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/graph_v1_1_retrieval_results.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_MANIFEST",
+        "expected_bytes": 640,
+        "expected_sha256": "2b81d106d7d45f5cf4abdb3f88dcbba904949ade8afca1998f028f4c4eca4f24",
+        "observed_bytes": 640,
+        "observed_sha256": "2b81d106d7d45f5cf4abdb3f88dcbba904949ade8afca1998f028f4c4eca4f24",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/retrieval_latency_pre_gold.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_MANIFEST",
+        "expected_bytes": 60736,
+        "expected_sha256": "bb90a50a04aa21b7dffbc68c42f81a49f65aa5618f1bad9ebf1da0e14dd90d39",
+        "observed_bytes": 60736,
+        "observed_sha256": "bb90a50a04aa21b7dffbc68c42f81a49f65aa5618f1bad9ebf1da0e14dd90d39",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/selected_paths.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_MANIFEST",
+        "expected_bytes": 61568,
+        "expected_sha256": "553b97de310aeb5dce33621fcba972cb9256abbe533bd9a57262853e400bd5bf",
+        "observed_bytes": 61568,
+        "observed_sha256": "553b97de310aeb5dce33621fcba972cb9256abbe533bd9a57262853e400bd5bf",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/selected_records.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_PRE_GOLD_MANIFEST",
+        "expected_bytes": 3091171,
+        "expected_sha256": "81346faa9b9621c3ae4f720ab6a7ae96add004d1b92ba20f04accb9f882e0357",
+        "observed_bytes": 3091171,
+        "observed_sha256": "81346faa9b9621c3ae4f720ab6a7ae96add004d1b92ba20f04accb9f882e0357",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/traversal_rejections.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 32611,
+        "expected_sha256": "012d75ab2ba71f9745a9e5668a015925435a8dddfc26ea9e02fea9a1d7545232",
+        "observed_bytes": 32611,
+        "observed_sha256": "012d75ab2ba71f9745a9e5668a015925435a8dddfc26ea9e02fea9a1d7545232",
+        "path": "results/graphrag/registry_freeze_v1_1/GRAPH_V1_1_TYPED_GRAMMAR_FREEZE_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 5729,
+        "expected_sha256": "b1e36adc5fb0386ed7456be583f82ec3a64b972f0183de98da1bbd681904fa89",
+        "observed_bytes": 5729,
+        "observed_sha256": "b1e36adc5fb0386ed7456be583f82ec3a64b972f0183de98da1bbd681904fa89",
+        "path": "results/graphrag/registry_freeze_v1_1/determinism_validation_v1_1_freeze.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 7662,
+        "expected_sha256": "496c62bd81f5a8cbddef8ad1ccb9e19af615277c7ec503f430827e8336c83332",
+        "observed_bytes": 7662,
+        "observed_sha256": "496c62bd81f5a8cbddef8ad1ccb9e19af615277c7ec503f430827e8336c83332",
+        "path": "results/graphrag/registry_freeze_v1_1/draft_to_final_semantic_diff_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 29549,
+        "expected_sha256": "25901986a4e4a227ecc8020c8598bb28db36fc5b281bf84ec6ce6903270f506f",
+        "observed_bytes": 29549,
+        "observed_sha256": "25901986a4e4a227ecc8020c8598bb28db36fc5b281bf84ec6ce6903270f506f",
+        "path": "results/graphrag/registry_freeze_v1_1/forbidden_traversals_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 42268,
+        "expected_sha256": "ea97fb07816aaa6018414d067f5cef9e427cc752ea39e5948f3fa4901c34ba9e",
+        "observed_bytes": 42268,
+        "observed_sha256": "ea97fb07816aaa6018414d067f5cef9e427cc752ea39e5948f3fa4901c34ba9e",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_fanout_analysis_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 9846,
+        "expected_sha256": "e6751465b612afcd2cdf5c01172f8ba2a09062437b8698ef94b6deb10ea5f56d",
+        "observed_bytes": 9846,
+        "observed_sha256": "e6751465b612afcd2cdf5c01172f8ba2a09062437b8698ef94b6deb10ea5f56d",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_risk_register_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 80393,
+        "expected_sha256": "19852d1ff2bda9099d6fd2a15d64a820685c2a2a3df52e2a4aeccacfa8bff3de",
+        "observed_bytes": 80393,
+        "observed_sha256": "19852d1ff2bda9099d6fd2a15d64a820685c2a2a3df52e2a4aeccacfa8bff3de",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_structural_coverage_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 303172,
+        "expected_sha256": "8644fc8614ed4e048aecd672cb6dcea357b8117b9ca801c3c921083f63cf7008",
+        "observed_bytes": 303172,
+        "observed_sha256": "8644fc8614ed4e048aecd672cb6dcea357b8117b9ca801c3c921083f63cf7008",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_topology_simulation_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 74907,
+        "expected_sha256": "5ae798d5cbe4560993de9d82b3cf0ff42bf51ac23eacc2f27eb58fa0f05e3f0b",
+        "observed_bytes": 74907,
+        "observed_sha256": "5ae798d5cbe4560993de9d82b3cf0ff42bf51ac23eacc2f27eb58fa0f05e3f0b",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_transition_justifications_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 153580,
+        "expected_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "observed_bytes": 153580,
+        "observed_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_traversal_grammar_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 30309,
+        "expected_sha256": "35e521266a7e11e6b0850e2e256e869dee6d7269b9cdf1d407c7a0459616f36f",
+        "observed_bytes": 30309,
+        "observed_sha256": "35e521266a7e11e6b0850e2e256e869dee6d7269b9cdf1d407c7a0459616f36f",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_v1_1_freeze_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 15875,
+        "expected_sha256": "160a21d9107a9e65335c79e4efcbae6e80635387b83525455d75d5ec0da09ecd",
+        "observed_bytes": 15875,
+        "observed_sha256": "160a21d9107a9e65335c79e4efcbae6e80635387b83525455d75d5ec0da09ecd",
+        "path": "results/graphrag/registry_freeze_v1_1/node_type_traversal_matrix_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 2036,
+        "expected_sha256": "111d876300a07b2ae90e5a65c6837d94c665ed0ea140856b1316ddaccf1231f1",
+        "observed_bytes": 2036,
+        "observed_sha256": "111d876300a07b2ae90e5a65c6837d94c665ed0ea140856b1316ddaccf1231f1",
+        "path": "results/graphrag/registry_freeze_v1_1/scientific_integrity_v1_1_freeze.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 1801,
+        "expected_sha256": "8151107387e08c6ead1f6e1da917154116335ceea273cdb930598e775c36a032",
+        "observed_bytes": 1801,
+        "observed_sha256": "8151107387e08c6ead1f6e1da917154116335ceea273cdb930598e775c36a032",
+        "path": "results/graphrag/registry_freeze_v1_1/topology_equivalence_validation_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 74162,
+        "expected_sha256": "947f979a85e117f4e93c5d69d3da71ef81883daa0875cdb4835911e96284f699",
+        "observed_bytes": 74162,
+        "observed_sha256": "947f979a85e117f4e93c5d69d3da71ef81883daa0875cdb4835911e96284f699",
+        "path": "results/graphrag/registry_freeze_v1_1/transition_freeze_validation_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 25055,
+        "expected_sha256": "82f66dad011f63b7e61188587e90a9fe0bbb3bfbcb5323766a12bd7ed0f7864e",
+        "observed_bytes": 25055,
+        "observed_sha256": "82f66dad011f63b7e61188587e90a9fe0bbb3bfbcb5323766a12bd7ed0f7864e",
+        "path": "results/graphrag/registry_freeze_v1_1/typed_transition_matrix_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 10350,
+        "expected_sha256": "4014d965801de4ae8c0993c2835ffa17e2f837f931dfb025f768f4f18e423ab5",
+        "observed_bytes": 10350,
+        "observed_sha256": "4014d965801de4ae8c0993c2835ffa17e2f837f931dfb025f768f4f18e423ab5",
+        "path": "results/graphrag/registry_freeze_v1_1/v1_motif_to_v1_1_grammar_mapping.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_INVENTORY",
+        "expected_bytes": 89925,
+        "expected_sha256": "e176bc92b75533db2a7171fcc02dca598960f85121da329e1a0a1e62ea5ab095",
+        "observed_bytes": 89925,
+        "observed_sha256": "e176bc92b75533db2a7171fcc02dca598960f85121da329e1a0a1e62ea5ab095",
+        "path": "results/graphrag/registry_freeze_v1_1/run_graph_v1_1_registry_freeze.py",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "observed_bytes": 10082,
+        "observed_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "d2c70d76e72fbe16a9210f191facbf8eeaecdd97bbd39c009b036cc4d332d7b5",
+        "observed_bytes": 6166,
+        "observed_sha256": "d2c70d76e72fbe16a9210f191facbf8eeaecdd97bbd39c009b036cc4d332d7b5",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/phase6a1_artifact_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "observed_bytes": 41890,
+        "observed_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/PHASE6A2_TYPED_GRAMMAR_DESIGN_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "observed_bytes": 28574,
+        "observed_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/forbidden_traversals_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "observed_bytes": 41386,
+        "observed_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_fanout_analysis.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "observed_bytes": 8544,
+        "observed_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_risk_register.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "observed_bytes": 79299,
+        "observed_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_structural_coverage.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "observed_bytes": 301961,
+        "observed_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_topology_simulation.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "observed_bytes": 69548,
+        "observed_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_transition_justifications.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "observed_bytes": 130424,
+        "observed_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/graph_traversal_grammar_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "observed_bytes": 14988,
+        "observed_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/node_type_traversal_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "db5cdc9f153617a97e1bab845e7e2609fc249514e80e528ecd6ba1c46b93aa39",
+        "observed_bytes": 12295,
+        "observed_sha256": "db5cdc9f153617a97e1bab845e7e2609fc249514e80e528ecd6ba1c46b93aa39",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/phase6a2_artifact_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "observed_bytes": 1366,
+        "observed_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "observed_bytes": 19705,
+        "observed_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/typed_transition_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "observed_bytes": 9347,
+        "observed_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/v1_motif_to_v1_1_grammar_mapping.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "observed_bytes": 108122888,
+        "observed_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/edges.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "observed_bytes": 84218811,
+        "observed_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/nodes.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76",
+        "observed_bytes": 7578,
+        "observed_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76",
+        "path": "results/graphrag/registry_freeze_v1/graph_freeze_manifest_v1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+        "observed_bytes": 21048,
+        "observed_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+        "path": "results/graphrag/registry_freeze_v1/graph_node_registry_v1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+        "observed_bytes": 16834,
+        "observed_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+        "path": "results/graphrag/registry_freeze_v1/graph_path_motifs_v1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "observed_bytes": 4157,
+        "observed_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "path": "results/graphrag/registry_freeze_v1/graph_ranking_policy_v1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": null,
+        "expected_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "observed_bytes": 50303,
+        "observed_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "path": "results/graphrag/registry_freeze_v1/graph_relation_registry_v1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 41890,
+        "expected_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "observed_bytes": 41890,
+        "observed_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/PHASE6A2_TYPED_GRAMMAR_DESIGN_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 2502,
+        "expected_sha256": "dd58574bf266f95f22d085e406a72025af033fc79dc728998ff0e0848b80ab11",
+        "observed_bytes": 2502,
+        "observed_sha256": "dd58574bf266f95f22d085e406a72025af033fc79dc728998ff0e0848b80ab11",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/determinism_validation.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 28574,
+        "expected_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "observed_bytes": 28574,
+        "observed_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/forbidden_traversals_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 41386,
+        "expected_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "observed_bytes": 41386,
+        "observed_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_fanout_analysis.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 8544,
+        "expected_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "observed_bytes": 8544,
+        "observed_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_risk_register.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 79299,
+        "expected_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "observed_bytes": 79299,
+        "observed_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_structural_coverage.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 301961,
+        "expected_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "observed_bytes": 301961,
+        "observed_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_topology_simulation.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 69548,
+        "expected_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "observed_bytes": 69548,
+        "observed_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_transition_justifications.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 130424,
+        "expected_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "observed_bytes": 130424,
+        "observed_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/graph_traversal_grammar_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 14988,
+        "expected_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "observed_bytes": 14988,
+        "observed_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/node_type_traversal_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 1366,
+        "expected_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "observed_bytes": 1366,
+        "observed_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 19705,
+        "expected_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "observed_bytes": 19705,
+        "observed_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/typed_transition_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 9347,
+        "expected_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "observed_bytes": 9347,
+        "observed_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/v1_motif_to_v1_1_grammar_mapping.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 134087,
+        "expected_sha256": "dd0cc48c34e5336103131839fef4cb2498a19268f4690749ce5dc61a36733447",
+        "observed_bytes": 134087,
+        "observed_sha256": "dd0cc48c34e5336103131839fef4cb2498a19268f4690749ce5dc61a36733447",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/run_phase6a2_design.py",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 10082,
+        "expected_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "observed_bytes": 10082,
+        "observed_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 22404,
+        "expected_sha256": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f",
+        "observed_bytes": 22404,
+        "observed_sha256": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/anchor_type_reachability.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 467781,
+        "expected_sha256": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7",
+        "observed_bytes": 467781,
+        "observed_sha256": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/case_reachability_comparison.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 1706,
+        "expected_sha256": "db15267bf5b03f4d774140eacf57c8845150644e60b27d192fcbb13425d7107b",
+        "observed_bytes": 1706,
+        "observed_sha256": "db15267bf5b03f4d774140eacf57c8845150644e60b27d192fcbb13425d7107b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/determinism_validation.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 2102,
+        "expected_sha256": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f",
+        "observed_bytes": 2102,
+        "observed_sha256": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/hop_survival_funnel.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 7663,
+        "expected_sha256": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4",
+        "observed_bytes": 7663,
+        "observed_sha256": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/motif_gap_taxonomy.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 1915866,
+        "expected_sha256": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee",
+        "observed_bytes": 1915866,
+        "observed_sha256": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/motif_reachability.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 79396,
+        "expected_sha256": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b",
+        "observed_bytes": 79396,
+        "observed_sha256": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/path_sequence_inventory.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 9993795,
+        "expected_sha256": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320",
+        "observed_bytes": 9993795,
+        "observed_sha256": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/raw_reachability_safe_reverse_diagnostic.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 575167,
+        "expected_sha256": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e",
+        "observed_bytes": 575167,
+        "observed_sha256": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/raw_reachability_stored_direction.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 1527,
+        "expected_sha256": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e",
+        "observed_bytes": 1527,
+        "observed_sha256": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/reachability_explosion_and_cycles.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 21403,
+        "expected_sha256": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62",
+        "observed_bytes": 21403,
+        "observed_sha256": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/relation_directionality_audit.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 743,
+        "expected_sha256": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a",
+        "observed_bytes": 743,
+        "observed_sha256": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 2716,
+        "expected_sha256": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652",
+        "observed_bytes": 2716,
+        "observed_sha256": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/typed_traversal_grammar_analysis.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_PARENT_LINEAGE",
+        "expected_bytes": 82662,
+        "expected_sha256": "a65e63f104915decdf6c961ffc9844b6b019ea756d93e4b2592a0bcc0f35665b",
+        "observed_bytes": 82662,
+        "observed_sha256": "a65e63f104915decdf6c961ffc9844b6b019ea756d93e4b2592a0bcc0f35665b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/run_phase6a1_diagnostic.py",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 5729,
+        "expected_sha256": "b1e36adc5fb0386ed7456be583f82ec3a64b972f0183de98da1bbd681904fa89",
+        "observed_bytes": 5729,
+        "observed_sha256": "b1e36adc5fb0386ed7456be583f82ec3a64b972f0183de98da1bbd681904fa89",
+        "path": "results/graphrag/registry_freeze_v1_1/determinism_validation_v1_1_freeze.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 7662,
+        "expected_sha256": "496c62bd81f5a8cbddef8ad1ccb9e19af615277c7ec503f430827e8336c83332",
+        "observed_bytes": 7662,
+        "observed_sha256": "496c62bd81f5a8cbddef8ad1ccb9e19af615277c7ec503f430827e8336c83332",
+        "path": "results/graphrag/registry_freeze_v1_1/draft_to_final_semantic_diff_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 29549,
+        "expected_sha256": "25901986a4e4a227ecc8020c8598bb28db36fc5b281bf84ec6ce6903270f506f",
+        "observed_bytes": 29549,
+        "observed_sha256": "25901986a4e4a227ecc8020c8598bb28db36fc5b281bf84ec6ce6903270f506f",
+        "path": "results/graphrag/registry_freeze_v1_1/forbidden_traversals_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 42268,
+        "expected_sha256": "ea97fb07816aaa6018414d067f5cef9e427cc752ea39e5948f3fa4901c34ba9e",
+        "observed_bytes": 42268,
+        "observed_sha256": "ea97fb07816aaa6018414d067f5cef9e427cc752ea39e5948f3fa4901c34ba9e",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_fanout_analysis_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 9846,
+        "expected_sha256": "e6751465b612afcd2cdf5c01172f8ba2a09062437b8698ef94b6deb10ea5f56d",
+        "observed_bytes": 9846,
+        "observed_sha256": "e6751465b612afcd2cdf5c01172f8ba2a09062437b8698ef94b6deb10ea5f56d",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_risk_register_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 80393,
+        "expected_sha256": "19852d1ff2bda9099d6fd2a15d64a820685c2a2a3df52e2a4aeccacfa8bff3de",
+        "observed_bytes": 80393,
+        "observed_sha256": "19852d1ff2bda9099d6fd2a15d64a820685c2a2a3df52e2a4aeccacfa8bff3de",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_structural_coverage_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 303172,
+        "expected_sha256": "8644fc8614ed4e048aecd672cb6dcea357b8117b9ca801c3c921083f63cf7008",
+        "observed_bytes": 303172,
+        "observed_sha256": "8644fc8614ed4e048aecd672cb6dcea357b8117b9ca801c3c921083f63cf7008",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_topology_simulation_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 74907,
+        "expected_sha256": "5ae798d5cbe4560993de9d82b3cf0ff42bf51ac23eacc2f27eb58fa0f05e3f0b",
+        "observed_bytes": 74907,
+        "observed_sha256": "5ae798d5cbe4560993de9d82b3cf0ff42bf51ac23eacc2f27eb58fa0f05e3f0b",
+        "path": "results/graphrag/registry_freeze_v1_1/grammar_transition_justifications_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 153580,
+        "expected_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "observed_bytes": 153580,
+        "observed_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_traversal_grammar_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 15875,
+        "expected_sha256": "160a21d9107a9e65335c79e4efcbae6e80635387b83525455d75d5ec0da09ecd",
+        "observed_bytes": 15875,
+        "observed_sha256": "160a21d9107a9e65335c79e4efcbae6e80635387b83525455d75d5ec0da09ecd",
+        "path": "results/graphrag/registry_freeze_v1_1/node_type_traversal_matrix_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 2036,
+        "expected_sha256": "111d876300a07b2ae90e5a65c6837d94c665ed0ea140856b1316ddaccf1231f1",
+        "observed_bytes": 2036,
+        "observed_sha256": "111d876300a07b2ae90e5a65c6837d94c665ed0ea140856b1316ddaccf1231f1",
+        "path": "results/graphrag/registry_freeze_v1_1/scientific_integrity_v1_1_freeze.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 1801,
+        "expected_sha256": "8151107387e08c6ead1f6e1da917154116335ceea273cdb930598e775c36a032",
+        "observed_bytes": 1801,
+        "observed_sha256": "8151107387e08c6ead1f6e1da917154116335ceea273cdb930598e775c36a032",
+        "path": "results/graphrag/registry_freeze_v1_1/topology_equivalence_validation_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 74162,
+        "expected_sha256": "947f979a85e117f4e93c5d69d3da71ef81883daa0875cdb4835911e96284f699",
+        "observed_bytes": 74162,
+        "observed_sha256": "947f979a85e117f4e93c5d69d3da71ef81883daa0875cdb4835911e96284f699",
+        "path": "results/graphrag/registry_freeze_v1_1/transition_freeze_validation_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 25055,
+        "expected_sha256": "82f66dad011f63b7e61188587e90a9fe0bbb3bfbcb5323766a12bd7ed0f7864e",
+        "observed_bytes": 25055,
+        "observed_sha256": "82f66dad011f63b7e61188587e90a9fe0bbb3bfbcb5323766a12bd7ed0f7864e",
+        "path": "results/graphrag/registry_freeze_v1_1/typed_transition_matrix_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "GRAPH_V1_1_FREEZE_MANIFEST",
+        "expected_bytes": 10350,
+        "expected_sha256": "4014d965801de4ae8c0993c2835ffa17e2f837f931dfb025f768f4f18e423ab5",
+        "observed_bytes": 10350,
+        "observed_sha256": "4014d965801de4ae8c0993c2835ffa17e2f837f931dfb025f768f4f18e423ab5",
+        "path": "results/graphrag/registry_freeze_v1_1/v1_motif_to_v1_1_grammar_mapping.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_RUN_MANIFEST",
+        "expected_bytes": null,
+        "expected_sha256": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d",
+        "observed_bytes": 2613,
+        "observed_sha256": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_0/retrieval/retrieval_pre_gold_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_RUN_MANIFEST",
+        "expected_bytes": null,
+        "expected_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "observed_bytes": 108122888,
+        "observed_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/edges.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_RUN_MANIFEST",
+        "expected_bytes": null,
+        "expected_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "observed_bytes": 84218811,
+        "observed_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/nodes.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_RUN_MANIFEST",
+        "expected_bytes": null,
+        "expected_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "observed_bytes": 4157,
+        "observed_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "path": "results/graphrag/registry_freeze_v1/graph_ranking_policy_v1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_RUN_MANIFEST",
+        "expected_bytes": null,
+        "expected_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "observed_bytes": 153580,
+        "observed_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_traversal_grammar_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A3_RUN_MANIFEST",
+        "expected_bytes": null,
+        "expected_sha256": "9c5e57374928e2f3f0c6bb503f85aaf8c4cd4db7654eae70787a0e7a6351d29c",
+        "observed_bytes": 33305,
+        "observed_sha256": "9c5e57374928e2f3f0c6bb503f85aaf8c4cd4db7654eae70787a0e7a6351d29c",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_v1_1_freeze_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "LOCKED_STAGE_A",
+        "expected_bytes": null,
+        "expected_sha256": "db509ca1442b832b0c8b4bc401b8902cfec8f4fbd337a00f4ec12a62bf8cfcf8",
+        "observed_bytes": 15772,
+        "observed_sha256": "db509ca1442b832b0c8b4bc401b8902cfec8f4fbd337a00f4ec12a62bf8cfcf8",
+        "path": "results/graphrag/evidence_selection_freeze_v1_1/evidence_selection_policy_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "LOCKED_STAGE_A",
+        "expected_bytes": null,
+        "expected_sha256": "8123b92e49f59824fd36438e9599290242657aef8523c19168c75f743c5e2868",
+        "observed_bytes": 9475,
+        "observed_sha256": "8123b92e49f59824fd36438e9599290242657aef8523c19168c75f743c5e2868",
+        "path": "results/graphrag/evidence_selection_freeze_v1_1/EVIDENCE_SELECTION_POLICY_DESIGN_RATIONALE.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "LOCKED_STAGE_A",
+        "expected_bytes": null,
+        "expected_sha256": "8271c15c39c6d2a85f25aacb306a3d31e14898fee368615b402ee01ffa3bdb61",
+        "observed_bytes": 2479,
+        "observed_sha256": "8271c15c39c6d2a85f25aacb306a3d31e14898fee368615b402ee01ffa3bdb61",
+        "path": "results/graphrag/evidence_selection_freeze_v1_1/policy_preregistration_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "FROZEN_RELATION_ORDINAL_SOURCE",
+        "expected_bytes": null,
+        "expected_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "observed_bytes": 50303,
+        "observed_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "path": "results/graphrag/registry_freeze_v1/graph_relation_registry_v1.json",
+        "status": "PASS"
+      }
+    ],
+    "distinct_path_count": 86,
+    "raw_byte_check_count": 151,
+    "status": "PASS"
+  },
+  "mandatory_root_count": 430,
+  "path_completeness": {
+    "candidate_complete_backbone_paths": 2385,
+    "candidate_terminal_context_paths": 3574,
+    "complete_backbone_paths_dropped_due_to_budget": 0,
+    "definition": "Canonical Tier-2 frozen GL-terminal backbone paths and canonical Tier-5 local terminal-context paths; no gold semantics.",
+    "selected_complete_backbone_paths": 2385,
+    "selected_terminal_context_paths": 3528,
+    "terminal_context_paths_dropped_due_to_budget": 46
+  },
+  "policy_changed_after_simulation": false,
+  "redundant_prefix_path_count": 2767,
+  "selected_path_count": 10558,
+  "selected_record_count": 8336,
+  "status": "PASS",
+  "validation_gold_opened": false,
+  "validation_scope": "FROZEN_PRE_GOLD_CANDIDATE_STRUCTURE_ONLY"
+}

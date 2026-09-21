@@ -1,0 +1,14 @@
+{
+  "case_ids_match": true,
+  "cases": 439,
+  "class_probabilities_bitwise_match": true,
+  "estimator_hash_matches_manifest": true,
+  "feature_source_access_audit": "PASS",
+  "predicted_labels_exactly_match": true,
+  "prediction_hash_matches_manifest": true,
+  "preprocessor_hash_matches_manifest": true,
+  "status": "PASS",
+  "stored_prediction_records": 439,
+  "verification_did_not_open_test_labels": true,
+  "verified_at_utc": "2026-08-09T05:27:16.796911+00:00"
+}

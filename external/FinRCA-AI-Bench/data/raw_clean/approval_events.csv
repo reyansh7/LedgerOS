@@ -1,0 +1,516 @@
+approval_event_id,invoice_id,approval_level,approver_id,approver_role,action,event_timestamp,previous_status,new_status,comments,source_system
+APR_0420001,INV_0420001,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-07T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420002,INV_0420001,1,EMP_04220,manager,approved,2025-06-08T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420003,INV_0420002,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-07T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420004,INV_0420002,1,EMP_04220,manager,approved,2026-05-08T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420005,INV_0420002,2,EMP_04209,director,approved,2026-05-09T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420006,INV_0420003,0,SYSTEM-WORKFLOW,workflow,submitted,2025-11-15T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420007,INV_0420003,1,EMP_04214,manager,approved,2025-11-16T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420008,INV_0420004,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-16T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420009,INV_0420004,1,EMP_04208,manager,approved,2026-01-17T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420010,INV_0420005,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420011,INV_0420005,1,EMP_04202,manager,approved,2025-06-18T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420012,INV_0420005,2,EMP_04221,director,approved,2025-06-19T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420013,INV_0420006,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-03T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420014,INV_0420006,1,EMP_04214,manager,approved,2025-06-04T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420015,INV_0420006,2,EMP_04209,director,approved,2025-06-05T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420016,INV_0420007,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-28T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420017,INV_0420007,1,EMP_04214,manager,approved,2025-09-29T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420018,INV_0420008,0,SYSTEM-WORKFLOW,workflow,submitted,2025-02-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420019,INV_0420008,1,EMP_04202,manager,approved,2025-02-18T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420020,INV_0420008,2,EMP_04203,director,approved,2025-02-19T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420021,INV_0420009,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-29T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420022,INV_0420009,1,EMP_04220,manager,approved,2025-03-30T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420023,INV_0420010,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-03T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420024,INV_0420010,1,EMP_04214,manager,approved,2025-10-04T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420025,INV_0420010,2,EMP_04209,director,approved,2025-10-05T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420026,INV_0420011,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-03T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420027,INV_0420011,1,EMP_04208,manager,approved,2025-04-04T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420028,INV_0420012,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-08T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420029,INV_0420012,1,EMP_04208,manager,approved,2026-03-09T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420030,INV_0420013,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420031,INV_0420013,1,EMP_04220,manager,approved,2025-10-18T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420032,INV_0420014,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-02T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420033,INV_0420014,1,EMP_04202,manager,approved,2025-06-03T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420034,INV_0420015,0,SYSTEM-WORKFLOW,workflow,submitted,2025-01-25T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420035,INV_0420015,1,EMP_04208,manager,approved,2025-01-26T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420036,INV_0420015,2,EMP_04221,director,approved,2025-01-27T12:00:00,pending_level_2,pending_level_3,Approved within delegated authority,ERP-Workflow
+APR_0420037,INV_0420015,3,EMP_04222,controller,approved,2025-01-28T13:00:00,pending_level_3,approved,Approved within delegated authority,ERP-Workflow
+APR_0420038,INV_0420016,0,SYSTEM-WORKFLOW,workflow,submitted,2025-01-21T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420039,INV_0420016,1,EMP_04220,manager,approved,2025-01-22T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420040,INV_0420017,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-27T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420041,INV_0420017,1,EMP_04220,manager,approved,2026-05-28T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420042,INV_0420018,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-15T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420043,INV_0420018,1,EMP_04220,manager,approved,2026-05-16T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420044,INV_0420019,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-10T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420045,INV_0420019,1,SYSTEM-AUTO-APPROVAL,auto,auto_approved,2025-03-11T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420046,INV_0420020,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-03T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420047,INV_0420020,1,EMP_04220,manager,approved,2025-04-04T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420048,INV_0420021,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-28T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420049,INV_0420021,1,EMP_04202,manager,approved,2026-01-29T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420050,INV_0420022,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-25T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420051,INV_0420022,1,EMP_04202,manager,approved,2025-10-26T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420052,INV_0420023,0,SYSTEM-WORKFLOW,workflow,submitted,2025-08-05T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420053,INV_0420023,1,EMP_04208,manager,approved,2025-08-06T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420054,INV_0420023,2,EMP_04215,director,approved,2025-08-07T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420055,INV_0420024,0,SYSTEM-WORKFLOW,workflow,submitted,2025-07-13T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420056,INV_0420024,1,EMP_04202,manager,approved,2025-07-14T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420057,INV_0420025,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-14T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420058,INV_0420025,1,EMP_04214,manager,approved,2025-09-15T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420059,INV_0420026,0,SYSTEM-WORKFLOW,workflow,submitted,2025-05-11T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420060,INV_0420026,1,SYSTEM-AUTO-APPROVAL,auto,auto_approved,2025-05-12T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420061,INV_0420027,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-13T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420062,INV_0420027,1,EMP_04208,manager,approved,2025-09-14T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420063,INV_0420028,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-18T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420064,INV_0420028,1,EMP_04202,manager,approved,2026-01-19T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420065,INV_0420028,2,EMP_04203,director,approved,2026-01-20T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420066,INV_0420029,0,SYSTEM-WORKFLOW,workflow,submitted,2025-11-19T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420067,INV_0420029,1,EMP_04208,manager,approved,2025-11-20T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420068,INV_0420030,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-09T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420069,INV_0420030,1,EMP_04208,manager,approved,2025-10-10T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420070,INV_0420031,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-21T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420071,INV_0420031,1,EMP_04214,manager,approved,2025-06-22T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420072,INV_0420032,0,SYSTEM-WORKFLOW,workflow,submitted,2025-08-08T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420073,INV_0420032,1,EMP_04214,manager,approved,2025-08-09T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420074,INV_0420033,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-07T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420075,INV_0420033,1,EMP_04208,manager,approved,2026-01-08T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420076,INV_0420034,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-15T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420077,INV_0420034,1,EMP_04202,manager,approved,2025-04-16T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420078,INV_0420035,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-10T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420079,INV_0420035,1,EMP_04220,manager,approved,2026-01-11T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420080,INV_0420036,0,SYSTEM-WORKFLOW,workflow,submitted,2025-08-25T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420081,INV_0420036,1,EMP_04214,manager,approved,2025-08-26T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420082,INV_0420037,0,SYSTEM-WORKFLOW,workflow,submitted,2026-04-13T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420083,INV_0420037,1,EMP_04208,manager,approved,2026-04-14T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420084,INV_0420038,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-24T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420085,INV_0420038,1,EMP_04202,manager,approved,2026-03-25T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420086,INV_0420039,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-20T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420087,INV_0420039,1,EMP_04202,manager,approved,2026-05-21T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420088,INV_0420040,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-18T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420089,INV_0420040,1,EMP_04214,manager,approved,2026-05-19T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420090,INV_0420041,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-29T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420091,INV_0420041,1,EMP_04214,manager,approved,2026-01-30T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420092,INV_0420042,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-04T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420093,INV_0420042,1,EMP_04220,manager,approved,2025-12-05T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420094,INV_0420043,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-26T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420095,INV_0420043,1,EMP_04214,manager,approved,2026-03-27T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420096,INV_0420044,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-03T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420097,INV_0420044,1,EMP_04220,manager,approved,2026-01-04T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420098,INV_0420045,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-01T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420099,INV_0420045,1,EMP_04208,manager,approved,2026-01-02T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420100,INV_0420046,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-15T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420101,INV_0420046,1,EMP_04214,manager,approved,2025-12-16T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420102,INV_0420047,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-05T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420103,INV_0420047,1,EMP_04220,manager,approved,2025-10-06T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420104,INV_0420047,2,EMP_04215,director,approved,2025-10-07T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420105,INV_0420048,0,SYSTEM-WORKFLOW,workflow,submitted,2025-05-12T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420106,INV_0420048,1,EMP_04208,manager,approved,2025-05-13T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420107,INV_0420049,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-31T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420108,INV_0420049,1,EMP_04208,manager,approved,2025-04-01T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420109,INV_0420049,2,EMP_04221,director,approved,2025-04-02T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420110,INV_0420050,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-20T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420111,INV_0420050,1,EMP_04202,manager,approved,2025-06-21T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420112,INV_0420050,2,EMP_04209,director,approved,2025-06-22T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420113,INV_0420051,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-08T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420114,INV_0420051,1,EMP_04208,manager,approved,2025-09-09T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420115,INV_0420052,0,SYSTEM-WORKFLOW,workflow,submitted,2026-02-25T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420116,INV_0420052,1,EMP_04208,manager,approved,2026-02-26T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420117,INV_0420053,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420118,INV_0420053,1,EMP_04208,manager,approved,2025-03-18T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420119,INV_0420054,0,SYSTEM-WORKFLOW,workflow,submitted,2026-04-10T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420120,INV_0420054,1,EMP_04202,manager,approved,2026-04-11T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420121,INV_0420055,0,SYSTEM-WORKFLOW,workflow,submitted,2026-02-28T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420122,INV_0420055,1,EMP_04208,manager,approved,2026-03-01T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420123,INV_0420055,2,EMP_04203,director,approved,2026-03-02T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420124,INV_0420056,0,SYSTEM-WORKFLOW,workflow,submitted,2025-05-29T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420125,INV_0420056,1,EMP_04214,manager,approved,2025-05-30T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420126,INV_0420057,0,SYSTEM-WORKFLOW,workflow,submitted,2025-05-10T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420127,INV_0420057,1,EMP_04202,manager,approved,2025-05-11T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420128,INV_0420058,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-31T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420129,INV_0420058,1,EMP_04220,manager,approved,2025-11-01T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420130,INV_0420059,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-03T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420131,INV_0420059,1,EMP_04214,manager,approved,2026-05-04T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420132,INV_0420060,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-25T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420133,INV_0420060,1,EMP_04202,manager,approved,2026-05-26T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420134,INV_0420061,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-05T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420135,INV_0420061,1,EMP_04202,manager,approved,2026-05-06T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420136,INV_0420062,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-20T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420137,INV_0420062,1,EMP_04202,manager,approved,2025-10-21T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420138,INV_0420063,0,SYSTEM-WORKFLOW,workflow,submitted,2026-04-14T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420139,INV_0420063,1,EMP_04202,manager,approved,2026-04-15T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420140,INV_0420064,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-01T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420141,INV_0420064,1,EMP_04202,manager,approved,2026-03-02T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420142,INV_0420065,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-05T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420143,INV_0420065,1,EMP_04202,manager,approved,2025-09-06T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420144,INV_0420066,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-02T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420145,INV_0420066,1,EMP_04220,manager,approved,2026-03-03T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420146,INV_0420067,0,SYSTEM-WORKFLOW,workflow,submitted,2026-06-15T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420147,INV_0420067,1,EMP_04220,manager,approved,2026-06-16T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420148,INV_0420068,0,SYSTEM-WORKFLOW,workflow,submitted,2026-02-02T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420149,INV_0420068,1,EMP_04220,manager,approved,2026-02-03T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420150,INV_0420069,0,SYSTEM-WORKFLOW,workflow,submitted,2025-02-12T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420151,INV_0420069,1,EMP_04202,manager,approved,2025-02-13T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420152,INV_0420070,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-22T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420153,INV_0420070,1,EMP_04214,manager,approved,2025-03-23T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420154,INV_0420071,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-21T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420155,INV_0420071,1,EMP_04220,manager,approved,2025-04-22T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420156,INV_0420072,0,SYSTEM-WORKFLOW,workflow,submitted,2025-05-15T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420157,INV_0420072,1,EMP_04208,manager,approved,2025-05-16T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420158,INV_0420073,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-10T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420159,INV_0420073,1,EMP_04208,manager,approved,2025-04-11T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420160,INV_0420074,0,SYSTEM-WORKFLOW,workflow,submitted,2025-11-04T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420161,INV_0420074,1,EMP_04202,manager,approved,2025-11-05T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420162,INV_0420075,0,SYSTEM-WORKFLOW,workflow,submitted,2025-07-23T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420163,INV_0420075,1,EMP_04214,manager,approved,2025-07-24T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420164,INV_0420076,0,SYSTEM-WORKFLOW,workflow,submitted,2025-05-30T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420165,INV_0420076,1,EMP_04220,manager,approved,2025-05-31T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420166,INV_0420076,2,EMP_04203,director,approved,2025-06-01T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420167,INV_0420077,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-07T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420168,INV_0420077,1,EMP_04214,manager,approved,2025-10-08T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420169,INV_0420078,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-30T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420170,INV_0420078,1,EMP_04208,manager,approved,2026-05-31T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420171,INV_0420079,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-23T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420172,INV_0420079,1,EMP_04220,manager,approved,2026-03-24T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420173,INV_0420080,0,SYSTEM-WORKFLOW,workflow,submitted,2025-07-20T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420174,INV_0420080,1,EMP_04202,manager,approved,2025-07-21T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420175,INV_0420081,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-14T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420176,INV_0420081,1,EMP_04202,manager,approved,2026-03-15T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420177,INV_0420082,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-30T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420178,INV_0420082,1,EMP_04214,manager,approved,2025-10-01T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420179,INV_0420082,2,EMP_04203,director,approved,2025-10-02T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420180,INV_0420083,0,SYSTEM-WORKFLOW,workflow,submitted,2026-06-07T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420181,INV_0420083,1,EMP_04202,manager,approved,2026-06-08T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420182,INV_0420084,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-13T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420183,INV_0420084,1,EMP_04220,manager,approved,2025-09-14T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420184,INV_0420084,2,EMP_04209,director,approved,2025-09-15T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420185,INV_0420085,0,SYSTEM-WORKFLOW,workflow,submitted,2025-05-09T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420186,INV_0420085,1,EMP_04208,manager,approved,2025-05-10T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420187,INV_0420086,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-02T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420188,INV_0420086,1,EMP_04214,manager,approved,2025-04-03T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420189,INV_0420087,0,SYSTEM-WORKFLOW,workflow,submitted,2026-04-07T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420190,INV_0420087,1,EMP_04208,manager,approved,2026-04-08T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420191,INV_0420088,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-05T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420192,INV_0420088,1,EMP_04214,manager,approved,2025-12-06T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420193,INV_0420089,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-01T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420194,INV_0420089,1,EMP_04220,manager,approved,2026-05-02T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420195,INV_0420090,0,SYSTEM-WORKFLOW,workflow,submitted,2025-02-28T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420196,INV_0420090,1,EMP_04214,manager,approved,2025-03-01T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420197,INV_0420090,2,EMP_04209,director,approved,2025-03-02T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420198,INV_0420091,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-12T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420199,INV_0420091,1,EMP_04202,manager,approved,2025-04-13T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420200,INV_0420092,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-25T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420201,INV_0420092,1,EMP_04220,manager,approved,2025-12-26T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420202,INV_0420093,0,SYSTEM-WORKFLOW,workflow,submitted,2025-02-27T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420203,INV_0420093,1,EMP_04208,manager,approved,2025-02-28T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420204,INV_0420094,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-16T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420205,INV_0420094,1,EMP_04220,manager,approved,2025-04-17T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420206,INV_0420094,2,EMP_04215,director,approved,2025-04-18T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420207,INV_0420095,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-01T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420208,INV_0420095,1,EMP_04208,manager,approved,2025-10-02T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420209,INV_0420096,0,SYSTEM-WORKFLOW,workflow,submitted,2026-04-26T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420210,INV_0420096,1,EMP_04202,manager,approved,2026-04-27T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420211,INV_0420097,0,SYSTEM-WORKFLOW,workflow,submitted,2026-02-06T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420212,INV_0420097,1,EMP_04202,manager,approved,2026-02-07T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420213,INV_0420098,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-31T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420214,INV_0420098,1,EMP_04202,manager,approved,2025-11-01T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420215,INV_0420099,0,SYSTEM-WORKFLOW,workflow,submitted,2026-04-19T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420216,INV_0420099,1,EMP_04202,manager,approved,2026-04-20T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420217,INV_0420100,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-06T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420218,INV_0420100,1,EMP_04220,manager,approved,2025-06-07T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420219,INV_0420101,0,SYSTEM-WORKFLOW,workflow,submitted,2025-08-10T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420220,INV_0420101,1,EMP_04208,manager,approved,2025-08-11T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420221,INV_0420102,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-15T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420222,INV_0420102,1,EMP_04202,manager,approved,2025-09-16T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420223,INV_0420103,0,SYSTEM-WORKFLOW,workflow,submitted,2025-01-19T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420224,INV_0420103,1,EMP_04202,manager,approved,2025-01-20T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420225,INV_0420104,0,SYSTEM-WORKFLOW,workflow,submitted,2026-06-02T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420226,INV_0420104,1,EMP_04202,manager,approved,2026-06-03T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420227,INV_0420105,0,SYSTEM-WORKFLOW,workflow,submitted,2025-02-06T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420228,INV_0420105,1,EMP_04214,manager,approved,2025-02-07T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420229,INV_0420106,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-26T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420230,INV_0420106,1,EMP_04208,manager,approved,2025-06-27T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420231,INV_0420107,0,SYSTEM-WORKFLOW,workflow,submitted,2025-11-09T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420232,INV_0420107,1,EMP_04220,manager,approved,2025-11-10T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420233,INV_0420108,0,SYSTEM-WORKFLOW,workflow,submitted,2025-07-15T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420234,INV_0420108,1,EMP_04214,manager,approved,2025-07-16T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420235,INV_0420109,0,SYSTEM-WORKFLOW,workflow,submitted,2025-08-20T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420236,INV_0420109,1,EMP_04214,manager,approved,2025-08-21T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420237,INV_0420110,0,SYSTEM-WORKFLOW,workflow,submitted,2026-04-03T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420238,INV_0420110,1,EMP_04220,manager,approved,2026-04-04T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420239,INV_0420111,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-24T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420240,INV_0420111,1,EMP_04202,manager,approved,2025-03-25T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420241,INV_0420112,0,SYSTEM-WORKFLOW,workflow,submitted,2025-05-20T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420242,INV_0420112,1,EMP_04202,manager,approved,2025-05-21T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420243,INV_0420113,0,SYSTEM-WORKFLOW,workflow,submitted,2025-11-28T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420244,INV_0420113,1,EMP_04208,manager,approved,2025-11-29T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420245,INV_0420114,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-21T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420246,INV_0420114,1,EMP_04202,manager,approved,2025-09-22T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420247,INV_0420115,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-15T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420248,INV_0420115,1,EMP_04214,manager,approved,2025-06-16T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420249,INV_0420116,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-20T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420250,INV_0420116,1,EMP_04214,manager,approved,2025-03-21T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420251,INV_0420117,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-31T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420252,INV_0420117,1,EMP_04214,manager,approved,2026-04-01T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420253,INV_0420118,0,SYSTEM-WORKFLOW,workflow,submitted,2025-02-04T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420254,INV_0420118,1,EMP_04220,manager,approved,2025-02-05T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420255,INV_0420119,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-21T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420256,INV_0420119,1,EMP_04202,manager,approved,2025-06-22T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420257,INV_0420120,0,SYSTEM-WORKFLOW,workflow,submitted,2025-08-31T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420258,INV_0420120,1,EMP_04202,manager,approved,2025-09-01T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420259,INV_0420121,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-09T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420260,INV_0420121,1,EMP_04202,manager,approved,2026-03-10T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420261,INV_0420121,2,EMP_04203,director,approved,2026-03-11T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420262,INV_0420122,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-16T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420263,INV_0420122,1,EMP_04208,manager,approved,2026-03-17T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420264,INV_0420122,2,EMP_04209,director,approved,2026-03-18T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420265,INV_0420123,0,SYSTEM-WORKFLOW,workflow,submitted,2025-05-13T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420266,INV_0420123,1,EMP_04214,manager,approved,2025-05-14T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420267,INV_0420124,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-08T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420268,INV_0420124,1,EMP_04214,manager,approved,2026-05-09T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420269,INV_0420125,0,SYSTEM-WORKFLOW,workflow,submitted,2025-02-20T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420270,INV_0420125,1,EMP_04220,manager,approved,2025-02-21T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420271,INV_0420125,2,EMP_04215,director,approved,2025-02-22T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420272,INV_0420126,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-05T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420273,INV_0420126,1,EMP_04202,manager,approved,2026-01-06T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420274,INV_0420127,0,SYSTEM-WORKFLOW,workflow,submitted,2026-02-19T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420275,INV_0420127,1,EMP_04214,manager,approved,2026-02-20T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420276,INV_0420128,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420277,INV_0420128,1,EMP_04214,manager,approved,2026-03-18T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420278,INV_0420129,0,SYSTEM-WORKFLOW,workflow,submitted,2025-02-22T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420279,INV_0420129,1,EMP_04208,manager,approved,2025-02-23T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420280,INV_0420130,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-22T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420281,INV_0420130,1,EMP_04202,manager,approved,2026-01-23T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420282,INV_0420130,2,EMP_04221,director,approved,2026-01-24T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420283,INV_0420131,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-02T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420284,INV_0420131,1,EMP_04220,manager,approved,2026-01-03T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420285,INV_0420132,0,SYSTEM-WORKFLOW,workflow,submitted,2026-02-18T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420286,INV_0420132,1,EMP_04220,manager,approved,2026-02-19T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420287,INV_0420133,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-04T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420288,INV_0420133,1,EMP_04214,manager,approved,2025-06-05T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420289,INV_0420134,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-25T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420290,INV_0420134,1,EMP_04220,manager,approved,2026-05-26T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420291,INV_0420135,0,SYSTEM-WORKFLOW,workflow,submitted,2025-01-23T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420292,INV_0420135,1,EMP_04220,manager,approved,2025-01-24T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420293,INV_0420136,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-27T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420294,INV_0420136,1,EMP_04220,manager,approved,2025-09-28T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420295,INV_0420137,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-26T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420296,INV_0420137,1,EMP_04208,manager,approved,2025-04-27T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420297,INV_0420137,2,EMP_04203,director,approved,2025-04-28T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420298,INV_0420138,0,SYSTEM-WORKFLOW,workflow,submitted,2025-07-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420299,INV_0420138,1,EMP_04208,manager,approved,2025-07-18T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420300,INV_0420138,2,EMP_04203,director,approved,2025-07-19T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420301,INV_0420139,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-12T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420302,INV_0420139,1,EMP_04208,manager,approved,2025-06-13T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420303,INV_0420140,0,SYSTEM-WORKFLOW,workflow,submitted,2026-04-20T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420304,INV_0420140,1,EMP_04202,manager,approved,2026-04-21T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420305,INV_0420141,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-29T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420306,INV_0420141,1,EMP_04220,manager,approved,2025-03-30T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420307,INV_0420141,2,EMP_04221,director,approved,2025-03-31T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420308,INV_0420142,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-26T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420309,INV_0420142,1,SYSTEM-AUTO-APPROVAL,auto,auto_approved,2025-12-27T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420310,INV_0420143,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-22T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420311,INV_0420143,1,EMP_04220,manager,approved,2025-10-23T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420312,INV_0420144,0,SYSTEM-WORKFLOW,workflow,submitted,2026-04-16T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420313,INV_0420144,1,EMP_04208,manager,approved,2026-04-17T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420314,INV_0420145,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-21T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420315,INV_0420145,1,EMP_04220,manager,approved,2025-10-22T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420316,INV_0420146,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-19T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420317,INV_0420146,1,EMP_04214,manager,approved,2025-10-20T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420318,INV_0420147,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-29T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420319,INV_0420147,1,EMP_04202,manager,approved,2025-04-30T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420320,INV_0420148,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-10T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420321,INV_0420148,1,EMP_04208,manager,approved,2025-12-11T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420322,INV_0420149,0,SYSTEM-WORKFLOW,workflow,submitted,2026-06-03T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420323,INV_0420149,1,EMP_04220,manager,approved,2026-06-04T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420324,INV_0420149,2,EMP_04221,director,approved,2026-06-05T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420325,INV_0420150,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-22T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420326,INV_0420150,1,EMP_04202,manager,approved,2026-05-23T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420327,INV_0420151,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-13T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420328,INV_0420151,1,EMP_04220,manager,approved,2025-10-14T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420329,INV_0420151,2,EMP_04221,director,approved,2025-10-15T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420330,INV_0420152,0,SYSTEM-WORKFLOW,workflow,submitted,2026-06-14T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420331,INV_0420152,1,EMP_04202,manager,approved,2026-06-15T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420332,INV_0420153,0,SYSTEM-WORKFLOW,workflow,submitted,2025-02-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420333,INV_0420153,1,EMP_04202,manager,approved,2025-02-18T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420334,INV_0420153,2,EMP_04215,director,approved,2025-02-19T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420335,INV_0420154,0,SYSTEM-WORKFLOW,workflow,submitted,2025-02-04T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420336,INV_0420154,1,EMP_04214,manager,approved,2025-02-05T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420337,INV_0420155,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-19T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420338,INV_0420155,1,EMP_04202,manager,approved,2026-03-20T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420339,INV_0420156,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-23T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420340,INV_0420156,1,EMP_04208,manager,approved,2025-06-24T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420341,INV_0420157,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-14T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420342,INV_0420157,1,EMP_04214,manager,approved,2025-10-15T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420343,INV_0420158,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-03T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420344,INV_0420158,1,EMP_04202,manager,approved,2026-03-04T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420345,INV_0420159,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-18T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420346,INV_0420159,1,SYSTEM-AUTO-APPROVAL,auto,auto_approved,2026-05-19T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420347,INV_0420160,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-09T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420348,INV_0420160,1,EMP_04220,manager,approved,2025-03-10T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420349,INV_0420160,2,EMP_04209,director,approved,2025-03-11T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420350,INV_0420161,0,SYSTEM-WORKFLOW,workflow,submitted,2025-02-19T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420351,INV_0420161,1,EMP_04220,manager,approved,2025-02-20T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420352,INV_0420162,0,SYSTEM-WORKFLOW,workflow,submitted,2025-05-21T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420353,INV_0420162,1,EMP_04214,manager,approved,2025-05-22T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420354,INV_0420163,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-26T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420355,INV_0420163,1,EMP_04220,manager,approved,2025-03-27T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420356,INV_0420164,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-08T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420357,INV_0420164,1,EMP_04208,manager,approved,2025-04-09T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420358,INV_0420165,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-18T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420359,INV_0420165,1,EMP_04202,manager,approved,2025-12-19T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420360,INV_0420166,0,SYSTEM-WORKFLOW,workflow,submitted,2026-02-01T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420361,INV_0420166,1,EMP_04202,manager,approved,2026-02-02T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420362,INV_0420167,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-02T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420363,INV_0420167,1,EMP_04208,manager,approved,2026-03-03T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420364,INV_0420167,2,EMP_04221,director,approved,2026-03-04T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420365,INV_0420168,0,SYSTEM-WORKFLOW,workflow,submitted,2025-11-23T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420366,INV_0420168,1,EMP_04220,manager,approved,2025-11-24T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420367,INV_0420169,0,SYSTEM-WORKFLOW,workflow,submitted,2025-11-06T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420368,INV_0420169,1,EMP_04208,manager,approved,2025-11-07T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420369,INV_0420170,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-14T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420370,INV_0420170,1,EMP_04202,manager,approved,2025-03-15T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420371,INV_0420171,0,SYSTEM-WORKFLOW,workflow,submitted,2025-08-09T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420372,INV_0420171,1,EMP_04220,manager,approved,2025-08-10T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420373,INV_0420172,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-15T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420374,INV_0420172,1,EMP_04214,manager,approved,2025-10-16T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420375,INV_0420173,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-09T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420376,INV_0420173,1,EMP_04208,manager,approved,2025-03-10T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420377,INV_0420174,0,SYSTEM-WORKFLOW,workflow,submitted,2025-07-04T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420378,INV_0420174,1,EMP_04214,manager,approved,2025-07-05T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420379,INV_0420175,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-07T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420380,INV_0420175,1,EMP_04214,manager,approved,2025-10-08T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420381,INV_0420175,2,EMP_04203,director,approved,2025-10-09T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420382,INV_0420176,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-01T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420383,INV_0420176,1,EMP_04208,manager,approved,2026-03-02T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420384,INV_0420177,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-12T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420385,INV_0420177,1,SYSTEM-AUTO-APPROVAL,auto,auto_approved,2026-01-13T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420386,INV_0420178,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-02T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420387,INV_0420178,1,EMP_04220,manager,approved,2026-05-03T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420388,INV_0420179,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-24T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420389,INV_0420179,1,EMP_04220,manager,approved,2025-03-25T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420390,INV_0420180,0,SYSTEM-WORKFLOW,workflow,submitted,2025-11-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420391,INV_0420180,1,EMP_04208,manager,approved,2025-11-18T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420392,INV_0420181,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-26T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420393,INV_0420181,1,EMP_04202,manager,approved,2026-05-27T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420394,INV_0420182,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-24T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420395,INV_0420182,1,EMP_04220,manager,approved,2025-03-25T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420396,INV_0420183,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-21T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420397,INV_0420183,1,EMP_04220,manager,approved,2025-04-22T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420398,INV_0420184,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-28T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420399,INV_0420184,1,EMP_04220,manager,approved,2025-03-29T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420400,INV_0420185,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-27T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420401,INV_0420185,1,EMP_04202,manager,approved,2025-10-28T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420402,INV_0420186,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-10T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420403,INV_0420186,1,EMP_04220,manager,approved,2025-06-11T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420404,INV_0420187,0,SYSTEM-WORKFLOW,workflow,submitted,2025-05-05T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420405,INV_0420187,1,EMP_04220,manager,approved,2025-05-06T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420406,INV_0420188,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-31T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420407,INV_0420188,1,EMP_04214,manager,approved,2026-04-01T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420408,INV_0420188,2,EMP_04203,director,approved,2026-04-02T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420409,INV_0420189,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-09T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420410,INV_0420189,1,EMP_04220,manager,approved,2025-09-10T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420411,INV_0420190,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-14T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420412,INV_0420190,1,EMP_04202,manager,approved,2025-09-15T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420413,INV_0420191,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-31T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420414,INV_0420191,1,EMP_04202,manager,approved,2025-04-01T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420415,INV_0420192,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-09T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420416,INV_0420192,1,EMP_04220,manager,approved,2025-12-10T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420417,INV_0420193,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-13T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420418,INV_0420193,1,EMP_04220,manager,approved,2025-10-14T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420419,INV_0420194,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-06T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420420,INV_0420194,1,EMP_04202,manager,approved,2025-12-07T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420421,INV_0420195,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-16T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420422,INV_0420195,1,EMP_04202,manager,approved,2025-09-17T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420423,INV_0420196,0,SYSTEM-WORKFLOW,workflow,submitted,2025-08-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420424,INV_0420196,1,EMP_04202,manager,approved,2025-08-18T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420425,INV_0420197,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-05T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420426,INV_0420197,1,EMP_04214,manager,approved,2025-09-06T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420427,INV_0420198,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-04T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420428,INV_0420198,1,EMP_04208,manager,approved,2026-01-05T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420429,INV_0420199,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-07T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420430,INV_0420199,1,EMP_04220,manager,approved,2025-03-08T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420431,INV_0420200,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-27T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420432,INV_0420200,1,EMP_04214,manager,approved,2025-04-28T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420433,INV_0420201,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-16T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420434,INV_0420201,1,EMP_04214,manager,approved,2025-12-17T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420435,INV_0420202,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-02T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420436,INV_0420202,1,EMP_04202,manager,approved,2025-06-03T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420437,INV_0420203,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-19T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420438,INV_0420203,1,EMP_04208,manager,approved,2025-04-20T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420439,INV_0420204,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-02T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420440,INV_0420204,1,EMP_04220,manager,approved,2026-01-03T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420441,INV_0420205,0,SYSTEM-WORKFLOW,workflow,submitted,2026-02-08T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420442,INV_0420205,1,EMP_04214,manager,approved,2026-02-09T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420443,INV_0420206,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-24T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420444,INV_0420206,1,EMP_04220,manager,approved,2025-12-25T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420445,INV_0420207,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-21T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420446,INV_0420207,1,EMP_04214,manager,approved,2025-09-22T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420447,INV_0420208,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-26T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420448,INV_0420208,1,EMP_04220,manager,approved,2025-12-27T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420449,INV_0420209,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420450,INV_0420209,1,EMP_04202,manager,approved,2025-12-18T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420451,INV_0420210,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-23T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420452,INV_0420210,1,EMP_04202,manager,approved,2025-03-24T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420453,INV_0420211,0,SYSTEM-WORKFLOW,workflow,submitted,2025-03-01T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420454,INV_0420211,1,EMP_04208,manager,approved,2025-03-02T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420455,INV_0420212,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-19T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420456,INV_0420212,1,EMP_04202,manager,approved,2025-10-20T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420457,INV_0420213,0,SYSTEM-WORKFLOW,workflow,submitted,2026-06-10T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420458,INV_0420213,1,EMP_04214,manager,approved,2026-06-11T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420459,INV_0420214,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-07T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420460,INV_0420214,1,EMP_04214,manager,approved,2026-05-08T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420461,INV_0420215,0,SYSTEM-WORKFLOW,workflow,submitted,2026-02-15T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420462,INV_0420215,1,EMP_04214,manager,approved,2026-02-16T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420463,INV_0420216,0,SYSTEM-WORKFLOW,workflow,submitted,2025-08-25T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420464,INV_0420216,1,EMP_04214,manager,approved,2025-08-26T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420465,INV_0420217,0,SYSTEM-WORKFLOW,workflow,submitted,2025-08-21T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420466,INV_0420217,1,EMP_04202,manager,approved,2025-08-22T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420467,INV_0420217,2,EMP_04203,director,approved,2025-08-23T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420468,INV_0420218,0,SYSTEM-WORKFLOW,workflow,submitted,2026-06-04T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420469,INV_0420218,1,EMP_04208,manager,approved,2026-06-05T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420470,INV_0420219,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-01T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420471,INV_0420219,1,EMP_04220,manager,approved,2025-06-02T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420472,INV_0420219,2,EMP_04209,director,approved,2025-06-03T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420473,INV_0420220,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-06T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420474,INV_0420220,1,EMP_04220,manager,approved,2026-03-07T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420475,INV_0420221,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420476,INV_0420221,1,EMP_04202,manager,approved,2025-04-18T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420477,INV_0420222,0,SYSTEM-WORKFLOW,workflow,submitted,2026-03-01T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420478,INV_0420222,1,EMP_04214,manager,approved,2026-03-02T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420479,INV_0420223,0,SYSTEM-WORKFLOW,workflow,submitted,2026-02-12T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420480,INV_0420223,1,SYSTEM-AUTO-APPROVAL,auto,auto_approved,2026-02-13T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420481,INV_0420224,0,SYSTEM-WORKFLOW,workflow,submitted,2025-11-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420482,INV_0420224,1,EMP_04208,manager,approved,2025-11-18T11:00:00,submitted,pending_level_2,Approved within delegated authority,ERP-Workflow
+APR_0420483,INV_0420224,2,EMP_04209,director,approved,2025-11-19T12:00:00,pending_level_2,approved,Approved within delegated authority,ERP-Workflow
+APR_0420484,INV_0420225,0,SYSTEM-WORKFLOW,workflow,submitted,2025-04-06T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420485,INV_0420225,1,EMP_04202,manager,approved,2025-04-07T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420486,INV_0420226,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-13T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420487,INV_0420226,1,EMP_04220,manager,approved,2025-06-14T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420488,INV_0420227,0,SYSTEM-WORKFLOW,workflow,submitted,2026-04-14T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420489,INV_0420227,1,EMP_04208,manager,approved,2026-04-15T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420490,INV_0420228,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-17T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420491,INV_0420228,1,EMP_04220,manager,approved,2026-01-18T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420492,INV_0420229,0,SYSTEM-WORKFLOW,workflow,submitted,2025-12-26T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420493,INV_0420229,1,EMP_04208,manager,approved,2025-12-27T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420494,INV_0420230,0,SYSTEM-WORKFLOW,workflow,submitted,2025-08-20T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420495,INV_0420230,1,EMP_04214,manager,approved,2025-08-21T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420496,INV_0420231,0,SYSTEM-WORKFLOW,workflow,submitted,2025-06-30T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420497,INV_0420231,1,EMP_04202,manager,approved,2025-07-01T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420498,INV_0420232,0,SYSTEM-WORKFLOW,workflow,submitted,2026-04-28T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420499,INV_0420232,1,EMP_04220,manager,approved,2026-04-29T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420500,INV_0420233,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-22T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420501,INV_0420233,1,EMP_04202,manager,approved,2025-10-23T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420502,INV_0420234,0,SYSTEM-WORKFLOW,workflow,submitted,2025-11-07T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420503,INV_0420234,1,EMP_04202,manager,approved,2025-11-08T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420504,INV_0420235,0,SYSTEM-WORKFLOW,workflow,submitted,2025-10-31T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420505,INV_0420235,1,EMP_04220,manager,approved,2025-11-01T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420506,INV_0420236,0,SYSTEM-WORKFLOW,workflow,submitted,2026-05-06T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420507,INV_0420236,1,EMP_04220,manager,approved,2026-05-07T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420508,INV_0420237,0,SYSTEM-WORKFLOW,workflow,submitted,2025-07-09T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420509,INV_0420237,1,SYSTEM-AUTO-APPROVAL,auto,auto_approved,2025-07-10T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420510,INV_0420238,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-25T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420511,INV_0420238,1,EMP_04208,manager,approved,2025-09-26T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420512,INV_0420239,0,SYSTEM-WORKFLOW,workflow,submitted,2026-01-28T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420513,INV_0420239,1,EMP_04220,manager,approved,2026-01-29T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow
+APR_0420514,INV_0420240,0,SYSTEM-WORKFLOW,workflow,submitted,2025-09-07T09:00:00,received,submitted,Invoice submitted to configured approval policy,ERP-Workflow
+APR_0420515,INV_0420240,1,EMP_04202,manager,approved,2025-09-08T11:00:00,submitted,approved,Approved within delegated authority,ERP-Workflow

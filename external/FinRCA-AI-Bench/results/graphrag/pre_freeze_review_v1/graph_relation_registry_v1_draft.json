@@ -1,0 +1,1114 @@
+{
+  "audit_event_entity_type_mapping": {
+    "BANK_TRANSACTION": [
+      "bank_transaction"
+    ],
+    "INVOICE": [
+      "invoice"
+    ],
+    "PAYMENT": [
+      "payment"
+    ],
+    "PURCHASE_ORDER": [
+      "purchase_order"
+    ],
+    "VENDOR": [
+      "vendor"
+    ]
+  },
+  "decision_cutoff": "2026-06-30",
+  "excluded_or_unresolved_designs": [
+    {
+      "design": "GL_JOURNAL node or AUDIT_EVENT→GL_JOURNAL edge",
+      "reason": "No journal-header source record exists. journal_id remains a GL_ENTRY grouping/context attribute.",
+      "status": "REJECTED"
+    },
+    {
+      "design": "AUDIT_EVENT gl_journal entity to GL_ENTRY traversal",
+      "reason": "entity_id matches a noncanonical journal_id grouping attribute and fans out to multiple GL_ENTRY records; no type-consistent canonical node match.",
+      "status": "UNRESOLVED"
+    },
+    {
+      "design": "attribute bridge nodes for bank_account_id, gl_account, department, cost_center, currency, source_system, dates, or statuses",
+      "reason": "Context/filtering attributes are not source-backed node types and create hub risk.",
+      "status": "REJECTED"
+    }
+  ],
+  "gl_transaction_type_mapping": {
+    "BANK_TRANSACTION": [
+      "bank_fee",
+      "fx_settlement"
+    ],
+    "INVOICE": [
+      "credit_memo",
+      "invoice",
+      "invoice_cancellation"
+    ],
+    "PAYMENT": [
+      "payment",
+      "payment_reversal"
+    ]
+  },
+  "ready_for_freeze_definition": "Only deterministic exact/type-consistent relations with zero unresolved or ambiguous populated references; conditional/unresolved relations remain excluded from traversal.",
+  "registry_version": "graph_relation_registry_v1_draft",
+  "relationships": [
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 11231,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 11231,
+        "source_row_count": 11231,
+        "target_in_degree_all_domain": {
+          "domain_size": 5000,
+          "maximum_degree": 4,
+          "mean_degree": 2.2462,
+          "median_degree": 2.0,
+          "p95_degree_nearest_rank": 4,
+          "zero_degree_count": 0
+        },
+        "unique_target_count": 5000,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many PO lines to one purchase order",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT",
+      "hub_risk": "low transactional-key risk",
+      "label_independent": true,
+      "provenance_record_type": "PO_LINE",
+      "provenance_required": true,
+      "relation_type": "LINE_OF_PO",
+      "reverse_traversal": true,
+      "source_fields": [
+        "po_id"
+      ],
+      "source_node_type": "PO_LINE",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "po_id"
+      ],
+      "target_node_type": "PURCHASE_ORDER",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 5024,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 5024,
+        "source_row_count": 8147,
+        "target_in_degree_all_domain": {
+          "domain_size": 5000,
+          "maximum_degree": 2,
+          "mean_degree": 1.0048,
+          "median_degree": 1.0,
+          "p95_degree_nearest_rank": 1,
+          "zero_degree_count": 40
+        },
+        "unique_target_count": 4960,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many invoices may reference one purchase order",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT",
+      "hub_risk": "moderate reverse fan-out; motif constrained",
+      "label_independent": true,
+      "provenance_record_type": "INVOICE",
+      "provenance_required": true,
+      "relation_type": "INVOICE_REFERENCES_PO",
+      "reverse_traversal": true,
+      "source_fields": [
+        "po_id"
+      ],
+      "source_node_type": "INVOICE",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "po_id"
+      ],
+      "target_node_type": "PURCHASE_ORDER",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 11292,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 11292,
+        "source_row_count": 18299,
+        "target_in_degree_all_domain": {
+          "domain_size": 11231,
+          "maximum_degree": 2,
+          "mean_degree": 1.005431,
+          "median_degree": 1.0,
+          "p95_degree_nearest_rank": 1,
+          "zero_degree_count": 95
+        },
+        "unique_target_count": 11136,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many invoice lines may reference one PO line",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT",
+      "hub_risk": "low transactional-key risk",
+      "label_independent": true,
+      "provenance_record_type": "INVOICE_LINE",
+      "provenance_required": true,
+      "relation_type": "INVOICE_LINE_REFERENCES_PO_LINE",
+      "reverse_traversal": true,
+      "source_fields": [
+        "po_line_id"
+      ],
+      "source_node_type": "INVOICE_LINE",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "po_line_id"
+      ],
+      "target_node_type": "PO_LINE",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 18299,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 18299,
+        "source_row_count": 18299,
+        "target_in_degree_all_domain": {
+          "domain_size": 8147,
+          "maximum_degree": 4,
+          "mean_degree": 2.246103,
+          "median_degree": 2.0,
+          "p95_degree_nearest_rank": 4,
+          "zero_degree_count": 0
+        },
+        "unique_target_count": 8147,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many invoice lines to one invoice",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT",
+      "hub_risk": "low transactional-key risk",
+      "label_independent": true,
+      "provenance_record_type": "INVOICE_LINE",
+      "provenance_required": true,
+      "relation_type": "LINE_OF_INVOICE",
+      "reverse_traversal": true,
+      "source_fields": [
+        "invoice_id"
+      ],
+      "source_node_type": "INVOICE_LINE",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "invoice_id"
+      ],
+      "target_node_type": "INVOICE",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 17429,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 17429,
+        "source_row_count": 17429,
+        "target_in_degree_all_domain": {
+          "domain_size": 8147,
+          "maximum_degree": 4,
+          "mean_degree": 2.139315,
+          "median_degree": 2.0,
+          "p95_degree_nearest_rank": 3,
+          "zero_degree_count": 147
+        },
+        "unique_target_count": 8000,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many approval events to one invoice",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT",
+      "hub_risk": "event fan-out; motif constrained",
+      "label_independent": true,
+      "provenance_record_type": "APPROVAL_EVENT",
+      "provenance_required": true,
+      "relation_type": "APPROVAL_FOR_INVOICE",
+      "reverse_traversal": true,
+      "source_fields": [
+        "invoice_id"
+      ],
+      "source_node_type": "APPROVAL_EVENT",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "invoice_id"
+      ],
+      "target_node_type": "INVOICE",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 7180,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 7180,
+        "source_row_count": 7180,
+        "target_in_degree_all_domain": {
+          "domain_size": 6200,
+          "maximum_degree": 2,
+          "mean_degree": 1.158065,
+          "median_degree": 1.0,
+          "p95_degree_nearest_rank": 2,
+          "zero_degree_count": 100
+        },
+        "unique_target_count": 6100,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many allocations to one payment",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT",
+      "hub_risk": "low transactional-key risk",
+      "label_independent": true,
+      "provenance_record_type": "PAYMENT_ALLOCATION",
+      "provenance_required": true,
+      "relation_type": "ALLOCATION_OF_PAYMENT",
+      "reverse_traversal": true,
+      "source_fields": [
+        "payment_id"
+      ],
+      "source_node_type": "PAYMENT_ALLOCATION",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "payment_id"
+      ],
+      "target_node_type": "PAYMENT",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 7180,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 7180,
+        "source_row_count": 7180,
+        "target_in_degree_all_domain": {
+          "domain_size": 8147,
+          "maximum_degree": 3,
+          "mean_degree": 0.881306,
+          "median_degree": 1.0,
+          "p95_degree_nearest_rank": 2,
+          "zero_degree_count": 2147
+        },
+        "unique_target_count": 6000,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many allocations may reference one invoice",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT",
+      "hub_risk": "low transactional-key risk",
+      "label_independent": true,
+      "provenance_record_type": "PAYMENT_ALLOCATION",
+      "provenance_required": true,
+      "relation_type": "ALLOCATION_TO_INVOICE",
+      "reverse_traversal": true,
+      "source_fields": [
+        "invoice_id"
+      ],
+      "source_node_type": "PAYMENT_ALLOCATION",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "invoice_id"
+      ],
+      "target_node_type": "INVOICE",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 7180,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 7180,
+        "source_row_count": 6200,
+        "target_in_degree_all_domain": {
+          "domain_size": 8147,
+          "maximum_degree": 3,
+          "mean_degree": 0.881306,
+          "median_degree": 1.0,
+          "p95_degree_nearest_rank": 2,
+          "zero_degree_count": 2147
+        },
+        "unique_target_count": 6000,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "potentially many-to-many via explicit allocations",
+      "cardinality_observed": "M:N",
+      "confidence_tier": "TIER_A_EXPLICIT_PROVENANCE",
+      "hub_risk": "transactional relation; allocation provenance mandatory",
+      "label_independent": true,
+      "provenance_record_type": "PAYMENT_ALLOCATION",
+      "provenance_required": true,
+      "relation_type": "PAYMENT_ALLOCATED_TO_INVOICE",
+      "reverse_traversal": true,
+      "source_fields": [
+        "payment_id"
+      ],
+      "source_node_type": "PAYMENT",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "invoice_id"
+      ],
+      "target_node_type": "INVOICE",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 186,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 186,
+        "source_row_count": 186,
+        "target_in_degree_all_domain": {
+          "domain_size": 500,
+          "maximum_degree": 6,
+          "mean_degree": 0.372,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 2,
+          "zero_degree_count": 362
+        },
+        "unique_target_count": 138,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many changes to one vendor",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT",
+      "hub_risk": "high-degree vendor hub; attach only as exact context",
+      "label_independent": true,
+      "provenance_record_type": "VENDOR_CHANGE",
+      "provenance_required": true,
+      "relation_type": "VENDOR_CHANGE_FOR_VENDOR",
+      "reverse_traversal": false,
+      "source_fields": [
+        "vendor_id"
+      ],
+      "source_node_type": "VENDOR_CHANGE",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "vendor_id"
+      ],
+      "target_node_type": "VENDOR",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": false
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 5000,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 5000,
+        "source_row_count": 5000,
+        "target_in_degree_all_domain": {
+          "domain_size": 500,
+          "maximum_degree": 362,
+          "mean_degree": 10,
+          "median_degree": 5.0,
+          "p95_degree_nearest_rank": 30,
+          "zero_degree_count": 28
+        },
+        "unique_target_count": 472,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many purchase orders to one vendor",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT",
+      "hub_risk": "high-degree vendor hub; no neighborhood expansion",
+      "label_independent": true,
+      "provenance_record_type": "PURCHASE_ORDER",
+      "provenance_required": true,
+      "relation_type": "PO_FOR_VENDOR",
+      "reverse_traversal": false,
+      "source_fields": [
+        "vendor_id"
+      ],
+      "source_node_type": "PURCHASE_ORDER",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "vendor_id"
+      ],
+      "target_node_type": "VENDOR",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": false
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 8147,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 8147,
+        "source_row_count": 8147,
+        "target_in_degree_all_domain": {
+          "domain_size": 500,
+          "maximum_degree": 592,
+          "mean_degree": 16.294,
+          "median_degree": 8.0,
+          "p95_degree_nearest_rank": 48,
+          "zero_degree_count": 2
+        },
+        "unique_target_count": 498,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many invoices to one vendor",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT",
+      "hub_risk": "high-degree vendor hub; no neighborhood expansion",
+      "label_independent": true,
+      "provenance_record_type": "INVOICE",
+      "provenance_required": true,
+      "relation_type": "INVOICE_FOR_VENDOR",
+      "reverse_traversal": false,
+      "source_fields": [
+        "vendor_id"
+      ],
+      "source_node_type": "INVOICE",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "vendor_id"
+      ],
+      "target_node_type": "VENDOR",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": false
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 6200,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 6200,
+        "source_row_count": 6200,
+        "target_in_degree_all_domain": {
+          "domain_size": 500,
+          "maximum_degree": 217,
+          "mean_degree": 12.4,
+          "median_degree": 8.0,
+          "p95_degree_nearest_rank": 37,
+          "zero_degree_count": 3
+        },
+        "unique_target_count": 497,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many payments to one vendor",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT",
+      "hub_risk": "high-degree vendor hub; no neighborhood expansion",
+      "label_independent": true,
+      "provenance_record_type": "PAYMENT",
+      "provenance_required": true,
+      "relation_type": "PAYMENT_FOR_VENDOR",
+      "reverse_traversal": false,
+      "source_fields": [
+        "vendor_id"
+      ],
+      "source_node_type": "PAYMENT",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "vendor_id"
+      ],
+      "target_node_type": "VENDOR",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": false
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 17429,
+        "resolution_rate_percent_of_populated": 53.307706,
+        "resolved_target_count": 9291,
+        "source_row_count": 17429,
+        "target_in_degree_all_domain": {
+          "domain_size": 120,
+          "maximum_degree": 416,
+          "mean_degree": 77.425,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 400,
+          "zero_degree_count": 65
+        },
+        "unique_target_count": 55,
+        "unresolved_target_count": 8138
+      },
+      "cardinality_expected": "many operational records may reference one employee",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT_MATCHED_SUBSET",
+      "constraints": {
+        "employee_audit_classification": "CONDITIONAL",
+        "unmatched_values_create_edge": false
+      },
+      "hub_risk": "employee organizational hub; unmatched system actors retained as context",
+      "label_independent": true,
+      "provenance_record_type": "APPROVAL_EVENT",
+      "provenance_required": true,
+      "relation_type": "APPROVAL_EVENT_APPROVER_EMPLOYEE",
+      "reverse_traversal": false,
+      "source_fields": [
+        "approver_id"
+      ],
+      "source_node_type": "APPROVAL_EVENT",
+      "status": "CONDITIONAL",
+      "target_fields": [
+        "employee_id"
+      ],
+      "target_node_type": "EMPLOYEE",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": false
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 28029,
+        "resolution_rate_percent_of_populated": 17.981376,
+        "resolved_target_count": 5040,
+        "source_row_count": 28029,
+        "target_in_degree_all_domain": {
+          "domain_size": 120,
+          "maximum_degree": 63,
+          "mean_degree": 42,
+          "median_degree": 43.0,
+          "p95_degree_nearest_rank": 53,
+          "zero_degree_count": 5
+        },
+        "unique_target_count": 115,
+        "unresolved_target_count": 22989
+      },
+      "cardinality_expected": "many operational records may reference one employee",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT_MATCHED_SUBSET",
+      "constraints": {
+        "employee_audit_classification": "CONDITIONAL",
+        "unmatched_values_create_edge": false
+      },
+      "hub_risk": "employee organizational hub; unmatched system actors retained as context",
+      "label_independent": true,
+      "provenance_record_type": "AUDIT_EVENT",
+      "provenance_required": true,
+      "relation_type": "AUDIT_EVENT_ACTOR_EMPLOYEE",
+      "reverse_traversal": false,
+      "source_fields": [
+        "actor_id"
+      ],
+      "source_node_type": "AUDIT_EVENT",
+      "status": "CONDITIONAL",
+      "target_fields": [
+        "employee_id"
+      ],
+      "target_node_type": "EMPLOYEE",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": false
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 5000,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 5000,
+        "source_row_count": 5000,
+        "target_in_degree_all_domain": {
+          "domain_size": 120,
+          "maximum_degree": 63,
+          "mean_degree": 41.666667,
+          "median_degree": 43.0,
+          "p95_degree_nearest_rank": 53,
+          "zero_degree_count": 5
+        },
+        "unique_target_count": 115,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many operational records may reference one employee",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT_MATCHED_SUBSET",
+      "constraints": {
+        "employee_audit_classification": "APPROVED_TIER_A",
+        "unmatched_values_create_edge": false
+      },
+      "hub_risk": "employee organizational hub; unmatched system actors retained as context",
+      "label_independent": true,
+      "provenance_record_type": "PURCHASE_ORDER",
+      "provenance_required": true,
+      "relation_type": "PURCHASE_ORDER_CREATED_BY_EMPLOYEE",
+      "reverse_traversal": false,
+      "source_fields": [
+        "created_by"
+      ],
+      "source_node_type": "PURCHASE_ORDER",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "employee_id"
+      ],
+      "target_node_type": "EMPLOYEE",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": false
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 186,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 186,
+        "source_row_count": 186,
+        "target_in_degree_all_domain": {
+          "domain_size": 120,
+          "maximum_degree": 146,
+          "mean_degree": 1.55,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 2,
+          "zero_degree_count": 86
+        },
+        "unique_target_count": 34,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many operational records may reference one employee",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_EXACT_MATCHED_SUBSET",
+      "constraints": {
+        "employee_audit_classification": "APPROVED_TIER_A",
+        "unmatched_values_create_edge": false
+      },
+      "hub_risk": "employee organizational hub; unmatched system actors retained as context",
+      "label_independent": true,
+      "provenance_record_type": "VENDOR_CHANGE",
+      "provenance_required": true,
+      "relation_type": "VENDOR_CHANGE_CHANGED_BY_EMPLOYEE",
+      "reverse_traversal": false,
+      "source_fields": [
+        "changed_by"
+      ],
+      "source_node_type": "VENDOR_CHANGE",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "employee_id"
+      ],
+      "target_node_type": "EMPLOYEE",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": false
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 314,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 314,
+        "source_row_count": 314,
+        "target_in_degree_all_domain": {
+          "domain_size": 6261,
+          "maximum_degree": 2,
+          "mean_degree": 0.050152,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 0,
+          "zero_degree_count": 6104
+        },
+        "unique_target_count": 157,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many GL lines may reference one source transaction",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_TYPED_EXACT",
+      "constraints": {
+        "permitted_transaction_types": [
+          "bank_fee",
+          "fx_settlement"
+        ]
+      },
+      "hub_risk": "bounded accounting-line fan-out; motif and 40-record budget constrained",
+      "label_independent": true,
+      "provenance_record_type": "GL_ENTRY",
+      "provenance_required": true,
+      "relation_type": "GL_SOURCE_BANK_TRANSACTION",
+      "reverse_traversal": true,
+      "source_fields": [
+        "transaction_type",
+        "source_transaction_id"
+      ],
+      "source_node_type": "GL_ENTRY",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "bank_transaction_id"
+      ],
+      "target_node_type": "BANK_TRANSACTION",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 33957,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 33957,
+        "source_row_count": 33957,
+        "target_in_degree_all_domain": {
+          "domain_size": 8147,
+          "maximum_degree": 8,
+          "mean_degree": 4.168037,
+          "median_degree": 4.0,
+          "p95_degree_nearest_rank": 6,
+          "zero_degree_count": 100
+        },
+        "unique_target_count": 8047,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many GL lines may reference one source transaction",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_TYPED_EXACT",
+      "constraints": {
+        "permitted_transaction_types": [
+          "credit_memo",
+          "invoice",
+          "invoice_cancellation"
+        ]
+      },
+      "hub_risk": "bounded accounting-line fan-out; motif and 40-record budget constrained",
+      "label_independent": true,
+      "provenance_record_type": "GL_ENTRY",
+      "provenance_required": true,
+      "relation_type": "GL_SOURCE_INVOICE",
+      "reverse_traversal": true,
+      "source_fields": [
+        "transaction_type",
+        "source_transaction_id"
+      ],
+      "source_node_type": "GL_ENTRY",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "invoice_id"
+      ],
+      "target_node_type": "INVOICE",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 12484,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 12484,
+        "source_row_count": 12484,
+        "target_in_degree_all_domain": {
+          "domain_size": 6200,
+          "maximum_degree": 4,
+          "mean_degree": 2.013548,
+          "median_degree": 2.0,
+          "p95_degree_nearest_rank": 2,
+          "zero_degree_count": 5
+        },
+        "unique_target_count": 6195,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many GL lines may reference one source transaction",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_TYPED_EXACT",
+      "constraints": {
+        "permitted_transaction_types": [
+          "payment",
+          "payment_reversal"
+        ]
+      },
+      "hub_risk": "bounded accounting-line fan-out; motif and 40-record budget constrained",
+      "label_independent": true,
+      "provenance_record_type": "GL_ENTRY",
+      "provenance_required": true,
+      "relation_type": "GL_SOURCE_PAYMENT",
+      "reverse_traversal": true,
+      "source_fields": [
+        "transaction_type",
+        "source_transaction_id"
+      ],
+      "source_node_type": "GL_ENTRY",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "payment_id"
+      ],
+      "target_node_type": "PAYMENT",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 247,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 247,
+        "source_row_count": 247,
+        "target_in_degree_all_domain": {
+          "domain_size": 6261,
+          "maximum_degree": 1,
+          "mean_degree": 0.039451,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 0,
+          "zero_degree_count": 6014
+        },
+        "unique_target_count": 247,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many audit events may reference one operational node",
+      "cardinality_observed": "1:1",
+      "confidence_tier": "TIER_A_TYPED_EXACT",
+      "constraints": {
+        "permitted_entity_types": [
+          "bank_transaction"
+        ]
+      },
+      "hub_risk": "bounded event fan-out; motif constrained",
+      "label_independent": true,
+      "provenance_record_type": "AUDIT_EVENT",
+      "provenance_required": true,
+      "relation_type": "AUDIT_EVENT_FOR_BANK_TRANSACTION",
+      "reverse_traversal": true,
+      "source_fields": [
+        "entity_type",
+        "entity_id"
+      ],
+      "source_node_type": "AUDIT_EVENT",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "bank_transaction_id"
+      ],
+      "target_node_type": "BANK_TRANSACTION",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 16147,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 16147,
+        "source_row_count": 16147,
+        "target_in_degree_all_domain": {
+          "domain_size": 8147,
+          "maximum_degree": 3,
+          "mean_degree": 1.981957,
+          "median_degree": 2.0,
+          "p95_degree_nearest_rank": 2,
+          "zero_degree_count": 147
+        },
+        "unique_target_count": 8000,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many audit events may reference one operational node",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_TYPED_EXACT",
+      "constraints": {
+        "permitted_entity_types": [
+          "invoice"
+        ]
+      },
+      "hub_risk": "bounded event fan-out; motif constrained",
+      "label_independent": true,
+      "provenance_record_type": "AUDIT_EVENT",
+      "provenance_required": true,
+      "relation_type": "AUDIT_EVENT_FOR_INVOICE",
+      "reverse_traversal": true,
+      "source_fields": [
+        "entity_type",
+        "entity_id"
+      ],
+      "source_node_type": "AUDIT_EVENT",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "invoice_id"
+      ],
+      "target_node_type": "INVOICE",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 6500,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 6500,
+        "source_row_count": 6500,
+        "target_in_degree_all_domain": {
+          "domain_size": 6200,
+          "maximum_degree": 2,
+          "mean_degree": 1.048387,
+          "median_degree": 1.0,
+          "p95_degree_nearest_rank": 2,
+          "zero_degree_count": 100
+        },
+        "unique_target_count": 6100,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many audit events may reference one operational node",
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "confidence_tier": "TIER_A_TYPED_EXACT",
+      "constraints": {
+        "permitted_entity_types": [
+          "payment"
+        ]
+      },
+      "hub_risk": "bounded event fan-out; motif constrained",
+      "label_independent": true,
+      "provenance_record_type": "AUDIT_EVENT",
+      "provenance_required": true,
+      "relation_type": "AUDIT_EVENT_FOR_PAYMENT",
+      "reverse_traversal": true,
+      "source_fields": [
+        "entity_type",
+        "entity_id"
+      ],
+      "source_node_type": "AUDIT_EVENT",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "payment_id"
+      ],
+      "target_node_type": "PAYMENT",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 5000,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 5000,
+        "source_row_count": 5000,
+        "target_in_degree_all_domain": {
+          "domain_size": 5000,
+          "maximum_degree": 1,
+          "mean_degree": 1,
+          "median_degree": 1.0,
+          "p95_degree_nearest_rank": 1,
+          "zero_degree_count": 0
+        },
+        "unique_target_count": 5000,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many audit events may reference one operational node",
+      "cardinality_observed": "1:1",
+      "confidence_tier": "TIER_A_TYPED_EXACT",
+      "constraints": {
+        "permitted_entity_types": [
+          "purchase_order"
+        ]
+      },
+      "hub_risk": "bounded event fan-out; motif constrained",
+      "label_independent": true,
+      "provenance_record_type": "AUDIT_EVENT",
+      "provenance_required": true,
+      "relation_type": "AUDIT_EVENT_FOR_PURCHASE_ORDER",
+      "reverse_traversal": true,
+      "source_fields": [
+        "entity_type",
+        "entity_id"
+      ],
+      "source_node_type": "AUDIT_EVENT",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "po_id"
+      ],
+      "target_node_type": "PURCHASE_ORDER",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": true
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 40,
+        "resolution_rate_percent_of_populated": 100.0,
+        "resolved_target_count": 40,
+        "source_row_count": 40,
+        "target_in_degree_all_domain": {
+          "domain_size": 500,
+          "maximum_degree": 1,
+          "mean_degree": 0.08,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 1,
+          "zero_degree_count": 460
+        },
+        "unique_target_count": 40,
+        "unresolved_target_count": 0
+      },
+      "cardinality_expected": "many audit events may reference one operational node",
+      "cardinality_observed": "1:1",
+      "confidence_tier": "TIER_A_TYPED_EXACT",
+      "constraints": {
+        "permitted_entity_types": [
+          "vendor"
+        ]
+      },
+      "hub_risk": "vendor hub restricted",
+      "label_independent": true,
+      "provenance_record_type": "AUDIT_EVENT",
+      "provenance_required": true,
+      "relation_type": "AUDIT_EVENT_FOR_VENDOR",
+      "reverse_traversal": false,
+      "source_fields": [
+        "entity_type",
+        "entity_id"
+      ],
+      "source_node_type": "AUDIT_EVENT",
+      "status": "READY_FOR_FREEZE",
+      "target_fields": [
+        "vendor_id"
+      ],
+      "target_node_type": "VENDOR",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": false
+    },
+    {
+      "ambiguity_policy": "Exact, type-consistent, unique canonical-ID match only; null, unresolved, or ambiguous values create no edge.",
+      "audit_statistics": {
+        "non_null_relationship_count": 6200,
+        "resolution_rate_percent_of_populated": 97.629032,
+        "resolved_target_count": 5945,
+        "source_row_count": 6200,
+        "target_in_degree_all_domain": {
+          "domain_size": 6261,
+          "maximum_degree": 1,
+          "mean_degree": 0.984028,
+          "median_degree": 1.0,
+          "p95_degree_nearest_rank": 1,
+          "zero_degree_count": 100
+        },
+        "unique_target_count": 6161,
+        "unresolved_target_count": 147
+      },
+      "cardinality_expected": "candidate relationship; cardinality not frozen",
+      "cardinality_observed": "candidate collisions retained; see payment_bank_relation_audit.json",
+      "confidence_tier": "TIER_B_CANDIDATE",
+      "constraints": {
+        "embeddings_permitted": false,
+        "multiple_candidates": "preserve ambiguity; create no edge",
+        "temporal_window": "UNRESOLVED — REQUIRES POLICY FREEZE"
+      },
+      "hub_risk": "collision and shared-reference risk; account identifier domains may differ",
+      "label_independent": true,
+      "provenance_record_type": "PAYMENT+BANK_TRANSACTION",
+      "provenance_required": true,
+      "relation_type": "PAYMENT_CANDIDATE_BANK_TRANSACTION",
+      "reverse_traversal": false,
+      "source_fields": [
+        "reference_number",
+        "payment_currency",
+        "bank_account_id",
+        "payment_amount",
+        "payment_date"
+      ],
+      "source_node_type": "PAYMENT",
+      "status": "UNRESOLVED",
+      "target_fields": [
+        "payment_reference",
+        "currency",
+        "bank_account_id",
+        "amount",
+        "direction",
+        "posted_date"
+      ],
+      "target_node_type": "BANK_TRANSACTION",
+      "temporal_rule": "eligible(source, cutoff) AND eligible(target, cutoff) AND eligible(provenance, cutoff); effective availability = max(participant availability)",
+      "traversable": false
+    }
+  ],
+  "source_corpus_text_manifest_sha256": "8842865bd6e688f824a0b16450301fb547c62c4ba495099d605753ebaf2ff00d"
+}

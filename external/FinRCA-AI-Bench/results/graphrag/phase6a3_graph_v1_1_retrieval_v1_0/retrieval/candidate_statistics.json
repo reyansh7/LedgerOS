@@ -1,0 +1,185 @@
+{
+  "by_anchor_type": {
+    "bank_transaction": {
+      "candidate_paths": {
+        "count": 26,
+        "maximum": 2,
+        "mean": 1.1538461538461537,
+        "median": 1.0,
+        "p50_nearest_rank": 1,
+        "p75_nearest_rank": 1,
+        "p90_nearest_rank": 2,
+        "p95_nearest_rank": 2,
+        "p99_nearest_rank": 2,
+        "total": 30
+      },
+      "candidate_unique_records": {
+        "count": 26,
+        "maximum": 3,
+        "mean": 2.1538461538461537,
+        "median": 2.0,
+        "p50_nearest_rank": 2,
+        "p75_nearest_rank": 2,
+        "p90_nearest_rank": 3,
+        "p95_nearest_rank": 3,
+        "p99_nearest_rank": 3,
+        "total": 56
+      },
+      "case_count": 26,
+      "paths_by_exact_depth": {
+        "1": 30,
+        "2": 0,
+        "3": 0
+      }
+    },
+    "gl_journal": {
+      "candidate_paths": {
+        "count": 14,
+        "maximum": 78,
+        "mean": 46.42857142857143,
+        "median": 39.0,
+        "p50_nearest_rank": 38,
+        "p75_nearest_rank": 58,
+        "p90_nearest_rank": 76,
+        "p95_nearest_rank": 78,
+        "p99_nearest_rank": 78,
+        "total": 650
+      },
+      "candidate_unique_records": {
+        "count": 14,
+        "maximum": 36,
+        "mean": 21.642857142857142,
+        "median": 18.5,
+        "p50_nearest_rank": 18,
+        "p75_nearest_rank": 26,
+        "p90_nearest_rank": 35,
+        "p95_nearest_rank": 36,
+        "p99_nearest_rank": 36,
+        "total": 303
+      },
+      "case_count": 14,
+      "paths_by_exact_depth": {
+        "1": 28,
+        "2": 128,
+        "3": 494
+      }
+    },
+    "invoice": {
+      "candidate_paths": {
+        "count": 195,
+        "maximum": 64,
+        "mean": 25.087179487179487,
+        "median": 24,
+        "p50_nearest_rank": 24,
+        "p75_nearest_rank": 32,
+        "p90_nearest_rank": 45,
+        "p95_nearest_rank": 51,
+        "p99_nearest_rank": 57,
+        "total": 4892
+      },
+      "candidate_unique_records": {
+        "count": 195,
+        "maximum": 40,
+        "mean": 18.087179487179487,
+        "median": 18,
+        "p50_nearest_rank": 18,
+        "p75_nearest_rank": 22,
+        "p90_nearest_rank": 27,
+        "p95_nearest_rank": 35,
+        "p99_nearest_rank": 39,
+        "total": 3527
+      },
+      "case_count": 195,
+      "paths_by_exact_depth": {
+        "1": 2202,
+        "2": 1269,
+        "3": 1421
+      }
+    },
+    "payment": {
+      "candidate_paths": {
+        "count": 181,
+        "maximum": 91,
+        "mean": 43.08839779005525,
+        "median": 42,
+        "p50_nearest_rank": 42,
+        "p75_nearest_rank": 58,
+        "p90_nearest_rank": 68,
+        "p95_nearest_rank": 74,
+        "p99_nearest_rank": 87,
+        "total": 7799
+      },
+      "candidate_unique_records": {
+        "count": 181,
+        "maximum": 50,
+        "mean": 24.76795580110497,
+        "median": 24,
+        "p50_nearest_rank": 24,
+        "p75_nearest_rank": 32,
+        "p90_nearest_rank": 38,
+        "p95_nearest_rank": 40,
+        "p99_nearest_rank": 47,
+        "total": 4483
+      },
+      "case_count": 181,
+      "paths_by_exact_depth": {
+        "1": 1072,
+        "2": 3080,
+        "3": 3647
+      }
+    }
+  },
+  "candidate_path_count": 13371,
+  "candidate_paths_by_exact_depth": {
+    "1": 3332,
+    "2": 4477,
+    "3": 5562
+  },
+  "candidate_paths_per_case": {
+    "count": 416,
+    "maximum": 91,
+    "mean": 32.14182692307692,
+    "median": 31.0,
+    "p50_nearest_rank": 31,
+    "p75_nearest_rank": 44,
+    "p90_nearest_rank": 62,
+    "p95_nearest_rank": 68,
+    "p99_nearest_rank": 78,
+    "total": 13371
+  },
+  "candidate_record_node_type_counts": {
+    "APPROVAL_EVENT": 927,
+    "AUDIT_EVENT": 1563,
+    "BANK_TRANSACTION": 26,
+    "GL_ENTRY": 2604,
+    "INVOICE": 470,
+    "INVOICE_LINE": 1095,
+    "PAYMENT": 329,
+    "PAYMENT_ALLOCATION": 392,
+    "PO_LINE": 664,
+    "PURCHASE_ORDER": 299
+  },
+  "candidate_record_row_count_including_case_multiplicity": 8369,
+  "candidate_records_above_40_total": 33,
+  "candidate_records_by_minimum_depth": {
+    "0": 430,
+    "1": 3318,
+    "2": 3446,
+    "3": 1175
+  },
+  "candidate_unique_records_per_case": {
+    "count": 416,
+    "maximum": 50,
+    "mean": 20.11778846153846,
+    "median": 20.0,
+    "p50_nearest_rank": 20,
+    "p75_nearest_rank": 26,
+    "p90_nearest_rank": 35,
+    "p95_nearest_rank": 38,
+    "p99_nearest_rank": 43,
+    "total": 8369
+  },
+  "cases_with_at_most_40_candidates": 407,
+  "cases_with_more_than_40_candidates": 9,
+  "records_dropped_due_to_selection": "NOT_COMPUTED_SELECTION_BLOCKED"
+}

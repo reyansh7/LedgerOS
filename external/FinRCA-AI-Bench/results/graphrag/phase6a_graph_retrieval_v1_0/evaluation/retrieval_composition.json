@@ -1,0 +1,244 @@
+{
+  "anchor_rag": {
+    "average_record_count_by_type": {
+      "AUDIT_EVENT": 8.194711538461538,
+      "BANK_TRANSACTION": 2.5,
+      "GL_ENTRY": 1.3461538461538463,
+      "INVOICE": 18.75,
+      "PAYMENT": 9.209134615384615
+    },
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_count": 26,
+        "record_count_by_type": {
+          "BANK_TRANSACTION": 1040
+        }
+      },
+      "gl_journal": {
+        "case_count": 14,
+        "record_count_by_type": {
+          "GL_ENTRY": 560
+        }
+      },
+      "invoice": {
+        "case_count": 195,
+        "record_count_by_type": {
+          "INVOICE": 7800
+        }
+      },
+      "payment": {
+        "case_count": 181,
+        "record_count_by_type": {
+          "AUDIT_EVENT": 3409,
+          "PAYMENT": 3831
+        }
+      }
+    },
+    "cross_type_record_fraction_mean": 0.20486778846153844,
+    "distinct_record_types_in_top40": {
+      "mean": 1.4182692307692308,
+      "median": 1.0,
+      "p95": 2.0
+    },
+    "record_count_by_type": {
+      "AUDIT_EVENT": 3409,
+      "BANK_TRANSACTION": 1040,
+      "GL_ENTRY": 560,
+      "INVOICE": 7800,
+      "PAYMENT": 3831
+    }
+  },
+  "graph_retrieval_v1_0": {
+    "average_record_count_by_type": {
+      "APPROVAL_EVENT": 0.8149038461538461,
+      "AUDIT_EVENT": 0.8269230769230769,
+      "BANK_TRANSACTION": 0.0625,
+      "GL_ENTRY": 0.9807692307692307,
+      "INVOICE": 0.46875,
+      "PAYMENT": 0.6802884615384616
+    },
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_count": 26,
+        "record_count_by_type": {
+          "BANK_TRANSACTION": 26
+        }
+      },
+      "gl_journal": {
+        "case_count": 14,
+        "record_count_by_type": {
+          "GL_ENTRY": 28,
+          "PAYMENT": 14
+        }
+      },
+      "invoice": {
+        "case_count": 195,
+        "record_count_by_type": {
+          "APPROVAL_EVENT": 339,
+          "AUDIT_EVENT": 344,
+          "INVOICE": 195,
+          "PAYMENT": 88
+        }
+      },
+      "payment": {
+        "case_count": 181,
+        "record_count_by_type": {
+          "GL_ENTRY": 380,
+          "PAYMENT": 181
+        }
+      }
+    },
+    "cross_type_record_fraction_mean": 0.6081129807692307,
+    "distinct_record_types_in_top40": {
+      "mean": 2.3341346153846154,
+      "median": 2.0,
+      "p95": 4.0
+    },
+    "path_composition": {
+      "average_candidate_paths": 2.8341346153846154,
+      "average_motifs_executed": 3.28125,
+      "average_selected_path_length": 1.0,
+      "average_selected_paths": 2.8341346153846154,
+      "candidate_path_count": 1179,
+      "path_count_by_motif": {
+        "GL_ENTRY_SOURCE_TRANSACTION": 28,
+        "INVOICE_APPROVALS": 339,
+        "INVOICE_AUDIT_EVENTS": 344,
+        "INVOICE_PAYMENTS": 88,
+        "PAYMENT_GL_ENTRIES": 380
+      },
+      "selected_direct_path_count": 1179,
+      "selected_multihop_path_count": 0,
+      "selected_path_count": 1179,
+      "selected_record_attributions_direct_paths": 2358,
+      "selected_record_attributions_multihop_paths": 0
+    },
+    "record_count_by_type": {
+      "APPROVAL_EVENT": 339,
+      "AUDIT_EVENT": 344,
+      "BANK_TRANSACTION": 26,
+      "GL_ENTRY": 408,
+      "INVOICE": 195,
+      "PAYMENT": 283
+    }
+  },
+  "relational_rag": {
+    "average_record_count_by_type": {
+      "APPROVAL_EVENT": 0.8149038461538461,
+      "AUDIT_EVENT": 1.4663461538461537,
+      "BANK_TRANSACTION": 0.0625,
+      "GL_ENTRY": 2.8076923076923075,
+      "INVOICE": 1.0072115384615385,
+      "INVOICE_LINE": 1.0865384615384615,
+      "PAYMENT": 0.6802884615384616,
+      "PAYMENT_ALLOCATION": 0.75,
+      "PURCHASE_ORDER": 0.33413461538461536
+    },
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_count": 26,
+        "record_count_by_type": {
+          "AUDIT_EVENT": 22,
+          "BANK_TRANSACTION": 26,
+          "GL_ENTRY": 8
+        }
+      },
+      "gl_journal": {
+        "case_count": 14,
+        "record_count_by_type": {
+          "GL_ENTRY": 28,
+          "PAYMENT": 14
+        }
+      },
+      "invoice": {
+        "case_count": 195,
+        "record_count_by_type": {
+          "APPROVAL_EVENT": 339,
+          "AUDIT_EVENT": 344,
+          "GL_ENTRY": 752,
+          "INVOICE": 195,
+          "INVOICE_LINE": 452,
+          "PAYMENT": 88,
+          "PAYMENT_ALLOCATION": 88,
+          "PURCHASE_ORDER": 139
+        }
+      },
+      "payment": {
+        "case_count": 181,
+        "record_count_by_type": {
+          "AUDIT_EVENT": 244,
+          "GL_ENTRY": 380,
+          "INVOICE": 224,
+          "PAYMENT": 181,
+          "PAYMENT_ALLOCATION": 224
+        }
+      }
+    },
+    "cross_type_record_fraction_mean": 0.8300136893831076,
+    "distinct_record_types_in_top40": {
+      "mean": 4.956730769230769,
+      "median": 5.0,
+      "p95": 8.0
+    },
+    "record_count_by_type": {
+      "APPROVAL_EVENT": 339,
+      "AUDIT_EVENT": 610,
+      "BANK_TRANSACTION": 26,
+      "GL_ENTRY": 1168,
+      "INVOICE": 419,
+      "INVOICE_LINE": 452,
+      "PAYMENT": 283,
+      "PAYMENT_ALLOCATION": 312,
+      "PURCHASE_ORDER": 139
+    }
+  },
+  "standard_dense_rag": {
+    "average_record_count_by_type": {
+      "AUDIT_EVENT": 8.490384615384615,
+      "BANK_TRANSACTION": 2.5,
+      "GL_ENTRY": 1.3461538461538463,
+      "INVOICE": 18.75,
+      "PAYMENT": 8.913461538461538
+    },
+    "by_anchor_type": {
+      "bank_transaction": {
+        "case_count": 26,
+        "record_count_by_type": {
+          "BANK_TRANSACTION": 1040
+        }
+      },
+      "gl_journal": {
+        "case_count": 14,
+        "record_count_by_type": {
+          "GL_ENTRY": 560
+        }
+      },
+      "invoice": {
+        "case_count": 195,
+        "record_count_by_type": {
+          "INVOICE": 7800
+        }
+      },
+      "payment": {
+        "case_count": 181,
+        "record_count_by_type": {
+          "AUDIT_EVENT": 3532,
+          "PAYMENT": 3708
+        }
+      }
+    },
+    "cross_type_record_fraction_mean": 0.21225961538461538,
+    "distinct_record_types_in_top40": {
+      "mean": 1.4182692307692308,
+      "median": 1.0,
+      "p95": 2.0
+    },
+    "record_count_by_type": {
+      "AUDIT_EVENT": 3532,
+      "BANK_TRANSACTION": 1040,
+      "GL_ENTRY": 560,
+      "INVOICE": 7800,
+      "PAYMENT": 3708
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "bootstrap": {
+    "binary_f1": {
+      "ci95_percentile": [
+        0.8,
+        0.8666666666666667
+      ],
+      "graph": 0.8345588235294118,
+      "point_difference": 0.8345588235294118,
+      "standard_rag": 0.0
+    },
+    "difference_direction": "graph_v1_1_minus_standard_rag",
+    "exact_accuracy": {
+      "ci95_percentile": [
+        0.6605922551252847,
+        0.7471526195899773
+      ],
+      "graph": 0.724373576309795,
+      "point_difference": 0.703872437357631,
+      "standard_rag": 0.02050113895216401
+    },
+    "macro_f1": {
+      "ci95_percentile": [
+        0.6820324963753613,
+        0.7264869366723099
+      ],
+      "graph": 0.7137673410038117,
+      "point_difference": 0.7064143998273411,
+      "standard_rag": 0.007352941176470588
+    },
+    "resamples": 10000,
+    "seed": 20260809
+  },
+  "both_correct": 9,
+  "both_wrong": 121,
+  "case_count": 439,
+  "discordant_pairs": 309,
+  "graph_only_correct": 309,
+  "mcnemar_exact_two_sided_p_value": 1.9176146348819244e-93
+}

@@ -1,0 +1,66 @@
+{
+  "GL_ENTRY_SOURCE_TRANSACTION": {
+    "average_selected_records_contributed": 2.0,
+    "candidate_path_count": 28,
+    "eligible_case_count": 14,
+    "execution_count": 14,
+    "selected_path_count": 28,
+    "validation_evidence_hit_count": 28
+  },
+  "INVOICE_APPROVALS": {
+    "average_selected_records_contributed": 2.0,
+    "candidate_path_count": 339,
+    "eligible_case_count": 195,
+    "execution_count": 195,
+    "selected_path_count": 339,
+    "validation_evidence_hit_count": 283
+  },
+  "INVOICE_AUDIT_EVENTS": {
+    "average_selected_records_contributed": 2.0,
+    "candidate_path_count": 344,
+    "eligible_case_count": 195,
+    "execution_count": 195,
+    "selected_path_count": 344,
+    "validation_evidence_hit_count": 296
+  },
+  "INVOICE_PAYMENTS": {
+    "average_selected_records_contributed": 2.0,
+    "candidate_path_count": 88,
+    "eligible_case_count": 376,
+    "execution_count": 376,
+    "selected_path_count": 88,
+    "validation_evidence_hit_count": 88
+  },
+  "PAYMENT_GL_ENTRIES": {
+    "average_selected_records_contributed": 2.0,
+    "candidate_path_count": 380,
+    "eligible_case_count": 195,
+    "execution_count": 195,
+    "selected_path_count": 380,
+    "validation_evidence_hit_count": 380
+  },
+  "PO_INVOICE_LINES": {
+    "average_selected_records_contributed": 0.0,
+    "candidate_path_count": 0,
+    "eligible_case_count": 195,
+    "execution_count": 195,
+    "selected_path_count": 0,
+    "validation_evidence_hit_count": 0
+  },
+  "PO_WITH_INVOICES": {
+    "average_selected_records_contributed": 0.0,
+    "candidate_path_count": 0,
+    "eligible_case_count": 195,
+    "execution_count": 195,
+    "selected_path_count": 0,
+    "validation_evidence_hit_count": 0
+  },
+  "PO_WITH_LINES": {
+    "average_selected_records_contributed": 0.0,
+    "candidate_path_count": 0,
+    "eligible_case_count": 0,
+    "execution_count": 0,
+    "selected_path_count": 0,
+    "validation_evidence_hit_count": 0
+  }
+}

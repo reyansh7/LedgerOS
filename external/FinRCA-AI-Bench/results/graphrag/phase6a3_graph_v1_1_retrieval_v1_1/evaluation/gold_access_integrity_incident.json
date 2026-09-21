@@ -1,0 +1,72 @@
+{
+  "access_completed_before_pre_gold_freeze": true,
+  "accessed_files": [
+    {
+      "operation": [
+        "SHA256_RAW_BYTE_HASH",
+        "NEWLINE_COUNT"
+      ],
+      "path": "data/benchmark/validation/case_ids.txt",
+      "reported_line_count": 416,
+      "reported_sha256_prefix": "fcfab5e4"
+    },
+    {
+      "operation": [
+        "SHA256_RAW_BYTE_HASH",
+        "NEWLINE_COUNT"
+      ],
+      "path": "data/benchmark/validation/rca_ground_truth.jsonl",
+      "reported_line_count": 416,
+      "reported_sha256_prefix": "de77604e"
+    },
+    {
+      "operation": [
+        "SHA256_RAW_BYTE_HASH",
+        "NEWLINE_COUNT"
+      ],
+      "path": "data/benchmark/validation/case_entity_records.jsonl",
+      "reported_line_count": 2680,
+      "reported_sha256_prefix": "bc3f76bf"
+    },
+    {
+      "operation": [
+        "SHA256_RAW_BYTE_HASH",
+        "NEWLINE_COUNT"
+      ],
+      "path": "data/benchmark/validation/failure_manifest.csv",
+      "reported_line_count": 417,
+      "reported_sha256_prefix": "4450ca6a"
+    },
+    {
+      "operation": [
+        "SHA256_RAW_BYTE_HASH",
+        "NEWLINE_COUNT"
+      ],
+      "path": "data/benchmark/validation/benchmark_questions.jsonl",
+      "reported_line_count": 2080,
+      "reported_sha256_prefix": "d1b57b2d"
+    }
+  ],
+  "artifact_type": "phase6a3_resume_gold_access_integrity_incident",
+  "artifact_version": "1.0",
+  "containment_action": "STOP_EVALUATION_REVOKE_GATE_PRESERVE_ARTIFACTS",
+  "first_validation_gold_access_at_utc": null,
+  "first_validation_gold_access_exact_timestamp_recorded": false,
+  "hashes_and_line_counts_only_exposed": true,
+  "heldout_or_test_bytes_accessed": false,
+  "incident_id": "INCIDENT_PRE_FREEZE_VALIDATION_BYTE_ACCESS_001",
+  "known_temporal_bound": "ACCESS_COMPLETED_BEFORE_2026-08-16T01:14:00Z",
+  "labels_or_required_evidence_printed_or_parsed": false,
+  "pre_gold_freeze_completed_at_utc": "2026-08-16T01:14:00Z",
+  "questions_answers_or_expected_outputs_printed_or_parsed": false,
+  "record_ids_printed_or_parsed": false,
+  "recorded_at_utc": "2026-08-16T01:19:00Z",
+  "retrieval_or_selection_changed_after_access": false,
+  "retriever_received_gold_fields": false,
+  "run_id": "phase6a3_graph_v1_1_retrieval_v1_1_20260816T011400Z",
+  "semantic_records_printed_or_parsed": false,
+  "status": "SCIENTIFIC_INTEGRITY_FAILURE",
+  "summary": "A delegated path-mapping audit ran shasum and wc -l over five validation artifacts before the final pre-gold freeze/gate announcement.",
+  "validation_metrics_computed": false,
+  "waiver_applied": false
+}

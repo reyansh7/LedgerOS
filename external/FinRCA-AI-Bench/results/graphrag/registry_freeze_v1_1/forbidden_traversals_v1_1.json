@@ -1,0 +1,721 @@
+{
+  "artifact_name": "forbidden_traversals_v1_1.json",
+  "artifact_type": "graphrag_forbidden_traversal_registry",
+  "artifact_version": "1.1",
+  "bank_statement_membership_enabled": false,
+  "created_at_utc": "2026-08-15T17:54:51Z",
+  "default_deny": true,
+  "excluded_frozen_directional_transition_count": 14,
+  "excluded_frozen_directional_transitions": [
+    {
+      "current_node_type": "AUDIT_EVENT",
+      "excluded_transition_id": "XTR_AUDIT_EVENT__AUDIT_EVENT_FOR_VENDOR__FORWARD__VENDOR",
+      "next_node_type": "VENDOR",
+      "observed_fanout": {
+        "current_node_count": 28029,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 40,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.0014270933675835742,
+        "median_out_degree": 0,
+        "nonzero_current_node_count": 40,
+        "p95_out_degree": 0,
+        "p99_out_degree": 0
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "VENDOR_POLICY_OVERRIDES_BOUNDED_AUDIT_RELATION",
+      "relation_id": "AUDIT_EVENT_FOR_VENDOR",
+      "status": "FROZEN",
+      "traversal_direction": "FORWARD"
+    },
+    {
+      "current_node_type": "EMPLOYEE",
+      "excluded_transition_id": "XTR_EMPLOYEE__PURCHASE_ORDER_CREATED_BY_EMPLOYEE__REVERSE__PURCHASE_ORDER",
+      "next_node_type": "PURCHASE_ORDER",
+      "observed_fanout": {
+        "current_node_count": 120,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5000,
+        "maximum_out_degree": 63,
+        "mean_out_degree": 41.666666666666664,
+        "median_out_degree": 43.0,
+        "nonzero_current_node_count": 115,
+        "p95_out_degree": 53,
+        "p99_out_degree": 57
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "EMPLOYEE_HUB_PROHIBITION",
+      "relation_id": "PURCHASE_ORDER_CREATED_BY_EMPLOYEE",
+      "status": "FROZEN",
+      "traversal_direction": "REVERSE"
+    },
+    {
+      "current_node_type": "EMPLOYEE",
+      "excluded_transition_id": "XTR_EMPLOYEE__VENDOR_CHANGE_CHANGED_BY_EMPLOYEE__REVERSE__VENDOR_CHANGE",
+      "next_node_type": "VENDOR_CHANGE",
+      "observed_fanout": {
+        "current_node_count": 120,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 186,
+        "maximum_out_degree": 146,
+        "mean_out_degree": 1.55,
+        "median_out_degree": 0.0,
+        "nonzero_current_node_count": 34,
+        "p95_out_degree": 2,
+        "p99_out_degree": 2
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "EMPLOYEE_HUB_PROHIBITION",
+      "relation_id": "VENDOR_CHANGE_CHANGED_BY_EMPLOYEE",
+      "status": "FROZEN",
+      "traversal_direction": "REVERSE"
+    },
+    {
+      "current_node_type": "INVOICE",
+      "excluded_transition_id": "XTR_INVOICE__INVOICE_FOR_VENDOR__FORWARD__VENDOR",
+      "next_node_type": "VENDOR",
+      "observed_fanout": {
+        "current_node_count": 8147,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 8147,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1,
+        "nonzero_current_node_count": 8147,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "VENDOR_HUB_PROHIBITION",
+      "relation_id": "INVOICE_FOR_VENDOR",
+      "status": "FROZEN",
+      "traversal_direction": "FORWARD"
+    },
+    {
+      "current_node_type": "PAYMENT",
+      "excluded_transition_id": "XTR_PAYMENT__PAYMENT_FOR_VENDOR__FORWARD__VENDOR",
+      "next_node_type": "VENDOR",
+      "observed_fanout": {
+        "current_node_count": 6200,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 6200,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 6200,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "VENDOR_HUB_PROHIBITION",
+      "relation_id": "PAYMENT_FOR_VENDOR",
+      "status": "FROZEN",
+      "traversal_direction": "FORWARD"
+    },
+    {
+      "current_node_type": "PURCHASE_ORDER",
+      "excluded_transition_id": "XTR_PURCHASE_ORDER__PO_FOR_VENDOR__FORWARD__VENDOR",
+      "next_node_type": "VENDOR",
+      "observed_fanout": {
+        "current_node_count": 5000,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5000,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 5000,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "VENDOR_HUB_PROHIBITION",
+      "relation_id": "PO_FOR_VENDOR",
+      "status": "FROZEN",
+      "traversal_direction": "FORWARD"
+    },
+    {
+      "current_node_type": "PURCHASE_ORDER",
+      "excluded_transition_id": "XTR_PURCHASE_ORDER__PURCHASE_ORDER_CREATED_BY_EMPLOYEE__FORWARD__EMPLOYEE",
+      "next_node_type": "EMPLOYEE",
+      "observed_fanout": {
+        "current_node_count": 5000,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5000,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 5000,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "EMPLOYEE_HUB_PROHIBITION",
+      "relation_id": "PURCHASE_ORDER_CREATED_BY_EMPLOYEE",
+      "status": "FROZEN",
+      "traversal_direction": "FORWARD"
+    },
+    {
+      "current_node_type": "VENDOR_CHANGE",
+      "excluded_transition_id": "XTR_VENDOR_CHANGE__VENDOR_CHANGE_CHANGED_BY_EMPLOYEE__FORWARD__EMPLOYEE",
+      "next_node_type": "EMPLOYEE",
+      "observed_fanout": {
+        "current_node_count": 186,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 186,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 186,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "EMPLOYEE_HUB_PROHIBITION",
+      "relation_id": "VENDOR_CHANGE_CHANGED_BY_EMPLOYEE",
+      "status": "FROZEN",
+      "traversal_direction": "FORWARD"
+    },
+    {
+      "current_node_type": "VENDOR_CHANGE",
+      "excluded_transition_id": "XTR_VENDOR_CHANGE__VENDOR_CHANGE_FOR_VENDOR__FORWARD__VENDOR",
+      "next_node_type": "VENDOR",
+      "observed_fanout": {
+        "current_node_count": 186,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 186,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 1.0,
+        "median_out_degree": 1.0,
+        "nonzero_current_node_count": 186,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "VENDOR_HUB_PROHIBITION",
+      "relation_id": "VENDOR_CHANGE_FOR_VENDOR",
+      "status": "FROZEN",
+      "traversal_direction": "FORWARD"
+    },
+    {
+      "current_node_type": "VENDOR",
+      "excluded_transition_id": "XTR_VENDOR__AUDIT_EVENT_FOR_VENDOR__REVERSE__AUDIT_EVENT",
+      "next_node_type": "AUDIT_EVENT",
+      "observed_fanout": {
+        "current_node_count": 500,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 40,
+        "maximum_out_degree": 1,
+        "mean_out_degree": 0.08,
+        "median_out_degree": 0.0,
+        "nonzero_current_node_count": 40,
+        "p95_out_degree": 1,
+        "p99_out_degree": 1
+      },
+      "phase6a1_directionality_class": "SAFE_REVERSIBLE_CANDIDATE",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "VENDOR_POLICY_OVERRIDES_BOUNDED_AUDIT_RELATION",
+      "relation_id": "AUDIT_EVENT_FOR_VENDOR",
+      "status": "FROZEN",
+      "traversal_direction": "REVERSE"
+    },
+    {
+      "current_node_type": "VENDOR",
+      "excluded_transition_id": "XTR_VENDOR__INVOICE_FOR_VENDOR__REVERSE__INVOICE",
+      "next_node_type": "INVOICE",
+      "observed_fanout": {
+        "current_node_count": 500,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 8147,
+        "maximum_out_degree": 592,
+        "mean_out_degree": 16.294,
+        "median_out_degree": 8.0,
+        "nonzero_current_node_count": 498,
+        "p95_out_degree": 48,
+        "p99_out_degree": 155
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "VENDOR_HUB_PROHIBITION",
+      "relation_id": "INVOICE_FOR_VENDOR",
+      "status": "FROZEN",
+      "traversal_direction": "REVERSE"
+    },
+    {
+      "current_node_type": "VENDOR",
+      "excluded_transition_id": "XTR_VENDOR__PAYMENT_FOR_VENDOR__REVERSE__PAYMENT",
+      "next_node_type": "PAYMENT",
+      "observed_fanout": {
+        "current_node_count": 500,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 6200,
+        "maximum_out_degree": 217,
+        "mean_out_degree": 12.4,
+        "median_out_degree": 8.0,
+        "nonzero_current_node_count": 497,
+        "p95_out_degree": 37,
+        "p99_out_degree": 110
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "VENDOR_HUB_PROHIBITION",
+      "relation_id": "PAYMENT_FOR_VENDOR",
+      "status": "FROZEN",
+      "traversal_direction": "REVERSE"
+    },
+    {
+      "current_node_type": "VENDOR",
+      "excluded_transition_id": "XTR_VENDOR__PO_FOR_VENDOR__REVERSE__PURCHASE_ORDER",
+      "next_node_type": "PURCHASE_ORDER",
+      "observed_fanout": {
+        "current_node_count": 500,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 5000,
+        "maximum_out_degree": 362,
+        "mean_out_degree": 10.0,
+        "median_out_degree": 5.0,
+        "nonzero_current_node_count": 472,
+        "p95_out_degree": 30,
+        "p99_out_degree": 97
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "VENDOR_HUB_PROHIBITION",
+      "relation_id": "PO_FOR_VENDOR",
+      "status": "FROZEN",
+      "traversal_direction": "REVERSE"
+    },
+    {
+      "current_node_type": "VENDOR",
+      "excluded_transition_id": "XTR_VENDOR__VENDOR_CHANGE_FOR_VENDOR__REVERSE__VENDOR_CHANGE",
+      "next_node_type": "VENDOR_CHANGE",
+      "observed_fanout": {
+        "current_node_count": 500,
+        "degree_domain": "all current-node-type records including zero-degree records",
+        "edge_count": 186,
+        "maximum_out_degree": 6,
+        "mean_out_degree": 0.372,
+        "median_out_degree": 0.0,
+        "nonzero_current_node_count": 138,
+        "p95_out_degree": 2,
+        "p99_out_degree": 3
+      },
+      "phase6a1_directionality_class": "REVERSE_HUB_RISK",
+      "reason": "The exact relation remains in the frozen graph for provenance/context, but the Vendor/Employee hub policy prohibits ordinary grammar traversal.",
+      "reason_code": "VENDOR_HUB_PROHIBITION",
+      "relation_id": "VENDOR_CHANGE_FOR_VENDOR",
+      "status": "FROZEN",
+      "traversal_direction": "REVERSE"
+    }
+  ],
+  "forbidden_direction_promotion_count": 0,
+  "forbidden_pattern_count": 21,
+  "forbidden_patterns": [
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "PROVENANCE",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_ALLOCATION_BYPASS",
+      "pattern": "Invented Invoice <-> Payment edge without a PAYMENT_ALLOCATION provenance record",
+      "rationale": "The frozen projection is allowed only with its exact PAYMENT_ALLOCATION provenance; the allocation-node route is the fuller lifecycle representation.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "EXACTNESS",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_AMBIGUOUS_OR_INFERRED_JOIN",
+      "pattern": "Fuzzy ID, cross-type fallback, nearest neighbor, collision winner, or inferred relation",
+      "rationale": "Only persisted exact frozen edges may be followed.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "ATTRIBUTE_BRIDGE",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_ATTRIBUTE_BRIDGE",
+      "pattern": "Traversal through department, cost_center, source_system, status, or any other non-node dimension",
+      "rationale": "Attributes cannot be promoted to bridge nodes or inferred edges in this phase.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "STATE",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_CONTEXT_BRIDGE",
+      "pattern": "Continue from APPROVAL_EVENT or AUDIT_EVENT reached after hop 0",
+      "rationale": "Events enrich local evidence but cannot route to unrelated neighborhoods; an exact event anchor may take one typed owner exit at hop 1.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "GENERIC_EXPLORATION",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_DEFAULT_DENY_BFS",
+      "pattern": "Any graph edge without an exact current-type/relation/direction/next-type grammar row",
+      "rationale": "The typed grammar is a whitelist, never generic BFS.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "BOUNDEDNESS",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_DEPTH_GT_3",
+      "pattern": "Any fourth or later graph edge",
+      "rationale": "MAX_PATH_DEPTH is fixed at three for this proposal.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [
+        "FORWARD",
+        "REVERSE"
+      ],
+      "blocked_excluded_candidate_relation_ids": [
+        "APPROVAL_EVENT_APPROVER_EMPLOYEE",
+        "AUDIT_EVENT_ACTOR_EMPLOYEE"
+      ],
+      "blocked_relation_ids": [
+        "PURCHASE_ORDER_CREATED_BY_EMPLOYEE",
+        "VENDOR_CHANGE_CHANGED_BY_EMPLOYEE"
+      ],
+      "category": "HUB",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_EMPLOYEE_BRIDGE",
+      "pattern": "Any * -> EMPLOYEE -> * path, including actor/approver coercion",
+      "rationale": "Employee identity may be shared/system context and cannot route between transactions.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "TYPE_SAFETY",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_GL_TYPE_MISMATCH",
+      "pattern": "GL traversal without exact source_transaction_id and frozen transaction_type target mapping",
+      "rationale": "Typed GL provenance must select exactly BANK_TRANSACTION, INVOICE, or PAYMENT.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "CARDINALITY",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_MULTIPLICITY_COLLAPSE",
+      "pattern": "Silently select one neighbor or treat M:N/N:1 as 1:1",
+      "rationale": "Enumerate exact neighbors deterministically; a future cap may stop expansion but cannot rewrite cardinality.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [
+        "FORWARD",
+        "REVERSE"
+      ],
+      "blocked_excluded_candidate_relation_ids": [
+        "PAYMENT_CANDIDATE_BANK_TRANSACTION"
+      ],
+      "blocked_relation_ids": [],
+      "category": "RELATION_GAP",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_PAYMENT_BANK",
+      "pattern": "PAYMENT <-> BANK_TRANSACTION",
+      "rationale": "The deterministic payment-bank relation is not frozen; amount/date/currency/account heuristics remain Tier B and disabled.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "TEMPORAL",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_POST_CUTOFF",
+      "pattern": "Traverse when source, target, edge, or provenance-effective availability exceeds cutoff",
+      "rationale": "Every path participant must be cutoff eligible; edge effective availability is the latest participant availability.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "PROVENANCE",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_PROVENANCE_MISSING",
+      "pattern": "Traverse an edge without retainable source fields, target fields, edge ID, and provenance record",
+      "rationale": "Every path step must remain operationally reconstructible.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "STATE",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_REACHED_GL_CONTINUATION",
+      "pattern": "Continue from GL_ENTRY reached from BANK_TRANSACTION, INVOICE, or PAYMENT",
+      "rationale": "A reached GL entry is a terminal accounting consequence; only an exact GL_ENTRY anchor may exit to one typed source at hop 1.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "CYCLE",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_REPEATED_RECORD",
+      "pattern": "Any candidate path in which a record_id repeats",
+      "rationale": "A record-ID-simple path prohibits A -> B -> A and longer cycles.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "ATTRIBUTE_BRIDGE",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_SAME_ACCOUNT",
+      "pattern": "Traversal based only on bank_account_id or gl_account",
+      "rationale": "Account values remain context/filter attributes and are not graph nodes or joins.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "ATTRIBUTE_BRIDGE",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_SAME_AMOUNT",
+      "pattern": "Traversal based only on equal amount",
+      "rationale": "Equality of a non-node attribute does not establish an operational fact.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "ATTRIBUTE_BRIDGE",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_SAME_CURRENCY",
+      "pattern": "Traversal based only on equal currency",
+      "rationale": "Equality of a non-node attribute does not establish an operational fact.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "ATTRIBUTE_BRIDGE",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_SAME_DATE",
+      "pattern": "Traversal based only on equal date or a date window",
+      "rationale": "Date proximity does not establish an operational fact.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "SEMANTIC_FALLBACK",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_SEMANTIC_SIMILARITY",
+      "pattern": "Embedding, text similarity, semantic neighbor, failure-class, or RCA-concept expansion",
+      "rationale": "Traversal correctness must arise from frozen operational relations, never label or semantic similarity.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [],
+      "category": "SYNTHETIC_GRAPH",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_SYNTHETIC_GL_JOURNAL",
+      "pattern": "GL_JOURNAL node, journal_id bridge/group traversal, or AUDIT_EVENT -> GL_JOURNAL",
+      "rationale": "No canonical journal-header source record exists; gl_journal route labels resolve only to GL_ENTRY anchors.",
+      "status": "FROZEN"
+    },
+    {
+      "authority": [
+        "frozen registry v1",
+        "Phase 6A.1 structural audit",
+        "Phase 6A.2 design constraint"
+      ],
+      "blocked_directions": [
+        "FORWARD",
+        "REVERSE"
+      ],
+      "blocked_excluded_candidate_relation_ids": [],
+      "blocked_relation_ids": [
+        "VENDOR_CHANGE_FOR_VENDOR",
+        "PO_FOR_VENDOR",
+        "INVOICE_FOR_VENDOR",
+        "PAYMENT_FOR_VENDOR",
+        "AUDIT_EVENT_FOR_VENDOR"
+      ],
+      "category": "HUB",
+      "enforcement": "PRE_ENQUEUE_REJECT_AND_RECORD_REASON",
+      "forbidden_id": "FT_VENDOR_BRIDGE",
+      "pattern": "Any * -> VENDOR -> * cross-transaction path",
+      "rationale": "Vendor is restricted identity/filter context and cannot route between transactions.",
+      "status": "FROZEN"
+    }
+  ],
+  "freeze_status": "FROZEN_GRAPH_V1_1_TYPED_GRAMMAR",
+  "generic_bfs_enabled": false,
+  "known_relation_gaps": [
+    {
+      "compensating_heuristic_allowed": false,
+      "description": "No frozen deterministic PAYMENT <-> BANK_TRANSACTION relation exists.",
+      "gap_id": "RELATION_GAP_PAYMENT_BANK",
+      "impact": "KNOWN STRUCTURAL LIMITATION — BANK SETTLEMENT LINKAGE EXCLUDED",
+      "status": "FROZEN"
+    },
+    {
+      "compensating_heuristic_allowed": false,
+      "description": "No frozen BANK_STATEMENT membership/reconciliation relation to BANK_TRANSACTION exists.",
+      "gap_id": "RELATION_GAP_BANK_STATEMENT_TRANSACTION_MEMBERSHIP",
+      "impact": "BANK_STATEMENT has an explicit empty transition set in v1.1; no synthetic account/date linkage is permitted.",
+      "required_for_v1_1": false,
+      "status": "FROZEN"
+    }
+  ],
+  "parent_phase6a2_artifact_path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/forbidden_traversals_v1_1_draft.json",
+  "parent_phase6a2_artifact_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+  "payment_bank_enabled": false,
+  "semantic_fallback_enabled": false,
+  "serialization_convention": {
+    "concurrency_timing_dependency": false,
+    "encoding": "UTF-8",
+    "filesystem_order_dependency": false,
+    "hash_map_order_dependency": false,
+    "json_indentation_spaces": 2,
+    "json_key_order": "lexicographic via sort_keys=true",
+    "json_separators": "comma plus newline/indent; colon plus one space",
+    "newline": "LF with exactly one trailing newline",
+    "other_array_order": "explicit semantic parent order or explicitly documented stable key order",
+    "transition_array_order": "ascending transition_id",
+    "unicode": "ensure_ascii=false"
+  },
+  "status": "FROZEN",
+  "synthetic_gl_journal_enabled": false,
+  "tier_b_enabled": false
+}

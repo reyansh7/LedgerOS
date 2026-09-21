@@ -1,0 +1,464 @@
+{
+  "audit_version": "payment_bank_relation_audit_v1",
+  "bank_account_identifier_domain_audit": {
+    "bank_transaction_prefix_distribution": {
+      "BANK_": 3
+    },
+    "distinct_bank_transaction_bank_account_id_count": 3,
+    "distinct_payment_bank_account_id_count": 597,
+    "exact_identifier_intersection_count": 0,
+    "payment_prefix_distribution": {
+      "BA_": 597
+    },
+    "policy": "No crosswalk or normalization inferred. Exact account comparison only."
+  },
+  "bank_transaction_count": 6261,
+  "candidate_predicates": [
+    {
+      "ambiguous_bank_transaction_count": 0,
+      "ambiguous_payment_count": 108,
+      "bank_transaction_candidate_degree": {
+        "domain_size": 6261,
+        "maximum_degree": 1,
+        "mean_degree": 0.984028,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 100
+      },
+      "candidate_pair_count": 6161,
+      "description": "exact reference",
+      "matched_bank_transaction_count": 6161,
+      "matched_payment_count": 6053,
+      "payment_candidate_degree": {
+        "domain_size": 6200,
+        "maximum_degree": 2,
+        "mean_degree": 0.99371,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 147
+      },
+      "predicate_name": "REFERENCE_ONLY",
+      "reference_group_cardinality_counts": {
+        "1:1": 5945,
+        "1:N": 108,
+        "N:1": 0,
+        "N:M": 0
+      },
+      "unmatched_bank_transaction_count": 100,
+      "unmatched_payment_count": 147
+    },
+    {
+      "ambiguous_bank_transaction_count": 0,
+      "ambiguous_payment_count": 108,
+      "bank_transaction_candidate_degree": {
+        "domain_size": 6261,
+        "maximum_degree": 1,
+        "mean_degree": 0.976521,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 147
+      },
+      "candidate_pair_count": 6114,
+      "description": "exact reference and currency",
+      "matched_bank_transaction_count": 6114,
+      "matched_payment_count": 6006,
+      "payment_candidate_degree": {
+        "domain_size": 6200,
+        "maximum_degree": 2,
+        "mean_degree": 0.986129,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 194
+      },
+      "predicate_name": "REFERENCE_PLUS_CURRENCY",
+      "reference_group_cardinality_counts": {
+        "1:1": 5898,
+        "1:N": 108,
+        "N:1": 0,
+        "N:M": 0
+      },
+      "unmatched_bank_transaction_count": 147,
+      "unmatched_payment_count": 194
+    },
+    {
+      "ambiguous_bank_transaction_count": 0,
+      "ambiguous_payment_count": 0,
+      "bank_transaction_candidate_degree": {
+        "domain_size": 6261,
+        "maximum_degree": 0,
+        "mean_degree": 0,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 6261
+      },
+      "candidate_pair_count": 0,
+      "description": "exact reference and bank_account_id",
+      "matched_bank_transaction_count": 0,
+      "matched_payment_count": 0,
+      "payment_candidate_degree": {
+        "domain_size": 6200,
+        "maximum_degree": 0,
+        "mean_degree": 0,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 6200
+      },
+      "predicate_name": "REFERENCE_PLUS_BANK_ACCOUNT",
+      "reference_group_cardinality_counts": {
+        "1:1": 0,
+        "1:N": 0,
+        "N:1": 0,
+        "N:M": 0
+      },
+      "unmatched_bank_transaction_count": 6261,
+      "unmatched_payment_count": 6200
+    },
+    {
+      "ambiguous_bank_transaction_count": 0,
+      "ambiguous_payment_count": 47,
+      "bank_transaction_candidate_degree": {
+        "domain_size": 6261,
+        "maximum_degree": 1,
+        "mean_degree": 0.911037,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 557
+      },
+      "candidate_pair_count": 5704,
+      "description": "exact reference and payment_amount == abs(bank amount)",
+      "matched_bank_transaction_count": 5704,
+      "matched_payment_count": 5657,
+      "payment_candidate_degree": {
+        "domain_size": 6200,
+        "maximum_degree": 2,
+        "mean_degree": 0.92,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 543
+      },
+      "predicate_name": "REFERENCE_PLUS_ABS_AMOUNT",
+      "reference_group_cardinality_counts": {
+        "1:1": 5610,
+        "1:N": 47,
+        "N:1": 0,
+        "N:M": 0
+      },
+      "unmatched_bank_transaction_count": 557,
+      "unmatched_payment_count": 543
+    },
+    {
+      "ambiguous_bank_transaction_count": 0,
+      "ambiguous_payment_count": 61,
+      "bank_transaction_candidate_degree": {
+        "domain_size": 6261,
+        "maximum_degree": 1,
+        "mean_degree": 0.976521,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 147
+      },
+      "candidate_pair_count": 6114,
+      "description": "exact reference and debit direction",
+      "matched_bank_transaction_count": 6114,
+      "matched_payment_count": 6053,
+      "payment_candidate_degree": {
+        "domain_size": 6200,
+        "maximum_degree": 2,
+        "mean_degree": 0.986129,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 147
+      },
+      "predicate_name": "REFERENCE_PLUS_DEBIT_DIRECTION",
+      "reference_group_cardinality_counts": {
+        "1:1": 5992,
+        "1:N": 61,
+        "N:1": 0,
+        "N:M": 0
+      },
+      "unmatched_bank_transaction_count": 147,
+      "unmatched_payment_count": 147
+    },
+    {
+      "ambiguous_bank_transaction_count": 0,
+      "ambiguous_payment_count": 47,
+      "bank_transaction_candidate_degree": {
+        "domain_size": 6261,
+        "maximum_degree": 1,
+        "mean_degree": 0.911037,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 557
+      },
+      "candidate_pair_count": 5704,
+      "description": "exact reference, currency, and absolute amount",
+      "matched_bank_transaction_count": 5704,
+      "matched_payment_count": 5657,
+      "payment_candidate_degree": {
+        "domain_size": 6200,
+        "maximum_degree": 2,
+        "mean_degree": 0.92,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 543
+      },
+      "predicate_name": "REFERENCE_PLUS_CURRENCY_ABS_AMOUNT",
+      "reference_group_cardinality_counts": {
+        "1:1": 5610,
+        "1:N": 47,
+        "N:1": 0,
+        "N:M": 0
+      },
+      "unmatched_bank_transaction_count": 557,
+      "unmatched_payment_count": 543
+    },
+    {
+      "ambiguous_bank_transaction_count": 0,
+      "ambiguous_payment_count": 0,
+      "bank_transaction_candidate_degree": {
+        "domain_size": 6261,
+        "maximum_degree": 1,
+        "mean_degree": 0.90353,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 604
+      },
+      "candidate_pair_count": 5657,
+      "description": "exact reference, currency, absolute amount, and debit direction",
+      "matched_bank_transaction_count": 5657,
+      "matched_payment_count": 5657,
+      "payment_candidate_degree": {
+        "domain_size": 6200,
+        "maximum_degree": 1,
+        "mean_degree": 0.912419,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 543
+      },
+      "predicate_name": "REFERENCE_PLUS_CURRENCY_ABS_AMOUNT_DEBIT",
+      "reference_group_cardinality_counts": {
+        "1:1": 5657,
+        "1:N": 0,
+        "N:1": 0,
+        "N:M": 0
+      },
+      "unmatched_bank_transaction_count": 604,
+      "unmatched_payment_count": 543
+    },
+    {
+      "ambiguous_bank_transaction_count": 0,
+      "ambiguous_payment_count": 0,
+      "bank_transaction_candidate_degree": {
+        "domain_size": 6261,
+        "maximum_degree": 0,
+        "mean_degree": 0,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 6261
+      },
+      "candidate_pair_count": 0,
+      "description": "all exact non-temporal operational constraints",
+      "matched_bank_transaction_count": 0,
+      "matched_payment_count": 0,
+      "payment_candidate_degree": {
+        "domain_size": 6200,
+        "maximum_degree": 0,
+        "mean_degree": 0,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 6200
+      },
+      "predicate_name": "REFERENCE_PLUS_CURRENCY_ACCOUNT_ABS_AMOUNT_DEBIT",
+      "reference_group_cardinality_counts": {
+        "1:1": 0,
+        "1:N": 0,
+        "N:1": 0,
+        "N:M": 0
+      },
+      "unmatched_bank_transaction_count": 6261,
+      "unmatched_payment_count": 6200
+    },
+    {
+      "ambiguous_bank_transaction_count": 0,
+      "ambiguous_payment_count": 0,
+      "bank_transaction_candidate_degree": {
+        "domain_size": 6261,
+        "maximum_degree": 1,
+        "mean_degree": 0.90353,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 604
+      },
+      "candidate_pair_count": 5657,
+      "description": "corroborated candidate plus nonnegative posting lag; audit-only, not a frozen window",
+      "matched_bank_transaction_count": 5657,
+      "matched_payment_count": 5657,
+      "payment_candidate_degree": {
+        "domain_size": 6200,
+        "maximum_degree": 1,
+        "mean_degree": 0.912419,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 543
+      },
+      "predicate_name": "REFERENCE_PLUS_CURRENCY_ABS_AMOUNT_DEBIT_POSTED_ON_OR_AFTER",
+      "reference_group_cardinality_counts": {
+        "1:1": 5657,
+        "1:N": 0,
+        "N:1": 0,
+        "N:M": 0
+      },
+      "unmatched_bank_transaction_count": 604,
+      "unmatched_payment_count": 543
+    },
+    {
+      "ambiguous_bank_transaction_count": 0,
+      "ambiguous_payment_count": 0,
+      "bank_transaction_candidate_degree": {
+        "domain_size": 6261,
+        "maximum_degree": 0,
+        "mean_degree": 0,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 6261
+      },
+      "candidate_pair_count": 0,
+      "description": "all exact constraints plus nonnegative posting lag; audit-only, not a frozen window",
+      "matched_bank_transaction_count": 0,
+      "matched_payment_count": 0,
+      "payment_candidate_degree": {
+        "domain_size": 6200,
+        "maximum_degree": 0,
+        "mean_degree": 0,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 6200
+      },
+      "predicate_name": "REFERENCE_PLUS_ALL_AND_POSTED_ON_OR_AFTER",
+      "reference_group_cardinality_counts": {
+        "1:1": 0,
+        "1:N": 0,
+        "N:1": 0,
+        "N:M": 0
+      },
+      "unmatched_bank_transaction_count": 6261,
+      "unmatched_payment_count": 6200
+    }
+  ],
+  "collision_resolution_policy": "Never select one candidate when multiple remain; preserve every collision group.",
+  "embeddings_used": false,
+  "exact_reference_behavior": {
+    "ambiguous_bank_transaction_count": 0,
+    "ambiguous_payment_count": 108,
+    "bank_transaction_candidate_degree": {
+      "domain_size": 6261,
+      "maximum_degree": 1,
+      "mean_degree": 0.984028,
+      "median_degree": 1.0,
+      "p95_degree_nearest_rank": 1,
+      "zero_degree_count": 100
+    },
+    "candidate_pair_count": 6161,
+    "distinct_bank_payment_reference_count": 6153,
+    "distinct_exact_reference_match_count": 6053,
+    "distinct_payment_reference_count": 6200,
+    "exact_reference_candidate_pair_count": 6161,
+    "matched_bank_transaction_count": 6161,
+    "matched_payment_count": 6053,
+    "non_null_bank_payment_reference_count": 6261,
+    "non_null_payment_reference_count": 6200,
+    "payment_candidate_degree": {
+      "domain_size": 6200,
+      "maximum_degree": 2,
+      "mean_degree": 0.99371,
+      "median_degree": 1.0,
+      "p95_degree_nearest_rank": 1,
+      "zero_degree_count": 147
+    },
+    "reference_group_cardinality_counts": {
+      "1:1": 5945,
+      "1:N": 108,
+      "N:1": 0,
+      "N:M": 0
+    },
+    "unmatched_bank_payment_reference_examples": [
+      "BANKPORTAL-000006264",
+      "BANKPORTAL-000006265",
+      "BANKPORTAL-000006266",
+      "BANKPORTAL-000006267",
+      "BANKPORTAL-000006268",
+      "BANKPORTAL-000006269",
+      "BANKPORTAL-000006270",
+      "BANKPORTAL-000006271",
+      "BANKPORTAL-000006272",
+      "BANKPORTAL-000006273",
+      "BANKPORTAL-000006274",
+      "BANKPORTAL-000006275",
+      "BANKPORTAL-000006276",
+      "BANKPORTAL-000006277",
+      "BANKPORTAL-000006278",
+      "BANKPORTAL-000006279",
+      "BANKPORTAL-000006280",
+      "BANKPORTAL-000006281",
+      "BANKPORTAL-000006282",
+      "BANKPORTAL-000006283"
+    ],
+    "unmatched_bank_transaction_count": 100,
+    "unmatched_payment_count": 147,
+    "unmatched_payment_reference_examples": [
+      "PMTREF-0000000044",
+      "PMTREF-0000000095",
+      "PMTREF-0000000136",
+      "PMTREF-0000000141",
+      "PMTREF-0000000148",
+      "PMTREF-0000000150",
+      "PMTREF-0000000161",
+      "PMTREF-0000000174",
+      "PMTREF-0000000283",
+      "PMTREF-0000000342",
+      "PMTREF-0000000361",
+      "PMTREF-0000000396",
+      "PMTREF-0000000425",
+      "PMTREF-0000000477",
+      "PMTREF-0000000519",
+      "PMTREF-0000000580",
+      "PMTREF-0000000614",
+      "PMTREF-0000000618",
+      "PMTREF-0000000634",
+      "PMTREF-0000000708"
+    ]
+  },
+  "freeze_recommendation": "Exclude PAYMENT↔BANK_TRANSACTION traversal from the READY_FOR_FREEZE core until identifier-domain and temporal policy are independently frozen.",
+  "payment_count": 6200,
+  "proposed_relation_status": "UNRESOLVED",
+  "temporal_relationship_analysis": {
+    "corroborated_without_bank_account_delta": {
+      "maximum_days": 14,
+      "mean_days": 4.466678,
+      "median_days": 3.0,
+      "minimum_days": 1,
+      "missing_or_unparseable_count": 0,
+      "negative_delta_count": 0,
+      "p95_days_nearest_rank": 14,
+      "pair_count": 5657,
+      "parsed_delta_count": 5657,
+      "positive_delta_count": 5657,
+      "same_day_count": 0
+    },
+    "maximum_temporal_window_policy": "UNRESOLVED — REQUIRES POLICY FREEZE",
+    "reference_only_delta": {
+      "maximum_days": 21,
+      "mean_days": 4.384516,
+      "median_days": 3.0,
+      "minimum_days": -304,
+      "missing_or_unparseable_count": 0,
+      "negative_delta_count": 28,
+      "p95_days_nearest_rank": 14,
+      "pair_count": 6161,
+      "parsed_delta_count": 6161,
+      "positive_delta_count": 6123,
+      "same_day_count": 10
+    },
+    "statement": "Observed lag distributions are descriptive only and were not optimized against labels. No maximum window is selected."
+  }
+}

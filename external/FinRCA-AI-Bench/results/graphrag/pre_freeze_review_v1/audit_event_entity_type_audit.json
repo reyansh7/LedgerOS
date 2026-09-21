@@ -1,0 +1,352 @@
+{
+  "audit_event_count": 28029,
+  "audit_version": "audit_event_entity_type_audit_v1",
+  "distinct_entity_type_count": 6,
+  "entity_types": [
+    {
+      "ambiguous_count": 0,
+      "count": 247,
+      "deterministic_type_mapping_supported": true,
+      "entity_type": "bank_transaction",
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 247,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 0,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 0,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "expected_type_consistent_target": "BANK_TRANSACTION",
+      "journal_id_grouping_attribute_match": {
+        "gl_entry_group_degree_statistics": {
+          "domain_size": 0,
+          "maximum_degree": 0,
+          "mean_degree": 0.0,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 0,
+          "zero_degree_count": 0
+        },
+        "matching_audit_event_count": 0,
+        "policy": "context/grouping evidence only; no GL_JOURNAL node exists"
+      },
+      "non_null_entity_id_count": 247,
+      "proposed_status": "READY_FOR_FREEZE",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_exactly_one_count": 247,
+      "resolved_type_distribution": {
+        "BANK_TRANSACTION": 247
+      },
+      "unresolved_count": 0
+    },
+    {
+      "ambiguous_count": 0,
+      "count": 95,
+      "deterministic_type_mapping_supported": false,
+      "entity_type": "gl_journal",
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 0,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 0,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 0,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "expected_type_consistent_target": null,
+      "journal_id_grouping_attribute_match": {
+        "gl_entry_group_degree_statistics": {
+          "domain_size": 95,
+          "maximum_degree": 2,
+          "mean_degree": 2,
+          "median_degree": 2.0,
+          "p95_degree_nearest_rank": 2,
+          "zero_degree_count": 0
+        },
+        "matching_audit_event_count": 95,
+        "policy": "context/grouping evidence only; no GL_JOURNAL node exists"
+      },
+      "non_null_entity_id_count": 95,
+      "proposed_status": "UNRESOLVED",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [
+        {
+          "entity_id": "JE_0433035",
+          "record_id": "audit_log:EVT_0447341"
+        },
+        {
+          "entity_id": "JE_0430347",
+          "record_id": "audit_log:EVT_0447343"
+        },
+        {
+          "entity_id": "JE_0431311",
+          "record_id": "audit_log:EVT_0447344"
+        },
+        {
+          "entity_id": "JE_0429153",
+          "record_id": "audit_log:EVT_0447345"
+        },
+        {
+          "entity_id": "JE_0432685",
+          "record_id": "audit_log:EVT_0447346"
+        },
+        {
+          "entity_id": "JE_0429429",
+          "record_id": "audit_log:EVT_0447347"
+        },
+        {
+          "entity_id": "JE_0430570",
+          "record_id": "audit_log:EVT_0447348"
+        },
+        {
+          "entity_id": "JE_0428282",
+          "record_id": "audit_log:EVT_0447349"
+        },
+        {
+          "entity_id": "JE_0431458",
+          "record_id": "audit_log:EVT_0447350"
+        },
+        {
+          "entity_id": "JE_0433287",
+          "record_id": "audit_log:EVT_0447351"
+        },
+        {
+          "entity_id": "JE_0429693",
+          "record_id": "audit_log:EVT_0447352"
+        },
+        {
+          "entity_id": "JE_0433366",
+          "record_id": "audit_log:EVT_0447353"
+        },
+        {
+          "entity_id": "JE_0428324",
+          "record_id": "audit_log:EVT_0447355"
+        },
+        {
+          "entity_id": "JE_0432361",
+          "record_id": "audit_log:EVT_0447356"
+        },
+        {
+          "entity_id": "JE_0433939",
+          "record_id": "audit_log:EVT_0447357"
+        },
+        {
+          "entity_id": "JE_0428758",
+          "record_id": "audit_log:EVT_0447358"
+        },
+        {
+          "entity_id": "JE_0433079",
+          "record_id": "audit_log:EVT_0447359"
+        },
+        {
+          "entity_id": "JE_0431963",
+          "record_id": "audit_log:EVT_0447360"
+        },
+        {
+          "entity_id": "JE_0430020",
+          "record_id": "audit_log:EVT_0447361"
+        },
+        {
+          "entity_id": "JE_0428947",
+          "record_id": "audit_log:EVT_0447362"
+        }
+      ],
+      "resolved_exactly_one_count": 0,
+      "resolved_type_distribution": {},
+      "unresolved_count": 95
+    },
+    {
+      "ambiguous_count": 0,
+      "count": 16147,
+      "deterministic_type_mapping_supported": true,
+      "entity_type": "invoice",
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 0,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 16147,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 0,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "expected_type_consistent_target": "INVOICE",
+      "journal_id_grouping_attribute_match": {
+        "gl_entry_group_degree_statistics": {
+          "domain_size": 0,
+          "maximum_degree": 0,
+          "mean_degree": 0.0,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 0,
+          "zero_degree_count": 0
+        },
+        "matching_audit_event_count": 0,
+        "policy": "context/grouping evidence only; no GL_JOURNAL node exists"
+      },
+      "non_null_entity_id_count": 16147,
+      "proposed_status": "READY_FOR_FREEZE",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_exactly_one_count": 16147,
+      "resolved_type_distribution": {
+        "INVOICE": 16147
+      },
+      "unresolved_count": 0
+    },
+    {
+      "ambiguous_count": 0,
+      "count": 6500,
+      "deterministic_type_mapping_supported": true,
+      "entity_type": "payment",
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 0,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 0,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 6500,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "expected_type_consistent_target": "PAYMENT",
+      "journal_id_grouping_attribute_match": {
+        "gl_entry_group_degree_statistics": {
+          "domain_size": 0,
+          "maximum_degree": 0,
+          "mean_degree": 0.0,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 0,
+          "zero_degree_count": 0
+        },
+        "matching_audit_event_count": 0,
+        "policy": "context/grouping evidence only; no GL_JOURNAL node exists"
+      },
+      "non_null_entity_id_count": 6500,
+      "proposed_status": "READY_FOR_FREEZE",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_exactly_one_count": 6500,
+      "resolved_type_distribution": {
+        "PAYMENT": 6500
+      },
+      "unresolved_count": 0
+    },
+    {
+      "ambiguous_count": 0,
+      "count": 5000,
+      "deterministic_type_mapping_supported": true,
+      "entity_type": "purchase_order",
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 0,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 0,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 0,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 5000,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "expected_type_consistent_target": "PURCHASE_ORDER",
+      "journal_id_grouping_attribute_match": {
+        "gl_entry_group_degree_statistics": {
+          "domain_size": 0,
+          "maximum_degree": 0,
+          "mean_degree": 0.0,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 0,
+          "zero_degree_count": 0
+        },
+        "matching_audit_event_count": 0,
+        "policy": "context/grouping evidence only; no GL_JOURNAL node exists"
+      },
+      "non_null_entity_id_count": 5000,
+      "proposed_status": "READY_FOR_FREEZE",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_exactly_one_count": 5000,
+      "resolved_type_distribution": {
+        "PURCHASE_ORDER": 5000
+      },
+      "unresolved_count": 0
+    },
+    {
+      "ambiguous_count": 0,
+      "count": 40,
+      "deterministic_type_mapping_supported": true,
+      "entity_type": "vendor",
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 0,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 0,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 0,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 40,
+        "VENDOR_CHANGE": 0
+      },
+      "expected_type_consistent_target": "VENDOR",
+      "journal_id_grouping_attribute_match": {
+        "gl_entry_group_degree_statistics": {
+          "domain_size": 0,
+          "maximum_degree": 0,
+          "mean_degree": 0.0,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 0,
+          "zero_degree_count": 0
+        },
+        "matching_audit_event_count": 0,
+        "policy": "context/grouping evidence only; no GL_JOURNAL node exists"
+      },
+      "non_null_entity_id_count": 40,
+      "proposed_status": "READY_FOR_FREEZE",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_exactly_one_count": 40,
+      "resolved_type_distribution": {
+        "VENDOR": 40
+      },
+      "unresolved_count": 0
+    }
+  ],
+  "mapping_policy": "Create an edge only for an exact canonical-ID match where entity_type agrees with the approved target node type. gl_journal remains unresolved because no journal-header node exists.",
+  "synthetic_gl_journal_node_created": false
+}

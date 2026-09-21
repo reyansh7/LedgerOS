@@ -1,0 +1,274 @@
+{
+  "artifact_name": "v1_motif_to_v1_1_grammar_mapping.json",
+  "artifact_type": "graphrag_v1_motif_to_v1_1_grammar_mapping",
+  "artifact_version": "1.1",
+  "created_at_utc": "2026-08-15T17:54:51Z",
+  "freeze_status": "FROZEN_GRAPH_V1_1_TYPED_GRAMMAR",
+  "graph_v1_motifs_modified": false,
+  "mapped_excluded_motif_count": 2,
+  "mapped_frozen_motif_count": 8,
+  "mapping_is_compatibility_documentation_only": true,
+  "mapping_is_not_migration_or_deletion": true,
+  "mappings": [
+    {
+      "direction_status": "EXACT_TYPED_REVERSE",
+      "explanation": "The grammar applies PURCHASE_ORDER -> INVOICE only from a compatible current node type; Invoice -> PO is an independent forward row.",
+      "grammar_role": "COMPATIBILITY_DOCUMENTATION_ONLY",
+      "motif_id": "PO_WITH_INVOICES",
+      "representability": "FULLY_REPRESENTABLE",
+      "status": "FROZEN",
+      "v1_1_transition_alternatives": [],
+      "v1_1_transition_id_set": [
+        "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE"
+      ],
+      "v1_1_transition_sequence": [
+        "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE"
+      ],
+      "v1_artifact_modified": false,
+      "v1_edge_sequence": [
+        "INVOICE_REFERENCES_PO:reverse"
+      ],
+      "v1_permitted_anchor_types": [
+        "PURCHASE_ORDER",
+        "INVOICE"
+      ],
+      "v1_registry_group": "FROZEN"
+    },
+    {
+      "direction_status": "EXACT_TYPED_REVERSE",
+      "explanation": "The grammar applies PURCHASE_ORDER -> PO_LINE only from a compatible current node type.",
+      "grammar_role": "COMPATIBILITY_DOCUMENTATION_ONLY",
+      "motif_id": "PO_WITH_LINES",
+      "representability": "FULLY_REPRESENTABLE",
+      "status": "FROZEN",
+      "v1_1_transition_alternatives": [],
+      "v1_1_transition_id_set": [
+        "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE"
+      ],
+      "v1_1_transition_sequence": [
+        "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE"
+      ],
+      "v1_artifact_modified": false,
+      "v1_edge_sequence": [
+        "LINE_OF_PO:reverse"
+      ],
+      "v1_permitted_anchor_types": [
+        "PURCHASE_ORDER",
+        "PO_LINE"
+      ],
+      "v1_registry_group": "FROZEN"
+    },
+    {
+      "direction_status": "DIRECTION_CORRECTED_NATURALLY_BY_GRAMMAR",
+      "explanation": "The two typed reverse rows compose from PURCHASE_ORDER; the invalid Invoice-origin first step is never looked up. The complete motif is obsolete because grammar composition generalizes it.",
+      "grammar_role": "OBSOLETE_BECAUSE_GRAMMAR_COMPOSITION_GENERALIZES_IT",
+      "motif_id": "PO_INVOICE_LINES",
+      "representability": "FULLY_REPRESENTABLE",
+      "status": "FROZEN",
+      "v1_1_transition_alternatives": [],
+      "v1_1_transition_id_set": [
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE",
+        "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE"
+      ],
+      "v1_1_transition_sequence": [
+        "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE",
+        "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE"
+      ],
+      "v1_artifact_modified": false,
+      "v1_edge_sequence": [
+        "INVOICE_REFERENCES_PO:reverse",
+        "LINE_OF_INVOICE:reverse"
+      ],
+      "v1_permitted_anchor_types": [
+        "PURCHASE_ORDER",
+        "INVOICE",
+        "INVOICE_LINE"
+      ],
+      "v1_registry_group": "FROZEN"
+    },
+    {
+      "direction_status": "EXACT_TYPED_REVERSE_WITH_MANDATORY_ALLOCATION_PROVENANCE",
+      "explanation": "The direct frozen projection remains SUPPORTING; the explicit PAYMENT_ALLOCATION bridge is the fuller lifecycle route.",
+      "grammar_role": "COMPATIBILITY_DOCUMENTATION_ONLY",
+      "motif_id": "INVOICE_PAYMENTS",
+      "representability": "FULLY_REPRESENTABLE",
+      "status": "FROZEN",
+      "v1_1_transition_alternatives": [],
+      "v1_1_transition_id_set": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT"
+      ],
+      "v1_1_transition_sequence": [
+        "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT"
+      ],
+      "v1_artifact_modified": false,
+      "v1_edge_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+      ],
+      "v1_permitted_anchor_types": [
+        "INVOICE",
+        "PAYMENT"
+      ],
+      "v1_registry_group": "FROZEN"
+    },
+    {
+      "direction_status": "TERMINAL_CONTEXT",
+      "explanation": "Invoice -> ApprovalEvent is exact local context and stops.",
+      "grammar_role": "COMPATIBILITY_DOCUMENTATION_ONLY",
+      "motif_id": "INVOICE_APPROVALS",
+      "representability": "FULLY_REPRESENTABLE",
+      "status": "FROZEN",
+      "v1_1_transition_alternatives": [],
+      "v1_1_transition_id_set": [
+        "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT"
+      ],
+      "v1_1_transition_sequence": [
+        "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT"
+      ],
+      "v1_artifact_modified": false,
+      "v1_edge_sequence": [
+        "APPROVAL_FOR_INVOICE:reverse"
+      ],
+      "v1_permitted_anchor_types": [
+        "INVOICE",
+        "APPROVAL_EVENT"
+      ],
+      "v1_registry_group": "FROZEN"
+    },
+    {
+      "direction_status": "TERMINAL_CONTEXT",
+      "explanation": "Invoice -> AuditEvent is exact local context and stops.",
+      "grammar_role": "COMPATIBILITY_DOCUMENTATION_ONLY",
+      "motif_id": "INVOICE_AUDIT_EVENTS",
+      "representability": "FULLY_REPRESENTABLE",
+      "status": "FROZEN",
+      "v1_1_transition_alternatives": [],
+      "v1_1_transition_id_set": [
+        "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT"
+      ],
+      "v1_1_transition_sequence": [
+        "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT"
+      ],
+      "v1_artifact_modified": false,
+      "v1_edge_sequence": [
+        "AUDIT_EVENT_FOR_INVOICE:reverse"
+      ],
+      "v1_permitted_anchor_types": [
+        "INVOICE",
+        "AUDIT_EVENT"
+      ],
+      "v1_registry_group": "FROZEN"
+    },
+    {
+      "direction_status": "TERMINAL_ACCOUNTING_CONSEQUENCE",
+      "explanation": "Payment -> GL_ENTRY uses typed exact reverse provenance and stops at the reached GL entry.",
+      "grammar_role": "COMPATIBILITY_DOCUMENTATION_ONLY",
+      "motif_id": "PAYMENT_GL_ENTRIES",
+      "representability": "FULLY_REPRESENTABLE",
+      "status": "FROZEN",
+      "v1_1_transition_alternatives": [],
+      "v1_1_transition_id_set": [
+        "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY"
+      ],
+      "v1_1_transition_sequence": [
+        "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY"
+      ],
+      "v1_artifact_modified": false,
+      "v1_edge_sequence": [
+        "GL_SOURCE_PAYMENT:reverse"
+      ],
+      "v1_permitted_anchor_types": [
+        "PAYMENT",
+        "GL_ENTRY"
+      ],
+      "v1_registry_group": "FROZEN"
+    },
+    {
+      "direction_status": "WILDCARD_REMOVED",
+      "explanation": "Three explicit GL_ENTRY source rows replace the motif wildcard; no GL_JOURNAL is introduced.",
+      "grammar_role": "COMPATIBILITY_DOCUMENTATION_ONLY",
+      "motif_id": "GL_ENTRY_SOURCE_TRANSACTION",
+      "representability": "FULLY_REPRESENTABLE_BY_TYPED_DECOMPOSITION",
+      "status": "FROZEN",
+      "v1_1_transition_alternatives": [
+        "TR_GL_ENTRY__GL_SOURCE_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+        "TR_GL_ENTRY__GL_SOURCE_INVOICE__FORWARD__INVOICE",
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT"
+      ],
+      "v1_1_transition_id_set": [
+        "TR_GL_ENTRY__GL_SOURCE_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+        "TR_GL_ENTRY__GL_SOURCE_INVOICE__FORWARD__INVOICE",
+        "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT"
+      ],
+      "v1_1_transition_sequence": [],
+      "v1_artifact_modified": false,
+      "v1_edge_sequence": [
+        "GL_SOURCE_{INVOICE|PAYMENT|BANK_TRANSACTION}:forward"
+      ],
+      "v1_permitted_anchor_types": [
+        "GL_ENTRY"
+      ],
+      "v1_registry_group": "FROZEN"
+    },
+    {
+      "direction_status": "RELATION_GAP",
+      "explanation": "PAYMENT_CANDIDATE_BANK_TRANSACTION remains excluded and Tier B disabled.",
+      "grammar_role": "COMPATIBILITY_DOCUMENTATION_ONLY",
+      "motif_id": "INVOICE_PAYMENT_BANK",
+      "representability": "INTENTIONALLY_NOT_REPRESENTABLE",
+      "status": "FROZEN",
+      "v1_1_transition_alternatives": [],
+      "v1_1_transition_id_set": [],
+      "v1_1_transition_sequence": [],
+      "v1_artifact_modified": false,
+      "v1_edge_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "PAYMENT_CANDIDATE_BANK_TRANSACTION:forward"
+      ],
+      "v1_permitted_anchor_types": [
+        "INVOICE",
+        "PAYMENT",
+        "BANK_TRANSACTION"
+      ],
+      "v1_registry_group": "EXCLUDED"
+    },
+    {
+      "direction_status": "RELATION_GAP",
+      "explanation": "PAYMENT_CANDIDATE_BANK_TRANSACTION remains excluded and Tier B disabled.",
+      "grammar_role": "COMPATIBILITY_DOCUMENTATION_ONLY",
+      "motif_id": "GL_PAYMENT_BANK",
+      "representability": "INTENTIONALLY_NOT_REPRESENTABLE",
+      "status": "FROZEN",
+      "v1_1_transition_alternatives": [],
+      "v1_1_transition_id_set": [],
+      "v1_1_transition_sequence": [],
+      "v1_artifact_modified": false,
+      "v1_edge_sequence": [
+        "GL_SOURCE_PAYMENT:forward",
+        "PAYMENT_CANDIDATE_BANK_TRANSACTION:forward"
+      ],
+      "v1_permitted_anchor_types": [
+        "GL_ENTRY",
+        "PAYMENT",
+        "BANK_TRANSACTION"
+      ],
+      "v1_registry_group": "EXCLUDED"
+    }
+  ],
+  "parent_phase6a2_artifact_path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/v1_motif_to_v1_1_grammar_mapping.json",
+  "parent_phase6a2_artifact_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+  "serialization_convention": {
+    "concurrency_timing_dependency": false,
+    "encoding": "UTF-8",
+    "filesystem_order_dependency": false,
+    "hash_map_order_dependency": false,
+    "json_indentation_spaces": 2,
+    "json_key_order": "lexicographic via sort_keys=true",
+    "json_separators": "comma plus newline/indent; colon plus one space",
+    "newline": "LF with exactly one trailing newline",
+    "other_array_order": "explicit semantic parent order or explicitly documented stable key order",
+    "transition_array_order": "ascending transition_id",
+    "unicode": "ensure_ascii=false"
+  },
+  "status": "FROZEN",
+  "v1_motifs_immutable": true
+}

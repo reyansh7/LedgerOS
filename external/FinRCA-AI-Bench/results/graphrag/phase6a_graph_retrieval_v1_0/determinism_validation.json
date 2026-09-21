@@ -1,0 +1,36 @@
+{
+  "equivalence_percent": "100% byte/semantic deterministic equivalence",
+  "excluded_from_equivalence": [
+    "created_at_utc",
+    "runtime latency telemetry"
+  ],
+  "graph_first": {
+    "edges": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+    "integrity": "c9a17c80c83fffffc8958af39c922eb742818993a90e349098666ae2fa668764",
+    "manifest": "50d1a4d56358d0690783da4784d6c441e9ebe9c96e559e69e346a6cb275dd605",
+    "nodes": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167"
+  },
+  "graph_second": {
+    "edges": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+    "integrity": "c9a17c80c83fffffc8958af39c922eb742818993a90e349098666ae2fa668764",
+    "manifest": "50d1a4d56358d0690783da4784d6c441e9ebe9c96e559e69e346a6cb275dd605",
+    "nodes": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167"
+  },
+  "retrieval_content_first": {
+    "anchor_rag_results": "395cb7b366ff1549a2d8e5e99cfb01056ac2e4567d6e86795c603db2073230e8",
+    "anchor_resolutions": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+    "evidence_packets": "24f2566d639dffe8648abe74abecafba9b5a71043b6d3d2252d008b206d40b1b",
+    "graph_path_ledger": "600a02cee10691e3d2942081f14186e9e47ccb270e02a15117814b8d69806b9e",
+    "graph_retrieval_results": "7a984285d0c78cd01ec0f50ae06674257c39b8f64b790ef08595df8b82897081",
+    "relational_rag_results": "3921c2bbc17373b3dc237dafb8f6f17327e655842acf0ecbbcbc6c23966c58f5"
+  },
+  "retrieval_content_second": {
+    "anchor_rag_results": "395cb7b366ff1549a2d8e5e99cfb01056ac2e4567d6e86795c603db2073230e8",
+    "anchor_resolutions": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2",
+    "evidence_packets": "24f2566d639dffe8648abe74abecafba9b5a71043b6d3d2252d008b206d40b1b",
+    "graph_path_ledger": "600a02cee10691e3d2942081f14186e9e47ccb270e02a15117814b8d69806b9e",
+    "graph_retrieval_results": "7a984285d0c78cd01ec0f50ae06674257c39b8f64b790ef08595df8b82897081",
+    "relational_rag_results": "3921c2bbc17373b3dc237dafb8f6f17327e655842acf0ecbbcbc6c23966c58f5"
+  },
+  "status": "PASS"
+}

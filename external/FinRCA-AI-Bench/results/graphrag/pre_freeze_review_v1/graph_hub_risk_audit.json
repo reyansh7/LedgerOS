@@ -1,0 +1,1500 @@
+{
+  "attribute_bridge_risk": [
+    {
+      "attribute_group": "bank_account_id",
+      "degree_statistics_nonzero_values": {
+        "domain_size": 600,
+        "maximum_degree": 2453,
+        "mean_degree": 20.858333,
+        "median_degree": 6.0,
+        "p95_degree_nearest_rank": 34,
+        "zero_degree_count": 0
+      },
+      "distinct_value_count": 600,
+      "fields": [
+        "bank_account_id"
+      ],
+      "graph_bridge_policy": "prohibited traversal",
+      "populated_record_field_count": 12515,
+      "rationale": "operational attribute/filtering context, not an approved graph node or cross-record bridge",
+      "recommendation": "context only",
+      "source_distribution": {
+        "BANK_STATEMENT.bank_account_id": 54,
+        "BANK_TRANSACTION.bank_account_id": 6261,
+        "PAYMENT.bank_account_id": 6200
+      },
+      "top_values": [
+        {
+          "degree": 2453,
+          "value": "BANK_ACCT_DISBURSEMENTS_USD"
+        },
+        {
+          "degree": 2451,
+          "value": "BANK_ACCT_OPERATING_USD"
+        },
+        {
+          "degree": 1411,
+          "value": "BANK_ACCT_GLOBAL"
+        },
+        {
+          "degree": 217,
+          "value": "BA_TKN_042_0000096"
+        },
+        {
+          "degree": 147,
+          "value": "BA_TKN_042_0000166"
+        },
+        {
+          "degree": 121,
+          "value": "BA_TKN_042_0000348"
+        },
+        {
+          "degree": 119,
+          "value": "BA_TKN_042_0000026"
+        },
+        {
+          "degree": 119,
+          "value": "BA_TKN_042_0000157"
+        },
+        {
+          "degree": 108,
+          "value": "BA_TKN_042_0000027"
+        },
+        {
+          "degree": 74,
+          "value": "BA_TKN_042_0000248"
+        },
+        {
+          "degree": 69,
+          "value": "BA_TKN_042_0000394"
+        },
+        {
+          "degree": 66,
+          "value": "BA_TKN_042_0000100"
+        },
+        {
+          "degree": 65,
+          "value": "BA_TKN_042_0000103"
+        },
+        {
+          "degree": 63,
+          "value": "BA_TKN_042_0000532"
+        },
+        {
+          "degree": 62,
+          "value": "BA_TKN_042_0000108"
+        },
+        {
+          "degree": 62,
+          "value": "BA_TKN_042_0000147"
+        },
+        {
+          "degree": 58,
+          "value": "BA_TKN_042_0000097"
+        },
+        {
+          "degree": 51,
+          "value": "BA_TKN_042_0000305"
+        },
+        {
+          "degree": 51,
+          "value": "BA_TKN_042_0000355"
+        },
+        {
+          "degree": 49,
+          "value": "BA_TKN_042_0000503"
+        }
+      ]
+    },
+    {
+      "attribute_group": "gl_account",
+      "degree_statistics_nonzero_values": {
+        "domain_size": 16,
+        "maximum_degree": 14336,
+        "mean_degree": 5080.3125,
+        "median_degree": 6440.5,
+        "p95_degree_nearest_rank": 14336,
+        "zero_degree_count": 0
+      },
+      "distinct_value_count": 16,
+      "fields": [
+        "gl_account"
+      ],
+      "graph_bridge_policy": "prohibited traversal",
+      "populated_record_field_count": 81285,
+      "rationale": "operational attribute/filtering context, not an approved graph node or cross-record bridge",
+      "recommendation": "context only",
+      "source_distribution": {
+        "GL_ENTRY.gl_account": 46755,
+        "INVOICE_LINE.gl_account": 18299,
+        "PO_LINE.gl_account": 11231,
+        "PURCHASE_ORDER.gl_account": 5000
+      },
+      "top_values": [
+        {
+          "degree": 14336,
+          "value": "200000-ACCOUNTS-PAYABLE"
+        },
+        {
+          "degree": 6795,
+          "value": "620100-OPERATIONS"
+        },
+        {
+          "degree": 6638,
+          "value": "630100-FINANCE"
+        },
+        {
+          "degree": 6589,
+          "value": "610100-ENGINEERING"
+        },
+        {
+          "degree": 6583,
+          "value": "680100-IT"
+        },
+        {
+          "degree": 6573,
+          "value": "670100-LEGAL"
+        },
+        {
+          "degree": 6547,
+          "value": "650100-MARKETING"
+        },
+        {
+          "degree": 6522,
+          "value": "640100-SALES"
+        },
+        {
+          "degree": 6359,
+          "value": "660100-PEOPLE"
+        },
+        {
+          "degree": 6352,
+          "value": "100000-CASH"
+        },
+        {
+          "degree": 5963,
+          "value": "141000-RECOVERABLE-TAX"
+        },
+        {
+          "degree": 1777,
+          "value": "625000-FREIGHT"
+        },
+        {
+          "degree": 110,
+          "value": "710000-BANK-FEES"
+        },
+        {
+          "degree": 47,
+          "value": "699999-CANCELLED-INVOICE-CLEARING"
+        },
+        {
+          "degree": 47,
+          "value": "799100-FX-SETTLEMENT"
+        },
+        {
+          "degree": 47,
+          "value": "799199-FX-CLEARING"
+        }
+      ]
+    },
+    {
+      "attribute_group": "department",
+      "degree_statistics_nonzero_values": {
+        "domain_size": 8,
+        "maximum_degree": 21524,
+        "mean_degree": 10175.625,
+        "median_degree": 8569.0,
+        "p95_degree_nearest_rank": 21524,
+        "zero_degree_count": 0
+      },
+      "distinct_value_count": 8,
+      "fields": [
+        "department"
+      ],
+      "graph_bridge_policy": "prohibited traversal",
+      "populated_record_field_count": 81405,
+      "rationale": "operational attribute/filtering context, not an approved graph node or cross-record bridge",
+      "recommendation": "context only",
+      "source_distribution": {
+        "EMPLOYEE.department": 120,
+        "GL_ENTRY.department": 46755,
+        "INVOICE_LINE.department": 18299,
+        "PO_LINE.department": 11231,
+        "PURCHASE_ORDER.department": 5000
+      },
+      "top_values": [
+        {
+          "degree": 21524,
+          "value": "Finance"
+        },
+        {
+          "degree": 8876,
+          "value": "Operations"
+        },
+        {
+          "degree": 8579,
+          "value": "Engineering"
+        },
+        {
+          "degree": 8575,
+          "value": "IT"
+        },
+        {
+          "degree": 8563,
+          "value": "Legal"
+        },
+        {
+          "degree": 8535,
+          "value": "Marketing"
+        },
+        {
+          "degree": 8478,
+          "value": "Sales"
+        },
+        {
+          "degree": 8275,
+          "value": "People"
+        }
+      ]
+    },
+    {
+      "attribute_group": "cost_center",
+      "degree_statistics_nonzero_values": {
+        "domain_size": 97,
+        "maximum_degree": 13502,
+        "mean_degree": 837.989691,
+        "median_degree": 710.0,
+        "p95_degree_nearest_rank": 842,
+        "zero_degree_count": 0
+      },
+      "distinct_value_count": 97,
+      "fields": [
+        "cost_center"
+      ],
+      "graph_bridge_policy": "prohibited traversal",
+      "populated_record_field_count": 81285,
+      "rationale": "operational attribute/filtering context, not an approved graph node or cross-record bridge",
+      "recommendation": "context only",
+      "source_distribution": {
+        "GL_ENTRY.cost_center": 46755,
+        "INVOICE_LINE.cost_center": 18299,
+        "PO_LINE.cost_center": 11231,
+        "PURCHASE_ORDER.cost_center": 5000
+      },
+      "top_values": [
+        {
+          "degree": 13502,
+          "value": "CC-03-01"
+        },
+        {
+          "degree": 880,
+          "value": "CC-02-02"
+        },
+        {
+          "degree": 872,
+          "value": "CC-02-05"
+        },
+        {
+          "degree": 871,
+          "value": "CC-05-04"
+        },
+        {
+          "degree": 842,
+          "value": "CC-05-03"
+        },
+        {
+          "degree": 829,
+          "value": "CC-03-06"
+        },
+        {
+          "degree": 829,
+          "value": "CC-07-09"
+        },
+        {
+          "degree": 826,
+          "value": "CC-03-12"
+        },
+        {
+          "degree": 815,
+          "value": "CC-03-08"
+        },
+        {
+          "degree": 815,
+          "value": "CC-07-06"
+        },
+        {
+          "degree": 802,
+          "value": "CC-01-09"
+        },
+        {
+          "degree": 800,
+          "value": "CC-08-07"
+        },
+        {
+          "degree": 799,
+          "value": "CC-05-12"
+        },
+        {
+          "degree": 797,
+          "value": "CC-03-03"
+        },
+        {
+          "degree": 796,
+          "value": "CC-04-03"
+        },
+        {
+          "degree": 785,
+          "value": "CC-08-09"
+        },
+        {
+          "degree": 783,
+          "value": "CC-01-08"
+        },
+        {
+          "degree": 781,
+          "value": "CC-02-06"
+        },
+        {
+          "degree": 781,
+          "value": "CC-07-08"
+        },
+        {
+          "degree": 780,
+          "value": "CC-07-03"
+        }
+      ]
+    },
+    {
+      "attribute_group": "currency",
+      "degree_statistics_nonzero_values": {
+        "domain_size": 5,
+        "maximum_degree": 56954,
+        "mean_degree": 14572.6,
+        "median_degree": 5421.0,
+        "p95_degree_nearest_rank": 56954,
+        "zero_degree_count": 0
+      },
+      "distinct_value_count": 5,
+      "fields": [
+        "currency",
+        "payment_currency"
+      ],
+      "graph_bridge_policy": "prohibited traversal",
+      "populated_record_field_count": 72863,
+      "rationale": "operational attribute/filtering context, not an approved graph node or cross-record bridge",
+      "recommendation": "context only",
+      "source_distribution": {
+        "BANK_TRANSACTION.currency": 6261,
+        "GL_ENTRY.currency": 46755,
+        "INVOICE.currency": 8147,
+        "PAYMENT.payment_currency": 6200,
+        "PURCHASE_ORDER.currency": 5000,
+        "VENDOR.currency": 500
+      },
+      "top_values": [
+        {
+          "degree": 56954,
+          "value": "USD"
+        },
+        {
+          "degree": 6511,
+          "value": "EUR"
+        },
+        {
+          "degree": 5421,
+          "value": "GBP"
+        },
+        {
+          "degree": 2731,
+          "value": "CAD"
+        },
+        {
+          "degree": 1246,
+          "value": "JPY"
+        }
+      ]
+    },
+    {
+      "attribute_group": "source_system",
+      "degree_statistics_nonzero_values": {
+        "domain_size": 10,
+        "maximum_degree": 46850,
+        "mean_degree": 15539.1,
+        "median_degree": 11346.5,
+        "p95_degree_nearest_rank": 46850,
+        "zero_degree_count": 0
+      },
+      "distinct_value_count": 10,
+      "fields": [
+        "source_system"
+      ],
+      "graph_bridge_policy": "prohibited traversal",
+      "populated_record_field_count": 155391,
+      "rationale": "operational attribute/filtering context, not an approved graph node or cross-record bridge",
+      "recommendation": "context only",
+      "source_distribution": {
+        "APPROVAL_EVENT.source_system": 17429,
+        "AUDIT_EVENT.source_system": 28029,
+        "BANK_STATEMENT.source_system": 54,
+        "BANK_TRANSACTION.source_system": 6261,
+        "EMPLOYEE.source_system": 120,
+        "GL_ENTRY.source_system": 46755,
+        "INVOICE.source_system": 8147,
+        "INVOICE_LINE.source_system": 18299,
+        "PAYMENT.source_system": 6200,
+        "PAYMENT_ALLOCATION.source_system": 7180,
+        "PO_LINE.source_system": 11231,
+        "PURCHASE_ORDER.source_system": 5000,
+        "VENDOR.source_system": 500,
+        "VENDOR_CHANGE.source_system": 186
+      },
+      "top_values": [
+        {
+          "degree": 46850,
+          "value": "ERP-GL"
+        },
+        {
+          "degree": 40073,
+          "value": "ERP-AP"
+        },
+        {
+          "degree": 25529,
+          "value": "ERP-Workflow"
+        },
+        {
+          "degree": 19000,
+          "value": "ERP"
+        },
+        {
+          "degree": 16231,
+          "value": "ERP-Procurement"
+        },
+        {
+          "degree": 6462,
+          "value": "Bank"
+        },
+        {
+          "degree": 726,
+          "value": "VendorManagement"
+        },
+        {
+          "degree": 300,
+          "value": "PaymentProcessor"
+        },
+        {
+          "degree": 120,
+          "value": "HRIS"
+        },
+        {
+          "degree": 100,
+          "value": "ReconciliationPlatform"
+        }
+      ]
+    },
+    {
+      "attribute_group": "status_fields",
+      "degree_statistics_nonzero_values": {
+        "domain_size": 19,
+        "maximum_degree": 15971,
+        "mean_degree": 3541.368421,
+        "median_degree": 593.0,
+        "p95_degree_nearest_rank": 15971,
+        "zero_degree_count": 0
+      },
+      "distinct_value_count": 19,
+      "fields": [
+        "active_status",
+        "new_status",
+        "payment_status",
+        "previous_status",
+        "settlement_status",
+        "status",
+        "vendor_status"
+      ],
+      "graph_bridge_policy": "prohibited traversal",
+      "populated_record_field_count": 67286,
+      "rationale": "operational attribute/filtering context, not an approved graph node or cross-record bridge",
+      "recommendation": "context only",
+      "source_distribution": {
+        "APPROVAL_EVENT.new_status": 17429,
+        "APPROVAL_EVENT.previous_status": 17429,
+        "BANK_TRANSACTION.status": 6261,
+        "EMPLOYEE.active_status": 120,
+        "INVOICE.status": 8147,
+        "PAYMENT.payment_status": 6200,
+        "PAYMENT.settlement_status": 6200,
+        "PURCHASE_ORDER.status": 5000,
+        "VENDOR.vendor_status": 500
+      },
+      "top_values": [
+        {
+          "degree": 15971,
+          "value": "submitted"
+        },
+        {
+          "degree": 9914,
+          "value": "approved"
+        },
+        {
+          "degree": 8100,
+          "value": "received"
+        },
+        {
+          "degree": 6161,
+          "value": "posted"
+        },
+        {
+          "degree": 6106,
+          "value": "completed"
+        },
+        {
+          "degree": 6006,
+          "value": "settled"
+        },
+        {
+          "degree": 5939,
+          "value": "paid"
+        },
+        {
+          "degree": 5000,
+          "value": "issued"
+        },
+        {
+          "degree": 2977,
+          "value": "pending_level_2"
+        },
+        {
+          "degree": 593,
+          "value": "active"
+        },
+        {
+          "degree": 100,
+          "value": "failed"
+        },
+        {
+          "degree": 100,
+          "value": "returned"
+        },
+        {
+          "degree": 94,
+          "value": "reversed"
+        },
+        {
+          "degree": 57,
+          "value": "pending_level_3"
+        },
+        {
+          "degree": 47,
+          "value": "canceled"
+        },
+        {
+          "degree": 47,
+          "value": "credit_applied"
+        },
+        {
+          "degree": 47,
+          "value": "pending"
+        },
+        {
+          "degree": 22,
+          "value": "on_hold"
+        },
+        {
+          "degree": 5,
+          "value": "inactive"
+        }
+      ]
+    },
+    {
+      "attribute_group": "calendar_dates",
+      "degree_statistics_nonzero_values": {
+        "domain_size": 1006,
+        "maximum_degree": 2411,
+        "mean_degree": 167.140159,
+        "median_degree": 191.0,
+        "p95_degree_nearest_rank": 383,
+        "zero_degree_count": 0
+      },
+      "distinct_value_count": 1006,
+      "fields": [
+        "allocation_date",
+        "changed_at",
+        "created_at",
+        "due_date",
+        "event_timestamp",
+        "expected_delivery_date",
+        "invoice_date",
+        "payment_date",
+        "po_date",
+        "posted_date",
+        "posting_date",
+        "received_date",
+        "statement_date",
+        "timestamp",
+        "transaction_date",
+        "updated_at"
+      ],
+      "graph_bridge_policy": "prohibited traversal",
+      "populated_record_field_count": 168143,
+      "rationale": "operational attribute/filtering context, not an approved graph node or cross-record bridge",
+      "recommendation": "context only",
+      "source_distribution": {
+        "APPROVAL_EVENT.event_timestamp": 17429,
+        "AUDIT_EVENT.timestamp": 28029,
+        "BANK_STATEMENT.statement_date": 54,
+        "BANK_TRANSACTION.posted_date": 6261,
+        "BANK_TRANSACTION.transaction_date": 6261,
+        "GL_ENTRY.posting_date": 46755,
+        "INVOICE.created_at": 8147,
+        "INVOICE.due_date": 8147,
+        "INVOICE.invoice_date": 8147,
+        "INVOICE.received_date": 8147,
+        "PAYMENT.created_at": 6200,
+        "PAYMENT.payment_date": 6200,
+        "PAYMENT_ALLOCATION.allocation_date": 7180,
+        "PURCHASE_ORDER.expected_delivery_date": 5000,
+        "PURCHASE_ORDER.po_date": 5000,
+        "VENDOR.created_at": 500,
+        "VENDOR.updated_at": 500,
+        "VENDOR_CHANGE.changed_at": 186
+      },
+      "top_values": [
+        {
+          "degree": 2411,
+          "value": "2026-06-15"
+        },
+        {
+          "degree": 470,
+          "value": "2025-09-16"
+        },
+        {
+          "degree": 441,
+          "value": "2026-05-12"
+        },
+        {
+          "degree": 431,
+          "value": "2026-05-06"
+        },
+        {
+          "degree": 429,
+          "value": "2025-09-29"
+        },
+        {
+          "degree": 424,
+          "value": "2025-09-01"
+        },
+        {
+          "degree": 423,
+          "value": "2025-12-15"
+        },
+        {
+          "degree": 421,
+          "value": "2025-09-24"
+        },
+        {
+          "degree": 419,
+          "value": "2025-07-23"
+        },
+        {
+          "degree": 418,
+          "value": "2025-05-26"
+        },
+        {
+          "degree": 417,
+          "value": "2025-12-27"
+        },
+        {
+          "degree": 416,
+          "value": "2026-03-06"
+        },
+        {
+          "degree": 415,
+          "value": "2025-12-02"
+        },
+        {
+          "degree": 414,
+          "value": "2025-11-24"
+        },
+        {
+          "degree": 413,
+          "value": "2025-09-26"
+        },
+        {
+          "degree": 412,
+          "value": "2025-11-21"
+        },
+        {
+          "degree": 411,
+          "value": "2025-06-07"
+        },
+        {
+          "degree": 411,
+          "value": "2025-09-17"
+        },
+        {
+          "degree": 411,
+          "value": "2026-01-01"
+        },
+        {
+          "degree": 410,
+          "value": "2026-05-21"
+        }
+      ]
+    },
+    {
+      "attribute_group": "journal_id",
+      "degree_statistics_nonzero_values": {
+        "domain_size": 14493,
+        "maximum_degree": 7,
+        "mean_degree": 3.22604,
+        "median_degree": 3.0,
+        "p95_degree_nearest_rank": 6,
+        "zero_degree_count": 0
+      },
+      "distinct_value_count": 14493,
+      "fields": [
+        "journal_id"
+      ],
+      "graph_bridge_policy": "prohibited traversal",
+      "populated_record_field_count": 46755,
+      "rationale": "GL_ENTRY grouping attribute only; no journal-header source record and no GL_JOURNAL node",
+      "recommendation": "context only",
+      "source_distribution": {
+        "GL_ENTRY.journal_id": 46755
+      },
+      "top_values": [
+        {
+          "degree": 7,
+          "value": "JE_0420003"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420028"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420036"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420051"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420086"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420116"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420117"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420130"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420212"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420224"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420268"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420269"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420276"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420343"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420532"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420555"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420559"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420564"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420572"
+        },
+        {
+          "degree": 7,
+          "value": "JE_0420590"
+        }
+      ]
+    }
+  ],
+  "audit_version": "graph_hub_risk_audit_v1",
+  "degree_definition": "Relation target degree counts resolved incoming source records; combined node degree counts distinct neighboring source records. Attribute degree counts records sharing an exact value.",
+  "node_hub_risk": [
+    {
+      "combined_exact_relation_neighbor_degree": {
+        "domain_size": 500,
+        "maximum_degree": 1172,
+        "mean_degree": 39.146,
+        "median_degree": 21.0,
+        "p95_degree_nearest_rank": 107,
+        "zero_degree_count": 0
+      },
+      "node_type": "VENDOR",
+      "recommendation": "restricted traversal",
+      "record_count": 500,
+      "restriction": "allow exact anchoring and direct evidence attachment; prohibit automatic unconstrained reverse-neighborhood expansion"
+    },
+    {
+      "combined_exact_relation_neighbor_degree": {
+        "domain_size": 120,
+        "maximum_degree": 607,
+        "mean_degree": 162.641667,
+        "median_degree": 95.0,
+        "p95_degree_nearest_rank": 492,
+        "zero_degree_count": 5
+      },
+      "node_type": "EMPLOYEE",
+      "recommendation": "restricted traversal",
+      "record_count": 120,
+      "restriction": "allow exact anchoring and direct evidence attachment; prohibit automatic unconstrained reverse-neighborhood expansion"
+    }
+  ],
+  "policy": "Vendor and Employee remain nodes but require restricted expansion. Attribute bridge nodes are not introduced.",
+  "relation_hub_risk": [
+    {
+      "recommendation": "restricted traversal",
+      "relation_key": "APPROVAL_EVENT_APPROVER_EMPLOYEE",
+      "risk_rationale": "organizational hub; reverse expansion can fan out",
+      "target_in_degree_all_domain": {
+        "domain_size": 120,
+        "maximum_degree": 416,
+        "mean_degree": 77.425,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 400,
+        "zero_degree_count": 65
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 55,
+        "maximum_degree": 416,
+        "mean_degree": 168.927273,
+        "median_degree": 78.0,
+        "p95_degree_nearest_rank": 407,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "EMPLOYEE"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "APPROVAL_EVENT_TO_INVOICE",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 4,
+        "mean_degree": 2.139315,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 3,
+        "zero_degree_count": 147
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 8000,
+        "maximum_degree": 4,
+        "mean_degree": 2.178625,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 3,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE"
+    },
+    {
+      "recommendation": "restricted traversal",
+      "relation_key": "AUDIT_EVENT_ACTOR_EMPLOYEE",
+      "risk_rationale": "organizational hub; reverse expansion can fan out",
+      "target_in_degree_all_domain": {
+        "domain_size": 120,
+        "maximum_degree": 63,
+        "mean_degree": 42,
+        "median_degree": 43.0,
+        "p95_degree_nearest_rank": 53,
+        "zero_degree_count": 5
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 115,
+        "maximum_degree": 63,
+        "mean_degree": 43.826087,
+        "median_degree": 44.0,
+        "p95_degree_nearest_rank": 53,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "EMPLOYEE"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "AUDIT_EVENT_BANK_TRANSACTION_TO_BANK_TRANSACTION",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 6261,
+        "maximum_degree": 1,
+        "mean_degree": 0.039451,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 6014
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 247,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "BANK_TRANSACTION"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "AUDIT_EVENT_INVOICE_TO_INVOICE",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 3,
+        "mean_degree": 1.981957,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 147
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 8000,
+        "maximum_degree": 3,
+        "mean_degree": 2.018375,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "AUDIT_EVENT_PAYMENT_TO_PAYMENT",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 6200,
+        "maximum_degree": 2,
+        "mean_degree": 1.048387,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 100
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 6100,
+        "maximum_degree": 2,
+        "mean_degree": 1.065574,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PAYMENT"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "AUDIT_EVENT_PURCHASE_ORDER_TO_PURCHASE_ORDER",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 5000,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 5000,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PURCHASE_ORDER"
+    },
+    {
+      "recommendation": "restricted traversal",
+      "relation_key": "AUDIT_EVENT_VENDOR_TO_VENDOR",
+      "risk_rationale": "high-degree hub-sensitive node type",
+      "target_in_degree_all_domain": {
+        "domain_size": 500,
+        "maximum_degree": 1,
+        "mean_degree": 0.08,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 460
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 40,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "VENDOR"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "GL_ENTRY_BANK_FEE_TO_BANK_TRANSACTION",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 6261,
+        "maximum_degree": 2,
+        "mean_degree": 0.035138,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 6151
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 110,
+        "maximum_degree": 2,
+        "mean_degree": 2,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "BANK_TRANSACTION"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "GL_ENTRY_CREDIT_MEMO_TO_INVOICE",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 7,
+        "mean_degree": 0.023199,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 8100
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 47,
+        "maximum_degree": 7,
+        "mean_degree": 4.021277,
+        "median_degree": 4.0,
+        "p95_degree_nearest_rank": 6,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "GL_ENTRY_FX_SETTLEMENT_TO_BANK_TRANSACTION",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 6261,
+        "maximum_degree": 2,
+        "mean_degree": 0.015014,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 6214
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 47,
+        "maximum_degree": 2,
+        "mean_degree": 2,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "BANK_TRANSACTION"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "GL_ENTRY_INVOICE_CANCELLATION_TO_INVOICE",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 2,
+        "mean_degree": 0.011538,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 8100
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 47,
+        "maximum_degree": 2,
+        "mean_degree": 2,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "GL_ENTRY_INVOICE_TO_INVOICE",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 7,
+        "mean_degree": 4.133301,
+        "median_degree": 4.0,
+        "p95_degree_nearest_rank": 6,
+        "zero_degree_count": 147
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 8000,
+        "maximum_degree": 7,
+        "mean_degree": 4.20925,
+        "median_degree": 4.0,
+        "p95_degree_nearest_rank": 6,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "GL_ENTRY_PAYMENT_REVERSAL_TO_PAYMENT",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 6200,
+        "maximum_degree": 2,
+        "mean_degree": 0.015161,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 0,
+        "zero_degree_count": 6153
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 47,
+        "maximum_degree": 2,
+        "mean_degree": 2,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PAYMENT"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "GL_ENTRY_PAYMENT_TO_PAYMENT",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 6200,
+        "maximum_degree": 2,
+        "mean_degree": 1.998387,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 5
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 6195,
+        "maximum_degree": 2,
+        "mean_degree": 2,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PAYMENT"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "INVOICE_LINE_TO_INVOICE",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 4,
+        "mean_degree": 2.246103,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 4,
+        "zero_degree_count": 0
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 8147,
+        "maximum_degree": 4,
+        "mean_degree": 2.246103,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 4,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "INVOICE_LINE_TO_PO_LINE",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 11231,
+        "maximum_degree": 2,
+        "mean_degree": 1.005431,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 95
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 11136,
+        "maximum_degree": 2,
+        "mean_degree": 1.014009,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PO_LINE"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "INVOICE_TO_PURCHASE_ORDER",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 5000,
+        "maximum_degree": 2,
+        "mean_degree": 1.0048,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 40
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 4960,
+        "maximum_degree": 2,
+        "mean_degree": 1.012903,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PURCHASE_ORDER"
+    },
+    {
+      "recommendation": "restricted traversal",
+      "relation_key": "INVOICE_TO_VENDOR",
+      "risk_rationale": "high-degree hub-sensitive node type",
+      "target_in_degree_all_domain": {
+        "domain_size": 500,
+        "maximum_degree": 592,
+        "mean_degree": 16.294,
+        "median_degree": 8.0,
+        "p95_degree_nearest_rank": 48,
+        "zero_degree_count": 2
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 498,
+        "maximum_degree": 592,
+        "mean_degree": 16.359438,
+        "median_degree": 8.0,
+        "p95_degree_nearest_rank": 49,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "VENDOR"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "PAYMENT_ALLOCATION_TO_INVOICE",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 3,
+        "mean_degree": 0.881306,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 2147
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 6000,
+        "maximum_degree": 3,
+        "mean_degree": 1.196667,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "PAYMENT_ALLOCATION_TO_PAYMENT",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 6200,
+        "maximum_degree": 2,
+        "mean_degree": 1.158065,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 100
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 6100,
+        "maximum_degree": 2,
+        "mean_degree": 1.177049,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PAYMENT"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "PAYMENT_TO_INVOICE_VIA_ALLOCATION",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 3,
+        "mean_degree": 0.881306,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 2147
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 6000,
+        "maximum_degree": 3,
+        "mean_degree": 1.196667,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE"
+    },
+    {
+      "recommendation": "restricted traversal",
+      "relation_key": "PAYMENT_TO_VENDOR",
+      "risk_rationale": "high-degree hub-sensitive node type",
+      "target_in_degree_all_domain": {
+        "domain_size": 500,
+        "maximum_degree": 217,
+        "mean_degree": 12.4,
+        "median_degree": 8.0,
+        "p95_degree_nearest_rank": 37,
+        "zero_degree_count": 3
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 497,
+        "maximum_degree": 217,
+        "mean_degree": 12.474849,
+        "median_degree": 8.0,
+        "p95_degree_nearest_rank": 37,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "VENDOR"
+    },
+    {
+      "recommendation": "traversable",
+      "relation_key": "PO_LINE_TO_PURCHASE_ORDER",
+      "risk_rationale": "transactional exact-ID relation; apply motif and 40-record budget caps",
+      "target_in_degree_all_domain": {
+        "domain_size": 5000,
+        "maximum_degree": 4,
+        "mean_degree": 2.2462,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 4,
+        "zero_degree_count": 0
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 5000,
+        "maximum_degree": 4,
+        "mean_degree": 2.2462,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 4,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PURCHASE_ORDER"
+    },
+    {
+      "recommendation": "restricted traversal",
+      "relation_key": "PURCHASE_ORDER_CREATED_BY_EMPLOYEE",
+      "risk_rationale": "organizational hub; reverse expansion can fan out",
+      "target_in_degree_all_domain": {
+        "domain_size": 120,
+        "maximum_degree": 63,
+        "mean_degree": 41.666667,
+        "median_degree": 43.0,
+        "p95_degree_nearest_rank": 53,
+        "zero_degree_count": 5
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 115,
+        "maximum_degree": 63,
+        "mean_degree": 43.478261,
+        "median_degree": 43.0,
+        "p95_degree_nearest_rank": 53,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "EMPLOYEE"
+    },
+    {
+      "recommendation": "restricted traversal",
+      "relation_key": "PURCHASE_ORDER_TO_VENDOR",
+      "risk_rationale": "high-degree hub-sensitive node type",
+      "target_in_degree_all_domain": {
+        "domain_size": 500,
+        "maximum_degree": 362,
+        "mean_degree": 10,
+        "median_degree": 5.0,
+        "p95_degree_nearest_rank": 30,
+        "zero_degree_count": 28
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 472,
+        "maximum_degree": 362,
+        "mean_degree": 10.59322,
+        "median_degree": 5.0,
+        "p95_degree_nearest_rank": 31,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "VENDOR"
+    },
+    {
+      "recommendation": "restricted traversal",
+      "relation_key": "VENDOR_CHANGE_CHANGED_BY_EMPLOYEE",
+      "risk_rationale": "organizational hub; reverse expansion can fan out",
+      "target_in_degree_all_domain": {
+        "domain_size": 120,
+        "maximum_degree": 146,
+        "mean_degree": 1.55,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 86
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 34,
+        "maximum_degree": 146,
+        "mean_degree": 5.470588,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "EMPLOYEE"
+    },
+    {
+      "recommendation": "restricted traversal",
+      "relation_key": "VENDOR_CHANGE_TO_VENDOR",
+      "risk_rationale": "high-degree hub-sensitive node type",
+      "target_in_degree_all_domain": {
+        "domain_size": 500,
+        "maximum_degree": 6,
+        "mean_degree": 0.372,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 362
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 138,
+        "maximum_degree": 6,
+        "mean_degree": 1.347826,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 3,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "VENDOR"
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "audit_version": "gl_transaction_type_audit_v1",
+  "distinct_transaction_type_count": 7,
+  "gl_entry_count": 46755,
+  "prohibited_methods": [
+    "nearest-ID matching",
+    "semantic similarity",
+    "ambiguous target selection"
+  ],
+  "proposed_edge_policy": [
+    "source_transaction_id is nonempty",
+    "transaction_type is in the frozen approved registry",
+    "source_transaction_id exactly matches one canonical target ID",
+    "target type agrees with transaction_type",
+    "both records are cutoff-eligible"
+  ],
+  "proposed_mapping_registry": {
+    "bank_fee": {
+      "permitted_target_node_types": [
+        "BANK_TRANSACTION"
+      ],
+      "status": "READY_FOR_FREEZE"
+    },
+    "credit_memo": {
+      "permitted_target_node_types": [
+        "INVOICE"
+      ],
+      "status": "READY_FOR_FREEZE"
+    },
+    "fx_settlement": {
+      "permitted_target_node_types": [
+        "BANK_TRANSACTION"
+      ],
+      "status": "READY_FOR_FREEZE"
+    },
+    "invoice": {
+      "permitted_target_node_types": [
+        "INVOICE"
+      ],
+      "status": "READY_FOR_FREEZE"
+    },
+    "invoice_cancellation": {
+      "permitted_target_node_types": [
+        "INVOICE"
+      ],
+      "status": "READY_FOR_FREEZE"
+    },
+    "payment": {
+      "permitted_target_node_types": [
+        "PAYMENT"
+      ],
+      "status": "READY_FOR_FREEZE"
+    },
+    "payment_reversal": {
+      "permitted_target_node_types": [
+        "PAYMENT"
+      ],
+      "status": "READY_FOR_FREEZE"
+    }
+  },
+  "transaction_types": [
+    {
+      "ambiguous_cross_type_match_count": 0,
+      "count": 220,
+      "deterministic_type_mapping_supported": true,
+      "distinct_unresolved_value_count": 0,
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 220,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 0,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 0,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "non_null_source_transaction_id_count": 220,
+      "proposed_status": "READY_FOR_FREEZE",
+      "proposed_target_node_type": "BANK_TRANSACTION",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_type_distribution": {
+        "BANK_TRANSACTION": 220
+      },
+      "source_transaction_id_prefix_distribution": {
+        "BT_": 220
+      },
+      "transaction_type": "bank_fee",
+      "unresolved_value_count": 0
+    },
+    {
+      "ambiguous_cross_type_match_count": 0,
+      "count": 189,
+      "deterministic_type_mapping_supported": true,
+      "distinct_unresolved_value_count": 0,
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 0,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 189,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 0,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "non_null_source_transaction_id_count": 189,
+      "proposed_status": "READY_FOR_FREEZE",
+      "proposed_target_node_type": "INVOICE",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_type_distribution": {
+        "INVOICE": 189
+      },
+      "source_transaction_id_prefix_distribution": {
+        "INV_": 189
+      },
+      "transaction_type": "credit_memo",
+      "unresolved_value_count": 0
+    },
+    {
+      "ambiguous_cross_type_match_count": 0,
+      "count": 94,
+      "deterministic_type_mapping_supported": true,
+      "distinct_unresolved_value_count": 0,
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 94,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 0,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 0,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "non_null_source_transaction_id_count": 94,
+      "proposed_status": "READY_FOR_FREEZE",
+      "proposed_target_node_type": "BANK_TRANSACTION",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_type_distribution": {
+        "BANK_TRANSACTION": 94
+      },
+      "source_transaction_id_prefix_distribution": {
+        "BT_": 94
+      },
+      "transaction_type": "fx_settlement",
+      "unresolved_value_count": 0
+    },
+    {
+      "ambiguous_cross_type_match_count": 0,
+      "count": 33674,
+      "deterministic_type_mapping_supported": true,
+      "distinct_unresolved_value_count": 0,
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 0,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 33674,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 0,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "non_null_source_transaction_id_count": 33674,
+      "proposed_status": "READY_FOR_FREEZE",
+      "proposed_target_node_type": "INVOICE",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_type_distribution": {
+        "INVOICE": 33674
+      },
+      "source_transaction_id_prefix_distribution": {
+        "INV_": 33674
+      },
+      "transaction_type": "invoice",
+      "unresolved_value_count": 0
+    },
+    {
+      "ambiguous_cross_type_match_count": 0,
+      "count": 94,
+      "deterministic_type_mapping_supported": true,
+      "distinct_unresolved_value_count": 0,
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 0,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 94,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 0,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "non_null_source_transaction_id_count": 94,
+      "proposed_status": "READY_FOR_FREEZE",
+      "proposed_target_node_type": "INVOICE",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_type_distribution": {
+        "INVOICE": 94
+      },
+      "source_transaction_id_prefix_distribution": {
+        "INV_": 94
+      },
+      "transaction_type": "invoice_cancellation",
+      "unresolved_value_count": 0
+    },
+    {
+      "ambiguous_cross_type_match_count": 0,
+      "count": 12390,
+      "deterministic_type_mapping_supported": true,
+      "distinct_unresolved_value_count": 0,
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 0,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 0,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 12390,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "non_null_source_transaction_id_count": 12390,
+      "proposed_status": "READY_FOR_FREEZE",
+      "proposed_target_node_type": "PAYMENT",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_type_distribution": {
+        "PAYMENT": 12390
+      },
+      "source_transaction_id_prefix_distribution": {
+        "PAY_": 12390
+      },
+      "transaction_type": "payment",
+      "unresolved_value_count": 0
+    },
+    {
+      "ambiguous_cross_type_match_count": 0,
+      "count": 94,
+      "deterministic_type_mapping_supported": true,
+      "distinct_unresolved_value_count": 0,
+      "exact_match_counts_by_operational_node_type": {
+        "APPROVAL_EVENT": 0,
+        "AUDIT_EVENT": 0,
+        "BANK_STATEMENT": 0,
+        "BANK_TRANSACTION": 0,
+        "EMPLOYEE": 0,
+        "GL_ENTRY": 0,
+        "INVOICE": 0,
+        "INVOICE_LINE": 0,
+        "PAYMENT": 94,
+        "PAYMENT_ALLOCATION": 0,
+        "PO_LINE": 0,
+        "PURCHASE_ORDER": 0,
+        "VENDOR": 0,
+        "VENDOR_CHANGE": 0
+      },
+      "non_null_source_transaction_id_count": 94,
+      "proposed_status": "READY_FOR_FREEZE",
+      "proposed_target_node_type": "PAYMENT",
+      "representative_ambiguous_examples": [],
+      "representative_unresolved_examples": [],
+      "resolved_type_distribution": {
+        "PAYMENT": 94
+      },
+      "source_transaction_id_prefix_distribution": {
+        "PAY_": 94
+      },
+      "transaction_type": "payment_reversal",
+      "unresolved_value_count": 0
+    }
+  ]
+}

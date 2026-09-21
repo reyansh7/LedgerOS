@@ -1,0 +1,35 @@
+{
+  "api_key_recorded": false,
+  "calls_attempted": 1,
+  "case_id": "RCA_000489",
+  "created_at_utc": "2026-08-09T07:12:55.468030+00:00",
+  "estimated_input_tokens": 10364,
+  "held_out_run": false,
+  "model_id": "gpt-5.6-sol",
+  "packet_characters": 26352,
+  "parsed_output": {
+    "case_id": "RCA_000489",
+    "confidence": 0.99,
+    "evidence_record_ids": [
+      "payments:PAY_0426089",
+      "audit_log:EVT_0447229"
+    ],
+    "is_anomaly": true,
+    "predicted_failure_type": "F05_PAYMENT_WITHOUT_VALID_INVOICE",
+    "reason": "PAY_0426089 is a completed USD 700.30 payment, while EVT_0447229 records its manual creation with a blank invoice_id; no valid payable allocation supports the released payment. Conclusion: payment without valid invoice.",
+    "status": "ANOMALY"
+  },
+  "preflight_run_id": "phase4_direct_llm_preflight_v1_0_20260809T063242Z",
+  "protocol_version": "direct_llm_single_request_diagnostic_v1.0",
+  "response_id": "resp_0d72579d22787ffb016a7828784904819b954d6bbafb9e8a3a",
+  "returned_model": "gpt-5.6-sol",
+  "success": true,
+  "usage": {
+    "cache_write_tokens": 9031,
+    "cached_input_tokens": 0,
+    "input_tokens": 9034,
+    "output_tokens": 202,
+    "reasoning_tokens": 73,
+    "total_tokens": 9236
+  }
+}

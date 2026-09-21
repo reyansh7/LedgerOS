@@ -1,0 +1,17 @@
+{
+  "anchor_technical_failure_case_count": 2,
+  "anchor_technical_failure_case_ids": [
+    "RCA_000902",
+    "RCA_000955"
+  ],
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 20260809,
+  "canonical_case_count": 439,
+  "created_at_utc": "2026-08-21T21:21:16.585196+00:00",
+  "evidence_evaluable_case_count": 437,
+  "graph_primary_predictions_sha256": "6c7be123c9f7891078a06b368b4aede3bbff55c1b1eafe0f8ef9405049d09f54",
+  "ground_truth_sha256": "60fad1341c8bdb1f41a934f0992aa1444025916c643ee05f0ec9231d0c912033",
+  "manual_review_used": false,
+  "standard_rag_predictions_sha256": "b2f3dfa8d9093bab5877f77aed05a706900ef32d2bb34740ac63488253f655a7",
+  "status": "COMPLETE"
+}

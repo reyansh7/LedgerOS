@@ -1,0 +1,84 @@
+{
+  "API_calls_made": false,
+  "LLM_used": false,
+  "artifact_type": "phase6a3_graph_v1_1_evaluator_freeze",
+  "artifact_version": "1.0",
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 20260809,
+  "components": {
+    "evaluator_core": {
+      "bytes": 14161,
+      "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/evaluate_one_shot.py",
+      "sha256": "80a58d398b0f76c6191ee319b5bdfdeff68a6aa7d302f5829cd8456c0229a4b9"
+    },
+    "evaluator_core_tests": {
+      "bytes": 7986,
+      "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/test_one_shot_evaluator.py",
+      "sha256": "352de3a9d7852178506ee5b77a8ae8346cb65a05d0199426de58e70d15dda8d5"
+    },
+    "metric_spec": {
+      "bytes": 18374,
+      "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/EVALUATION_METRIC_SPEC.md",
+      "sha256": "2862be9a1242178af029f0582a1777749ef476b80a7ccd8b114e58aafd6340c3"
+    },
+    "one_shot_runner": {
+      "bytes": 59332,
+      "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/run_one_shot_evaluation.py",
+      "sha256": "8095bbb2248748286b4fdd75caa2b1c742390d6ee6898cc5fb2b3a1e96a4780b"
+    },
+    "one_shot_runner_tests": {
+      "bytes": 9902,
+      "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/test_one_shot_runner.py",
+      "sha256": "cfa5dad1eefb07e1cfc17e72fc5b05268f35a2edba1bc0a6b3c9f56825e02e0d"
+    },
+    "preregistration": {
+      "bytes": 2393,
+      "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/evaluation_preregistration.json",
+      "sha256": "74b07ce84050ee9ac55c6f7397c81cfa0b08d507cd6f7d65a0604c11e7772991"
+    },
+    "rag_config_source": {
+      "bytes": 7024,
+      "path": "src/rag/config.py",
+      "sha256": "93b72a62ce484c0a7d5270723e104a7b1638f183a1996a524c16991337d2e383"
+    },
+    "rag_corpus_source": {
+      "bytes": 15152,
+      "path": "src/rag/corpus.py",
+      "sha256": "ca50fb2bc5d30894948eaab135f1b4b1ad1321b2ceb5b06b94c9443705281451"
+    },
+    "rag_evaluation_source": {
+      "bytes": 24834,
+      "path": "src/rag/evaluation.py",
+      "sha256": "6de22bdbfc4d0a3e0c6f582c2c5b060cfe2c97af49b37ca7ff674c6798ec5807"
+    },
+    "rag_evidence_source": {
+      "bytes": 2505,
+      "path": "src/rag/evidence.py",
+      "sha256": "8f35e9697f671905620d4f8221720ce9e4cd05d713c086981a07f81586614f94"
+    },
+    "rag_tokens_source": {
+      "bytes": 1556,
+      "path": "src/rag/tokens.py",
+      "sha256": "e1c039cded573159e89475ff05507c8e0bc0ea3aa911632c8ff22dc65b9e026d"
+    },
+    "synthetic_test_results": {
+      "bytes": 930,
+      "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/synthetic_test_results.json",
+      "sha256": "b44f04ea2b949efabca4e5d43b141e93337fb69e8a148dbb2a26ec052ade47a3"
+    }
+  },
+  "created_at_utc": "2026-08-21T05:50:54Z",
+  "heldout_gold_opened": false,
+  "next_authorized_action": "FINAL_GOLD_FREE_PREFLIGHT",
+  "python_executable": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+  "python_version": "3.11.3",
+  "retrieval_metrics_computed": false,
+  "retrieval_or_selection_modified": false,
+  "run_id": "phase6a3_graph_v1_1_retrieval_v1_2_20260816T034800Z",
+  "scipy_version": "1.11.3",
+  "status": "FROZEN_BEFORE_GOLD",
+  "synthetic_test_count": 19,
+  "synthetic_tests_passed": true,
+  "validation_gold_opened": false,
+  "validation_gold_semantic_content_used": false
+}

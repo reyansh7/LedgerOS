@@ -1,0 +1,57 @@
+{
+  "analysis_run_count": 2,
+  "artifact_type": "graphrag_phase6a2_determinism_validation",
+  "artifact_version": "1.1-draft",
+  "comparison_scope": "Canonical serialization excluding runtime metadata; no runtime metadata is persisted.",
+  "components": {
+    "candidate_path_set": {
+      "identical": true,
+      "run_1_sha256": "2e4d5067ed0fc8fc28b4746240255684fcf3c84b6a08f6e89fefece7a74734a4",
+      "run_2_sha256": "2e4d5067ed0fc8fc28b4746240255684fcf3c84b6a08f6e89fefece7a74734a4"
+    },
+    "cycle_outcomes": {
+      "identical": true,
+      "run_1_sha256": "f4853e36a5eb76e72fa7ebcf98c32187fa3d8b51c188126604a5acc6ec62f712",
+      "run_2_sha256": "f4853e36a5eb76e72fa7ebcf98c32187fa3d8b51c188126604a5acc6ec62f712"
+    },
+    "excluded_transition_set": {
+      "identical": true,
+      "run_1_sha256": "325474f18c34a7592b77463ba8a79bb41c955742889cb602dbfc4826ad1b445d",
+      "run_2_sha256": "325474f18c34a7592b77463ba8a79bb41c955742889cb602dbfc4826ad1b445d"
+    },
+    "fanout_statistics": {
+      "identical": true,
+      "run_1_sha256": "0e0e62c07d1bfd05f6f7bc20485157e9c0dbbbe82d28c2d131735d179fc0502d",
+      "run_2_sha256": "0e0e62c07d1bfd05f6f7bc20485157e9c0dbbbe82d28c2d131735d179fc0502d"
+    },
+    "prohibition_outcomes": {
+      "identical": true,
+      "run_1_sha256": "3fd698bc6ff532e0b8962f16370f43d8e14f9c1c8daff99019d0f19d686f39bf",
+      "run_2_sha256": "3fd698bc6ff532e0b8962f16370f43d8e14f9c1c8daff99019d0f19d686f39bf"
+    },
+    "structural_sequence_coverage": {
+      "identical": true,
+      "run_1_sha256": "7f349ae6a805066b3b954e33548af75e529b8a952f0ca62a7e614dd030dd4e47",
+      "run_2_sha256": "7f349ae6a805066b3b954e33548af75e529b8a952f0ca62a7e614dd030dd4e47"
+    },
+    "transition_ids": {
+      "identical": true,
+      "run_1_sha256": "5c2a98d356139a2a6c464ab6cba777f842b02104c40b3412c3a3ad813108130c",
+      "run_2_sha256": "5c2a98d356139a2a6c464ab6cba777f842b02104c40b3412c3a3ad813108130c"
+    },
+    "transition_set": {
+      "identical": true,
+      "run_1_sha256": "631f94c79c260a7b1f1d827c955777317901238216e22ea2beac48570c30d0b0",
+      "run_2_sha256": "631f94c79c260a7b1f1d827c955777317901238216e22ea2beac48570c30d0b0"
+    }
+  },
+  "determinism_status": "PASS",
+  "fanout_statistics_identical": true,
+  "path_sets_identical": true,
+  "prohibition_outcomes_identical": true,
+  "simulation_run_count": 2,
+  "status": "PROPOSAL_ONLY",
+  "structural_sequence_coverage_identical": true,
+  "transition_ids_identical": true,
+  "transition_sets_identical": true
+}

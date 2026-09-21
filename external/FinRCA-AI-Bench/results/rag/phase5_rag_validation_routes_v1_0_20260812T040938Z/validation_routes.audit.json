@@ -1,0 +1,30 @@
+{
+  "discarded_primary_entity_keys": [],
+  "discarded_question_keys": [
+    "difficulty",
+    "expected_answer",
+    "question",
+    "question_id",
+    "question_style",
+    "split"
+  ],
+  "opened_path_audit": {
+    "forbidden_named_paths": [],
+    "opened_paths": [
+      "/Users/pratik/Desktop/O1/finrecon/data/benchmark/validation/benchmark_questions.jsonl",
+      "/Users/pratik/Desktop/O1/finrecon/data/benchmark/validation/case_ids.txt"
+    ],
+    "purpose": "route_preparation",
+    "status": "PASS"
+  },
+  "output_path": "/Users/pratik/Desktop/O1/finrecon/results/rag/phase5_rag_validation_routes_v1_0_20260812T040938Z/validation_routes.jsonl",
+  "output_sha256": "08ceeaf3a7c569ca94a87b0c0830d0fb90784daac66dd959de3fee1561b94b44",
+  "permitted_output_keys": [
+    "case_id",
+    "primary_entity_type",
+    "primary_entity_id"
+  ],
+  "primary_runner_may_reopen_question_source": false,
+  "route_count": 416,
+  "status": "PASS"
+}

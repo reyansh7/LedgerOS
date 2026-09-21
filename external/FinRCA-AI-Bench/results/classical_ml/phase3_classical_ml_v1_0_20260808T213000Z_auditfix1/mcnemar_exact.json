@@ -1,0 +1,6 @@
+{
+  "discordant_pairs": 70,
+  "ml_only_correct": 58,
+  "rules_only_correct": 12,
+  "two_sided_exact_p_value": 2.2489162308892232e-08
+}

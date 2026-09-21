@@ -1,0 +1,670 @@
+{
+  "critical_chain_analysis": {
+    "INVOICE_TO_APPROVAL_EVENT": {
+      "global_distinct_start_node_count": 8000,
+      "global_graph_path_instance_count": 17429,
+      "globally_supported": true,
+      "node_type_sequence": [
+        "INVOICE",
+        "APPROVAL_EVENT"
+      ],
+      "required_traversal_sequence": [
+        "APPROVAL_FOR_INVOICE:reverse"
+      ],
+      "validation_anchor_path_instance_count": 339,
+      "validation_distinct_anchor_count": 152
+    },
+    "INVOICE_TO_PAYMENT_ALLOCATION_TO_PAYMENT": {
+      "global_distinct_start_node_count": 6000,
+      "global_graph_path_instance_count": 7180,
+      "globally_supported": true,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT_ALLOCATION",
+        "PAYMENT"
+      ],
+      "required_traversal_sequence": [
+        "ALLOCATION_TO_INVOICE:reverse",
+        "ALLOCATION_OF_PAYMENT:forward"
+      ],
+      "validation_anchor_path_instance_count": 88,
+      "validation_distinct_anchor_count": 56
+    },
+    "INVOICE_TO_PAYMENT_TO_GL_ENTRY": {
+      "global_distinct_start_node_count": 5995,
+      "global_graph_path_instance_count": 14468,
+      "globally_supported": true,
+      "node_type_sequence": [
+        "INVOICE",
+        "PAYMENT",
+        "GL_ENTRY"
+      ],
+      "required_traversal_sequence": [
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "GL_SOURCE_PAYMENT:reverse"
+      ],
+      "validation_anchor_path_instance_count": 176,
+      "validation_distinct_anchor_count": 56
+    },
+    "OPERATIONAL_ENTITY_TO_AUDIT_EVENT": {
+      "actor_hub_expansion_performed": false,
+      "global_distinct_start_node_count": 19347,
+      "global_graph_path_instance_count": 27894,
+      "validation_anchor_path_instance_count": 610,
+      "validation_by_operational_anchor_node_type": {
+        "BANK_TRANSACTION": 22,
+        "INVOICE": 344,
+        "PAYMENT": 244
+      },
+      "validation_distinct_anchor_count": 355
+    },
+    "PAYMENT_TO_GL_ENTRY": {
+      "global_distinct_start_node_count": 6195,
+      "global_graph_path_instance_count": 12484,
+      "globally_supported": true,
+      "node_type_sequence": [
+        "PAYMENT",
+        "GL_ENTRY"
+      ],
+      "required_traversal_sequence": [
+        "GL_SOURCE_PAYMENT:reverse"
+      ],
+      "validation_anchor_path_instance_count": 380,
+      "validation_distinct_anchor_count": 181
+    },
+    "PURCHASE_ORDER_TO_INVOICE": {
+      "global_distinct_start_node_count": 4960,
+      "global_graph_path_instance_count": 5024,
+      "globally_supported": true,
+      "node_type_sequence": [
+        "PURCHASE_ORDER",
+        "INVOICE"
+      ],
+      "required_traversal_sequence": [
+        "INVOICE_REFERENCES_PO:reverse"
+      ],
+      "validation_anchor_path_instance_count": 0,
+      "validation_distinct_anchor_count": 0
+    },
+    "PURCHASE_ORDER_TO_INVOICE_TO_PAYMENT": {
+      "global_distinct_start_node_count": 3721,
+      "global_graph_path_instance_count": 4434,
+      "globally_supported": true,
+      "node_type_sequence": [
+        "PURCHASE_ORDER",
+        "INVOICE",
+        "PAYMENT"
+      ],
+      "required_traversal_sequence": [
+        "INVOICE_REFERENCES_PO:reverse",
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse"
+      ],
+      "validation_anchor_path_instance_count": 0,
+      "validation_distinct_anchor_count": 0
+    },
+    "PURCHASE_ORDER_TO_INVOICE_TO_PAYMENT_TO_GL_ENTRY": {
+      "global_distinct_start_node_count": 3720,
+      "global_graph_path_instance_count": 8952,
+      "globally_supported": true,
+      "node_type_sequence": [
+        "PURCHASE_ORDER",
+        "INVOICE",
+        "PAYMENT",
+        "GL_ENTRY"
+      ],
+      "required_traversal_sequence": [
+        "INVOICE_REFERENCES_PO:reverse",
+        "PAYMENT_ALLOCATED_TO_INVOICE:reverse",
+        "GL_SOURCE_PAYMENT:reverse"
+      ],
+      "validation_anchor_path_instance_count": 0,
+      "validation_distinct_anchor_count": 0
+    }
+  },
+  "gl_source_gain_analysis": {
+    "depth_1": {
+      "anchors_gaining_gl_reachability_over_stored_direction": 353,
+      "anchors_with_safe_reverse_gl_reachability": 353
+    },
+    "depth_2": {
+      "anchors_gaining_gl_reachability_over_stored_direction": 233,
+      "anchors_with_safe_reverse_gl_reachability": 233
+    },
+    "depth_3": {
+      "anchors_gaining_gl_reachability_over_stored_direction": 250,
+      "anchors_with_safe_reverse_gl_reachability": 250
+    }
+  },
+  "resolved_anchor_record_count": 430,
+  "route_anchor_case_count": 416,
+  "secondary_required_document_recall": {
+    "stage": "SECONDARY_EVALUATION_AFTER_STRUCTURAL_ENUMERATION_FREEZE",
+    "validation_gold_used_for_path_generation": false,
+    "views": {
+      "SAFE_BIDIRECTIONAL_DIAGNOSTIC": {
+        "depth_le_1": {
+          "full_evidence_coverage": 0.15144230769230768,
+          "macro_required_document_recall": 0.6888200341325341,
+          "micro_required_document_recall": 0.6671641791044776,
+          "relevant_document_incidences": 1788,
+          "required_document_incidences": 2680
+        },
+        "depth_le_2": {
+          "full_evidence_coverage": 0.3245192307692308,
+          "macro_required_document_recall": 0.7750117937617937,
+          "micro_required_document_recall": 0.7563432835820896,
+          "relevant_document_incidences": 2027,
+          "required_document_incidences": 2680
+        },
+        "depth_le_3": {
+          "full_evidence_coverage": 0.36538461538461536,
+          "macro_required_document_recall": 0.7890742937617937,
+          "micro_required_document_recall": 0.7723880597014925,
+          "relevant_document_incidences": 2070,
+          "required_document_incidences": 2680
+        }
+      },
+      "STORED_DIRECTION_ONLY": {
+        "depth_le_1": {
+          "full_evidence_coverage": 0.0,
+          "macro_required_document_recall": 0.2289826492951493,
+          "micro_required_document_recall": 0.19701492537313434,
+          "relevant_document_incidences": 528,
+          "required_document_incidences": 2680
+        },
+        "depth_le_2": {
+          "full_evidence_coverage": 0.0,
+          "macro_required_document_recall": 0.2289826492951493,
+          "micro_required_document_recall": 0.19701492537313434,
+          "relevant_document_incidences": 528,
+          "required_document_incidences": 2680
+        },
+        "depth_le_3": {
+          "full_evidence_coverage": 0.0,
+          "macro_required_document_recall": 0.2289826492951493,
+          "micro_required_document_recall": 0.19701492537313434,
+          "relevant_document_incidences": 528,
+          "required_document_incidences": 2680
+        }
+      }
+    }
+  },
+  "views": {
+    "SAFE_BIDIRECTIONAL_DIAGNOSTIC": {
+      "by_anchor_type": {
+        "bank_transaction": {
+          "all_depths_1_to_3": {
+            "anchor_count": 26,
+            "anchors_with_at_least_one_path": 26,
+            "maximum_paths": 2,
+            "mean_paths": 1.1538461538461537,
+            "median_paths": 1.0,
+            "p90_paths_nearest_rank": 2,
+            "p95_paths_nearest_rank": 2,
+            "p99_paths_nearest_rank": 2,
+            "total_paths": 30
+          },
+          "case_count": 26,
+          "depth_1": {
+            "anchor_count": 26,
+            "anchors_with_at_least_one_path": 26,
+            "maximum_paths": 2,
+            "mean_paths": 1.1538461538461537,
+            "median_paths": 1.0,
+            "p90_paths_nearest_rank": 2,
+            "p95_paths_nearest_rank": 2,
+            "p99_paths_nearest_rank": 2,
+            "total_paths": 30
+          },
+          "depth_2": {
+            "anchor_count": 26,
+            "anchors_with_at_least_one_path": 0,
+            "maximum_paths": 0,
+            "mean_paths": 0.0,
+            "median_paths": 0.0,
+            "p90_paths_nearest_rank": 0,
+            "p95_paths_nearest_rank": 0,
+            "p99_paths_nearest_rank": 0,
+            "total_paths": 0
+          },
+          "depth_3": {
+            "anchor_count": 26,
+            "anchors_with_at_least_one_path": 0,
+            "maximum_paths": 0,
+            "mean_paths": 0.0,
+            "median_paths": 0.0,
+            "p90_paths_nearest_rank": 0,
+            "p95_paths_nearest_rank": 0,
+            "p99_paths_nearest_rank": 0,
+            "total_paths": 0
+          }
+        },
+        "gl_journal": {
+          "all_depths_1_to_3": {
+            "anchor_count": 14,
+            "anchors_with_at_least_one_path": 14,
+            "maximum_paths": 78,
+            "mean_paths": 46.42857142857143,
+            "median_paths": 39.0,
+            "p90_paths_nearest_rank": 76,
+            "p95_paths_nearest_rank": 78,
+            "p99_paths_nearest_rank": 78,
+            "total_paths": 650
+          },
+          "case_count": 14,
+          "depth_1": {
+            "anchor_count": 14,
+            "anchors_with_at_least_one_path": 14,
+            "maximum_paths": 2,
+            "mean_paths": 2.0,
+            "median_paths": 2.0,
+            "p90_paths_nearest_rank": 2,
+            "p95_paths_nearest_rank": 2,
+            "p99_paths_nearest_rank": 2,
+            "total_paths": 28
+          },
+          "depth_2": {
+            "anchor_count": 14,
+            "anchors_with_at_least_one_path": 14,
+            "maximum_paths": 12,
+            "mean_paths": 9.142857142857142,
+            "median_paths": 8.0,
+            "p90_paths_nearest_rank": 12,
+            "p95_paths_nearest_rank": 12,
+            "p99_paths_nearest_rank": 12,
+            "total_paths": 128
+          },
+          "depth_3": {
+            "anchor_count": 14,
+            "anchors_with_at_least_one_path": 14,
+            "maximum_paths": 64,
+            "mean_paths": 35.285714285714285,
+            "median_paths": 29.0,
+            "p90_paths_nearest_rank": 62,
+            "p95_paths_nearest_rank": 64,
+            "p99_paths_nearest_rank": 64,
+            "total_paths": 494
+          }
+        },
+        "invoice": {
+          "all_depths_1_to_3": {
+            "anchor_count": 195,
+            "anchors_with_at_least_one_path": 195,
+            "maximum_paths": 64,
+            "mean_paths": 25.087179487179487,
+            "median_paths": 24,
+            "p90_paths_nearest_rank": 45,
+            "p95_paths_nearest_rank": 51,
+            "p99_paths_nearest_rank": 57,
+            "total_paths": 4892
+          },
+          "case_count": 195,
+          "depth_1": {
+            "anchor_count": 195,
+            "anchors_with_at_least_one_path": 195,
+            "maximum_paths": 20,
+            "mean_paths": 11.292307692307693,
+            "median_paths": 13,
+            "p90_paths_nearest_rank": 16,
+            "p95_paths_nearest_rank": 17,
+            "p99_paths_nearest_rank": 20,
+            "total_paths": 2202
+          },
+          "depth_2": {
+            "anchor_count": 195,
+            "anchors_with_at_least_one_path": 163,
+            "maximum_paths": 21,
+            "mean_paths": 6.507692307692308,
+            "median_paths": 5,
+            "p90_paths_nearest_rank": 12,
+            "p95_paths_nearest_rank": 16,
+            "p99_paths_nearest_rank": 20,
+            "total_paths": 1269
+          },
+          "depth_3": {
+            "anchor_count": 195,
+            "anchors_with_at_least_one_path": 163,
+            "maximum_paths": 31,
+            "mean_paths": 7.287179487179487,
+            "median_paths": 6,
+            "p90_paths_nearest_rank": 20,
+            "p95_paths_nearest_rank": 24,
+            "p99_paths_nearest_rank": 31,
+            "total_paths": 1421
+          }
+        },
+        "payment": {
+          "all_depths_1_to_3": {
+            "anchor_count": 181,
+            "anchors_with_at_least_one_path": 181,
+            "maximum_paths": 91,
+            "mean_paths": 43.08839779005525,
+            "median_paths": 42,
+            "p90_paths_nearest_rank": 68,
+            "p95_paths_nearest_rank": 74,
+            "p99_paths_nearest_rank": 87,
+            "total_paths": 7799
+          },
+          "case_count": 181,
+          "depth_1": {
+            "anchor_count": 181,
+            "anchors_with_at_least_one_path": 181,
+            "maximum_paths": 9,
+            "mean_paths": 5.922651933701657,
+            "median_paths": 6,
+            "p90_paths_nearest_rank": 8,
+            "p95_paths_nearest_rank": 8,
+            "p99_paths_nearest_rank": 9,
+            "total_paths": 1072
+          },
+          "depth_2": {
+            "anchor_count": 181,
+            "anchors_with_at_least_one_path": 163,
+            "maximum_paths": 34,
+            "mean_paths": 17.016574585635357,
+            "median_paths": 15,
+            "p90_paths_nearest_rank": 28,
+            "p95_paths_nearest_rank": 30,
+            "p99_paths_nearest_rank": 34,
+            "total_paths": 3080
+          },
+          "depth_3": {
+            "anchor_count": 181,
+            "anchors_with_at_least_one_path": 163,
+            "maximum_paths": 48,
+            "mean_paths": 20.14917127071823,
+            "median_paths": 20,
+            "p90_paths_nearest_rank": 33,
+            "p95_paths_nearest_rank": 36,
+            "p99_paths_nearest_rank": 46,
+            "total_paths": 3647
+          }
+        }
+      },
+      "overall": {
+        "all_depths_1_to_3": {
+          "anchor_count": 416,
+          "anchors_with_at_least_one_path": 416,
+          "maximum_paths": 91,
+          "mean_paths": 32.14182692307692,
+          "median_paths": 31.0,
+          "p90_paths_nearest_rank": 62,
+          "p95_paths_nearest_rank": 68,
+          "p99_paths_nearest_rank": 78,
+          "total_paths": 13371
+        },
+        "depth_1": {
+          "anchor_count": 416,
+          "anchors_with_at_least_one_path": 416,
+          "maximum_paths": 20,
+          "mean_paths": 8.009615384615385,
+          "median_paths": 7.0,
+          "p90_paths_nearest_rank": 15,
+          "p95_paths_nearest_rank": 16,
+          "p99_paths_nearest_rank": 18,
+          "total_paths": 3332
+        },
+        "depth_2": {
+          "anchor_count": 416,
+          "anchors_with_at_least_one_path": 340,
+          "maximum_paths": 34,
+          "mean_paths": 10.76201923076923,
+          "median_paths": 10.0,
+          "p90_paths_nearest_rank": 26,
+          "p95_paths_nearest_rank": 28,
+          "p99_paths_nearest_rank": 32,
+          "total_paths": 4477
+        },
+        "depth_3": {
+          "anchor_count": 416,
+          "anchors_with_at_least_one_path": 340,
+          "maximum_paths": 64,
+          "mean_paths": 13.370192307692308,
+          "median_paths": 10.0,
+          "p90_paths_nearest_rank": 30,
+          "p95_paths_nearest_rank": 35,
+          "p99_paths_nearest_rank": 46,
+          "total_paths": 5562
+        }
+      }
+    },
+    "STORED_DIRECTION_ONLY": {
+      "by_anchor_type": {
+        "bank_transaction": {
+          "all_depths_1_to_3": {
+            "anchor_count": 26,
+            "anchors_with_at_least_one_path": 0,
+            "maximum_paths": 0,
+            "mean_paths": 0.0,
+            "median_paths": 0.0,
+            "p90_paths_nearest_rank": 0,
+            "p95_paths_nearest_rank": 0,
+            "p99_paths_nearest_rank": 0,
+            "total_paths": 0
+          },
+          "case_count": 26,
+          "depth_1": {
+            "anchor_count": 26,
+            "anchors_with_at_least_one_path": 0,
+            "maximum_paths": 0,
+            "mean_paths": 0.0,
+            "median_paths": 0.0,
+            "p90_paths_nearest_rank": 0,
+            "p95_paths_nearest_rank": 0,
+            "p99_paths_nearest_rank": 0,
+            "total_paths": 0
+          },
+          "depth_2": {
+            "anchor_count": 26,
+            "anchors_with_at_least_one_path": 0,
+            "maximum_paths": 0,
+            "mean_paths": 0.0,
+            "median_paths": 0.0,
+            "p90_paths_nearest_rank": 0,
+            "p95_paths_nearest_rank": 0,
+            "p99_paths_nearest_rank": 0,
+            "total_paths": 0
+          },
+          "depth_3": {
+            "anchor_count": 26,
+            "anchors_with_at_least_one_path": 0,
+            "maximum_paths": 0,
+            "mean_paths": 0.0,
+            "median_paths": 0.0,
+            "p90_paths_nearest_rank": 0,
+            "p95_paths_nearest_rank": 0,
+            "p99_paths_nearest_rank": 0,
+            "total_paths": 0
+          }
+        },
+        "gl_journal": {
+          "all_depths_1_to_3": {
+            "anchor_count": 14,
+            "anchors_with_at_least_one_path": 14,
+            "maximum_paths": 10,
+            "mean_paths": 6.0,
+            "median_paths": 6.0,
+            "p90_paths_nearest_rank": 8,
+            "p95_paths_nearest_rank": 10,
+            "p99_paths_nearest_rank": 10,
+            "total_paths": 84
+          },
+          "case_count": 14,
+          "depth_1": {
+            "anchor_count": 14,
+            "anchors_with_at_least_one_path": 14,
+            "maximum_paths": 2,
+            "mean_paths": 2.0,
+            "median_paths": 2.0,
+            "p90_paths_nearest_rank": 2,
+            "p95_paths_nearest_rank": 2,
+            "p99_paths_nearest_rank": 2,
+            "total_paths": 28
+          },
+          "depth_2": {
+            "anchor_count": 14,
+            "anchors_with_at_least_one_path": 14,
+            "maximum_paths": 4,
+            "mean_paths": 2.5714285714285716,
+            "median_paths": 2.0,
+            "p90_paths_nearest_rank": 4,
+            "p95_paths_nearest_rank": 4,
+            "p99_paths_nearest_rank": 4,
+            "total_paths": 36
+          },
+          "depth_3": {
+            "anchor_count": 14,
+            "anchors_with_at_least_one_path": 9,
+            "maximum_paths": 4,
+            "mean_paths": 1.4285714285714286,
+            "median_paths": 2.0,
+            "p90_paths_nearest_rank": 2,
+            "p95_paths_nearest_rank": 4,
+            "p99_paths_nearest_rank": 4,
+            "total_paths": 20
+          }
+        },
+        "invoice": {
+          "all_depths_1_to_3": {
+            "anchor_count": 195,
+            "anchors_with_at_least_one_path": 139,
+            "maximum_paths": 1,
+            "mean_paths": 0.7128205128205128,
+            "median_paths": 1,
+            "p90_paths_nearest_rank": 1,
+            "p95_paths_nearest_rank": 1,
+            "p99_paths_nearest_rank": 1,
+            "total_paths": 139
+          },
+          "case_count": 195,
+          "depth_1": {
+            "anchor_count": 195,
+            "anchors_with_at_least_one_path": 139,
+            "maximum_paths": 1,
+            "mean_paths": 0.7128205128205128,
+            "median_paths": 1,
+            "p90_paths_nearest_rank": 1,
+            "p95_paths_nearest_rank": 1,
+            "p99_paths_nearest_rank": 1,
+            "total_paths": 139
+          },
+          "depth_2": {
+            "anchor_count": 195,
+            "anchors_with_at_least_one_path": 0,
+            "maximum_paths": 0,
+            "mean_paths": 0.0,
+            "median_paths": 0,
+            "p90_paths_nearest_rank": 0,
+            "p95_paths_nearest_rank": 0,
+            "p99_paths_nearest_rank": 0,
+            "total_paths": 0
+          },
+          "depth_3": {
+            "anchor_count": 195,
+            "anchors_with_at_least_one_path": 0,
+            "maximum_paths": 0,
+            "mean_paths": 0.0,
+            "median_paths": 0,
+            "p90_paths_nearest_rank": 0,
+            "p95_paths_nearest_rank": 0,
+            "p99_paths_nearest_rank": 0,
+            "total_paths": 0
+          }
+        },
+        "payment": {
+          "all_depths_1_to_3": {
+            "anchor_count": 181,
+            "anchors_with_at_least_one_path": 163,
+            "maximum_paths": 4,
+            "mean_paths": 2.005524861878453,
+            "median_paths": 2,
+            "p90_paths_nearest_rank": 4,
+            "p95_paths_nearest_rank": 4,
+            "p99_paths_nearest_rank": 4,
+            "total_paths": 363
+          },
+          "case_count": 181,
+          "depth_1": {
+            "anchor_count": 181,
+            "anchors_with_at_least_one_path": 163,
+            "maximum_paths": 2,
+            "mean_paths": 1.2375690607734806,
+            "median_paths": 1,
+            "p90_paths_nearest_rank": 2,
+            "p95_paths_nearest_rank": 2,
+            "p99_paths_nearest_rank": 2,
+            "total_paths": 224
+          },
+          "depth_2": {
+            "anchor_count": 181,
+            "anchors_with_at_least_one_path": 115,
+            "maximum_paths": 2,
+            "mean_paths": 0.7679558011049724,
+            "median_paths": 1,
+            "p90_paths_nearest_rank": 2,
+            "p95_paths_nearest_rank": 2,
+            "p99_paths_nearest_rank": 2,
+            "total_paths": 139
+          },
+          "depth_3": {
+            "anchor_count": 181,
+            "anchors_with_at_least_one_path": 0,
+            "maximum_paths": 0,
+            "mean_paths": 0.0,
+            "median_paths": 0,
+            "p90_paths_nearest_rank": 0,
+            "p95_paths_nearest_rank": 0,
+            "p99_paths_nearest_rank": 0,
+            "total_paths": 0
+          }
+        }
+      },
+      "overall": {
+        "all_depths_1_to_3": {
+          "anchor_count": 416,
+          "anchors_with_at_least_one_path": 316,
+          "maximum_paths": 10,
+          "mean_paths": 1.4086538461538463,
+          "median_paths": 1.0,
+          "p90_paths_nearest_rank": 3,
+          "p95_paths_nearest_rank": 4,
+          "p99_paths_nearest_rank": 6,
+          "total_paths": 586
+        },
+        "depth_1": {
+          "anchor_count": 416,
+          "anchors_with_at_least_one_path": 316,
+          "maximum_paths": 2,
+          "mean_paths": 0.9399038461538461,
+          "median_paths": 1.0,
+          "p90_paths_nearest_rank": 2,
+          "p95_paths_nearest_rank": 2,
+          "p99_paths_nearest_rank": 2,
+          "total_paths": 391
+        },
+        "depth_2": {
+          "anchor_count": 416,
+          "anchors_with_at_least_one_path": 129,
+          "maximum_paths": 4,
+          "mean_paths": 0.4206730769230769,
+          "median_paths": 0.0,
+          "p90_paths_nearest_rank": 1,
+          "p95_paths_nearest_rank": 2,
+          "p99_paths_nearest_rank": 2,
+          "total_paths": 175
+        },
+        "depth_3": {
+          "anchor_count": 416,
+          "anchors_with_at_least_one_path": 9,
+          "maximum_paths": 4,
+          "mean_paths": 0.04807692307692308,
+          "median_paths": 0.0,
+          "p90_paths_nearest_rank": 0,
+          "p95_paths_nearest_rank": 0,
+          "p99_paths_nearest_rank": 2,
+          "total_paths": 20
+        }
+      }
+    }
+  }
+}

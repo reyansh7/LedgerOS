@@ -1,0 +1,21 @@
+{
+  "api_key_recorded": false,
+  "calls_attempted": 1,
+  "case_id": "RCA_000489",
+  "created_at_utc": "2026-08-09T07:11:25.243322+00:00",
+  "error_category": "BadRequestError:400",
+  "error_detail": {
+    "error_code": "unsupported_parameter",
+    "error_message": "Unsupported parameter: 'verbosity'. In the Responses API, this parameter has moved to 'text.verbosity'. Try again with the new parameter. See the API documentation for more information: https://platform.openai.com/docs/api-reference/responses/create.",
+    "error_type": "invalid_request_error",
+    "request_id": "req_4c950ae32fbd4a34820ca5a42de48d0c",
+    "status_code": 400
+  },
+  "estimated_input_tokens": 10364,
+  "held_out_run": false,
+  "model_id": "gpt-5.6-sol",
+  "packet_characters": 26352,
+  "preflight_run_id": "phase4_direct_llm_preflight_v1_0_20260809T063242Z",
+  "protocol_version": "direct_llm_single_request_diagnostic_v1.0",
+  "success": false
+}

@@ -1,0 +1,27 @@
+{
+  "hash_algorithm": "SHA-256",
+  "hash_scope": "raw bytes",
+  "sources": {
+    "run_phase6b_graph_llm_experiment.py": {
+      "bytes": 40085,
+      "sha256": "c368d4017097a17a5eb4f5f62a8b281c049ca878320d4e8ca48fa0fe6924035e"
+    },
+    "src/graphrag/v1_1/graph_reasoning.py": {
+      "bytes": 8419,
+      "sha256": "05165523936ee68ae4683745a032e7a47769e744f05630d08ec5c23249885ae1"
+    },
+    "src/graphrag/v1_1/llm_evaluation.py": {
+      "bytes": 23192,
+      "sha256": "334a0d0387e0b1c97bbf06f99e665bd2b5303dd5d3510939a399a743fe4aab1e"
+    },
+    "src/graphrag/v1_1/split_neutral_traversal.py": {
+      "bytes": 17922,
+      "sha256": "38b663aa2c392b17d3d1e1769b4faefc1eb747ae729cd85629b50a6d544ad971"
+    },
+    "tests/graphrag/test_phase6b_graph_llm_experiment.py": {
+      "bytes": 7426,
+      "sha256": "f9cc6aff86d23a0cb3a995cd7f65eb916579dc2734c18c333f392317289db24b"
+    }
+  },
+  "status": "PASS"
+}

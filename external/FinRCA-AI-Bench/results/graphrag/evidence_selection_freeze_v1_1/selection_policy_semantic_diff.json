@@ -1,0 +1,22 @@
+{
+  "allowed_metadata_only_fields": [
+    "artifact_version",
+    "version",
+    "status",
+    "freeze_created_at_utc",
+    "canonical_filename",
+    "parent_policy_draft",
+    "freeze_validation",
+    "gold_evaluated",
+    "llm_evaluated"
+  ],
+  "artifact_type": "graph_v1_1_evidence_selection_policy_semantic_diff",
+  "artifact_version": "1.1",
+  "created_at_utc": "2026-08-15T23:38:00Z",
+  "draft_policy_sha256": "db509ca1442b832b0c8b4bc401b8902cfec8f4fbd337a00f4ec12a62bf8cfcf8",
+  "draft_semantic_projection_sha256": "d0b9bb7af5a07b36f397da2813caded3a743cba0b9fa6485e7708b69c46a17b4",
+  "final_semantic_projection_sha256": "d0b9bb7af5a07b36f397da2813caded3a743cba0b9fa6485e7708b69c46a17b4",
+  "policy_changed_after_structural_simulation": false,
+  "semantic_policy_diff_count": 0,
+  "status": "PASS"
+}

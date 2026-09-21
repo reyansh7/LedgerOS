@@ -1,0 +1,141 @@
+{
+  "api_calls_made": false,
+  "code_scan": {
+    "explained_false_positives": [
+      {
+        "line": 16,
+        "path": "src/graphrag/anchor_resolver.py",
+        "pattern": "GL_JOURNAL",
+        "text": "\"gl_journal\": (\"GL_ENTRY\", \"journal_id\", \"EXACT_MULTI\"),"
+      },
+      {
+        "line": 46,
+        "path": "src/graphrag/config.py",
+        "pattern": "GL_JOURNAL",
+        "text": "\"synthetic_gl_journal_enabled\": False,"
+      },
+      {
+        "line": 319,
+        "path": "src/graphrag/graph_builder.py",
+        "pattern": "GL_JOURNAL",
+        "text": "\"synthetic_gl_journal_enabled\": False,"
+      },
+      {
+        "line": 168,
+        "path": "src/graphrag/runner.py",
+        "pattern": "failure_type",
+        "text": "\"failure_type\", \"F01_\", \"expected label\", \"oracle evidence\", \"held-out prediction\","
+      },
+      {
+        "line": 168,
+        "path": "src/graphrag/runner.py",
+        "pattern": "F01_",
+        "text": "\"failure_type\", \"F01_\", \"expected label\", \"oracle evidence\", \"held-out prediction\","
+      },
+      {
+        "line": 168,
+        "path": "src/graphrag/runner.py",
+        "pattern": "expected label",
+        "text": "\"failure_type\", \"F01_\", \"expected label\", \"oracle evidence\", \"held-out prediction\","
+      },
+      {
+        "line": 168,
+        "path": "src/graphrag/runner.py",
+        "pattern": "oracle evidence",
+        "text": "\"failure_type\", \"F01_\", \"expected label\", \"oracle evidence\", \"held-out prediction\","
+      },
+      {
+        "line": 168,
+        "path": "src/graphrag/runner.py",
+        "pattern": "held-out prediction",
+        "text": "\"failure_type\", \"F01_\", \"expected label\", \"oracle evidence\", \"held-out prediction\","
+      },
+      {
+        "line": 169,
+        "path": "src/graphrag/runner.py",
+        "pattern": "PAYMENT_CANDIDATE_BANK_TRANSACTION",
+        "text": "\"PAYMENT_CANDIDATE_BANK_TRANSACTION\", \"GL_JOURNAL\", \"OpenAI\", \"vector search\","
+      },
+      {
+        "line": 169,
+        "path": "src/graphrag/runner.py",
+        "pattern": "GL_JOURNAL",
+        "text": "\"PAYMENT_CANDIDATE_BANK_TRANSACTION\", \"GL_JOURNAL\", \"OpenAI\", \"vector search\","
+      },
+      {
+        "line": 169,
+        "path": "src/graphrag/runner.py",
+        "pattern": "OpenAI",
+        "text": "\"PAYMENT_CANDIDATE_BANK_TRANSACTION\", \"GL_JOURNAL\", \"OpenAI\", \"vector search\","
+      },
+      {
+        "line": 169,
+        "path": "src/graphrag/runner.py",
+        "pattern": "vector search",
+        "text": "\"PAYMENT_CANDIDATE_BANK_TRANSACTION\", \"GL_JOURNAL\", \"OpenAI\", \"vector search\","
+      },
+      {
+        "line": 182,
+        "path": "src/graphrag/runner.py",
+        "pattern": "failure_type",
+        "text": "(hit[\"path\"].endswith(\"runner.py\") and (\"patterns =\" in text or \"hit[\\\"pattern\\\"]\" in text or text.startswith('\"failure_type\"')))"
+      },
+      {
+        "line": 183,
+        "path": "src/graphrag/runner.py",
+        "pattern": "PAYMENT_CANDIDATE_BANK_TRANSACTION",
+        "text": "or (hit[\"path\"].endswith(\"runner.py\") and \"payment_candidate_bank_transaction\" in text)"
+      },
+      {
+        "line": 184,
+        "path": "src/graphrag/runner.py",
+        "pattern": "GL_JOURNAL",
+        "text": "or (hit[\"pattern\"] == \"GL_JOURNAL\" and (\"synthetic_gl_journal_enabled\" in text or '\"gl_journal\"' in text))"
+      },
+      {
+        "line": 185,
+        "path": "src/graphrag/runner.py",
+        "pattern": "OpenAI",
+        "text": "or (hit[\"pattern\"] == \"OpenAI\" and \"no generation\" in text)"
+      },
+      {
+        "line": 186,
+        "path": "src/graphrag/runner.py",
+        "pattern": "vector search",
+        "text": "or (hit[\"pattern\"] == \"vector search\" and \"no generation\" in text)"
+      },
+      {
+        "line": 572,
+        "path": "src/graphrag/runner.py",
+        "pattern": "GL_JOURNAL",
+        "text": "\"synthetic_gl_journal_enabled\": False,"
+      }
+    ],
+    "patterns": [
+      "failure_type",
+      "F01_",
+      "expected label",
+      "oracle evidence",
+      "held-out prediction",
+      "PAYMENT_CANDIDATE_BANK_TRANSACTION",
+      "GL_JOURNAL",
+      "OpenAI",
+      "vector search"
+    ],
+    "status": "PASS",
+    "tests_note": "Negative tests intentionally name prohibited features to assert rejection; tests are outside the implementation-code scan.",
+    "unexpected_hit_count": 0
+  },
+  "failure_labels_used_for_graph_logic": false,
+  "generation_performed": false,
+  "graph_registry_modified": false,
+  "heldout_gold_evidence_opened": false,
+  "heldout_labels_opened": false,
+  "new_embeddings_created": false,
+  "oracle_sources_opened": false,
+  "phase5_artifacts_modified": false,
+  "previous_predictions_used_for_graph_logic": false,
+  "status": "PASS",
+  "validation_gold_opened_by_separate_evaluator_after_retrieval_freeze": true,
+  "validation_gold_visible_to_retriever": false
+}

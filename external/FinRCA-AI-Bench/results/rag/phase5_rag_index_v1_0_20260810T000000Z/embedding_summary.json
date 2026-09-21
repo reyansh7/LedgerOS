@@ -1,0 +1,38 @@
+{
+  "c_contiguous": true,
+  "corpus_embedding_cost_usd": 0.41458292,
+  "dimensions": 1536,
+  "dtype": "<f4",
+  "embedding_api_latency_ms": 1768395.509769034,
+  "embedding_configuration": {
+    "backoff_seconds": [
+      1.0,
+      2.0,
+      4.0
+    ],
+    "corpus_batch_size": 128,
+    "dimensions": 1536,
+    "encoding_format": "float",
+    "endpoint": "v1/embeddings",
+    "max_attempts": 4,
+    "model_id": "text-embedding-3-small",
+    "pricing_reference_date": "2026-08-09",
+    "provider": "OpenAI",
+    "query_batch_size": 1,
+    "request_timeout_seconds": 120.0,
+    "usd_per_million_input_tokens": 0.02
+  },
+  "embedding_ledger_sha256": "83d9d5bc16029d61c16716ff6e4562c3b157411eaeb4dbb2736e35019bfca237",
+  "embedding_matrix_sha256": "128e3cd5c4215e9e1f6cdc664b838c1c3aef72b8eb0bc1191d19bf7bf763043a",
+  "embedding_model": "text-embedding-3-small",
+  "embedding_request_count": 1214,
+  "embedding_retry_count": 0,
+  "expected_batches": 1214,
+  "organization_ids_where_available": [],
+  "project_ids_where_available": [],
+  "returned_model_ids": [
+    "text-embedding-3-small"
+  ],
+  "total_embedding_tokens": 20729146,
+  "vector_count": 155391
+}

@@ -1,0 +1,27 @@
+{
+  "api_mocks_status": "PASS",
+  "blockers": [],
+  "context_status": "PASS",
+  "corpus_text_manifest_sha256": "8842865bd6e688f824a0b16450301fb547c62c4ba495099d605753ebaf2ff00d",
+  "decision": "PHASE 5B READY FOR HELD-OUT RAG RUN",
+  "embedding_matrix_sha256": "128e3cd5c4215e9e1f6cdc664b838c1c3aef72b8eb0bc1191d19bf7bf763043a",
+  "frozen_spec_sha256": "390a23c63989a1b7593d336bd96b51f171180729f1e66284688032a01243d715",
+  "index_manifest_sha256": "527b5980f1544dda5eab4581f8cb9c498e2a8e7633e4c061dd232b8cff05e3a6",
+  "label_isolation_status": "PASS",
+  "leakage_status": "PASS",
+  "model_id": "gpt-5.6-sol",
+  "no_graph_status": "PASS",
+  "phase5_tests_status": "PASS",
+  "prompt_sha256": "bca6d6d8366c6f95b07f83fc068ead359fc329793987b946a7f491f0ffd4d302",
+  "protocol_deviations": "NONE",
+  "query_builder_sha256": "947818f336668feb2e1ef26a45e062954dbf68f82cd4fb714d9678cc1627cffb",
+  "query_version": "standard_rag_query_v1.0",
+  "secret_status": "PASS",
+  "selected_k": 40,
+  "selection_sha256": "07365557a3d4bf04cbfcb4e1e834fad637ad04ab17585aba8cda156ece79c670",
+  "terminal_anchor_technical_failure_case_ids": [
+    "RCA_000902",
+    "RCA_000955"
+  ],
+  "terminal_anchor_technical_failure_count": 2
+}

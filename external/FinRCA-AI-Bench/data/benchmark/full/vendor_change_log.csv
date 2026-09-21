@@ -1,0 +1,7 @@
+change_id,vendor_id,field_changed,old_value,new_value,changed_at,changed_by,change_reason,source_system
+CHG_0420001,VND_042007,vendor_status,active,on_hold,2025-01-14T11:00:00,EMP_04223,Periodic vendor compliance review,VendorManagement
+CHG_0420002,VND_042023,bank_account_token,BA_TKN_042_0000023,BA_TKN_042_0000042,2025-02-12T11:00:00,EMP_04205,Vendor-verified banking update,VendorManagement
+CHG_0420003,VND_042024,vendor_status,active,on_hold,2025-02-05T11:00:00,EMP_04215,Periodic vendor compliance review,VendorManagement
+CHG_0420004,VND_042005,bank_account_token,BA_TKN_SUPERSEDED_0000004,BA_TKN_042_0000005,2025-12-01T14:00:00,EMP_04202,Vendor-verified banking update,VendorManagement
+CHG_0420005,VND_042001,bank_account_token,BA_TKN_SUPERSEDED_0000005,BA_TKN_042_0000001,2026-01-18T14:00:00,EMP_04202,Vendor-verified banking update,VendorManagement
+CHG_0420006,VND_042023,payment_terms,NET15,NET30,2025-09-10T11:00:00,EMP_04202,Contractual payment terms amendment,VendorManagement

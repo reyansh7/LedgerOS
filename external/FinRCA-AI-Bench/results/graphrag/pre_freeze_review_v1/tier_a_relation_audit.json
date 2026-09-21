@@ -1,0 +1,499 @@
+{
+  "audit_version": "tier_a_relation_audit_v1",
+  "degree_definition": "Target in-degree is calculated over the complete target-node domain, including zero-degree nodes; p95 is nearest-rank. Nonzero degree statistics are also retained.",
+  "relationships": [
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 11231,
+      "relation_key": "PO_LINE_TO_PURCHASE_ORDER",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 11231,
+      "source_field": "po_id",
+      "source_node_type": "PO_LINE",
+      "source_out_degree_all_domain": {
+        "domain_size": 11231,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "source_row_count": 11231,
+      "target_field": "po_id",
+      "target_in_degree_all_domain": {
+        "domain_size": 5000,
+        "maximum_degree": 4,
+        "mean_degree": 2.2462,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 4,
+        "zero_degree_count": 0
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 5000,
+        "maximum_degree": 4,
+        "mean_degree": 2.2462,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 4,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PURCHASE_ORDER",
+      "unique_target_count": 5000,
+      "unresolved_target_count": 0
+    },
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 5024,
+      "relation_key": "INVOICE_TO_PURCHASE_ORDER",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 5024,
+      "source_field": "po_id",
+      "source_node_type": "INVOICE",
+      "source_out_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 1,
+        "mean_degree": 0.616669,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 3123
+      },
+      "source_row_count": 8147,
+      "target_field": "po_id",
+      "target_in_degree_all_domain": {
+        "domain_size": 5000,
+        "maximum_degree": 2,
+        "mean_degree": 1.0048,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 40
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 4960,
+        "maximum_degree": 2,
+        "mean_degree": 1.012903,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PURCHASE_ORDER",
+      "unique_target_count": 4960,
+      "unresolved_target_count": 0
+    },
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 11292,
+      "relation_key": "INVOICE_LINE_TO_PO_LINE",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 11292,
+      "source_field": "po_line_id",
+      "source_node_type": "INVOICE_LINE",
+      "source_out_degree_all_domain": {
+        "domain_size": 18299,
+        "maximum_degree": 1,
+        "mean_degree": 0.617083,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 7007
+      },
+      "source_row_count": 18299,
+      "target_field": "po_line_id",
+      "target_in_degree_all_domain": {
+        "domain_size": 11231,
+        "maximum_degree": 2,
+        "mean_degree": 1.005431,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 95
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 11136,
+        "maximum_degree": 2,
+        "mean_degree": 1.014009,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PO_LINE",
+      "unique_target_count": 11136,
+      "unresolved_target_count": 0
+    },
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 18299,
+      "relation_key": "INVOICE_LINE_TO_INVOICE",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 18299,
+      "source_field": "invoice_id",
+      "source_node_type": "INVOICE_LINE",
+      "source_out_degree_all_domain": {
+        "domain_size": 18299,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "source_row_count": 18299,
+      "target_field": "invoice_id",
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 4,
+        "mean_degree": 2.246103,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 4,
+        "zero_degree_count": 0
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 8147,
+        "maximum_degree": 4,
+        "mean_degree": 2.246103,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 4,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE",
+      "unique_target_count": 8147,
+      "unresolved_target_count": 0
+    },
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 17429,
+      "relation_key": "APPROVAL_EVENT_TO_INVOICE",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 17429,
+      "source_field": "invoice_id",
+      "source_node_type": "APPROVAL_EVENT",
+      "source_out_degree_all_domain": {
+        "domain_size": 17429,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "source_row_count": 17429,
+      "target_field": "invoice_id",
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 4,
+        "mean_degree": 2.139315,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 3,
+        "zero_degree_count": 147
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 8000,
+        "maximum_degree": 4,
+        "mean_degree": 2.178625,
+        "median_degree": 2.0,
+        "p95_degree_nearest_rank": 3,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE",
+      "unique_target_count": 8000,
+      "unresolved_target_count": 0
+    },
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 7180,
+      "relation_key": "PAYMENT_ALLOCATION_TO_PAYMENT",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 7180,
+      "source_field": "payment_id",
+      "source_node_type": "PAYMENT_ALLOCATION",
+      "source_out_degree_all_domain": {
+        "domain_size": 7180,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "source_row_count": 7180,
+      "target_field": "payment_id",
+      "target_in_degree_all_domain": {
+        "domain_size": 6200,
+        "maximum_degree": 2,
+        "mean_degree": 1.158065,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 100
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 6100,
+        "maximum_degree": 2,
+        "mean_degree": 1.177049,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "PAYMENT",
+      "unique_target_count": 6100,
+      "unresolved_target_count": 0
+    },
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 7180,
+      "relation_key": "PAYMENT_ALLOCATION_TO_INVOICE",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 7180,
+      "source_field": "invoice_id",
+      "source_node_type": "PAYMENT_ALLOCATION",
+      "source_out_degree_all_domain": {
+        "domain_size": 7180,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "source_row_count": 7180,
+      "target_field": "invoice_id",
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 3,
+        "mean_degree": 0.881306,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 2147
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 6000,
+        "maximum_degree": 3,
+        "mean_degree": 1.196667,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE",
+      "unique_target_count": 6000,
+      "unresolved_target_count": 0
+    },
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 186,
+      "relation_key": "VENDOR_CHANGE_TO_VENDOR",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 186,
+      "source_field": "vendor_id",
+      "source_node_type": "VENDOR_CHANGE",
+      "source_out_degree_all_domain": {
+        "domain_size": 186,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "source_row_count": 186,
+      "target_field": "vendor_id",
+      "target_in_degree_all_domain": {
+        "domain_size": 500,
+        "maximum_degree": 6,
+        "mean_degree": 0.372,
+        "median_degree": 0.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 362
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 138,
+        "maximum_degree": 6,
+        "mean_degree": 1.347826,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 3,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "VENDOR",
+      "unique_target_count": 138,
+      "unresolved_target_count": 0
+    },
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 5000,
+      "relation_key": "PURCHASE_ORDER_TO_VENDOR",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 5000,
+      "source_field": "vendor_id",
+      "source_node_type": "PURCHASE_ORDER",
+      "source_out_degree_all_domain": {
+        "domain_size": 5000,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "source_row_count": 5000,
+      "target_field": "vendor_id",
+      "target_in_degree_all_domain": {
+        "domain_size": 500,
+        "maximum_degree": 362,
+        "mean_degree": 10,
+        "median_degree": 5.0,
+        "p95_degree_nearest_rank": 30,
+        "zero_degree_count": 28
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 472,
+        "maximum_degree": 362,
+        "mean_degree": 10.59322,
+        "median_degree": 5.0,
+        "p95_degree_nearest_rank": 31,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "VENDOR",
+      "unique_target_count": 472,
+      "unresolved_target_count": 0
+    },
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 8147,
+      "relation_key": "INVOICE_TO_VENDOR",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 8147,
+      "source_field": "vendor_id",
+      "source_node_type": "INVOICE",
+      "source_out_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "source_row_count": 8147,
+      "target_field": "vendor_id",
+      "target_in_degree_all_domain": {
+        "domain_size": 500,
+        "maximum_degree": 592,
+        "mean_degree": 16.294,
+        "median_degree": 8.0,
+        "p95_degree_nearest_rank": 48,
+        "zero_degree_count": 2
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 498,
+        "maximum_degree": 592,
+        "mean_degree": 16.359438,
+        "median_degree": 8.0,
+        "p95_degree_nearest_rank": 49,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "VENDOR",
+      "unique_target_count": 498,
+      "unresolved_target_count": 0
+    },
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "N:1 (many source nodes to one target node)",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 6200,
+      "relation_key": "PAYMENT_TO_VENDOR",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 6200,
+      "source_field": "vendor_id",
+      "source_node_type": "PAYMENT",
+      "source_out_degree_all_domain": {
+        "domain_size": 6200,
+        "maximum_degree": 1,
+        "mean_degree": 1,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 1,
+        "zero_degree_count": 0
+      },
+      "source_row_count": 6200,
+      "target_field": "vendor_id",
+      "target_in_degree_all_domain": {
+        "domain_size": 500,
+        "maximum_degree": 217,
+        "mean_degree": 12.4,
+        "median_degree": 8.0,
+        "p95_degree_nearest_rank": 37,
+        "zero_degree_count": 3
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 497,
+        "maximum_degree": 217,
+        "mean_degree": 12.474849,
+        "median_degree": 8.0,
+        "p95_degree_nearest_rank": 37,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "VENDOR",
+      "unique_target_count": 497,
+      "unresolved_target_count": 0
+    },
+    {
+      "ambiguous_target_count": 0,
+      "cardinality_observed": "M:N",
+      "examples_of_ambiguous_ids": [],
+      "examples_of_unresolved_ids": [],
+      "non_null_relationship_count": 7180,
+      "parallel_provenance_pair_count": 0,
+      "provenance_record_count": 7180,
+      "relation_key": "PAYMENT_TO_INVOICE_VIA_ALLOCATION",
+      "resolution_rate_percent_of_populated": 100.0,
+      "resolved_target_count": 7180,
+      "source_node_type": "PAYMENT",
+      "source_out_degree_all_domain": {
+        "domain_size": 6200,
+        "maximum_degree": 2,
+        "mean_degree": 1.158065,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 100
+      },
+      "source_row_count": 6200,
+      "target_in_degree_all_domain": {
+        "domain_size": 8147,
+        "maximum_degree": 3,
+        "mean_degree": 0.881306,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 2147
+      },
+      "target_in_degree_nonzero": {
+        "domain_size": 6000,
+        "maximum_degree": 3,
+        "mean_degree": 1.196667,
+        "median_degree": 1.0,
+        "p95_degree_nearest_rank": 2,
+        "zero_degree_count": 0
+      },
+      "target_node_type": "INVOICE",
+      "unique_source_target_pair_count": 7180,
+      "unique_target_count": 6000,
+      "unresolved_target_count": 0
+    }
+  ]
+}

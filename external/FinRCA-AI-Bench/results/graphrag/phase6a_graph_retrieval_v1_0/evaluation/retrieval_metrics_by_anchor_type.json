@@ -1,0 +1,1226 @@
+{
+  "bank_transaction": {
+    "anchor_rag": {
+      "K": 40,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 26,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1.0,
+        "included_case_count": 26,
+        "maximum_anchor_rank": 1,
+        "rate": 1.0
+      },
+      "average_record_count": 40.0,
+      "average_source_tokens": 6047.115384615385,
+      "case_count": 26,
+      "context_token_distribution": {
+        "max": 6053.0,
+        "median": 6050.0,
+        "p75": 6051.0,
+        "p90": 6052.5,
+        "p95": 6053.0,
+        "p99": 6053.0
+      },
+      "macro": {
+        "document_precision": 0.025,
+        "document_precision_ci": {
+          "lower_95": 0.025,
+          "upper_95": 0.025
+        },
+        "document_recall": 0.2980769230769231,
+        "document_recall_ci": {
+          "lower_95": 0.2724358974358974,
+          "upper_95": 0.3205128205128205
+        },
+        "evidence_id_recall": 0.3333333333333333,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 1.0,
+        "hit_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "irrelevant_record_count": 39.0,
+        "mrr": 1.0,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.3333333333333333,
+        "retrieval_set_size": 40.0,
+        "retrieved_context_tokens": 6047.115384615385,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 0.025,
+        "document_recall": 0.27956989247311825,
+        "relevant_documents": 26,
+        "required_documents": 93,
+        "retrieved_documents": 1040
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 0,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 0,
+          "greater_than_0_less_than_50_percent": 26
+        },
+        "mean": 0.2980769230769231,
+        "median": 0.3333333333333333,
+        "p25": 0.2708333333333333,
+        "p75": 0.3333333333333333
+      }
+    },
+    "graph_retrieval_v1_0": {
+      "K": 1,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 26,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1.0,
+        "included_case_count": 26,
+        "maximum_anchor_rank": 1,
+        "rate": 1.0
+      },
+      "average_record_count": 1.0,
+      "average_source_tokens": 148.3846153846154,
+      "case_count": 26,
+      "context_token_distribution": {
+        "max": 150.0,
+        "median": 149.0,
+        "p75": 150.0,
+        "p90": 150.0,
+        "p95": 150.0,
+        "p99": 150.0
+      },
+      "macro": {
+        "document_precision": 1.0,
+        "document_precision_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "document_recall": 0.2980769230769231,
+        "document_recall_ci": {
+          "lower_95": 0.2724358974358974,
+          "upper_95": 0.3205128205128205
+        },
+        "evidence_id_recall": 0.3333333333333333,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 1.0,
+        "hit_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "irrelevant_record_count": 0.0,
+        "mrr": 1.0,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.3333333333333333,
+        "retrieval_set_size": 1.0,
+        "retrieved_context_tokens": 148.3846153846154,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 1.0,
+        "document_recall": 0.27956989247311825,
+        "relevant_documents": 26,
+        "required_documents": 93,
+        "retrieved_documents": 26
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 0,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 0,
+          "greater_than_0_less_than_50_percent": 26
+        },
+        "mean": 0.2980769230769231,
+        "median": 0.3333333333333333,
+        "p25": 0.2708333333333333,
+        "p75": 0.3333333333333333
+      }
+    },
+    "relational_rag": {
+      "K": 2,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 26,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1.0,
+        "included_case_count": 26,
+        "maximum_anchor_rank": 1,
+        "rate": 1.0
+      },
+      "average_record_count": 2.1538461538461537,
+      "average_source_tokens": 282.6923076923077,
+      "case_count": 26,
+      "context_token_distribution": {
+        "max": 415.0,
+        "median": 260.0,
+        "p75": 260.0,
+        "p90": 413.5,
+        "p95": 415.0,
+        "p99": 415.0
+      },
+      "macro": {
+        "document_precision": 1.0,
+        "document_precision_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "document_recall": 0.6217948717948717,
+        "document_recall_ci": {
+          "lower_95": 0.5897435897435896,
+          "upper_95": 0.6474358974358974
+        },
+        "evidence_id_recall": 0.6666666666666666,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 1.0,
+        "hit_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "irrelevant_record_count": 0.0,
+        "mrr": 1.0,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.6666666666666666,
+        "retrieval_set_size": 2.1538461538461537,
+        "retrieved_context_tokens": 282.6923076923077,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 1.0,
+        "document_recall": 0.6021505376344086,
+        "relevant_documents": 56,
+        "required_documents": 93,
+        "retrieved_documents": 56
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 0,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 26,
+          "greater_than_0_less_than_50_percent": 0
+        },
+        "mean": 0.6217948717948717,
+        "median": 0.6666666666666666,
+        "p25": 0.5416666666666666,
+        "p75": 0.6666666666666666
+      }
+    },
+    "standard_dense_rag": {
+      "K": 40,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 26,
+        "first_anchor_rank_mean": null,
+        "first_anchor_rank_median": null,
+        "included_case_count": 0,
+        "maximum_anchor_rank": null,
+        "rate": 0.0
+      },
+      "average_record_count": 40.0,
+      "average_source_tokens": 6050.307692307692,
+      "case_count": 26,
+      "context_token_distribution": {
+        "max": 6058.0,
+        "median": 6051.0,
+        "p75": 6052.0,
+        "p90": 6055.5,
+        "p95": 6057.75,
+        "p99": 6058.0
+      },
+      "macro": {
+        "document_precision": 0.0,
+        "document_precision_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "document_recall": 0.0,
+        "document_recall_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "evidence_id_recall": 0.0,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 0.0,
+        "hit_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "irrelevant_record_count": 40.0,
+        "mrr": 0.0,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.0,
+        "retrieval_set_size": 40.0,
+        "retrieved_context_tokens": 6050.307692307692,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 0.0,
+        "document_recall": 0.0,
+        "relevant_documents": 0,
+        "required_documents": 93,
+        "retrieved_documents": 1040
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 26,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 0,
+          "greater_than_0_less_than_50_percent": 0
+        },
+        "mean": 0.0,
+        "median": 0.0,
+        "p25": 0.0,
+        "p75": 0.0
+      }
+    }
+  },
+  "gl_journal": {
+    "anchor_rag": {
+      "K": 40,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 14,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1.0,
+        "included_case_count": 14,
+        "maximum_anchor_rank": 2,
+        "rate": 1.0
+      },
+      "average_record_count": 40.0,
+      "average_source_tokens": 5642.571428571428,
+      "case_count": 14,
+      "context_token_distribution": {
+        "max": 5644.0,
+        "median": 5643.0,
+        "p75": 5643.75,
+        "p90": 5644.0,
+        "p95": 5644.0,
+        "p99": 5644.0
+      },
+      "macro": {
+        "document_precision": 0.05,
+        "document_precision_ci": {
+          "lower_95": 0.05,
+          "upper_95": 0.05
+        },
+        "document_recall": 0.4,
+        "document_recall_ci": {
+          "lower_95": 0.4,
+          "upper_95": 0.4
+        },
+        "evidence_id_recall": 0.6666666666666666,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 1.0,
+        "hit_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "irrelevant_record_count": 38.0,
+        "mrr": 1.0,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.3333333333333333,
+        "retrieval_set_size": 40.0,
+        "retrieved_context_tokens": 5642.571428571428,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 0.05,
+        "document_recall": 0.4,
+        "relevant_documents": 28,
+        "required_documents": 70,
+        "retrieved_documents": 560
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 0,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 0,
+          "greater_than_0_less_than_50_percent": 14
+        },
+        "mean": 0.4,
+        "median": 0.4,
+        "p25": 0.4,
+        "p75": 0.4
+      }
+    },
+    "graph_retrieval_v1_0": {
+      "K": 3,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 14,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1.0,
+        "included_case_count": 14,
+        "maximum_anchor_rank": 2,
+        "rate": 1.0
+      },
+      "average_record_count": 3.0,
+      "average_source_tokens": 407.2857142857143,
+      "case_count": 14,
+      "context_token_distribution": {
+        "max": 408.0,
+        "median": 407.0,
+        "p75": 408.0,
+        "p90": 408.0,
+        "p95": 408.0,
+        "p99": 408.0
+      },
+      "macro": {
+        "document_precision": 1.0,
+        "document_precision_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "document_recall": 0.6,
+        "document_recall_ci": {
+          "lower_95": 0.6,
+          "upper_95": 0.6
+        },
+        "evidence_id_recall": 0.6666666666666666,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 1.0,
+        "hit_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "irrelevant_record_count": 0.0,
+        "mrr": 1.0,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.6666666666666666,
+        "retrieval_set_size": 3.0,
+        "retrieved_context_tokens": 407.2857142857143,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 1.0,
+        "document_recall": 0.6,
+        "relevant_documents": 42,
+        "required_documents": 70,
+        "retrieved_documents": 42
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 0,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 14,
+          "greater_than_0_less_than_50_percent": 0
+        },
+        "mean": 0.6,
+        "median": 0.6,
+        "p25": 0.6,
+        "p75": 0.6
+      }
+    },
+    "relational_rag": {
+      "K": 3,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 14,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1.0,
+        "included_case_count": 14,
+        "maximum_anchor_rank": 2,
+        "rate": 1.0
+      },
+      "average_record_count": 3.0,
+      "average_source_tokens": 407.2857142857143,
+      "case_count": 14,
+      "context_token_distribution": {
+        "max": 408.0,
+        "median": 407.0,
+        "p75": 408.0,
+        "p90": 408.0,
+        "p95": 408.0,
+        "p99": 408.0
+      },
+      "macro": {
+        "document_precision": 1.0,
+        "document_precision_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "document_recall": 0.6,
+        "document_recall_ci": {
+          "lower_95": 0.6,
+          "upper_95": 0.6
+        },
+        "evidence_id_recall": 0.6666666666666666,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 1.0,
+        "hit_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "irrelevant_record_count": 0.0,
+        "mrr": 1.0,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.6666666666666666,
+        "retrieval_set_size": 3.0,
+        "retrieved_context_tokens": 407.2857142857143,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 1.0,
+        "document_recall": 0.6,
+        "relevant_documents": 42,
+        "required_documents": 70,
+        "retrieved_documents": 42
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 0,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 14,
+          "greater_than_0_less_than_50_percent": 0
+        },
+        "mean": 0.6,
+        "median": 0.6,
+        "p25": 0.6,
+        "p75": 0.6
+      }
+    },
+    "standard_dense_rag": {
+      "K": 40,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 14,
+        "first_anchor_rank_mean": null,
+        "first_anchor_rank_median": null,
+        "included_case_count": 0,
+        "maximum_anchor_rank": null,
+        "rate": 0.0
+      },
+      "average_record_count": 40.0,
+      "average_source_tokens": 5653.571428571428,
+      "case_count": 14,
+      "context_token_distribution": {
+        "max": 5655.0,
+        "median": 5655.0,
+        "p75": 5655.0,
+        "p90": 5655.0,
+        "p95": 5655.0,
+        "p99": 5655.0
+      },
+      "macro": {
+        "document_precision": 0.0,
+        "document_precision_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "document_recall": 0.0,
+        "document_recall_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "evidence_id_recall": 0.0,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 0.0,
+        "hit_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "irrelevant_record_count": 40.0,
+        "mrr": 0.0,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.0,
+        "retrieval_set_size": 40.0,
+        "retrieved_context_tokens": 5653.571428571428,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 0.0,
+        "document_recall": 0.0,
+        "relevant_documents": 0,
+        "required_documents": 70,
+        "retrieved_documents": 560
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 14,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 0,
+          "greater_than_0_less_than_50_percent": 0
+        },
+        "mean": 0.0,
+        "median": 0.0,
+        "p25": 0.0,
+        "p75": 0.0
+      }
+    }
+  },
+  "invoice": {
+    "anchor_rag": {
+      "K": 40,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 195,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1,
+        "included_case_count": 195,
+        "maximum_anchor_rank": 1,
+        "rate": 1.0
+      },
+      "average_record_count": 40.0,
+      "average_source_tokens": 6011.579487179487,
+      "case_count": 195,
+      "context_token_distribution": {
+        "max": 6055.0,
+        "median": 6010.0,
+        "p75": 6014.0,
+        "p90": 6020.6,
+        "p95": 6048.9,
+        "p99": 6053.06
+      },
+      "macro": {
+        "document_precision": 0.022564102564102566,
+        "document_precision_ci": {
+          "lower_95": 0.021282051282051285,
+          "upper_95": 0.023846153846153847
+        },
+        "document_recall": 0.13022940022940022,
+        "document_recall_ci": {
+          "lower_95": 0.11998494098494099,
+          "upper_95": 0.14035927035927034
+        },
+        "evidence_id_recall": 0.2733333333333333,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 0.8769230769230769,
+        "hit_ci": {
+          "lower_95": 0.8307692307692308,
+          "upper_95": 0.9230769230769231
+        },
+        "irrelevant_record_count": 39.0974358974359,
+        "mrr": 0.8769230769230769,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.2678632478632479,
+        "retrieval_set_size": 40.0,
+        "retrieved_context_tokens": 6011.579487179487,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 0.022564102564102566,
+        "document_recall": 0.12179930795847752,
+        "relevant_documents": 176,
+        "required_documents": 1445,
+        "retrieved_documents": 7800
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 24,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 0,
+          "greater_than_0_less_than_50_percent": 171
+        },
+        "mean": 0.13022940022940022,
+        "median": 0.125,
+        "p25": 0.1,
+        "p75": 0.16666666666666666
+      }
+    },
+    "graph_retrieval_v1_0": {
+      "K": 1,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 195,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1,
+        "included_case_count": 195,
+        "maximum_anchor_rank": 1,
+        "rate": 1.0
+      },
+      "average_record_count": 4.953846153846154,
+      "average_source_tokens": 609.6,
+      "case_count": 195,
+      "context_token_distribution": {
+        "max": 1003.0,
+        "median": 708.0,
+        "p75": 741.0,
+        "p90": 868.0,
+        "p95": 996.1999999999999,
+        "p99": 1001.06
+      },
+      "macro": {
+        "document_precision": 0.4923443223443223,
+        "document_precision_ci": {
+          "lower_95": 0.4446578144078144,
+          "upper_95": 0.5404401709401709
+        },
+        "document_recall": 0.26566544566544564,
+        "document_recall_ci": {
+          "lower_95": 0.23687968975468976,
+          "upper_95": 0.29532244144744146
+        },
+        "evidence_id_recall": 0.39863247863247864,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 0.8769230769230769,
+        "hit_ci": {
+          "lower_95": 0.8307692307692308,
+          "upper_95": 0.9230769230769231
+        },
+        "irrelevant_record_count": 3.0205128205128204,
+        "mrr": 0.8769230769230769,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.38700854700854703,
+        "retrieval_set_size": 4.953846153846154,
+        "retrieved_context_tokens": 609.6,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 0.39026915113871635,
+        "document_recall": 0.26089965397923875,
+        "relevant_documents": 377,
+        "required_documents": 1445,
+        "retrieved_documents": 966
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 24,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 35,
+          "greater_than_0_less_than_50_percent": 136
+        },
+        "mean": 0.26566544566544564,
+        "median": 0.2,
+        "p25": 0.11805555555555555,
+        "p75": 0.42857142857142855
+      }
+    },
+    "relational_rag": {
+      "K": 6,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 195,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1,
+        "included_case_count": 195,
+        "maximum_anchor_rank": 1,
+        "rate": 1.0
+      },
+      "average_record_count": 12.292307692307693,
+      "average_source_tokens": 1526.9333333333334,
+      "case_count": 195,
+      "context_token_distribution": {
+        "max": 2570.0,
+        "median": 1668.0,
+        "p75": 1910.5,
+        "p90": 2137.7999999999997,
+        "p95": 2237.7999999999993,
+        "p99": 2545.18
+      },
+      "macro": {
+        "document_precision": 0.4767231212861125,
+        "document_precision_ci": {
+          "lower_95": 0.4401152145834064,
+          "upper_95": 0.5138362481276717
+        },
+        "document_recall": 0.6748619898619899,
+        "document_recall_ci": {
+          "lower_95": 0.6526559274059274,
+          "upper_95": 0.6972392792392793
+        },
+        "evidence_id_recall": 0.7396581196581196,
+        "full_evidence_coverage": 0.10256410256410256,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.06153846153846154,
+          "upper_95": 0.14871794871794872
+        },
+        "hit": 1.0,
+        "hit_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "irrelevant_record_count": 7.317948717948718,
+        "mrr": 0.9179487179487179,
+        "observable_contract_satisfied": 0.10256410256410256,
+        "observable_table_coverage": 0.7945299145299145,
+        "retrieval_set_size": 12.292307692307693,
+        "retrieved_context_tokens": 1526.9333333333334,
+        "strict_full_contract_coverage": 0.05128205128205128,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.020512820512820513,
+          "upper_95": 0.08205128205128205
+        }
+      },
+      "micro": {
+        "document_precision": 0.4046725073007927,
+        "document_recall": 0.671280276816609,
+        "relevant_documents": 970,
+        "required_documents": 1445,
+        "retrieved_documents": 2397
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 0,
+          "100_percent": 20,
+          "at_least_50_less_than_100_percent": 171,
+          "greater_than_0_less_than_50_percent": 4
+        },
+        "mean": 0.6748619898619899,
+        "median": 0.6666666666666666,
+        "p25": 0.5,
+        "p75": 0.75
+      }
+    },
+    "standard_dense_rag": {
+      "K": 40,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 195,
+        "first_anchor_rank_mean": 11.5,
+        "first_anchor_rank_median": 11.5,
+        "included_case_count": 16,
+        "maximum_anchor_rank": 36,
+        "rate": 0.08205128205128205
+      },
+      "average_record_count": 40.0,
+      "average_source_tokens": 6012.733333333334,
+      "case_count": 195,
+      "context_token_distribution": {
+        "max": 6053.0,
+        "median": 6010.0,
+        "p75": 6017.0,
+        "p90": 6023.2,
+        "p95": 6048.0,
+        "p99": 6052.0
+      },
+      "macro": {
+        "document_precision": 0.002564102564102564,
+        "document_precision_ci": {
+          "lower_95": 0.0014102564102564104,
+          "upper_95": 0.0038461538461538464
+        },
+        "document_recall": 0.010611795611795613,
+        "document_recall_ci": {
+          "lower_95": 0.0055129592629592624,
+          "upper_95": 0.016963698338698333
+        },
+        "evidence_id_recall": 0.027008547008547008,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 0.08717948717948718,
+        "hit_ci": {
+          "lower_95": 0.05128205128205128,
+          "upper_95": 0.1282051282051282
+        },
+        "irrelevant_record_count": 39.8974358974359,
+        "mrr": 0.025874773374773372,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.029914529914529912,
+        "retrieval_set_size": 40.0,
+        "retrieved_context_tokens": 6012.733333333334,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 0.002564102564102564,
+        "document_recall": 0.01384083044982699,
+        "relevant_documents": 20,
+        "required_documents": 1445,
+        "retrieved_documents": 7800
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 178,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 0,
+          "greater_than_0_less_than_50_percent": 17
+        },
+        "mean": 0.010611795611795613,
+        "median": 0.0,
+        "p25": 0.0,
+        "p75": 0.0
+      }
+    }
+  },
+  "payment": {
+    "anchor_rag": {
+      "K": 40,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 181,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1,
+        "included_case_count": 181,
+        "maximum_anchor_rank": 1,
+        "rate": 1.0
+      },
+      "average_record_count": 40.0,
+      "average_source_tokens": 5051.85635359116,
+      "case_count": 181,
+      "context_token_distribution": {
+        "max": 5231.0,
+        "median": 5060.0,
+        "p75": 5098.0,
+        "p90": 5163.0,
+        "p95": 5194.0,
+        "p99": 5231.0
+      },
+      "macro": {
+        "document_precision": 0.025690607734806633,
+        "document_precision_ci": {
+          "lower_95": 0.025138121546961326,
+          "upper_95": 0.02638121546961326
+        },
+        "document_recall": 0.21410195084228234,
+        "document_recall_ci": {
+          "lower_95": 0.19759971458866485,
+          "upper_95": 0.23163783155150555
+        },
+        "evidence_id_recall": 0.36003683241252304,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 1.0,
+        "hit_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "irrelevant_record_count": 38.972375690607734,
+        "mrr": 1.0,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.3165745856353591,
+        "retrieval_set_size": 40.0,
+        "retrieved_context_tokens": 5051.85635359116,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 0.02569060773480663,
+        "document_recall": 0.17350746268656717,
+        "relevant_documents": 186,
+        "required_documents": 1072,
+        "retrieved_documents": 7240
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 0,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 19,
+          "greater_than_0_less_than_50_percent": 162
+        },
+        "mean": 0.21410195084228234,
+        "median": 0.16666666666666666,
+        "p25": 0.125,
+        "p75": 0.2
+      }
+    },
+    "graph_retrieval_v1_0": {
+      "K": 3,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 181,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1,
+        "included_case_count": 181,
+        "maximum_anchor_rank": 1,
+        "rate": 1.0
+      },
+      "average_record_count": 3.0994475138121547,
+      "average_source_tokens": 421.56906077348066,
+      "case_count": 181,
+      "context_token_distribution": {
+        "max": 694.0,
+        "median": 407.0,
+        "p75": 408.0,
+        "p90": 409.0,
+        "p95": 411.0,
+        "p99": 692.4
+      },
+      "macro": {
+        "document_precision": 0.70902394106814,
+        "document_precision_ci": {
+          "lower_95": 0.6611418047882136,
+          "upper_95": 0.7569060773480663
+        },
+        "document_recall": 0.453632616616042,
+        "document_recall_ci": {
+          "lower_95": 0.41369034165650187,
+          "upper_95": 0.4943713576172139
+        },
+        "evidence_id_recall": 0.44429097605893186,
+        "full_evidence_coverage": 0.11602209944751381,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0718232044198895,
+          "upper_95": 0.16574585635359115
+        },
+        "hit": 1.0,
+        "hit_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "irrelevant_record_count": 0.8729281767955801,
+        "mrr": 1.0,
+        "observable_contract_satisfied": 0.11602209944751381,
+        "observable_table_coverage": 0.49198895027624306,
+        "retrieval_set_size": 3.0994475138121547,
+        "retrieved_context_tokens": 421.56906077348066,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 0.7183600713012478,
+        "document_recall": 0.37593283582089554,
+        "relevant_documents": 403,
+        "required_documents": 1072,
+        "retrieved_documents": 561
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 0,
+          "100_percent": 21,
+          "at_least_50_less_than_100_percent": 91,
+          "greater_than_0_less_than_50_percent": 69
+        },
+        "mean": 0.453632616616042,
+        "median": 0.5,
+        "p25": 0.16666666666666666,
+        "p75": 0.6
+      }
+    },
+    "relational_rag": {
+      "K": 4,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 181,
+        "first_anchor_rank_mean": 1.0,
+        "first_anchor_rank_median": 1,
+        "included_case_count": 181,
+        "maximum_anchor_rank": 1,
+        "rate": 1.0
+      },
+      "average_record_count": 6.922651933701657,
+      "average_source_tokens": 833.1546961325967,
+      "case_count": 181,
+      "context_token_distribution": {
+        "max": 1240.0,
+        "median": 840.0,
+        "p75": 951.0,
+        "p90": 1058.0,
+        "p95": 1062.0,
+        "p99": 1240.0
+      },
+      "macro": {
+        "document_precision": 0.5871525037270894,
+        "document_precision_ci": {
+          "lower_95": 0.557240583618346,
+          "upper_95": 0.6174120845391564
+        },
+        "document_recall": 0.7203556878971243,
+        "document_recall_ci": {
+          "lower_95": 0.687804978554288,
+          "upper_95": 0.7526793437532387
+        },
+        "evidence_id_recall": 0.6470534069981584,
+        "full_evidence_coverage": 0.23756906077348067,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.17679558011049723,
+          "upper_95": 0.30386740331491713
+        },
+        "hit": 1.0,
+        "hit_ci": {
+          "lower_95": 1.0,
+          "upper_95": 1.0
+        },
+        "irrelevant_record_count": 2.9447513812154695,
+        "mrr": 1.0,
+        "observable_contract_satisfied": 0.23756906077348067,
+        "observable_table_coverage": 0.7678637200736648,
+        "retrieval_set_size": 6.922651933701657,
+        "retrieved_context_tokens": 833.1546961325967,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 0.5746209098164405,
+        "document_recall": 0.6716417910447762,
+        "relevant_documents": 720,
+        "required_documents": 1072,
+        "retrieved_documents": 1253
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 0,
+          "100_percent": 43,
+          "at_least_50_less_than_100_percent": 119,
+          "greater_than_0_less_than_50_percent": 19
+        },
+        "mean": 0.7203556878971243,
+        "median": 0.8,
+        "p25": 0.5,
+        "p75": 0.8333333333333334
+      }
+    },
+    "standard_dense_rag": {
+      "K": 40,
+      "K_cap": 40,
+      "anchor_inclusion": {
+        "eligible_case_count": 181,
+        "first_anchor_rank_mean": 11.0,
+        "first_anchor_rank_median": 4.0,
+        "included_case_count": 14,
+        "maximum_anchor_rank": 40,
+        "rate": 0.07734806629834254
+      },
+      "average_record_count": 40.0,
+      "average_source_tokens": 5045.270718232045,
+      "case_count": 181,
+      "context_token_distribution": {
+        "max": 5231.0,
+        "median": 5056.0,
+        "p75": 5088.0,
+        "p90": 5165.0,
+        "p95": 5193.0,
+        "p99": 5231.0
+      },
+      "macro": {
+        "document_precision": 0.0027624309392265192,
+        "document_precision_ci": {
+          "lower_95": 0.0016574585635359118,
+          "upper_95": 0.0038674033149171273
+        },
+        "document_recall": 0.017509347619844857,
+        "document_recall_ci": {
+          "lower_95": 0.00914514621351638,
+          "upper_95": 0.027484792678162846
+        },
+        "evidence_id_recall": 0.040515653775322284,
+        "full_evidence_coverage": 0.0,
+        "full_evidence_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        },
+        "hit": 0.11049723756906077,
+        "hit_ci": {
+          "lower_95": 0.06629834254143646,
+          "upper_95": 0.15469613259668508
+        },
+        "irrelevant_record_count": 39.889502762430936,
+        "mrr": 0.02318370277705082,
+        "observable_contract_satisfied": 0.0,
+        "observable_table_coverage": 0.029834254143646412,
+        "retrieval_set_size": 40.0,
+        "retrieved_context_tokens": 5045.270718232045,
+        "strict_full_contract_coverage": 0.0,
+        "strict_full_contract_coverage_ci": {
+          "lower_95": 0.0,
+          "upper_95": 0.0
+        }
+      },
+      "micro": {
+        "document_precision": 0.0027624309392265192,
+        "document_recall": 0.018656716417910446,
+        "relevant_documents": 20,
+        "required_documents": 1072,
+        "retrieved_documents": 7240
+      },
+      "required_evidence_coverage_distribution": {
+        "buckets": {
+          "0_percent": 161,
+          "100_percent": 0,
+          "at_least_50_less_than_100_percent": 2,
+          "greater_than_0_less_than_50_percent": 18
+        },
+        "mean": 0.017509347619844857,
+        "median": 0.0,
+        "p25": 0.0,
+        "p75": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "by_anchor_type": {
+    "bank_transaction": {
+      "anchor_case_count": 26,
+      "anchors_with_applicable_motif": 0,
+      "anchors_with_complete_motif_path": 0,
+      "anchors_with_first_hop_success": 0,
+      "anchors_with_second_hop_success": 0,
+      "anchors_with_third_hop_success": 0
+    },
+    "gl_journal": {
+      "anchor_case_count": 14,
+      "anchors_with_applicable_motif": 14,
+      "anchors_with_complete_motif_path": 14,
+      "anchors_with_first_hop_success": 14,
+      "anchors_with_second_hop_success": 0,
+      "anchors_with_third_hop_success": 0
+    },
+    "invoice": {
+      "anchor_case_count": 195,
+      "anchors_with_applicable_motif": 195,
+      "anchors_with_complete_motif_path": 152,
+      "anchors_with_first_hop_success": 152,
+      "anchors_with_second_hop_success": 0,
+      "anchors_with_third_hop_success": 0
+    },
+    "payment": {
+      "anchor_case_count": 181,
+      "anchors_with_applicable_motif": 181,
+      "anchors_with_complete_motif_path": 181,
+      "anchors_with_first_hop_success": 181,
+      "anchors_with_second_hop_success": 0,
+      "anchors_with_third_hop_success": 0
+    }
+  },
+  "design_depth_limits": {
+    "frozen_motif_count": 8,
+    "one_hop_motif_count": 7,
+    "three_hop_motif_count": 0,
+    "two_hop_motif_count": 1
+  },
+  "motif_attempt_funnel": {
+    "attempt_zero_path_reasons": {
+      "EDGE_NOT_PRESENT": 225,
+      "MOTIF_DIRECTION_MISMATCH": 599
+    },
+    "attempts_completed": 569,
+    "attempts_with_first_hop_success": 569,
+    "attempts_with_second_hop_success": 0,
+    "attempts_with_third_hop_success": 0,
+    "depth_at_least_2_attempts": 195,
+    "depth_at_least_3_attempts": 0,
+    "eligible_motif_attempts": 1393
+  },
+  "overall": {
+    "anchor_case_count": 416,
+    "anchors_with_applicable_motif": 390,
+    "anchors_with_complete_motif_path": 347,
+    "anchors_with_first_hop_success": 347,
+    "anchors_with_second_hop_success": 0,
+    "anchors_with_third_hop_success": 0
+  },
+  "unit": "416 route anchors; EXACT_MULTI GL journal routes count once at case level and any resolved line may advance the funnel"
+}

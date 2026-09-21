@@ -1,0 +1,337 @@
+{
+  "evaluator_freeze_verification": {
+    "component_checks": [
+      {
+        "component": "evaluator_core",
+        "expected_sha256": "80a58d398b0f76c6191ee319b5bdfdeff68a6aa7d302f5829cd8456c0229a4b9",
+        "observed_sha256": "80a58d398b0f76c6191ee319b5bdfdeff68a6aa7d302f5829cd8456c0229a4b9",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/evaluate_one_shot.py",
+        "status": "PASS"
+      },
+      {
+        "component": "one_shot_runner",
+        "expected_sha256": "8095bbb2248748286b4fdd75caa2b1c742390d6ee6898cc5fb2b3a1e96a4780b",
+        "observed_sha256": "8095bbb2248748286b4fdd75caa2b1c742390d6ee6898cc5fb2b3a1e96a4780b",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/run_one_shot_evaluation.py",
+        "status": "PASS"
+      },
+      {
+        "component": "evaluator_core_tests",
+        "expected_sha256": "352de3a9d7852178506ee5b77a8ae8346cb65a05d0199426de58e70d15dda8d5",
+        "observed_sha256": "352de3a9d7852178506ee5b77a8ae8346cb65a05d0199426de58e70d15dda8d5",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/test_one_shot_evaluator.py",
+        "status": "PASS"
+      },
+      {
+        "component": "one_shot_runner_tests",
+        "expected_sha256": "cfa5dad1eefb07e1cfc17e72fc5b05268f35a2edba1bc0a6b3c9f56825e02e0d",
+        "observed_sha256": "cfa5dad1eefb07e1cfc17e72fc5b05268f35a2edba1bc0a6b3c9f56825e02e0d",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/test_one_shot_runner.py",
+        "status": "PASS"
+      },
+      {
+        "component": "synthetic_test_results",
+        "expected_sha256": "b44f04ea2b949efabca4e5d43b141e93337fb69e8a148dbb2a26ec052ade47a3",
+        "observed_sha256": "b44f04ea2b949efabca4e5d43b141e93337fb69e8a148dbb2a26ec052ade47a3",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/synthetic_test_results.json",
+        "status": "PASS"
+      },
+      {
+        "component": "metric_spec",
+        "expected_sha256": "2862be9a1242178af029f0582a1777749ef476b80a7ccd8b114e58aafd6340c3",
+        "observed_sha256": "2862be9a1242178af029f0582a1777749ef476b80a7ccd8b114e58aafd6340c3",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/EVALUATION_METRIC_SPEC.md",
+        "status": "PASS"
+      },
+      {
+        "component": "preregistration",
+        "expected_sha256": "74b07ce84050ee9ac55c6f7397c81cfa0b08d507cd6f7d65a0604c11e7772991",
+        "observed_sha256": "74b07ce84050ee9ac55c6f7397c81cfa0b08d507cd6f7d65a0604c11e7772991",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/evaluation_preregistration.json",
+        "status": "PASS"
+      },
+      {
+        "component": "rag_corpus_source",
+        "expected_sha256": "ca50fb2bc5d30894948eaab135f1b4b1ad1321b2ceb5b06b94c9443705281451",
+        "observed_sha256": "ca50fb2bc5d30894948eaab135f1b4b1ad1321b2ceb5b06b94c9443705281451",
+        "path": "src/rag/corpus.py",
+        "status": "PASS"
+      },
+      {
+        "component": "rag_evaluation_source",
+        "expected_sha256": "6de22bdbfc4d0a3e0c6f582c2c5b060cfe2c97af49b37ca7ff674c6798ec5807",
+        "observed_sha256": "6de22bdbfc4d0a3e0c6f582c2c5b060cfe2c97af49b37ca7ff674c6798ec5807",
+        "path": "src/rag/evaluation.py",
+        "status": "PASS"
+      },
+      {
+        "component": "rag_evidence_source",
+        "expected_sha256": "8f35e9697f671905620d4f8221720ce9e4cd05d713c086981a07f81586614f94",
+        "observed_sha256": "8f35e9697f671905620d4f8221720ce9e4cd05d713c086981a07f81586614f94",
+        "path": "src/rag/evidence.py",
+        "status": "PASS"
+      },
+      {
+        "component": "rag_tokens_source",
+        "expected_sha256": "e1c039cded573159e89475ff05507c8e0bc0ea3aa911632c8ff22dc65b9e026d",
+        "observed_sha256": "e1c039cded573159e89475ff05507c8e0bc0ea3aa911632c8ff22dc65b9e026d",
+        "path": "src/rag/tokens.py",
+        "status": "PASS"
+      },
+      {
+        "component": "rag_config_source",
+        "expected_sha256": "93b72a62ce484c0a7d5270723e104a7b1638f183a1996a524c16991337d2e383",
+        "observed_sha256": "93b72a62ce484c0a7d5270723e104a7b1638f183a1996a524c16991337d2e383",
+        "path": "src/rag/config.py",
+        "status": "PASS"
+      }
+    ],
+    "manifest_sha256": "533f3f9198f4ee159308c1740f759491156f3d04776525b1f653001e96d198f7",
+    "status": "PASS"
+  },
+  "pre_gold_verification": {
+    "candidate_path_count": 13371,
+    "candidate_record_count": 8369,
+    "case_count": 416,
+    "heldout_gold_opened": false,
+    "pre_gold_inventory": {
+      "check_count": 10,
+      "checks": [
+        {
+          "expected": {
+            "bytes": 110880,
+            "sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2"
+          },
+          "observed": {
+            "bytes": 110880,
+            "sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2"
+          },
+          "path": "retrieval/anchor_resolutions.jsonl",
+          "status": "PASS"
+        },
+        {
+          "expected": {
+            "bytes": 998,
+            "sha256": "2cbb9038ca7649f00fde95898d4b27442a117879bc1794b74b9a55e5f903d791"
+          },
+          "observed": {
+            "bytes": 998,
+            "sha256": "2cbb9038ca7649f00fde95898d4b27442a117879bc1794b74b9a55e5f903d791"
+          },
+          "path": "retrieval/candidate_artifact_references.json",
+          "status": "PASS"
+        },
+        {
+          "expected": {
+            "bytes": 24257308,
+            "sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03"
+          },
+          "observed": {
+            "bytes": 24257308,
+            "sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03"
+          },
+          "path": "retrieval/candidate_paths.jsonl",
+          "status": "PASS"
+        },
+        {
+          "expected": {
+            "bytes": 4336748,
+            "sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c"
+          },
+          "observed": {
+            "bytes": 4336748,
+            "sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c"
+          },
+          "path": "retrieval/candidate_records.jsonl",
+          "status": "PASS"
+        },
+        {
+          "expected": {
+            "bytes": 1534349,
+            "sha256": "c367f2436a8b52b59ef394e84845b2b26408f16ef72e78b30cf8cd57d1aad3e9"
+          },
+          "observed": {
+            "bytes": 1534349,
+            "sha256": "c367f2436a8b52b59ef394e84845b2b26408f16ef72e78b30cf8cd57d1aad3e9"
+          },
+          "path": "retrieval/drop_ledger.jsonl",
+          "status": "PASS"
+        },
+        {
+          "expected": {
+            "bytes": 2507,
+            "sha256": "0c4ec3125a9af91a1ec2e9ee1b7b71bf6105e712a49c1e1413a137a40421fa6f"
+          },
+          "observed": {
+            "bytes": 2507,
+            "sha256": "0c4ec3125a9af91a1ec2e9ee1b7b71bf6105e712a49c1e1413a137a40421fa6f"
+          },
+          "path": "retrieval/final_pre_gold_manifest.json",
+          "status": "PASS"
+        },
+        {
+          "expected": {
+            "bytes": 42589,
+            "sha256": "4d38a82deeb1a0cde96eeb8b3d4e86d5f748bae82724264a654555520cf3ebb5"
+          },
+          "observed": {
+            "bytes": 42589,
+            "sha256": "4d38a82deeb1a0cde96eeb8b3d4e86d5f748bae82724264a654555520cf3ebb5"
+          },
+          "path": "retrieval/pre_gold_freeze_validation.json",
+          "status": "PASS"
+        },
+        {
+          "expected": {
+            "bytes": 1074429,
+            "sha256": "e9ed35885fc76f55d2b431039cf94b97bbff7740bd3fdcbac125244ca5a6c5e7"
+          },
+          "observed": {
+            "bytes": 1074429,
+            "sha256": "e9ed35885fc76f55d2b431039cf94b97bbff7740bd3fdcbac125244ca5a6c5e7"
+          },
+          "path": "retrieval/retrieval_results.jsonl",
+          "status": "PASS"
+        },
+        {
+          "expected": {
+            "bytes": 19458898,
+            "sha256": "7c50a3569920124286ad1866af28155d6ba25d7e77d6480aaf0627f7c8cd0561"
+          },
+          "observed": {
+            "bytes": 19458898,
+            "sha256": "7c50a3569920124286ad1866af28155d6ba25d7e77d6480aaf0627f7c8cd0561"
+          },
+          "path": "retrieval/selected_paths.jsonl",
+          "status": "PASS"
+        },
+        {
+          "expected": {
+            "bytes": 41745675,
+            "sha256": "e8335a880b0cf57820f58c233f4558b9f4df111f6739f8c13ca7bc04eb994cbd"
+          },
+          "observed": {
+            "bytes": 41745675,
+            "sha256": "e8335a880b0cf57820f58c233f4558b9f4df111f6739f8c13ca7bc04eb994cbd"
+          },
+          "path": "retrieval/selected_records.jsonl",
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    },
+    "record_drop_count": 33,
+    "resolved_root_count": 430,
+    "route_counts": {
+      "bank_transaction": 26,
+      "gl_journal": 14,
+      "invoice": 195,
+      "payment": 181
+    },
+    "selected_record_count": 8336,
+    "static_hash_check_count": 16,
+    "static_hash_checks": [
+      {
+        "expected_sha256": "cad5f2298d9dad62599cfe592304c08cf8808441586fb865d1f4824b3054ea1b",
+        "observed_sha256": "cad5f2298d9dad62599cfe592304c08cf8808441586fb865d1f4824b3054ea1b",
+        "path": "results/graphrag/evidence_selection_freeze_v1_1/evidence_selection_policy_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "2862be9a1242178af029f0582a1777749ef476b80a7ccd8b114e58aafd6340c3",
+        "observed_sha256": "2862be9a1242178af029f0582a1777749ef476b80a7ccd8b114e58aafd6340c3",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/EVALUATION_METRIC_SPEC.md",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "80a58d398b0f76c6191ee319b5bdfdeff68a6aa7d302f5829cd8456c0229a4b9",
+        "observed_sha256": "80a58d398b0f76c6191ee319b5bdfdeff68a6aa7d302f5829cd8456c0229a4b9",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/evaluate_one_shot.py",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "74b07ce84050ee9ac55c6f7397c81cfa0b08d507cd6f7d65a0604c11e7772991",
+        "observed_sha256": "74b07ce84050ee9ac55c6f7397c81cfa0b08d507cd6f7d65a0604c11e7772991",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/evaluation_preregistration.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+        "observed_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/retrieval/candidate_paths.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+        "observed_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/retrieval/candidate_records.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "fdba4cab1ca00d83ca42bb2b3e3962aebc31b185a89e952b0fc9a6ea17b415d8",
+        "observed_sha256": "fdba4cab1ca00d83ca42bb2b3e3962aebc31b185a89e952b0fc9a6ea17b415d8",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/retrieval/final_pre_gold_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "0c4ec3125a9af91a1ec2e9ee1b7b71bf6105e712a49c1e1413a137a40421fa6f",
+        "observed_sha256": "0c4ec3125a9af91a1ec2e9ee1b7b71bf6105e712a49c1e1413a137a40421fa6f",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/retrieval/final_pre_gold_manifest.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "7c50a3569920124286ad1866af28155d6ba25d7e77d6480aaf0627f7c8cd0561",
+        "observed_sha256": "7c50a3569920124286ad1866af28155d6ba25d7e77d6480aaf0627f7c8cd0561",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/retrieval/selected_paths.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "e8335a880b0cf57820f58c233f4558b9f4df111f6739f8c13ca7bc04eb994cbd",
+        "observed_sha256": "e8335a880b0cf57820f58c233f4558b9f4df111f6739f8c13ca7bc04eb994cbd",
+        "path": "results/graphrag/phase6a3_graph_v1_1_retrieval_v1_2/retrieval/selected_records.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "3921c2bbc17373b3dc237dafb8f6f17327e655842acf0ecbbcbc6c23966c58f5",
+        "observed_sha256": "3921c2bbc17373b3dc237dafb8f6f17327e655842acf0ecbbcbc6c23966c58f5",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/ablations/relational_rag_results.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "observed_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "path": "results/graphrag/registry_freeze_v1_1/graph_traversal_grammar_v1_1.json",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "43fe8841d3cbfc64c403349c2336c631c9f6ca9dc35f3e86af1c4ae993441b8c",
+        "observed_sha256": "43fe8841d3cbfc64c403349c2336c631c9f6ca9dc35f3e86af1c4ae993441b8c",
+        "path": "results/rag/phase5_rag_index_v1_0_20260810T000000Z/corpus/documents.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "e30183ea1e17af182ad24a3177e776a869ed55718872ba6cc1a169506b4f96fb",
+        "observed_sha256": "e30183ea1e17af182ad24a3177e776a869ed55718872ba6cc1a169506b4f96fb",
+        "path": "results/rag/phase5_rag_index_v1_0_20260810T000000Z/corpus/metadata.jsonl",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "1850249832dbb9c75ddddfa8e82615dd1db138cdd83cb2dc455029035e1b0058",
+        "observed_sha256": "1850249832dbb9c75ddddfa8e82615dd1db138cdd83cb2dc455029035e1b0058",
+        "path": "results/rag/phase5_rag_index_v1_0_20260810T000000Z/corpus/record_ids.txt",
+        "status": "PASS"
+      },
+      {
+        "expected_sha256": "08ceeaf3a7c569ca94a87b0c0830d0fb90784daac66dd959de3fee1561b94b44",
+        "observed_sha256": "08ceeaf3a7c569ca94a87b0c0830d0fb90784daac66dd959de3fee1561b94b44",
+        "path": "results/rag/phase5_rag_validation_routes_v1_0_20260812T040938Z/validation_routes.jsonl",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS",
+    "validation_gold_opened": false
+  },
+  "run_id": "phase6a3_graph_v1_1_retrieval_v1_2_20260816T034800Z",
+  "status": "PASS",
+  "validation_gold_opened": false
+}

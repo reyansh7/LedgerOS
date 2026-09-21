@@ -1,0 +1,133 @@
+{
+  "artifact_type": "graph_v1_1_freeze_determinism_validation",
+  "artifact_version": "1.1",
+  "build_count": 2,
+  "canonical_timestamp": "2026-08-15T17:54:51Z",
+  "canonical_timestamp_reused": true,
+  "core_artifact_comparisons": {
+    "draft_to_final_semantic_diff_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 7662,
+      "run_1_sha256": "496c62bd81f5a8cbddef8ad1ccb9e19af615277c7ec503f430827e8336c83332",
+      "run_2_bytes": 7662,
+      "run_2_sha256": "496c62bd81f5a8cbddef8ad1ccb9e19af615277c7ec503f430827e8336c83332"
+    },
+    "forbidden_traversals_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 29549,
+      "run_1_sha256": "25901986a4e4a227ecc8020c8598bb28db36fc5b281bf84ec6ce6903270f506f",
+      "run_2_bytes": 29549,
+      "run_2_sha256": "25901986a4e4a227ecc8020c8598bb28db36fc5b281bf84ec6ce6903270f506f"
+    },
+    "grammar_fanout_analysis_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 42268,
+      "run_1_sha256": "ea97fb07816aaa6018414d067f5cef9e427cc752ea39e5948f3fa4901c34ba9e",
+      "run_2_bytes": 42268,
+      "run_2_sha256": "ea97fb07816aaa6018414d067f5cef9e427cc752ea39e5948f3fa4901c34ba9e"
+    },
+    "grammar_risk_register_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 9846,
+      "run_1_sha256": "e6751465b612afcd2cdf5c01172f8ba2a09062437b8698ef94b6deb10ea5f56d",
+      "run_2_bytes": 9846,
+      "run_2_sha256": "e6751465b612afcd2cdf5c01172f8ba2a09062437b8698ef94b6deb10ea5f56d"
+    },
+    "grammar_structural_coverage_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 80393,
+      "run_1_sha256": "19852d1ff2bda9099d6fd2a15d64a820685c2a2a3df52e2a4aeccacfa8bff3de",
+      "run_2_bytes": 80393,
+      "run_2_sha256": "19852d1ff2bda9099d6fd2a15d64a820685c2a2a3df52e2a4aeccacfa8bff3de"
+    },
+    "grammar_topology_simulation_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 303172,
+      "run_1_sha256": "8644fc8614ed4e048aecd672cb6dcea357b8117b9ca801c3c921083f63cf7008",
+      "run_2_bytes": 303172,
+      "run_2_sha256": "8644fc8614ed4e048aecd672cb6dcea357b8117b9ca801c3c921083f63cf7008"
+    },
+    "grammar_transition_justifications_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 74907,
+      "run_1_sha256": "5ae798d5cbe4560993de9d82b3cf0ff42bf51ac23eacc2f27eb58fa0f05e3f0b",
+      "run_2_bytes": 74907,
+      "run_2_sha256": "5ae798d5cbe4560993de9d82b3cf0ff42bf51ac23eacc2f27eb58fa0f05e3f0b"
+    },
+    "graph_traversal_grammar_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 153580,
+      "run_1_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+      "run_2_bytes": 153580,
+      "run_2_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc"
+    },
+    "node_type_traversal_matrix_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 15875,
+      "run_1_sha256": "160a21d9107a9e65335c79e4efcbae6e80635387b83525455d75d5ec0da09ecd",
+      "run_2_bytes": 15875,
+      "run_2_sha256": "160a21d9107a9e65335c79e4efcbae6e80635387b83525455d75d5ec0da09ecd"
+    },
+    "scientific_integrity_v1_1_freeze.json": {
+      "identical": true,
+      "run_1_bytes": 2036,
+      "run_1_sha256": "111d876300a07b2ae90e5a65c6837d94c665ed0ea140856b1316ddaccf1231f1",
+      "run_2_bytes": 2036,
+      "run_2_sha256": "111d876300a07b2ae90e5a65c6837d94c665ed0ea140856b1316ddaccf1231f1"
+    },
+    "topology_equivalence_validation_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 1801,
+      "run_1_sha256": "8151107387e08c6ead1f6e1da917154116335ceea273cdb930598e775c36a032",
+      "run_2_bytes": 1801,
+      "run_2_sha256": "8151107387e08c6ead1f6e1da917154116335ceea273cdb930598e775c36a032"
+    },
+    "transition_freeze_validation_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 74162,
+      "run_1_sha256": "947f979a85e117f4e93c5d69d3da71ef81883daa0875cdb4835911e96284f699",
+      "run_2_bytes": 74162,
+      "run_2_sha256": "947f979a85e117f4e93c5d69d3da71ef81883daa0875cdb4835911e96284f699"
+    },
+    "typed_transition_matrix_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 25055,
+      "run_1_sha256": "82f66dad011f63b7e61188587e90a9fe0bbb3bfbcb5323766a12bd7ed0f7864e",
+      "run_2_bytes": 25055,
+      "run_2_sha256": "82f66dad011f63b7e61188587e90a9fe0bbb3bfbcb5323766a12bd7ed0f7864e"
+    },
+    "v1_motif_to_v1_1_grammar_mapping.json": {
+      "identical": true,
+      "run_1_bytes": 10350,
+      "run_1_sha256": "4014d965801de4ae8c0993c2835ffa17e2f837f931dfb025f768f4f18e423ab5",
+      "run_2_bytes": 10350,
+      "run_2_sha256": "4014d965801de4ae8c0993c2835ffa17e2f837f931dfb025f768f4f18e423ab5"
+    }
+  },
+  "core_artifact_count": 14,
+  "created_at_utc": "2026-08-15T17:54:51Z",
+  "deterministic_regeneration_result": "PASS",
+  "fanout_statistics_identical": true,
+  "freeze_status": "FROZEN_GRAPH_V1_1_TYPED_GRAMMAR",
+  "prohibition_outcomes_identical": true,
+  "raw_bytes_identical": true,
+  "semantic_content_identical": true,
+  "serialization_convention": {
+    "concurrency_timing_dependency": false,
+    "encoding": "UTF-8",
+    "filesystem_order_dependency": false,
+    "hash_map_order_dependency": false,
+    "json_indentation_spaces": 2,
+    "json_key_order": "lexicographic via sort_keys=true",
+    "json_separators": "comma plus newline/indent; colon plus one space",
+    "newline": "LF with exactly one trailing newline",
+    "other_array_order": "explicit semantic parent order or explicitly documented stable key order",
+    "transition_array_order": "ascending transition_id",
+    "unicode": "ensure_ascii=false"
+  },
+  "status": "FROZEN",
+  "structural_sequence_coverage_identical": true,
+  "topology_path_sets_identical": true,
+  "transition_ids_identical": true,
+  "transition_sets_identical": true
+}

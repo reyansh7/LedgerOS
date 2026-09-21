@@ -1,0 +1,20 @@
+{
+  "api_calls_made": false,
+  "diagnostic_reverse_topology_used": true,
+  "embeddings_created": false,
+  "frozen_registry_modified": false,
+  "graph_v1_1_created": false,
+  "heldout_gold_opened": false,
+  "heldout_labels_opened": false,
+  "label_independent_structural_freeze_sha256": "630047291872c2f84d2dfafc7de70d47552a55dfaec29d2cdf76074b5bb72907",
+  "llm_calls_made": false,
+  "new_edges_created": false,
+  "new_motifs_created": false,
+  "new_relation_types_created": false,
+  "oracle_sources_opened": false,
+  "phase6a_graph_modified": false,
+  "reverse_traversal_enabled_in_production": false,
+  "status": "PASS",
+  "validation_evidence_opened_only_after_structural_freeze": true,
+  "validation_gold_used_for_path_generation": false
+}

@@ -1,0 +1,14 @@
+{
+  "defect_id": "DEFECT-001",
+  "affected_component": "RSQL_F14_V1 audit-event filtering and implementation-level column-access audit",
+  "corrected_run_id": "phase2_rules_sql_v1_0_20260808T185000Z_auditfix1",
+  "defect": "The original implementation parsed audit timestamps before excluding non-FX event types, and infrastructure index-column reads were not all registered in the feature-access audit.",
+  "frozen_rule_changed": false,
+  "frozen_spec_sections": [
+    "Section 5.14.8",
+    "Section 12"
+  ],
+  "prediction_impact_observed": "None; the corrected run compares semantic predictions against this preserved run.",
+  "status": "SUPERSEDED_PRESERVED_ORIGINAL",
+  "why_behavior_violated_specification": "F14 may inspect an audit timestamp only for FX_CONVERSION_APPLIED, and the implementation audit must enumerate every inference column access."
+}

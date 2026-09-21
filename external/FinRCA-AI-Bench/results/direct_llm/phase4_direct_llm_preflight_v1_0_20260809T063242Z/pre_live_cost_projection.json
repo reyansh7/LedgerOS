@@ -1,0 +1,11 @@
+{
+  "billing_note": "Conservative character estimate, not provider billing; cached-input discounts are not assumed.",
+  "estimator": "ceil(Unicode characters / 3); conservative non-billing estimate",
+  "pricing_reference_date": "2026-08-08",
+  "stability_estimated_input_tokens_all_repetitions": 28252830.0,
+  "stability_input_only_cost_usd_no_cache": 141.26415,
+  "stability_max_output_cost_usd": 2.88,
+  "test_estimated_input_tokens": 33711485.0,
+  "test_input_only_cost_usd_no_cache": 168.557425,
+  "test_max_output_cost_usd": 13.17
+}

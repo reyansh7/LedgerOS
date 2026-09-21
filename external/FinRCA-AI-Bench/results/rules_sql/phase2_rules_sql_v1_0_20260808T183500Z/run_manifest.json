@@ -1,0 +1,697 @@
+{
+  "dataset_generation_seed": 42,
+  "dataset_version": "FinRCA-Bench v1 seed 42",
+  "date_time_utc": "2026-08-09T01:34:24.586522+00:00",
+  "dependency_versions": {
+    "numpy": "1.26.0",
+    "pytest": "8.4.2",
+    "python": "3.11.3",
+    "yaml": "6.0.1"
+  },
+  "f01_selected_parameters": {
+    "duplicate_date_window_days": 7,
+    "duplicate_reference_similarity": "1.00"
+  },
+  "frozen_spec_path": "docs/frozen_rules_sql_baseline_spec_v1.0.md",
+  "frozen_spec_sha256": "0ee3192dd760dd2521791ef46543c9c7337cc6d8eff0f3cd4a7cba9e5d645675",
+  "frozen_spec_verbatim": "# Frozen Rules/SQL Baseline Specification \u2014 Version 1.0\n\n## 1. Scope and assumptions\n\nThis document is the locked design for the strong deterministic Rules/SQL baseline evaluated on FinRCA-Bench v1. It specifies detection, evidence retrieval, tri-state handling, rule collisions, and single-label output before implementation or examination of held-out test performance. Implementation may optimize query execution but may not change semantics.\n\nThe baseline may use SQL, deterministic scalar functions, joins, anti-joins, constraints, aggregation, exact matching, and the narrowly specified fuzzy invoice-reference comparison. It may not use learned parameters, embeddings, LLMs, benchmark labels, or post-adjudication artifacts.\n\n### 1.1 Evaluation unit and decision time\n\nThe experiment harness supplies only:\n\n- `case_id`, used for routing and output correlation;\n- the primary entity type and ID stated in the benchmark question; and\n- access to the model-visible financial tables.\n\nThe primary entity is not a label and may not be used as evidence by itself. No ground-truth evidence list is supplied to the baseline.\n\nThe frozen analytical cutoff is `AS_OF_DATE = 2026-06-30`, taken from `config.yaml`. It is used for aging and clearing-window calculations, especially F12. It is not used as a surrogate ingestion timestamp: most tables do not contain a record-availability timestamp, and a future business posting date can be visible in an ERP extract. Every method receives the same delivered model-visible snapshot. Where a rule explicitly uses an event timestamp, the rule states its cutoff condition. The harness must certify table completeness for absence rules; if a required table failed to load, absence from that table cannot be interpreted as evidence.\n\nBusiness days are Monday through Friday. No holiday calendar exists, so holidays are not excluded. All timestamps are interpreted as local benchmark time; no timezone conversion is performed.\n\n### 1.2 Single-primary-label protocol\n\nFinRCA-Bench v1 has one primary failure label per case. Every applicable rule is still executed and its raw trace retained. If multiple rules return `ANOMALY`, the frozen collision policy in Section 11 selects one scored `predicted_failure_type`; the remaining hits remain diagnostic and are not silently discarded from the audit log.\n\nA rule is applicable when the supplied primary entity is either the rule's subject or reaches the subject through that rule's stated join path. Rules outside that connected evidence scope are not executed and are not treated as missing evidence. Final aggregation is deterministic: (1) choose the highest-precedence anomaly when one or more applicable rules fire; (2) when none fire but any applicable rule is `INSUFFICIENT_EVIDENCE`, return insufficient; (3) only when every applicable rule has sufficient evidence and returns match, return `MATCH`/`NO_FAILURE`.\n\n### 1.3 Permitted and prohibited information\n\nPermitted inputs are the fourteen financial tables listed in Section 2 and fixed experiment configuration constants listed in Section 9. Operational `audit_log` events may be used only where a rule explicitly permits them, their timestamp is on or before the cutoff, and they describe a source-system event rather than a human RCA adjudication.\n\nThe following are prohibited at inference time: `rca_ground_truth.jsonl`, `failure_manifest.csv`, expected answers in `benchmark_questions.jsonl`, `causal_edges.csv`, `internal/mutation_log.jsonl`, `dataset_quality_report.json`, clean pre-mutation tables, split labels, failure signatures, injector code, and any field derived from those artifacts.\n\n### 1.4 Three-state semantics\n\n- `ANOMALY`: sufficient required evidence exists and the positive condition is true.\n- `MATCH`: sufficient required evidence exists and the positive condition is false, including an explicitly modeled legitimate exception.\n- `INSUFFICIENT_EVIDENCE`: a required record/field is unavailable or ambiguous and the rule is not specifically defined as an absence detector.\n\n`INSUFFICIENT_EVIDENCE` must set `is_anomaly = null`; it is not a negative prediction.\n\n## 2. Data/schema summary\n\nOnly these tables exist for this baseline:\n\n| Table | Primary key | Important types and relationships |\n|---|---|---|\n| `vendors` | `vendor_id` | Master attributes and current bank token; timestamps are ISO datetimes. |\n| `vendor_change_log` | `change_id` | `vendor_id` logically references `vendors`; old/new values are strings interpreted by `field_changed`. |\n| `purchase_orders` | `po_id` | `vendor_id` references `vendors`; monetary fields are fixed-point decimals. |\n| `po_lines` | `po_line_id` | `po_id` references `purchase_orders`; quantity is integer and money is decimal. |\n| `invoices` | `invoice_id` | Nonempty `po_id` references `purchase_orders`; empty `po_id` means non-PO invoice. |\n| `invoice_lines` | `invoice_line_id` | `invoice_id` references `invoices`; nonempty `po_line_id` references `po_lines`. |\n| `approval_events` | `approval_event_id` | `invoice_id` references `invoices`; `approver_id` may reference `employees` or a named system actor. |\n| `payments` | `payment_id` | `vendor_id` references `vendors`; `bank_account_id` is the vendor destination snapshot, not the company bank account. |\n| `payment_allocations` | (`payment_id`, `invoice_id`, `allocation_date`) | Many-to-many bridge from payments to invoices. |\n| `gl_entries` | `journal_line_id` | `journal_id` groups lines; `source_transaction_id` is polymorphic according to `transaction_type`. |\n| `bank_transactions` | `bank_transaction_id` | `bank_account_id` is the company bank account; `counterparty_token` is comparable to `payments.bank_account_id`; `payment_reference` is comparable to `payments.reference_number`. |\n| `bank_statements` | `bank_statement_id` | Statement controls only; no v1 failure rule requires this table. |\n| `employees` | `employee_id` | Role, approval limit, and active status for approval authorization. |\n| `audit_log` | `event_id` | Generic operational event log; `entity_id` is polymorphic according to `entity_type`. |\n\n### 2.1 Canonical columns and important data types\n\n`STRING` includes IDs, categories, tokens, references, accounts, and source-system names. `DECIMAL` is fixed-point money, `INTEGER` is exact, `DATE` is ISO `YYYY-MM-DD`, and `TIMESTAMP` is ISO local datetime.\n\n- `vendors`: `vendor_id STRING PK`, `vendor_name STRING`, `vendor_type STRING`, `tax_id_hash STRING`, `country STRING`, `currency STRING`, `payment_terms STRING`, `default_payment_method STRING`, `bank_account_token STRING`, `bank_routing_token STRING`, `vendor_status STRING`, `created_at TIMESTAMP`, `updated_at TIMESTAMP`, `source_system STRING`.\n- `vendor_change_log`: `change_id STRING PK`, `vendor_id STRING FK`, `field_changed STRING`, `old_value STRING`, `new_value STRING`, `changed_at TIMESTAMP`, `changed_by STRING`, `change_reason STRING`, `source_system STRING`.\n- `purchase_orders`: `po_id STRING PK`, `vendor_id STRING FK`, `po_date DATE`, `currency STRING`, `subtotal DECIMAL`, `tax DECIMAL`, `shipping DECIMAL`, `po_total DECIMAL`, `department STRING`, `cost_center STRING`, `gl_account STRING`, `status STRING`, `expected_delivery_date DATE`, `created_by STRING`, `source_system STRING`.\n- `po_lines`: `po_id STRING FK`, `po_line_id STRING PK`, `item_id STRING`, `description STRING`, `quantity INTEGER`, `unit_price DECIMAL`, `line_amount DECIMAL`, `gl_account STRING`, `department STRING`, `cost_center STRING`, `source_system STRING`.\n- `invoices`: `invoice_id STRING PK`, `vendor_id STRING FK`, `po_id STRING nullable FK`, `invoice_number STRING`, `invoice_date DATE`, `received_date DATE`, `due_date DATE`, `currency STRING`, `subtotal DECIMAL`, `tax DECIMAL`, `shipping DECIMAL`, `invoice_total DECIMAL`, `payment_terms STRING`, `status STRING`, `duplicate_reference STRING nullable`, `created_at TIMESTAMP`, `source_system STRING`.\n- `invoice_lines`: `invoice_id STRING FK`, `invoice_line_id STRING PK`, `po_line_id STRING nullable FK`, `item_id STRING`, `quantity INTEGER`, `unit_price DECIMAL`, `line_amount DECIMAL`, `gl_account STRING`, `department STRING`, `cost_center STRING`, `source_system STRING`.\n- `approval_events`: `approval_event_id STRING PK`, `invoice_id STRING FK`, `approval_level INTEGER`, `approver_id STRING logical FK/system actor`, `approver_role STRING`, `action STRING`, `event_timestamp TIMESTAMP`, `previous_status STRING`, `new_status STRING`, `comments STRING`, `source_system STRING`.\n- `payments`: `payment_id STRING PK`, `vendor_id STRING FK`, `payment_date DATE`, `payment_method STRING`, `payment_currency STRING`, `payment_amount DECIMAL`, `bank_account_id STRING token`, `payment_status STRING`, `settlement_status STRING`, `reference_number STRING`, `created_at TIMESTAMP`, `source_system STRING`.\n- `payment_allocations`: `payment_id STRING composite PK/FK`, `invoice_id STRING composite PK/FK`, `allocated_amount DECIMAL`, `allocation_date DATE composite PK`, `source_system STRING`.\n- `gl_entries`: `journal_id STRING grouping key`, `journal_line_id STRING PK`, `transaction_type STRING`, `source_transaction_id STRING logical polymorphic FK`, `posting_date DATE`, `accounting_period STRING YYYY-MM`, `gl_account STRING`, `debit DECIMAL`, `credit DECIMAL`, `currency STRING`, `department STRING`, `cost_center STRING`, `memo STRING`, `source_system STRING`.\n- `bank_transactions`: `bank_transaction_id STRING PK`, `bank_account_id STRING company-account token`, `transaction_date DATE`, `posted_date DATE`, `transaction_type STRING`, `amount DECIMAL`, `currency STRING`, `direction STRING`, `bank_reference STRING`, `counterparty_token STRING`, `payment_reference STRING logical payment link`, `status STRING`, `source_system STRING`.\n- `bank_statements`: `bank_statement_id STRING PK`, `bank_account_id STRING`, `statement_date DATE`, `opening_balance DECIMAL`, `closing_balance DECIMAL`, `total_debits DECIMAL`, `total_credits DECIMAL`, `source_system STRING`.\n- `employees`: `employee_id STRING PK`, `role STRING`, `department STRING`, `approval_limit DECIMAL`, `active_status STRING`, `source_system STRING`.\n- `audit_log`: `event_id STRING PK`, `entity_type STRING`, `entity_id STRING logical polymorphic FK`, `event_type STRING`, `timestamp TIMESTAMP`, `actor_id STRING`, `field STRING`, `old_value STRING`, `new_value STRING`, `source_system STRING`.\n\nThere is no receipts table, PO-amendment table, FX-rate table, vendor-alias table, parent/subsidiary hierarchy, accounting-calendar table, bank-to-payment foreign key, or dedicated approval-policy table. The specification does not invent any of them.\n\n## 3. Shared output and evidence contract\n\nEvery scored case returns exactly one object:\n\n```json\n{\n  \"case_id\": \"...\",\n  \"method\": \"rules_sql\",\n  \"is_anomaly\": true,\n  \"predicted_failure_type\": \"F01_DUPLICATE_INVOICE\",\n  \"confidence\": null,\n  \"evidence_record_ids\": [\"invoices:INV_0001\"],\n  \"triggered_rule_id\": \"RSQL_F01_V1\",\n  \"hop_count\": 0,\n  \"status\": \"ANOMALY\",\n  \"reason\": \"Invoice INV_0001 and invoice INV_0002 share vendor VND_01, normalized reference SYN001, currency USD, and total 100.00 within 14 days.\"\n}\n```\n\nFor final `MATCH`, `is_anomaly=false`, `predicted_failure_type=\"NO_FAILURE\"`, `triggered_rule_id=\"RSQL_NO_ANOMALY_V1\"`, and `hop_count` is the maximum hop count among applicable rules needed to establish the match. For final `INSUFFICIENT_EVIDENCE`, `is_anomaly=null`, `predicted_failure_type=null`, `triggered_rule_id=\"RSQL_EVIDENCE_GATE_V1\"`, and the reason names the missing or ambiguous fields and affected rules. `confidence` is always `null`. Individual rule traces retain their own rule IDs and hop counts for both match and insufficient outcomes.\n\nEvidence IDs use `table_name:primary_key`. The composite allocation form is `payment_allocations:<payment_id>|<invoice_id>|<allocation_date>`. Absence is described by an observed count in `reason`; the baseline never fabricates an ID for a missing row.\n\nReasons are deterministic templates populated with observed values. No generative text is allowed.\n\n## 4. Shared normalization specification\n\nThese functions are part of the frozen rule semantics:\n\n- `NORM_TEXT(x)`: if NULL, return NULL; otherwise Unicode NFKC normalize, trim leading/trailing whitespace, collapse internal Unicode whitespace to one ASCII space, and uppercase.\n- `NORM_REFERENCE(x)`: apply NFKC and uppercase, then remove every character outside ASCII `A-Z` and `0-9`. Leading zeros are preserved. Empty result becomes NULL.\n- `EDIT_SIM(a,b)`: if either normalized reference is NULL, return NULL; otherwise `1 - LEVENSHTEIN_DISTANCE(a,b) / MAX(LENGTH(a),LENGTH(b))`; two empty values are never compared.\n- `NORM_STATUS(x)`: `NORM_TEXT(x)` with spaces and hyphens converted to underscores.\n- `PARSE_DATE(x)` / `PARSE_TS(x)`: strict ISO parsing. Invalid values become NULL and cause `INSUFFICIENT_EVIDENCE` for rules that require them.\n- `CURRENCY_QUANTUM(c)`: `1` for JPY and `0.01` for USD, EUR, GBP, and CAD. Unknown currency returns NULL.\n- `Q_MONEY(x,c)`: decimal quantization to the currency quantum using round-half-up. Binary floating-point is prohibited.\n- `WITHIN_MONEY(a,b,c)`: true when `ABS(Q_MONEY(a,c)-Q_MONEY(b,c)) <= CURRENCY_QUANTUM(c)`.\n- `BUSINESS_DAYS_BETWEEN(a,b)`: count Monday-Friday dates strictly after `a` and through `b`; returns NULL if `b<a`.\n\nIDs are compared after trim only and remain case-sensitive because generated IDs are canonical. Vendor names are not used for identity matching; `vendor_id` is authoritative. Currency conversion is never inferred from amount ratios.\n\nAn effective successful payment has `NORM_STATUS(payment_status)='COMPLETED'` and `NORM_STATUS(settlement_status)='SETTLED'`. Reversed payments and their allocations are excluded from net-paid aggregates. A posted bank debit has `direction='DEBIT'`, `status='POSTED'`, and `posted_date <= AS_OF_DATE`.\n\n## 5. Detailed rule specifications\n\n### 5.1 RSQL_F01_V1 \u2014 F01_DUPLICATE_INVOICE\n\n**1. Failure type.** A positive is an active positive-value invoice for which another active invoice has the same vendor, currency, amount within currency quantum, sufficiently similar normalized invoice reference, and an invoice date inside the duplicate window. A negative is a unique invoice, a canceled invoice, a nonpositive credit memo, or a recurring invoice outside the reference/date criteria.\n\n**2. Required tables.**\n\n- Table: `invoices`; required fields: `invoice_id`, `vendor_id`, `invoice_number`, `invoice_date`, `currency`, `invoice_total`, `status`; purpose: self-join candidate obligations.\n\n**3. Join path.** Self-join `invoices i1` to `invoices i2` with `i1.invoice_id < i2.invoice_id`. This is candidate comparison, not an FK traversal. If the primary invoice is missing, return insufficient evidence.\n\n**4. Reasoning complexity.** Tier 1 \u2014 single-record / zero-hop. **Hop count: 0.** It performs a set-level duplicate comparison inside one entity table without following an explicit relationship.\n\n**5. Deterministic detection rule.** Exclude statuses `CANCELED` and `CREDIT_APPLIED` and totals `<=0`. Require equal non-NULL `vendor_id` and `currency`; `WITHIN_MONEY(i1.invoice_total,i2.invoice_total,currency)`; `ABS(invoice_date1-invoice_date2) <= DUPLICATE_DATE_WINDOW_DAYS`; and either normalized references are equal or edit similarity meets `DUPLICATE_REFERENCE_SIMILARITY`. NULL vendor, currency, total, date, or primary reference yields insufficient evidence for that primary invoice. A pair is emitted once in lexical invoice-ID order.\n\n**6. SQL-style pseudocode.**\n\n```sql\nSELECT i1.invoice_id, i2.invoice_id,\n  CASE WHEN i1.vendor_id = i2.vendor_id\n        AND i1.currency = i2.currency\n        AND WITHIN_MONEY(i1.invoice_total, i2.invoice_total, i1.currency)\n        AND ABS(DATE_DIFF(i1.invoice_date, i2.invoice_date)) <= :dup_days\n        AND (NORM_REFERENCE(i1.invoice_number) = NORM_REFERENCE(i2.invoice_number)\n             OR EDIT_SIM(NORM_REFERENCE(i1.invoice_number),\n                         NORM_REFERENCE(i2.invoice_number)) >= :dup_similarity)\n       THEN 1 ELSE 0 END AS is_anomaly\nFROM invoices i1\nJOIN invoices i2 ON i1.invoice_id < i2.invoice_id\nWHERE NORM_STATUS(i1.status) NOT IN ('CANCELED','CREDIT_APPLIED')\n  AND NORM_STATUS(i2.status) NOT IN ('CANCELED','CREDIT_APPLIED')\n  AND i1.invoice_total > 0 AND i2.invoice_total > 0;\n```\n\n**7. Thresholds and tolerances.** `DUPLICATE_DATE_WINDOW_DAYS`: initial 14; candidate grid `{7,14,30}`; **VALIDATION-TUNED**. `DUPLICATE_REFERENCE_SIMILARITY`: initial `0.90`; candidate grid `{0.85,0.90,0.95,1.00}`; **VALIDATION-TUNED**. Currency quantum is globally fixed. Joint selection maximizes validation macro-F1, ties choosing the higher similarity then shorter window.\n\n**8. Data normalization.** Use shared reference, status, date, currency, and money normalization. Do not strip leading zeros or use vendor names.\n\n**9. Edge cases.** Same-vendor recurring invoices with distinct references normally match; references differing by only one character may be flagged. A canceled duplicate does not create two active obligations. Credit memos are excluded. Cross-vendor duplicates are not detected. Multiple invoices legitimately sharing one PO are not duplicates unless the duplicate criteria also hold.\n\n**10. Missing-data behavior.** Missing primary invoice/reference/vendor/currency/amount/date is `INSUFFICIENT_EVIDENCE`. A complete invoice table with no qualifying pair is `MATCH`.\n\n**11. Expected output.** An anomaly returns both invoice IDs, `triggered_rule_id=RSQL_F01_V1`, hop 0, and a reason listing vendor, normalized references, amounts, and day difference. Other fields use the shared contract.\n\n**12. Evidence requirements.** Minimum records: both invoice rows. Minimum fields: IDs, vendor IDs, references, dates, currencies, totals, and statuses.\n\n**13. Expected strengths.** Exact and near-exact reference duplication with matching economic attributes.\n\n**14. Expected failure modes.** Semantic duplicate references with low character similarity, vendor aliases, cross-currency duplicates, or legitimate same-day recurring charges.\n\n### 5.2 RSQL_F02_V1 \u2014 F02_PO_INVOICE_AMOUNT_MISMATCH\n\n**1. Failure type.** A positive is a PO-backed active invoice whose line price/amount, or fully covered PO header tax/shipping, differs from authorization by more than the PO tolerance. A negative is within tolerance, non-PO, canceled/credited, or a legitimate partial invoice whose line prices remain authorized.\n\n**2. Required tables.**\n\n- Table: `invoices`; required fields: `invoice_id`, `po_id`, `currency`, `tax`, `shipping`, `status`; purpose: invoice scope/header.\n- Table: `invoice_lines`; required fields: `invoice_id`, `invoice_line_id`, `po_line_id`, `quantity`, `unit_price`, `line_amount`; purpose: billed economics.\n- Table: `purchase_orders`; required fields: `po_id`, `currency`, `tax`, `shipping`; purpose: authorization/header charges.\n- Table: `po_lines`; required fields: `po_line_id`, `po_id`, `quantity`, `unit_price`, `line_amount`; purpose: authorized line economics.\n\n**3. Join path.** `invoices.po_id -> purchase_orders.po_id`; `invoices.invoice_id -> invoice_lines.invoice_id -> po_lines.po_line_id`; verify `po_lines.po_id = invoices.po_id`. Use inner joins for valid line comparison and anti-joins to detect missing links. A missing referenced PO/line is insufficient for F02 and may be reported as structural data quality outside the 15 labels.\n\n**4. Reasoning complexity.** Tier 3 \u2014 multi-hop relational. **Hop count: 2.** The strongest rule traverses invoice header to invoice line and then to its authorized PO line.\n\n**5. Deterministic detection rule.** For each matched line compute authorized billed amount `invoice_line.quantity * po_line.unit_price`. Flag when absolute unit-price variance or extended-amount variance exceeds `MAX(currency_quantum, ABS(authorized_value)*PO_TOLERANCE_PERCENT/100)`. Header tax/shipping are compared only when every PO line is represented once and invoice quantities equal PO quantities. Currency mismatch returns insufficient evidence because no FX table exists. Exclude canceled, credit-applied, nonpositive, and non-PO invoices.\n\n**6. SQL-style pseudocode.**\n\n```sql\nWITH line_check AS (\n SELECT i.invoice_id, il.invoice_line_id,\n   ABS(il.unit_price - pol.unit_price) AS unit_delta,\n   ABS(il.line_amount - (il.quantity * pol.unit_price)) AS amount_delta,\n   MAX(CURRENCY_QUANTUM(i.currency),\n       ABS(pol.unit_price) * :po_pct / 100) AS unit_tol,\n   MAX(CURRENCY_QUANTUM(i.currency),\n       ABS(il.quantity * pol.unit_price) * :po_pct / 100) AS amount_tol\n FROM invoices i\n JOIN purchase_orders po ON po.po_id = i.po_id\n JOIN invoice_lines il ON il.invoice_id = i.invoice_id\n JOIN po_lines pol ON pol.po_line_id = il.po_line_id AND pol.po_id = po.po_id\n WHERE i.currency = po.currency\n), coverage AS (\n SELECT i.invoice_id,\n   CASE WHEN COUNT(DISTINCT il.po_line_id) = COUNT(DISTINCT pol.po_line_id)\n             AND SUM(CASE WHEN il.quantity <> pol.quantity THEN 1 ELSE 0 END) = 0\n        THEN 1 ELSE 0 END AS full_coverage\n FROM invoices i JOIN purchase_orders po ON po.po_id=i.po_id\n JOIN po_lines pol ON pol.po_id=po.po_id\n LEFT JOIN invoice_lines il ON il.invoice_id=i.invoice_id\n                              AND il.po_line_id=pol.po_line_id\n GROUP BY i.invoice_id\n)\nSELECT i.invoice_id,\n CASE WHEN EXISTS (SELECT 1 FROM line_check l WHERE l.invoice_id=i.invoice_id\n                   AND (l.unit_delta>l.unit_tol OR l.amount_delta>l.amount_tol))\n        OR (c.full_coverage=1 AND\n            (ABS(i.tax-po.tax) > MAX(CURRENCY_QUANTUM(i.currency),ABS(po.tax)*:po_pct/100)\n             OR ABS(i.shipping-po.shipping) > MAX(CURRENCY_QUANTUM(i.currency),ABS(po.shipping)*:po_pct/100)))\n      THEN 1 ELSE 0 END AS is_anomaly\nFROM invoices i JOIN purchase_orders po ON po.po_id=i.po_id\nJOIN coverage c ON c.invoice_id=i.invoice_id;\n```\n\n**7. Thresholds and tolerances.** `PO_TOLERANCE_PERCENT=2.0`, globally fixed from `config.yaml`; currency quantum fixed. No validation tuning.\n\n**8. Data normalization.** Decimal quantization and strict currency equality. Status normalization excludes canceled/credit rows. Quantities are parsed as exact integers.\n\n**9. Edge cases.** Partial invoices are judged by authorized unit price, not full PO total. Multiple invoices against one PO can exhaust quantity cumulatively, but v1 has no receipt/cumulative-billing table, so cumulative overbilling is not detectable. Discounts below PO price within tolerance match. Amended/canceled POs cannot be reliably interpreted because no amendment history exists. Tax/shipping are compared only for complete coverage.\n\n**10. Missing-data behavior.** Missing PO/line, currency, money, or quantity is insufficient. Non-PO invoices are not applicable and evaluate `MATCH` for F02. A complete within-tolerance comparison is `MATCH`.\n\n**11. Expected output.** Evidence contains the invoice, PO, and offending invoice/PO lines; reason reports observed and authorized unit/extended values and tolerance.\n\n**12. Evidence requirements.** Minimum anomaly evidence: invoice, PO, one offending invoice line, and its referenced PO line; header-only tax/shipping anomalies require all lines establishing full coverage.\n\n**13. Expected strengths.** Explicit price, extended-amount, tax, and shipping variance beyond a known tolerance.\n\n**14. Expected failure modes.** PO amendments, cumulative billing, discounts/credits without dedicated fields, and currency conversion.\n\n### 5.3 RSQL_F03_V1 \u2014 F03_QUANTITY_MISMATCH\n\n**1. Failure type.** A positive is an active PO-backed invoice line whose integer quantity is not equal to its referenced PO-line quantity. A negative has equal quantity or is non-PO/canceled/credited.\n\n**2. Required tables.**\n\n- Table: `invoices`; required fields: `invoice_id`, `status`; purpose: scope active invoice obligations.\n- Table: `invoice_lines`; required fields: `invoice_id`, `invoice_line_id`, `po_line_id`, `quantity`; purpose: supply billed quantity and the PO-line link.\n- Table: `po_lines`; required fields: `po_line_id`, `quantity`; purpose: supply ordered quantity.\n\n**3. Join path.** `invoices.invoice_id -> invoice_lines.invoice_id -> po_lines.po_line_id`, inner join; missing nonempty `po_line_id` target is insufficient.\n\n**4. Reasoning complexity.** Tier 3 \u2014 multi-hop relational. **Hop count: 2.** It traverses the invoice-to-line and line-to-PO-line relationships.\n\n**5. Deterministic detection rule.** After excluding canceled/credit invoices, flag if `CAST(invoice_line.quantity AS INTEGER) <> CAST(po_line.quantity AS INTEGER)`. No amount condition may suppress a quantity mismatch. NULL/nonintegral quantity is insufficient.\n\n**6. SQL-style pseudocode.**\n\n```sql\nSELECT i.invoice_id, il.invoice_line_id, pol.po_line_id,\n CASE WHEN il.quantity <> pol.quantity THEN 1 ELSE 0 END AS is_anomaly\nFROM invoices i\nJOIN invoice_lines il ON il.invoice_id=i.invoice_id\nJOIN po_lines pol ON pol.po_line_id=il.po_line_id\nWHERE NORM_STATUS(i.status) NOT IN ('CANCELED','CREDIT_APPLIED')\n  AND il.po_line_id IS NOT NULL AND TRIM(il.po_line_id) <> '';\n```\n\n**7. Thresholds and tolerances.** `QUANTITY_TOLERANCE=0`, globally fixed. No percentage tolerance and no validation tuning.\n\n**8. Data normalization.** Strict integer parsing; no rounding of fractional quantities. IDs are trimmed only.\n\n**9. Edge cases.** Legitimate partial billing, backorders, or staged deliveries will be flagged because no receipts or cumulative-quantity table exists. Split payments do not affect the rule. Equal amounts with different quantities remain anomalous by design.\n\n**10. Missing-data behavior.** Missing invoice, line, referenced PO line, or quantity is insufficient. Non-PO lines are `MATCH` for this rule.\n\n**11. Expected output.** Return invoice, invoice-line, and PO-line IDs; reason reports both quantities.\n\n**12. Evidence requirements.** The active invoice row, offending invoice line, and referenced PO line with both quantities.\n\n**13. Expected strengths.** Exact linked-line quantity violations, including amount-preserving manipulation.\n\n**14. Expected failure modes.** Legitimate partial fulfillment and many-to-one line mappings absent from the schema.\n\n### 5.4 RSQL_F04_V1 \u2014 F04_INCORRECT_VENDOR_ASSOCIATION\n\n**1. Failure type.** A positive is a PO-backed invoice whose non-NULL `vendor_id` differs from its referenced PO's non-NULL `vendor_id`. A negative has equal IDs or is non-PO.\n\n**2. Required tables.**\n\n- Table: `invoices`; required fields: `invoice_id`, `po_id`, `vendor_id`, `status`; purpose: provide the asserted vendor and PO link.\n- Table: `purchase_orders`; required fields: `po_id`, `vendor_id`; purpose: provide the authorized vendor.\n\n**3. Join path.** `invoices.po_id -> purchase_orders.po_id`, inner join. Missing referenced PO is insufficient, not F04.\n\n**4. Reasoning complexity.** Tier 2 \u2014 one-hop relational. **Hop count: 1.** One explicit invoice-to-PO relationship is followed.\n\n**5. Deterministic detection rule.** Exclude canceled/credit invoices. If both vendor IDs are present, flag `invoice.vendor_id <> purchase_order.vendor_id`. Vendor names and fuzzy matching are prohibited because IDs are authoritative.\n\n**6. SQL-style pseudocode.**\n\n```sql\nSELECT i.invoice_id, po.po_id,\n CASE WHEN i.vendor_id <> po.vendor_id THEN 1 ELSE 0 END AS is_anomaly\nFROM invoices i JOIN purchase_orders po ON po.po_id=i.po_id\nWHERE i.vendor_id IS NOT NULL AND po.vendor_id IS NOT NULL\n  AND NORM_STATUS(i.status) NOT IN ('CANCELED','CREDIT_APPLIED');\n```\n\n**7. Thresholds and tolerances.** None.\n\n**8. Data normalization.** Trim IDs; do not normalize names or collapse related vendors.\n\n**9. Edge cases.** Parent/subsidiary vendors, vendor mergers, novations, and aliases will be flagged unless IDs were updated consistently; no hierarchy/merge table exists. Non-PO invoices cannot be assessed.\n\n**10. Missing-data behavior.** Missing PO, invoice vendor, or PO vendor is insufficient. Non-PO is `MATCH` for F04.\n\n**11. Expected output.** Return invoice and PO IDs; reason states both vendor IDs exactly.\n\n**12. Evidence requirements.** Invoice with `vendor_id` and `po_id`; referenced PO with `vendor_id`.\n\n**13. Expected strengths.** Explicit referential vendor inconsistency.\n\n**14. Expected failure modes.** Legitimate legal-entity relationships not modeled in v1 and wrong vendors on non-PO invoices.\n\n### 5.5 RSQL_F05_V1 \u2014 F05_PAYMENT_WITHOUT_VALID_INVOICE\n\n**1. Failure type.** A positive is an effective completed payment with no positive allocation to an existing invoice, or with any allocation referencing a missing invoice. A negative is a reversed payment or a payment whose positive allocations all reference valid invoices.\n\n**2. Required tables.**\n\n- Table: `payments`; required fields: `payment_id`, `payment_status`, `settlement_status`, `payment_amount`; purpose: identify effective disbursements.\n- Table: `payment_allocations`; required fields: `payment_id`, `invoice_id`, `allocated_amount`, `allocation_date`; purpose: establish allocation support or its absence and construct the composite evidence ID.\n- Table: `invoices`; required fields: `invoice_id`; purpose: verify that an allocated payable actually exists.\n\n**3. Join path.** `payments.payment_id -> payment_allocations.payment_id -> invoices.invoice_id`, left joins because relationship absence is the signal. The allocation table must be a complete loaded snapshot.\n\n**4. Reasoning complexity.** Tier 3 \u2014 multi-hop relational. **Hop count: 2.** It traverses the payment-to-allocation bridge and allocation-to-invoice relationship.\n\n**5. Deterministic detection rule.** Restrict to effective successful payments with positive amount. Aggregate `valid_allocation_count` for allocations with `allocated_amount>0` and existing invoice, plus `invalid_allocation_count` for allocations whose invoice is missing. Flag when valid count is zero or invalid count is positive. Do not treat bank transactions such as fees as payments because they are not rows in `payments`.\n\n**6. SQL-style pseudocode.**\n\n```sql\nSELECT p.payment_id,\n CASE WHEN COUNT(CASE WHEN pa.allocated_amount>0 AND i.invoice_id IS NOT NULL THEN 1 END)=0\n            OR COUNT(CASE WHEN pa.invoice_id IS NOT NULL AND i.invoice_id IS NULL THEN 1 END)>0\n      THEN 1 ELSE 0 END AS is_anomaly\nFROM payments p\nLEFT JOIN payment_allocations pa ON pa.payment_id=p.payment_id\nLEFT JOIN invoices i ON i.invoice_id=pa.invoice_id\nWHERE NORM_STATUS(p.payment_status)='COMPLETED'\n  AND NORM_STATUS(p.settlement_status)='SETTLED'\n  AND p.payment_amount>0\nGROUP BY p.payment_id;\n```\n\n**7. Thresholds and tolerances.** Positive allocation threshold is `>0` at currency precision; fixed. No tuning.\n\n**8. Data normalization.** Shared statuses and currency money parsing. IDs trim only.\n\n**9. Edge cases.** Deposits/prepayments without invoices would be flagged because no prepayment type exists. Reversals are excluded. A payment allocated partly to a valid and partly to a missing invoice is anomalous. Bank fees never enter this rule unless incorrectly represented as ERP payments.\n\n**10. Missing-data behavior.** If payments, allocations, or invoices table is unavailable, insufficient. If all tables are complete and no relationship row exists, absence is positive evidence and returns anomaly.\n\n**11. Expected output.** Return payment plus any invalid allocation IDs; reason reports valid and invalid allocation counts.\n\n**12. Evidence requirements.** Payment record and, when present, invalid allocation rows. No fabricated invoice evidence is returned for an anti-join.\n\n**13. Expected strengths.** Unsupported disbursements and broken allocation foreign keys.\n\n**14. Expected failure modes.** Legitimate deposits, advances, or non-invoice disbursements absent from the schema.\n\n### 5.6 RSQL_F06_V1 \u2014 F06_INVOICE_PAID_TWICE\n\n**1. Failure type.** A positive is an active positive invoice whose allocations from effective successful payments exceed its total by more than currency quantum. A negative is exactly settled, underpaid, reversed, canceled, or credited.\n\n**2. Required tables.**\n\n- Table: `invoices`; required fields: `invoice_id`, `currency`, `invoice_total`, `status`; purpose: define the obligation and its active state.\n- Table: `payment_allocations`; required fields: `invoice_id`, `payment_id`, `allocated_amount`, `allocation_date`; purpose: aggregate amounts settling the obligation and identify evidence rows.\n- Table: `payments`; required fields: `payment_id`, `payment_currency`, `payment_status`, `settlement_status`; purpose: include only effective successful payments and validate allocation currency context.\n\n**3. Join path.** `invoices.invoice_id -> payment_allocations.invoice_id -> payments.payment_id`; aggregate left joins.\n\n**4. Reasoning complexity.** Tier 3 \u2014 multi-hop relational. **Hop count: 2.** It aggregates across the invoice-allocation-payment chain.\n\n**5. Deterministic detection rule.** `net_paid = SUM(allocated_amount)` only for effective successful payments whose `payment_currency=invoice.currency`. A contributing currency mismatch is insufficient for F06 because allocations carry no independent currency. Flag when `net_paid - invoice_total > currency_quantum`. Do not flag merely because more than one payment exists. Exclude invoice totals `<=0` and canceled/credit statuses.\n\n**6. SQL-style pseudocode.**\n\n```sql\nSELECT i.invoice_id,\n SUM(CASE WHEN NORM_STATUS(p.payment_status)='COMPLETED'\n               AND NORM_STATUS(p.settlement_status)='SETTLED'\n               AND p.payment_currency=i.currency\n          THEN pa.allocated_amount ELSE 0 END) AS net_paid,\n SUM(CASE WHEN NORM_STATUS(p.payment_status)='COMPLETED'\n               AND NORM_STATUS(p.settlement_status)='SETTLED'\n               AND p.payment_currency<>i.currency THEN 1 ELSE 0 END) AS currency_errors,\n CASE WHEN currency_errors>0 THEN NULL\n      WHEN net_paid-i.invoice_total>CURRENCY_QUANTUM(i.currency) THEN 1 ELSE 0 END\nFROM invoices i\nLEFT JOIN payment_allocations pa ON pa.invoice_id=i.invoice_id\nLEFT JOIN payments p ON p.payment_id=pa.payment_id\nWHERE i.invoice_total>0 AND NORM_STATUS(i.status) NOT IN ('CANCELED','CREDIT_APPLIED')\nGROUP BY i.invoice_id,i.invoice_total,i.currency;\n```\n\n**7. Thresholds and tolerances.** `OVERPAYMENT_TOLERANCE = currency quantum`, fixed.\n\n**8. Data normalization.** Money, currency, and effective-payment status rules are shared. Negative allocations are retained as offsets only if their payment is effective.\n\n**9. Edge cases.** Split payments are normal when their sum equals the invoice. Intentional overpayment/on-account credits will be flagged because no credit-balance field exists. Reversed payments are excluded. Credit memos are excluded as primary obligations.\n\n**10. Missing-data behavior.** Missing invoice amount/currency or unavailable allocation/payment table is insufficient. Complete evidence at or below balance is `MATCH`.\n\n**11. Expected output.** Return invoice, all contributing effective payments, and allocation composite IDs; reason states invoice total, net paid, and excess.\n\n**12. Evidence requirements.** Invoice plus every allocation/payment included in `net_paid`.\n\n**13. Expected strengths.** Exact overpayment and duplicate-disbursement aggregation across split/batch structures.\n\n**14. Expected failure modes.** Intended on-account overpayments, refunds not linked through allocations, and missing reversal semantics.\n\n### 5.7 RSQL_F07_V1 \u2014 F07_PARTIAL_PAYMENT_RESIDUAL_BALANCE\n\n**1. Failure type.** A positive is an invoice marked `PAID` with positive effective allocations that are less than its positive total by more than currency quantum. A negative is fully paid, or partially paid while status remains open/approved/partially paid.\n\n**2. Required tables.**\n\n- Table: `invoices`; required fields: `invoice_id`, `invoice_total`, `currency`, `status`; purpose: provide obligation, residual basis, and claimed paid state.\n- Table: `payment_allocations`; required fields: `invoice_id`, `payment_id`, `allocated_amount`, `allocation_date`; purpose: aggregate applied amounts and identify evidence rows.\n- Table: `payments`; required fields: `payment_id`, `payment_currency`, `payment_status`, `settlement_status`; purpose: restrict the aggregate to effective successful payments and validate allocation currency context.\n\n**3. Join path.** `invoices -> payment_allocations -> payments`, aggregate left joins.\n\n**4. Reasoning complexity.** Tier 3 \u2014 multi-hop relational. **Hop count: 2.** It compares invoice state to aggregate settled allocations over two relationships.\n\n**5. Deterministic detection rule.** Compute `net_paid` exactly as F06, including strict payment/invoice currency equality. Flag only when normalized invoice status is `PAID`, `net_paid>0`, and `invoice_total-net_paid>currency_quantum`. A zero-paid invoice marked paid is insufficient for this specific partial-payment class and remains available to a general data-quality trace, not relabeled F07.\n\n**6. SQL-style pseudocode.**\n\n```sql\nSELECT i.invoice_id,\n SUM(CASE WHEN NORM_STATUS(p.payment_status)='COMPLETED'\n               AND NORM_STATUS(p.settlement_status)='SETTLED'\n               AND p.payment_currency=i.currency\n          THEN pa.allocated_amount ELSE 0 END) AS net_paid,\n SUM(CASE WHEN NORM_STATUS(p.payment_status)='COMPLETED'\n               AND NORM_STATUS(p.settlement_status)='SETTLED'\n               AND p.payment_currency<>i.currency THEN 1 ELSE 0 END) AS currency_errors,\n CASE WHEN currency_errors>0 THEN NULL\n      WHEN NORM_STATUS(i.status)='PAID' AND net_paid>0\n            AND i.invoice_total-net_paid>CURRENCY_QUANTUM(i.currency)\n      THEN 1 ELSE 0 END AS is_anomaly\nFROM invoices i\nLEFT JOIN payment_allocations pa ON pa.invoice_id=i.invoice_id\nLEFT JOIN payments p ON p.payment_id=pa.payment_id\nGROUP BY i.invoice_id,i.status,i.invoice_total,i.currency;\n```\n\n**7. Thresholds and tolerances.** `RESIDUAL_TOLERANCE = currency quantum`, fixed.\n\n**8. Data normalization.** Shared money, status, and effective-payment rules.\n\n**9. Edge cases.** Scheduled partials with nonpaid status match. Discounts/write-offs without a dedicated field can appear as residuals and be flagged if status is paid. Reversals are excluded from net paid. Overpayment is handled by F06, not F07.\n\n**10. Missing-data behavior.** Missing total/currency/status or unavailable allocation/payment evidence is insufficient. A complete nonpaid partial is `MATCH`.\n\n**11. Expected output.** Return invoice, contributing payments, and allocations; reason reports total, net paid, residual, and observed status.\n\n**12. Evidence requirements.** Invoice and all effective allocation/payment records used in the balance.\n\n**13. Expected strengths.** Paid-status residual errors despite internally consistent payment, GL, and bank amounts.\n\n**14. Expected failure modes.** Contractual write-offs, discounts, and credit offsets not represented in allocations.\n\n### 5.8 RSQL_F08_V1 \u2014 F08_APPROVAL_WORKFLOW_FAILURE\n\n**1. Failure type.** A positive is a payment released for an invoice before the required terminal approval, with a required role missing, or with an unauthorized final approver. A negative completes the frozen amount-based approval ladder before payment.\n\n**2. Required tables.**\n\n- Table: `payments`; required fields: `payment_id`, `created_at`, `payment_status`; purpose: identify release and its decision timestamp.\n- Table: `payment_allocations`; required fields: `payment_id`, `invoice_id`, `allocation_date`; purpose: connect released payments to approved obligations and identify evidence rows.\n- Table: `invoices`; required fields: `invoice_id`, `invoice_total`, `currency`; purpose: select the required amount-based policy.\n- Table: `approval_events`; required fields: `invoice_id`, `approval_level`, `approver_id`, `approver_role`, `action`, `event_timestamp`; purpose: reconstruct approval sequence and timing.\n- Table: `employees`; required fields: `employee_id`, `role`, `approval_limit`, `active_status`; purpose: validate human approver authority.\n\n**3. Join path.** `payments.payment_id -> payment_allocations.payment_id -> invoices.invoice_id -> approval_events.invoice_id`; non-system `approval_events.approver_id -> employees.employee_id`. Left join approvals/employees so missing required events/actors are detectable.\n\n**4. Reasoning complexity.** Tier 3 \u2014 multi-hop relational. **Hop count: 4.** The maximum evidence path reaches the employee authority through payment, allocation, invoice, and approval event.\n\n**5. Deterministic detection rule.** The frozen policy is: total `<=500`: terminal `AUTO` approval; `>500..10000`: `MANAGER`; `>10000..50000`: `MANAGER,DIRECTOR`; `>50000..250000`: `MANAGER,DIRECTOR,CONTROLLER`; `>250000`: `MANAGER,DIRECTOR,TREASURY`. Because no FX-rate/policy-currency field exists, the policy uses the nominal quantized `invoice_total` in its recorded currency, matching the benchmark workflow. Consider only `APPROVED` or `AUTO_APPROVED` events at or before payment creation. Required roles must appear in increasing approval level; the final event must precede/equal payment creation. Non-auto actors must exist, be active, and have employee role equal to event role. The final actor's approval limit must be at least invoice total. Auto approval is valid only at `<=500` with system actor/auto role. Any violation is positive.\n\n**6. SQL-style pseudocode.**\n\n```sql\nWITH required AS (\n SELECT i.invoice_id,\n  CASE WHEN i.invoice_total<=500 THEN 'AUTO'\n       WHEN i.invoice_total<=10000 THEN 'MANAGER'\n       WHEN i.invoice_total<=50000 THEN 'MANAGER,DIRECTOR'\n       WHEN i.invoice_total<=250000 THEN 'MANAGER,DIRECTOR,CONTROLLER'\n       ELSE 'MANAGER,DIRECTOR,TREASURY' END AS required_roles\n FROM invoices i\n), effective_events AS (\n SELECT ae.*, e.role AS employee_role, e.approval_limit, e.active_status\n FROM approval_events ae LEFT JOIN employees e ON e.employee_id=ae.approver_id\n WHERE NORM_STATUS(ae.action) IN ('APPROVED','AUTO_APPROVED')\n)\nSELECT p.payment_id,i.invoice_id,\n CASE WHEN NOT ROLES_PRESENT_IN_LEVEL_ORDER(r.required_roles,effective_events)\n        OR TERMINAL_APPROVAL_TS(effective_events)>p.created_at\n        OR FINAL_ACTOR_INVALID(effective_events,i.invoice_total)\n      THEN 1 ELSE 0 END AS is_anomaly\nFROM payments p JOIN payment_allocations pa ON pa.payment_id=p.payment_id\nJOIN invoices i ON i.invoice_id=pa.invoice_id\nJOIN required r ON r.invoice_id=i.invoice_id\nLEFT JOIN effective_events ON effective_events.invoice_id=i.invoice_id\nWHERE NORM_STATUS(p.payment_status) IN ('COMPLETED','SUBMITTED');\n```\n\n**7. Thresholds and tolerances.** Approval breakpoints `{500,10000,50000,250000}` and the role ladder are globally fixed policy constants. No validation tuning.\n\n**8. Data normalization.** Status/action/role use `NORM_STATUS`; money uses invoice currency. Approval events are sorted by parsed timestamp then approval level then event ID.\n\n**9. Edge cases.** Rejections followed by valid resubmission are allowed if the final effective chain is complete. Delegation is insufficient unless a subsequent valid approved event names an authorized actor. Batch payments are anomalous if any allocated invoice lacks approval. Auto approval above 500 is anomalous. The table has no separate policy-version field, so historical policy changes cannot be modeled. Nominal limits across currencies are a benchmark convention rather than a general accounting policy.\n\n**10. Missing-data behavior.** Missing invoice amount, payment time, approval table, or employee evidence for a non-system approver is insufficient, except a complete approval table with a missing required event is positive evidence. Missing actor row for a claimed human approval is anomalous unauthorized approval.\n\n**11. Expected output.** Return payment, allocation, invoice, relevant approval events, and final employee when present; reason lists required roles, observed roles/levels, final timestamp, and payment timestamp.\n\n**12. Evidence requirements.** Payment and allocation, invoice total, complete approval event sequence, and employee record for every human event relied upon.\n\n**13. Expected strengths.** Explicit missing levels, ordering violations, invalid actors, and amount-policy violations.\n\n**14. Expected failure modes.** Undocumented delegation policy, historical policy versions, or approvals held in unavailable systems.\n\n### 5.9 RSQL_F09_V1 \u2014 F09_GL_POSTING_MISMATCH\n\n**1. Failure type.** A positive is an effective completed payment whose required payment journal is absent after the posting lag, unbalanced, in the wrong currency/accounts, or different in amount from the operational payment. A negative has a balanced journal whose AP debit and cash credit equal the payment.\n\n**2. Required tables.**\n\n- Table: `payments`; required fields: `payment_id`, `payment_date`, `payment_currency`, `payment_amount`, `payment_status`, `settlement_status`; purpose: provide the authoritative operational transaction.\n- Table: `gl_entries`; required fields: `journal_id`, `journal_line_id`, `transaction_type`, `source_transaction_id`, `posting_date`, `gl_account`, `debit`, `credit`, `currency`; purpose: provide the complete source-linked accounting journal.\n\n**3. Join path.** Logical left join `payments.payment_id -> gl_entries.source_transaction_id` constrained by `NORM_STATUS(transaction_type)='PAYMENT'`. `source_transaction_id` is not globally unique without this discriminator. Missing rows are detectable only when the GL snapshot is complete.\n\n**4. Reasoning complexity.** Tier 2 \u2014 one-hop relational. **Hop count: 1.** It compares an operational payment to its source-linked journal.\n\n**5. Deterministic detection rule.** For each effective payment old enough to post, collect all payment GL rows. Flag if none exist; any contributing currency differs; journal debits do not equal credits; AP debit on `200000-ACCOUNTS-PAYABLE` differs from payment amount beyond quantum; or cash credit on `100000-CASH` differs beyond quantum. Multiple journal lines and cost-center splits are allowed. Rows with transaction types `PAYMENT_REVERSAL`, `BANK_FEE`, or `FX_SETTLEMENT` do not enter the source aggregate.\n\n**6. SQL-style pseudocode.**\n\n```sql\nWITH pg AS (\n SELECT p.payment_id, p.payment_amount, p.payment_currency,\n   COUNT(g.journal_line_id) AS line_count,\n   SUM(g.debit) AS total_debit, SUM(g.credit) AS total_credit,\n   SUM(CASE WHEN g.gl_account='200000-ACCOUNTS-PAYABLE' THEN g.debit ELSE 0 END) AS ap_debit,\n   SUM(CASE WHEN g.gl_account='100000-CASH' THEN g.credit ELSE 0 END) AS cash_credit,\n   SUM(CASE WHEN g.currency<>p.payment_currency THEN 1 ELSE 0 END) AS currency_errors\n FROM payments p LEFT JOIN gl_entries g\n   ON g.source_transaction_id=p.payment_id\n  AND NORM_STATUS(g.transaction_type)='PAYMENT'\n WHERE EFFECTIVE_PAYMENT(p)=1\n GROUP BY p.payment_id,p.payment_amount,p.payment_currency\n)\nSELECT *, CASE WHEN line_count=0 OR currency_errors>0\n                    OR NOT WITHIN_MONEY(total_debit,total_credit,payment_currency)\n                    OR NOT WITHIN_MONEY(ap_debit,payment_amount,payment_currency)\n                    OR NOT WITHIN_MONEY(cash_credit,payment_amount,payment_currency)\n               THEN 1 ELSE 0 END AS is_anomaly\nFROM pg;\n```\n\n**7. Thresholds and tolerances.** `GL_POSTING_LAG_BUSINESS_DAYS=0`, fixed because completed benchmark payment journals post on payment date. Money tolerance is currency quantum. No validation tuning.\n\n**8. Data normalization.** Shared statuses, currency, dates, and decimal money. Account strings are trimmed and uppercased but otherwise exact.\n\n**9. Edge cases.** Legitimate cost-center/account splits match if required AP/cash control totals agree. A payment reversal is excluded by effective-payment status and separate transaction type. FX on the bank side does not alter the payment journal. Alternative charts of accounts would fail because v1 has no account-role mapping table.\n\n**10. Missing-data behavior.** Unavailable GL table or invalid payment amount/currency is insufficient. With a complete GL snapshot and elapsed posting lag, no source-linked journal is positive evidence.\n\n**11. Expected output.** Return payment and all payment journal-line IDs; reason reports payment amount, AP debit, cash credit, total debit/credit, currencies, and line count.\n\n**12. Evidence requirements.** Payment row plus the complete source-linked payment journal; for missing posting, payment row and a trace stating zero qualifying GL rows in a complete snapshot.\n\n**13. Expected strengths.** Balanced-but-wrong journals, wrong accounts/currency, missing posting, and double-entry violations.\n\n**14. Expected failure modes.** Alternate chart-of-account conventions, delayed posting policies, or correcting journals without explicit linkage.\n\n### 5.10 RSQL_F10_V1 \u2014 F10_WRONG_ACCOUNTING_PERIOD\n\n**1. Failure type.** A positive is a source-linked payment journal whose `accounting_period` is not the `YYYY-MM` of the payment's economic date, or whose posting-date month disagrees with its stored period. A negative uses the payment period, irrespective of later bank posting.\n\n**2. Required tables.**\n\n- Table: `payments`; required fields: `payment_id`, `payment_date`; purpose: define the economic date and expected period.\n- Table: `gl_entries`; required fields: `journal_id`, `journal_line_id`, `transaction_type`, `source_transaction_id`, `posting_date`, `accounting_period`; purpose: provide observed ledger dates and periods.\n\n**3. Join path.** `payments.payment_id -> gl_entries.source_transaction_id` where transaction type is payment; inner join because F10 evaluates existing journals. Missing journal is left to F09 and is insufficient for F10.\n\n**4. Reasoning complexity.** Tier 2 \u2014 one-hop relational. **Hop count: 1.** One source relationship links economic and accounting dates.\n\n**5. Deterministic detection rule.** `expected_period = FORMAT_YYYY_MM(payment_date)`. Flag if any payment journal line has `accounting_period <> expected_period`, or `FORMAT_YYYY_MM(posting_date) <> accounting_period`. No grace crosses a month boundary. Bank transaction/statement dates never determine the economic period.\n\n**6. SQL-style pseudocode.**\n\n```sql\nSELECT p.payment_id,g.journal_id,\n CASE WHEN SUM(CASE WHEN g.accounting_period<>FORMAT_YYYY_MM(p.payment_date)\n                          OR FORMAT_YYYY_MM(g.posting_date)<>g.accounting_period\n                     THEN 1 ELSE 0 END)>0\n      THEN 1 ELSE 0 END AS is_anomaly\nFROM payments p JOIN gl_entries g\n ON g.source_transaction_id=p.payment_id\nAND NORM_STATUS(g.transaction_type)='PAYMENT'\nGROUP BY p.payment_id,g.journal_id;\n```\n\n**7. Thresholds and tolerances.** `ACCOUNTING_PERIOD_TOLERANCE=0 periods`, globally fixed.\n\n**8. Data normalization.** Strict ISO dates; accounting period must match regex `^[0-9]{4}-[0-9]{2}$` and a real month.\n\n**9. Edge cases.** Legitimate bank clearing after month-end matches because bank dates are ignored. Organizations using accrual/reversal policies different from payment-date accounting would need a policy table that v1 lacks. Closed-period adjustments are flagged.\n\n**10. Missing-data behavior.** Missing/invalid payment date, posting date, period, or journal is insufficient. A complete period-aligned journal is `MATCH`.\n\n**11. Expected output.** Return payment and all lines of the affected journal; reason states payment date, expected period, observed posting dates, and periods.\n\n**12. Evidence requirements.** Payment date and every source-linked journal line's posting date/accounting period.\n\n**13. Expected strengths.** Explicit period shifts and internal posting-date/period inconsistencies.\n\n**14. Expected failure modes.** Legitimate policy-based accrual timing not modeled in the schema.\n\n### 5.11 RSQL_F11_V1 \u2014 F11_VENDOR_MASTER_CHANGE_CONFLICT\n\n**1. Failure type.** A positive is a payment that uses a bank token different from the vendor token effective at payment creation and has a returned/failed bank outcome. A negative uses the effective token, including a payment correctly using an old token before a later change.\n\n**2. Required tables.**\n\n- Table: `payments`; required fields: `payment_id`, `vendor_id`, `bank_account_id`, `created_at`, `reference_number`, `settlement_status`; purpose: provide the vendor, destination snapshot, decision time, and bank reference.\n- Table: `vendors`; required fields: `vendor_id`, `bank_account_token`; purpose: provide current vendor state and history anchor.\n- Table: `vendor_change_log`; required fields: `change_id`, `vendor_id`, `field_changed`, `old_value`, `new_value`, `changed_at`; purpose: reconstruct the bank token effective at payment creation.\n- Table: `bank_transactions`; required fields: `bank_transaction_id`, `payment_reference`, `counterparty_token`, `status`, `posted_date`; purpose: provide external use of the destination and settlement result.\n\n**3. Join path.** `payments.vendor_id -> vendors.vendor_id -> vendor_change_log.vendor_id`, filtered to `field_changed='bank_account_token'`; separately `NORM_REFERENCE(payments.reference_number) -> NORM_REFERENCE(bank_transactions.payment_reference)`. Payment `bank_account_id` compares to vendor/change tokens; it must never join to bank transaction `bank_account_id`.\n\n**4. Reasoning complexity.** Tier 3 \u2014 multi-hop relational. **Hop count: 2.** Effective-state reconstruction follows payment to vendor and then vendor history; bank outcome is a parallel one-hop link.\n\n**5. Deterministic detection rule.** Reconstruct `effective_token(T)` at `T=payment.created_at`: use the latest qualifying change with `changed_at<=T` and its `new_value`; if none, use `old_value` from the earliest qualifying change after T; if no changes, use current vendor token. When payment token differs, require a decisive history row establishing the transition from the payment token to the effective token; otherwise return insufficient. Flag when the decisive change exists, matched bank `counterparty_token` equals the stale payment token, and bank status is `RETURNED` or payment settlement status is `FAILED`. If token differs but settlement posted successfully, return match for F11 while retaining a warning trace.\n\n**6. SQL-style pseudocode.**\n\n```sql\nWITH history AS (\n SELECT p.payment_id,\n   LAST_VALUE_BEFORE(vcl.changed_at,vcl.new_value,p.created_at) AS last_new,\n   FIRST_VALUE_AFTER(vcl.changed_at,vcl.old_value,p.created_at) AS next_old\n FROM payments p JOIN vendors v ON v.vendor_id=p.vendor_id\n LEFT JOIN vendor_change_log vcl ON vcl.vendor_id=v.vendor_id\n   AND NORM_STATUS(vcl.field_changed)='BANK_ACCOUNT_TOKEN'\n GROUP BY p.payment_id\n), effective AS (\n SELECT p.*, COALESCE(h.last_new,h.next_old,v.bank_account_token) AS effective_token,\n        DECISIVE_TOKEN_CHANGE_EXISTS(p.vendor_id,p.bank_account_id,\n                                     COALESCE(h.last_new,h.next_old,v.bank_account_token),\n                                     p.created_at) AS decisive_change\n FROM payments p JOIN vendors v ON v.vendor_id=p.vendor_id\n JOIN history h ON h.payment_id=p.payment_id\n)\nSELECT e.payment_id,b.bank_transaction_id,\n CASE WHEN e.decisive_change=1 AND e.bank_account_id<>e.effective_token\n            AND b.counterparty_token=e.bank_account_id\n            AND (NORM_STATUS(b.status)='RETURNED'\n                 OR NORM_STATUS(e.settlement_status)='FAILED')\n      THEN 1 ELSE 0 END AS is_anomaly\nFROM effective e JOIN bank_transactions b\n ON NORM_REFERENCE(b.payment_reference)=NORM_REFERENCE(e.reference_number);\n```\n\n**7. Thresholds and tolerances.** No numeric tolerance. Temporal comparison is exact at timestamp precision. No tuning.\n\n**8. Data normalization.** Tokens/IDs trim only and remain case-sensitive; change field/status uses shared status normalization; references and timestamps use shared functions.\n\n**9. Edge cases.** Payment before a change uses the next change's `old_value` and matches. Multiple changes use the latest decisive transition; a mismatch without a transition from payment token to effective token is insufficient. Vendor merger/currency/terms changes do not satisfy this bank-token rule. Successful use of a stale-but-still-valid token is not labeled F11 under the frozen positive definition.\n\n**10. Missing-data behavior.** Missing vendor, token, timestamp, history needed to explain a current mismatch, or matched bank outcome is insufficient. No history plus payment token equal to current token is `MATCH`.\n\n**11. Expected output.** Return payment, vendor, decisive change row(s), and bank transaction; reason states effective timestamp, old/effective/payment/counterparty tokens, and bank status.\n\n**12. Evidence requirements.** Payment, vendor current record, the change rows required to reconstruct state, and matched bank transaction.\n\n**13. Expected strengths.** Exact temporal master-data conflicts and stale-token returns.\n\n**14. Expected failure modes.** Incomplete change history, multiple banking instruments simultaneously valid, or external bank-token aliases.\n\n### 5.12 RSQL_F12_V1 \u2014 F12_ERP_PAYMENT_MISSING_FROM_BANK\n\n**1. Failure type.** A positive is a completed/settled ERP payment older than its method-specific clearing window with no posted or returned non-fee bank record carrying its payment reference. A negative has external bank evidence or is still inside the clearing window.\n\n**2. Required tables.**\n\n- Table: `payments`; required fields: `payment_id`, `payment_date`, `payment_method`, `payment_status`, `settlement_status`, `reference_number`; purpose: define the expected settlement and clearing window.\n- Table: `bank_transactions`; required fields: `bank_transaction_id`, `payment_reference`, `transaction_type`, `direction`, `status`, `posted_date`; purpose: supply or disprove external settlement evidence.\n\n**3. Join path.** Logical left join `NORM_REFERENCE(payments.reference_number) -> NORM_REFERENCE(bank_transactions.payment_reference)`. Relationship absence is the signal; the bank snapshot must be complete through the cutoff.\n\n**4. Reasoning complexity.** Tier 2 \u2014 one-hop relational. **Hop count: 1.** One cross-system reference link is tested for absence.\n\n**5. Deterministic detection rule.** Restrict to payments with completed/settled status and non-NULL reference. Compute business-day age from payment date to cutoff. A bank record counts as external evidence when it has the normalized reference, is not a separately typed bank fee, and is posted/returned by the cutoff. Flag only if evidence count is zero and age is strictly greater than the method clearing limit. A submitted/pending payment is never F12; inside-window absence is normal.\n\n**6. SQL-style pseudocode.**\n\n```sql\nSELECT p.payment_id, COUNT(b.bank_transaction_id) AS bank_evidence_count,\n CASE WHEN PAYMENT_REFERENCE_USE_COUNT(NORM_REFERENCE(p.reference_number))<>1 THEN NULL\n      WHEN EFFECTIVE_PAYMENT(p)=1\n            AND BUSINESS_DAYS_BETWEEN(p.payment_date,:as_of)\n                > CLEARING_LIMIT(p.payment_method)\n            AND COUNT(b.bank_transaction_id)=0\n      THEN 1 ELSE 0 END AS is_anomaly\nFROM payments p LEFT JOIN bank_transactions b\n ON NORM_REFERENCE(b.payment_reference)=NORM_REFERENCE(p.reference_number)\nAND NORM_STATUS(b.transaction_type)<>'BANK_FEE'\nAND NORM_STATUS(b.status) IN ('POSTED','RETURNED')\nAND b.posted_date<=:as_of\nGROUP BY p.payment_id;\n```\n\n**7. Thresholds and tolerances.** Clearing limits: ACH 3, wire 1, check 10, virtual card 2 business days; fixed from config/methodology. `CLEARING_GRACE_BUSINESS_DAYS=0`, fixed. No validation tuning.\n\n**8. Data normalization.** Shared reference, method/status, and date functions. Method synonyms are not inferred beyond exact normalized configured values.\n\n**9. Edge cases.** Friday-to-Monday ACH timing is normal under business-day counting. Checks receive ten business days. A returned transaction is bank evidence and routes toward F11 or a return trace, not F12. A payment reference reused across payments can make matching ambiguous and returns insufficient rather than anomaly.\n\n**10. Missing-data behavior.** Unavailable bank table, NULL/duplicate payment reference, invalid date/method, or incomplete cutoff snapshot is insufficient. Complete-table zero-match after the window is positive by definition.\n\n**11. Expected output.** Return payment ID; no nonexistent bank ID is invented. Reason reports method, payment date, cutoff, business-day age, limit, normalized reference, and zero bank records.\n\n**12. Evidence requirements.** Payment record and an auditable anti-join count over the complete bank snapshot.\n\n**13. Expected strengths.** Explicit overdue cross-system absence while preserving normal clearing delays.\n\n**14. Expected failure modes.** Bank reference corruption/reuse, holiday calendars, batched bank records without payment-level references, and incomplete statement feeds.\n\n### 5.13 RSQL_F13_V1 \u2014 F13_BANK_TRANSACTION_MISSING_FROM_ERP\n\n**1. Failure type.** A positive is a posted outgoing operational debit (ACH, wire, check, or card settlement) with no matching ERP payment. A normal negative is matched to a payment, or is a separately typed bank fee with a balanced fee journal, or a documented reversal credit.\n\n**2. Required tables.**\n\n- Table: `bank_transactions`; required fields: `bank_transaction_id`, `payment_reference`, `transaction_type`, `direction`, `amount`, `currency`, `status`, `posted_date`; purpose: define the externally observed outgoing transaction.\n- Table: `payments`; required fields: `payment_id`, `reference_number`; purpose: test whether ERP has the corresponding payment.\n- Table: `gl_entries`; required fields: `journal_id`, `journal_line_id`, `transaction_type`, `source_transaction_id`, `debit`, `credit`, `currency`; purpose: validate the legitimate bank-fee exception.\n\n**3. Join path.** Left join bank `payment_reference -> payments.reference_number`; parallel left join `bank_transaction_id -> gl_entries.source_transaction_id` with transaction-type discriminator. Both are one-hop logical relationships.\n\n**4. Reasoning complexity.** Tier 2 \u2014 one-hop relational. **Hop count: 1.** The bank debit is checked against ERP payment and accounting links in parallel.\n\n**5. Deterministic detection rule.** For posted debits through cutoff: if normalized transaction type is `BANK_FEE`, return match only when a balanced `BANK_FEE` journal linked to the bank transaction exists; otherwise a missing fee journal is anomalous F13. If type is `PAYMENT_REVERSAL` or direction is credit, F13 does not apply. For operational debit types `{ACH_DEBIT,WIRE_DEBIT,CHECK_CLEARING,CARD_SETTLEMENT}`, flag when no uniquely matched ERP payment exists. Unknown debit types without a payment return insufficient, not anomaly.\n\n**6. SQL-style pseudocode.**\n\n```sql\nSELECT b.bank_transaction_id,\n COUNT(DISTINCT p.payment_id) AS payment_matches,\n BALANCED_SOURCE_JOURNAL_EXISTS(b.bank_transaction_id,'BANK_FEE') AS fee_gl_exists,\n CASE WHEN NORM_STATUS(b.transaction_type)='BANK_FEE' AND fee_gl_exists=1 THEN 0\n      WHEN NORM_STATUS(b.transaction_type)='BANK_FEE' AND fee_gl_exists=0 THEN 1\n      WHEN NORM_STATUS(b.transaction_type) IN\n           ('ACH_DEBIT','WIRE_DEBIT','CHECK_CLEARING','CARD_SETTLEMENT')\n           AND COUNT(DISTINCT p.payment_id)=0 THEN 1\n      WHEN NORM_STATUS(b.transaction_type) IN\n           ('ACH_DEBIT','WIRE_DEBIT','CHECK_CLEARING','CARD_SETTLEMENT')\n           AND COUNT(DISTINCT p.payment_id)=1 THEN 0\n      ELSE NULL END AS is_anomaly\nFROM bank_transactions b\nLEFT JOIN payments p\n ON NORM_REFERENCE(p.reference_number)=NORM_REFERENCE(b.payment_reference)\nLEFT JOIN gl_entries g ON g.source_transaction_id=b.bank_transaction_id\nWHERE NORM_STATUS(b.direction)='DEBIT' AND NORM_STATUS(b.status)='POSTED'\n  AND b.posted_date<=:as_of\nGROUP BY b.bank_transaction_id;\n```\n\n**7. Thresholds and tolerances.** Journal balance uses currency quantum; no other thresholds or tuning.\n\n**8. Data normalization.** Shared transaction type/status/reference/currency/money functions.\n\n**9. Edge cases.** Accounted bank fees match without ERP payments. Reversal credits are excluded. Manual wires are anomalous. Unknown debit types are insufficient. A normalized reference matching more than one payment is ambiguous and insufficient unless F15 resolves a reciprocal cross-match.\n\n**10. Missing-data behavior.** Unavailable payment table makes ordinary unmatched debit insufficient. Complete table and zero match is positive. Bank fee requires GL availability; absent GL table is insufficient, while complete GL with no fee journal is positive.\n\n**11. Expected output.** Return bank transaction and any fee journal evidence; reason states transaction type, direction, amount, normalized reference, and payment-match count.\n\n**12. Evidence requirements.** Bank row plus matching-payment query result; fee exceptions require every line of the balanced fee journal.\n\n**13. Expected strengths.** Manual/unrecorded outgoing transactions and legitimate bank-fee separation.\n\n**14. Expected failure modes.** Batched bank debits, unknown bank transaction coding, reference truncation, or legitimate non-AP disbursements.\n\n### 5.14 RSQL_F14_V1 \u2014 F14_BANK_ERP_AMOUNT_MISMATCH\n\n**1. Failure type.** A positive is a uniquely reference-matched payment/bank debit in the same currency whose amount delta exceeds currency quantum and is not exactly explained by a balanced source-linked fee journal. A negative is exact, within rounding tolerance, fully fee-explained, or a documented FX settlement.\n\n**2. Required tables.**\n\n- Table: `payments`; required fields: `payment_id`, `payment_currency`, `payment_amount`, `reference_number`; purpose: provide the ERP amount/currency and match reference.\n- Table: `bank_transactions`; required fields: `bank_transaction_id`, `payment_reference`, `currency`, `amount`, `direction`, `status`, `posted_date`; purpose: provide the external settlement amount/currency.\n- Table: `gl_entries`; required fields: `journal_id`, `journal_line_id`, `transaction_type`, `source_transaction_id`, `debit`, `credit`, `currency`; purpose: quantify balanced fee or FX accounting explanations.\n- Table: `audit_log`; required fields: `event_id`, `entity_type`, `entity_id`, `event_type`, `timestamp`; purpose: validate only the structured FX legitimate exception.\n\n**3. Join path.** `payments.reference_number -> bank_transactions.payment_reference`; then `bank_transactions.bank_transaction_id -> gl_entries.source_transaction_id` for `BANK_FEE` or `FX_SETTLEMENT`. `bank_transaction_id -> audit_log.entity_id` is a parallel operational-event link. Left joins preserve absent adjustments.\n\n**4. Reasoning complexity.** Tier 3 \u2014 multi-hop relational. **Hop count: 2.** It follows payment to bank settlement and then to accounting explanation.\n\n**5. Deterministic detection rule.** Require exactly one non-fee posted bank debit matched by normalized reference. If currencies match, compute `delta_abs=ABS(payment_amount-bank_amount)` and `explained_fee=SUM(debit)` across balanced `BANK_FEE` journals whose source is that matched bank transaction. Match when `delta_abs<=quantum` or `ABS(delta_abs-explained_fee)<=quantum`; otherwise flag. If currencies differ, return match only when a balanced `FX_SETTLEMENT` journal linked to the bank transaction and a pre-cutoff `FX_CONVERSION_APPLIED` audit event both exist; otherwise insufficient because no FX rate table exists. F15 reciprocal cross-match takes precedence over F14.\n\n**6. SQL-style pseudocode.**\n\n```sql\nWITH matched AS (\n SELECT p.*,b.bank_transaction_id,b.amount AS bank_amount,b.currency AS bank_currency,\n        COUNT(*) OVER (PARTITION BY p.payment_id) AS match_count\n FROM payments p JOIN bank_transactions b\n  ON NORM_REFERENCE(b.payment_reference)=NORM_REFERENCE(p.reference_number)\n WHERE NORM_STATUS(b.direction)='DEBIT' AND NORM_STATUS(b.status)='POSTED'\n   AND NORM_STATUS(b.transaction_type)<>'BANK_FEE' AND b.posted_date<=:as_of\n), adjusted AS (\n SELECT m.*, BALANCED_DEBIT_TOTAL(m.bank_transaction_id,'BANK_FEE') AS explained_fee,\n        BALANCED_JOURNAL_EXISTS(m.bank_transaction_id,'FX_SETTLEMENT') AS fx_gl,\n        EVENT_EXISTS(m.bank_transaction_id,'FX_CONVERSION_APPLIED',:as_of) AS fx_event\n FROM matched m\n)\nSELECT *, CASE\n WHEN match_count<>1 THEN NULL\n WHEN payment_currency<>bank_currency AND fx_gl=1 AND fx_event=1 THEN 0\n WHEN payment_currency<>bank_currency THEN NULL\n WHEN ABS(payment_amount-bank_amount)<=CURRENCY_QUANTUM(payment_currency) THEN 0\n WHEN ABS(ABS(payment_amount-bank_amount)-explained_fee)\n          <=CURRENCY_QUANTUM(payment_currency) THEN 0\n ELSE 1 END AS is_anomaly\nFROM adjusted;\n```\n\n**7. Thresholds and tolerances.** Currency quantum fixed. Fee explanation must match the absolute delta within quantum. No inferred FX tolerance and no validation tuning.\n\n**8. Data normalization.** Shared references, status/type, currency, and money. Only audit event type `FX_CONVERSION_APPLIED` is permitted; audit free text and old/new narrative are not used.\n\n**9. Edge cases.** A 25-unit delta with a balanced 25-unit fee journal matches; the same delta without it is anomalous. Separately posted fees do not alter an exact primary debit. Currency mismatch without both structured FX artifacts is insufficient. Partial settlement should be represented through payment allocations/status; an unexplained bank delta remains F14.\n\n**10. Missing-data behavior.** Missing/ambiguous bank match, currency, amount, GL table, or required cross-currency evidence is insufficient. A complete same-currency mismatch with no adjustment row is positive absence evidence.\n\n**11. Expected output.** Return payment, bank transaction, and adjustment GL/audit IDs when present; reason reports both amounts/currencies, absolute delta, explained fee, and FX evidence booleans.\n\n**12. Evidence requirements.** Payment and unique matched bank transaction; a normal fee/FX decision additionally requires complete linked journal lines and the structured FX event where applicable.\n\n**13. Expected strengths.** Exact same-currency mismatches and explicit fee-accounting exceptions.\n\n**14. Expected failure modes.** FX without structured evidence, aggregate bank fees, discounts, or external processor adjustments lacking source links.\n\n### 5.15 RSQL_F15_V1 \u2014 F15_INCORRECT_PAYMENT_BANK_MATCH\n\n**1. Failure type.** A positive is a reciprocal two-payment/two-bank cross-match: each bank row references the other payment, while amount, currency, destination token, and date uniquely support the opposite pairing. A negative has a consistent reference/economic match, a legitimate batch, or ambiguous nonunique candidates.\n\n**2. Required tables.**\n\n- Table: `payments`; required fields: `payment_id`, `vendor_id`, `bank_account_id`, `payment_date`, `payment_currency`, `payment_amount`, `reference_number`, `payment_status`, `settlement_status`; purpose: provide current reference assignments and economic candidates.\n- Table: `bank_transactions`; required fields: `bank_transaction_id`, `counterparty_token`, `transaction_date`, `posted_date`, `currency`, `amount`, `payment_reference`, `direction`, `status`; purpose: provide the externally matched settlements.\n- Table: `payment_allocations`; required fields: `payment_id`, `invoice_id`, `allocated_amount`, `allocation_date`; purpose: prove each candidate payment supports a distinct obligation and identify evidence rows.\n- Table: `invoices`; required fields: `invoice_id`, `vendor_id`; purpose: validate the allocated obligations and their identity.\n\n**3. Join path.** Current link: bank `payment_reference -> payment.reference_number`; candidate economic link: equal currency/token, within-money amount, and date window. Evidence then follows each candidate `payment_id -> payment_allocations.payment_id -> invoices.invoice_id`. The reciprocal cycle is `bank A -> referenced payment B -> bank B -> referenced payment A`, with both alternative economic links verified.\n\n**4. Reasoning complexity.** Tier 3 \u2014 multi-hop relational. **Hop count: 3.** The reciprocal relationship chain and obligation validation require at least three traversals.\n\n**5. Deterministic detection rule.** Build `ref_payment(b)` from normalized reference and require uniqueness. Build economic candidates `econ_payment(b)` requiring effective payment, same currency, `WITHIN_MONEY` amount, `bank.counterparty_token=payment.bank_account_id`, and absolute payment/transaction-date difference within `CROSS_MATCH_DATE_WINDOW_CALENDAR_DAYS`. Require exactly one economic candidate and at least one valid allocation/invoice for each involved payment. A cross edge exists when referenced and economic payment IDs differ. Flag only when two cross edges form a reciprocal cycle and the two payment amounts are distinct beyond quantum. F14 is suppressed for those four records.\n\n**6. SQL-style pseudocode.**\n\n```sql\nWITH ref_match AS (\n SELECT b.bank_transaction_id,MIN(p.payment_id) AS ref_payment_id\n FROM bank_transactions b JOIN payments p\n  ON NORM_REFERENCE(b.payment_reference)=NORM_REFERENCE(p.reference_number)\n WHERE POSTED_DEBIT(b)=1\n GROUP BY b.bank_transaction_id\n HAVING COUNT(*)=1\n), econ_match AS (\n SELECT b.bank_transaction_id,MIN(p.payment_id) AS econ_payment_id\n FROM bank_transactions b JOIN payments p\n  ON b.currency=p.payment_currency\n AND WITHIN_MONEY(b.amount,p.payment_amount,b.currency)\n AND b.counterparty_token=p.bank_account_id\n AND ABS(DATE_DIFF(b.transaction_date,p.payment_date))<=:cross_days\n WHERE POSTED_DEBIT(b)=1 AND EFFECTIVE_PAYMENT(p)=1\n   AND EXISTS (SELECT 1 FROM payment_allocations pa JOIN invoices i\n               ON i.invoice_id=pa.invoice_id\n               WHERE pa.payment_id=p.payment_id AND i.vendor_id=p.vendor_id)\n GROUP BY b.bank_transaction_id\n HAVING COUNT(*)=1\n), cross_edge AS (\n SELECT r.bank_transaction_id,r.ref_payment_id,e.econ_payment_id\n FROM ref_match r JOIN econ_match e USING (bank_transaction_id)\n WHERE r.ref_payment_id<>e.econ_payment_id\n)\nSELECT a.bank_transaction_id,b.bank_transaction_id,\n       a.econ_payment_id,b.econ_payment_id,1 AS is_anomaly\nFROM cross_edge a JOIN cross_edge b\n ON a.ref_payment_id=b.econ_payment_id\nAND a.econ_payment_id=b.ref_payment_id\nAND a.bank_transaction_id<b.bank_transaction_id\nJOIN payments p1 ON p1.payment_id=a.econ_payment_id\nJOIN payments p2 ON p2.payment_id=b.econ_payment_id\nWHERE p1.vendor_id=p2.vendor_id\n  AND NOT WITHIN_MONEY(p1.payment_amount,p2.payment_amount,p1.payment_currency);\n```\n\n**7. Thresholds and tolerances.** `CROSS_MATCH_DATE_WINDOW_CALENDAR_DAYS=7`, globally fixed from the benchmark mechanism. Amount equality uses currency quantum. Candidate/reference uniqueness is exactly one. No validation tuning.\n\n**8. Data normalization.** Shared reference, dates, statuses, currency, and money; bank counterparty/payment destination tokens are trimmed exact strings. Company `bank_account_id` values are never compared to payment destination tokens.\n\n**9. Edge cases.** Identical-amount payments are insufficient because the swap is not observable. More than one economic candidate is insufficient, not arbitrarily resolved. Batches match when one payment's amount equals its bank debit and allocations support multiple invoices. F14-like one-sided mismatch lacks a reciprocal cycle and stays F14.\n\n**10. Missing-data behavior.** Missing token/reference/date/currency/amount, nonunique candidate, or missing allocation/invoice evidence is insufficient. A unique consistent pairing is `MATCH`.\n\n**11. Expected output.** Return two payments, two bank transactions, and all allocations/invoices establishing their obligations; reason gives both current pairs, both proposed pairs, amounts, tokens, and dates.\n\n**12. Evidence requirements.** Both payment rows, both bank rows, at least one valid allocation and invoice per payment, and every field used in reference/economic matching.\n\n**13. Expected strengths.** Reciprocal swapped references among similar same-vendor settlements without relying on ground-truth causal edges.\n\n**14. Expected failure modes.** Identical amounts, larger cycles, batch-level bank references, missing counterparty tokens, or more than two plausible candidates.\n\n## 6. Baseline rule registry\n\n| Rule ID | Failure Type | Tables | Hop Count | Tier | Detection Mechanism | Tunable Parameters | Output Class |\n|---|---|---|---:|---|---|---|---|\n| RSQL_F01_V1 | F01 duplicate invoice | invoices | 0 | Tier 1 | normalized/fuzzy self-duplicate | duplicate days, similarity | F01_DUPLICATE_INVOICE |\n| RSQL_F02_V1 | F02 PO/invoice amount | invoices, invoice_lines, purchase_orders, po_lines | 2 | Tier 3 | authorized line/header variance | fixed PO tolerance | F02_PO_INVOICE_AMOUNT_MISMATCH |\n| RSQL_F03_V1 | F03 quantity mismatch | invoices, invoice_lines, po_lines | 2 | Tier 3 | exact linked quantity inequality | none | F03_QUANTITY_MISMATCH |\n| RSQL_F04_V1 | F04 wrong vendor | invoices, purchase_orders | 1 | Tier 2 | FK-linked vendor inequality | none | F04_INCORRECT_VENDOR_ASSOCIATION |\n| RSQL_F05_V1 | F05 unsupported payment | payments, payment_allocations, invoices | 2 | Tier 3 | relationship anti-join | none | F05_PAYMENT_WITHOUT_VALID_INVOICE |\n| RSQL_F06_V1 | F06 double payment | invoices, payment_allocations, payments | 2 | Tier 3 | successful allocation overage | fixed quantum | F06_INVOICE_PAID_TWICE |\n| RSQL_F07_V1 | F07 partial/residual | invoices, payment_allocations, payments | 2 | Tier 3 | paid-status residual | fixed quantum | F07_PARTIAL_PAYMENT_RESIDUAL_BALANCE |\n| RSQL_F08_V1 | F08 approval failure | payments, payment_allocations, invoices, approval_events, employees | 4 | Tier 3 | policy sequence/authority | fixed approval ladder | F08_APPROVAL_WORKFLOW_FAILURE |\n| RSQL_F09_V1 | F09 GL mismatch | payments, gl_entries | 1 | Tier 2 | source/control-account totals | fixed quantum/lag | F09_GL_POSTING_MISMATCH |\n| RSQL_F10_V1 | F10 wrong period | payments, gl_entries | 1 | Tier 2 | economic month inequality | none | F10_WRONG_ACCOUNTING_PERIOD |\n| RSQL_F11_V1 | F11 vendor change conflict | payments, vendors, vendor_change_log, bank_transactions | 2 | Tier 3 | temporal effective-state reconstruction | none | F11_VENDOR_MASTER_CHANGE_CONFLICT |\n| RSQL_F12_V1 | F12 ERP missing bank | payments, bank_transactions | 1 | Tier 2 | clearing-window anti-join | fixed method windows | F12_ERP_PAYMENT_MISSING_FROM_BANK |\n| RSQL_F13_V1 | F13 bank missing ERP | bank_transactions, payments, gl_entries | 1 | Tier 2 | reverse anti-join with fee exception | fixed quantum | F13_BANK_TRANSACTION_MISSING_FROM_ERP |\n| RSQL_F14_V1 | F14 bank/ERP amount | payments, bank_transactions, gl_entries, audit_log | 2 | Tier 3 | delta minus documented adjustment | fixed quantum | F14_BANK_ERP_AMOUNT_MISMATCH |\n| RSQL_F15_V1 | F15 wrong bank match | payments, bank_transactions, payment_allocations, invoices | 3 | Tier 3 | reciprocal unique cross-match | fixed 7-day window | F15_INCORRECT_PAYMENT_BANK_MATCH |\n\n## 7. Table dependency matrix\n\nAbbreviations: V=`vendors`, VC=`vendor_change_log`, PO=`purchase_orders`, POL=`po_lines`, I=`invoices`, IL=`invoice_lines`, AE=`approval_events`, E=`employees`, P=`payments`, PA=`payment_allocations`, GL=`gl_entries`, BT=`bank_transactions`, BS=`bank_statements`, AL=`audit_log`.\n\n| Failure | V | VC | PO | POL | I | IL | AE | E | P | PA | GL | BT | BS | AL |\n|---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|\n| F01 |  |  |  |  | \u2713 |  |  |  |  |  |  |  |  |  |\n| F02 |  |  | \u2713 | \u2713 | \u2713 | \u2713 |  |  |  |  |  |  |  |  |\n| F03 |  |  |  | \u2713 | \u2713 | \u2713 |  |  |  |  |  |  |  |  |\n| F04 |  |  | \u2713 |  | \u2713 |  |  |  |  |  |  |  |  |  |\n| F05 |  |  |  |  | \u2713 |  |  |  | \u2713 | \u2713 |  |  |  |  |\n| F06 |  |  |  |  | \u2713 |  |  |  | \u2713 | \u2713 |  |  |  |  |\n| F07 |  |  |  |  | \u2713 |  |  |  | \u2713 | \u2713 |  |  |  |  |\n| F08 |  |  |  |  | \u2713 |  | \u2713 | \u2713 | \u2713 | \u2713 |  |  |  |  |\n| F09 |  |  |  |  |  |  |  |  | \u2713 |  | \u2713 |  |  |  |\n| F10 |  |  |  |  |  |  |  |  | \u2713 |  | \u2713 |  |  |  |\n| F11 | \u2713 | \u2713 |  |  |  |  |  |  | \u2713 |  |  | \u2713 |  |  |\n| F12 |  |  |  |  |  |  |  |  | \u2713 |  |  | \u2713 |  |  |\n| F13 |  |  |  |  |  |  |  |  | \u2713 |  | \u2713 | \u2713 |  |  |\n| F14 |  |  |  |  |  |  |  |  | \u2713 |  | \u2713 | \u2713 |  | \u2713 |\n| F15 |  |  |  |  | \u2713 |  |  |  | \u2713 | \u2713 |  | \u2713 |  |  |\n\n`bank_statements` is intentionally unused: statements validate bank arithmetic but do not provide transaction-level linkage needed by these 15 classes.\n\n## 8. Complexity and exact-hop analysis\n\n| Complexity | Count | Rules |\n|---|---:|---|\n| Tier 1 \u2014 single-record / zero-hop | 1 | F01 |\n| Tier 2 \u2014 one-hop relational | 5 | F04, F09, F10, F12, F13 |\n| Tier 3 \u2014 multi-hop relational | 9 | F02, F03, F05, F06, F07, F08, F11, F14, F15 |\n\n| Hop count | Count | Rules |\n|---:|---:|---|\n| 0 | 1 | F01 |\n| 1 | 5 | F04, F09, F10, F12, F13 |\n| 2 | 7 | F02, F03, F05, F06, F07, F11, F14 |\n| 3 | 1 | F15 |\n| 4 | 1 | F08 |\n\nHop count is the maximum explicit entity relationship traversed for the minimum legitimate anomaly evidence, not the number of tables mentioned in a query or the number of SQL joins used for aggregation.\n\n## 9. Threshold registry\n\n| Parameter | Definition | Frozen initial value / search space | Rationale | Policy |\n|---|---|---|---|---|\n| AS_OF_DATE | observation cutoff | 2026-06-30 | benchmark configuration | global fixed |\n| MONEY_QUANTUM | absolute rounding tolerance | JPY 1; USD/EUR/GBP/CAD 0.01 | native precision | global fixed |\n| DUPLICATE_DATE_WINDOW_DAYS | max invoice-date separation | initial 14; grid 7,14,30 | separate duplicates from recurring cycles | **VALIDATION-TUNED** |\n| DUPLICATE_REFERENCE_SIMILARITY | minimum normalized edit similarity | initial .90; grid .85,.90,.95,1.00 | tolerate nonexact references | **VALIDATION-TUNED** |\n| PO_TOLERANCE_PERCENT | authorized price/charge variance | 2.0% | `config.yaml` control | global fixed |\n| QUANTITY_TOLERANCE | allowed unit difference | 0 | quantities are exact integers | global fixed |\n| MIN_POSITIVE_ALLOCATION | allocation considered support | strictly greater than 0 | zero does not settle an obligation | global fixed |\n| OVERPAYMENT_TOLERANCE | excess ignored as rounding | currency quantum | avoid subprecision flags | global fixed |\n| RESIDUAL_TOLERANCE | residual ignored as rounding | currency quantum | avoid subprecision flags | global fixed |\n| APPROVAL_POLICY | amount-to-role ladder | 500/10k/50k/250k as Section 5.8 | benchmark business policy | global fixed |\n| GL_POSTING_LAG_BUSINESS_DAYS | completed payment GL wait | 0 | benchmark posts same day | global fixed |\n| ACCOUNTING_PERIOD_TOLERANCE | allowed period displacement | 0 periods | benchmark economic-period policy | global fixed |\n| ACH_CLEARING_BD | ACH settlement window | 3 | configuration | global fixed |\n| WIRE_CLEARING_BD | wire settlement window | 1 | configuration | global fixed |\n| CHECK_CLEARING_BD | check settlement window | 10 | configuration | global fixed |\n| VIRTUAL_CARD_CLEARING_BD | card settlement window | 2 | generator methodology | global fixed |\n| CLEARING_GRACE_BD | extra bank absence grace | 0 | method windows already include grace | global fixed |\n| CROSS_MATCH_DATE_WINDOW_DAYS | F15 economic-candidate window | 7 calendar days | frozen failure mechanism | global fixed |\n| CROSS_MATCH_CANDIDATE_COUNT | number of admissible economic/reference candidates | exactly 1 each | avoid arbitrary ambiguous matching | global fixed |\n\nOnly the two F01 parameters may be tuned. The exact grid, objective, and tie-break are frozen: maximize macro-F1 over all 16 output classes on validation; ties choose higher similarity, then shorter date window, then the initial value if still tied. The selected pair must be written to the baseline run manifest before any test inference. No rule, join, normalization, or other parameter may be validation-tuned.\n\n## 10. Ambiguity register\n\nNo material ambiguity blocks implementation. The schema limitations below have explicit v1 decisions and therefore may not be revisited after test results.\n\n| Topic / affected failure | Problem | Why it matters | Frozen decision before implementation |\n|---|---|---|---|\n| Approval policy / F08 | no policy table exists | required levels otherwise ambiguous | use the fixed ladder in Section 5.8 |\n| Observation cutoff / F12 | no dataset metadata table exists | delay status needs a reference date | harness supplies fixed 2026-06-30 |\n| Table completeness / absence rules | SQL cannot distinguish missing row from incomplete load | affects F05/F09/F12/F13/F14 | harness validates complete snapshots; failed table load yields insufficient |\n| FX / F14 | no FX-rate table exists | cross-currency amount equality is undefined | match only with structured FX event plus balanced FX journal; otherwise insufficient |\n| PO amendments/receipts / F02-F03 | no amendment, receipt, or cumulative billing table | legitimate partials may resemble mismatch | line-price rule limits F02; F03 flags exact quantity inequality and records limitation |\n| Vendor aliases/hierarchy / F01/F04 | no alias or corporate-family table | semantic identity cannot be resolved | vendor IDs remain authoritative; no name-based merge |\n| Bank-payment FK / F12-F15 | no physical FK exists | references can be missing or wrong | use normalized payment reference; F15 uses reciprocal economic matching |\n| Payment status timing | status update timestamp is absent | state availability cannot be reconstructed from business dates | treat delivered status as available to every method; use cutoff only for explicit aging logic and record this limitation |\n\n## 11. Potential rule collisions and precedence\n\nThe scored output is single-label. All raw rule hits are retained, then the following frozen precedence is applied from highest to lowest:\n\n`F15 > F11 > F08 > F06 > F07 > F05 > F01 > F04 > F03 > F02 > F10 > F09 > F14 > F12 > F13`.\n\nThis order favors a more specific causal/relational mechanism over its surface symptom. It is not changed from test results.\n\n| Involved rules | Why both can trigger | Multiple scored labels? | Frozen resolution |\n|---|---|---|---|\n| F03, F02 | quantity manipulation can also change unit price | no | F03 precedes F02 when linked quantity differs |\n| F15, F14 | swapped references create apparent amount mismatch | no | reciprocal F15 cycle suppresses F14 on the four records |\n| F11, F12/F14 | stale vendor data can cause failed or absent/mismatched settlement | no | temporally proven F11 takes precedence |\n| F05, F12 | unsupported payment may also lack bank settlement | no | F05's missing payable is the more specific upstream condition |\n| F08, downstream payment rules | an unauthorized payment can also fail later | no | F08 wins when its complete policy violation is evidenced, except F15/F11 |\n| F06, F01 | duplicate obligation and duplicate disbursement can coexist in real data | no | F06 wins for actual overpayment; F01 raw hit is retained |\n| F10, F09 | one journal may have wrong period and wrong amount/account | no | period-specific F10 precedes general GL mismatch |\n| F13, accounted fee exception | bank fee lacks ERP payment by design | no anomaly collision | balanced, typed fee is MATCH and F13 is suppressed |\n| F07, F06 | aggregate cannot be simultaneously below and above one invoice total | no | mutually exclusive by arithmetic |\n| F12, F13 | one is ERP-without-bank and the other bank-without-ERP | no | mutually exclusive for the same reference under unique matching |\n\nIf two unrelated genuine anomalies survive precedence, the baseline returns the higher rule and records the second in the unscored trace. This is a known consequence of the benchmark's single-primary-label contract.\n\n## 12. Leakage audit\n\n| Candidate input | Decision | Rationale / restriction |\n|---|---|---|\n| `rca_ground_truth.jsonl`, `failure_manifest.csv` | excluded | direct labels and adjudication |\n| expected answers/questions metadata | excluded except routing case/primary ID | direct targets; case ID is output correlation only |\n| `mutation_log.jsonl`, clean tables | excluded | before/after injection ground truth |\n| `causal_edges.csv` | excluded | exact graph-level ground truth, not operational data |\n| dataset quality/failure signatures | excluded | post-generation validation reveals anomalies |\n| split name | excluded | may correlate with held-out mechanisms/vendors |\n| `invoices.duplicate_reference` | excluded from classification | operationally ambiguous and used by legitimate credit memo linkage; unnecessary for F01 |\n| invoice/payment/bank statuses | allowed | delivered operational states, not human RCA labels; no update-time inference is attempted |\n| `settlement_status` | allowed | source-system state central to reconciliation; lack of a status-update timestamp is a frozen limitation |\n| `vendor_change_log.change_reason` | excluded from classification | narrative may overstate cause; structured field/time/values suffice |\n| `audit_log.comments`, `old_value`, `new_value` | excluded from classification | free text/change narrative could directly disclose injected cause |\n| anomaly-specific audit event types | excluded | events such as workflow override/transmission failure are not needed for class detection and risk cause leakage |\n| `FX_CONVERSION_APPLIED` audit event type | allowed only in F14 negative branch | structured operational evidence establishes a legitimate FX exception; cannot trigger an anomaly label |\n| GL `memo` | excluded from classification | narrative description is unnecessary and can reveal semantics |\n| GL `transaction_type`, source ID, accounts | allowed | structured accounting linkage available in an ordinary ledger |\n| bank `transaction_type`, direction, status | allowed | ordinary statement/transaction attributes needed to distinguish fees/reversals |\n| `source_system` | excluded from predicates | useful for provenance but not needed to decide any rule |\n| employee role/limit/status | allowed | contemporaneous structured authorization attributes |\n\nThe implementation must produce a feature/column access audit proving that no excluded artifact or field was read during inference.\n\n## 13. Known limitations frozen before evaluation\n\n- F01 cannot reliably identify semantic duplicates with unrelated references or vendor aliases.\n- F02/F03 cannot reason about receipts, cumulative partial billing, PO amendments, discounts, or one invoice against multiple POs because the schema lacks those relationships.\n- F04 treats IDs as authoritative and cannot model parent/subsidiary or merger equivalence.\n- F05 can flag legitimate advances/prepayments because there is no payment-purpose field.\n- F06/F07 cannot recognize contractual write-offs or on-account balances outside allocations.\n- F08 cannot apply historical policy versions or undocumented delegation rules.\n- F09 assumes the benchmark chart-of-account roles and same-day payment posting.\n- F10 fixes payment date as the economic period under the benchmark accounting policy.\n- F11 assumes vendor change history is complete and one bank token is effective at a time.\n- F12 uses weekend-only business days and requires payment-level bank references.\n- F13 cannot classify unknown bank transaction types deterministically.\n- F14 cannot calculate FX from market rates and requires structured fee/FX linkage.\n- F15 handles only observable reciprocal two-cycles with unique, distinct-amount economic candidates.\n- Single-label precedence can hide a second genuine anomaly, though the raw trace preserves it.\n- All behavior is specific to the synthetic v1 schema and must not be presented as a universal enterprise reconciliation policy.\n\n## 14. Final freeze checklist\n\n- [x] 15 failure definitions\n- [x] rule IDs\n- [x] required tables\n- [x] join paths\n- [x] hop counts\n- [x] complexity tiers\n- [x] deterministic conditions\n- [x] normalization rules\n- [x] thresholds\n- [x] validation-tuned parameters and selection protocol\n- [x] NULL behavior\n- [x] missing-evidence behavior\n- [x] edge-case behavior\n- [x] rule precedence\n- [x] evidence requirements\n- [x] prediction output schema\n- [x] leakage audit\n- [x] known limitations\n\nImplementation is authorized only if it reproduces this document verbatim in its run manifest, records the validation-selected F01 pair before test inference, and passes a column-access leakage test. Any semantic change after test observation requires declaring the run exploratory and creating a new held-out test set.\n\n**READY TO FREEZE**\n",
+  "implementation_git_commit": "UNAVAILABLE_NOT_A_GIT_WORKTREE",
+  "implementation_issues": [
+    {
+      "affected_rule": "RSQL_F02_V1",
+      "implementation": "Read invoices.invoice_total only to apply the explicitly frozen nonpositive exclusion.",
+      "issue": "F02 required-fields bullet omits invoices.invoice_total while the explicit deterministic rule requires excluding nonpositive invoices.",
+      "issue_id": "IMPL-001",
+      "semantic_change": false,
+      "severity": "NON_BLOCKING"
+    }
+  ],
+  "model_visible_dataset_sha256": "d8dcd68290524db221bf07f5f654e4b930a039efb3f6ecabd98aa6e38eb7c662",
+  "parameter_configuration": {
+    "ACCOUNTING_PERIOD_TOLERANCE": 0,
+    "APPROVAL_POLICY": {
+      "10000": [
+        "MANAGER"
+      ],
+      "250000": [
+        "MANAGER",
+        "DIRECTOR",
+        "CONTROLLER"
+      ],
+      "500": [
+        "AUTO"
+      ],
+      "50000": [
+        "MANAGER",
+        "DIRECTOR"
+      ],
+      "above": [
+        "MANAGER",
+        "DIRECTOR",
+        "TREASURY"
+      ]
+    },
+    "AS_OF_DATE": "2026-06-30",
+    "CLEARING_GRACE_BUSINESS_DAYS": 0,
+    "CLEARING_LIMITS": {
+      "ACH": 3,
+      "CHECK": 10,
+      "VIRTUAL_CARD": 2,
+      "WIRE": 1
+    },
+    "CROSS_MATCH_CANDIDATE_COUNT": 1,
+    "CROSS_MATCH_DATE_WINDOW_CALENDAR_DAYS": 7,
+    "GL_POSTING_LAG_BUSINESS_DAYS": 0,
+    "MIN_POSITIVE_ALLOCATION": ">0",
+    "MONEY_QUANTUM": {
+      "CAD": "0.01",
+      "EUR": "0.01",
+      "GBP": "0.01",
+      "JPY": "1",
+      "USD": "0.01"
+    },
+    "OVERPAYMENT_TOLERANCE": "currency_quantum",
+    "PO_TOLERANCE_PERCENT": "2.0",
+    "QUANTITY_TOLERANCE": 0,
+    "RESIDUAL_TOLERANCE": "currency_quantum"
+  },
+  "protocol_deviations": [],
+  "random_seed": null,
+  "reproduction_command": "python3 -m src.rules_sql.cli run --data-root data/benchmark --output-root results/rules_sql --run-id <new_unique_run_id>",
+  "rule_count": 15,
+  "rule_registry": [
+    {
+      "evidence_requirement": "both invoice rows and all compared fields",
+      "failure_type": "F01_DUPLICATE_INVOICE",
+      "hop_count": 0,
+      "join_path": "invoices self-join on lexical invoice-id pairs",
+      "missing_data_behavior": "missing primary invoice/reference/vendor/currency/amount/date is insufficient",
+      "required_fields": {
+        "invoices": [
+          "invoice_id",
+          "vendor_id",
+          "invoice_number",
+          "invoice_date",
+          "currency",
+          "invoice_total",
+          "status"
+        ]
+      },
+      "required_tables": [
+        "invoices"
+      ],
+      "rule_id": "RSQL_F01_V1",
+      "thresholds": [
+        "DUPLICATE_DATE_WINDOW_DAYS",
+        "DUPLICATE_REFERENCE_SIMILARITY"
+      ],
+      "tier": 1
+    },
+    {
+      "evidence_requirement": "invoice, PO, and offending line pair; all lines for header anomaly",
+      "failure_type": "F02_PO_INVOICE_AMOUNT_MISMATCH",
+      "hop_count": 2,
+      "join_path": "invoice -> purchase order; invoice -> invoice line -> PO line",
+      "missing_data_behavior": "missing PO/line/currency/money/quantity is insufficient",
+      "required_fields": {
+        "invoice_lines": [
+          "invoice_id",
+          "invoice_line_id",
+          "po_line_id",
+          "quantity",
+          "unit_price",
+          "line_amount"
+        ],
+        "invoices": [
+          "invoice_id",
+          "po_id",
+          "currency",
+          "tax",
+          "shipping",
+          "status",
+          "invoice_total"
+        ],
+        "po_lines": [
+          "po_line_id",
+          "po_id",
+          "quantity",
+          "unit_price",
+          "line_amount"
+        ],
+        "purchase_orders": [
+          "po_id",
+          "currency",
+          "tax",
+          "shipping"
+        ]
+      },
+      "required_tables": [
+        "invoices",
+        "invoice_lines",
+        "purchase_orders",
+        "po_lines"
+      ],
+      "rule_id": "RSQL_F02_V1",
+      "thresholds": [
+        "PO_TOLERANCE_PERCENT",
+        "MONEY_QUANTUM"
+      ],
+      "tier": 3
+    },
+    {
+      "evidence_requirement": "invoice, offending invoice line, and referenced PO line",
+      "failure_type": "F03_QUANTITY_MISMATCH",
+      "hop_count": 2,
+      "join_path": "invoice -> invoice line -> PO line",
+      "missing_data_behavior": "missing invoice/line/referenced PO line/quantity is insufficient",
+      "required_fields": {
+        "invoice_lines": [
+          "invoice_id",
+          "invoice_line_id",
+          "po_line_id",
+          "quantity"
+        ],
+        "invoices": [
+          "invoice_id",
+          "status"
+        ],
+        "po_lines": [
+          "po_line_id",
+          "quantity"
+        ]
+      },
+      "required_tables": [
+        "invoices",
+        "invoice_lines",
+        "po_lines"
+      ],
+      "rule_id": "RSQL_F03_V1",
+      "thresholds": [
+        "QUANTITY_TOLERANCE"
+      ],
+      "tier": 3
+    },
+    {
+      "evidence_requirement": "invoice and referenced PO with both vendor IDs",
+      "failure_type": "F04_INCORRECT_VENDOR_ASSOCIATION",
+      "hop_count": 1,
+      "join_path": "invoice -> purchase order",
+      "missing_data_behavior": "missing PO or vendor ID is insufficient",
+      "required_fields": {
+        "invoices": [
+          "invoice_id",
+          "po_id",
+          "vendor_id",
+          "status"
+        ],
+        "purchase_orders": [
+          "po_id",
+          "vendor_id"
+        ]
+      },
+      "required_tables": [
+        "invoices",
+        "purchase_orders"
+      ],
+      "rule_id": "RSQL_F04_V1",
+      "thresholds": [],
+      "tier": 2
+    },
+    {
+      "evidence_requirement": "payment and any invalid allocation rows; anti-join count for absence",
+      "failure_type": "F05_PAYMENT_WITHOUT_VALID_INVOICE",
+      "hop_count": 2,
+      "join_path": "payment -> allocation -> invoice, using left joins",
+      "missing_data_behavior": "unavailable table is insufficient; complete zero-match is anomaly",
+      "required_fields": {
+        "invoices": [
+          "invoice_id"
+        ],
+        "payment_allocations": [
+          "payment_id",
+          "invoice_id",
+          "allocated_amount",
+          "allocation_date"
+        ],
+        "payments": [
+          "payment_id",
+          "payment_status",
+          "settlement_status",
+          "payment_amount"
+        ]
+      },
+      "required_tables": [
+        "payments",
+        "payment_allocations",
+        "invoices"
+      ],
+      "rule_id": "RSQL_F05_V1",
+      "thresholds": [
+        "MIN_POSITIVE_ALLOCATION"
+      ],
+      "tier": 3
+    },
+    {
+      "evidence_requirement": "invoice and every effective payment/allocation in net paid",
+      "failure_type": "F06_INVOICE_PAID_TWICE",
+      "hop_count": 2,
+      "join_path": "invoice -> allocation -> payment",
+      "missing_data_behavior": "missing amount/currency/table or broken contributing relationship is insufficient",
+      "required_fields": {
+        "invoices": [
+          "invoice_id",
+          "currency",
+          "invoice_total",
+          "status"
+        ],
+        "payment_allocations": [
+          "invoice_id",
+          "payment_id",
+          "allocated_amount",
+          "allocation_date"
+        ],
+        "payments": [
+          "payment_id",
+          "payment_currency",
+          "payment_status",
+          "settlement_status"
+        ]
+      },
+      "required_tables": [
+        "invoices",
+        "payment_allocations",
+        "payments"
+      ],
+      "rule_id": "RSQL_F06_V1",
+      "thresholds": [
+        "OVERPAYMENT_TOLERANCE"
+      ],
+      "tier": 3
+    },
+    {
+      "evidence_requirement": "invoice and every effective payment/allocation in net paid",
+      "failure_type": "F07_PARTIAL_PAYMENT_RESIDUAL_BALANCE",
+      "hop_count": 2,
+      "join_path": "invoice -> allocation -> payment",
+      "missing_data_behavior": "missing required evidence is insufficient; zero-paid PAID is insufficient",
+      "required_fields": {
+        "invoices": [
+          "invoice_id",
+          "invoice_total",
+          "currency",
+          "status"
+        ],
+        "payment_allocations": [
+          "invoice_id",
+          "payment_id",
+          "allocated_amount",
+          "allocation_date"
+        ],
+        "payments": [
+          "payment_id",
+          "payment_currency",
+          "payment_status",
+          "settlement_status"
+        ]
+      },
+      "required_tables": [
+        "invoices",
+        "payment_allocations",
+        "payments"
+      ],
+      "rule_id": "RSQL_F07_V1",
+      "thresholds": [
+        "RESIDUAL_TOLERANCE"
+      ],
+      "tier": 3
+    },
+    {
+      "evidence_requirement": "payment/allocation/invoice, complete approval sequence, relied-upon employees",
+      "failure_type": "F08_APPROVAL_WORKFLOW_FAILURE",
+      "hop_count": 4,
+      "join_path": "payment -> allocation -> invoice -> approval; approval -> employee",
+      "missing_data_behavior": "missing required event in complete table is anomaly; unavailable evidence is insufficient",
+      "required_fields": {
+        "approval_events": [
+          "invoice_id",
+          "approval_level",
+          "approver_id",
+          "approver_role",
+          "action",
+          "event_timestamp"
+        ],
+        "employees": [
+          "employee_id",
+          "role",
+          "approval_limit",
+          "active_status"
+        ],
+        "invoices": [
+          "invoice_id",
+          "invoice_total",
+          "currency"
+        ],
+        "payment_allocations": [
+          "payment_id",
+          "invoice_id",
+          "allocation_date"
+        ],
+        "payments": [
+          "payment_id",
+          "created_at",
+          "payment_status"
+        ]
+      },
+      "required_tables": [
+        "payments",
+        "payment_allocations",
+        "invoices",
+        "approval_events",
+        "employees"
+      ],
+      "rule_id": "RSQL_F08_V1",
+      "thresholds": [
+        "APPROVAL_POLICY"
+      ],
+      "tier": 3
+    },
+    {
+      "evidence_requirement": "payment and complete source journal; anti-join count for missing posting",
+      "failure_type": "F09_GL_POSTING_MISMATCH",
+      "hop_count": 1,
+      "join_path": "payment -> source-linked PAYMENT journal",
+      "missing_data_behavior": "unavailable GL/invalid payment economics is insufficient; complete zero-match is anomaly",
+      "required_fields": {
+        "gl_entries": [
+          "journal_id",
+          "journal_line_id",
+          "transaction_type",
+          "source_transaction_id",
+          "posting_date",
+          "gl_account",
+          "debit",
+          "credit",
+          "currency"
+        ],
+        "payments": [
+          "payment_id",
+          "payment_date",
+          "payment_currency",
+          "payment_amount",
+          "payment_status",
+          "settlement_status"
+        ]
+      },
+      "required_tables": [
+        "payments",
+        "gl_entries"
+      ],
+      "rule_id": "RSQL_F09_V1",
+      "thresholds": [
+        "GL_POSTING_LAG_BUSINESS_DAYS",
+        "MONEY_QUANTUM"
+      ],
+      "tier": 2
+    },
+    {
+      "evidence_requirement": "payment date and every source-linked journal line date/period",
+      "failure_type": "F10_WRONG_ACCOUNTING_PERIOD",
+      "hop_count": 1,
+      "join_path": "payment -> source-linked PAYMENT journal",
+      "missing_data_behavior": "missing journal/date/period is insufficient",
+      "required_fields": {
+        "gl_entries": [
+          "journal_id",
+          "journal_line_id",
+          "transaction_type",
+          "source_transaction_id",
+          "posting_date",
+          "accounting_period"
+        ],
+        "payments": [
+          "payment_id",
+          "payment_date"
+        ]
+      },
+      "required_tables": [
+        "payments",
+        "gl_entries"
+      ],
+      "rule_id": "RSQL_F10_V1",
+      "thresholds": [
+        "ACCOUNTING_PERIOD_TOLERANCE"
+      ],
+      "tier": 2
+    },
+    {
+      "evidence_requirement": "payment, vendor, decisive changes, and matched bank transaction",
+      "failure_type": "F11_VENDOR_MASTER_CHANGE_CONFLICT",
+      "hop_count": 2,
+      "join_path": "payment -> vendor -> change history; payment reference -> bank transaction",
+      "missing_data_behavior": "missing reconstruction or bank outcome evidence is insufficient",
+      "required_fields": {
+        "bank_transactions": [
+          "bank_transaction_id",
+          "payment_reference",
+          "counterparty_token",
+          "status",
+          "posted_date"
+        ],
+        "payments": [
+          "payment_id",
+          "vendor_id",
+          "bank_account_id",
+          "created_at",
+          "reference_number",
+          "settlement_status"
+        ],
+        "vendor_change_log": [
+          "change_id",
+          "vendor_id",
+          "field_changed",
+          "old_value",
+          "new_value",
+          "changed_at"
+        ],
+        "vendors": [
+          "vendor_id",
+          "bank_account_token"
+        ]
+      },
+      "required_tables": [
+        "payments",
+        "vendors",
+        "vendor_change_log",
+        "bank_transactions"
+      ],
+      "rule_id": "RSQL_F11_V1",
+      "thresholds": [],
+      "tier": 3
+    },
+    {
+      "evidence_requirement": "payment and complete-bank anti-join count",
+      "failure_type": "F12_ERP_PAYMENT_MISSING_FROM_BANK",
+      "hop_count": 1,
+      "join_path": "normalized payment reference left anti-join to bank",
+      "missing_data_behavior": "unavailable bank/null or duplicate reference/invalid date or method is insufficient",
+      "required_fields": {
+        "bank_transactions": [
+          "bank_transaction_id",
+          "payment_reference",
+          "transaction_type",
+          "direction",
+          "status",
+          "posted_date"
+        ],
+        "payments": [
+          "payment_id",
+          "payment_date",
+          "payment_method",
+          "payment_status",
+          "settlement_status",
+          "reference_number"
+        ]
+      },
+      "required_tables": [
+        "payments",
+        "bank_transactions"
+      ],
+      "rule_id": "RSQL_F12_V1",
+      "thresholds": [
+        "CLEARING_LIMITS",
+        "AS_OF_DATE"
+      ],
+      "tier": 2
+    },
+    {
+      "evidence_requirement": "bank row and matching-payment count; complete journal for fee exception",
+      "failure_type": "F13_BANK_TRANSACTION_MISSING_FROM_ERP",
+      "hop_count": 1,
+      "join_path": "bank reference left anti-join to payment; bank source link to fee GL",
+      "missing_data_behavior": "unavailable table is insufficient; complete zero-match is anomaly",
+      "required_fields": {
+        "bank_transactions": [
+          "bank_transaction_id",
+          "payment_reference",
+          "transaction_type",
+          "direction",
+          "amount",
+          "currency",
+          "status",
+          "posted_date"
+        ],
+        "gl_entries": [
+          "journal_id",
+          "journal_line_id",
+          "transaction_type",
+          "source_transaction_id",
+          "debit",
+          "credit",
+          "currency"
+        ],
+        "payments": [
+          "payment_id",
+          "reference_number"
+        ]
+      },
+      "required_tables": [
+        "bank_transactions",
+        "payments",
+        "gl_entries"
+      ],
+      "rule_id": "RSQL_F13_V1",
+      "thresholds": [
+        "MONEY_QUANTUM"
+      ],
+      "tier": 2
+    },
+    {
+      "evidence_requirement": "payment and unique bank; linked journal/event for adjustment decision",
+      "failure_type": "F14_BANK_ERP_AMOUNT_MISMATCH",
+      "hop_count": 2,
+      "join_path": "payment -> bank settlement -> fee/FX accounting; parallel structured FX event",
+      "missing_data_behavior": "missing/ambiguous bank or cross-currency evidence is insufficient",
+      "required_fields": {
+        "audit_log": [
+          "event_id",
+          "entity_type",
+          "entity_id",
+          "event_type",
+          "timestamp"
+        ],
+        "bank_transactions": [
+          "bank_transaction_id",
+          "payment_reference",
+          "currency",
+          "amount",
+          "direction",
+          "status",
+          "posted_date"
+        ],
+        "gl_entries": [
+          "journal_id",
+          "journal_line_id",
+          "transaction_type",
+          "source_transaction_id",
+          "debit",
+          "credit",
+          "currency"
+        ],
+        "payments": [
+          "payment_id",
+          "payment_currency",
+          "payment_amount",
+          "reference_number"
+        ]
+      },
+      "required_tables": [
+        "payments",
+        "bank_transactions",
+        "gl_entries",
+        "audit_log"
+      ],
+      "rule_id": "RSQL_F14_V1",
+      "thresholds": [
+        "MONEY_QUANTUM",
+        "AS_OF_DATE"
+      ],
+      "tier": 3
+    },
+    {
+      "evidence_requirement": "both payments/banks and at least one valid allocation/invoice per payment",
+      "failure_type": "F15_INCORRECT_PAYMENT_BANK_MATCH",
+      "hop_count": 3,
+      "join_path": "reciprocal bank -> referenced payment -> bank -> referenced payment cycle, plus allocation -> invoice",
+      "missing_data_behavior": "missing/nonunique candidates or obligation evidence is insufficient",
+      "required_fields": {
+        "bank_transactions": [
+          "bank_transaction_id",
+          "counterparty_token",
+          "transaction_date",
+          "posted_date",
+          "currency",
+          "amount",
+          "payment_reference",
+          "direction",
+          "status"
+        ],
+        "invoices": [
+          "invoice_id",
+          "vendor_id"
+        ],
+        "payment_allocations": [
+          "payment_id",
+          "invoice_id",
+          "allocated_amount",
+          "allocation_date"
+        ],
+        "payments": [
+          "payment_id",
+          "vendor_id",
+          "bank_account_id",
+          "payment_date",
+          "payment_currency",
+          "payment_amount",
+          "reference_number",
+          "payment_status",
+          "settlement_status"
+        ]
+      },
+      "required_tables": [
+        "payments",
+        "bank_transactions",
+        "payment_allocations",
+        "invoices"
+      ],
+      "rule_id": "RSQL_F15_V1",
+      "thresholds": [
+        "CROSS_MATCH_DATE_WINDOW_DAYS",
+        "CROSS_MATCH_CANDIDATE_COUNT"
+      ],
+      "tier": 3
+    }
+  ],
+  "run_id": "phase2_rules_sql_v1_0_20260808T183500Z",
+  "runtime_environment": {
+    "case_count": 439,
+    "case_latency_sum_seconds": 4.178434160000003,
+    "external_services": "none",
+    "llm_or_api_cost": 0,
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "mean_latency_ms": 9.518073257403188,
+    "median_latency_ms": 9.178333,
+    "p95_latency_ms": 18.434458,
+    "p99_latency_ms": 26.766875,
+    "peak_process_rss_bytes_approximate": 610451456,
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "runtime_technology": "CPython 3.11.3 standard-library in-memory relational indexes",
+    "throughput_cases_per_second": 101.61043865547327,
+    "total_evaluation_runtime_seconds": 4.3204222500062315
+  },
+  "test_inference_label_access": "labels opened only after immutable predictions.jsonl was saved",
+  "test_split_identifier": "data/benchmark/test/case_ids.txt",
+  "train_split_identifier": "data/benchmark/train/case_ids.txt",
+  "validation_split_identifier": "data/benchmark/validation/case_ids.txt"
+}

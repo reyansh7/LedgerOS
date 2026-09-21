@@ -1,0 +1,50 @@
+{
+  "artifact_type": "graphrag_registry_freeze_hash_inventory",
+  "artifact_version": "1.0",
+  "artifacts": [
+    {
+      "bytes": 21048,
+      "path": "results/graphrag/registry_freeze_v1/graph_node_registry_v1.json",
+      "sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10"
+    },
+    {
+      "bytes": 50303,
+      "path": "results/graphrag/registry_freeze_v1/graph_relation_registry_v1.json",
+      "sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3"
+    },
+    {
+      "bytes": 16834,
+      "path": "results/graphrag/registry_freeze_v1/graph_path_motifs_v1.json",
+      "sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef"
+    },
+    {
+      "bytes": 4157,
+      "path": "results/graphrag/registry_freeze_v1/graph_ranking_policy_v1.json",
+      "sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0"
+    },
+    {
+      "bytes": 7578,
+      "path": "results/graphrag/registry_freeze_v1/graph_freeze_manifest_v1.json",
+      "sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76"
+    },
+    {
+      "bytes": 23527,
+      "path": "results/graphrag/registry_freeze_v1/GRAPH_RAG_REGISTRY_FREEZE_REVIEW.md",
+      "sha256": "566736f0d14b238679c78d366b393f341f293531446632b21e6d9e14f1a270c3"
+    }
+  ],
+  "generation_time_recomputation_status": "PASS",
+  "independent_recomputation_required": true,
+  "self_hash_excluded_to_avoid_circularity": true,
+  "serialization_convention": {
+    "format": "UTF-8 JSON",
+    "hash_algorithm": "SHA-256",
+    "hash_scope": "raw serialized file bytes",
+    "json_options": {
+      "ensure_ascii": false,
+      "indent": 2,
+      "sort_keys": true,
+      "trailing_newline": true
+    }
+  }
+}

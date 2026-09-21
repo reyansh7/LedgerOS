@@ -1,0 +1,18 @@
+{
+  "status": "RESOLVED",
+  "preserved_original_run": "phase3_classical_ml_v1_0_20260808T210000Z",
+  "corrected_run": "phase3_classical_ml_v1_0_20260808T213000Z_auditfix1",
+  "affected_feature": "NUM044 vendor_name_token_count",
+  "frozen_requirement": "Training median; explicit entity missingness retained",
+  "frozen_spec_sections": ["5.4", "7", "14"],
+  "correction": "Replaced generic _count suffix initialization with an explicit true-relationship-count set; NUM044 now remains numeric missing when vendor is absent.",
+  "feature_definition_changed": false,
+  "model_or_search_protocol_changed": false,
+  "changed_feature_cells": {"train": 46, "validation": 22, "test": 28},
+  "selected_candidate_before": "hist_gradient_boosting_06",
+  "selected_candidate_after": "hist_gradient_boosting_06",
+  "held_out_prediction_labels_changed": 0,
+  "maximum_class_probability_difference": 0.0,
+  "aggregate_metrics_changed": false,
+  "original_results_preserved": true
+}

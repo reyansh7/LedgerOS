@@ -1,0 +1,143 @@
+{
+  "cases": [
+    {
+      "case_id": "RCA_001655",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001110",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000923",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000489",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000347",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_002048",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001109",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000987",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000909",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000881",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_002077",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000260",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001381",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000262",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001135",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000661",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001123",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000511",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001236",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000898",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000747",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001905",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001728",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000251",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000162",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000911",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000188",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000354",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001618",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001926",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_001106",
+      "complete": false
+    },
+    {
+      "case_id": "RCA_000934",
+      "complete": false
+    }
+  ],
+  "class_disagreement_rate": 0.0,
+  "complete": false,
+  "exact_class_agreement_rate": 0.0,
+  "exact_evidence_list_agreement_rate": 0.0,
+  "expected_calls": 96,
+  "mean_confidence_std": 0.0,
+  "mean_evidence_jaccard": 0.0,
+  "protocol_version": "direct_llm_validation_stability_v1.0",
+  "repetitions": 3,
+  "subset_case_count": 32,
+  "successful_parsed_calls": 0
+}

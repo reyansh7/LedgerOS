@@ -1,0 +1,36 @@
+{
+  "artifact_type": "phase6a3_one_shot_evaluation_artifact_inventory",
+  "artifact_version": "1.0",
+  "artifacts": {
+    "evaluation/case_level_metrics.jsonl": {
+      "bytes": 422332,
+      "sha256": "56125076b1554efb3cbccdd24fa35f1d1ab4994b92eff3a6fe251dd2b1a9d0c0"
+    },
+    "evaluation/evaluation_determinism.json": {
+      "bytes": 336,
+      "sha256": "753486acf7ad17e01c1bb10b20ceaf7484e719745f8fdafa04e935c60e8c49e0"
+    },
+    "evaluation/gold_access_started.json": {
+      "bytes": 714,
+      "sha256": "73606ddf476a4d1d835525c1381c7aa4702505b463efa255cc9050c9a2cbb487"
+    },
+    "evaluation/input_verification.json": {
+      "bytes": 14563,
+      "sha256": "f2cc93b74d9952c4773fef86a3bb24b39d8310b01adef6e3dc243f65ad6e39b4"
+    },
+    "evaluation/one_shot_metrics.json": {
+      "bytes": 178521,
+      "sha256": "4bb88027a9a06707eddf0494da2cb89ae98532d79e82aee5bbfcbe605155be50"
+    },
+    "evaluation/scientific_integrity.json": {
+      "bytes": 1176,
+      "sha256": "296ef65a57d09fa5a445d7f4d31743f044b42a3353c07ed1c01be8c7861b5894"
+    }
+  },
+  "hash_algorithm": "SHA-256",
+  "hash_scope": "RAW_FILE_BYTES",
+  "heldout_gold_opened": false,
+  "run_id": "phase6a3_graph_v1_1_retrieval_v1_2_20260816T034800Z",
+  "self_hash_omitted": true,
+  "status": "PASS"
+}

@@ -1,0 +1,23 @@
+{
+  "binary_accuracy": 0.9544419134396356,
+  "binary_f1": 0.9663299663299664,
+  "binary_precision": 0.959866220735786,
+  "binary_recall": 0.9728813559322034,
+  "evidence_contract_accuracy": null,
+  "evidence_limitation": "Classical ML does not return transaction evidence; evidence_record_ids are empty by contract.",
+  "exact_accuracy": 0.9544419134396356,
+  "false_negative_rate": 0.02711864406779661,
+  "false_positive_rate": 0.08333333333333333,
+  "fn": 8,
+  "fp": 12,
+  "macro_f1": 0.9623927296980705,
+  "micro_f1": 0.9544419134396356,
+  "model_output_states": {
+    "ANOMALY": 299,
+    "MATCH": 140
+  },
+  "tn": 132,
+  "total_cases": 439,
+  "tp": 287,
+  "weighted_f1": 0.9545736326410815
+}

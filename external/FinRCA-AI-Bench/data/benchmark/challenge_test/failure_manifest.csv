@@ -1,0 +1,5 @@
+case_id,failure_type,difficulty,primary_entity_type,primary_entity_id,affected_systems,reasoning_hops,injected_timestamp,root_cause_category,split
+RCA_000004,F02_PO_INVOICE_AMOUNT_MISMATCH,easy,invoice,INV_0420077,ERP-Procurement|ERP-AP|ERP-GL,2,2025-10-07T08:34:00,UNAUTHORIZED_PRICE_VARIANCE,challenge_test
+RCA_000017,F09_GL_POSTING_MISMATCH,medium,payment,PAY_0420140,ERP-AP|ERP-GL|Bank,3,2026-02-19T08:00:00,ERP_GL_INTERFACE_AMOUNT,challenge_test
+RCA_000044,NO_FAILURE,hard,payment,PAY_0420171,ERP-AP|Bank|ERP-GL,4,2025-12-24T17:00:00,LEGITIMATE_FX_SETTLEMENT,challenge_test
+RCA_000047,NO_FAILURE,easy,invoice,INV_0420037,ERP-AP|ERP-Procurement,2,2026-04-13T08:57:00,LEGITIMATE_EXACT_PO_MATCH,challenge_test

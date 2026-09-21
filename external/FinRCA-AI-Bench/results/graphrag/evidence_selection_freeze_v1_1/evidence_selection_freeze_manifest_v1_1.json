@@ -1,0 +1,112 @@
+{
+  "API_calls_made": false,
+  "LLM_used": false,
+  "RCA_accuracy_computed": false,
+  "anchor_policy": "ALL_EXACT_RESOLVED_ROOTS_MANDATORY",
+  "artifact_type": "graph_v1_1_evidence_selection_freeze_manifest",
+  "artifact_version": "1.1",
+  "atomic_path_policy": "ADMIT_ALL_CURRENTLY_UNSELECTED_PATH_RECORDS_OR_NONE; SKIP_AND_CONTINUE",
+  "cases_over_budget": 9,
+  "cases_structurally_simulated": 416,
+  "content_artifact_hashes": {
+    "EVIDENCE_SELECTION_POLICY_DESIGN_RATIONALE.md": {
+      "bytes": 9475,
+      "sha256": "8123b92e49f59824fd36438e9599290242657aef8523c19168c75f743c5e2868"
+    },
+    "evidence_selection_policy_v1_1.json": {
+      "bytes": 15374,
+      "sha256": "cad5f2298d9dad62599cfe592304c08cf8808441586fb865d1f4824b3054ea1b"
+    },
+    "evidence_selection_policy_v1_1_draft.json": {
+      "bytes": 15772,
+      "sha256": "db509ca1442b832b0c8b4bc401b8902cfec8f4fbd337a00f4ec12a62bf8cfcf8"
+    },
+    "over_budget_case_diagnostics.json": {
+      "bytes": 11349,
+      "sha256": "eaa8fdb02a8484cf525ee17ba29418ddd20f91a669f2ebd0003082a40e1cb872"
+    },
+    "policy_preregistration_manifest.json": {
+      "bytes": 2479,
+      "sha256": "8271c15c39c6d2a85f25aacb306a3d31e14898fee368615b402ee01ffa3bdb61"
+    },
+    "scientific_integrity_selection_freeze.json": {
+      "bytes": 1586,
+      "sha256": "ea1164338d0464d236ec0993777f8b997844618f529cb7f7b76faf0421e858d8"
+    },
+    "selection/drop_ledger_pre_gold.jsonl": {
+      "bytes": 1534349,
+      "sha256": "c367f2436a8b52b59ef394e84845b2b26408f16ef72e78b30cf8cd57d1aad3e9"
+    },
+    "selection/selected_paths_pre_gold.jsonl": {
+      "bytes": 19458898,
+      "sha256": "7c50a3569920124286ad1866af28155d6ba25d7e77d6480aaf0627f7c8cd0561"
+    },
+    "selection/selected_records_pre_gold.jsonl": {
+      "bytes": 41745675,
+      "sha256": "e8335a880b0cf57820f58c233f4558b9f4df111f6739f8c13ca7bc04eb994cbd"
+    },
+    "selection/selection_results_pre_gold.jsonl": {
+      "bytes": 1074429,
+      "sha256": "e9ed35885fc76f55d2b431039cf94b97bbff7740bd3fdcbac125244ca5a6c5e7"
+    },
+    "selection_determinism_validation.json": {
+      "bytes": 2044,
+      "sha256": "d454152f0c91060777f43bbb6b0f4230c7b7d25a17046f5fa189d02eb82823dd"
+    },
+    "selection_policy_semantic_diff.json": {
+      "bytes": 807,
+      "sha256": "4a3526fc49f9518ae8c718943addb86ecef50f1ecd52e8b1cf181b2e3ac715bb"
+    },
+    "selection_pressure_diagnostics.json": {
+      "bytes": 2390,
+      "sha256": "cec9840641af0e8b256171ee5481fdcaf7ea2dabd14bf15bc0177f333bf4973f"
+    },
+    "selection_structural_validation.json": {
+      "bytes": 70436,
+      "sha256": "bc24a068b1a2c73a7a25baa88c9cd36ace8ec599fb9b872ae2055962fe5ef918"
+    },
+    "selector_test_results.json": {
+      "bytes": 841,
+      "sha256": "c125e4a7081522c3f1d0126540716915352363865ea183b90143c5657ff7e2a3"
+    }
+  },
+  "context_policy": "ANCHOR_OWNER_BRIDGE_MANDATORY; LOCAL_TERMINAL_CONTEXT_AFTER_BACKBONE_AND_SUPPORTING",
+  "created_at_utc": "2026-08-15T23:38:00Z",
+  "dedup_policy": "CASE_ID_PLUS_RECORD_ID_WITH_ALL_PATH_PROVENANCE",
+  "dropped_record_row_count": 33,
+  "embeddings_created": false,
+  "exact_multi_policy": "ALL_ROOTS_FIRST_THEN_ONE_GLOBAL_SEMANTIC_PATH_ORDER",
+  "freeze_status": "FROZEN_GRAPH_V1_1_EVIDENCE_SELECTION_POLICY",
+  "graph_v1_1_grammar_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+  "graph_v1_relation_registry_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+  "heldout_gold_opened": false,
+  "manifest_circularity_policy": "Manifest excludes itself, the review report, and the hash inventory; the noncircular hash inventory covers all three nonself artifacts.",
+  "max_candidate_records": 50,
+  "max_selected_records": 40,
+  "max_selected_records_observed": 40,
+  "path_priority_policy": [
+    "MANDATORY_ANCHOR",
+    "ANCHOR_OWNER_BRIDGE",
+    "COMPLETE_BACKBONE_ACCOUNTING_PATH",
+    "MAXIMAL_BACKBONE_LIFECYCLE_PATH",
+    "BACKBONE_PLUS_SUPPORTING_PATH",
+    "LOCAL_TERMINAL_CONTEXT_PATH"
+  ],
+  "phase6a3_candidate_paths_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+  "phase6a3_candidate_records_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+  "phase6a3_pre_gold_manifest_sha256": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d",
+  "phase6a3_resume_authorized": false,
+  "phase6b_authorized": false,
+  "policy_draft_sha256": "db509ca1442b832b0c8b4bc401b8902cfec8f4fbd337a00f4ec12a62bf8cfcf8",
+  "policy_final_sha256": "cad5f2298d9dad62599cfe592304c08cf8808441586fb865d1f4824b3054ea1b",
+  "policy_preregistered_before_case_level_simulation": true,
+  "pre_gold_selected_outputs_created": true,
+  "relation_ordinal_source": "graph_relation_registry_v1.json:frozen_relations[*].relation_type zero-based array order",
+  "retrieval_metrics_computed": false,
+  "selected_record_row_count": 8336,
+  "semantic_policy_diff_count": 0,
+  "status": "FROZEN_GRAPH_V1_1_EVIDENCE_SELECTION_POLICY",
+  "tie_break_policy": "LOCKED_LEXICOGRAPHIC_KEYS_WITH_GRAPH_V1_RELATION_REGISTRY_ORDINALS",
+  "token_policy": "NO_TOKEN_AWARE_SELECTION",
+  "validation_gold_opened": false
+}

@@ -1,0 +1,47 @@
+{
+    "API_CALL_MADE": false,
+    "LLM_USED": false,
+    "PER_CASE_OVERLOADED_CANDIDATE_CONTENTS_NOT_USED_FOR_POLICY_DESIGN": true,
+    "POLICY_PREREGISTERED_BEFORE_CASE_LEVEL_SIMULATION": true,
+    "VALIDATION_GOLD_NOT_OPENED": true,
+    "artifact_type": "graphrag_evidence_selection_policy_preregistration",
+    "artifact_version": "1.0",
+    "created_at_utc": "2026-08-15T22:32:46Z",
+    "draft_locked_for_current_run": true,
+    "evidence_selection_policy_design_rationale_sha256": "8123b92e49f59824fd36438e9599290242657aef8523c19168c75f743c5e2868",
+    "forbidden_stage_a_inputs": [
+        "per-case candidate paths or record identities",
+        "over-budget case contents",
+        "validation or held-out gold",
+        "RCA/failure labels or expected answers",
+        "retrieval performance metrics",
+        "record text, embeddings, model scores, or token lengths"
+    ],
+    "parent_hashes": {
+        "graph_ranking_policy_v1_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "graph_v1_1_freeze_hash_inventory_sha256": "9c5e57374928e2f3f0c6bb503f85aaf8c4cd4db7654eae70787a0e7a6351d29c",
+        "graph_v1_1_grammar_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+        "phase6a3_artifact_hash_inventory_sha256": "631398728da8eb5b3d1fdb959282affb1e61fa428c50be8054f867f93329ce46",
+        "phase6a3_candidate_paths_sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03",
+        "phase6a3_candidate_records_sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c",
+        "phase6a3_pre_gold_manifest_sha256": "23e7421e63634ec5989201933969c870c219ad4b0c350e8db7d68c4c9e2d338d"
+    },
+    "policy_path": "evidence_selection_policy_v1_1_draft.json",
+    "policy_sha256": "db509ca1442b832b0c8b4bc401b8902cfec8f4fbd337a00f4ec12a62bf8cfcf8",
+    "serialization": {
+        "encoding": "UTF-8",
+        "format": "JSON",
+        "hash_algorithm": "SHA-256",
+        "hash_scope": "raw serialized file bytes",
+        "json_indent": 4,
+        "sort_keys": true,
+        "trailing_newline": true
+    },
+    "stage_a_allowed_inputs": [
+        "frozen Graph v1.1 grammar, transition classes, and justifications",
+        "frozen v1 ranking-policy lineage",
+        "general accounting lifecycle semantics encoded by frozen registries",
+        "aggregate candidate statistics already published in the Phase 6A.3 handoff"
+    ],
+    "status": "PREREGISTERED_LOCKED"
+}

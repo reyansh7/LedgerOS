@@ -1,0 +1,46 @@
+date_range:
+  end: '2026-06-30'
+  start: '2025-01-01'
+generation:
+  ach_clearing_business_days: 3
+  bank_accounts:
+  - BANK_ACCT_OPERATING_USD
+  - BANK_ACCT_DISBURSEMENTS_USD
+  - BANK_ACCT_GLOBAL
+  check_clearing_business_days: 10
+  currencies:
+    CAD: 0.04
+    EUR: 0.1
+    GBP: 0.06
+    JPY: 0.02
+    USD: 0.78
+  paid_invoice_rate: 0.75
+  payment_methods:
+    ACH: 0.66
+    check: 0.12
+    virtual_card: 0.05
+    wire: 0.17
+  po_backed_invoice_rate: 0.62
+  po_tolerance_percent: 2.0
+  recurring_invoice_rate: 0.12
+  vendor_change_rate: 0.08
+  wire_clearing_business_days: 1
+output:
+  include_internal_provenance: true
+  write_clean_data: true
+  write_full_benchmark: true
+output_dir: data
+scale:
+  cases_per_failure: 2
+  employees: 24
+  invoices: 240
+  non_failure_cases: 20
+  payments: 180
+  purchase_orders: 160
+  vendors: 40
+seed: 42
+splits:
+  challenge_fraction: 0.1
+  test: 0.2
+  train: 0.6
+  validation: 0.2

@@ -1,0 +1,26 @@
+{
+  "anchor_rag": {
+    "all_cases_have_one_terminal_status": true,
+    "counts": {
+      "SUCCESS": 416
+    }
+  },
+  "graph_retrieval_v1_0": {
+    "all_cases_have_one_terminal_status": true,
+    "counts": {
+      "SUCCESS": 416
+    }
+  },
+  "relational_rag": {
+    "all_cases_have_one_terminal_status": true,
+    "counts": {
+      "SUCCESS": 416
+    }
+  },
+  "standard_dense_rag": {
+    "all_cases_have_one_terminal_status": true,
+    "counts": {
+      "SUCCESS": 416
+    }
+  }
+}

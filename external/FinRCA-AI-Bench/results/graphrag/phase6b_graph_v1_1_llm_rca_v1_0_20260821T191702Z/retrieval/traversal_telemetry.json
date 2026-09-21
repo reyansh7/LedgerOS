@@ -1,0 +1,1860 @@
+{
+  "accepted_path_transition_count": 22,
+  "accepted_path_transition_ids": [
+    "TR_BANK_TRANSACTION__AUDIT_EVENT_FOR_BANK_TRANSACTION__REVERSE__AUDIT_EVENT",
+    "TR_BANK_TRANSACTION__GL_SOURCE_BANK_TRANSACTION__REVERSE__GL_ENTRY",
+    "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT",
+    "TR_INVOICE_LINE__INVOICE_LINE_REFERENCES_PO_LINE__FORWARD__PO_LINE",
+    "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION",
+    "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT",
+    "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT",
+    "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY",
+    "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER",
+    "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE",
+    "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT",
+    "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT",
+    "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE",
+    "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION",
+    "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT",
+    "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY",
+    "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE",
+    "TR_PO_LINE__INVOICE_LINE_REFERENCES_PO_LINE__REVERSE__INVOICE_LINE",
+    "TR_PO_LINE__LINE_OF_PO__FORWARD__PURCHASE_ORDER",
+    "TR_PURCHASE_ORDER__AUDIT_EVENT_FOR_PURCHASE_ORDER__REVERSE__AUDIT_EVENT",
+    "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE",
+    "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE"
+  ],
+  "accepted_post_cutoff_traversal_count": 0,
+  "candidate_non_anchor_record_row_count": 8123,
+  "candidate_path_count": 13761,
+  "candidate_path_set_sha256": "90f79f7d9460ba656c17d5fd2fbe48be4a911eb634b53483875d376f4393c8c5",
+  "candidate_record_row_count": 8578,
+  "case_latencies": [
+    {
+      "candidate_generation_latency_ms": 0.327041,
+      "case_id": "RCA_000001"
+    },
+    {
+      "candidate_generation_latency_ms": 0.416625,
+      "case_id": "RCA_000006"
+    },
+    {
+      "candidate_generation_latency_ms": 0.259333,
+      "case_id": "RCA_000007"
+    },
+    {
+      "candidate_generation_latency_ms": 0.03925,
+      "case_id": "RCA_000012"
+    },
+    {
+      "candidate_generation_latency_ms": 0.211084,
+      "case_id": "RCA_000013"
+    },
+    {
+      "candidate_generation_latency_ms": 0.170958,
+      "case_id": "RCA_000018"
+    },
+    {
+      "candidate_generation_latency_ms": 0.190042,
+      "case_id": "RCA_000024"
+    },
+    {
+      "candidate_generation_latency_ms": 0.260041,
+      "case_id": "RCA_000036"
+    },
+    {
+      "candidate_generation_latency_ms": 0.021584,
+      "case_id": "RCA_000042"
+    },
+    {
+      "candidate_generation_latency_ms": 0.229875,
+      "case_id": "RCA_000048"
+    },
+    {
+      "candidate_generation_latency_ms": 0.047125,
+      "case_id": "RCA_000058"
+    },
+    {
+      "candidate_generation_latency_ms": 0.028667,
+      "case_id": "RCA_000062"
+    },
+    {
+      "candidate_generation_latency_ms": 0.382666,
+      "case_id": "RCA_000063"
+    },
+    {
+      "candidate_generation_latency_ms": 0.033125,
+      "case_id": "RCA_000067"
+    },
+    {
+      "candidate_generation_latency_ms": 0.313834,
+      "case_id": "RCA_000069"
+    },
+    {
+      "candidate_generation_latency_ms": 0.184292,
+      "case_id": "RCA_000070"
+    },
+    {
+      "candidate_generation_latency_ms": 0.315416,
+      "case_id": "RCA_000074"
+    },
+    {
+      "candidate_generation_latency_ms": 0.301166,
+      "case_id": "RCA_000075"
+    },
+    {
+      "candidate_generation_latency_ms": 0.209042,
+      "case_id": "RCA_000080"
+    },
+    {
+      "candidate_generation_latency_ms": 0.312459,
+      "case_id": "RCA_000085"
+    },
+    {
+      "candidate_generation_latency_ms": 0.029709,
+      "case_id": "RCA_000090"
+    },
+    {
+      "candidate_generation_latency_ms": 0.1895,
+      "case_id": "RCA_000105"
+    },
+    {
+      "candidate_generation_latency_ms": 0.193709,
+      "case_id": "RCA_000107"
+    },
+    {
+      "candidate_generation_latency_ms": 0.196959,
+      "case_id": "RCA_000113"
+    },
+    {
+      "candidate_generation_latency_ms": 0.134625,
+      "case_id": "RCA_000128"
+    },
+    {
+      "candidate_generation_latency_ms": 0.143292,
+      "case_id": "RCA_000132"
+    },
+    {
+      "candidate_generation_latency_ms": 0.772125,
+      "case_id": "RCA_000137"
+    },
+    {
+      "candidate_generation_latency_ms": 0.131625,
+      "case_id": "RCA_000140"
+    },
+    {
+      "candidate_generation_latency_ms": 0.243792,
+      "case_id": "RCA_000141"
+    },
+    {
+      "candidate_generation_latency_ms": 0.258875,
+      "case_id": "RCA_000146"
+    },
+    {
+      "candidate_generation_latency_ms": 0.229542,
+      "case_id": "RCA_000153"
+    },
+    {
+      "candidate_generation_latency_ms": 0.246708,
+      "case_id": "RCA_000156"
+    },
+    {
+      "candidate_generation_latency_ms": 0.207583,
+      "case_id": "RCA_000161"
+    },
+    {
+      "candidate_generation_latency_ms": 0.142167,
+      "case_id": "RCA_000165"
+    },
+    {
+      "candidate_generation_latency_ms": 0.297,
+      "case_id": "RCA_000168"
+    },
+    {
+      "candidate_generation_latency_ms": 0.189542,
+      "case_id": "RCA_000169"
+    },
+    {
+      "candidate_generation_latency_ms": 0.159834,
+      "case_id": "RCA_000170"
+    },
+    {
+      "candidate_generation_latency_ms": 0.142416,
+      "case_id": "RCA_000174"
+    },
+    {
+      "candidate_generation_latency_ms": 0.211292,
+      "case_id": "RCA_000175"
+    },
+    {
+      "candidate_generation_latency_ms": 0.313958,
+      "case_id": "RCA_000182"
+    },
+    {
+      "candidate_generation_latency_ms": 0.152208,
+      "case_id": "RCA_000189"
+    },
+    {
+      "candidate_generation_latency_ms": 0.245625,
+      "case_id": "RCA_000209"
+    },
+    {
+      "candidate_generation_latency_ms": 0.15825,
+      "case_id": "RCA_000212"
+    },
+    {
+      "candidate_generation_latency_ms": 0.165166,
+      "case_id": "RCA_000214"
+    },
+    {
+      "candidate_generation_latency_ms": 0.287667,
+      "case_id": "RCA_000215"
+    },
+    {
+      "candidate_generation_latency_ms": 0.119417,
+      "case_id": "RCA_000217"
+    },
+    {
+      "candidate_generation_latency_ms": 0.257291,
+      "case_id": "RCA_000225"
+    },
+    {
+      "candidate_generation_latency_ms": 0.206667,
+      "case_id": "RCA_000234"
+    },
+    {
+      "candidate_generation_latency_ms": 0.230959,
+      "case_id": "RCA_000238"
+    },
+    {
+      "candidate_generation_latency_ms": 0.120584,
+      "case_id": "RCA_000239"
+    },
+    {
+      "candidate_generation_latency_ms": 0.169541,
+      "case_id": "RCA_000244"
+    },
+    {
+      "candidate_generation_latency_ms": 0.217709,
+      "case_id": "RCA_000250"
+    },
+    {
+      "candidate_generation_latency_ms": 0.229083,
+      "case_id": "RCA_000255"
+    },
+    {
+      "candidate_generation_latency_ms": 0.237542,
+      "case_id": "RCA_000261"
+    },
+    {
+      "candidate_generation_latency_ms": 0.202667,
+      "case_id": "RCA_000268"
+    },
+    {
+      "candidate_generation_latency_ms": 0.731584,
+      "case_id": "RCA_000274"
+    },
+    {
+      "candidate_generation_latency_ms": 0.264875,
+      "case_id": "RCA_000279"
+    },
+    {
+      "candidate_generation_latency_ms": 0.245459,
+      "case_id": "RCA_000284"
+    },
+    {
+      "candidate_generation_latency_ms": 0.334917,
+      "case_id": "RCA_000293"
+    },
+    {
+      "candidate_generation_latency_ms": 0.24675,
+      "case_id": "RCA_000301"
+    },
+    {
+      "candidate_generation_latency_ms": 0.235625,
+      "case_id": "RCA_000306"
+    },
+    {
+      "candidate_generation_latency_ms": 0.163375,
+      "case_id": "RCA_000311"
+    },
+    {
+      "candidate_generation_latency_ms": 0.30225,
+      "case_id": "RCA_000313"
+    },
+    {
+      "candidate_generation_latency_ms": 0.146292,
+      "case_id": "RCA_000315"
+    },
+    {
+      "candidate_generation_latency_ms": 0.2085,
+      "case_id": "RCA_000323"
+    },
+    {
+      "candidate_generation_latency_ms": 0.131875,
+      "case_id": "RCA_000331"
+    },
+    {
+      "candidate_generation_latency_ms": 0.188875,
+      "case_id": "RCA_000333"
+    },
+    {
+      "candidate_generation_latency_ms": 0.134083,
+      "case_id": "RCA_000349"
+    },
+    {
+      "candidate_generation_latency_ms": 0.206166,
+      "case_id": "RCA_000351"
+    },
+    {
+      "candidate_generation_latency_ms": 0.232541,
+      "case_id": "RCA_000357"
+    },
+    {
+      "candidate_generation_latency_ms": 0.256375,
+      "case_id": "RCA_000361"
+    },
+    {
+      "candidate_generation_latency_ms": 0.284875,
+      "case_id": "RCA_000362"
+    },
+    {
+      "candidate_generation_latency_ms": 0.733208,
+      "case_id": "RCA_000364"
+    },
+    {
+      "candidate_generation_latency_ms": 0.587917,
+      "case_id": "RCA_000365"
+    },
+    {
+      "candidate_generation_latency_ms": 0.978041,
+      "case_id": "RCA_000369"
+    },
+    {
+      "candidate_generation_latency_ms": 0.327709,
+      "case_id": "RCA_000372"
+    },
+    {
+      "candidate_generation_latency_ms": 0.106209,
+      "case_id": "RCA_000409"
+    },
+    {
+      "candidate_generation_latency_ms": 0.024292,
+      "case_id": "RCA_000421"
+    },
+    {
+      "candidate_generation_latency_ms": 0.026708,
+      "case_id": "RCA_000430"
+    },
+    {
+      "candidate_generation_latency_ms": 0.021958,
+      "case_id": "RCA_000432"
+    },
+    {
+      "candidate_generation_latency_ms": 0.021459,
+      "case_id": "RCA_000433"
+    },
+    {
+      "candidate_generation_latency_ms": 0.023,
+      "case_id": "RCA_000436"
+    },
+    {
+      "candidate_generation_latency_ms": 0.052875,
+      "case_id": "RCA_000444"
+    },
+    {
+      "candidate_generation_latency_ms": 0.021458,
+      "case_id": "RCA_000447"
+    },
+    {
+      "candidate_generation_latency_ms": 0.154459,
+      "case_id": "RCA_000453"
+    },
+    {
+      "candidate_generation_latency_ms": 0.022417,
+      "case_id": "RCA_000457"
+    },
+    {
+      "candidate_generation_latency_ms": 0.042334,
+      "case_id": "RCA_000462"
+    },
+    {
+      "candidate_generation_latency_ms": 0.021459,
+      "case_id": "RCA_000465"
+    },
+    {
+      "candidate_generation_latency_ms": 0.025792,
+      "case_id": "RCA_000469"
+    },
+    {
+      "candidate_generation_latency_ms": 0.022375,
+      "case_id": "RCA_000473"
+    },
+    {
+      "candidate_generation_latency_ms": 0.026375,
+      "case_id": "RCA_000478"
+    },
+    {
+      "candidate_generation_latency_ms": 0.018459,
+      "case_id": "RCA_000479"
+    },
+    {
+      "candidate_generation_latency_ms": 0.024875,
+      "case_id": "RCA_000481"
+    },
+    {
+      "candidate_generation_latency_ms": 0.020166,
+      "case_id": "RCA_000482"
+    },
+    {
+      "candidate_generation_latency_ms": 0.022459,
+      "case_id": "RCA_000484"
+    },
+    {
+      "candidate_generation_latency_ms": 0.020167,
+      "case_id": "RCA_000486"
+    },
+    {
+      "candidate_generation_latency_ms": 0.087208,
+      "case_id": "RCA_000494"
+    },
+    {
+      "candidate_generation_latency_ms": 0.020917,
+      "case_id": "RCA_000495"
+    },
+    {
+      "candidate_generation_latency_ms": 0.396417,
+      "case_id": "RCA_000518"
+    },
+    {
+      "candidate_generation_latency_ms": 0.422834,
+      "case_id": "RCA_000523"
+    },
+    {
+      "candidate_generation_latency_ms": 0.61725,
+      "case_id": "RCA_000538"
+    },
+    {
+      "candidate_generation_latency_ms": 1.343292,
+      "case_id": "RCA_000539"
+    },
+    {
+      "candidate_generation_latency_ms": 299.093417,
+      "case_id": "RCA_000544"
+    },
+    {
+      "candidate_generation_latency_ms": 0.493167,
+      "case_id": "RCA_000558"
+    },
+    {
+      "candidate_generation_latency_ms": 0.521583,
+      "case_id": "RCA_000563"
+    },
+    {
+      "candidate_generation_latency_ms": 0.508375,
+      "case_id": "RCA_000571"
+    },
+    {
+      "candidate_generation_latency_ms": 0.40225,
+      "case_id": "RCA_000581"
+    },
+    {
+      "candidate_generation_latency_ms": 0.35925,
+      "case_id": "RCA_000584"
+    },
+    {
+      "candidate_generation_latency_ms": 0.222875,
+      "case_id": "RCA_000586"
+    },
+    {
+      "candidate_generation_latency_ms": 0.2895,
+      "case_id": "RCA_000594"
+    },
+    {
+      "candidate_generation_latency_ms": 0.2435,
+      "case_id": "RCA_000603"
+    },
+    {
+      "candidate_generation_latency_ms": 0.272583,
+      "case_id": "RCA_000604"
+    },
+    {
+      "candidate_generation_latency_ms": 0.161417,
+      "case_id": "RCA_000610"
+    },
+    {
+      "candidate_generation_latency_ms": 0.182417,
+      "case_id": "RCA_000615"
+    },
+    {
+      "candidate_generation_latency_ms": 0.212291,
+      "case_id": "RCA_000629"
+    },
+    {
+      "candidate_generation_latency_ms": 0.343084,
+      "case_id": "RCA_000630"
+    },
+    {
+      "candidate_generation_latency_ms": 0.367417,
+      "case_id": "RCA_000635"
+    },
+    {
+      "candidate_generation_latency_ms": 0.274125,
+      "case_id": "RCA_000639"
+    },
+    {
+      "candidate_generation_latency_ms": 0.262291,
+      "case_id": "RCA_000666"
+    },
+    {
+      "candidate_generation_latency_ms": 0.167375,
+      "case_id": "RCA_000669"
+    },
+    {
+      "candidate_generation_latency_ms": 0.860291,
+      "case_id": "RCA_000674"
+    },
+    {
+      "candidate_generation_latency_ms": 0.234875,
+      "case_id": "RCA_000676"
+    },
+    {
+      "candidate_generation_latency_ms": 0.157417,
+      "case_id": "RCA_000682"
+    },
+    {
+      "candidate_generation_latency_ms": 0.18925,
+      "case_id": "RCA_000685"
+    },
+    {
+      "candidate_generation_latency_ms": 0.262625,
+      "case_id": "RCA_000688"
+    },
+    {
+      "candidate_generation_latency_ms": 0.195458,
+      "case_id": "RCA_000689"
+    },
+    {
+      "candidate_generation_latency_ms": 0.262708,
+      "case_id": "RCA_000692"
+    },
+    {
+      "candidate_generation_latency_ms": 0.163,
+      "case_id": "RCA_000695"
+    },
+    {
+      "candidate_generation_latency_ms": 0.504542,
+      "case_id": "RCA_000709"
+    },
+    {
+      "candidate_generation_latency_ms": 0.457833,
+      "case_id": "RCA_000721"
+    },
+    {
+      "candidate_generation_latency_ms": 0.321541,
+      "case_id": "RCA_000728"
+    },
+    {
+      "candidate_generation_latency_ms": 0.263166,
+      "case_id": "RCA_000733"
+    },
+    {
+      "candidate_generation_latency_ms": 0.260833,
+      "case_id": "RCA_000735"
+    },
+    {
+      "candidate_generation_latency_ms": 0.299292,
+      "case_id": "RCA_000736"
+    },
+    {
+      "candidate_generation_latency_ms": 0.171583,
+      "case_id": "RCA_000738"
+    },
+    {
+      "candidate_generation_latency_ms": 0.30275,
+      "case_id": "RCA_000741"
+    },
+    {
+      "candidate_generation_latency_ms": 0.505083,
+      "case_id": "RCA_000752"
+    },
+    {
+      "candidate_generation_latency_ms": 0.2565,
+      "case_id": "RCA_000758"
+    },
+    {
+      "candidate_generation_latency_ms": 0.277333,
+      "case_id": "RCA_000760"
+    },
+    {
+      "candidate_generation_latency_ms": 0.917083,
+      "case_id": "RCA_000762"
+    },
+    {
+      "candidate_generation_latency_ms": 0.407583,
+      "case_id": "RCA_000766"
+    },
+    {
+      "candidate_generation_latency_ms": 0.185459,
+      "case_id": "RCA_000767"
+    },
+    {
+      "candidate_generation_latency_ms": 0.310833,
+      "case_id": "RCA_000772"
+    },
+    {
+      "candidate_generation_latency_ms": 0.221959,
+      "case_id": "RCA_000774"
+    },
+    {
+      "candidate_generation_latency_ms": 0.272709,
+      "case_id": "RCA_000776"
+    },
+    {
+      "candidate_generation_latency_ms": 0.516,
+      "case_id": "RCA_000780"
+    },
+    {
+      "candidate_generation_latency_ms": 0.4855,
+      "case_id": "RCA_000783"
+    },
+    {
+      "candidate_generation_latency_ms": 0.612583,
+      "case_id": "RCA_000784"
+    },
+    {
+      "candidate_generation_latency_ms": 0.413459,
+      "case_id": "RCA_000788"
+    },
+    {
+      "candidate_generation_latency_ms": 0.251375,
+      "case_id": "RCA_000794"
+    },
+    {
+      "candidate_generation_latency_ms": 0.221875,
+      "case_id": "RCA_000812"
+    },
+    {
+      "candidate_generation_latency_ms": 0.218833,
+      "case_id": "RCA_000813"
+    },
+    {
+      "candidate_generation_latency_ms": 0.401584,
+      "case_id": "RCA_000830"
+    },
+    {
+      "candidate_generation_latency_ms": 0.311167,
+      "case_id": "RCA_000831"
+    },
+    {
+      "candidate_generation_latency_ms": 0.299792,
+      "case_id": "RCA_000834"
+    },
+    {
+      "candidate_generation_latency_ms": 0.979208,
+      "case_id": "RCA_000835"
+    },
+    {
+      "candidate_generation_latency_ms": 0.382625,
+      "case_id": "RCA_000839"
+    },
+    {
+      "candidate_generation_latency_ms": 0.389666,
+      "case_id": "RCA_000840"
+    },
+    {
+      "candidate_generation_latency_ms": 0.281416,
+      "case_id": "RCA_000851"
+    },
+    {
+      "candidate_generation_latency_ms": 0.364791,
+      "case_id": "RCA_000852"
+    },
+    {
+      "candidate_generation_latency_ms": 0.2805,
+      "case_id": "RCA_000865"
+    },
+    {
+      "candidate_generation_latency_ms": 0.217583,
+      "case_id": "RCA_000866"
+    },
+    {
+      "candidate_generation_latency_ms": 0.311291,
+      "case_id": "RCA_000867"
+    },
+    {
+      "candidate_generation_latency_ms": 0.418833,
+      "case_id": "RCA_000868"
+    },
+    {
+      "candidate_generation_latency_ms": 0.326958,
+      "case_id": "RCA_000880"
+    },
+    {
+      "candidate_generation_latency_ms": 0.275958,
+      "case_id": "RCA_000882"
+    },
+    {
+      "candidate_generation_latency_ms": 0.314291,
+      "case_id": "RCA_000883"
+    },
+    {
+      "candidate_generation_latency_ms": 0.335125,
+      "case_id": "RCA_000910"
+    },
+    {
+      "candidate_generation_latency_ms": 0.234166,
+      "case_id": "RCA_000915"
+    },
+    {
+      "candidate_generation_latency_ms": 0.281333,
+      "case_id": "RCA_000925"
+    },
+    {
+      "candidate_generation_latency_ms": 0.609209,
+      "case_id": "RCA_000926"
+    },
+    {
+      "candidate_generation_latency_ms": 0.221833,
+      "case_id": "RCA_000928"
+    },
+    {
+      "candidate_generation_latency_ms": 0.540417,
+      "case_id": "RCA_000931"
+    },
+    {
+      "candidate_generation_latency_ms": 0.254542,
+      "case_id": "RCA_000941"
+    },
+    {
+      "candidate_generation_latency_ms": 0.521916,
+      "case_id": "RCA_000945"
+    },
+    {
+      "candidate_generation_latency_ms": 0.324833,
+      "case_id": "RCA_000946"
+    },
+    {
+      "candidate_generation_latency_ms": 0.329875,
+      "case_id": "RCA_000948"
+    },
+    {
+      "candidate_generation_latency_ms": 0.266583,
+      "case_id": "RCA_000964"
+    },
+    {
+      "candidate_generation_latency_ms": 0.29975,
+      "case_id": "RCA_000965"
+    },
+    {
+      "candidate_generation_latency_ms": 0.265375,
+      "case_id": "RCA_000975"
+    },
+    {
+      "candidate_generation_latency_ms": 0.266917,
+      "case_id": "RCA_000980"
+    },
+    {
+      "candidate_generation_latency_ms": 0.288625,
+      "case_id": "RCA_000984"
+    },
+    {
+      "candidate_generation_latency_ms": 0.26275,
+      "case_id": "RCA_000986"
+    },
+    {
+      "candidate_generation_latency_ms": 0.532875,
+      "case_id": "RCA_000989"
+    },
+    {
+      "candidate_generation_latency_ms": 0.5235,
+      "case_id": "RCA_000994"
+    },
+    {
+      "candidate_generation_latency_ms": 1.011208,
+      "case_id": "RCA_001006"
+    },
+    {
+      "candidate_generation_latency_ms": 0.373875,
+      "case_id": "RCA_001010"
+    },
+    {
+      "candidate_generation_latency_ms": 0.358375,
+      "case_id": "RCA_001013"
+    },
+    {
+      "candidate_generation_latency_ms": 0.339209,
+      "case_id": "RCA_001020"
+    },
+    {
+      "candidate_generation_latency_ms": 0.271958,
+      "case_id": "RCA_001024"
+    },
+    {
+      "candidate_generation_latency_ms": 0.522417,
+      "case_id": "RCA_001030"
+    },
+    {
+      "candidate_generation_latency_ms": 0.284375,
+      "case_id": "RCA_001036"
+    },
+    {
+      "candidate_generation_latency_ms": 0.387916,
+      "case_id": "RCA_001038"
+    },
+    {
+      "candidate_generation_latency_ms": 0.232459,
+      "case_id": "RCA_001040"
+    },
+    {
+      "candidate_generation_latency_ms": 0.229791,
+      "case_id": "RCA_001042"
+    },
+    {
+      "candidate_generation_latency_ms": 0.206792,
+      "case_id": "RCA_001044"
+    },
+    {
+      "candidate_generation_latency_ms": 0.267958,
+      "case_id": "RCA_001045"
+    },
+    {
+      "candidate_generation_latency_ms": 0.538625,
+      "case_id": "RCA_001047"
+    },
+    {
+      "candidate_generation_latency_ms": 0.287333,
+      "case_id": "RCA_001049"
+    },
+    {
+      "candidate_generation_latency_ms": 0.2565,
+      "case_id": "RCA_001057"
+    },
+    {
+      "candidate_generation_latency_ms": 0.733,
+      "case_id": "RCA_001059"
+    },
+    {
+      "candidate_generation_latency_ms": 0.308708,
+      "case_id": "RCA_001069"
+    },
+    {
+      "candidate_generation_latency_ms": 0.269,
+      "case_id": "RCA_001073"
+    },
+    {
+      "candidate_generation_latency_ms": 0.238833,
+      "case_id": "RCA_001077"
+    },
+    {
+      "candidate_generation_latency_ms": 0.308625,
+      "case_id": "RCA_001078"
+    },
+    {
+      "candidate_generation_latency_ms": 0.271958,
+      "case_id": "RCA_001086"
+    },
+    {
+      "candidate_generation_latency_ms": 0.455083,
+      "case_id": "RCA_001094"
+    },
+    {
+      "candidate_generation_latency_ms": 0.238875,
+      "case_id": "RCA_001096"
+    },
+    {
+      "candidate_generation_latency_ms": 0.357125,
+      "case_id": "RCA_001101"
+    },
+    {
+      "candidate_generation_latency_ms": 0.339583,
+      "case_id": "RCA_001102"
+    },
+    {
+      "candidate_generation_latency_ms": 0.322167,
+      "case_id": "RCA_001107"
+    },
+    {
+      "candidate_generation_latency_ms": 0.341125,
+      "case_id": "RCA_001111"
+    },
+    {
+      "candidate_generation_latency_ms": 0.373084,
+      "case_id": "RCA_001114"
+    },
+    {
+      "candidate_generation_latency_ms": 0.326084,
+      "case_id": "RCA_001115"
+    },
+    {
+      "candidate_generation_latency_ms": 0.27975,
+      "case_id": "RCA_001117"
+    },
+    {
+      "candidate_generation_latency_ms": 0.475958,
+      "case_id": "RCA_001128"
+    },
+    {
+      "candidate_generation_latency_ms": 0.697959,
+      "case_id": "RCA_001132"
+    },
+    {
+      "candidate_generation_latency_ms": 0.28425,
+      "case_id": "RCA_001133"
+    },
+    {
+      "candidate_generation_latency_ms": 0.306333,
+      "case_id": "RCA_001140"
+    },
+    {
+      "candidate_generation_latency_ms": 0.183917,
+      "case_id": "RCA_001141"
+    },
+    {
+      "candidate_generation_latency_ms": 0.457041,
+      "case_id": "RCA_001146"
+    },
+    {
+      "candidate_generation_latency_ms": 0.367708,
+      "case_id": "RCA_001147"
+    },
+    {
+      "candidate_generation_latency_ms": 0.357666,
+      "case_id": "RCA_001151"
+    },
+    {
+      "candidate_generation_latency_ms": 0.298625,
+      "case_id": "RCA_001154"
+    },
+    {
+      "candidate_generation_latency_ms": 0.294042,
+      "case_id": "RCA_001158"
+    },
+    {
+      "candidate_generation_latency_ms": 0.249958,
+      "case_id": "RCA_001159"
+    },
+    {
+      "candidate_generation_latency_ms": 0.481958,
+      "case_id": "RCA_001170"
+    },
+    {
+      "candidate_generation_latency_ms": 0.205125,
+      "case_id": "RCA_001171"
+    },
+    {
+      "candidate_generation_latency_ms": 0.267,
+      "case_id": "RCA_001194"
+    },
+    {
+      "candidate_generation_latency_ms": 0.012958,
+      "case_id": "RCA_001206"
+    },
+    {
+      "candidate_generation_latency_ms": 0.00975,
+      "case_id": "RCA_001211"
+    },
+    {
+      "candidate_generation_latency_ms": 0.008959,
+      "case_id": "RCA_001217"
+    },
+    {
+      "candidate_generation_latency_ms": 0.011625,
+      "case_id": "RCA_001218"
+    },
+    {
+      "candidate_generation_latency_ms": 0.010042,
+      "case_id": "RCA_001230"
+    },
+    {
+      "candidate_generation_latency_ms": 0.009375,
+      "case_id": "RCA_001239"
+    },
+    {
+      "candidate_generation_latency_ms": 0.0085,
+      "case_id": "RCA_001241"
+    },
+    {
+      "candidate_generation_latency_ms": 0.008417,
+      "case_id": "RCA_001242"
+    },
+    {
+      "candidate_generation_latency_ms": 0.007583,
+      "case_id": "RCA_001243"
+    },
+    {
+      "candidate_generation_latency_ms": 0.008791,
+      "case_id": "RCA_001245"
+    },
+    {
+      "candidate_generation_latency_ms": 0.007834,
+      "case_id": "RCA_001247"
+    },
+    {
+      "candidate_generation_latency_ms": 0.008375,
+      "case_id": "RCA_001251"
+    },
+    {
+      "candidate_generation_latency_ms": 0.007833,
+      "case_id": "RCA_001252"
+    },
+    {
+      "candidate_generation_latency_ms": 0.009,
+      "case_id": "RCA_001262"
+    },
+    {
+      "candidate_generation_latency_ms": 0.011667,
+      "case_id": "RCA_001264"
+    },
+    {
+      "candidate_generation_latency_ms": 0.008958,
+      "case_id": "RCA_001267"
+    },
+    {
+      "candidate_generation_latency_ms": 0.008959,
+      "case_id": "RCA_001270"
+    },
+    {
+      "candidate_generation_latency_ms": 0.007875,
+      "case_id": "RCA_001271"
+    },
+    {
+      "candidate_generation_latency_ms": 0.007625,
+      "case_id": "RCA_001272"
+    },
+    {
+      "candidate_generation_latency_ms": 0.008125,
+      "case_id": "RCA_001278"
+    },
+    {
+      "candidate_generation_latency_ms": 0.008125,
+      "case_id": "RCA_001280"
+    },
+    {
+      "candidate_generation_latency_ms": 0.008584,
+      "case_id": "RCA_001285"
+    },
+    {
+      "candidate_generation_latency_ms": 0.012291,
+      "case_id": "RCA_001290"
+    },
+    {
+      "candidate_generation_latency_ms": 0.008125,
+      "case_id": "RCA_001293"
+    },
+    {
+      "candidate_generation_latency_ms": 0.0075,
+      "case_id": "RCA_001294"
+    },
+    {
+      "candidate_generation_latency_ms": 0.007875,
+      "case_id": "RCA_001297"
+    },
+    {
+      "candidate_generation_latency_ms": 0.008541,
+      "case_id": "RCA_001299"
+    },
+    {
+      "candidate_generation_latency_ms": 0.007875,
+      "case_id": "RCA_001300"
+    },
+    {
+      "candidate_generation_latency_ms": 0.26975,
+      "case_id": "RCA_001303"
+    },
+    {
+      "candidate_generation_latency_ms": 0.416375,
+      "case_id": "RCA_001305"
+    },
+    {
+      "candidate_generation_latency_ms": 0.611833,
+      "case_id": "RCA_001310"
+    },
+    {
+      "candidate_generation_latency_ms": 0.215875,
+      "case_id": "RCA_001315"
+    },
+    {
+      "candidate_generation_latency_ms": 0.292458,
+      "case_id": "RCA_001317"
+    },
+    {
+      "candidate_generation_latency_ms": 0.397125,
+      "case_id": "RCA_001320"
+    },
+    {
+      "candidate_generation_latency_ms": 0.423833,
+      "case_id": "RCA_001323"
+    },
+    {
+      "candidate_generation_latency_ms": 0.2685,
+      "case_id": "RCA_001330"
+    },
+    {
+      "candidate_generation_latency_ms": 0.2565,
+      "case_id": "RCA_001332"
+    },
+    {
+      "candidate_generation_latency_ms": 0.301541,
+      "case_id": "RCA_001356"
+    },
+    {
+      "candidate_generation_latency_ms": 0.333459,
+      "case_id": "RCA_001358"
+    },
+    {
+      "candidate_generation_latency_ms": 0.272958,
+      "case_id": "RCA_001365"
+    },
+    {
+      "candidate_generation_latency_ms": 0.243792,
+      "case_id": "RCA_001371"
+    },
+    {
+      "candidate_generation_latency_ms": 0.221,
+      "case_id": "RCA_001378"
+    },
+    {
+      "candidate_generation_latency_ms": 0.366041,
+      "case_id": "RCA_001380"
+    },
+    {
+      "candidate_generation_latency_ms": 0.40575,
+      "case_id": "RCA_001388"
+    },
+    {
+      "candidate_generation_latency_ms": 0.443708,
+      "case_id": "RCA_001408"
+    },
+    {
+      "candidate_generation_latency_ms": 0.264292,
+      "case_id": "RCA_001416"
+    },
+    {
+      "candidate_generation_latency_ms": 0.91675,
+      "case_id": "RCA_001419"
+    },
+    {
+      "candidate_generation_latency_ms": 0.408208,
+      "case_id": "RCA_001427"
+    },
+    {
+      "candidate_generation_latency_ms": 0.17875,
+      "case_id": "RCA_001429"
+    },
+    {
+      "candidate_generation_latency_ms": 0.402083,
+      "case_id": "RCA_001431"
+    },
+    {
+      "candidate_generation_latency_ms": 0.28125,
+      "case_id": "RCA_001432"
+    },
+    {
+      "candidate_generation_latency_ms": 0.243375,
+      "case_id": "RCA_001443"
+    },
+    {
+      "candidate_generation_latency_ms": 0.271625,
+      "case_id": "RCA_001455"
+    },
+    {
+      "candidate_generation_latency_ms": 0.509083,
+      "case_id": "RCA_001457"
+    },
+    {
+      "candidate_generation_latency_ms": 0.463042,
+      "case_id": "RCA_001459"
+    },
+    {
+      "candidate_generation_latency_ms": 0.274959,
+      "case_id": "RCA_001462"
+    },
+    {
+      "candidate_generation_latency_ms": 0.227959,
+      "case_id": "RCA_001469"
+    },
+    {
+      "candidate_generation_latency_ms": 0.575125,
+      "case_id": "RCA_001472"
+    },
+    {
+      "candidate_generation_latency_ms": 0.4265,
+      "case_id": "RCA_001481"
+    },
+    {
+      "candidate_generation_latency_ms": 0.567,
+      "case_id": "RCA_001484"
+    },
+    {
+      "candidate_generation_latency_ms": 0.357208,
+      "case_id": "RCA_001486"
+    },
+    {
+      "candidate_generation_latency_ms": 0.500625,
+      "case_id": "RCA_001494"
+    },
+    {
+      "candidate_generation_latency_ms": 0.333791,
+      "case_id": "RCA_001497"
+    },
+    {
+      "candidate_generation_latency_ms": 0.454708,
+      "case_id": "RCA_001498"
+    },
+    {
+      "candidate_generation_latency_ms": 0.313375,
+      "case_id": "RCA_001504"
+    },
+    {
+      "candidate_generation_latency_ms": 0.324334,
+      "case_id": "RCA_001509"
+    },
+    {
+      "candidate_generation_latency_ms": 0.368792,
+      "case_id": "RCA_001510"
+    },
+    {
+      "candidate_generation_latency_ms": 0.095708,
+      "case_id": "RCA_001512"
+    },
+    {
+      "candidate_generation_latency_ms": 0.215375,
+      "case_id": "RCA_001521"
+    },
+    {
+      "candidate_generation_latency_ms": 0.041583,
+      "case_id": "RCA_001543"
+    },
+    {
+      "candidate_generation_latency_ms": 0.520791,
+      "case_id": "RCA_001550"
+    },
+    {
+      "candidate_generation_latency_ms": 0.231917,
+      "case_id": "RCA_001557"
+    },
+    {
+      "candidate_generation_latency_ms": 0.271625,
+      "case_id": "RCA_001573"
+    },
+    {
+      "candidate_generation_latency_ms": 0.264708,
+      "case_id": "RCA_001584"
+    },
+    {
+      "candidate_generation_latency_ms": 0.259416,
+      "case_id": "RCA_001585"
+    },
+    {
+      "candidate_generation_latency_ms": 0.193792,
+      "case_id": "RCA_001586"
+    },
+    {
+      "candidate_generation_latency_ms": 0.017625,
+      "case_id": "RCA_001587"
+    },
+    {
+      "candidate_generation_latency_ms": 0.583459,
+      "case_id": "RCA_001588"
+    },
+    {
+      "candidate_generation_latency_ms": 0.436,
+      "case_id": "RCA_001594"
+    },
+    {
+      "candidate_generation_latency_ms": 0.336875,
+      "case_id": "RCA_001611"
+    },
+    {
+      "candidate_generation_latency_ms": 0.158333,
+      "case_id": "RCA_001612"
+    },
+    {
+      "candidate_generation_latency_ms": 0.332333,
+      "case_id": "RCA_001613"
+    },
+    {
+      "candidate_generation_latency_ms": 0.034875,
+      "case_id": "RCA_001623"
+    },
+    {
+      "candidate_generation_latency_ms": 0.122042,
+      "case_id": "RCA_001624"
+    },
+    {
+      "candidate_generation_latency_ms": 0.163125,
+      "case_id": "RCA_001625"
+    },
+    {
+      "candidate_generation_latency_ms": 0.282459,
+      "case_id": "RCA_001629"
+    },
+    {
+      "candidate_generation_latency_ms": 0.104916,
+      "case_id": "RCA_001633"
+    },
+    {
+      "candidate_generation_latency_ms": 0.294042,
+      "case_id": "RCA_001636"
+    },
+    {
+      "candidate_generation_latency_ms": 0.168917,
+      "case_id": "RCA_001640"
+    },
+    {
+      "candidate_generation_latency_ms": 0.372584,
+      "case_id": "RCA_001644"
+    },
+    {
+      "candidate_generation_latency_ms": 0.235292,
+      "case_id": "RCA_001650"
+    },
+    {
+      "candidate_generation_latency_ms": 0.015166,
+      "case_id": "RCA_001651"
+    },
+    {
+      "candidate_generation_latency_ms": 0.072458,
+      "case_id": "RCA_001656"
+    },
+    {
+      "candidate_generation_latency_ms": 0.460292,
+      "case_id": "RCA_001657"
+    },
+    {
+      "candidate_generation_latency_ms": 0.49325,
+      "case_id": "RCA_001658"
+    },
+    {
+      "candidate_generation_latency_ms": 0.287042,
+      "case_id": "RCA_001661"
+    },
+    {
+      "candidate_generation_latency_ms": 0.015167,
+      "case_id": "RCA_001667"
+    },
+    {
+      "candidate_generation_latency_ms": 0.241125,
+      "case_id": "RCA_001668"
+    },
+    {
+      "candidate_generation_latency_ms": 0.231375,
+      "case_id": "RCA_001675"
+    },
+    {
+      "candidate_generation_latency_ms": 0.635417,
+      "case_id": "RCA_001677"
+    },
+    {
+      "candidate_generation_latency_ms": 0.279458,
+      "case_id": "RCA_001685"
+    },
+    {
+      "candidate_generation_latency_ms": 0.070708,
+      "case_id": "RCA_001687"
+    },
+    {
+      "candidate_generation_latency_ms": 0.250875,
+      "case_id": "RCA_001689"
+    },
+    {
+      "candidate_generation_latency_ms": 0.235416,
+      "case_id": "RCA_001695"
+    },
+    {
+      "candidate_generation_latency_ms": 0.014541,
+      "case_id": "RCA_001699"
+    },
+    {
+      "candidate_generation_latency_ms": 0.278542,
+      "case_id": "RCA_001707"
+    },
+    {
+      "candidate_generation_latency_ms": 0.334542,
+      "case_id": "RCA_001709"
+    },
+    {
+      "candidate_generation_latency_ms": 0.159166,
+      "case_id": "RCA_001720"
+    },
+    {
+      "candidate_generation_latency_ms": 0.151792,
+      "case_id": "RCA_001729"
+    },
+    {
+      "candidate_generation_latency_ms": 0.231333,
+      "case_id": "RCA_001730"
+    },
+    {
+      "candidate_generation_latency_ms": 0.336834,
+      "case_id": "RCA_001748"
+    },
+    {
+      "candidate_generation_latency_ms": 0.3125,
+      "case_id": "RCA_001754"
+    },
+    {
+      "candidate_generation_latency_ms": 0.127208,
+      "case_id": "RCA_001757"
+    },
+    {
+      "candidate_generation_latency_ms": 0.166,
+      "case_id": "RCA_001761"
+    },
+    {
+      "candidate_generation_latency_ms": 0.288625,
+      "case_id": "RCA_001762"
+    },
+    {
+      "candidate_generation_latency_ms": 0.258458,
+      "case_id": "RCA_001765"
+    },
+    {
+      "candidate_generation_latency_ms": 0.322417,
+      "case_id": "RCA_001770"
+    },
+    {
+      "candidate_generation_latency_ms": 0.058541,
+      "case_id": "RCA_001783"
+    },
+    {
+      "candidate_generation_latency_ms": 0.2555,
+      "case_id": "RCA_001785"
+    },
+    {
+      "candidate_generation_latency_ms": 0.277292,
+      "case_id": "RCA_001798"
+    },
+    {
+      "candidate_generation_latency_ms": 0.224292,
+      "case_id": "RCA_001803"
+    },
+    {
+      "candidate_generation_latency_ms": 0.712375,
+      "case_id": "RCA_001806"
+    },
+    {
+      "candidate_generation_latency_ms": 0.015875,
+      "case_id": "RCA_001811"
+    },
+    {
+      "candidate_generation_latency_ms": 0.313125,
+      "case_id": "RCA_001814"
+    },
+    {
+      "candidate_generation_latency_ms": 0.086,
+      "case_id": "RCA_001816"
+    },
+    {
+      "candidate_generation_latency_ms": 0.4735,
+      "case_id": "RCA_001822"
+    },
+    {
+      "candidate_generation_latency_ms": 0.229333,
+      "case_id": "RCA_001823"
+    },
+    {
+      "candidate_generation_latency_ms": 0.015292,
+      "case_id": "RCA_001827"
+    },
+    {
+      "candidate_generation_latency_ms": 0.202292,
+      "case_id": "RCA_001829"
+    },
+    {
+      "candidate_generation_latency_ms": 0.085208,
+      "case_id": "RCA_001832"
+    },
+    {
+      "candidate_generation_latency_ms": 0.432333,
+      "case_id": "RCA_001838"
+    },
+    {
+      "candidate_generation_latency_ms": 0.355208,
+      "case_id": "RCA_001839"
+    },
+    {
+      "candidate_generation_latency_ms": 0.290042,
+      "case_id": "RCA_001840"
+    },
+    {
+      "candidate_generation_latency_ms": 0.405625,
+      "case_id": "RCA_001846"
+    },
+    {
+      "candidate_generation_latency_ms": 0.097125,
+      "case_id": "RCA_001848"
+    },
+    {
+      "candidate_generation_latency_ms": 0.284042,
+      "case_id": "RCA_001850"
+    },
+    {
+      "candidate_generation_latency_ms": 0.54625,
+      "case_id": "RCA_001856"
+    },
+    {
+      "candidate_generation_latency_ms": 0.1805,
+      "case_id": "RCA_001862"
+    },
+    {
+      "candidate_generation_latency_ms": 0.3225,
+      "case_id": "RCA_001865"
+    },
+    {
+      "candidate_generation_latency_ms": 0.185458,
+      "case_id": "RCA_001868"
+    },
+    {
+      "candidate_generation_latency_ms": 0.205333,
+      "case_id": "RCA_001881"
+    },
+    {
+      "candidate_generation_latency_ms": 0.763625,
+      "case_id": "RCA_001894"
+    },
+    {
+      "candidate_generation_latency_ms": 0.303625,
+      "case_id": "RCA_001897"
+    },
+    {
+      "candidate_generation_latency_ms": 0.268666,
+      "case_id": "RCA_001910"
+    },
+    {
+      "candidate_generation_latency_ms": 0.578042,
+      "case_id": "RCA_001913"
+    },
+    {
+      "candidate_generation_latency_ms": 0.293333,
+      "case_id": "RCA_001914"
+    },
+    {
+      "candidate_generation_latency_ms": 0.333084,
+      "case_id": "RCA_001916"
+    },
+    {
+      "candidate_generation_latency_ms": 0.255792,
+      "case_id": "RCA_001917"
+    },
+    {
+      "candidate_generation_latency_ms": 0.553042,
+      "case_id": "RCA_001918"
+    },
+    {
+      "candidate_generation_latency_ms": 0.344166,
+      "case_id": "RCA_001924"
+    },
+    {
+      "candidate_generation_latency_ms": 0.264708,
+      "case_id": "RCA_001931"
+    },
+    {
+      "candidate_generation_latency_ms": 0.453708,
+      "case_id": "RCA_001934"
+    },
+    {
+      "candidate_generation_latency_ms": 0.260708,
+      "case_id": "RCA_001938"
+    },
+    {
+      "candidate_generation_latency_ms": 0.295125,
+      "case_id": "RCA_001942"
+    },
+    {
+      "candidate_generation_latency_ms": 0.486583,
+      "case_id": "RCA_001950"
+    },
+    {
+      "candidate_generation_latency_ms": 0.770917,
+      "case_id": "RCA_001956"
+    },
+    {
+      "candidate_generation_latency_ms": 0.407458,
+      "case_id": "RCA_001965"
+    },
+    {
+      "candidate_generation_latency_ms": 0.342792,
+      "case_id": "RCA_001970"
+    },
+    {
+      "candidate_generation_latency_ms": 0.320375,
+      "case_id": "RCA_001972"
+    },
+    {
+      "candidate_generation_latency_ms": 0.265,
+      "case_id": "RCA_001974"
+    },
+    {
+      "candidate_generation_latency_ms": 0.32425,
+      "case_id": "RCA_001979"
+    },
+    {
+      "candidate_generation_latency_ms": 0.293834,
+      "case_id": "RCA_001986"
+    },
+    {
+      "candidate_generation_latency_ms": 0.25225,
+      "case_id": "RCA_001995"
+    },
+    {
+      "candidate_generation_latency_ms": 0.404292,
+      "case_id": "RCA_001998"
+    },
+    {
+      "candidate_generation_latency_ms": 0.24425,
+      "case_id": "RCA_002002"
+    },
+    {
+      "candidate_generation_latency_ms": 0.0175,
+      "case_id": "RCA_002003"
+    },
+    {
+      "candidate_generation_latency_ms": 0.321333,
+      "case_id": "RCA_002005"
+    },
+    {
+      "candidate_generation_latency_ms": 0.047584,
+      "case_id": "RCA_002007"
+    },
+    {
+      "candidate_generation_latency_ms": 0.122209,
+      "case_id": "RCA_002008"
+    },
+    {
+      "candidate_generation_latency_ms": 0.327542,
+      "case_id": "RCA_002012"
+    },
+    {
+      "candidate_generation_latency_ms": 0.248125,
+      "case_id": "RCA_002018"
+    },
+    {
+      "candidate_generation_latency_ms": 0.047333,
+      "case_id": "RCA_002023"
+    },
+    {
+      "candidate_generation_latency_ms": 0.377667,
+      "case_id": "RCA_002030"
+    },
+    {
+      "candidate_generation_latency_ms": 0.152542,
+      "case_id": "RCA_002033"
+    },
+    {
+      "candidate_generation_latency_ms": 0.719042,
+      "case_id": "RCA_002036"
+    },
+    {
+      "candidate_generation_latency_ms": 0.062666,
+      "case_id": "RCA_002039"
+    },
+    {
+      "candidate_generation_latency_ms": 0.188792,
+      "case_id": "RCA_002040"
+    },
+    {
+      "candidate_generation_latency_ms": 0.01425,
+      "case_id": "RCA_002051"
+    },
+    {
+      "candidate_generation_latency_ms": 0.200125,
+      "case_id": "RCA_002065"
+    },
+    {
+      "candidate_generation_latency_ms": 0.185208,
+      "case_id": "RCA_002066"
+    },
+    {
+      "candidate_generation_latency_ms": 0.24725,
+      "case_id": "RCA_002074"
+    },
+    {
+      "candidate_generation_latency_ms": 0.196542,
+      "case_id": "RCA_002075"
+    },
+    {
+      "candidate_generation_latency_ms": 0.453959,
+      "case_id": "RCA_002078"
+    },
+    {
+      "candidate_generation_latency_ms": 0.271791,
+      "case_id": "RCA_002086"
+    },
+    {
+      "candidate_generation_latency_ms": 0.309167,
+      "case_id": "RCA_002093"
+    },
+    {
+      "candidate_generation_latency_ms": 0.166208,
+      "case_id": "RCA_002097"
+    },
+    {
+      "candidate_generation_latency_ms": 0.191208,
+      "case_id": "RCA_002113"
+    },
+    {
+      "candidate_generation_latency_ms": 0.267791,
+      "case_id": "RCA_002117"
+    },
+    {
+      "candidate_generation_latency_ms": 0.328958,
+      "case_id": "RCA_002134"
+    },
+    {
+      "candidate_generation_latency_ms": 0.293125,
+      "case_id": "RCA_002138"
+    },
+    {
+      "candidate_generation_latency_ms": 0.313708,
+      "case_id": "RCA_002144"
+    },
+    {
+      "candidate_generation_latency_ms": 0.133542,
+      "case_id": "RCA_002145"
+    },
+    {
+      "candidate_generation_latency_ms": 0.236291,
+      "case_id": "RCA_002146"
+    },
+    {
+      "candidate_generation_latency_ms": 0.31975,
+      "case_id": "RCA_002148"
+    },
+    {
+      "candidate_generation_latency_ms": 0.273666,
+      "case_id": "RCA_002159"
+    },
+    {
+      "candidate_generation_latency_ms": 0.145916,
+      "case_id": "RCA_002161"
+    },
+    {
+      "candidate_generation_latency_ms": 0.649708,
+      "case_id": "RCA_002163"
+    },
+    {
+      "candidate_generation_latency_ms": 0.393833,
+      "case_id": "RCA_002169"
+    },
+    {
+      "candidate_generation_latency_ms": 0.260166,
+      "case_id": "RCA_002170"
+    },
+    {
+      "candidate_generation_latency_ms": 0.163917,
+      "case_id": "RCA_002184"
+    },
+    {
+      "candidate_generation_latency_ms": 0.2185,
+      "case_id": "RCA_002192"
+    },
+    {
+      "candidate_generation_latency_ms": 0.183958,
+      "case_id": "RCA_002196"
+    },
+    {
+      "candidate_generation_latency_ms": 0.418083,
+      "case_id": "RCA_002201"
+    },
+    {
+      "candidate_generation_latency_ms": 0.299167,
+      "case_id": "RCA_002203"
+    },
+    {
+      "candidate_generation_latency_ms": 0.243917,
+      "case_id": "RCA_002208"
+    },
+    {
+      "candidate_generation_latency_ms": 0.207333,
+      "case_id": "RCA_002225"
+    },
+    {
+      "candidate_generation_latency_ms": 0.258083,
+      "case_id": "RCA_002239"
+    },
+    {
+      "candidate_generation_latency_ms": 0.290458,
+      "case_id": "RCA_002245"
+    }
+  ],
+  "not_present_in_accepted_paths_transition_ids": [
+    "TR_APPROVAL_EVENT__APPROVAL_FOR_INVOICE__FORWARD__INVOICE",
+    "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+    "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_INVOICE__FORWARD__INVOICE",
+    "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PAYMENT__FORWARD__PAYMENT",
+    "TR_AUDIT_EVENT__AUDIT_EVENT_FOR_PURCHASE_ORDER__FORWARD__PURCHASE_ORDER",
+    "TR_GL_ENTRY__GL_SOURCE_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION",
+    "TR_GL_ENTRY__GL_SOURCE_INVOICE__FORWARD__INVOICE",
+    "TR_INVOICE_LINE__LINE_OF_INVOICE__FORWARD__INVOICE"
+  ],
+  "paths_by_exact_depth": {
+    "1": 3332,
+    "2": 4638,
+    "3": 5791
+  },
+  "rejection_counts": {
+    "HUB_PROHIBITED_TRANSITION": 1784,
+    "SIMPLE_PATH_VIOLATION": 4099
+  },
+  "resolved_root_count": 455,
+  "status": "PASS",
+  "terminal_stop_counts": {
+    "REACHED_GL_ACCOUNTING_CONSEQUENCE": 3981,
+    "TERMINAL_CONTEXT_REACHED": 3733
+  },
+  "total_candidate_generation_latency_ms": 478.626792,
+  "transition_maximum_reachable_frontier_fanout": {
+    "TR_BANK_TRANSACTION__AUDIT_EVENT_FOR_BANK_TRANSACTION__REVERSE__AUDIT_EVENT": 1,
+    "TR_BANK_TRANSACTION__GL_SOURCE_BANK_TRANSACTION__REVERSE__GL_ENTRY": 2,
+    "TR_GL_ENTRY__GL_SOURCE_BANK_TRANSACTION__FORWARD__BANK_TRANSACTION": 0,
+    "TR_GL_ENTRY__GL_SOURCE_INVOICE__FORWARD__INVOICE": 0,
+    "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT": 1,
+    "TR_INVOICE_LINE__INVOICE_LINE_REFERENCES_PO_LINE__FORWARD__PO_LINE": 1,
+    "TR_INVOICE_LINE__LINE_OF_INVOICE__FORWARD__INVOICE": 1,
+    "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION": 3,
+    "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT": 4,
+    "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT": 3,
+    "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY": 7,
+    "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER": 1,
+    "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE": 4,
+    "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT": 3,
+    "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT": 1,
+    "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE": 1,
+    "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION": 2,
+    "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT": 2,
+    "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY": 4,
+    "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE": 2,
+    "TR_PO_LINE__INVOICE_LINE_REFERENCES_PO_LINE__REVERSE__INVOICE_LINE": 2,
+    "TR_PO_LINE__LINE_OF_PO__FORWARD__PURCHASE_ORDER": 1,
+    "TR_PURCHASE_ORDER__AUDIT_EVENT_FOR_PURCHASE_ORDER__REVERSE__AUDIT_EVENT": 1,
+    "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE": 2,
+    "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE": 4
+  },
+  "transition_path_incidence": {
+    "TR_BANK_TRANSACTION__AUDIT_EVENT_FOR_BANK_TRANSACTION__REVERSE__AUDIT_EVENT": 28,
+    "TR_BANK_TRANSACTION__GL_SOURCE_BANK_TRANSACTION__REVERSE__GL_ENTRY": 16,
+    "TR_GL_ENTRY__GL_SOURCE_PAYMENT__FORWARD__PAYMENT": 794,
+    "TR_INVOICE_LINE__INVOICE_LINE_REFERENCES_PO_LINE__FORWARD__PO_LINE": 961,
+    "TR_INVOICE__ALLOCATION_TO_INVOICE__REVERSE__PAYMENT_ALLOCATION": 1013,
+    "TR_INVOICE__APPROVAL_FOR_INVOICE__REVERSE__APPROVAL_EVENT": 1447,
+    "TR_INVOICE__AUDIT_EVENT_FOR_INVOICE__REVERSE__AUDIT_EVENT": 1398,
+    "TR_INVOICE__GL_SOURCE_INVOICE__REVERSE__GL_ENTRY": 2967,
+    "TR_INVOICE__INVOICE_REFERENCES_PO__FORWARD__PURCHASE_ORDER": 1871,
+    "TR_INVOICE__LINE_OF_INVOICE__REVERSE__INVOICE_LINE": 2560,
+    "TR_INVOICE__PAYMENT_ALLOCATED_TO_INVOICE__REVERSE__PAYMENT": 1115,
+    "TR_PAYMENT_ALLOCATION__ALLOCATION_OF_PAYMENT__FORWARD__PAYMENT": 473,
+    "TR_PAYMENT_ALLOCATION__ALLOCATION_TO_INVOICE__FORWARD__INVOICE": 3035,
+    "TR_PAYMENT__ALLOCATION_OF_PAYMENT__REVERSE__PAYMENT_ALLOCATION": 3505,
+    "TR_PAYMENT__AUDIT_EVENT_FOR_PAYMENT__REVERSE__AUDIT_EVENT": 578,
+    "TR_PAYMENT__GL_SOURCE_PAYMENT__REVERSE__GL_ENTRY": 998,
+    "TR_PAYMENT__PAYMENT_ALLOCATED_TO_INVOICE__FORWARD__INVOICE": 5124,
+    "TR_PO_LINE__INVOICE_LINE_REFERENCES_PO_LINE__REVERSE__INVOICE_LINE": 373,
+    "TR_PO_LINE__LINE_OF_PO__FORWARD__PURCHASE_ORDER": 309,
+    "TR_PURCHASE_ORDER__AUDIT_EVENT_FOR_PURCHASE_ORDER__REVERSE__AUDIT_EVENT": 282,
+    "TR_PURCHASE_ORDER__INVOICE_REFERENCES_PO__REVERSE__INVOICE": 173,
+    "TR_PURCHASE_ORDER__LINE_OF_PO__REVERSE__PO_LINE": 961
+  },
+  "vendor_or_employee_accepted_entry_count": 0
+}

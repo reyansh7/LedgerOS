@@ -1,0 +1,74 @@
+{
+  "authorization_to_start_test": true,
+  "dataset_version": "FinRCA-Bench v1 seed 42",
+  "fixed_thresholds": {
+    "ACCOUNTING_PERIOD_TOLERANCE": 0,
+    "APPROVAL_POLICY": {
+      "10000": [
+        "MANAGER"
+      ],
+      "250000": [
+        "MANAGER",
+        "DIRECTOR",
+        "CONTROLLER"
+      ],
+      "500": [
+        "AUTO"
+      ],
+      "50000": [
+        "MANAGER",
+        "DIRECTOR"
+      ],
+      "above": [
+        "MANAGER",
+        "DIRECTOR",
+        "TREASURY"
+      ]
+    },
+    "AS_OF_DATE": "2026-06-30",
+    "CLEARING_GRACE_BUSINESS_DAYS": 0,
+    "CLEARING_LIMITS": {
+      "ACH": 3,
+      "CHECK": 10,
+      "VIRTUAL_CARD": 2,
+      "WIRE": 1
+    },
+    "CROSS_MATCH_CANDIDATE_COUNT": 1,
+    "CROSS_MATCH_DATE_WINDOW_CALENDAR_DAYS": 7,
+    "GL_POSTING_LAG_BUSINESS_DAYS": 0,
+    "MIN_POSITIVE_ALLOCATION": ">0",
+    "MONEY_QUANTUM": {
+      "CAD": "0.01",
+      "EUR": "0.01",
+      "GBP": "0.01",
+      "JPY": "1",
+      "USD": "0.01"
+    },
+    "OVERPAYMENT_TOLERANCE": "currency_quantum",
+    "PO_TOLERANCE_PERCENT": "2.0",
+    "QUANTITY_TOLERANCE": 0,
+    "RESIDUAL_TOLERANCE": "currency_quantum"
+  },
+  "frozen_spec_sha256": "0ee3192dd760dd2521791ef46543c9c7337cc6d8eff0f3cd4a7cba9e5d645675",
+  "generated_at_utc": "2026-08-09T01:39:43.768491+00:00",
+  "held_out_labels_opened": false,
+  "implementation_git_commit": "UNAVAILABLE_NOT_A_GIT_WORKTREE",
+  "implemented_rule_count": 15,
+  "leakage_audit_status": "PASS",
+  "model_visible_dataset_sha256": "d8dcd68290524db221bf07f5f654e4b930a039efb3f6ecabd98aa6e38eb7c662",
+  "normalization_configuration": "frozen Section 4 functions; see src/rules_sql/normalization.py",
+  "schema_mapping_missing_or_ambiguous": [],
+  "selected_f01_parameters": {
+    "duplicate_date_window_days": 7,
+    "duplicate_reference_similarity": "1.00"
+  },
+  "test_split_identifier": "data/benchmark/test/case_ids.txt (case routing only; labels unopened before predictions)",
+  "train_split_identifier": "data/benchmark/train/case_ids.txt",
+  "unit_and_integration_tests": {
+    "command": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3 -m pytest tests/rules_sql -q",
+    "output": "........................................                                 [100%]\n40 passed in 4.81s\n",
+    "status": "PASS"
+  },
+  "unresolved_material_implementation_deviations": [],
+  "validation_split_identifier": "data/benchmark/validation/case_ids.txt"
+}

@@ -1,0 +1,26 @@
+{
+  "algorithm": "SHA-256",
+  "file_count": 4,
+  "files": [
+    {
+      "bytes": 485768,
+      "path": "queries.jsonl",
+      "sha256": "fc2cfe0b48b5cb6066b3402e0fdbe71bee5767be6ff32b42bc266ac770112aae"
+    },
+    {
+      "bytes": 553849,
+      "path": "retrieval_ledger.jsonl",
+      "sha256": "a768b23fa7c676ae62763d525f66dd8cb7b79f279ca121f96165a0671b70d8c4"
+    },
+    {
+      "bytes": 2548615,
+      "path": "retrieval_results.jsonl",
+      "sha256": "3eaae4b34b2dbe3ae0a3cd13980a69421737f2a9194c72e77077a352bc28b372"
+    },
+    {
+      "bytes": 504,
+      "path": "run_manifest.json",
+      "sha256": "63ae679a1a5464f0deaac1b4cf4531f894e5486202c642cf9c822265d4717299"
+    }
+  ]
+}

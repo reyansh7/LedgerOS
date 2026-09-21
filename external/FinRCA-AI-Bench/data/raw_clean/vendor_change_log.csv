@@ -1,0 +1,4 @@
+change_id,vendor_id,field_changed,old_value,new_value,changed_at,changed_by,change_reason,source_system
+CHG_0420001,VND_042007,vendor_status,active,on_hold,2025-01-14T11:00:00,EMP_04223,Periodic vendor compliance review,VendorManagement
+CHG_0420002,VND_042023,bank_account_token,BA_TKN_042_0000023,BA_TKN_042_0000042,2025-02-12T11:00:00,EMP_04205,Vendor-verified banking update,VendorManagement
+CHG_0420003,VND_042024,vendor_status,active,on_hold,2025-02-05T11:00:00,EMP_04215,Periodic vendor compliance review,VendorManagement

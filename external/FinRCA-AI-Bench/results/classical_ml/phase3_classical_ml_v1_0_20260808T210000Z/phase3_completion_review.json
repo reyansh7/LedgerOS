@@ -1,0 +1,121 @@
+{
+  "decision": "PHASE 3 NOT COMPLETE",
+  "feature_pipeline_status": {
+    "features": 147,
+    "forbidden_feature_checks": "PASS",
+    "missing_data_tests": "PASS",
+    "split_isolation_tests": "PASS",
+    "temporal_leakage_tests": "PASS",
+    "tests": "15 passed"
+  },
+  "held_out_evaluation_status": {
+    "binary_accuracy": 0.9544419134396356,
+    "binary_f1": 0.9663299663299664,
+    "binary_precision": 0.959866220735786,
+    "binary_recall": 0.9728813559322034,
+    "completed": true,
+    "evidence_contract_accuracy": null,
+    "evidence_limitation": "Classical ML does not return transaction evidence; evidence_record_ids are empty by contract.",
+    "exact_accuracy": 0.9544419134396356,
+    "false_negative_rate": 0.02711864406779661,
+    "false_positive_rate": 0.08333333333333333,
+    "fn": 8,
+    "fp": 12,
+    "macro_f1": 0.9623927296980705,
+    "micro_f1": 0.9544419134396356,
+    "model_output_states": {
+      "ANOMALY": 299,
+      "MATCH": 140
+    },
+    "test_cases": 439,
+    "tn": 132,
+    "total_cases": 439,
+    "tp": 287,
+    "weighted_f1": 0.9545736326410815
+  },
+  "operational_results": {
+    "approximate_peak_rss_mb": 495.34375,
+    "batch_preprocess_and_model_seconds": 0.06401250002090819,
+    "cases": 439,
+    "end_to_end_sum_case_seconds": 30.648512096,
+    "environment": {
+      "cpu_count": 8,
+      "dependencies": {
+        "PyYAML": "6.0.1",
+        "joblib": "1.3.2",
+        "numpy": "1.26.0",
+        "pandas": "2.1.1",
+        "pytest": "8.4.2",
+        "scikit-learn": "1.4.1.post1"
+      },
+      "machine": "arm64",
+      "platform": "macOS-15.7.4-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.11.3 (v3.11.3:f3909b8bc8, Apr  4 2023, 20:12:10) [Clang 13.0.0 (clang-1300.0.29.30)]"
+    },
+    "estimator_size_bytes": 718824,
+    "external_service_cost": 0,
+    "feature_extraction_total_seconds": 3.940349292010069,
+    "mean_latency_ms": 69.81437835079727,
+    "median_latency_ms": 67.919958,
+    "p95_latency_ms": 91.93315869999992,
+    "p99_latency_ms": 136.43182362000005,
+    "preprocessor_size_bytes": 8032,
+    "ru_maxrss_raw": 519405568,
+    "runtime_technology": "Python/pandas/scikit-learn; no LLM, API, database, or external service",
+    "selected_fit_seconds": 4.848906333,
+    "serialized_total_bytes": 726856,
+    "throughput_cases_per_second": 14.323696975074192,
+    "total_search_seconds": 58.02869991699117
+  },
+  "outstanding_material_issues": [
+    "Preserved pre-fix run: NUM044 missing vendor entity was initialized to 0.0 instead of numeric missing. Superseded by phase3_classical_ml_v1_0_20260808T213000Z_auditfix1."
+  ],
+  "post_run_expanded_feature_pipeline_suite": "19 passed",
+  "repository_test_suite": "76 passed",
+  "reproducibility_command": "python3 -m src.classical_ml.cli run --data-root data/benchmark --output-root results/classical_ml --run-id <new_unique_run_id>",
+  "reproducibility_verification": "PASS: 439 predictions and probabilities reproduced bit-for-bit from locked artifacts without opening test labels",
+  "rules_sql_comparison": {
+    "binary_correctness_partition": {
+      "both_correct": 365,
+      "both_wrong": 8,
+      "ml_only_correct": 54,
+      "rules_only_correct": 12
+    },
+    "exact_correctness_partition": {
+      "both_correct": 361,
+      "both_wrong": 8,
+      "ml_only_correct": 58,
+      "rules_only_correct": 12
+    },
+    "interpretation": "Recovery is classification-only; the ML evidence contract remains empty.",
+    "rules_insufficient_cases": 50,
+    "rules_insufficient_ml_binary_recovered": 45,
+    "rules_insufficient_ml_exact_recovered": 45
+  },
+  "specification_status": {
+    "frozen": true,
+    "leakage_audit": "PASS",
+    "protocol_deviations": "NO PROTOCOL DEVIATIONS",
+    "registry_locked": true,
+    "sha256": "0d220564335a85e6fe3a193e212d68aec2abbf7744a23f267ba4390b428d6897"
+  },
+  "training_status": {
+    "configurations": 22,
+    "gradient_boosting": true,
+    "logistic_regression": true,
+    "model_locked": true,
+    "random_forest": true,
+    "validation_selection_completed": true,
+    "winning_hyperparameters": {
+      "class_weight": "balanced",
+      "early_stopping": false,
+      "l2_regularization": 1.0,
+      "learning_rate": 0.1,
+      "max_iter": 200,
+      "max_leaf_nodes": 15,
+      "random_state": 314159
+    },
+    "winning_model": "hist_gradient_boosting"
+  }
+}

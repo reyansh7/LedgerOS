@@ -1,0 +1,210 @@
+{
+  "audit_version": "employee_reference_audit_v1",
+  "employee_record_count": 120,
+  "source_fields": [
+    {
+      "all_unmatched_appear_system_service_or_shared_role": true,
+      "degree_statistics": {
+        "employee_in_degree_all_domain": {
+          "domain_size": 120,
+          "maximum_degree": 416,
+          "mean_degree": 77.425,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 400,
+          "zero_degree_count": 65
+        },
+        "source_out_degree_all_domain": {
+          "domain_size": 17429,
+          "maximum_degree": 1,
+          "mean_degree": 0.533077,
+          "median_degree": 1.0,
+          "p95_degree_nearest_rank": 1,
+          "zero_degree_count": 8138
+        }
+      },
+      "distinct_unmatched_values": 2,
+      "edge_policy": "Create an Employee edge only for an exact employee_id match. Preserve unmatched actor_id/approver_id text as context; do not discard or synthesize Employee nodes.",
+      "exact_employee_matches": 9291,
+      "percentage_resolved": 53.307706,
+      "proposed_relation_classification": "CONDITIONAL",
+      "relation_key": "APPROVAL_EVENT_APPROVER_EMPLOYEE",
+      "representative_unmatched_examples": [
+        {
+          "classification": "explicit_system_actor",
+          "count": 138,
+          "value": "SYSTEM-AUTO-APPROVAL"
+        },
+        {
+          "classification": "explicit_system_actor",
+          "count": 8000,
+          "value": "SYSTEM-WORKFLOW"
+        }
+      ],
+      "source_field": "approver_id",
+      "source_node_type": "APPROVAL_EVENT",
+      "source_row_count": 17429,
+      "total_populated_values": 17429,
+      "unmatched_actor_style_counts": {
+        "explicit_system_actor": 8138
+      },
+      "unmatched_values": 8138
+    },
+    {
+      "all_unmatched_appear_system_service_or_shared_role": true,
+      "degree_statistics": {
+        "employee_in_degree_all_domain": {
+          "domain_size": 120,
+          "maximum_degree": 63,
+          "mean_degree": 42,
+          "median_degree": 43.0,
+          "p95_degree_nearest_rank": 53,
+          "zero_degree_count": 5
+        },
+        "source_out_degree_all_domain": {
+          "domain_size": 28029,
+          "maximum_degree": 1,
+          "mean_degree": 0.179814,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 1,
+          "zero_degree_count": 22989
+        }
+      },
+      "distinct_unmatched_values": 10,
+      "edge_policy": "Create an Employee edge only for an exact employee_id match. Preserve unmatched actor_id/approver_id text as context; do not discard or synthesize Employee nodes.",
+      "exact_employee_matches": 5040,
+      "percentage_resolved": 17.981376,
+      "proposed_relation_classification": "CONDITIONAL",
+      "relation_key": "AUDIT_EVENT_ACTOR_EMPLOYEE",
+      "representative_unmatched_examples": [
+        {
+          "classification": "shared_role_or_portal_actor_style",
+          "count": 100,
+          "value": "EMP-MANUAL-AP"
+        },
+        {
+          "classification": "explicit_system_actor",
+          "count": 8100,
+          "value": "SYSTEM-AP-INGEST"
+        },
+        {
+          "classification": "explicit_system_actor",
+          "count": 47,
+          "value": "SYSTEM-AP-WORKFLOW"
+        },
+        {
+          "classification": "explicit_system_actor",
+          "count": 47,
+          "value": "SYSTEM-BANK-FX"
+        },
+        {
+          "classification": "explicit_system_actor",
+          "count": 95,
+          "value": "SYSTEM-GL-INTERFACE"
+        },
+        {
+          "classification": "explicit_system_actor",
+          "count": 300,
+          "value": "SYSTEM-PAYMENT-PROCESSOR"
+        },
+        {
+          "classification": "explicit_system_actor",
+          "count": 6100,
+          "value": "SYSTEM-PAYMENT-RUN"
+        },
+        {
+          "classification": "explicit_system_actor",
+          "count": 100,
+          "value": "SYSTEM-RECON-ENGINE"
+        },
+        {
+          "classification": "explicit_system_actor",
+          "count": 8000,
+          "value": "SYSTEM-WORKFLOW"
+        },
+        {
+          "classification": "shared_role_or_portal_actor_style",
+          "count": 100,
+          "value": "TREASURY-PORTAL-USER"
+        }
+      ],
+      "source_field": "actor_id",
+      "source_node_type": "AUDIT_EVENT",
+      "source_row_count": 28029,
+      "total_populated_values": 28029,
+      "unmatched_actor_style_counts": {
+        "explicit_system_actor": 22789,
+        "shared_role_or_portal_actor_style": 200
+      },
+      "unmatched_values": 22989
+    },
+    {
+      "all_unmatched_appear_system_service_or_shared_role": false,
+      "degree_statistics": {
+        "employee_in_degree_all_domain": {
+          "domain_size": 120,
+          "maximum_degree": 146,
+          "mean_degree": 1.55,
+          "median_degree": 0.0,
+          "p95_degree_nearest_rank": 2,
+          "zero_degree_count": 86
+        },
+        "source_out_degree_all_domain": {
+          "domain_size": 186,
+          "maximum_degree": 1,
+          "mean_degree": 1,
+          "median_degree": 1.0,
+          "p95_degree_nearest_rank": 1,
+          "zero_degree_count": 0
+        }
+      },
+      "distinct_unmatched_values": 0,
+      "edge_policy": "Create an Employee edge only for an exact employee_id match. Preserve unmatched actor_id/approver_id text as context; do not discard or synthesize Employee nodes.",
+      "exact_employee_matches": 186,
+      "percentage_resolved": 100.0,
+      "proposed_relation_classification": "APPROVED_TIER_A",
+      "relation_key": "VENDOR_CHANGE_CHANGED_BY_EMPLOYEE",
+      "representative_unmatched_examples": [],
+      "source_field": "changed_by",
+      "source_node_type": "VENDOR_CHANGE",
+      "source_row_count": 186,
+      "total_populated_values": 186,
+      "unmatched_actor_style_counts": {},
+      "unmatched_values": 0
+    },
+    {
+      "all_unmatched_appear_system_service_or_shared_role": false,
+      "degree_statistics": {
+        "employee_in_degree_all_domain": {
+          "domain_size": 120,
+          "maximum_degree": 63,
+          "mean_degree": 41.666667,
+          "median_degree": 43.0,
+          "p95_degree_nearest_rank": 53,
+          "zero_degree_count": 5
+        },
+        "source_out_degree_all_domain": {
+          "domain_size": 5000,
+          "maximum_degree": 1,
+          "mean_degree": 1,
+          "median_degree": 1.0,
+          "p95_degree_nearest_rank": 1,
+          "zero_degree_count": 0
+        }
+      },
+      "distinct_unmatched_values": 0,
+      "edge_policy": "Create an Employee edge only for an exact employee_id match. Preserve unmatched actor_id/approver_id text as context; do not discard or synthesize Employee nodes.",
+      "exact_employee_matches": 5000,
+      "percentage_resolved": 100.0,
+      "proposed_relation_classification": "APPROVED_TIER_A",
+      "relation_key": "PURCHASE_ORDER_CREATED_BY_EMPLOYEE",
+      "representative_unmatched_examples": [],
+      "source_field": "created_by",
+      "source_node_type": "PURCHASE_ORDER",
+      "source_row_count": 5000,
+      "total_populated_values": 5000,
+      "unmatched_actor_style_counts": {},
+      "unmatched_values": 0
+    }
+  ],
+  "system_actor_policy": "Unmatched actor values remain operational context and are never silently discarded or converted to Employee nodes."
+}

@@ -1,0 +1,65 @@
+{
+  "FROZEN_BEFORE_GOLD_EVALUATION": true,
+  "artifact_type": "phase6a3_retrieval_pre_gold_manifest",
+  "artifact_version": "1.0",
+  "blocking_decision": "BLOCKED — GRAPH v1.1 EVIDENCE-SELECTION POLICY REQUIRES SEPARATE FREEZE",
+  "candidate_outputs_complete": true,
+  "candidate_path_count": 13371,
+  "candidate_record_row_count": 8369,
+  "created_at_utc": "2026-08-15T21:52:42Z",
+  "frozen_before_gold_evaluation": true,
+  "heldout_gold_opened": false,
+  "ranking_policy_hash": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+  "ranking_policy_source": "results/graphrag/registry_freeze_v1/graph_ranking_policy_v1.json",
+  "resolved_root_count": 430,
+  "retrieval_content_hashes": {
+    "retrieval/anchor_resolutions.jsonl": {
+      "bytes": 110880,
+      "sha256": "b7cfffccc5660b8c50a365b8a72dc656857e4feab8dccb8049634494c6c9f9e2"
+    },
+    "retrieval/candidate_paths.jsonl": {
+      "bytes": 24257308,
+      "sha256": "eab6e5524334001cbb285dbe1cb5367daa70fe008836a9df5ac99fedef695c03"
+    },
+    "retrieval/candidate_records.jsonl": {
+      "bytes": 4336748,
+      "sha256": "4c960019afebaa179f6ef213bd9771c36c82f652dc60b0b1ac1f20f24eff955c"
+    },
+    "retrieval/candidate_statistics.json": {
+      "bytes": 4550,
+      "sha256": "fc70b3fb22ab74ab77ae2bf417ed42ccbb2bf409f5a3fcb43926fe8872be0756"
+    },
+    "retrieval/drop_ledger.jsonl": {
+      "bytes": 61152,
+      "sha256": "726d4d7cf1c038ba1bf2de2cadbbfdb3703b4505bf35255f0f86f4dc7ad1e2c1"
+    },
+    "retrieval/graph_v1_1_retrieval_results.jsonl": {
+      "bytes": 163259,
+      "sha256": "7d6a0e63d14a7951720ccf5ac2fe72a221087f861a4faa9ba15fade7db043331"
+    },
+    "retrieval/retrieval_latency_pre_gold.json": {
+      "bytes": 640,
+      "sha256": "2b81d106d7d45f5cf4abdb3f88dcbba904949ade8afca1998f028f4c4eca4f24"
+    },
+    "retrieval/selected_paths.jsonl": {
+      "bytes": 60736,
+      "sha256": "bb90a50a04aa21b7dffbc68c42f81a49f65aa5618f1bad9ebf1da0e14dd90d39"
+    },
+    "retrieval/selected_records.jsonl": {
+      "bytes": 61568,
+      "sha256": "553b97de310aeb5dce33621fcba972cb9256abbe533bd9a57262853e400bd5bf"
+    },
+    "retrieval/traversal_rejections.jsonl": {
+      "bytes": 3091171,
+      "sha256": "81346faa9b9621c3ae4f720ab6a7ae96add004d1b92ba20f04accb9f882e0357"
+    }
+  },
+  "selection_outputs_executed": false,
+  "selection_policy_compatibility_status": "BLOCKED_AMBIGUOUS",
+  "selection_policy_hash": null,
+  "selection_policy_source": null,
+  "selection_policy_version": null,
+  "status": "FROZEN_CANDIDATE_OUTPUTS_SELECTION_BLOCKED",
+  "validation_case_count": 416,
+  "validation_gold_opened": false
+}

@@ -1,0 +1,714 @@
+{
+  "analysis_script": {
+    "bytes": 89925,
+    "path": "run_graph_v1_1_registry_freeze.py",
+    "sha256": "e176bc92b75533db2a7171fcc02dca598960f85121da329e1a0a1e62ea5ab095"
+  },
+  "artifact_type": "graph_v1_1_freeze_hash_inventory",
+  "artifact_version": "1.1",
+  "artifacts": {
+    "GRAPH_V1_1_TYPED_GRAMMAR_FREEZE_REVIEW.md": {
+      "bytes": 32611,
+      "sha256": "012d75ab2ba71f9745a9e5668a015925435a8dddfc26ea9e02fea9a1d7545232"
+    },
+    "determinism_validation_v1_1_freeze.json": {
+      "bytes": 5729,
+      "sha256": "b1e36adc5fb0386ed7456be583f82ec3a64b972f0183de98da1bbd681904fa89"
+    },
+    "draft_to_final_semantic_diff_v1_1.json": {
+      "bytes": 7662,
+      "sha256": "496c62bd81f5a8cbddef8ad1ccb9e19af615277c7ec503f430827e8336c83332"
+    },
+    "forbidden_traversals_v1_1.json": {
+      "bytes": 29549,
+      "sha256": "25901986a4e4a227ecc8020c8598bb28db36fc5b281bf84ec6ce6903270f506f"
+    },
+    "grammar_fanout_analysis_v1_1.json": {
+      "bytes": 42268,
+      "sha256": "ea97fb07816aaa6018414d067f5cef9e427cc752ea39e5948f3fa4901c34ba9e"
+    },
+    "grammar_risk_register_v1_1.json": {
+      "bytes": 9846,
+      "sha256": "e6751465b612afcd2cdf5c01172f8ba2a09062437b8698ef94b6deb10ea5f56d"
+    },
+    "grammar_structural_coverage_v1_1.json": {
+      "bytes": 80393,
+      "sha256": "19852d1ff2bda9099d6fd2a15d64a820685c2a2a3df52e2a4aeccacfa8bff3de"
+    },
+    "grammar_topology_simulation_v1_1.json": {
+      "bytes": 303172,
+      "sha256": "8644fc8614ed4e048aecd672cb6dcea357b8117b9ca801c3c921083f63cf7008"
+    },
+    "grammar_transition_justifications_v1_1.json": {
+      "bytes": 74907,
+      "sha256": "5ae798d5cbe4560993de9d82b3cf0ff42bf51ac23eacc2f27eb58fa0f05e3f0b"
+    },
+    "graph_traversal_grammar_v1_1.json": {
+      "bytes": 153580,
+      "sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc"
+    },
+    "graph_v1_1_freeze_manifest.json": {
+      "bytes": 30309,
+      "sha256": "35e521266a7e11e6b0850e2e256e869dee6d7269b9cdf1d407c7a0459616f36f"
+    },
+    "node_type_traversal_matrix_v1_1.json": {
+      "bytes": 15875,
+      "sha256": "160a21d9107a9e65335c79e4efcbae6e80635387b83525455d75d5ec0da09ecd"
+    },
+    "scientific_integrity_v1_1_freeze.json": {
+      "bytes": 2036,
+      "sha256": "111d876300a07b2ae90e5a65c6837d94c665ed0ea140856b1316ddaccf1231f1"
+    },
+    "topology_equivalence_validation_v1_1.json": {
+      "bytes": 1801,
+      "sha256": "8151107387e08c6ead1f6e1da917154116335ceea273cdb930598e775c36a032"
+    },
+    "transition_freeze_validation_v1_1.json": {
+      "bytes": 74162,
+      "sha256": "947f979a85e117f4e93c5d69d3da71ef81883daa0875cdb4835911e96284f699"
+    },
+    "typed_transition_matrix_v1_1.json": {
+      "bytes": 25055,
+      "sha256": "82f66dad011f63b7e61188587e90a9fe0bbb3bfbcb5323766a12bd7ed0f7864e"
+    },
+    "v1_motif_to_v1_1_grammar_mapping.json": {
+      "bytes": 10350,
+      "sha256": "4014d965801de4ae8c0993c2835ffa17e2f837f931dfb025f768f4f18e423ab5"
+    }
+  },
+  "canonical_timestamp": "2026-08-15T17:54:51Z",
+  "canonical_timestamp_reused": true,
+  "created_at_utc": "2026-08-15T17:54:51Z",
+  "double_build_artifact_count": 17,
+  "double_build_comparisons": {
+    "GRAPH_V1_1_TYPED_GRAMMAR_FREEZE_REVIEW.md": {
+      "identical": true,
+      "run_1_bytes": 32611,
+      "run_1_sha256": "012d75ab2ba71f9745a9e5668a015925435a8dddfc26ea9e02fea9a1d7545232",
+      "run_2_bytes": 32611,
+      "run_2_sha256": "012d75ab2ba71f9745a9e5668a015925435a8dddfc26ea9e02fea9a1d7545232"
+    },
+    "determinism_validation_v1_1_freeze.json": {
+      "identical": true,
+      "run_1_bytes": 5729,
+      "run_1_sha256": "b1e36adc5fb0386ed7456be583f82ec3a64b972f0183de98da1bbd681904fa89",
+      "run_2_bytes": 5729,
+      "run_2_sha256": "b1e36adc5fb0386ed7456be583f82ec3a64b972f0183de98da1bbd681904fa89"
+    },
+    "draft_to_final_semantic_diff_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 7662,
+      "run_1_sha256": "496c62bd81f5a8cbddef8ad1ccb9e19af615277c7ec503f430827e8336c83332",
+      "run_2_bytes": 7662,
+      "run_2_sha256": "496c62bd81f5a8cbddef8ad1ccb9e19af615277c7ec503f430827e8336c83332"
+    },
+    "forbidden_traversals_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 29549,
+      "run_1_sha256": "25901986a4e4a227ecc8020c8598bb28db36fc5b281bf84ec6ce6903270f506f",
+      "run_2_bytes": 29549,
+      "run_2_sha256": "25901986a4e4a227ecc8020c8598bb28db36fc5b281bf84ec6ce6903270f506f"
+    },
+    "grammar_fanout_analysis_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 42268,
+      "run_1_sha256": "ea97fb07816aaa6018414d067f5cef9e427cc752ea39e5948f3fa4901c34ba9e",
+      "run_2_bytes": 42268,
+      "run_2_sha256": "ea97fb07816aaa6018414d067f5cef9e427cc752ea39e5948f3fa4901c34ba9e"
+    },
+    "grammar_risk_register_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 9846,
+      "run_1_sha256": "e6751465b612afcd2cdf5c01172f8ba2a09062437b8698ef94b6deb10ea5f56d",
+      "run_2_bytes": 9846,
+      "run_2_sha256": "e6751465b612afcd2cdf5c01172f8ba2a09062437b8698ef94b6deb10ea5f56d"
+    },
+    "grammar_structural_coverage_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 80393,
+      "run_1_sha256": "19852d1ff2bda9099d6fd2a15d64a820685c2a2a3df52e2a4aeccacfa8bff3de",
+      "run_2_bytes": 80393,
+      "run_2_sha256": "19852d1ff2bda9099d6fd2a15d64a820685c2a2a3df52e2a4aeccacfa8bff3de"
+    },
+    "grammar_topology_simulation_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 303172,
+      "run_1_sha256": "8644fc8614ed4e048aecd672cb6dcea357b8117b9ca801c3c921083f63cf7008",
+      "run_2_bytes": 303172,
+      "run_2_sha256": "8644fc8614ed4e048aecd672cb6dcea357b8117b9ca801c3c921083f63cf7008"
+    },
+    "grammar_transition_justifications_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 74907,
+      "run_1_sha256": "5ae798d5cbe4560993de9d82b3cf0ff42bf51ac23eacc2f27eb58fa0f05e3f0b",
+      "run_2_bytes": 74907,
+      "run_2_sha256": "5ae798d5cbe4560993de9d82b3cf0ff42bf51ac23eacc2f27eb58fa0f05e3f0b"
+    },
+    "graph_traversal_grammar_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 153580,
+      "run_1_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc",
+      "run_2_bytes": 153580,
+      "run_2_sha256": "2222def5dc3fd18628731949697087c6c96d7cdf1bb6c4cf2d16a1a58da6c8dc"
+    },
+    "graph_v1_1_freeze_manifest.json": {
+      "identical": true,
+      "run_1_bytes": 30309,
+      "run_1_sha256": "35e521266a7e11e6b0850e2e256e869dee6d7269b9cdf1d407c7a0459616f36f",
+      "run_2_bytes": 30309,
+      "run_2_sha256": "35e521266a7e11e6b0850e2e256e869dee6d7269b9cdf1d407c7a0459616f36f"
+    },
+    "node_type_traversal_matrix_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 15875,
+      "run_1_sha256": "160a21d9107a9e65335c79e4efcbae6e80635387b83525455d75d5ec0da09ecd",
+      "run_2_bytes": 15875,
+      "run_2_sha256": "160a21d9107a9e65335c79e4efcbae6e80635387b83525455d75d5ec0da09ecd"
+    },
+    "scientific_integrity_v1_1_freeze.json": {
+      "identical": true,
+      "run_1_bytes": 2036,
+      "run_1_sha256": "111d876300a07b2ae90e5a65c6837d94c665ed0ea140856b1316ddaccf1231f1",
+      "run_2_bytes": 2036,
+      "run_2_sha256": "111d876300a07b2ae90e5a65c6837d94c665ed0ea140856b1316ddaccf1231f1"
+    },
+    "topology_equivalence_validation_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 1801,
+      "run_1_sha256": "8151107387e08c6ead1f6e1da917154116335ceea273cdb930598e775c36a032",
+      "run_2_bytes": 1801,
+      "run_2_sha256": "8151107387e08c6ead1f6e1da917154116335ceea273cdb930598e775c36a032"
+    },
+    "transition_freeze_validation_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 74162,
+      "run_1_sha256": "947f979a85e117f4e93c5d69d3da71ef81883daa0875cdb4835911e96284f699",
+      "run_2_bytes": 74162,
+      "run_2_sha256": "947f979a85e117f4e93c5d69d3da71ef81883daa0875cdb4835911e96284f699"
+    },
+    "typed_transition_matrix_v1_1.json": {
+      "identical": true,
+      "run_1_bytes": 25055,
+      "run_1_sha256": "82f66dad011f63b7e61188587e90a9fe0bbb3bfbcb5323766a12bd7ed0f7864e",
+      "run_2_bytes": 25055,
+      "run_2_sha256": "82f66dad011f63b7e61188587e90a9fe0bbb3bfbcb5323766a12bd7ed0f7864e"
+    },
+    "v1_motif_to_v1_1_grammar_mapping.json": {
+      "identical": true,
+      "run_1_bytes": 10350,
+      "run_1_sha256": "4014d965801de4ae8c0993c2835ffa17e2f837f931dfb025f768f4f18e423ab5",
+      "run_2_bytes": 10350,
+      "run_2_sha256": "4014d965801de4ae8c0993c2835ffa17e2f837f931dfb025f768f4f18e423ab5"
+    }
+  },
+  "double_build_raw_bytes_identical": true,
+  "final_artifact_count_including_self": 18,
+  "final_artifact_names_including_self": [
+    "GRAPH_V1_1_TYPED_GRAMMAR_FREEZE_REVIEW.md",
+    "determinism_validation_v1_1_freeze.json",
+    "draft_to_final_semantic_diff_v1_1.json",
+    "forbidden_traversals_v1_1.json",
+    "grammar_fanout_analysis_v1_1.json",
+    "grammar_risk_register_v1_1.json",
+    "grammar_structural_coverage_v1_1.json",
+    "grammar_topology_simulation_v1_1.json",
+    "grammar_transition_justifications_v1_1.json",
+    "graph_traversal_grammar_v1_1.json",
+    "graph_v1_1_freeze_hashes.json",
+    "graph_v1_1_freeze_manifest.json",
+    "node_type_traversal_matrix_v1_1.json",
+    "scientific_integrity_v1_1_freeze.json",
+    "topology_equivalence_validation_v1_1.json",
+    "transition_freeze_validation_v1_1.json",
+    "typed_transition_matrix_v1_1.json",
+    "v1_motif_to_v1_1_grammar_mapping.json"
+  ],
+  "freeze_status": "FROZEN_GRAPH_V1_1_TYPED_GRAMMAR",
+  "hash_algorithm": "SHA-256",
+  "hash_scope": "raw serialized file bytes",
+  "hashed_nonself_artifact_count": 17,
+  "manifest_circularity_policy": "The manifest hashes core specification/validation outputs and determinism only; it excludes itself, report, and hash inventory. This inventory hashes the manifest and report and omits only itself.",
+  "parent_input_verification": {
+    "checks": [
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "observed_bytes": 10082,
+        "observed_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "d2c70d76e72fbe16a9210f191facbf8eeaecdd97bbd39c009b036cc4d332d7b5",
+        "observed_bytes": 6166,
+        "observed_sha256": "d2c70d76e72fbe16a9210f191facbf8eeaecdd97bbd39c009b036cc4d332d7b5",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/phase6a1_artifact_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "observed_bytes": 41890,
+        "observed_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/PHASE6A2_TYPED_GRAMMAR_DESIGN_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "observed_bytes": 28574,
+        "observed_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/forbidden_traversals_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "observed_bytes": 41386,
+        "observed_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_fanout_analysis.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "observed_bytes": 8544,
+        "observed_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_risk_register.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "observed_bytes": 79299,
+        "observed_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_structural_coverage.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "observed_bytes": 301961,
+        "observed_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_topology_simulation.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "observed_bytes": 69548,
+        "observed_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_transition_justifications.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "observed_bytes": 130424,
+        "observed_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/graph_traversal_grammar_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "observed_bytes": 14988,
+        "observed_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/node_type_traversal_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "db5cdc9f153617a97e1bab845e7e2609fc249514e80e528ecd6ba1c46b93aa39",
+        "observed_bytes": 12295,
+        "observed_sha256": "db5cdc9f153617a97e1bab845e7e2609fc249514e80e528ecd6ba1c46b93aa39",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/phase6a2_artifact_hashes.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "observed_bytes": 1366,
+        "observed_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "observed_bytes": 19705,
+        "observed_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/typed_transition_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "observed_bytes": 9347,
+        "observed_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/v1_motif_to_v1_1_grammar_mapping.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "observed_bytes": 108122888,
+        "observed_sha256": "ee364fa677abeda3b25119d5c3c2f1aea5bc8902a28e7f7ecefcddd38a77d9ed",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/edges.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "observed_bytes": 84218811,
+        "observed_sha256": "87f80fa5e91675b192dd051598a9197c0703650f4daf09c2a7619c031295a167",
+        "path": "results/graphrag/phase6a_graph_retrieval_v1_0/graph/nodes.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76",
+        "observed_bytes": 7578,
+        "observed_sha256": "8097eb64accec2c076d07ed9ae4604d2202d1ca83578cf8557b40f034b7cad76",
+        "path": "results/graphrag/registry_freeze_v1/graph_freeze_manifest_v1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+        "observed_bytes": 21048,
+        "observed_sha256": "4c17ff5c863ed446418fbc2b3b407704519862feddc5f0c81546c210f8e91d10",
+        "path": "results/graphrag/registry_freeze_v1/graph_node_registry_v1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+        "observed_bytes": 16834,
+        "observed_sha256": "36dd0b0d491dd6ef5f46c1dcd38cfe5e9e2ab61c632038b89cdc6ed9e0ec58ef",
+        "path": "results/graphrag/registry_freeze_v1/graph_path_motifs_v1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "observed_bytes": 4157,
+        "observed_sha256": "85a167767f6147c2a51db9cdab47d7157731bb2126ca2cf2c452f4e9bde602f0",
+        "path": "results/graphrag/registry_freeze_v1/graph_ranking_policy_v1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PROMPT_PINNED",
+        "expected_bytes": null,
+        "expected_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "observed_bytes": 50303,
+        "observed_sha256": "f8c61e2117c09921d001c4d476ef80d138f362c2ac084850544fc56077a7b0c3",
+        "path": "results/graphrag/registry_freeze_v1/graph_relation_registry_v1.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 41890,
+        "expected_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "observed_bytes": 41890,
+        "observed_sha256": "9ab2abbdacde0b912ec36aede2da22e2ca51b48d0e7e51ea37699e1ce3afbd61",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/PHASE6A2_TYPED_GRAMMAR_DESIGN_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 2502,
+        "expected_sha256": "dd58574bf266f95f22d085e406a72025af033fc79dc728998ff0e0848b80ab11",
+        "observed_bytes": 2502,
+        "observed_sha256": "dd58574bf266f95f22d085e406a72025af033fc79dc728998ff0e0848b80ab11",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/determinism_validation.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 28574,
+        "expected_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "observed_bytes": 28574,
+        "observed_sha256": "2b3d0a604df5c5a75121749ccdfa15269c6ea98632f31398085f7c7153d04b74",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/forbidden_traversals_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 41386,
+        "expected_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "observed_bytes": 41386,
+        "observed_sha256": "12e00af5447d9e4fd3db686c95d3d1fb562c48b03dac67de116a1ebd744c5e25",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_fanout_analysis.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 8544,
+        "expected_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "observed_bytes": 8544,
+        "observed_sha256": "34946386c9f424e89c8821ed7fbcb653e04406df13ae0e9fcf68594366833a09",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_risk_register.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 79299,
+        "expected_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "observed_bytes": 79299,
+        "observed_sha256": "7a2a659b3a5633987b74074fa4c477eb3b7fa1b80a14b20ecb13f4c6f65b8c63",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_structural_coverage.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 301961,
+        "expected_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "observed_bytes": 301961,
+        "observed_sha256": "63df67774453723df7975b3f8afc2626846583fc3c9dbe82670ced4b1a875696",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_topology_simulation.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 69548,
+        "expected_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "observed_bytes": 69548,
+        "observed_sha256": "5478138031bb3f3cba7ff3138434f4706b3127722d5f2e3d2969f4afec007508",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/grammar_transition_justifications.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 130424,
+        "expected_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "observed_bytes": 130424,
+        "observed_sha256": "007f4ba9eed7c9d00bd5bcab7a6d1752c0fe924614a6cf36f728a41ec14fc0d8",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/graph_traversal_grammar_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 14988,
+        "expected_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "observed_bytes": 14988,
+        "observed_sha256": "f04f01b8106d4e0a59c9d0d3e53dea0f625c1ba3c64465afbc9a9678b09d5d12",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/node_type_traversal_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 1366,
+        "expected_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "observed_bytes": 1366,
+        "observed_sha256": "e150be4d9b754303569d5dc85f6c8c552969645cb033d762bfa83ac75aa990ea",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 19705,
+        "expected_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "observed_bytes": 19705,
+        "observed_sha256": "8a0c2e6d24b5098c9ffdef4da17c33979386a92f365161273349d2a906a2b36c",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/typed_transition_matrix_v1_1_draft.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 9347,
+        "expected_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "observed_bytes": 9347,
+        "observed_sha256": "2eb77bda03a01cb3923b3c6a3ec40212c34043695480472d3060c9536b0b3102",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/v1_motif_to_v1_1_grammar_mapping.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A2_HASH_INVENTORY",
+        "expected_bytes": 134087,
+        "expected_sha256": "dd0cc48c34e5336103131839fef4cb2498a19268f4690749ce5dc61a36733447",
+        "observed_bytes": 134087,
+        "observed_sha256": "dd0cc48c34e5336103131839fef4cb2498a19268f4690749ce5dc61a36733447",
+        "path": "results/graphrag/phase6a2_typed_grammar_design_v1_1/run_phase6a2_design.py",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 10082,
+        "expected_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "observed_bytes": 10082,
+        "observed_sha256": "4b32dee5614982ffab50d458e9ee876b98f8a4fa70de25b8d8e76aab4233fec6",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/PHASE6A1_MOTIF_DIAGNOSTIC_REVIEW.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 22404,
+        "expected_sha256": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f",
+        "observed_bytes": 22404,
+        "observed_sha256": "c20b26ffec21625b3d8380bb1039a22c87d399c6119cd18a625bce90b61a551f",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/anchor_type_reachability.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 467781,
+        "expected_sha256": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7",
+        "observed_bytes": 467781,
+        "observed_sha256": "fb94713279e13e2ef91477c07817e34b38ea6fd7fbf008e267c4d01353625da7",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/case_reachability_comparison.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 1706,
+        "expected_sha256": "db15267bf5b03f4d774140eacf57c8845150644e60b27d192fcbb13425d7107b",
+        "observed_bytes": 1706,
+        "observed_sha256": "db15267bf5b03f4d774140eacf57c8845150644e60b27d192fcbb13425d7107b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/determinism_validation.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 2102,
+        "expected_sha256": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f",
+        "observed_bytes": 2102,
+        "observed_sha256": "dafb06bc2227a0c99ca7c23b3b52024445d1b5b905edb2351d35d492da429e8f",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/hop_survival_funnel.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 7663,
+        "expected_sha256": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4",
+        "observed_bytes": 7663,
+        "observed_sha256": "e3bd6395f972a5b8e0559ce621882c589451f1c6f362df07458942693fa875a4",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/motif_gap_taxonomy.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 1915866,
+        "expected_sha256": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee",
+        "observed_bytes": 1915866,
+        "observed_sha256": "7fcee4ab18152fd7bcd1197e9472ed53495c77007e2ef4c8c7ce0c04e0d8abee",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/motif_reachability.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 79396,
+        "expected_sha256": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b",
+        "observed_bytes": 79396,
+        "observed_sha256": "eef0930d4c187465c4a96aa802ae55217c6688f1f7631ae48adbe6455081921b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/path_sequence_inventory.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 9993795,
+        "expected_sha256": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320",
+        "observed_bytes": 9993795,
+        "observed_sha256": "11ef9f06745741292375be77635c6813a0c51cba539e4b80f8e3eeadaced3320",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/raw_reachability_safe_reverse_diagnostic.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 575167,
+        "expected_sha256": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e",
+        "observed_bytes": 575167,
+        "observed_sha256": "5a36a377de77a61bd0957b4abca98db368d931448396cc660abb39b4498efc0e",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/raw_reachability_stored_direction.jsonl",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 1527,
+        "expected_sha256": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e",
+        "observed_bytes": 1527,
+        "observed_sha256": "15baf7a86b438523c0c2d7b2352ea99eb9bc6a20d5832d01639bbbdd74e9d00e",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/reachability_explosion_and_cycles.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 21403,
+        "expected_sha256": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62",
+        "observed_bytes": 21403,
+        "observed_sha256": "f6c92527726f091b4e432cae7381694288c96b17c050543826bae3c81ec9ca62",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/relation_directionality_audit.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 743,
+        "expected_sha256": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a",
+        "observed_bytes": 743,
+        "observed_sha256": "04e139d6f84040a56aec7e5f9288615298f639790cf4ab8f736cfd4506f8495a",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/scientific_integrity.json",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 2716,
+        "expected_sha256": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652",
+        "observed_bytes": 2716,
+        "observed_sha256": "9820fcbf01e4a59a429d5055e23da82b0d9f8078acb572c2e986facf1f3a8652",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/typed_traversal_grammar_analysis.md",
+        "status": "PASS"
+      },
+      {
+        "authority": "PHASE6A1_HASH_INVENTORY",
+        "expected_bytes": 82662,
+        "expected_sha256": "a65e63f104915decdf6c961ffc9844b6b019ea756d93e4b2592a0bcc0f35665b",
+        "observed_bytes": 82662,
+        "observed_sha256": "a65e63f104915decdf6c961ffc9844b6b019ea756d93e4b2592a0bcc0f35665b",
+        "path": "results/graphrag/phase6a1_motif_diagnostic_v1/run_phase6a1_diagnostic.py",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS",
+    "verified_check_count": 51,
+    "verified_distinct_path_count": 38
+  },
+  "self_hash_omission_reason": "Including this inventory's raw digest in itself would be circular. Its external SHA-256 is computed and reported after serialization.",
+  "self_hash_omitted": true,
+  "serialization_convention": {
+    "concurrency_timing_dependency": false,
+    "encoding": "UTF-8",
+    "filesystem_order_dependency": false,
+    "hash_map_order_dependency": false,
+    "json_indentation_spaces": 2,
+    "json_key_order": "lexicographic via sort_keys=true",
+    "json_separators": "comma plus newline/indent; colon plus one space",
+    "newline": "LF with exactly one trailing newline",
+    "other_array_order": "explicit semantic parent order or explicitly documented stable key order",
+    "transition_array_order": "ascending transition_id",
+    "unicode": "ensure_ascii=false"
+  },
+  "status": "FROZEN",
+  "verified": true
+}
