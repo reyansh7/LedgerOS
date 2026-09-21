@@ -14,11 +14,30 @@ class Base(DeclarativeBase):
     pass
 
 
+# Normalize database URLs
+raw_url = settings.database_url
+if raw_url.startswith("postgres://"):
+    raw_url = raw_url.replace("postgres://", "postgresql+psycopg://", 1)
+elif raw_url.startswith("postgresql://"):
+    raw_url = raw_url.replace("postgresql://", "postgresql+psycopg://", 1)
+
+async_db_url = raw_url
+if async_db_url.startswith("sqlite://"):
+    async_db_url = async_db_url.replace("sqlite://", "sqlite+aiosqlite://", 1)
+
+sync_db_url = raw_url
+if sync_db_url.startswith("sqlite+aiosqlite://"):
+    sync_db_url = sync_db_url.replace("sqlite+aiosqlite://", "sqlite://", 1)
+
 # Async engine for FastAPI endpoints and agent workers
+engine_kwargs = {"echo": False}
+if "sqlite" not in async_db_url:
+    engine_kwargs.update({"pool_size": 10, "max_overflow": 20, "pool_pre_ping": True})
+
 async_engine = create_async_engine(
-    settings.database_url,
-    echo=False,
+    async_db_url,
     future=True,
+    **engine_kwargs,
 )
 
 AsyncSessionLocal = async_sessionmaker(
@@ -29,16 +48,13 @@ AsyncSessionLocal = async_sessionmaker(
     autoflush=False,
 )
 
-# Synchronous engine for fast bulk ingestion and DuckDB bridging
-sync_database_url = settings.sync_database_url
-if settings.database_url.startswith("postgresql+psycopg"):
-    sync_database_url = settings.database_url.replace("postgresql+psycopg://", "postgresql://")
-elif settings.database_url.startswith("sqlite+aiosqlite"):
-    sync_database_url = settings.database_url.replace("sqlite+aiosqlite://", "sqlite://")
+sync_engine_kwargs = {"echo": False}
+if "sqlite" not in sync_db_url:
+    sync_engine_kwargs.update({"pool_size": 10, "max_overflow": 20, "pool_pre_ping": True})
 
 sync_engine = create_engine(
-    sync_database_url,
-    echo=False,
+    sync_db_url,
+    **sync_engine_kwargs,
 )
 
 SyncSessionLocal = sessionmaker(

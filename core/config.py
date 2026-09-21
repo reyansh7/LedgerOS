@@ -39,6 +39,12 @@ class Settings(BaseSettings):
     razorpay_key_secret: str = "dummysecret456"
     razorpay_webhook_secret: str = "dummywebhooksecret789"
 
+    # Supabase (Auth, JWKS, & Postgres)
+    supabase_url: str | None = None
+    supabase_publishable_key: str | None = None
+    supabase_secret_key: str | None = None
+    supabase_jwks_url: str | None = None
+
     # Paths
     base_dir: Path = Path(__file__).resolve().parent.parent
     finrca_data_dir: Path = Path("external/FinRCA-AI-Bench/data/benchmark")

@@ -12,6 +12,8 @@ from core.database import get_db
 from core.models.governance import ApprovalRequest, AgentAction
 from core.models.reconciliation import ExceptionCase
 from core.audit.logger import audit_logger
+from core.governance.rbac import Permission
+from apps.api.auth import require_permission, UserIdentity
 from agents.tools.action_tools import (
     execute_void_invoice,
     execute_recovery_case,
@@ -58,6 +60,7 @@ async def list_pending_approvals(db: AsyncSession = Depends(get_db)):
 async def review_approval(
     approval_id: str,
     payload: ApprovalActionPayload,
+    user: UserIdentity = Depends(require_permission(Permission.APPROVE_ACTION)),
     db: AsyncSession = Depends(get_db),
 ):
     req = (
@@ -68,7 +71,7 @@ async def review_approval(
 
     timestamp = datetime.now(timezone.utc).isoformat()
     req.status = payload.verdict.upper()
-    req.reviewed_by = payload.reviewer
+    req.reviewed_by = user.email or user.user_id or payload.reviewer
     req.review_comment = payload.comment
     req.reviewed_at = timestamp
 
